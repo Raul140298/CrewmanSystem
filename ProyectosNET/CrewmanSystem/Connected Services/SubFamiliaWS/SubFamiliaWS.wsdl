@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.CrewmanSystem.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="SubFamiliaWS" targetNamespace="http://services.CrewmanSystem.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/SubFamiliaWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="actualizarSubFamilia">
+    <part name="parameters" element="tns:actualizarSubFamilia" />
+  </message>
+  <message name="actualizarSubFamiliaResponse">
+    <part name="parameters" element="tns:actualizarSubFamiliaResponse" />
+  </message>
+  <message name="eliminarSubFamilia">
+    <part name="parameters" element="tns:eliminarSubFamilia" />
+  </message>
+  <message name="eliminarSubFamiliaResponse">
+    <part name="parameters" element="tns:eliminarSubFamiliaResponse" />
+  </message>
+  <message name="listarSubFamilias">
+    <part name="parameters" element="tns:listarSubFamilias" />
+  </message>
+  <message name="listarSubFamiliasResponse">
+    <part name="parameters" element="tns:listarSubFamiliasResponse" />
+  </message>
+  <message name="insertarSubFamilia">
+    <part name="parameters" element="tns:insertarSubFamilia" />
+  </message>
+  <message name="insertarSubFamiliaResponse">
+    <part name="parameters" element="tns:insertarSubFamiliaResponse" />
+  </message>
+  <portType name="SubFamiliaWS">
+    <operation name="actualizarSubFamilia">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/actualizarSubFamiliaRequest" message="tns:actualizarSubFamilia" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/actualizarSubFamiliaResponse" message="tns:actualizarSubFamiliaResponse" />
+    </operation>
+    <operation name="eliminarSubFamilia">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/eliminarSubFamiliaRequest" message="tns:eliminarSubFamilia" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/eliminarSubFamiliaResponse" message="tns:eliminarSubFamiliaResponse" />
+    </operation>
+    <operation name="listarSubFamilias">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/listarSubFamiliasRequest" message="tns:listarSubFamilias" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/listarSubFamiliasResponse" message="tns:listarSubFamiliasResponse" />
+    </operation>
+    <operation name="insertarSubFamilia">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/insertarSubFamiliaRequest" message="tns:insertarSubFamilia" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/insertarSubFamiliaResponse" message="tns:insertarSubFamiliaResponse" />
+    </operation>
+  </portType>
+  <binding name="SubFamiliaWSPortBinding" type="tns:SubFamiliaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="actualizarSubFamilia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarSubFamilia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarSubFamilias">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarSubFamilia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="SubFamiliaWS">
+    <port name="SubFamiliaWSPort" binding="tns:SubFamiliaWSPortBinding">
+      <soap:address location="http://54.80.91.225:8080/CrewmanSystemServices/SubFamiliaWS" />
+    </port>
+  </service>
+</definitions>

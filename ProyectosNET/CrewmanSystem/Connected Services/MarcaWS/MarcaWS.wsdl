@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.CrewmanSystem.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="MarcaWS" targetNamespace="http://services.CrewmanSystem.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/MarcaWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarMarca">
+    <part name="parameters" element="tns:insertarMarca" />
+  </message>
+  <message name="insertarMarcaResponse">
+    <part name="parameters" element="tns:insertarMarcaResponse" />
+  </message>
+  <message name="listarMarcas">
+    <part name="parameters" element="tns:listarMarcas" />
+  </message>
+  <message name="listarMarcasResponse">
+    <part name="parameters" element="tns:listarMarcasResponse" />
+  </message>
+  <message name="actualizarMarca">
+    <part name="parameters" element="tns:actualizarMarca" />
+  </message>
+  <message name="actualizarMarcaResponse">
+    <part name="parameters" element="tns:actualizarMarcaResponse" />
+  </message>
+  <message name="eliminarMarca">
+    <part name="parameters" element="tns:eliminarMarca" />
+  </message>
+  <message name="eliminarMarcaResponse">
+    <part name="parameters" element="tns:eliminarMarcaResponse" />
+  </message>
+  <portType name="MarcaWS">
+    <operation name="insertarMarca">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/insertarMarcaRequest" message="tns:insertarMarca" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/insertarMarcaResponse" message="tns:insertarMarcaResponse" />
+    </operation>
+    <operation name="listarMarcas">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/listarMarcasRequest" message="tns:listarMarcas" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/listarMarcasResponse" message="tns:listarMarcasResponse" />
+    </operation>
+    <operation name="actualizarMarca">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/actualizarMarcaRequest" message="tns:actualizarMarca" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/actualizarMarcaResponse" message="tns:actualizarMarcaResponse" />
+    </operation>
+    <operation name="eliminarMarca">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/eliminarMarcaRequest" message="tns:eliminarMarca" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/eliminarMarcaResponse" message="tns:eliminarMarcaResponse" />
+    </operation>
+  </portType>
+  <binding name="MarcaWSPortBinding" type="tns:MarcaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarMarca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMarcas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarMarca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarMarca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="MarcaWS">
+    <port name="MarcaWSPort" binding="tns:MarcaWSPortBinding">
+      <soap:address location="http://54.80.91.225:8080/CrewmanSystemServices/MarcaWS" />
+    </port>
+  </service>
+</definitions>

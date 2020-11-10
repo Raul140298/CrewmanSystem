@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.CrewmanSystem.pucp.edu.pe/" targetNamespace="http://services.CrewmanSystem.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="insertarZona" type="tns:insertarZona" />
+  <xs:element name="insertarZonaResponse" type="tns:insertarZonaResponse" />
+  <xs:element name="listarZonas" type="tns:listarZonas" />
+  <xs:element name="listarZonasResponse" type="tns:listarZonasResponse" />
+  <xs:complexType name="insertarZona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="zona" type="tns:zona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="zona">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="idZona" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarZonaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarZonas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarZonasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:zona" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

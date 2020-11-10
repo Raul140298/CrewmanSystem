@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.CrewmanSystem.pucp.edu.pe/" targetNamespace="http://services.CrewmanSystem.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarSubFamilia" type="tns:actualizarSubFamilia" />
+  <xs:element name="actualizarSubFamiliaResponse" type="tns:actualizarSubFamiliaResponse" />
+  <xs:element name="eliminarSubFamilia" type="tns:eliminarSubFamilia" />
+  <xs:element name="eliminarSubFamiliaResponse" type="tns:eliminarSubFamiliaResponse" />
+  <xs:element name="insertarSubFamilia" type="tns:insertarSubFamilia" />
+  <xs:element name="insertarSubFamiliaResponse" type="tns:insertarSubFamiliaResponse" />
+  <xs:element name="listarSubFamilias" type="tns:listarSubFamilias" />
+  <xs:element name="listarSubFamiliasResponse" type="tns:listarSubFamiliasResponse" />
+  <xs:complexType name="insertarSubFamilia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="subFamilia" type="tns:subFamilia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subFamilia">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="descripcionSubFamilia" type="xs:string" />
+      <xs:element minOccurs="0" name="familia" type="tns:familia" />
+      <xs:element name="idSubFamilia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="familia">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="idFamilia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarSubFamiliaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarSubFamilia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="subFamilia" type="tns:subFamilia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarSubFamiliaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarSubFamilias">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="familia" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarSubFamiliasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:subFamilia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarSubFamilia">
+    <xs:sequence>
+      <xs:element name="idSubFamilia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarSubFamiliaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

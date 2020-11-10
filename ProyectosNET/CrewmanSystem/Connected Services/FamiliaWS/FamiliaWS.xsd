@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.CrewmanSystem.pucp.edu.pe/" targetNamespace="http://services.CrewmanSystem.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarFamilia" type="tns:actualizarFamilia" />
+  <xs:element name="actualizarFamiliaResponse" type="tns:actualizarFamiliaResponse" />
+  <xs:element name="eliminarFamilia" type="tns:eliminarFamilia" />
+  <xs:element name="eliminarFamiliaResponse" type="tns:eliminarFamiliaResponse" />
+  <xs:element name="insertarFamilia" type="tns:insertarFamilia" />
+  <xs:element name="insertarFamiliaResponse" type="tns:insertarFamiliaResponse" />
+  <xs:element name="listarFamilias" type="tns:listarFamilias" />
+  <xs:element name="listarFamiliasResponse" type="tns:listarFamiliasResponse" />
+  <xs:complexType name="listarFamilias">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarFamiliasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:familia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="familia">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="idFamilia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarFamilia">
+    <xs:sequence>
+      <xs:element name="idFamilia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarFamiliaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarFamilia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="familia" type="tns:familia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarFamiliaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarFamilia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="familia" type="tns:familia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarFamiliaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

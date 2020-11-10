@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.CrewmanSystem.pucp.edu.pe/" targetNamespace="http://services.CrewmanSystem.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarMarca" type="tns:actualizarMarca" />
+  <xs:element name="actualizarMarcaResponse" type="tns:actualizarMarcaResponse" />
+  <xs:element name="eliminarMarca" type="tns:eliminarMarca" />
+  <xs:element name="eliminarMarcaResponse" type="tns:eliminarMarcaResponse" />
+  <xs:element name="insertarMarca" type="tns:insertarMarca" />
+  <xs:element name="insertarMarcaResponse" type="tns:insertarMarcaResponse" />
+  <xs:element name="listarMarcas" type="tns:listarMarcas" />
+  <xs:element name="listarMarcasResponse" type="tns:listarMarcasResponse" />
+  <xs:complexType name="eliminarMarca">
+    <xs:sequence>
+      <xs:element name="idMarca" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarMarcaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarMarca">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="marca" type="tns:marca" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="marca">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="idMarca" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarMarcaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarMarca">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="marca" type="tns:marca" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarMarcaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMarcas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarMarcasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:marca" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

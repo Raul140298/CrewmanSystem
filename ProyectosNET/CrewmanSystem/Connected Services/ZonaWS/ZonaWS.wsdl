@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.CrewmanSystem.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ZonaWS" targetNamespace="http://services.CrewmanSystem.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/ZonaWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarZona">
+    <part name="parameters" element="tns:insertarZona" />
+  </message>
+  <message name="insertarZonaResponse">
+    <part name="parameters" element="tns:insertarZonaResponse" />
+  </message>
+  <message name="listarZonas">
+    <part name="parameters" element="tns:listarZonas" />
+  </message>
+  <message name="listarZonasResponse">
+    <part name="parameters" element="tns:listarZonasResponse" />
+  </message>
+  <portType name="ZonaWS">
+    <operation name="insertarZona">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/insertarZonaRequest" message="tns:insertarZona" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/insertarZonaResponse" message="tns:insertarZonaResponse" />
+    </operation>
+    <operation name="listarZonas">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/listarZonasRequest" message="tns:listarZonas" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/listarZonasResponse" message="tns:listarZonasResponse" />
+    </operation>
+  </portType>
+  <binding name="ZonaWSPortBinding" type="tns:ZonaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarZona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarZonas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ZonaWS">
+    <port name="ZonaWSPort" binding="tns:ZonaWSPortBinding">
+      <soap:address location="http://54.80.91.225:8080/CrewmanSystemServices/ZonaWS" />
+    </port>
+  </service>
+</definitions>

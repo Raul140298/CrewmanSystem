@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.CrewmanSystem.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="NotaDeCreditoWS" targetNamespace="http://services.CrewmanSystem.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/NotaDeCreditoWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarNotaDeCredito">
+    <part name="parameters" element="tns:insertarNotaDeCredito" />
+  </message>
+  <message name="insertarNotaDeCreditoResponse">
+    <part name="parameters" element="tns:insertarNotaDeCreditoResponse" />
+  </message>
+  <message name="mostrarNotaDeCreditos">
+    <part name="parameters" element="tns:mostrarNotaDeCreditos" />
+  </message>
+  <message name="mostrarNotaDeCreditosResponse">
+    <part name="parameters" element="tns:mostrarNotaDeCreditosResponse" />
+  </message>
+  <portType name="NotaDeCreditoWS">
+    <operation name="insertarNotaDeCredito">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/NotaDeCreditoWS/insertarNotaDeCreditoRequest" message="tns:insertarNotaDeCredito" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/NotaDeCreditoWS/insertarNotaDeCreditoResponse" message="tns:insertarNotaDeCreditoResponse" />
+    </operation>
+    <operation name="mostrarNotaDeCreditos">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/NotaDeCreditoWS/mostrarNotaDeCreditosRequest" message="tns:mostrarNotaDeCreditos" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/NotaDeCreditoWS/mostrarNotaDeCreditosResponse" message="tns:mostrarNotaDeCreditosResponse" />
+    </operation>
+  </portType>
+  <binding name="NotaDeCreditoWSPortBinding" type="tns:NotaDeCreditoWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarNotaDeCredito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarNotaDeCreditos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="NotaDeCreditoWS">
+    <port name="NotaDeCreditoWSPort" binding="tns:NotaDeCreditoWSPortBinding">
+      <soap:address location="http://54.80.91.225:8080/CrewmanSystemServices/NotaDeCreditoWS" />
+    </port>
+  </service>
+</definitions>

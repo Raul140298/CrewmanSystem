@@ -1,0 +1,1221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16CADFCE-0B7F-45D3-9CBA-DA8D39D06B06}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CrewmanSystem</RootNamespace>
+    <AssemblyName>CrewmanSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.1\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BTNestado.cs" />
+    <Compile Include="Connected Services\CarteraWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ClienteWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ClienteXZonaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EmpleadoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EmpleadoXZonaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\FacturaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\FamiliaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\GuiaRemisionWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\LineaCreditoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\MarcaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\NotaDeCreditoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PedidoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PersonaContactoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ProductoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ProductoXZonaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PromocionWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PromocionXZonaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\QuejaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SubFamiliaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\VisitaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ZonaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="CrewPantalla.cs" />
+    <Compile Include="frmBuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarCliente.Designer.cs">
+      <DependentUpon>frmBuscarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarEmpleado.Designer.cs">
+      <DependentUpon>frmBuscarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarFactura.Designer.cs">
+      <DependentUpon>frmBuscarFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarPedido.Designer.cs">
+      <DependentUpon>frmBuscarPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarProducto.Designer.cs">
+      <DependentUpon>frmBuscarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarProductoPorZona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarProductoPorZona.Designer.cs">
+      <DependentUpon>frmBuscarProductoPorZona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarPromocion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarPromocion.Designer.cs">
+      <DependentUpon>frmBuscarPromocion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarZona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarZona.Designer.cs">
+      <DependentUpon>frmBuscarZona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfirmarInsertar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfirmarInsertar.Designer.cs">
+      <DependentUpon>frmConfirmarInsertar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfirmarSalir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfirmarSalir.Designer.cs">
+      <DependentUpon>frmConfirmarSalir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarCarteras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarCarteras.Designer.cs">
+      <DependentUpon>frmGestionarCarteras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarClientes.Designer.cs">
+      <DependentUpon>frmGestionarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarClientesXZona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarClientesXZona.Designer.cs">
+      <DependentUpon>frmGestionarClientesXZona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarEmpleados.Designer.cs">
+      <DependentUpon>frmGestionarEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarFacturas.Designer.cs">
+      <DependentUpon>frmGestionarFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarFamilias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarFamilias.Designer.cs">
+      <DependentUpon>frmGestionarFamilias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarGuiasRemision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarGuiasRemision.Designer.cs">
+      <DependentUpon>frmGestionarGuiasRemision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarMarcas.Designer.cs">
+      <DependentUpon>frmGestionarMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarPedidos.Designer.cs">
+      <DependentUpon>frmGestionarPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarPersonaContacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarPersonaContacto.Designer.cs">
+      <DependentUpon>frmGestionarPersonaContacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarProductos.Designer.cs">
+      <DependentUpon>frmGestionarProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarProductosXZona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarProductosXZona.Designer.cs">
+      <DependentUpon>frmGestionarProductosXZona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarPromociones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarPromociones.Designer.cs">
+      <DependentUpon>frmGestionarPromociones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarPromocionesXZona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarPromocionesXZona.Designer.cs">
+      <DependentUpon>frmGestionarPromocionesXZona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarQuejas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarQuejas.Designer.cs">
+      <DependentUpon>frmGestionarQuejas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarRutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarRutas.Designer.cs">
+      <DependentUpon>frmGestionarRutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarSubfamilias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarSubfamilias.Designer.cs">
+      <DependentUpon>frmGestionarSubfamilias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarVisitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarVisitas.Designer.cs">
+      <DependentUpon>frmGestionarVisitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionarZonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarZonas.Designer.cs">
+      <DependentUpon>frmGestionarZonas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHomeJefe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHomeJefe.Designer.cs">
+      <DependentUpon>frmHomeJefe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHomeVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHomeVendedor.Designer.cs">
+      <DependentUpon>frmHomeVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarCumplimientoDeMetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarCumplimientoDeMetas.Designer.cs">
+      <DependentUpon>frmListarCumplimientoDeMetas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogeo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogeo.Designer.cs">
+      <DependentUpon>frmLogeo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMostrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMostrarCliente.Designer.cs">
+      <DependentUpon>frmMostrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevaFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevaFactura.Designer.cs">
+      <DependentUpon>frmNuevaFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevaFamilia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevaFamilia.Designer.cs">
+      <DependentUpon>frmNuevaFamilia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevaMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevaMarca.Designer.cs">
+      <DependentUpon>frmNuevaMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevaPersonaDeContacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevaPersonaDeContacto.Designer.cs">
+      <DependentUpon>frmNuevaPersonaDeContacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevaPromocion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevaPromocion.Designer.cs">
+      <DependentUpon>frmNuevaPromocion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevaSubfamilia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevaSubfamilia.Designer.cs">
+      <DependentUpon>frmNuevaSubfamilia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevaVisita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevaVisita.Designer.cs">
+      <DependentUpon>frmNuevaVisita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevaZona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevaZona.Designer.cs">
+      <DependentUpon>frmNuevaZona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoCliente.Designer.cs">
+      <DependentUpon>frmNuevoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoEmpleado.Designer.cs">
+      <DependentUpon>frmNuevoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevoPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoPedido.Designer.cs">
+      <DependentUpon>frmNuevoPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoProducto.Designer.cs">
+      <DependentUpon>frmNuevoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarProductoXZona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarProductoXZona.Designer.cs">
+      <DependentUpon>frmBuscarProductoXZona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNuevoProductoXZona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevoProductoXZona.Designer.cs">
+      <DependentUpon>frmNuevoProductoXZona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentanaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentanaPrincipal.Designer.cs">
+      <DependentUpon>frmVentanaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportePedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportePedidos.Designer.cs">
+      <DependentUpon>frmReportePedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalir.Designer.cs">
+      <DependentUpon>frmSalir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeguimientoYControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeguimientoYControl.Designer.cs">
+      <DependentUpon>frmSeguimientoYControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ThemeColor.cs" />
+    <Compile Include="BTNtipo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmBuscarCliente.resx">
+      <DependentUpon>frmBuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarEmpleado.resx">
+      <DependentUpon>frmBuscarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarFactura.resx">
+      <DependentUpon>frmBuscarFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarPedido.resx">
+      <DependentUpon>frmBuscarPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarProducto.resx">
+      <DependentUpon>frmBuscarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarProductoPorZona.resx">
+      <DependentUpon>frmBuscarProductoPorZona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarProductoXZona.resx">
+      <DependentUpon>frmBuscarProductoXZona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarPromocion.resx">
+      <DependentUpon>frmBuscarPromocion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarZona.resx">
+      <DependentUpon>frmBuscarZona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfirmarInsertar.resx">
+      <DependentUpon>frmConfirmarInsertar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfirmarSalir.resx">
+      <DependentUpon>frmConfirmarSalir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarCarteras.resx">
+      <DependentUpon>frmGestionarCarteras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarClientes.resx">
+      <DependentUpon>frmGestionarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarClientesXZona.resx">
+      <DependentUpon>frmGestionarClientesXZona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarEmpleados.resx">
+      <DependentUpon>frmGestionarEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarFacturas.resx">
+      <DependentUpon>frmGestionarFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarFamilias.resx">
+      <DependentUpon>frmGestionarFamilias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarGuiasRemision.resx">
+      <DependentUpon>frmGestionarGuiasRemision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarMarcas.resx">
+      <DependentUpon>frmGestionarMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarPedidos.resx">
+      <DependentUpon>frmGestionarPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarProductos.resx">
+      <DependentUpon>frmGestionarProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarProductosXZona.resx">
+      <DependentUpon>frmGestionarProductosXZona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarPromociones.resx">
+      <DependentUpon>frmGestionarPromociones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarPromocionesXZona.resx">
+      <DependentUpon>frmGestionarPromocionesXZona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarQuejas.resx">
+      <DependentUpon>frmGestionarQuejas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarRutas.resx">
+      <DependentUpon>frmGestionarRutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarSubfamilias.resx">
+      <DependentUpon>frmGestionarSubfamilias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarVisitas.resx">
+      <DependentUpon>frmGestionarVisitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarZonas.resx">
+      <DependentUpon>frmGestionarZonas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHomeJefe.resx">
+      <DependentUpon>frmHomeJefe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHomeVendedor.resx">
+      <DependentUpon>frmHomeVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListarCumplimientoDeMetas.resx">
+      <DependentUpon>frmListarCumplimientoDeMetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogeo.resx">
+      <DependentUpon>frmLogeo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMostrarCliente.resx">
+      <DependentUpon>frmMostrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaFactura.resx">
+      <DependentUpon>frmNuevaFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaFamilia.resx">
+      <DependentUpon>frmNuevaFamilia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaMarca.resx">
+      <DependentUpon>frmNuevaMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaPersonaDeContacto.resx">
+      <DependentUpon>frmNuevaPersonaDeContacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaPromocion.resx">
+      <DependentUpon>frmNuevaPromocion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaSubfamilia.resx">
+      <DependentUpon>frmNuevaSubfamilia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaVisita.resx">
+      <DependentUpon>frmNuevaVisita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaZona.resx">
+      <DependentUpon>frmNuevaZona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoCliente.resx">
+      <DependentUpon>frmNuevoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoEmpleado.resx">
+      <DependentUpon>frmNuevoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoPedido.resx">
+      <DependentUpon>frmNuevoPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoProducto.resx">
+      <DependentUpon>frmNuevoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevoProductoXZona.resx">
+      <DependentUpon>frmNuevoProductoXZona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentanaPrincipal.resx">
+      <DependentUpon>frmVentanaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalir.resx">
+      <DependentUpon>frmSalir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CarteraWS\CarteraWS.wsdl" />
+    <None Include="Connected Services\CarteraWS\CarteraWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CarteraWS\CrewmanSystem.CarteraWS.actualizarCarteraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CarteraWS\CrewmanSystem.CarteraWS.eliminarCarteraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CarteraWS\CrewmanSystem.CarteraWS.insertarCarteraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClienteWS\ClienteWS.wsdl" />
+    <None Include="Connected Services\ClienteWS\ClienteWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.actualizarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.cliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.eliminarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.getClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.insertarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.listarClientesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.mostrarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.obtenerClientesPorCarteraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.obtenerClientesSinCarteraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClienteXZonaWS\ClienteXZonaWS.wsdl" />
+    <None Include="Connected Services\ClienteXZonaWS\ClienteXZonaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ClienteXZonaWS\CrewmanSystem.ClienteXZonaWS.clienteXZona.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClienteXZonaWS\CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClienteXZonaWS\CrewmanSystem.ClienteXZonaWS.insertarClienteXZonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClienteXZonaWS\CrewmanSystem.ClienteXZonaWS.obtenerClientePorZonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.actualizarEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.actualizarPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.eliminarEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.eliminarPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.empleado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.getEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.insertarEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.insertarPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.listarPorJefeVentasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.mostrarPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.obtenerEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.persona.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\EmpleadoWS1.wsdl" />
+    <None Include="Connected Services\EmpleadoWS\EmpleadoWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EmpleadoXZonaWS\CrewmanSystem.EmpleadoXZonaWS.eliminarEmpleadoXZonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoXZonaWS\CrewmanSystem.EmpleadoXZonaWS.insertarEmpleadoXZonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoXZonaWS\EmpleadoXZonaWS.wsdl" />
+    <None Include="Connected Services\EmpleadoXZonaWS\EmpleadoXZonaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.actualizarFacturaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.eliminarFacturaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.factura.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.insertarFacturaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.listarFacturasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FacturaWS\FacturaWS.wsdl" />
+    <None Include="Connected Services\FacturaWS\FacturaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FamiliaWS\CrewmanSystem.FamiliaWS.actualizarFamiliaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FamiliaWS\CrewmanSystem.FamiliaWS.eliminarFamiliaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FamiliaWS\CrewmanSystem.FamiliaWS.familia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FamiliaWS\CrewmanSystem.FamiliaWS.insertarFamiliaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FamiliaWS\CrewmanSystem.FamiliaWS.listarFamiliasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FamiliaWS\FamiliaWS.wsdl" />
+    <None Include="Connected Services\FamiliaWS\FamiliaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GuiaRemisionWS\CrewmanSystem.GuiaRemisionWS.actualizarGuiaRemisionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GuiaRemisionWS\CrewmanSystem.GuiaRemisionWS.guiaRemision.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GuiaRemisionWS\CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GuiaRemisionWS\CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GuiaRemisionWS\GuiaRemisionWS.wsdl" />
+    <None Include="Connected Services\GuiaRemisionWS\GuiaRemisionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LineaCreditoWS\CrewmanSystem.LineaCreditoWS.actualizarLineaCreditoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LineaCreditoWS\CrewmanSystem.LineaCreditoWS.insertarLineaCreditoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LineaCreditoWS\CrewmanSystem.LineaCreditoWS.lineaCredito.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LineaCreditoWS\CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LineaCreditoWS\LineaCreditoWS.wsdl" />
+    <None Include="Connected Services\LineaCreditoWS\LineaCreditoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MarcaWS\CrewmanSystem.MarcaWS.actualizarMarcaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MarcaWS\CrewmanSystem.MarcaWS.eliminarMarcaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MarcaWS\CrewmanSystem.MarcaWS.insertarMarcaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MarcaWS\CrewmanSystem.MarcaWS.listarMarcasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MarcaWS\CrewmanSystem.MarcaWS.marca.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MarcaWS\MarcaWS.wsdl" />
+    <None Include="Connected Services\MarcaWS\MarcaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NotaDeCreditoWS\CrewmanSystem.NotaDeCreditoWS.insertarNotaDeCreditoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NotaDeCreditoWS\CrewmanSystem.NotaDeCreditoWS.mostrarNotaDeCreditosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NotaDeCreditoWS\CrewmanSystem.NotaDeCreditoWS.notaDeCredito.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NotaDeCreditoWS\NotaDeCreditoWS.wsdl" />
+    <None Include="Connected Services\NotaDeCreditoWS\NotaDeCreditoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.actualizarPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.anularResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.aprobarBorradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.culminarPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.eliminarPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.generarReporteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.getPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.insertarPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.insertarTotalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.liberarStockResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.listarPedidosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.mostrarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.pedido.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\PedidoWS.wsdl" />
+    <None Include="Connected Services\PedidoWS\PedidoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PersonaContactoWS\CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaContactoWS\CrewmanSystem.PersonaContactoWS.eliminarPersonaContactoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaContactoWS\CrewmanSystem.PersonaContactoWS.insertarPersonaContactoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaContactoWS\CrewmanSystem.PersonaContactoWS.mostrarPersonaContactoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaContactoWS\CrewmanSystem.PersonaContactoWS.personaContacto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PersonaContactoWS\PersonaContactoWS.wsdl" />
+    <None Include="Connected Services\PersonaContactoWS\PersonaContactoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ProductoWS\CrewmanSystem.ProductoWS.actualizarProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductoWS\CrewmanSystem.ProductoWS.eliminarProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductoWS\CrewmanSystem.ProductoWS.insertarProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductoWS\CrewmanSystem.ProductoWS.listarProductosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductoWS\CrewmanSystem.ProductoWS.mostrarProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductoWS\CrewmanSystem.ProductoWS.producto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductoWS\ProductoWS.wsdl" />
+    <None Include="Connected Services\ProductoWS\ProductoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ProductoXZonaWS\CrewmanSystem.ProductoXZonaWS.insertarProductoXZonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductoXZonaWS\CrewmanSystem.ProductoXZonaWS.listarProductosXZonasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductoXZonaWS\CrewmanSystem.ProductoXZonaWS.productoXZona.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProductoXZonaWS\ProductoXZonaWS.wsdl" />
+    <None Include="Connected Services\ProductoXZonaWS\ProductoXZonaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PromocionWS\CrewmanSystem.PromocionWS.actualizarPromocionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PromocionWS\CrewmanSystem.PromocionWS.eliminarPromocionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PromocionWS\CrewmanSystem.PromocionWS.insertarPromocionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PromocionWS\CrewmanSystem.PromocionWS.listarPromocionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PromocionWS\CrewmanSystem.PromocionWS.promocion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PromocionWS\PromocionWS.wsdl" />
+    <None Include="Connected Services\PromocionWS\PromocionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PromocionXZonaWS\CrewmanSystem.PromocionXZonaWS.insertarPromocionXZonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PromocionXZonaWS\CrewmanSystem.PromocionXZonaWS.listarPromocionXZonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PromocionXZonaWS\CrewmanSystem.PromocionXZonaWS.promocionXZona.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PromocionXZonaWS\PromocionXZonaWS.wsdl" />
+    <None Include="Connected Services\PromocionXZonaWS\PromocionXZonaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\QuejaWS\CrewmanSystem.QuejaWS.actualizarQuejaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\QuejaWS\CrewmanSystem.QuejaWS.eliminarQuejaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\QuejaWS\CrewmanSystem.QuejaWS.insertarQuejaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\QuejaWS\CrewmanSystem.QuejaWS.listarQuejasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\QuejaWS\CrewmanSystem.QuejaWS.queja.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\QuejaWS\QuejaWS.wsdl" />
+    <None Include="Connected Services\QuejaWS\QuejaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SubFamiliaWS\CrewmanSystem.SubFamiliaWS.actualizarSubFamiliaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SubFamiliaWS\CrewmanSystem.SubFamiliaWS.eliminarSubFamiliaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SubFamiliaWS\CrewmanSystem.SubFamiliaWS.insertarSubFamiliaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SubFamiliaWS\CrewmanSystem.SubFamiliaWS.listarSubFamiliasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SubFamiliaWS\CrewmanSystem.SubFamiliaWS.subFamilia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SubFamiliaWS\SubFamiliaWS.wsdl" />
+    <None Include="Connected Services\SubFamiliaWS\SubFamiliaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\VisitaWS\CrewmanSystem.VisitaWS.actualizarVisitaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VisitaWS\CrewmanSystem.VisitaWS.insertarVisitaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VisitaWS\CrewmanSystem.VisitaWS.listarVisitasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VisitaWS\CrewmanSystem.VisitaWS.visita.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VisitaWS\VisitaWS.wsdl" />
+    <None Include="Connected Services\VisitaWS\VisitaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ZonaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\ZonaWS\configuration.svcinfo" />
+    <None Include="Connected Services\ZonaWS\CrewmanSystem.ZonaWS.insertarZonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ZonaWS\CrewmanSystem.ZonaWS.listarZonasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ZonaWS\CrewmanSystem.ZonaWS.zona.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ZonaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\FamiliaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\FamiliaWS\configuration.svcinfo" />
+    <None Include="Connected Services\FamiliaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\CarteraWS\configuration91.svcinfo" />
+    <None Include="Connected Services\CarteraWS\configuration.svcinfo" />
+    <None Include="Connected Services\CarteraWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ClienteWS\configuration91.svcinfo" />
+    <None Include="Connected Services\ClienteWS\configuration.svcinfo" />
+    <None Include="Connected Services\ClienteWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ClienteXZonaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\ClienteXZonaWS\configuration.svcinfo" />
+    <None Include="Connected Services\ClienteXZonaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\EmpleadoXZonaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\EmpleadoXZonaWS\configuration.svcinfo" />
+    <None Include="Connected Services\EmpleadoXZonaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\FacturaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\FacturaWS\configuration.svcinfo" />
+    <None Include="Connected Services\FacturaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\GuiaRemisionWS\configuration91.svcinfo" />
+    <None Include="Connected Services\GuiaRemisionWS\configuration.svcinfo" />
+    <None Include="Connected Services\GuiaRemisionWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\LineaCreditoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\LineaCreditoWS\configuration.svcinfo" />
+    <None Include="Connected Services\LineaCreditoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\MarcaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\MarcaWS\configuration.svcinfo" />
+    <None Include="Connected Services\MarcaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\NotaDeCreditoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\NotaDeCreditoWS\configuration.svcinfo" />
+    <None Include="Connected Services\NotaDeCreditoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\PedidoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\PedidoWS\configuration.svcinfo" />
+    <None Include="Connected Services\PedidoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\PersonaContactoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\PersonaContactoWS\configuration.svcinfo" />
+    <None Include="Connected Services\PersonaContactoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ProductoXZonaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\ProductoXZonaWS\configuration.svcinfo" />
+    <None Include="Connected Services\ProductoXZonaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\PromocionWS\configuration91.svcinfo" />
+    <None Include="Connected Services\PromocionWS\configuration.svcinfo" />
+    <None Include="Connected Services\PromocionWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\PromocionXZonaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\PromocionXZonaWS\configuration.svcinfo" />
+    <None Include="Connected Services\PromocionXZonaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\QuejaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\QuejaWS\configuration.svcinfo" />
+    <None Include="Connected Services\QuejaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\SubFamiliaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\SubFamiliaWS\configuration.svcinfo" />
+    <None Include="Connected Services\SubFamiliaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\VisitaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\VisitaWS\configuration.svcinfo" />
+    <None Include="Connected Services\VisitaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ProductoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\ProductoWS\configuration.svcinfo" />
+    <None Include="Connected Services\ProductoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\EmpleadoWS\configuration.svcinfo" />
+    <None Include="Connected Services\EmpleadoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Resources\icono.ico" />
+    <Content Include="Resources\icono.png" />
+    <Content Include="Resources\signo-de-la-cruz.png" />
+    <None Include="Connected Services\ZonaWS\ZonaWS.wsdl" />
+    <None Include="Connected Services\ZonaWS\ZonaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Resources\MARCADEAGUA.png" />
+    <None Include="Resources\USER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CREWMANSYSTEMLOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\CarteraWS\" />
+    <WCFMetadataStorage Include="Connected Services\ClienteWS\" />
+    <WCFMetadataStorage Include="Connected Services\ClienteXZonaWS\" />
+    <WCFMetadataStorage Include="Connected Services\EmpleadoWS\" />
+    <WCFMetadataStorage Include="Connected Services\EmpleadoXZonaWS\" />
+    <WCFMetadataStorage Include="Connected Services\FacturaWS\" />
+    <WCFMetadataStorage Include="Connected Services\FamiliaWS\" />
+    <WCFMetadataStorage Include="Connected Services\GuiaRemisionWS\" />
+    <WCFMetadataStorage Include="Connected Services\LineaCreditoWS\" />
+    <WCFMetadataStorage Include="Connected Services\MarcaWS\" />
+    <WCFMetadataStorage Include="Connected Services\NotaDeCreditoWS\" />
+    <WCFMetadataStorage Include="Connected Services\PedidoWS\" />
+    <WCFMetadataStorage Include="Connected Services\PersonaContactoWS\" />
+    <WCFMetadataStorage Include="Connected Services\ProductoWS\" />
+    <WCFMetadataStorage Include="Connected Services\ProductoXZonaWS\" />
+    <WCFMetadataStorage Include="Connected Services\PromocionWS\" />
+    <WCFMetadataStorage Include="Connected Services\PromocionXZonaWS\" />
+    <WCFMetadataStorage Include="Connected Services\QuejaWS\" />
+    <WCFMetadataStorage Include="Connected Services\SubFamiliaWS\" />
+    <WCFMetadataStorage Include="Connected Services\VisitaWS\" />
+    <WCFMetadataStorage Include="Connected Services\ZonaWS\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

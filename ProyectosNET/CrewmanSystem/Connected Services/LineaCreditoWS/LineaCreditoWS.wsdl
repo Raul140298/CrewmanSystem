@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.CrewmanSystem.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="LineaCreditoWS" targetNamespace="http://services.CrewmanSystem.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/LineaCreditoWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarLineaCredito">
+    <part name="parameters" element="tns:insertarLineaCredito" />
+  </message>
+  <message name="insertarLineaCreditoResponse">
+    <part name="parameters" element="tns:insertarLineaCreditoResponse" />
+  </message>
+  <message name="actualizarLineaCredito">
+    <part name="parameters" element="tns:actualizarLineaCredito" />
+  </message>
+  <message name="actualizarLineaCreditoResponse">
+    <part name="parameters" element="tns:actualizarLineaCreditoResponse" />
+  </message>
+  <message name="mostrarLineaCreditos">
+    <part name="parameters" element="tns:mostrarLineaCreditos" />
+  </message>
+  <message name="mostrarLineaCreditosResponse">
+    <part name="parameters" element="tns:mostrarLineaCreditosResponse" />
+  </message>
+  <portType name="LineaCreditoWS">
+    <operation name="insertarLineaCredito">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/insertarLineaCreditoRequest" message="tns:insertarLineaCredito" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/insertarLineaCreditoResponse" message="tns:insertarLineaCreditoResponse" />
+    </operation>
+    <operation name="actualizarLineaCredito">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/actualizarLineaCreditoRequest" message="tns:actualizarLineaCredito" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/actualizarLineaCreditoResponse" message="tns:actualizarLineaCreditoResponse" />
+    </operation>
+    <operation name="mostrarLineaCreditos">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/mostrarLineaCreditosRequest" message="tns:mostrarLineaCreditos" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/mostrarLineaCreditosResponse" message="tns:mostrarLineaCreditosResponse" />
+    </operation>
+  </portType>
+  <binding name="LineaCreditoWSPortBinding" type="tns:LineaCreditoWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarLineaCredito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarLineaCredito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarLineaCreditos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="LineaCreditoWS">
+    <port name="LineaCreditoWSPort" binding="tns:LineaCreditoWSPortBinding">
+      <soap:address location="http://54.80.91.225:8080/CrewmanSystemServices/LineaCreditoWS" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.CrewmanSystem.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="FamiliaWS" targetNamespace="http://services.CrewmanSystem.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/FamiliaWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="listarFamilias">
+    <part name="parameters" element="tns:listarFamilias" />
+  </message>
+  <message name="listarFamiliasResponse">
+    <part name="parameters" element="tns:listarFamiliasResponse" />
+  </message>
+  <message name="eliminarFamilia">
+    <part name="parameters" element="tns:eliminarFamilia" />
+  </message>
+  <message name="eliminarFamiliaResponse">
+    <part name="parameters" element="tns:eliminarFamiliaResponse" />
+  </message>
+  <message name="insertarFamilia">
+    <part name="parameters" element="tns:insertarFamilia" />
+  </message>
+  <message name="insertarFamiliaResponse">
+    <part name="parameters" element="tns:insertarFamiliaResponse" />
+  </message>
+  <message name="actualizarFamilia">
+    <part name="parameters" element="tns:actualizarFamilia" />
+  </message>
+  <message name="actualizarFamiliaResponse">
+    <part name="parameters" element="tns:actualizarFamiliaResponse" />
+  </message>
+  <portType name="FamiliaWS">
+    <operation name="listarFamilias">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/listarFamiliasRequest" message="tns:listarFamilias" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/listarFamiliasResponse" message="tns:listarFamiliasResponse" />
+    </operation>
+    <operation name="eliminarFamilia">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/eliminarFamiliaRequest" message="tns:eliminarFamilia" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/eliminarFamiliaResponse" message="tns:eliminarFamiliaResponse" />
+    </operation>
+    <operation name="insertarFamilia">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/insertarFamiliaRequest" message="tns:insertarFamilia" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/insertarFamiliaResponse" message="tns:insertarFamiliaResponse" />
+    </operation>
+    <operation name="actualizarFamilia">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/actualizarFamiliaRequest" message="tns:actualizarFamilia" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/actualizarFamiliaResponse" message="tns:actualizarFamiliaResponse" />
+    </operation>
+  </portType>
+  <binding name="FamiliaWSPortBinding" type="tns:FamiliaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarFamilias">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarFamilia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarFamilia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarFamilia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="FamiliaWS">
+    <port name="FamiliaWSPort" binding="tns:FamiliaWSPortBinding">
+      <soap:address location="http://54.80.91.225:8080/CrewmanSystemServices/FamiliaWS" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.CrewmanSystem.pucp.edu.pe/" targetNamespace="http://services.CrewmanSystem.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarPromocion" type="tns:actualizarPromocion" />
+  <xs:element name="actualizarPromocionResponse" type="tns:actualizarPromocionResponse" />
+  <xs:element name="eliminarPromocion" type="tns:eliminarPromocion" />
+  <xs:element name="eliminarPromocionResponse" type="tns:eliminarPromocionResponse" />
+  <xs:element name="insertarPromocion" type="tns:insertarPromocion" />
+  <xs:element name="insertarPromocionResponse" type="tns:insertarPromocionResponse" />
+  <xs:element name="listarPromocions" type="tns:listarPromocions" />
+  <xs:element name="listarPromocionsResponse" type="tns:listarPromocionsResponse" />
+  <xs:complexType name="eliminarPromocion">
+    <xs:sequence>
+      <xs:element name="idPromocion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPromocionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPromocions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaIni" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPromocionsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:promocion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="promocion">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+      <xs:element name="idPromocion" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPromocion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="promocion" type="tns:promocion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPromocionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarPromocion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="promocion" type="tns:promocion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarPromocionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
