@@ -31,5 +31,14 @@ namespace CrewmanSystem
 			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
+
+		private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+		{
+			//castear objetos y mostrar valor determinado
+			SubFamiliaWS.subFamilia subfamilia = dataGridView1.Rows[e.RowIndex].DataBoundItem
+			as SubFamiliaWS.subFamilia;
+
+			dataGridView1.Rows[e.RowIndex].Cells["FAMILIA"].Value = subfamilia.familia.descripcion;
+		}
 	}
 }
