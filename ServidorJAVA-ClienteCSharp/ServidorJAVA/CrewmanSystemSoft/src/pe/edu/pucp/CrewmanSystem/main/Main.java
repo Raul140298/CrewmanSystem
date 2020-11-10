@@ -201,7 +201,7 @@ public class Main{
 
 //        miEmpleado.setUsuario("keikomontmont");
 //        miEmpleado.setContraseña("matangalachanga");
-        Empleado miEmpleado = daoEmpleado.obtenerEmpleado("javieraltrod","bancopichincha");
+        Empleado miEmpleado = daoEmpleado.permitirAccesoEmpleado("javieraltrod","bancopichincha");
         
         if(miEmpleado.getIdEmpleado()!=0){
             System.out.println("==================================================================================");

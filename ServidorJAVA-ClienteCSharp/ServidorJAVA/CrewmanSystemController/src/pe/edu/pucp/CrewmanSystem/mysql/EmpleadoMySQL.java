@@ -171,7 +171,7 @@ public class EmpleadoMySQL implements EmpleadoDAO{
     }
 
     @Override
-    public Empleado obtenerEmpleado(String usuario, String contra) {
+    public Empleado permitirAccesoEmpleado(String usuario, String contra) {
         PersonaDAO daoPersona = new PersonaMySQL();
         Empleado empleado = new Empleado();
         Integer entero;
