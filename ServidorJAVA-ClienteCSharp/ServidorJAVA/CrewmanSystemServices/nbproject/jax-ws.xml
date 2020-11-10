@@ -31,11 +31,11 @@
     <service name="PromocionWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.PromocionWS</implementation-class>
     </service>
-    <service name="PersonaContactoWS">
-      <implementation-class>pe.edu.pucp.CrewmanSystem.services.PersonaContactoWS</implementation-class>
-    </service>
     <service name="ClienteWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.ClienteWS</implementation-class>
+    </service>
+    <service name="PersonaContactoWS">
+      <implementation-class>pe.edu.pucp.CrewmanSystem.services.PersonaContactoWS</implementation-class>
     </service>
     <service name="CarteraWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.CarteraWS</implementation-class>
@@ -43,11 +43,11 @@
     <service name="ClienteXZonaWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.ClienteXZonaWS</implementation-class>
     </service>
-    <service name="VisitaWS">
-      <implementation-class>pe.edu.pucp.CrewmanSystem.services.VisitaWS</implementation-class>
-    </service>
     <service name="ProductoWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.ProductoWS</implementation-class>
+    </service>
+    <service name="VisitaWS">
+      <implementation-class>pe.edu.pucp.CrewmanSystem.services.VisitaWS</implementation-class>
     </service>
     <service name="NotaDeCreditoWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.NotaDeCreditoWS</implementation-class>

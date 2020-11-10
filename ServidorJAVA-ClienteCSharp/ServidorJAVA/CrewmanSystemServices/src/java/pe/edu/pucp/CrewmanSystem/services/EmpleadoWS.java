@@ -56,10 +56,10 @@ public class EmpleadoWS
         return resultado;
     }
     
-    @WebMethod(operationName = "obtenerEmpleado")
-    public Empleado obtenerEmpleado(@WebParam(name = "usuario") String usuario, @WebParam(name = "contra") String contra ){
+    @WebMethod(operationName = "permitirAccesoEmpleado")
+    public Empleado permitirAccesoEmpleado(@WebParam(name = "usuario") String usuario, @WebParam(name = "contra") String contra ){
         try{
-            empleado = daoEmpleado.obtenerEmpleado(usuario,contra);
+            empleado = daoEmpleado.permitirAccesoEmpleado(usuario,contra);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }

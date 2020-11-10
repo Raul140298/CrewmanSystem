@@ -7,7 +7,7 @@ public interface EmpleadoDAO{
     int actualizar(Empleado empleado);
     int eliminar(int idEmpleado);
     //Para el inicio de sesion
-    Empleado obtenerEmpleado(String usuario, String contra);
+    Empleado permitirAccesoEmpleado(String usuario, String contra);
     //Para las funciones que requieran informacion del empleado
     int obtenerEmpleado(Empleado empleado);
     ArrayList<Empleado> listarPorJefeVentas(int idEmpleado,String nombre,String apellidoPaterno,String apellidoMaterno);
