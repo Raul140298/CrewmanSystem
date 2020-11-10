@@ -137,7 +137,6 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmGestionarFamilias";
             this.Text = "Gestión de Familias";
-            this.Load += new System.EventHandler(this.frmGestionarFamilias_Load);
             this.pnlGestion.ResumeLayout(false);
             this.pnlGridView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

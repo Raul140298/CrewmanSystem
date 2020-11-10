@@ -2,31 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/MarcaDAO.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/FamiliaDAO.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/NotaDeCreditoDAO.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/PersonaContactoDAO.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/PersonaDAO.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/LineaCreditoDAO.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/CarteraDAO.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/SubFamiliaDAO.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/ProductoDAO.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/ClienteXZonaDAO.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/mysql/PersonaContactoMySQL.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/EmpleadoDAO.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/PromocionXProductoDAO.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/VisitaDAO.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/PromocionXZonaDAO.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/ZonaDAO.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/mysql/EmpleadoMySQL.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/mysql/ClienteMySQL.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/ClienteDAO.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/FacturaDAO.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/PromocionDAO.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/mysql/PedidoMySQL.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/QuejaDAO.java</file>
-            <file>file:/C:/Users/raul1/source/repos/LP2-LosTripulantes-/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/mysql/VisitaMySQL.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

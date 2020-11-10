@@ -133,7 +133,6 @@
             this.Controls.Add(this.pnlGestion);
             this.Name = "frmGestionarZonas";
             this.Text = "Gestión de Zonas";
-            this.Load += new System.EventHandler(this.frmGestionarZonas_Load);
             this.pnlGestion.ResumeLayout(false);
             this.pnlGridView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
