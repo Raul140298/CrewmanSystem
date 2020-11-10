@@ -142,7 +142,7 @@ public class ClienteMySQL implements ClienteDAO{
                 if(entero!=null) cliente.getPersonaContacto().setIdPersonaContacto(entero.intValue());
                 
                 entero=rs.getInt("ID_CARTERA");
-                if(entero!=null) cliente.getCartera().setId(entero.intValue());
+                if(entero!=null) cliente.getCartera().setIdCartera(entero.intValue());
                 
                 cliente.setRuc(rs.getString("RUC"));
                 cliente.setRazonSocial(rs.getString("RAZON_SOCIAL"));
@@ -194,7 +194,7 @@ public class ClienteMySQL implements ClienteDAO{
                 if(entero!=null) cliente.getPersonaContacto().setIdPersonaContacto(entero.intValue());
                 
                 entero=rs.getInt("ID_CARTERA");
-                if(entero!=null) cliente.getCartera().setId(entero.intValue());
+                if(entero!=null) cliente.getCartera().setIdCartera(entero.intValue());
                 
                 cliente.setRuc(rs.getString("RUC"));
                 cliente.setRazonSocial(rs.getString("RAZON_SOCIAL"));
@@ -264,7 +264,7 @@ public class ClienteMySQL implements ClienteDAO{
             if(entero!=null)cliente.getPersonaContacto().setIdPersonaContacto(entero.intValue());
             
             entero = rs.getInt("ID_CARTERA");
-            if(entero!=null)cliente.getCartera().setId(entero.intValue());
+            if(entero!=null)cliente.getCartera().setIdCartera(entero.intValue());
             
             cliente.setRuc(rs.getString("RUC"));
             cliente.setRazonSocial(rs.getString("RAZON_SOCIAL"));

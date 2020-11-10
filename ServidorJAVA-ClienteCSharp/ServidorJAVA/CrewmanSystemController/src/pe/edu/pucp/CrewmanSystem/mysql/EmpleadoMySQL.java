@@ -149,7 +149,7 @@ public class EmpleadoMySQL implements EmpleadoDAO{
                 empleado.asignarPersona(persona);
                 
                 entero=rs.getInt("ID_CARTERA");
-                if(entero!=null) empleado.getCartera().setId(entero.intValue());
+                if(entero!=null) empleado.getCartera().setIdCartera(entero.intValue());
                 
                 empleado.setSumVentas(rs.getDouble("SUMA_VENTAS_MES"));
                 empleado.setObjetivoVentas(rs.getDouble("OBJETIVO_VENTAS"));
@@ -207,7 +207,7 @@ public class EmpleadoMySQL implements EmpleadoDAO{
                 empleado.setSumVentas(rs.getDouble("SUMA_VENTAS_MES"));
                 empleado.setObjetivoVentas(rs.getDouble("OBJETIVO_VENTAS"));
                 entero=rs.getInt("ID_CARTERA");
-                if(entero!=null) empleado.getCartera().setId(entero.intValue());
+                if(entero!=null) empleado.getCartera().setIdCartera(entero.intValue());
             }
             else cargo.setNombre("JEFE DE VENTAS");
             empleado.setCargo(cargo);

@@ -101,6 +101,7 @@
 			this.dataGridView1.RowTemplate.Height = 24;
 			this.dataGridView1.Size = new System.Drawing.Size(845, 450);
 			this.dataGridView1.TabIndex = 3;
+			this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
 			// 
 			// ID
 			// 
@@ -122,7 +123,6 @@
 			// 
 			// ID_LINEA_CREDITO
 			// 
-			this.ID_LINEA_CREDITO.DataPropertyName = "lineaCredito";
 			this.ID_LINEA_CREDITO.HeaderText = "Id Línea Crédito";
 			this.ID_LINEA_CREDITO.MinimumWidth = 6;
 			this.ID_LINEA_CREDITO.Name = "ID_LINEA_CREDITO";
@@ -131,7 +131,6 @@
 			// 
 			// ID_PERSONA_CONTACTO
 			// 
-			this.ID_PERSONA_CONTACTO.DataPropertyName = "personaContacto";
 			this.ID_PERSONA_CONTACTO.HeaderText = "Id Persona Contacto";
 			this.ID_PERSONA_CONTACTO.MinimumWidth = 6;
 			this.ID_PERSONA_CONTACTO.Name = "ID_PERSONA_CONTACTO";
@@ -140,7 +139,6 @@
 			// 
 			// ID_CARTERA
 			// 
-			this.ID_CARTERA.DataPropertyName = "cartera";
 			this.ID_CARTERA.HeaderText = "Id Cartera";
 			this.ID_CARTERA.MinimumWidth = 6;
 			this.ID_CARTERA.Name = "ID_CARTERA";

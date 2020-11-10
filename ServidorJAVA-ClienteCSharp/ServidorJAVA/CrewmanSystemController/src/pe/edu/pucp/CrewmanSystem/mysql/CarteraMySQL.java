@@ -33,7 +33,7 @@ public class CarteraMySQL implements CarteraDAO{
             cs.setDate("_FECHA_FIN", new java.sql.Date(cartera.getFechaFin().getTime()));
             cs.executeUpdate();
             idCartera = cs.getInt("_ID_CARTERA");
-            cartera.setId(idCartera);
+            cartera.setIdCartera(idCartera);
             cs.close();
             
             for(Visita v : cartera.getListaVisita()){

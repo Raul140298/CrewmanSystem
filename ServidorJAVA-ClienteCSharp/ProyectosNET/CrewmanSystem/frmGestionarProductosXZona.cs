@@ -40,5 +40,17 @@ namespace CrewmanSystem
 			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
+
+		private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+		{
+			//castear objetos y mostrar valor determinado
+			ProductoXZonaWS.productoXZona productoXZona = dataGridView1.Rows[e.RowIndex].DataBoundItem
+			as ProductoXZonaWS.productoXZona;
+
+			dataGridView1.Rows[e.RowIndex].Cells["ID_PRODUCTO"].Value = productoXZona.producto.idProducto;
+			dataGridView1.Rows[e.RowIndex].Cells["PRODUCTO"].Value = productoXZona.producto.nombre;
+			dataGridView1.Rows[e.RowIndex].Cells["ID_ZONA"].Value = productoXZona.zona.idZona;
+			dataGridView1.Rows[e.RowIndex].Cells["ZONA"].Value = productoXZona.zona.nombre;
+		}
 	}
 }

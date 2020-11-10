@@ -95,9 +95,11 @@
 			this.dataGridView1.RowTemplate.Height = 24;
 			this.dataGridView1.Size = new System.Drawing.Size(800, 450);
 			this.dataGridView1.TabIndex = 2;
+			this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
 			// 
 			// ID
 			// 
+			this.ID.DataPropertyName = "idProductoXZona";
 			this.ID.HeaderText = "Id";
 			this.ID.MinimumWidth = 6;
 			this.ID.Name = "ID";
@@ -138,6 +140,7 @@
 			// 
 			// PRECIO_REAL
 			// 
+			this.PRECIO_REAL.DataPropertyName = "precioReal";
 			this.PRECIO_REAL.HeaderText = "Precio";
 			this.PRECIO_REAL.MinimumWidth = 6;
 			this.PRECIO_REAL.Name = "PRECIO_REAL";
@@ -146,6 +149,7 @@
 			// 
 			// FECHA_INICIO
 			// 
+			this.FECHA_INICIO.DataPropertyName = "fechaInicio";
 			this.FECHA_INICIO.HeaderText = "Fecha Inicio";
 			this.FECHA_INICIO.MinimumWidth = 6;
 			this.FECHA_INICIO.Name = "FECHA_INICIO";
@@ -154,6 +158,7 @@
 			// 
 			// FECHA_FIN
 			// 
+			this.FECHA_FIN.DataPropertyName = "fechaFin";
 			this.FECHA_FIN.HeaderText = "Fecha Fin";
 			this.FECHA_FIN.MinimumWidth = 6;
 			this.FECHA_FIN.Name = "FECHA_FIN";

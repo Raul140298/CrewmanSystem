@@ -673,9 +673,6 @@
     <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.eliminarClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.getClienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.insertarClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -683,6 +680,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.mostrarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.obtenerClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.obtenerClientesPorCarteraResponse.datasource">

@@ -40,5 +40,16 @@ namespace CrewmanSystem
 			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
+
+		private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+		{
+			//castear objetos y mostrar valor determinado
+			ClienteWS.cliente cliente = dataGridView1.Rows[e.RowIndex].DataBoundItem
+										as ClienteWS.cliente;
+
+			dataGridView1.Rows[e.RowIndex].Cells["ID_LINEA_CREDITO"].Value = cliente.lineaCredito.idLineaCredito;
+			dataGridView1.Rows[e.RowIndex].Cells["ID_PERSONA_CONTACTO"].Value = cliente.personaContacto.idPersonaContacto;
+			dataGridView1.Rows[e.RowIndex].Cells["ID_CARTERA"].Value = cliente.cartera.idCartera;
+		}
 	}
 }

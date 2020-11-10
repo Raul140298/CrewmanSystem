@@ -27,41 +27,47 @@ public class Cartera{
     }
     
     //GETTERS y SETTERS
-    public int getIdCartera() {
+
+    public int getIdCartera()
+    {
         return idCartera;
     }
 
-    public void setId(int id) {
-        this.idCartera = id;
+    public void setIdCartera(int idCartera)
+    {
+        this.idCartera = idCartera;
     }
 
-    public Empleado getEmpleado() {
+    public Empleado getEmpleado()
+    {
         return empleado;
     }
 
-    public void setEmpleado(Empleado empleado) {
+    public void setEmpleado(Empleado empleado)
+    {
         this.empleado = empleado;
     }
 
-    public Date getFechaInicio() {
+    public Date getFechaInicio()
+    {
         return fechaInicio;
     }
 
-    public void setFechaInicio(Date fechaIni) {
-        this.fechaInicio = fechaIni;
+    public void setFechaInicio(Date fechaInicio)
+    {
+        this.fechaInicio = fechaInicio;
     }
 
-    public Date getFechaFin() {
+    public Date getFechaFin()
+    {
         return fechaFin;
     }
 
-    public void setFechaFin(Date fechaFin) {
+    public void setFechaFin(Date fechaFin)
+    {
         this.fechaFin = fechaFin;
     }
-
-    public boolean isActivo() {
-        return activo;
-    }
+    
 
     public void setActivo(boolean activo) {
         this.activo = activo;
