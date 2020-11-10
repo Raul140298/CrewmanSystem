@@ -18,7 +18,16 @@ namespace CrewmanSystem
 			daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
-			dataGridView1.DataSource = new BindingList<EmpleadoWS.empleado>(daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado,"","","").ToArray());
+			EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado, "", "", "");
+			if (misEmpleados != null)
+            {
+				dataGridView1.DataSource = new BindingList<EmpleadoWS.empleado>(misEmpleados.ToArray());
+            }
+            else
+            {
+				dataGridView1.DataSource = new BindingList<EmpleadoWS.empleado>();
+
+			}
 			#region colores de seleccion
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
