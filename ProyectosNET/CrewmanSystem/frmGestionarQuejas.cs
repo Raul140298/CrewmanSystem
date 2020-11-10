@@ -18,7 +18,16 @@ namespace CrewmanSystem
 			daoQueja = new QuejaWS.QuejaWSClient();
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
-			dataGridView1.DataSource = new BindingList<QuejaWS.queja>(daoQueja.listarQuejas(0).ToArray());
+			QuejaWS.queja[] misQuejas = daoQueja.listarQuejas(0).ToArray();
+			if (misQuejas != null)
+			{
+				dataGridView1.DataSource = new BindingList<QuejaWS.queja>(misQuejas.ToArray());
+			}
+			else
+			{
+				dataGridView1.DataSource = new BindingList<QuejaWS.queja>();
+
+			}
 
 			#region colores de seleccion
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;

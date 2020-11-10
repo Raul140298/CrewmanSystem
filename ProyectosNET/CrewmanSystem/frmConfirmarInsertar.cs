@@ -12,24 +12,20 @@ namespace CrewmanSystem
 {
     public partial class frmConfirmarInsertar : Form
     {
-        private bool _decision = false;
         public frmConfirmarInsertar()
         {
             InitializeComponent();
         }
 
-        public bool Decision { get => _decision; set => _decision = value; }
-
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            _decision = true;
             this.Hide();
             this.Close();
+            this.DialogResult = DialogResult.OK;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            _decision = false;
             this.Hide();
             this.Close();
         }

@@ -18,7 +18,16 @@ namespace CrewmanSystem
 			daoZona = new ZonaWS.ZonaWSClient();
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
-			dataGridView1.DataSource = new BindingList<ZonaWS.zona>(daoZona.listarZonas().ToArray());
+			ZonaWS.zona[] misZonas = daoZona.listarZonas();
+			if (misZonas != null)
+			{
+				dataGridView1.DataSource = new BindingList<ZonaWS.zona>(misZonas.ToArray());
+			}
+			else
+			{
+				dataGridView1.DataSource = new BindingList<ZonaWS.zona>();
+
+			}
 			#region colores de seleccion
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);

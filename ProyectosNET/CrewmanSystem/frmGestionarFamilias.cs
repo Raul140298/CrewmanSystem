@@ -18,7 +18,16 @@ namespace CrewmanSystem
 			daoFamilia = new FamiliaWS.FamiliaWSClient();
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
-			dataGridView1.DataSource = new BindingList<FamiliaWS.familia>(daoFamilia.listarFamilias().ToArray());
+			FamiliaWS.familia[] misFamilias = daoFamilia.listarFamilias();
+			if (misFamilias != null)
+			{
+				dataGridView1.DataSource = new BindingList<FamiliaWS.familia>(misFamilias.ToArray());
+			}
+			else
+			{
+				dataGridView1.DataSource = new BindingList<FamiliaWS.familia>();
+
+			}
 			#region colores de seleccion
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);

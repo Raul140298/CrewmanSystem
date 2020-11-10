@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.ServiceModel.Configuration;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -30,14 +31,11 @@ namespace CrewmanSystem
 			frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
 			if(formInsertar.ShowDialog() == DialogResult.OK)
             {
-                if (formInsertar.Decision == true)
-                {
-					ZonaWS.zona zona = new ZonaWS.zona();
-					zona.nombre = txtNombre.Text;
-					int resultado = daoZona.insertarZona(zona);
-					txtId.Text = resultado.ToString();
-					//Usar resultado para ver si se inserto correctamente
-				}
+				ZonaWS.zona zona = new ZonaWS.zona();
+				zona.nombre = txtNombre.Text;
+				int resultado = daoZona.insertarZona(zona);
+				txtId.Text = resultado.ToString();
+				//Usar resultado para ver si se inserto correctamente
             }
         }
     }

@@ -18,9 +18,17 @@ namespace CrewmanSystem
 			daoVisita = new VisitaWS.VisitaWSClient();
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
-			VisitaWS.empleado emp = new VisitaWS.empleado();
-			emp.idEmpleado = Program.empleado.idEmpleado;
-			dataGridView1.DataSource = new BindingList<VisitaWS.visita>(daoVisita.listarVisitas(emp).ToArray());
+			VisitaWS.visita[] misVisitas = daoVisita.listarVisitas(null);
+			if (misVisitas != null)
+			{
+				dataGridView1.DataSource = new BindingList<VisitaWS.visita>(misVisitas.ToArray());
+			}
+			else
+			{
+				dataGridView1.DataSource = new BindingList<VisitaWS.visita>();
+
+			}
+
 
 			#region colores de seleccion
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
