@@ -1,7 +1,6 @@
 package pe.edu.pucp.CrewmanSystem.dao;
 import java.util.ArrayList;
 import pe.edu.pucp.CrewmanSystem.model.Cliente;
-import pe.edu.pucp.CrewmanSystem.model.LineaCredito;
 
 public interface ClienteDAO
 {
@@ -12,5 +11,5 @@ public interface ClienteDAO
     ArrayList<Cliente> listar();
     ArrayList<Cliente> obtenerClientesSinCartera();
     ArrayList<Cliente> obtenerClientesPorCartera(int idCartera,String razonSocial,String grupo);
-    int getCliente(Cliente cliente);
+    int obtenerCliente(Cliente cliente);
 }

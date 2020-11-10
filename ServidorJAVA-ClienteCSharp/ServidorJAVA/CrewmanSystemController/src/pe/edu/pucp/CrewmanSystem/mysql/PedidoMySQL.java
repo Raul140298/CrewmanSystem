@@ -29,9 +29,9 @@ public class PedidoMySQL implements PedidoDAO{
     public int insertar(Pedido pedido){
         int resultado = 0;
         double subtotal = 0;
+        PedidoDAO daoPedido = new PedidoMySQL();
+        LineaPedidoDAO daoLinea = new LineaPedidoMySQL();
         try{
-            PedidoDAO daoPedido = new PedidoMySQL();
-            LineaPedidoDAO daoLinea = new LineaPedidoMySQL();
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             String sql ="{ call INSERTAR_BORRADOR(?,?,?,?,?)}";
@@ -174,8 +174,8 @@ public class PedidoMySQL implements PedidoDAO{
     @Override
     public int insertarTotal(Pedido pedido){
         int resultado = 0;
+        LineaPedidoDAO daoLinea = new LineaPedidoMySQL();
         try{
-            LineaPedidoDAO daoLinea = new LineaPedidoMySQL();
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             String sql ="{ call INSERTAR_TOTAL_PEDIDO(?,?)}";
@@ -199,11 +199,11 @@ public class PedidoMySQL implements PedidoDAO{
     public void mostrar(Pedido pedido) {
         if(pedido.getCliente().getIdCliente()>0){
             ClienteDAO daoCliente = new ClienteMySQL();
-            daoCliente.getCliente(pedido.getCliente());
+            daoCliente.obtenerCliente(pedido.getCliente());
         }
         if(pedido.getEmpleado().getIdEmpleado()>0){
             EmpleadoDAO daoEmpleado = new EmpleadoMySQL();
-            daoEmpleado.getEmpleado(pedido.getEmpleado());
+            daoEmpleado.obtenerEmpleado(pedido.getEmpleado());
         }
     }
     
@@ -211,8 +211,8 @@ public class PedidoMySQL implements PedidoDAO{
     public int aprobarBorrador(Pedido pedido) {
         int resultado = 0;
         boolean reserva = false;
+        LineaPedidoDAO daoLinea = new LineaPedidoMySQL();
         try{
-            LineaPedidoDAO daoLinea = new LineaPedidoMySQL();
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             String sql ="{ call APROBAR_BORRADOR(?,?,?,?)}";
@@ -240,10 +240,10 @@ public class PedidoMySQL implements PedidoDAO{
     }
     
     @Override
-    public int getPedido(Pedido pedido){
+    public int obtenerPedido(Pedido pedido){
         int resultado = 0;
+        LineaPedidoDAO daoLinea = new LineaPedidoMySQL();
         try{
-            LineaPedidoDAO daoLinea = new LineaPedidoMySQL();
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             String sql ="{ call GET_PEDIDO(?)}";

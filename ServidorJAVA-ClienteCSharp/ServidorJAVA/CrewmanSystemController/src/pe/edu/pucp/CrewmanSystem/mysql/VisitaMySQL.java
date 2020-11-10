@@ -22,6 +22,8 @@ public class VisitaMySQL implements VisitaDAO{
     {
         int resultado = 0;
         try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             String sql ="{ call INSERTAR_VISITA(?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_VISITA", java.sql.Types.INTEGER);
@@ -42,11 +44,14 @@ public class VisitaMySQL implements VisitaDAO{
         }
         return resultado;
     }
+    
     @Override
     public int actualizar(Visita visita)
     {
         int resultado = 0;
         try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             String sql ="{ call ACTUALIZAR_VISITA(?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_VISITA", visita.getIdVisita());

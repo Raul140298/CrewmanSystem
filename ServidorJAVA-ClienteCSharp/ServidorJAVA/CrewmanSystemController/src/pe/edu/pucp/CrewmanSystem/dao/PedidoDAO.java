@@ -12,7 +12,7 @@ public interface PedidoDAO
     
     int insertarTotal(Pedido pedido);
     int aprobarBorrador(Pedido pedido);
-    int getPedido(Pedido pedido);
+    int obtenerPedido(Pedido pedido);
     int liberarStock(Pedido pedido);
     int culminarPedido(Pedido pedido);
     void anular(Pedido pedido);

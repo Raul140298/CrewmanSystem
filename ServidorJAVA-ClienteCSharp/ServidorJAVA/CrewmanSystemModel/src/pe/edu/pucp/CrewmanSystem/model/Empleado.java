@@ -171,33 +171,7 @@ public class Empleado extends Persona{
     {
         this.cords = cords;
     }
-    
-    public void asignarPersona(Persona persona)
-    {
-      
-    }
-        
-    public void registrarVisita(Cliente cliente){
-//        EmpleadoDAO daoEmpleado=new EmpleadoMySQL();
-//        daoEmpleado.registrarVisita(getDni(),cliente.getRuc());
-    }
-    
-    public void generarCartera(){
-//        ClienteDAO clientes=new ClienteMySQL();
-//        ArrayList<Cliente> misClientes=clientes.obtenerClientesSinCartera();
-//        
-//        Cartera cartera=new Cartera();
-//        
-//        for(Cliente c : misClientes){
-//            if(c.getZona().getIdZona()==zona.getIdZona()){
-//                cartera.obtenerListaCliente().add(c);
-//            }
-//        }
-//        //ASIGNO LA CARTERA AL ATRIBUTO Y SETEO EL VENDEDOR A LA MISMA
-//        this.cartera = cartera;
-//        this.cartera.setEmpleado(this);
-    }
-    
+                
     public void generarReporteCumplimientoVentas(){
 //        EmpleadoDAO daoEmpleado=new EmpleadoMySQL();
 //        ArrayList<Empleado> empleadoes=daoEmpleado.listar();

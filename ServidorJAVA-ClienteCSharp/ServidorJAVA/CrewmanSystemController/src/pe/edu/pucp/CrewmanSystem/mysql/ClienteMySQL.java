@@ -37,7 +37,7 @@ public class ClienteMySQL implements ClienteDAO{
             cs.setString("_GRUPO", cliente.getGrupo());
             cs.setString("_DIRECCION", cliente.getDireccion());
             cs.setInt("_ID_ZONA", cliente.getZona().getIdZona());
-            cs.executeUpdate();
+            resultado = cs.executeUpdate();
             int idCliente=cs.getInt("_ID_CLIENTE");
             cliente.setIdCliente(idCliente);
             
@@ -46,8 +46,8 @@ public class ClienteMySQL implements ClienteDAO{
             cliente.getPersonaContacto().setIdPersona(idPersona);
             
             PersonaContactoDAO daoPersonaContacto = new PersonaContactoMySQL();
-            resultado=daoPersonaContacto.insertar(cliente.getPersonaContacto());
-            cliente.getPersonaContacto().setIdPersonaContacto(resultado);
+            int idPersonaContacto = daoPersonaContacto.insertar(cliente.getPersonaContacto());
+            cliente.getPersonaContacto().setIdPersonaContacto(idPersonaContacto);
             
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -105,7 +105,7 @@ public class ClienteMySQL implements ClienteDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-                String sql ="{ call ELIMINAR_CLIENTE (?)}";
+            String sql ="{ call ELIMINAR_CLIENTE (?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_CLIENTE", idCliente);
             resultado=cs.executeUpdate();
@@ -244,7 +244,7 @@ public class ClienteMySQL implements ClienteDAO{
     }
     
     @Override
-    public int getCliente(Cliente cliente){
+    public int obtenerCliente(Cliente cliente){
         int resultado = 0;
         Integer entero;
         try{

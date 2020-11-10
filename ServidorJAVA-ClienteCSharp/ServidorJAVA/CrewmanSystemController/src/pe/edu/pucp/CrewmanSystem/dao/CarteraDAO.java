@@ -1,6 +1,5 @@
 package pe.edu.pucp.CrewmanSystem.dao;
 import pe.edu.pucp.CrewmanSystem.model.Cartera;
-import pe.edu.pucp.CrewmanSystem.model.Empleado;
 
 public interface CarteraDAO
 {

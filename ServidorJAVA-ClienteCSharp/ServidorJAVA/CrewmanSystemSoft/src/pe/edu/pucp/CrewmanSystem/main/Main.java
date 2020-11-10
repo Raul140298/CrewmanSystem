@@ -55,23 +55,23 @@ public class Main{
     
     
     public static void main(String[] args) {
-//        gestionarFamilias();
-//        gestionarSubFamilias();
-//        gestionarMarcas();
-//        gestionarZonas();
-//        gestionarClientes();
+        gestionarFamilias();
+        gestionarSubFamilias();
+        gestionarMarcas();
+        gestionarZonas();
+        gestionarClientes();
         gestionarEmpleados();
-//        gestionarProductos();
-//        gestionarProductoXZona();
-//        gestionarPromociones();
-//        gestionarPromocionXProducto();
-//        gestionarPromocionXZona();
-//        gestionarPedidos();
-//        gestionarLineasDePedido();
-//        gestionarFacturas();
-//        gestionarNotasDeCredito();
-//        gestionarGuiasDeRemision();
-//        gestionarQuejas();
+        gestionarProductos();
+        gestionarProductoXZona();
+        gestionarPromociones();
+        gestionarPromocionXProducto();
+        gestionarPromocionXZona();
+        gestionarPedidos();
+        gestionarLineasDePedido();
+        gestionarFacturas();
+        gestionarNotasDeCredito();
+        gestionarGuiasDeRemision();
+        gestionarQuejas();
                 
         System.out.println("EL MODELADO HA CONCLUIDO");
     }
@@ -199,14 +199,11 @@ public class Main{
         
 //        Empleado emp1=new Empleado();
 
-        Empleado miEmpleado=new Empleado();
-        miEmpleado.setUsuario("javieraltrod");
-        miEmpleado.setContraseña("bancopichincha");
 //        miEmpleado.setUsuario("keikomontmont");
 //        miEmpleado.setContraseña("matangalachanga");
-        int resultado=daoEmpleado.obtenerEmpleado(miEmpleado);
+        Empleado miEmpleado = daoEmpleado.obtenerEmpleado("javieraltrod","bancopichincha");
         
-        if(resultado!=0){
+        if(miEmpleado.getIdEmpleado()!=0){
             System.out.println("==================================================================================");
             if(miEmpleado.getGenero()=='M') System.out.println("BIENVENIDO "+miEmpleado.getNombre()+" "+miEmpleado.getApellidoPaterno());
             else System.out.println("BIENVENIDA "+miEmpleado.getNombre()+" "+miEmpleado.getApellidoPaterno());
@@ -478,7 +475,7 @@ public class Main{
         System.out.println("LISTADO DE PEDIDOS");
         System.out.println("==================================================================================");
         for(Pedido p:misPedidos){
-            daoCliente.getCliente(p.getCliente());
+            daoCliente.obtenerCliente(p.getCliente());
             System.out.println(p.getIdPedido()+" - "+p.getFechaRegistro()+" - "+p.getCliente().getRuc()+" - "+p.getMontoTotal()+" - "+p.getMontoPagar()+" - "+String.valueOf(p.getTipoPedido())+" - "+String.valueOf(p.getEstadoPedido()));
         }
         System.out.println("\n");

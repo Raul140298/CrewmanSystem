@@ -45,6 +45,7 @@ public class LineaPedidoMySQL implements LineaPedidoDAO{
         }
         return resultado;
     }
+    
     @Override
     public int actualizar(LineaPedido lineaPedido)
     {
@@ -68,6 +69,7 @@ public class LineaPedidoMySQL implements LineaPedidoDAO{
         }
         return resultado;    
     }
+    
     @Override
     public int eliminar(int idLineaPedido)
     {
@@ -91,6 +93,7 @@ public class LineaPedidoMySQL implements LineaPedidoDAO{
         }
         return resultado;
     }
+    
     @Override
     public ArrayList<LineaPedido> listar(int idPedido){
         ArrayList<LineaPedido> lineaPedidos = new ArrayList<>();

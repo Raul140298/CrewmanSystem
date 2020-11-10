@@ -107,11 +107,11 @@ public class ClienteWS {
         return misClientes;
     }
     
-    @WebMethod(operationName = "getCliente")
-    public int getCliente(@WebParam(name = "cliente") Cliente cliente){
+    @WebMethod(operationName = "obtenerCliente")
+    public int obtenerCliente(@WebParam(name = "cliente") Cliente cliente){
         int resultado = 0;
         try{
-            resultado = daoCliente.getCliente(cliente);
+            resultado = daoCliente.obtenerCliente(cliente);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }

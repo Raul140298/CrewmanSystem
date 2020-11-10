@@ -127,5 +127,29 @@ public class Persona {
         this.activo = activo;
     }
     
+    public void asignarPersona(Persona persona){
+        this.idPersona=persona.getIdPersona();
+        this.dni=persona.getDni();
+        this.nombre=persona.getNombre();
+        this.apellidoPaterno=persona.getApellidoPaterno();
+        this.apellidoMaterno=persona.getApellidoMaterno();
+        this.correo=persona.getCorreo();
+        this.telefono1=persona.getTelefono1();
+        this.telefono2=persona.getTelefono2();
+        this.genero=persona.getGenero();
+    }
     
+    public Persona obtenerPersona(){
+        Persona persona = new Persona();
+        persona.setIdPersona(getIdPersona());
+        persona.setDni(getDni());
+        persona.setNombre(getNombre());
+        persona.setApellidoPaterno(getApellidoPaterno());
+        persona.setApellidoMaterno(getApellidoMaterno());
+        persona.setTelefono1(getTelefono1());
+        persona.setTelefono2(getTelefono2());
+        persona.setCorreo(getCorreo());
+        persona.setGenero(getGenero());
+        return persona;
+    }
 }

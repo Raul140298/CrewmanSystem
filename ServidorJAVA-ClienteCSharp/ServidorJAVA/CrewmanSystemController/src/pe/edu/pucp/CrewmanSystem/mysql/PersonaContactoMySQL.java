@@ -21,6 +21,8 @@ public class PersonaContactoMySQL implements PersonaContactoDAO{
     public int insertar(PersonaContacto personaContacto){
         int resultado = 0;
         try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             String sql ="{ call INSERTAR_PERSONACONTACTO(?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_PERSONA_CONTACTO", java.sql.Types.INTEGER);
@@ -46,6 +48,8 @@ public class PersonaContactoMySQL implements PersonaContactoDAO{
     public int actualizar(PersonaContacto personaContacto){
         int resultado = 0;
         try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             String sql = "{ call ACTUALIZAR_PERSONACONTACTO(?,?) }";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_PERSONA_CONTACTO",personaContacto.getIdPersonaContacto());
@@ -53,7 +57,7 @@ public class PersonaContactoMySQL implements PersonaContactoDAO{
             cs.executeUpdate();
             
             PersonaDAO personaDAO = new PersonaMySQL();
-            //resultado=personaDAO.actualizar(personaContacto.getPersona());
+            resultado=personaDAO.actualizar(personaContacto.obtenerPersona());
             
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -71,6 +75,8 @@ public class PersonaContactoMySQL implements PersonaContactoDAO{
     public int eliminar(int idPersonaContacto){
         int resultado = 0;
         try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             String sql ="{ call ELIMINAR_PERSONACONTACTO (?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_DNI", idPersonaContacto);
@@ -91,6 +97,8 @@ public class PersonaContactoMySQL implements PersonaContactoDAO{
     public PersonaContacto mostrar(int idPersonaContacto) {
         PersonaContacto personaContacto=new PersonaContacto();
         try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             String sql ="{ call MOSTRAR_PERSONACONTACTO(?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_PERSONA_CONTACTO", idPersonaContacto);
@@ -104,7 +112,7 @@ public class PersonaContactoMySQL implements PersonaContactoDAO{
             PersonaDAO daoPersona = new PersonaMySQL();
             Persona persona=daoPersona.mostrar(personaContacto.getIdPersona());
             
-            //personaContacto.setPersona(persona);
+            personaContacto.asignarPersona(persona);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{

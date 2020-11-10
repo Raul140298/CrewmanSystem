@@ -113,13 +113,13 @@ public class PedidoWS
         return resultado;
     }
     
-    @WebMethod(operationName = "getPedido")
-    public int getPedido(@WebParam(name = "pedido") Pedido pedido)
+    @WebMethod(operationName = "obtenerPedido")
+    public int obtenerPedido(@WebParam(name = "pedido") Pedido pedido)
     {
         int resultado = 0;
         try
         {
-            resultado = daoPedido.getPedido(pedido);
+            resultado = daoPedido.obtenerPedido(pedido);
         }
         catch(Exception e)
         {

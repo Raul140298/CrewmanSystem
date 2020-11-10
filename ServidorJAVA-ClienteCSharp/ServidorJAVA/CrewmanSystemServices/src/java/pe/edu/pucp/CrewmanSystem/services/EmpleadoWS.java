@@ -66,11 +66,11 @@ public class EmpleadoWS
         return empleado;
     }
     
-    @WebMethod(operationName = "getEmpleado")
-    public int getEmpleado(@WebParam(name = "empleado") Empleado empleado) {
+    @WebMethod(operationName = "obtenerEmpleado")
+    public int obtenerEmpleado(@WebParam(name = "empleado") Empleado empleado) {
         int resultado=0;
         try{
-            resultado = daoEmpleado.getEmpleado(empleado);
+            resultado = daoEmpleado.obtenerEmpleado(empleado);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }

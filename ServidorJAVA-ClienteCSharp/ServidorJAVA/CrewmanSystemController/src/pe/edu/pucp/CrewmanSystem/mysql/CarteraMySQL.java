@@ -66,8 +66,8 @@ public class CarteraMySQL implements CarteraDAO{
     @Override
     public int actualizar(Cartera cartera) {
         int resultado=0;
+        CarteraDAO daoCartera = new CarteraMySQL();
         try{
-            CarteraDAO daoCartera = new CarteraMySQL();
             daoCartera.eliminar(cartera.getIdCartera());
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);

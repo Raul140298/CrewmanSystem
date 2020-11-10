@@ -26,13 +26,12 @@ public class EmpleadoMySQL implements EmpleadoDAO{
     
     @Override
     public int insertar(Empleado empleado){
-        int resultado = 0;
+        int resultado = 0, idPersona = 0;
         try{
-            int idPersona=0;
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             PersonaDAO daoPersona = new PersonaMySQL();
-            //idPersona=daoPersona.insertar(empleado.getPersona());
+            idPersona=daoPersona.insertar(empleado.obtenerPersona());
             
             if(empleado.getJefe()!=null){
                 String sql ="{ call INSERTAR_VENDEDOR(?,?,?,?,?,?,?)}";
@@ -86,7 +85,7 @@ public class EmpleadoMySQL implements EmpleadoDAO{
             resultado=cs.executeUpdate();
             
             PersonaDAO personaDAO = new PersonaMySQL();
-            //resultado=personaDAO.actualizar(empleado.getPersona());
+            resultado=personaDAO.actualizar(empleado.obtenerPersona());
         
             if(empleado.getZona().getIdZona()>0){
                 EmpleadoXZonaDAO daoEXZ = new EmpleadoXZonaMySQL();
@@ -147,7 +146,7 @@ public class EmpleadoMySQL implements EmpleadoDAO{
                 
                 PersonaDAO daoPersona = new PersonaMySQL();
                 Persona persona = daoPersona.mostrar(rs.getInt("ID_PERSONA")); 
-                //empleado.setPersona(persona);
+                empleado.asignarPersona(persona);
                 
                 entero=rs.getInt("ID_CARTERA");
                 if(entero!=null) empleado.getCartera().setId(entero.intValue());
@@ -188,10 +187,7 @@ public class EmpleadoMySQL implements EmpleadoDAO{
             rs = cs.getResultSet();
             rs.next();
             
-            if(resultado==0) {
-                empleado = null;
-                return empleado;
-            }
+            if(resultado==0) return null;
                  
             empleado.setIdEmpleado(rs.getInt("ID_EMPLEADO"));
             empleado.setFechaCreacion(rs.getDate("FECHA_CREACION"));
@@ -200,14 +196,12 @@ public class EmpleadoMySQL implements EmpleadoDAO{
 //            System.out.println(empleado.getFechaCreacion());
             
             Persona persona = daoPersona.mostrar(rs.getInt("ID_PERSONA"));
-            //empleado.setActivo();
-            
-            
+            empleado.asignarPersona(persona);
+
             Cargo cargo=new Cargo();
             cargo.setIdCargo(rs.getInt("ID_CARGO"));
-            
-            //System.out.println(empleado.getCargo().getIdCargo());
-            
+//            System.out.println(empleado.getCargo().getIdCargo());
+
             if(cargo.getIdCargo()==1){
                 cargo.setNombre("VENDEDOR");
                 empleado.setSumVentas(rs.getDouble("SUMA_VENTAS_MES"));
@@ -231,7 +225,7 @@ public class EmpleadoMySQL implements EmpleadoDAO{
     }
 
     @Override
-    public int getEmpleado(Empleado empleado) {
+    public int obtenerEmpleado(Empleado empleado) {
         int resultado = 0;
         Integer entero;
         try{
@@ -246,7 +240,7 @@ public class EmpleadoMySQL implements EmpleadoDAO{
             
             PersonaDAO daoPersona = new PersonaMySQL();
             Persona persona = daoPersona.mostrar(rs.getInt("ID_PERSONA"));
-            //empleado.setPersona(persona);
+            empleado.asignarPersona(persona);
             
         }catch(Exception ex){
             System.out.println(ex.getMessage());
