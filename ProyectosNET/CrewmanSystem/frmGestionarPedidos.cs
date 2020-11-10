@@ -19,7 +19,16 @@ namespace CrewmanSystem
 			daoPedido = new PedidoWS.PedidoWSClient();
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
-			dataGridView1.DataSource = new BindingList<PedidoWS.pedido>(daoPedido.listarPedidos().ToArray());
+			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos();
+			if (misPedidos != null)
+			{
+				dataGridView1.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
+			}
+			else
+			{
+				dataGridView1.DataSource = new BindingList<PedidoWS.pedido>();
+
+			}
 
 			#region colores de seleccion
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;

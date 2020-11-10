@@ -18,7 +18,16 @@ namespace CrewmanSystem
 			daoProducto = new ProductoWS.ProductoWSClient();
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
-			dataGridView1.DataSource = new BindingList<ProductoWS.producto>(daoProducto.listarProductos("","","","").ToArray());
+			ProductoWS.producto[] misProductos = daoProducto.listarProductos("", "", "", "");
+			if (misProductos != null)
+			{
+				dataGridView1.DataSource = new BindingList<ProductoWS.producto>(misProductos.ToArray());
+			}
+			else
+			{
+				dataGridView1.DataSource = new BindingList<ProductoWS.producto>();
+
+			}
 
 			#region colores de seleccion
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;

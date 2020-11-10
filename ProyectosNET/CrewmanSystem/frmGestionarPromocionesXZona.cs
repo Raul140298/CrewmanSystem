@@ -18,7 +18,16 @@ namespace CrewmanSystem
 			daoPromocionXZona = new PromocionXZonaWS.PromocionXZonaWSClient();
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
-			dataGridView1.DataSource = new BindingList<PromocionXZonaWS.promocionXZona>(daoPromocionXZona.listarPromocionXZona(0).ToArray());
+			PromocionXZonaWS.promocionXZona[] misPromocionXZonas = daoPromocionXZona.listarPromocionXZona(0);
+			if (misPromocionXZonas != null)
+			{
+				dataGridView1.DataSource = new BindingList<PromocionXZonaWS.promocionXZona>(misPromocionXZonas.ToArray());
+			}
+			else
+			{
+				dataGridView1.DataSource = new BindingList<PromocionXZonaWS.promocionXZona>();
+
+			}
 
 			#region colores de seleccion
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;

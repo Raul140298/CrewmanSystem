@@ -18,7 +18,16 @@ namespace CrewmanSystem
 			daoSubFamilia = new SubFamiliaWS.SubFamiliaWSClient();
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
-			dataGridView1.DataSource = new BindingList<SubFamiliaWS.subFamilia>(daoSubFamilia.listarSubFamilias("").ToArray());
+			SubFamiliaWS.subFamilia[] misSubFamilias = daoSubFamilia.listarSubFamilias("");
+			if (misSubFamilias != null)
+			{
+				dataGridView1.DataSource = new BindingList<SubFamiliaWS.subFamilia>(misSubFamilias.ToArray());
+			}
+			else
+			{
+				dataGridView1.DataSource = new BindingList<SubFamiliaWS.subFamilia>();
+
+			}
 
 			#region colores de seleccion
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;

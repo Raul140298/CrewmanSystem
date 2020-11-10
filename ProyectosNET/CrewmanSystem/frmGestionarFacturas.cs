@@ -18,7 +18,16 @@ namespace CrewmanSystem
 			daoFactura = new FacturaWS.FacturaWSClient();
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
-			dataGridView1.DataSource = new BindingList<FacturaWS.factura>(daoFactura.listarFacturas(0).ToArray());
+			FacturaWS.factura[] misFacturas = daoFactura.listarFacturas(0);
+			if (misFacturas != null)
+			{
+				dataGridView1.DataSource = new BindingList<FacturaWS.factura>(misFacturas.ToArray());
+			}
+			else
+			{
+				dataGridView1.DataSource = new BindingList<FacturaWS.factura>();
+
+			}
 			#region colores de seleccion
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);

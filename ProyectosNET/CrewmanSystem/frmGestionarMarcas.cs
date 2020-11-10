@@ -18,7 +18,16 @@ namespace CrewmanSystem
 			daoMarca = new MarcaWS.MarcaWSClient();
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
-			dataGridView1.DataSource = new BindingList<MarcaWS.marca>(daoMarca.listarMarcas().ToArray());
+			MarcaWS.marca[] misMarcas = daoMarca.listarMarcas();
+			if (misMarcas != null)
+			{
+				dataGridView1.DataSource = new BindingList<MarcaWS.marca>(misMarcas.ToArray());
+			}
+			else
+			{
+				dataGridView1.DataSource = new BindingList<MarcaWS.marca>();
+
+			}
 
 			#region colores de seleccion
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;

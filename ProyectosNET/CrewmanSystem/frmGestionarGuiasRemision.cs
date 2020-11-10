@@ -18,7 +18,16 @@ namespace CrewmanSystem
 			daoGuiaRemision = new GuiaRemisionWS.GuiaRemisionWSClient();
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
-			dataGridView1.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>(daoGuiaRemision.listarGuiaRemisions(0).ToArray());
+			GuiaRemisionWS.guiaRemision[] misGuias = daoGuiaRemision.listarGuiaRemisions(0);
+			if (misGuias != null)
+			{
+				dataGridView1.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>(daoGuiaRemision.listarGuiaRemisions(0).ToArray());
+			}
+			else
+			{
+				dataGridView1.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>();
+
+			}
 			#region colores de seleccion
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
