@@ -722,9 +722,6 @@
     <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.empleado.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.getEmpleadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.insertarEmpleadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -740,11 +737,14 @@
     <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.obtenerEmpleadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.permitirAccesoEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.persona.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EmpleadoWS\EmpleadoWS1.wsdl" />
-    <None Include="Connected Services\EmpleadoWS\EmpleadoWS1.xsd">
+    <None Include="Connected Services\EmpleadoWS\EmpleadoWS.wsdl" />
+    <None Include="Connected Services\EmpleadoWS\EmpleadoWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\EmpleadoXZonaWS\CrewmanSystem.EmpleadoXZonaWS.eliminarEmpleadoXZonaResponse.datasource">

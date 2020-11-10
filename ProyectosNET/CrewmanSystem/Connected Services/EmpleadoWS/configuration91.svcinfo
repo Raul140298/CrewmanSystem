@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="YRsvVdM9Mc0vFqY8wbcLZNU/q1LySBxZpnxSWEFAR+4=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="I02VrWN/9kf90d68wmllhrjgGDnJph8NL1p8ws+AAh0=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="EmpleadoWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="EmpleadoWSPort" contract="EmpleadoWS.EmpleadoWS" bindingType="basicHttpBinding" address="http://localhost:8080/CrewmanSystemServices/EmpleadoWS" bindingConfiguration="EmpleadoWSPortBinding">
+    <endpoint name="EmpleadoWSPort" contract="EmpleadoWS.EmpleadoWS" bindingType="basicHttpBinding" address="http://54.80.91.225:8080/CrewmanSystemServices/EmpleadoWS" bindingConfiguration="EmpleadoWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/CrewmanSystemServices/EmpleadoWS</serializedValue>
+          <serializedValue>http://54.80.91.225:8080/CrewmanSystemServices/EmpleadoWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

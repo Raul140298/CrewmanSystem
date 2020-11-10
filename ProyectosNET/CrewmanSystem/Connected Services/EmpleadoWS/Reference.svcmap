@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/CrewmanSystemServices/EmpleadoWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.80.91.225:8080/CrewmanSystemServices/EmpleadoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EmpleadoWS1.wsdl" MetadataType="Wsdl" ID="1f720b1d-7d57-4feb-855f-1da2e38274da" SourceId="1" SourceUrl="http://localhost:8080/CrewmanSystemServices/EmpleadoWS?WSDL" />
-    <MetadataFile FileName="EmpleadoWS1.xsd" MetadataType="Schema" ID="eb305e5b-aec1-4182-bc86-85ae2148708c" SourceId="1" SourceUrl="http://localhost:8080/CrewmanSystemServices/EmpleadoWS?xsd=1" />
+    <MetadataFile FileName="EmpleadoWS.xsd" MetadataType="Schema" ID="d5fee1eb-8427-499a-8655-f7001c81c0df" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/EmpleadoWS?xsd=1" />
+    <MetadataFile FileName="EmpleadoWS.wsdl" MetadataType="Wsdl" ID="e2fb8ab4-21bd-4091-b3dd-17deb2bd26f5" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/EmpleadoWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

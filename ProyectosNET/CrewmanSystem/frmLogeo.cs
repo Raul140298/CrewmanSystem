@@ -36,7 +36,7 @@ namespace CrewmanSystem
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             ////COMO DEBERÍA SER:-----------------------------------------------
-            Program.empleado = daoEmpleado.obtenerEmpleado(txtUsuario.Text, txtContraseña.Text);
+            Program.empleado = daoEmpleado.permitirAccesoEmpleado(txtUsuario.Text, txtContraseña.Text);
 
             if (Program.empleado != null)
 			{

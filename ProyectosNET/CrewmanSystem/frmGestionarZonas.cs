@@ -25,6 +25,9 @@ namespace CrewmanSystem
 
 			dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+			dataGridView1.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
 	}
