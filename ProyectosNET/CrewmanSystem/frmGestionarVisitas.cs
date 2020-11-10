@@ -12,9 +12,22 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarVisitas : Form
 	{
+		VisitaWS.VisitaWSClient daoVisita;
 		public frmGestionarVisitas()
 		{
+			daoVisita = new VisitaWS.VisitaWSClient();
 			InitializeComponent();
+			dataGridView1.AutoGenerateColumns = false;
+			dataGridView1.DataSource = new BindingList<VisitaWS.visita>(daoVisita.listarVisitas(null).ToArray());
+
+
+			#region colores de seleccion
+			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+			dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			#endregion
 		}
 
 		private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)

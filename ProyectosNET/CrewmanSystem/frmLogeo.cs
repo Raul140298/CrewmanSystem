@@ -40,7 +40,6 @@ namespace CrewmanSystem
 
             if (Program.empleado != null)
 			{
-				MessageBox.Show(Program.empleado.cargo.idCargo.ToString());
 				this.Hide();
 				datosValidos = true;
 				Program.panel = new frmVentanaPrincipal();
@@ -55,33 +54,6 @@ namespace CrewmanSystem
 				lblMensajeError.Visible = true;
 			}
 			return;
-			//-----------------------------------------------------------------
-
-			//if ((txtUsuario.Text == "Vendedor" || txtUsuario.Text == "Jefe") && txtContraseña.Text == "admin")
-			//{
-			//	if (txtUsuario.Text == "Vendedor")
-			//	{
-			//		Program.cargo = 1;
-			//	}
-			//	else if (txtUsuario.Text == "Jefe")
-			//	{
-			//		Program.cargo = 2;
-			//	}
-
-			//	this.Hide();
-			//	datosValidos = true;
-			//	Program.panel = new frmVentanaPrincipal();
-			//	Program.panel.Closed += (s, args) => this.Close();
-			//	Program.panel.Show();
-			//}
-			//else
-			//{
-			//	datosValidos = false;
-			//	txtUsuario.BackColor = Color.LightGray;
-			//	txtContraseña.BackColor = Color.LightGray;
-			//	lblMensajeError.Visible = true;
-			//}
-			//return;
 		}
 
         private void btnSalir_Click(object sender, EventArgs e)

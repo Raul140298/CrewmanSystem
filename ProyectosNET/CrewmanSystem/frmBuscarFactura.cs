@@ -15,10 +15,19 @@ namespace CrewmanSystem
         public frmBuscarFactura()
         {
             InitializeComponent();
+
+            #region colores de seleccion
+            dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+            dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+            #endregion
         }
 
         private void btnBuscarPedido_Click(object sender, EventArgs e)
         {
+
             frmBuscarPedido formBusquedaPedido = new frmBuscarPedido();
             if(formBusquedaPedido.ShowDialog() == DialogResult.OK)
             {

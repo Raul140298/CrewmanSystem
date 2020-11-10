@@ -19,11 +19,13 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
 			dataGridView1.DataSource = new BindingList<ZonaWS.zona>(daoZona.listarZonas().ToArray());
-		}
+			#region colores de seleccion
+			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-		private void frmGestionarZonas_Load(object sender, EventArgs e)
-		{
-
+			dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			#endregion
 		}
 	}
 }

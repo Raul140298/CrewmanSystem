@@ -15,6 +15,14 @@ namespace CrewmanSystem
 		public frmBuscarProductoXZona()
 		{
 			InitializeComponent();
+
+			#region colores de seleccion
+			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+			dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			#endregion
 		}
 
 		private void btnBuscar_Click(object sender, EventArgs e)
