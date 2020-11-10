@@ -119,6 +119,7 @@
 			this.dataGridView1.RowTemplate.Height = 24;
 			this.dataGridView1.Size = new System.Drawing.Size(1097, 383);
 			this.dataGridView1.TabIndex = 1;
+			this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
 			// 
 			// ID
 			// 
@@ -140,7 +141,6 @@
 			// 
 			// SUBFAMILIA
 			// 
-			this.SUBFAMILIA.DataPropertyName = "subFamilia";
 			this.SUBFAMILIA.HeaderText = "Subfamilia";
 			this.SUBFAMILIA.MinimumWidth = 6;
 			this.SUBFAMILIA.Name = "SUBFAMILIA";
@@ -157,7 +157,6 @@
 			// 
 			// MARCA
 			// 
-			this.MARCA.DataPropertyName = "marca";
 			this.MARCA.HeaderText = "Marca";
 			this.MARCA.MinimumWidth = 6;
 			this.MARCA.Name = "MARCA";
