@@ -117,7 +117,7 @@ public class Persona {
         this.genero = genero;
     }
 
-    public boolean isActivo()
+    public boolean getActivo()
     {
         return activo;
     }

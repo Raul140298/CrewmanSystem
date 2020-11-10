@@ -30,6 +30,7 @@ public class Zona{
     }
     
     //GETTERS y SETTERS
+
     public int getIdZona() {
         return idZona;
     }
@@ -46,27 +47,44 @@ public class Zona{
         this.nombre = nombre;
     }
 
-    public boolean getActivo() {
+    public boolean isActivo() {
         return activo;
     }
 
     public void setActivo(boolean activo) {
         this.activo = activo;
     }
-    
-    public ArrayList<ProductoXZona> obtenerListaProductoxZona(){
-        return this.listaProductoXZona;
+
+    public ArrayList<ProductoXZona> getListaProductoXZona() {
+        return listaProductoXZona;
     }
 
-    public ArrayList<PromocionXZona> obtenerListaPromocionXZona(){
-        return this.listaPromocionXZona;
+    public void setListaProductoXZona(ArrayList<ProductoXZona> listaProductoXZona) {
+        this.listaProductoXZona = listaProductoXZona;
     }
-  
-    public ArrayList<ClienteXZona> obtenerListaClienteXZona(){
-        return this.listaClienteXZona;
+
+    public ArrayList<PromocionXZona> getListaPromocionXZona() {
+        return listaPromocionXZona;
     }
-  
-    public ArrayList<EmpleadoXZona> obtenerListaEmpleadoXZona(){
-        return this.listaEmpleadoXZona;
+
+    public void setListaPromocionXZona(ArrayList<PromocionXZona> listaPromocionXZona) {
+        this.listaPromocionXZona = listaPromocionXZona;
     }
+
+    public ArrayList<EmpleadoXZona> getListaEmpleadoXZona() {
+        return listaEmpleadoXZona;
+    }
+
+    public void setListaEmpleadoXZona(ArrayList<EmpleadoXZona> listaEmpleadoXZona) {
+        this.listaEmpleadoXZona = listaEmpleadoXZona;
+    }
+
+    public ArrayList<ClienteXZona> getListaClienteXZona() {
+        return listaClienteXZona;
+    }
+
+    public void setListaClienteXZona(ArrayList<ClienteXZona> listaClienteXZona) {
+        this.listaClienteXZona = listaClienteXZona;
+    }
+    
 }

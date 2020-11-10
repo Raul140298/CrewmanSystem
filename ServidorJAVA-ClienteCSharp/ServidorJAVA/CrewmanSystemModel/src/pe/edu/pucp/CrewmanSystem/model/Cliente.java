@@ -59,14 +59,6 @@ public class Cliente {
     public void setIdCliente(int idCliente) {
         this.idCliente = idCliente;
     }
-    
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
 
     public String getRuc() {
         return ruc;
@@ -90,6 +82,22 @@ public class Cliente {
 
     public void setPersonaContacto(PersonaContacto personaContacto) {
         this.personaContacto = personaContacto;
+    }
+
+    public Zona getZona() {
+        return zona;
+    }
+
+    public void setZona(Zona zona) {
+        this.zona = zona;
+    }
+
+    public Cartera getCartera() {
+        return cartera;
+    }
+
+    public void setCartera(Cartera cartera) {
+        this.cartera = cartera;
     }
 
     public String getRazonSocial() {
@@ -132,38 +140,28 @@ public class Cliente {
         this.tipoEmpresa = tipoEmpresa;
     }
 
-    public Zona getZona() {
-        return zona;
+    public String getDireccion() {
+        return direccion;
     }
-    
-    public void setZona(Zona zona) {
-        this.zona = zona;
-    }    
 
-    public boolean isActivo() {
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public boolean getActivo() {
         return activo;
     }
 
     public void setActivo(boolean activo) {
         this.activo = activo;
     }
-    
-    public void setCords(int x, int y) {
-        this.cords[0]=x;
-        this.cords[1]=y;
-    }
-    
+
     public int[] getCords() {
-        return this.cords;
+        return cords;
     }
 
-    public Cartera getCartera() {
-        return cartera;
+    public void setCords(int[] cords) {
+        this.cords = cords;
     }
-
-    public void setCartera(Cartera cartera) {
-        this.cartera = cartera;
-    }
-    
     
 }

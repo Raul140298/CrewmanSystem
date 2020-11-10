@@ -43,20 +43,13 @@ public class Producto{
     }
     
     //GETTERS y SETTERS
+
     public int getIdProducto() {
         return idProducto;
     }
 
     public void setIdProducto(int idProducto) {
         this.idProducto = idProducto;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public Marca getMarca() {
@@ -67,12 +60,12 @@ public class Producto{
         this.marca = marca;
     }
 
-    public int getStock() {
-        return stock;
+    public SubFamilia getSubFamilia() {
+        return subFamilia;
     }
 
-    public void setStock(int stock) {
-        this.stock = stock;
+    public void setSubFamilia(SubFamilia subFamilia) {
+        this.subFamilia = subFamilia;
     }
 
     public double getPrecioSugerido() {
@@ -82,21 +75,13 @@ public class Producto{
     public void setPrecioSugerido(double precioSugerido) {
         this.precioSugerido = precioSugerido;
     }
-    
-    public boolean isActivo() {
-        return activo;
+
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setActivo(boolean activo) {
-        this.activo = activo;
-    }
-
-    public SubFamilia getSubFamilia() {
-        return subFamilia;
-    }
-
-    public void setSubFamilia(SubFamilia subFamilia) {
-        this.subFamilia = subFamilia;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getUnidades() {
@@ -115,6 +100,14 @@ public class Producto{
         this.cantUnidad = cantUnidad;
     }
 
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
     public int getStockReservado() {
         return stockReservado;
     }
@@ -122,12 +115,29 @@ public class Producto{
     public void setStockReservado(int stockReservado) {
         this.stockReservado = stockReservado;
     }
-    
-    public ArrayList<ProductoXZona> obtenerListaProductoXZona(){
-        return this.listaProductoXZona;
+
+    public boolean getActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
+
+    public ArrayList<ProductoXZona> getListaProductoXZona() {
+        return listaProductoXZona;
+    }
+
+    public void setListaProductoXZona(ArrayList<ProductoXZona> listaProductoXZona) {
+        this.listaProductoXZona = listaProductoXZona;
+    }
+
+    public ArrayList<PromocionXProducto> getListaPromocionXProducto() {
+        return listaPromocionXProducto;
+    }
+
+    public void setListaPromocionXProducto(ArrayList<PromocionXProducto> listaPromocionXProducto) {
+        this.listaPromocionXProducto = listaPromocionXProducto;
     }
     
-    public ArrayList<PromocionXProducto> obtenerListaPromocionXProducto(){
-        return this.listaPromocionXProducto;
-    }
 }

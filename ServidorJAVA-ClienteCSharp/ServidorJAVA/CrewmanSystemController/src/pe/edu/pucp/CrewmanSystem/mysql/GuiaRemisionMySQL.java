@@ -52,7 +52,7 @@ public class GuiaRemisionMySQL implements GuiaRemisionDAO{
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             String sql ="{ call ACTUALIZAR_GUIADEREMISION(?,?,?)}";
             cs = con.prepareCall(sql);
-            cs.setInt("_ID_GUIA_DE_REMISION", guiaRemision.getId());
+            cs.setInt("_ID_GUIA_DE_REMISION", guiaRemision.getIdGuiaRemision());
             cs.setString("_MOTIVO", guiaRemision.getMotivoTraslado());
             cs.setDate("_FECHA_TRASLADO", new java.sql.Date(guiaRemision.getFechaTraslado().getTime()));
             
@@ -83,7 +83,7 @@ public class GuiaRemisionMySQL implements GuiaRemisionDAO{
             rs = cs.getResultSet();
             while(rs.next()){
                 GuiaRemision guiaRemision=new GuiaRemision();
-                guiaRemision.setId(rs.getInt("ID_GUIA_DE_REMISION"));
+                guiaRemision.setIdGuiaRemision(rs.getInt("ID_GUIA_DE_REMISION"));
                 Pedido p=new Pedido();
                 p.setIdPedido(rs.getInt("ID_PEDIDO"));
                 guiaRemision.setPedido(p);

@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class GuiaRemision{
     //ATRIBUTOS
-    private int id;
+    private int idGuiaRemision;
     private Pedido pedido;
     private String motivoTraslado;
     private Date fechaRegistro;
@@ -22,48 +22,46 @@ public class GuiaRemision{
     }
     
     //GETTERS y SETTERS
-    public void setFechaTraslado(Date fechaTraslado){
-      this.fechaTraslado=fechaTraslado;
-    }
-    
-    public Date getFechaTraslado(){
-      return this.fechaTraslado;
-    }
-    
-    public void setFechaRegistro(Date fechaRegistro){
-      this.fechaRegistro=fechaRegistro;
-    }
-    
-    public Date getFechaRegistro(){
-      return this.fechaRegistro;
-    }
-    
-    public void setPedido(Pedido pedido){
-      this.pedido=pedido;
-    }
-    
-    public Pedido getPedido(){
-      return this.pedido;
-    }
-    
-    public int getId()
-    {
-        return id;
+
+    public int getIdGuiaRemision() {
+        return idGuiaRemision;
     }
 
-    public void setId(int id)
-    {
-        this.id = id;
+    public void setIdGuiaRemision(int idGuiaRemision) {
+        this.idGuiaRemision = idGuiaRemision;
     }
 
-    public String getMotivoTraslado()
-    {
+    public Pedido getPedido() {
+        return pedido;
+    }
+
+    public void setPedido(Pedido pedido) {
+        this.pedido = pedido;
+    }
+
+    public String getMotivoTraslado() {
         return motivoTraslado;
     }
 
-    public void setMotivoTraslado(String motivoTraslado)
-    {
+    public void setMotivoTraslado(String motivoTraslado) {
         this.motivoTraslado = motivoTraslado;
     }
+
+    public Date getFechaRegistro() {
+        return fechaRegistro;
+    }
+
+    public void setFechaRegistro(Date fechaRegistro) {
+        this.fechaRegistro = fechaRegistro;
+    }
+
+    public Date getFechaTraslado() {
+        return fechaTraslado;
+    }
+
+    public void setFechaTraslado(Date fechaTraslado) {
+        this.fechaTraslado = fechaTraslado;
+    }
+    
 
 }

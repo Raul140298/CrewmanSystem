@@ -28,46 +28,41 @@ public class Cartera{
     
     //GETTERS y SETTERS
 
-    public int getIdCartera()
-    {
+    public int getIdCartera() {
         return idCartera;
     }
 
-    public void setIdCartera(int idCartera)
-    {
+    public void setIdCartera(int idCartera) {
         this.idCartera = idCartera;
     }
 
-    public Empleado getEmpleado()
-    {
+    public Empleado getEmpleado() {
         return empleado;
     }
 
-    public void setEmpleado(Empleado empleado)
-    {
+    public void setEmpleado(Empleado empleado) {
         this.empleado = empleado;
     }
 
-    public Date getFechaInicio()
-    {
+    public Date getFechaInicio() {
         return fechaInicio;
     }
 
-    public void setFechaInicio(Date fechaInicio)
-    {
+    public void setFechaInicio(Date fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
-    public Date getFechaFin()
-    {
+    public Date getFechaFin() {
         return fechaFin;
     }
 
-    public void setFechaFin(Date fechaFin)
-    {
+    public void setFechaFin(Date fechaFin) {
         this.fechaFin = fechaFin;
     }
-    
+
+    public boolean getActivo() {
+        return activo;
+    }
 
     public void setActivo(boolean activo) {
         this.activo = activo;
@@ -79,16 +74,5 @@ public class Cartera{
 
     public void setListaVisita(ArrayList<Visita> listaVisita) {
         this.listaVisita = listaVisita;
-    }
-    
-    public void generarRuta(Empleado empleado){
-        //En lugar de recibir un vendedor, debería recibir unas coordenadas. Así, el vendedor podría generar su ruta desde cualquier posiicon
-        //en la que se encuentre. También le permitiría poder generar nuevas rutas, después de haber completado una ruta parcial y haber
-        //regresado a su hogar o alguna otra posición inicial
-        //CREACION DE MATRIZ DE ADYACENCIA
-        //Grafo grafo = new Grafo(empleado,this.listaVisita);
-        //grafo.imprimeMatrix();
-        //CREACION DE TSP
-        //grafo.generarRuta(this.listaVisita);
     }
 }

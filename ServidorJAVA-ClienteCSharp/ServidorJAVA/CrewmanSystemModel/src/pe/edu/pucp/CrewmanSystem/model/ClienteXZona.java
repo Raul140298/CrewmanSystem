@@ -77,7 +77,7 @@ public class ClienteXZona {
         this.fechaFin = fechaFin;
     }
 
-    public boolean isActivo() {
+    public boolean getActivo() {
         return activo;
     }
 

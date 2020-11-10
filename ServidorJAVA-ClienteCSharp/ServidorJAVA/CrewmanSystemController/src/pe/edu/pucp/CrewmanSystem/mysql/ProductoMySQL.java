@@ -34,7 +34,7 @@ public class ProductoMySQL implements ProductoDAO{
             cs.setDouble("_CANT_UNIDADES", producto.getCantUnidad());
             cs.setInt("_STOCK", producto.getStock());
             cs.setInt("_STOCK_RESERVADO", producto.getStockReservado());
-            cs.setBoolean("_ACTIVO", producto.isActivo());
+            cs.setBoolean("_ACTIVO", producto.getActivo());
             cs.executeUpdate();
             resultado = cs.getInt("_ID_PRODUCTO");
             producto.setIdProducto(resultado);

@@ -39,7 +39,7 @@ public class PersonaContacto extends Persona{
         this.cliente = cliente;
     }
 
-    public boolean isActivo() {
+    public boolean getActivo() {
         return activo;
     }
 

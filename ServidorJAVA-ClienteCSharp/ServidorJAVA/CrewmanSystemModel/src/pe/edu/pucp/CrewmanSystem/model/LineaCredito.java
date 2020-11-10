@@ -42,14 +42,6 @@ public class LineaCredito{
     }
     //GETTERS y SETTERS
 
-    public double getMontoUtilizado() {
-        return montoUtilizado;
-    }
-
-    public void setMontoUtilizado(double montoUtilizado) {
-        this.montoUtilizado = montoUtilizado;
-    }
-    
     public int getIdLineaCredito() {
         return idLineaCredito;
     }
@@ -90,7 +82,15 @@ public class LineaCredito{
         this.montoLineaCredito = montoLineaCredito;
     }
 
-    public boolean isAprobado() {
+    public double getMontoUtilizado() {
+        return montoUtilizado;
+    }
+
+    public void setMontoUtilizado(double montoUtilizado) {
+        this.montoUtilizado = montoUtilizado;
+    }
+
+    public boolean getAprobado() {
         return aprobado;
     }
 
@@ -105,5 +105,7 @@ public class LineaCredito{
     public void setMotivo(String motivo) {
         this.motivo = motivo;
     }
+
+    
     
 }

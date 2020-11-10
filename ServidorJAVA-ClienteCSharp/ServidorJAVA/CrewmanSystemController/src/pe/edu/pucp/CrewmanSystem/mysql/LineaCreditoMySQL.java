@@ -34,7 +34,7 @@ public class LineaCreditoMySQL implements LineaCreditoDAO
             cs.setInt("_ID_RESPONSABLE", lineaCredito.getResponsable().getIdEmpleado());
             cs.setDate("_FECHA_CREACION", new java.sql.Date(new Date().getTime()));
             cs.setDouble("_MONTO_UTILIZADO", lineaCredito.getMontoUtilizado());
-            cs.setBoolean("_APROBADO", lineaCredito.isAprobado());
+            cs.setBoolean("_APROBADO", lineaCredito.getAprobado());
             cs.setString("_MOTIVO", lineaCredito.getMotivo());
             cs.executeUpdate();
             resultado = cs.getInt("_ID_LINEA_DE_CREDITO");
@@ -63,7 +63,7 @@ public class LineaCreditoMySQL implements LineaCreditoDAO
             cs.setInt("_ID_LINEA_DE_CREDITO", lineaCredito.getIdLineaCredito());
             cs.setDouble("_MONTO", lineaCredito.getMontoLineaCredito());
             cs.setDouble("_MONTO_UTILIZADO", lineaCredito.getMontoUtilizado());
-            cs.setBoolean("_APROBADO", lineaCredito.isAprobado());
+            cs.setBoolean("_APROBADO", lineaCredito.getAprobado());
             cs.setString("_MOTIVO", lineaCredito.getMotivo());
             
             resultado=cs.executeUpdate();

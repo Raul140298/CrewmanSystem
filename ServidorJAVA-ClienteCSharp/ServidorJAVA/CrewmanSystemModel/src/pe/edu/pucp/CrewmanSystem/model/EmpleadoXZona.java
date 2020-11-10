@@ -76,7 +76,7 @@ public class EmpleadoXZona {
         this.fechaFin = fechaFin;
     }
 
-    public boolean isActivo() {
+    public boolean getActivo() {
         return activo;
     }
 

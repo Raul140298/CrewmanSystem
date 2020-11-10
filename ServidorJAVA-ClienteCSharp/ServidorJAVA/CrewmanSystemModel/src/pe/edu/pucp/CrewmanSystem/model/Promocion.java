@@ -9,9 +9,9 @@ public class Promocion {
     private String descripcion;
     private Date fechaInicio;
     private Date fechaFin;
-    private boolean activo;
     private ArrayList<PromocionXProducto> listaPromocionXProducto;
     private ArrayList<PromocionXZona> listaPromocionXZona;
+    private boolean activo;
     
     //CONSTRUCTORES
     public Promocion(){
@@ -30,21 +30,6 @@ public class Promocion {
         listaPromocionXZona=new ArrayList<>();
     }
     //GETTERS y SETTERS   
-    public Date getFechaInicio() {
-        return fechaInicio;
-    }
-
-    public void setFechaInicio(Date fechaInicio) {
-        this.fechaInicio = fechaInicio;
-    }
-
-    public Date getFechaFin() {
-        return fechaFin;
-    }
-
-    public void setFechaFin(Date fechaFin) {
-        this.fechaFin = fechaFin;
-    }
 
     public int getIdPromocion() {
         return idPromocion;
@@ -70,7 +55,39 @@ public class Promocion {
         this.descripcion = descripcion;
     }
 
-    public boolean isActivo() {
+    public Date getFechaInicio() {
+        return fechaInicio;
+    }
+
+    public void setFechaInicio(Date fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
+
+    public Date getFechaFin() {
+        return fechaFin;
+    }
+
+    public void setFechaFin(Date fechaFin) {
+        this.fechaFin = fechaFin;
+    }
+
+    public ArrayList<PromocionXProducto> getListaPromocionXProducto() {
+        return listaPromocionXProducto;
+    }
+
+    public void setListaPromocionXProducto(ArrayList<PromocionXProducto> listaPromocionXProducto) {
+        this.listaPromocionXProducto = listaPromocionXProducto;
+    }
+
+    public ArrayList<PromocionXZona> getListaPromocionXZona() {
+        return listaPromocionXZona;
+    }
+
+    public void setListaPromocionXZona(ArrayList<PromocionXZona> listaPromocionXZona) {
+        this.listaPromocionXZona = listaPromocionXZona;
+    }
+
+    public boolean getActivo() {
         return activo;
     }
 
@@ -78,11 +95,4 @@ public class Promocion {
         this.activo = activo;
     }
     
-    public ArrayList<PromocionXProducto> obtenerListaPromocionXProducto(){
-        return this.listaPromocionXProducto;
-    }
-    
-    public ArrayList<PromocionXZona> obtenerListaPromocionXZona(){
-        return this.listaPromocionXZona;
-    }
 }

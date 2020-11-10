@@ -44,7 +44,7 @@ public class PromocionXZona {
         this.zona = zona;
     }
 
-    public boolean isActivo() {
+    public boolean getActivo() {
         return activo;
     }
 

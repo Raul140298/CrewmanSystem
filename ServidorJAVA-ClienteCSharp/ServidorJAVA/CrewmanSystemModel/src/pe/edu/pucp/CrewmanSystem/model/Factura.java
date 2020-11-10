@@ -45,7 +45,7 @@ public class Factura{
         this.estadoPagar=true;
         listaNotaDeCredito=new ArrayList<>();          
     }
-    
+
     public int getIdFactura() {
         return idFactura;
     }
@@ -94,7 +94,7 @@ public class Factura{
         this.impuestos = impuestos;
     }
 
-    public boolean isAnulado() {
+    public boolean getAnulado() {
         return anulado;
     }
 
@@ -102,7 +102,7 @@ public class Factura{
         this.anulado = anulado;
     }
 
-    public boolean isEstadoPagar() {
+    public boolean getEstadoPagar() {
         return estadoPagar;
     }
 
@@ -117,4 +117,22 @@ public class Factura{
     public void setPedido(Pedido pedido) {
         this.pedido = pedido;
     }
+
+    public NotaDeCredito getNotaCredito() {
+        return notaCredito;
+    }
+
+    public void setNotaCredito(NotaDeCredito notaCredito) {
+        this.notaCredito = notaCredito;
+    }
+
+    public ArrayList<NotaDeCredito> getListaNotaDeCredito() {
+        return listaNotaDeCredito;
+    }
+
+    public void setListaNotaDeCredito(ArrayList<NotaDeCredito> listaNotaDeCredito) {
+        this.listaNotaDeCredito = listaNotaDeCredito;
+    }
+    
+    
 }

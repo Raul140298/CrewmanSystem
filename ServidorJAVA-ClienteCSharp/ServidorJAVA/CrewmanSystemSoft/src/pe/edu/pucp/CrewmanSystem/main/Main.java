@@ -535,7 +535,7 @@ public class Main{
         for(Factura f:misFacturas){
             System.out.print(f.getIdFactura()+" - "+f.getPedido().getIdPedido()+" - "+f.getObservacion()+" - "+f.getMonto()+" - "+
             f.getFechaEmision()+" - "+f.getFechaVencimiento()+" - ");
-            if(f.isEstadoPagar()) System.out.println("PAGADO");
+            if(f.getEstadoPagar()) System.out.println("PAGADO");
             else System.out.println("FALTA PAGAR");
         } 
             
@@ -570,7 +570,7 @@ public class Main{
         System.out.println("LISTADO DE GUIAS DE REMISION DEL PEDIDO "+misPedidos.get(0).getIdPedido());
         System.out.println("==================================================================================");
         for(GuiaRemision g:misGuias) 
-            System.out.println(g.getId()+ " - "+g.getMotivoTraslado()+" - "+g.getFechaRegistro()+" - "+g.getFechaTraslado());
+            System.out.println(g.getIdGuiaRemision()+ " - "+g.getMotivoTraslado()+" - "+g.getFechaRegistro()+" - "+g.getFechaTraslado());
         System.out.println("\n");
     }
     

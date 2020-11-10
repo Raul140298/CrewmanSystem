@@ -42,135 +42,111 @@ public class Empleado extends Persona{
         this.listaEmpleados=new ArrayList<>();
     }
 
-    public int getIdEmpleado()
-    {
+    public int getIdEmpleado() {
         return idEmpleado;
     }
 
-    public void setIdEmpleado(int idEmpleado)
-    {
+    public void setIdEmpleado(int idEmpleado) {
         this.idEmpleado = idEmpleado;
     }
 
-    public Empleado getJefe()
-    {
+    public Empleado getJefe() {
         return jefe;
     }
 
-    public void setJefe(Empleado jefe)
-    {
+    public void setJefe(Empleado jefe) {
         this.jefe = jefe;
     }
 
-    public String getUsuario()
-    {
+    public String getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(String usuario)
-    {
+    public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
 
-    public String getContraseña()
-    {
+    public String getContraseña() {
         return contraseña;
     }
 
-    public void setContraseña(String contraseña)
-    {
+    public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
     }
 
-    public Zona getZona()
-    {
+    public Zona getZona() {
         return zona;
     }
 
-    public void setZona(Zona zona)
-    {
+    public void setZona(Zona zona) {
         this.zona = zona;
     }
 
-    public Date getFechaCreacion()
-    {
+    public Date getFechaCreacion() {
         return fechaCreacion;
     }
 
-    public void setFechaCreacion(Date fechaCreacion)
-    {
+    public void setFechaCreacion(Date fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
     }
 
-    public double getSumVentas()
-    {
+    public double getSumVentas() {
         return sumVentas;
     }
 
-    public void setSumVentas(double sumVentas)
-    {
+    public void setSumVentas(double sumVentas) {
         this.sumVentas = sumVentas;
     }
 
-    public double getObjetivoVentas()
-    {
+    public double getObjetivoVentas() {
         return objetivoVentas;
     }
 
-    public void setObjetivoVentas(double objetivoVentas)
-    {
+    public void setObjetivoVentas(double objetivoVentas) {
         this.objetivoVentas = objetivoVentas;
     }
 
-    public Cargo getCargo()
-    {
+    public Cargo getCargo() {
         return cargo;
     }
 
-    public void setCargo(Cargo cargo)
-    {
+    public void setCargo(Cargo cargo) {
         this.cargo = cargo;
     }
 
-    public ArrayList<Pedido> getListaPedidos()
-    {
+    public ArrayList<Pedido> getListaPedidos() {
         return listaPedidos;
     }
 
-    public void setListaPedidos(ArrayList<Pedido> listaPedidos)
-    {
+    public void setListaPedidos(ArrayList<Pedido> listaPedidos) {
         this.listaPedidos = listaPedidos;
     }
 
-    public ArrayList<Empleado> getListaEmpleados()
-    {
+    public ArrayList<Empleado> getListaEmpleados() {
         return listaEmpleados;
     }
 
-    public void setListaEmpleados(ArrayList<Empleado> listaEmpleados)
-    {
+    public void setListaEmpleados(ArrayList<Empleado> listaEmpleados) {
         this.listaEmpleados = listaEmpleados;
     }
 
-    public Cartera getCartera()
-    {
+    public Cartera getCartera() {
         return cartera;
     }
 
-    public void setCartera(Cartera cartera)
-    {
+    public void setCartera(Cartera cartera) {
         this.cartera = cartera;
     }
 
-    public int[] getCords()
-    {
+    public int[] getCords() {
         return cords;
     }
 
-    public void setCords(int[] cords)
-    {
+    public void setCords(int[] cords) {
         this.cords = cords;
     }
+
+    
                 
     public void generarReporteCumplimientoVentas(){
 //        EmpleadoDAO daoEmpleado=new EmpleadoMySQL();

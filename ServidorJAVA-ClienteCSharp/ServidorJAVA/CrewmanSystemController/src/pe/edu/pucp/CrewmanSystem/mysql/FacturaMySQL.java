@@ -61,7 +61,7 @@ public class FacturaMySQL implements FacturaDAO{
             cs.setString("_OBSERVACION", factura.getObservacion());
             cs.setDate("_FECHA_VENCIMIENTO", new java.sql.Date(factura.getFechaVencimiento().getTime()));
             cs.setDouble("_IMPUESTOS", factura.getImpuestos());
-            cs.setBoolean("_ESTADO_PAGAR", factura.isAnulado());
+            cs.setBoolean("_ESTADO_PAGAR", factura.getAnulado());
             
             resultado = cs.executeUpdate();
         }catch(Exception ex){

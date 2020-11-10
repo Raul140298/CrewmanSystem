@@ -75,7 +75,7 @@ public class PromocionXProducto {
         this.stockReservado = stockReservado;
     }
 
-    public boolean isActivo() {
+    public boolean getActivo() {
         return activo;
     }
 

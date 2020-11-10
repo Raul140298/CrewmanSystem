@@ -35,28 +35,13 @@ public class NotaDeCredito{
         this.activo = true;
     }
     //GETTERS y SETTERS
+
     public int getIdNotaDeCredito() {
         return idNotaDeCredito;
     }
 
     public void setIdNotaDeCredito(int idNotaDeCredito) {
         this.idNotaDeCredito = idNotaDeCredito;
-    }
-
-    public Date getFechaCreacion() {
-        return fechaCreacion;
-    }
-
-    public void setFechaCreacion(Date fechaCreacion) {
-        this.fechaCreacion = fechaCreacion;
-    }
-
-    public boolean isActivo() {
-        return activo;
-    }
-
-    public void setActivo(boolean activo) {
-        this.activo = activo;
     }
 
     public Factura getFactura() {
@@ -67,6 +52,14 @@ public class NotaDeCredito{
         this.factura = factura;
     }
 
+    public Date getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public void setFechaCreacion(Date fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
+    }
+
     public double getMonto() {
         return monto;
     }
@@ -74,6 +67,13 @@ public class NotaDeCredito{
     public void setMonto(double monto) {
         this.monto = monto;
     }
-    
+
+    public boolean getActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
     
 }

@@ -88,7 +88,7 @@ public class Visita {
         this.estado = estado;
     }
 
-    public boolean isActivo() {
+    public boolean getActivo() {
         return activo;
     }
 

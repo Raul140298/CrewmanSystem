@@ -44,11 +44,12 @@ public class ProductoXZona{
     }
     
     //GETTERS y SETTERS
+
     public int getIdProductoXZona() {
         return idProductoXZona;
     }
 
-    public void setIdProductoXZona(int idProductoXZona) {    
+    public void setIdProductoXZona(int idProductoXZona) {
         this.idProductoXZona = idProductoXZona;
     }
 
@@ -92,12 +93,12 @@ public class ProductoXZona{
         this.fechaFin = fechaFin;
     }
 
-    public boolean isActivo() {
+    public boolean getActivo() {
         return activo;
     }
 
     public void setActivo(boolean activo) {
         this.activo = activo;
     }
-    //METODOS
+    
 }

@@ -66,14 +66,6 @@ public class Pedido{
     }
     //GETTERS y SETTERS
 
-    public ArrayList<LineaPedido> getLineasPedidos() {
-        return lineasPedidos;
-    }
-
-    public void setLineasPedidos(ArrayList<LineaPedido> lineasPedidos) {
-        this.lineasPedidos = lineasPedidos;
-    }
-    
     public int getIdPedido() {
         return idPedido;
     }
@@ -90,29 +82,13 @@ public class Pedido{
         this.fechaAprobado = fechaAprobado;
     }
 
-    public void setEmpleado(Empleado empleado){
-        this.empleado=empleado;
-    }
-
-    public Empleado getEmpleado(){
-        return this.empleado;
-    }
-
-    public void setCliente(Cliente empresa){
-        this.cliente=empresa;
-    }
-
-    public Cliente getCliente(){
-        return this.cliente;
-    }
-
     public Date getFechaEstim() {
         return fechaEstim;
     }
 
     public void setFechaEstim(Date fechaEstim) {
         this.fechaEstim = fechaEstim;
-      }
+    }
 
     public Date getFechaRegistro() {
         return fechaRegistro;
@@ -161,65 +137,53 @@ public class Pedido{
     public void setEstadoPedido(EstadoPedido estadoPedido) {
         this.estadoPedido = estadoPedido;
     }
-    //METODOS
-    public ArrayList<Factura> obtenerListaFactura(){
-        return this.facturas;
-    }
-    
-    public void agregarFactura(Factura factura){
-        facturas.add(factura);
-        montoPagar=montoTotal-factura.getMonto();
-        if(montoPagar==0) estadoPedido=EstadoPedido.FINALIZADO;
-    }
-    
-    public ArrayList<GuiaRemision> obtenerListaGuiaRemision(){
-        return this.guiasRemision;
-    }
-    
-    public void agregarGuiaRemision(GuiaRemision guiaRemision){
-        guiasRemision.add(guiaRemision);
-    }
-    
-    public ArrayList<Queja> obtenerListaQueja(){
-        return this.quejas;
-    }
-    
-    public void agregarQueja(Queja queja){
-        quejas.add(queja);
+
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public ArrayList<LineaPedido> obtenerListaLineaPedidos(){
-        return this.lineasPedidos;
-    }
-    
-    public void agregarLineaPedido(LineaPedido lineaPedido){
-        lineasPedidos.add(lineaPedido);    
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
-    public double calcularMontoTotal(){
-        for(LineaPedido l:lineasPedidos){
-          montoTotal+=l.calcularMontoSubTotal();
-        }
-        montoPagar=montoTotal;
-        return montoTotal;
+    public Empleado getEmpleado() {
+        return empleado;
     }
-    
-    public void evaluarPedido(){
-        if(this.getCliente().getLineaCredito().getMontoLineaCredito() < this.montoTotal)
-        {
-          this.setTipoPedido(TipoPedido.BORRADOR);
-        }
+
+    public void setEmpleado(Empleado empleado) {
+        this.empleado = empleado;
     }
-        
-    public void cancelarPedido(){
-//        estadoPedido=estadoPedido.CANCELADO;
-//        FacturaDAO misFacturas=new FacturaMySQL();
-//        ArrayList<Factura> facturas=misFacturas.listar(this.idPedido);
-//        
-//        NotaDeCreditoDAO daoNotasCredito=new NotaDeCreditoMySQL();
-//        for(Factura f:facturas){
-//            NotaDeCredito notaCredito = new NotaDeCredito(cliente, f);
-//            daoNotasCredito.insertar(notaCredito);
-//        }
+
+    public ArrayList<LineaPedido> getLineasPedidos() {
+        return lineasPedidos;
     }
+
+    public void setLineasPedidos(ArrayList<LineaPedido> lineasPedidos) {
+        this.lineasPedidos = lineasPedidos;
+    }
+
+    public ArrayList<Queja> getQuejas() {
+        return quejas;
+    }
+
+    public void setQuejas(ArrayList<Queja> quejas) {
+        this.quejas = quejas;
+    }
+
+    public ArrayList<GuiaRemision> getGuiasRemision() {
+        return guiasRemision;
+    }
+
+    public void setGuiasRemision(ArrayList<GuiaRemision> guiasRemision) {
+        this.guiasRemision = guiasRemision;
+    }
+
+    public ArrayList<Factura> getFacturas() {
+        return facturas;
+    }
+
+    public void setFacturas(ArrayList<Factura> facturas) {
+        this.facturas = facturas;
+    }
+
 }

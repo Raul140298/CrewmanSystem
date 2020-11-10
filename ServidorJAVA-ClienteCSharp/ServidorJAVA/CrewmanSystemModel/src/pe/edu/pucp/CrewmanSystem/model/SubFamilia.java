@@ -47,7 +47,7 @@ public class SubFamilia{
         this.descripcionSubFamilia = descripcionSubFamilia;
     }
 
-    public boolean isActivo() {
+    public boolean getActivo() {
         return activo;
     }
 
