@@ -12,11 +12,13 @@ namespace CrewmanSystem
 {
 	public partial class frmNuevaSubfamilia : Form
 	{
+        SubFamiliaWS.SubFamiliaWSClient daoSubfamilia;
         FamiliaWS.FamiliaWSClient daoFamilia;
         public frmNuevaSubfamilia()
         {
             InitializeComponent();
 
+            daoSubfamilia = new SubFamiliaWS.SubFamiliaWSClient();
             daoFamilia = new FamiliaWS.FamiliaWSClient();
             FamiliaWS.familia[] misFamilias = daoFamilia.listarFamilias();
             if (misFamilias != null)
@@ -66,8 +68,19 @@ namespace CrewmanSystem
                 }
 
             }
+            //AQUI VA EL INSERTAR
+            frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
+            if (formInsertar.ShowDialog() == DialogResult.OK)
+            {
+                SubFamiliaWS.subFamilia subFamilia = new SubFamiliaWS.subFamilia();
+                subFamilia.descripcionSubFamilia = txtDescripcion.Text;
+                subFamilia.familia = new SubFamiliaWS.familia();
+                subFamilia.familia.idFamilia = ((FamiliaWS.familia)cboFamilia.SelectedItem).idFamilia;
 
-            //Aqui va el insertar
+                int resultado = daoSubfamilia.insertarSubFamilia(subFamilia);
+                txtId.Text = resultado.ToString();
+                //Usar resultado para ver si se inserto correctamente
+            }
         }
 	}
 }
