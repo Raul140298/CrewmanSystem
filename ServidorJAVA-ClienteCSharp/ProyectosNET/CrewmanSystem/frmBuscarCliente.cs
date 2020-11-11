@@ -12,6 +12,7 @@ namespace CrewmanSystem
 {
 	public partial class frmBuscarCliente : Form
 	{
+		ClienteWS.ClienteWSClient daoCliente;
 		public frmBuscarCliente()
 		{
 			InitializeComponent();
@@ -33,6 +34,21 @@ namespace CrewmanSystem
 			frmMostrarCliente formBusquedaClientes = new frmMostrarCliente();
 			if (formBusquedaClientes.ShowDialog() == DialogResult.OK) 
 			{ 
+			}
+		}
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+			daoCliente = new ClienteWS.ClienteWSClient();
+			ClienteWS.cliente[] misClientes = daoCliente.listarClientes(txtRazonSocial.Text, txtGrupo.Text);
+			if (misClientes != null)
+			{
+				dataGridView1.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
+			}
+			else
+			{
+				dataGridView1.DataSource = new BindingList<ClienteWS.cliente>();
+
 			}
 		}
     }

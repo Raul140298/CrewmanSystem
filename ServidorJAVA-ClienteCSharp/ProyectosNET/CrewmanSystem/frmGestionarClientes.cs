@@ -21,7 +21,7 @@ namespace CrewmanSystem
 			ClienteWS.cliente[] misClientes = daoCliente.listarClientes("","");
             if (misClientes != null)
             {
-				dataGridView1.DataSource = new BindingList<ClienteWS.cliente>(daoCliente.listarClientes("","").ToArray());
+				dataGridView1.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
             }
             else
             {
