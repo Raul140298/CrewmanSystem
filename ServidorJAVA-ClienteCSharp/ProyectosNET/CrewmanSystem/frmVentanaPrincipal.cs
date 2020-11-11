@@ -31,6 +31,7 @@ namespace CrewmanSystem
 			customizeDesign();
 			//logeoExitoso
 			logeoExitoso(Program.empleado.cargo.idCargo);
+
 		}
 
 		protected override CreateParams CreateParams
