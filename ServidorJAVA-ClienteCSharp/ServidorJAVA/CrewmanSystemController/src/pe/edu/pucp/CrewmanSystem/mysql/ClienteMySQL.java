@@ -122,14 +122,16 @@ public class ClienteMySQL implements ClienteDAO{
     }
 
     @Override
-    public ArrayList<Cliente> listar(){
+    public ArrayList<Cliente> listar(String razonSocial, String grupo){
         ArrayList<Cliente> clientes = new ArrayList<>();
         Integer entero;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            String sql ="{ call LISTAR_CLIENTE ()}";
+            String sql ="{ call BUSCAR_CLIENTE (?,?)}";
             cs = con.prepareCall(sql);
+            cs.setString("_RAZON_SOCIAL", razonSocial);
+            cs.setString("_GRUPO", grupo);
             cs.executeUpdate();
             rs = cs.getResultSet();
             while(rs.next()){

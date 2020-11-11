@@ -71,10 +71,12 @@ public class ClienteWS {
     }
     
     @WebMethod(operationName = "listarClientes")
-    public ArrayList<Cliente> listarClientes() {
+    public ArrayList<Cliente> listarClientes(
+            @WebParam(name = "razonSocial") String razonSocial,
+            @WebParam(name = "grupo") String grupo) {
         ArrayList<Cliente> misClientes = new ArrayList<>();
         try{
-            misClientes = daoCliente.listar();
+            misClientes = daoCliente.listar(razonSocial,grupo);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }

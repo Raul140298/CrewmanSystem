@@ -25,6 +25,7 @@
     <xs:sequence>
       <xs:element name="activo" type="xs:boolean" />
       <xs:element minOccurs="0" name="cartera" type="tns:cartera" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cords" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="direccion" type="xs:string" />
       <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
       <xs:element minOccurs="0" name="fechaUltimaCompra" type="xs:dateTime" />
@@ -40,6 +41,7 @@
   </xs:complexType>
   <xs:complexType name="cartera">
     <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
       <xs:element minOccurs="0" name="empleado" type="tns:empleado" />
       <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
       <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
@@ -94,14 +96,50 @@
       <xs:element minOccurs="0" name="direccionEntrega" type="xs:string" />
       <xs:element minOccurs="0" name="empleado" type="tns:empleado" />
       <xs:element minOccurs="0" name="estadoPedido" type="tns:estadoPedido" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="facturas" nillable="true" type="tns:factura" />
       <xs:element minOccurs="0" name="fechaAprobado" type="xs:dateTime" />
       <xs:element minOccurs="0" name="fechaEstim" type="xs:dateTime" />
       <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="guiasRemision" nillable="true" type="tns:guiaRemision" />
       <xs:element name="idPedido" type="xs:int" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="lineasPedidos" nillable="true" type="tns:lineaPedido" />
       <xs:element name="montoPagar" type="xs:double" />
       <xs:element name="montoTotal" type="xs:double" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="quejas" nillable="true" type="tns:queja" />
       <xs:element minOccurs="0" name="tipoPedido" type="tns:tipoPedido" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="factura">
+    <xs:sequence>
+      <xs:element name="anulado" type="xs:boolean" />
+      <xs:element name="estadoPagar" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaEmision" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaVencimiento" type="xs:dateTime" />
+      <xs:element name="idFactura" type="xs:int" />
+      <xs:element name="impuestos" type="xs:double" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaNotaDeCredito" nillable="true" type="tns:notaDeCredito" />
+      <xs:element name="monto" type="xs:double" />
+      <xs:element minOccurs="0" name="notaCredito" type="tns:notaDeCredito" />
+      <xs:element minOccurs="0" name="observacion" type="xs:string" />
+      <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="notaDeCredito">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="factura" type="tns:factura" />
+      <xs:element minOccurs="0" name="fechaCreacion" type="xs:dateTime" />
+      <xs:element name="idNotaDeCredito" type="xs:int" />
+      <xs:element name="monto" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="guiaRemision">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaTraslado" type="xs:dateTime" />
+      <xs:element name="idGuiaRemision" type="xs:int" />
+      <xs:element minOccurs="0" name="motivoTraslado" type="xs:string" />
+      <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="lineaPedido">
@@ -131,6 +169,8 @@
       <xs:element name="activo" type="xs:boolean" />
       <xs:element name="cantUnidad" type="xs:double" />
       <xs:element name="idProducto" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaProductoXZona" nillable="true" type="tns:productoXZona" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaPromocionXProducto" nillable="true" type="tns:promocionXProducto" />
       <xs:element minOccurs="0" name="marca" type="tns:marca" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element name="precioSugerido" type="xs:double" />
@@ -138,6 +178,68 @@
       <xs:element name="stockReservado" type="xs:int" />
       <xs:element minOccurs="0" name="subFamilia" type="tns:subFamilia" />
       <xs:element minOccurs="0" name="unidades" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="promocionXProducto">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="descuento" type="xs:int" />
+      <xs:element name="idPromocionXProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="producto" type="tns:producto" />
+      <xs:element minOccurs="0" name="promocion" type="tns:promocion" />
+      <xs:element name="stock" type="xs:int" />
+      <xs:element name="stockReservado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="promocion">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+      <xs:element name="idPromocion" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaPromocionXProducto" nillable="true" type="tns:promocionXProducto" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaPromocionXZona" nillable="true" type="tns:promocionXZona" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="promocionXZona">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="idPromocionXZona" type="xs:int" />
+      <xs:element minOccurs="0" name="promocion" type="tns:promocion" />
+      <xs:element minOccurs="0" name="zona" type="tns:zona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="zona">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="idZona" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaClienteXZona" nillable="true" type="tns:clienteXZona" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaEmpleadoXZona" nillable="true" type="tns:empleadoXZona" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaProductoXZona" nillable="true" type="tns:productoXZona" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaPromocionXZona" nillable="true" type="tns:promocionXZona" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="clienteXZona">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+      <xs:element name="idClienteXZona" type="xs:int" />
+      <xs:element minOccurs="0" name="zona" type="tns:zona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="empleadoXZona">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="empleado" type="tns:empleado" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+      <xs:element name="idVendedorXZona" type="xs:int" />
+      <xs:element minOccurs="0" name="zona" type="tns:zona" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="marca">
@@ -162,32 +264,12 @@
       <xs:element name="idFamilia" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="zona">
+  <xs:complexType name="queja">
     <xs:sequence>
-      <xs:element name="activo" type="xs:boolean" />
-      <xs:element name="idZona" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="promocionXProducto">
-    <xs:sequence>
-      <xs:element name="activo" type="xs:boolean" />
-      <xs:element name="descuento" type="xs:int" />
-      <xs:element name="idPromocionXProducto" type="xs:int" />
-      <xs:element minOccurs="0" name="producto" type="tns:producto" />
-      <xs:element minOccurs="0" name="promocion" type="tns:promocion" />
-      <xs:element name="stock" type="xs:int" />
-      <xs:element name="stockReservado" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="promocion">
-    <xs:sequence>
-      <xs:element name="activo" type="xs:boolean" />
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
-      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
-      <xs:element name="idPromocion" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaCreacion" type="xs:dateTime" />
+      <xs:element name="idQueja" type="xs:int" />
+      <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="visita">
@@ -248,7 +330,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarClientes">
-    <xs:sequence />
+    <xs:sequence>
+      <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
+      <xs:element minOccurs="0" name="grupo" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarClientesResponse">
     <xs:sequence>
