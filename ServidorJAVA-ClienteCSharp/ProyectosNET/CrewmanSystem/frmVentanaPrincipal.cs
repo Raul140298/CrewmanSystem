@@ -571,10 +571,10 @@ namespace CrewmanSystem
 			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarProductosXZona(),true, false, false, true, true);
 		}
 
-		private void btnPromocionXZona_Click(object sender, EventArgs e)
-		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarPromocionesXZona(), false, false, false, true, true);
-		}
+		//private void btnPromocionXZona_Click(object sender, EventArgs e)
+		//{
+		//	ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarPromocionesXZona(), false, false, false, true, true);
+		//}
 		#endregion
 
 		#region GESTIONEMPLEADOS
@@ -620,10 +620,10 @@ namespace CrewmanSystem
 			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarClientesXZona(),false, false, false, true, true);
 		}
 
-		private void btnPersonaDeContacto_Click(object sender, EventArgs e)
-		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarPersonaContacto(),true, true, false, true, true);
-		}
+		//private void btnPersonaDeContacto_Click(object sender, EventArgs e)
+		//{
+		//	ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarPersonaContacto(),true, true, false, true, true);
+		//}
 		#endregion
 
 		#region BOTONESSINDESPEGABLES
