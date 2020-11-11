@@ -42,7 +42,7 @@
 			this.txtDireccion = new System.Windows.Forms.TextBox();
 			this.txtGrupo = new System.Windows.Forms.TextBox();
 			this.txtRazonSocial = new System.Windows.Forms.TextBox();
-			this.txtID = new System.Windows.Forms.TextBox();
+			this.txtIdC = new System.Windows.Forms.TextBox();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.label9 = new System.Windows.Forms.Label();
 			this.txtDNI = new System.Windows.Forms.TextBox();
@@ -59,7 +59,7 @@
 			this.label15 = new System.Windows.Forms.Label();
 			this.txtNombre = new System.Windows.Forms.TextBox();
 			this.label14 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.txtIdPC = new System.Windows.Forms.TextBox();
 			this.btnGuardar = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
@@ -80,7 +80,7 @@
 			this.groupBox1.Controls.Add(this.txtDireccion);
 			this.groupBox1.Controls.Add(this.txtGrupo);
 			this.groupBox1.Controls.Add(this.txtRazonSocial);
-			this.groupBox1.Controls.Add(this.txtID);
+			this.groupBox1.Controls.Add(this.txtIdC);
 			this.groupBox1.Location = new System.Drawing.Point(23, 12);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(612, 290);
@@ -201,14 +201,14 @@
 			this.txtRazonSocial.Size = new System.Drawing.Size(347, 22);
 			this.txtRazonSocial.TabIndex = 141;
 			// 
-			// txtID
+			// txtIdC
 			// 
-			this.txtID.BackColor = System.Drawing.SystemColors.InactiveCaption;
-			this.txtID.Enabled = false;
-			this.txtID.Location = new System.Drawing.Point(241, 32);
-			this.txtID.Name = "txtID";
-			this.txtID.Size = new System.Drawing.Size(47, 22);
-			this.txtID.TabIndex = 140;
+			this.txtIdC.BackColor = System.Drawing.SystemColors.InactiveCaption;
+			this.txtIdC.Enabled = false;
+			this.txtIdC.Location = new System.Drawing.Point(241, 32);
+			this.txtIdC.Name = "txtIdC";
+			this.txtIdC.Size = new System.Drawing.Size(47, 22);
+			this.txtIdC.TabIndex = 140;
 			// 
 			// groupBox2
 			// 
@@ -227,7 +227,7 @@
 			this.groupBox2.Controls.Add(this.label15);
 			this.groupBox2.Controls.Add(this.txtNombre);
 			this.groupBox2.Controls.Add(this.label14);
-			this.groupBox2.Controls.Add(this.textBox1);
+			this.groupBox2.Controls.Add(this.txtIdPC);
 			this.groupBox2.Location = new System.Drawing.Point(23, 319);
 			this.groupBox2.Name = "groupBox2";
 			this.groupBox2.Size = new System.Drawing.Size(612, 271);
@@ -371,14 +371,14 @@
 			this.label14.Text = "Id :";
 			this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
-			// textBox1
+			// txtIdPC
 			// 
-			this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-			this.textBox1.Enabled = false;
-			this.textBox1.Location = new System.Drawing.Point(241, 37);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(129, 22);
-			this.textBox1.TabIndex = 117;
+			this.txtIdPC.BackColor = System.Drawing.SystemColors.InactiveCaption;
+			this.txtIdPC.Enabled = false;
+			this.txtIdPC.Location = new System.Drawing.Point(241, 37);
+			this.txtIdPC.Name = "txtIdPC";
+			this.txtIdPC.Size = new System.Drawing.Size(129, 22);
+			this.txtIdPC.TabIndex = 117;
 			// 
 			// btnGuardar
 			// 
@@ -392,6 +392,7 @@
 			this.btnGuardar.TabIndex = 157;
 			this.btnGuardar.Text = "GUARDAR";
 			this.btnGuardar.UseVisualStyleBackColor = false;
+			this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
 			// 
 			// frmNuevoCliente
 			// 
@@ -427,7 +428,7 @@
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtGrupo;
         private System.Windows.Forms.TextBox txtRazonSocial;
-        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtIdC;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label9;
@@ -445,6 +446,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtIdPC;
     }
 }

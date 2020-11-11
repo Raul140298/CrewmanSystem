@@ -16,5 +16,22 @@ namespace CrewmanSystem
 		{
 			InitializeComponent();
 		}
+
+		private void btnGuardar_Click(object sender, EventArgs e)
+		{
+            foreach (Control c in panel2.Controls)
+            {
+                if (c is TextBox)
+                {
+                    TextBox textBox = c as TextBox;
+                    if (textBox.Text == string.Empty && textBox.Name != "txtId")
+                    {
+                        MessageBox.Show("Falta llenar los datos de " +
+                            textBox.Name.Substring(3));
+                        return;
+                    }
+                }
+            }
+        }
 	}
 }

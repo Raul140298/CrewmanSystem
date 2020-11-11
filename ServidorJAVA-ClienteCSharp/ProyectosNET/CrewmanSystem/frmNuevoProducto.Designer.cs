@@ -78,6 +78,7 @@
 			this.btnGuardar.TabIndex = 50;
 			this.btnGuardar.Text = "GUARDAR";
 			this.btnGuardar.UseVisualStyleBackColor = false;
+			this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
 			// 
 			// cboSubfamilia
 			// 

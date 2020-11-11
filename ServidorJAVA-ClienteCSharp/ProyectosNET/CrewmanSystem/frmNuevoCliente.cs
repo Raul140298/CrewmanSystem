@@ -16,5 +16,36 @@ namespace CrewmanSystem
 		{
 			InitializeComponent();
 		}
-    }
+
+		private void btnGuardar_Click(object sender, EventArgs e)
+		{
+            foreach (Control c in groupBox1.Controls)
+            {
+                if (c is TextBox)
+                {
+                    TextBox textBox = c as TextBox;
+                    if (textBox.Text == string.Empty && textBox.Name != "txtIdC")
+                    {
+                        MessageBox.Show("Falta llenar los datos de " +
+                            textBox.Name.Substring(3));
+                        return;
+                    }
+                }
+            }
+
+            foreach (Control c in groupBox2.Controls)
+            {
+                if (c is TextBox)
+                {
+                    TextBox textBox = c as TextBox;
+                    if (textBox.Text == string.Empty && textBox.Name != "txtIdPC")
+                    {
+                        MessageBox.Show("Falta llenar los datos de " +
+                            textBox.Name.Substring(3));
+                        return;
+                    }
+                }
+            }
+        }
+	}
 }

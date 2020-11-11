@@ -19,7 +19,13 @@ namespace CrewmanSystem
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
+            foreach (Control x in this.Controls)
+            {
+                if (x is TextBox)
+                {
+                    MessageBox.Show(x.Name);
+                }
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
