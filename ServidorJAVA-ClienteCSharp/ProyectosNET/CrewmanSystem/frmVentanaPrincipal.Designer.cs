@@ -32,65 +32,62 @@
 			this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
 			this.pnlContenedor = new System.Windows.Forms.Panel();
 			this.pnlChildForm = new System.Windows.Forms.Panel();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.pnlLateralIzquierdo = new System.Windows.Forms.Panel();
 			this.pnlEmpleado = new System.Windows.Forms.Panel();
+			this.pnlEmpGestionPedidos = new System.Windows.Forms.Panel();
+			this.pnlEmpGestionProductos = new System.Windows.Forms.Panel();
+			this.pnlJefeDeVentas = new System.Windows.Forms.Panel();
+			this.pnlGestionClientes = new System.Windows.Forms.Panel();
+			this.pnlGestionEmpleados = new System.Windows.Forms.Panel();
+			this.pnlGestionZonas = new System.Windows.Forms.Panel();
+			this.pnlGestionProducto = new System.Windows.Forms.Panel();
+			this.pnlCabecera = new System.Windows.Forms.Panel();
+			this.lblCountRows = new System.Windows.Forms.Label();
+			this.pnlCargo = new System.Windows.Forms.Panel();
+			this.pnlControlBox = new System.Windows.Forms.Panel();
+			this.lblControlName = new System.Windows.Forms.Label();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.btnVisitas = new FontAwesome.Sharp.IconButton();
 			this.btnPromociones = new FontAwesome.Sharp.IconButton();
-			this.pnlEmpGestionPedidos = new System.Windows.Forms.Panel();
 			this.btnEmpQuejas = new FontAwesome.Sharp.IconButton();
 			this.btnEmpGestionGuiasRemision = new FontAwesome.Sharp.IconButton();
 			this.btnEmpGestionFacturas = new FontAwesome.Sharp.IconButton();
 			this.btnEmpPedidos = new FontAwesome.Sharp.IconButton();
 			this.btnEmpGestionPedidos = new FontAwesome.Sharp.IconButton();
-			this.pnlEmpGestionProductos = new System.Windows.Forms.Panel();
 			this.btnEmpProductoXZona = new FontAwesome.Sharp.IconButton();
 			this.btnEmpProducto = new FontAwesome.Sharp.IconButton();
 			this.btnEmpGestionProductos = new FontAwesome.Sharp.IconButton();
-			this.pnlJefeDeVentas = new System.Windows.Forms.Panel();
-			this.pnlGestionClientes = new System.Windows.Forms.Panel();
-			this.btnPersonaDeContacto = new FontAwesome.Sharp.IconButton();
 			this.btnClientesXZona = new FontAwesome.Sharp.IconButton();
 			this.btnClientes = new FontAwesome.Sharp.IconButton();
 			this.btnGestionClientes = new FontAwesome.Sharp.IconButton();
 			this.btnCumplimientoDeMetas = new FontAwesome.Sharp.IconButton();
 			this.btnReportePedidos = new FontAwesome.Sharp.IconButton();
-			this.pnlGestionEmpleados = new System.Windows.Forms.Panel();
 			this.btnSeguimientoYControl = new FontAwesome.Sharp.IconButton();
 			this.btnCarteras = new FontAwesome.Sharp.IconButton();
 			this.btnRutas = new FontAwesome.Sharp.IconButton();
 			this.btnEmpleados = new FontAwesome.Sharp.IconButton();
 			this.btnGestionEmpleados = new FontAwesome.Sharp.IconButton();
-			this.pnlGestionZonas = new System.Windows.Forms.Panel();
-			this.btnPromocionXZona = new FontAwesome.Sharp.IconButton();
 			this.btnProductoXZona = new FontAwesome.Sharp.IconButton();
 			this.btnZona = new FontAwesome.Sharp.IconButton();
 			this.btnGestionarZonas = new FontAwesome.Sharp.IconButton();
-			this.pnlGestionProducto = new System.Windows.Forms.Panel();
 			this.btnPromocion = new FontAwesome.Sharp.IconButton();
 			this.btnProducto = new FontAwesome.Sharp.IconButton();
 			this.btnSubfamilia = new FontAwesome.Sharp.IconButton();
 			this.btnFamilia = new FontAwesome.Sharp.IconButton();
 			this.btnGestionProducto = new FontAwesome.Sharp.IconButton();
-			this.pnlCabecera = new System.Windows.Forms.Panel();
 			this.btnBuscar = new FontAwesome.Sharp.IconButton();
-			this.lblCountRows = new System.Windows.Forms.Label();
 			this.btnLeft = new FontAwesome.Sharp.IconButton();
 			this.btnRight = new FontAwesome.Sharp.IconButton();
 			this.btnEliminar = new FontAwesome.Sharp.IconButton();
 			this.btnActualizar = new FontAwesome.Sharp.IconButton();
 			this.btnNuevo = new FontAwesome.Sharp.IconButton();
 			this.btnAtras = new FontAwesome.Sharp.IconButton();
-			this.pnlCargo = new System.Windows.Forms.Panel();
 			this.btnHome = new FontAwesome.Sharp.IconButton();
-			this.pnlControlBox = new System.Windows.Forms.Panel();
-			this.lblControlName = new System.Windows.Forms.Label();
 			this.btnMinimizar = new FontAwesome.Sharp.IconButton();
 			this.btnMaximizar = new FontAwesome.Sharp.IconButton();
 			this.btnSalir = new FontAwesome.Sharp.IconButton();
 			this.pnlContenedor.SuspendLayout();
 			this.pnlChildForm.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.pnlLateralIzquierdo.SuspendLayout();
 			this.pnlEmpleado.SuspendLayout();
 			this.pnlEmpGestionPedidos.SuspendLayout();
@@ -103,6 +100,7 @@
 			this.pnlCabecera.SuspendLayout();
 			this.pnlCargo.SuspendLayout();
 			this.pnlControlBox.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// pnlContenedor
@@ -128,17 +126,6 @@
 			this.pnlChildForm.TabIndex = 3;
 			this.pnlChildForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlChildForm_MouseDown);
 			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.pictureBox1.Image = global::CrewmanSystem.Properties.Resources.MARCADEAGUA;
-			this.pictureBox1.Location = new System.Drawing.Point(534, 536);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(117, 124);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.pictureBox1.TabIndex = 24;
-			this.pictureBox1.TabStop = false;
-			// 
 			// pnlLateralIzquierdo
 			// 
 			this.pnlLateralIzquierdo.AutoScroll = true;
@@ -162,11 +149,176 @@
 			this.pnlEmpleado.Controls.Add(this.pnlEmpGestionProductos);
 			this.pnlEmpleado.Controls.Add(this.btnEmpGestionProductos);
 			this.pnlEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlEmpleado.Location = new System.Drawing.Point(0, 1022);
+			this.pnlEmpleado.Location = new System.Drawing.Point(0, 878);
 			this.pnlEmpleado.Name = "pnlEmpleado";
 			this.pnlEmpleado.Size = new System.Drawing.Size(264, 838);
 			this.pnlEmpleado.TabIndex = 1;
 			this.pnlEmpleado.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlEmpleado_MouseDown);
+			// 
+			// pnlEmpGestionPedidos
+			// 
+			this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpQuejas);
+			this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpGestionGuiasRemision);
+			this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpGestionFacturas);
+			this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpPedidos);
+			this.pnlEmpGestionPedidos.Dock = System.Windows.Forms.DockStyle.Top;
+			this.pnlEmpGestionPedidos.Location = new System.Drawing.Point(0, 196);
+			this.pnlEmpGestionPedidos.Name = "pnlEmpGestionPedidos";
+			this.pnlEmpGestionPedidos.Size = new System.Drawing.Size(264, 195);
+			this.pnlEmpGestionPedidos.TabIndex = 3;
+			// 
+			// pnlEmpGestionProductos
+			// 
+			this.pnlEmpGestionProductos.Controls.Add(this.btnEmpProductoXZona);
+			this.pnlEmpGestionProductos.Controls.Add(this.btnEmpProducto);
+			this.pnlEmpGestionProductos.Dock = System.Windows.Forms.DockStyle.Top;
+			this.pnlEmpGestionProductos.Location = new System.Drawing.Point(0, 45);
+			this.pnlEmpGestionProductos.Name = "pnlEmpGestionProductos";
+			this.pnlEmpGestionProductos.Size = new System.Drawing.Size(264, 106);
+			this.pnlEmpGestionProductos.TabIndex = 1;
+			// 
+			// pnlJefeDeVentas
+			// 
+			this.pnlJefeDeVentas.Controls.Add(this.pnlGestionClientes);
+			this.pnlJefeDeVentas.Controls.Add(this.btnGestionClientes);
+			this.pnlJefeDeVentas.Controls.Add(this.btnCumplimientoDeMetas);
+			this.pnlJefeDeVentas.Controls.Add(this.btnReportePedidos);
+			this.pnlJefeDeVentas.Controls.Add(this.pnlGestionEmpleados);
+			this.pnlJefeDeVentas.Controls.Add(this.btnGestionEmpleados);
+			this.pnlJefeDeVentas.Controls.Add(this.pnlGestionZonas);
+			this.pnlJefeDeVentas.Controls.Add(this.btnGestionarZonas);
+			this.pnlJefeDeVentas.Controls.Add(this.pnlGestionProducto);
+			this.pnlJefeDeVentas.Controls.Add(this.btnGestionProducto);
+			this.pnlJefeDeVentas.Dock = System.Windows.Forms.DockStyle.Top;
+			this.pnlJefeDeVentas.Location = new System.Drawing.Point(0, 0);
+			this.pnlJefeDeVentas.Name = "pnlJefeDeVentas";
+			this.pnlJefeDeVentas.Size = new System.Drawing.Size(264, 878);
+			this.pnlJefeDeVentas.TabIndex = 0;
+			this.pnlJefeDeVentas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlJefeDeVentas_MouseDown);
+			// 
+			// pnlGestionClientes
+			// 
+			this.pnlGestionClientes.Controls.Add(this.btnClientesXZona);
+			this.pnlGestionClientes.Controls.Add(this.btnClientes);
+			this.pnlGestionClientes.Dock = System.Windows.Forms.DockStyle.Top;
+			this.pnlGestionClientes.Location = new System.Drawing.Point(0, 761);
+			this.pnlGestionClientes.Name = "pnlGestionClientes";
+			this.pnlGestionClientes.Size = new System.Drawing.Size(264, 102);
+			this.pnlGestionClientes.TabIndex = 11;
+			// 
+			// pnlGestionEmpleados
+			// 
+			this.pnlGestionEmpleados.Controls.Add(this.btnSeguimientoYControl);
+			this.pnlGestionEmpleados.Controls.Add(this.btnCarteras);
+			this.pnlGestionEmpleados.Controls.Add(this.btnRutas);
+			this.pnlGestionEmpleados.Controls.Add(this.btnEmpleados);
+			this.pnlGestionEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
+			this.pnlGestionEmpleados.Location = new System.Drawing.Point(0, 431);
+			this.pnlGestionEmpleados.Name = "pnlGestionEmpleados";
+			this.pnlGestionEmpleados.Size = new System.Drawing.Size(264, 195);
+			this.pnlGestionEmpleados.TabIndex = 5;
+			// 
+			// pnlGestionZonas
+			// 
+			this.pnlGestionZonas.Controls.Add(this.btnProductoXZona);
+			this.pnlGestionZonas.Controls.Add(this.btnZona);
+			this.pnlGestionZonas.Dock = System.Windows.Forms.DockStyle.Top;
+			this.pnlGestionZonas.Location = new System.Drawing.Point(0, 285);
+			this.pnlGestionZonas.Name = "pnlGestionZonas";
+			this.pnlGestionZonas.Size = new System.Drawing.Size(264, 101);
+			this.pnlGestionZonas.TabIndex = 3;
+			// 
+			// pnlGestionProducto
+			// 
+			this.pnlGestionProducto.Controls.Add(this.btnPromocion);
+			this.pnlGestionProducto.Controls.Add(this.btnProducto);
+			this.pnlGestionProducto.Controls.Add(this.btnSubfamilia);
+			this.pnlGestionProducto.Controls.Add(this.btnFamilia);
+			this.pnlGestionProducto.Dock = System.Windows.Forms.DockStyle.Top;
+			this.pnlGestionProducto.Location = new System.Drawing.Point(0, 45);
+			this.pnlGestionProducto.Name = "pnlGestionProducto";
+			this.pnlGestionProducto.Size = new System.Drawing.Size(264, 195);
+			this.pnlGestionProducto.TabIndex = 1;
+			// 
+			// pnlCabecera
+			// 
+			this.pnlCabecera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+			this.pnlCabecera.Controls.Add(this.btnBuscar);
+			this.pnlCabecera.Controls.Add(this.lblCountRows);
+			this.pnlCabecera.Controls.Add(this.btnLeft);
+			this.pnlCabecera.Controls.Add(this.btnRight);
+			this.pnlCabecera.Controls.Add(this.btnEliminar);
+			this.pnlCabecera.Controls.Add(this.btnActualizar);
+			this.pnlCabecera.Controls.Add(this.btnNuevo);
+			this.pnlCabecera.Controls.Add(this.btnAtras);
+			this.pnlCabecera.Controls.Add(this.pnlCargo);
+			this.pnlCabecera.Controls.Add(this.pnlControlBox);
+			this.pnlCabecera.Dock = System.Windows.Forms.DockStyle.Top;
+			this.pnlCabecera.Location = new System.Drawing.Point(0, 0);
+			this.pnlCabecera.Name = "pnlCabecera";
+			this.pnlCabecera.Size = new System.Drawing.Size(960, 75);
+			this.pnlCabecera.TabIndex = 0;
+			// 
+			// lblCountRows
+			// 
+			this.lblCountRows.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.lblCountRows.AutoSize = true;
+			this.lblCountRows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+			this.lblCountRows.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.lblCountRows.ForeColor = System.Drawing.Color.Gainsboro;
+			this.lblCountRows.Location = new System.Drawing.Point(773, 40);
+			this.lblCountRows.Name = "lblCountRows";
+			this.lblCountRows.Size = new System.Drawing.Size(45, 20);
+			this.lblCountRows.TabIndex = 19;
+			this.lblCountRows.Text = "rows";
+			this.lblCountRows.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// pnlCargo
+			// 
+			this.pnlCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+			this.pnlCargo.Controls.Add(this.btnHome);
+			this.pnlCargo.Dock = System.Windows.Forms.DockStyle.Left;
+			this.pnlCargo.Location = new System.Drawing.Point(0, 32);
+			this.pnlCargo.Name = "pnlCargo";
+			this.pnlCargo.Size = new System.Drawing.Size(285, 43);
+			this.pnlCargo.TabIndex = 1;
+			// 
+			// pnlControlBox
+			// 
+			this.pnlControlBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+			this.pnlControlBox.Controls.Add(this.lblControlName);
+			this.pnlControlBox.Controls.Add(this.btnMinimizar);
+			this.pnlControlBox.Controls.Add(this.btnMaximizar);
+			this.pnlControlBox.Controls.Add(this.btnSalir);
+			this.pnlControlBox.Dock = System.Windows.Forms.DockStyle.Top;
+			this.pnlControlBox.Location = new System.Drawing.Point(0, 0);
+			this.pnlControlBox.Name = "pnlControlBox";
+			this.pnlControlBox.Size = new System.Drawing.Size(960, 32);
+			this.pnlControlBox.TabIndex = 0;
+			this.pnlControlBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+			// 
+			// lblControlName
+			// 
+			this.lblControlName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.lblControlName.Location = new System.Drawing.Point(12, 5);
+			this.lblControlName.Name = "lblControlName";
+			this.lblControlName.Size = new System.Drawing.Size(252, 22);
+			this.lblControlName.TabIndex = 74;
+			this.lblControlName.Text = " Crewman System";
+			this.lblControlName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.lblControlName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblControlName_MouseDown);
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.pictureBox1.Image = global::CrewmanSystem.Properties.Resources.MARCADEAGUA;
+			this.pictureBox1.Location = new System.Drawing.Point(534, 536);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(117, 124);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.TabIndex = 24;
+			this.pictureBox1.TabStop = false;
 			// 
 			// btnVisitas
 			// 
@@ -219,18 +371,6 @@
 			this.btnPromociones.UseCompatibleTextRendering = true;
 			this.btnPromociones.UseVisualStyleBackColor = false;
 			this.btnPromociones.Click += new System.EventHandler(this.btnPromociones_Click);
-			// 
-			// pnlEmpGestionPedidos
-			// 
-			this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpQuejas);
-			this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpGestionGuiasRemision);
-			this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpGestionFacturas);
-			this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpPedidos);
-			this.pnlEmpGestionPedidos.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlEmpGestionPedidos.Location = new System.Drawing.Point(0, 196);
-			this.pnlEmpGestionPedidos.Name = "pnlEmpGestionPedidos";
-			this.pnlEmpGestionPedidos.Size = new System.Drawing.Size(264, 195);
-			this.pnlEmpGestionPedidos.TabIndex = 3;
 			// 
 			// btnEmpQuejas
 			// 
@@ -350,16 +490,6 @@
 			this.btnEmpGestionPedidos.UseVisualStyleBackColor = false;
 			this.btnEmpGestionPedidos.Click += new System.EventHandler(this.btnEmpGestionPedidos_Click);
 			// 
-			// pnlEmpGestionProductos
-			// 
-			this.pnlEmpGestionProductos.Controls.Add(this.btnEmpProductoXZona);
-			this.pnlEmpGestionProductos.Controls.Add(this.btnEmpProducto);
-			this.pnlEmpGestionProductos.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlEmpGestionProductos.Location = new System.Drawing.Point(0, 45);
-			this.pnlEmpGestionProductos.Name = "pnlEmpGestionProductos";
-			this.pnlEmpGestionProductos.Size = new System.Drawing.Size(264, 106);
-			this.pnlEmpGestionProductos.TabIndex = 1;
-			// 
 			// btnEmpProductoXZona
 			// 
 			this.btnEmpProductoXZona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
@@ -432,59 +562,6 @@
 			this.btnEmpGestionProductos.UseVisualStyleBackColor = false;
 			this.btnEmpGestionProductos.Click += new System.EventHandler(this.btnEmpGestionProductos_Click);
 			// 
-			// pnlJefeDeVentas
-			// 
-			this.pnlJefeDeVentas.Controls.Add(this.pnlGestionClientes);
-			this.pnlJefeDeVentas.Controls.Add(this.btnGestionClientes);
-			this.pnlJefeDeVentas.Controls.Add(this.btnCumplimientoDeMetas);
-			this.pnlJefeDeVentas.Controls.Add(this.btnReportePedidos);
-			this.pnlJefeDeVentas.Controls.Add(this.pnlGestionEmpleados);
-			this.pnlJefeDeVentas.Controls.Add(this.btnGestionEmpleados);
-			this.pnlJefeDeVentas.Controls.Add(this.pnlGestionZonas);
-			this.pnlJefeDeVentas.Controls.Add(this.btnGestionarZonas);
-			this.pnlJefeDeVentas.Controls.Add(this.pnlGestionProducto);
-			this.pnlJefeDeVentas.Controls.Add(this.btnGestionProducto);
-			this.pnlJefeDeVentas.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlJefeDeVentas.Location = new System.Drawing.Point(0, 0);
-			this.pnlJefeDeVentas.Name = "pnlJefeDeVentas";
-			this.pnlJefeDeVentas.Size = new System.Drawing.Size(264, 1022);
-			this.pnlJefeDeVentas.TabIndex = 0;
-			this.pnlJefeDeVentas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlJefeDeVentas_MouseDown);
-			// 
-			// pnlGestionClientes
-			// 
-			this.pnlGestionClientes.Controls.Add(this.btnPersonaDeContacto);
-			this.pnlGestionClientes.Controls.Add(this.btnClientesXZona);
-			this.pnlGestionClientes.Controls.Add(this.btnClientes);
-			this.pnlGestionClientes.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlGestionClientes.Location = new System.Drawing.Point(0, 810);
-			this.pnlGestionClientes.Name = "pnlGestionClientes";
-			this.pnlGestionClientes.Size = new System.Drawing.Size(264, 151);
-			this.pnlGestionClientes.TabIndex = 11;
-			// 
-			// btnPersonaDeContacto
-			// 
-			this.btnPersonaDeContacto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-			this.btnPersonaDeContacto.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnPersonaDeContacto.FlatAppearance.BorderSize = 0;
-			this.btnPersonaDeContacto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnPersonaDeContacto.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-			this.btnPersonaDeContacto.ForeColor = System.Drawing.Color.Gainsboro;
-			this.btnPersonaDeContacto.IconChar = FontAwesome.Sharp.IconChar.None;
-			this.btnPersonaDeContacto.IconColor = System.Drawing.Color.Black;
-			this.btnPersonaDeContacto.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.btnPersonaDeContacto.IconSize = 16;
-			this.btnPersonaDeContacto.Location = new System.Drawing.Point(0, 90);
-			this.btnPersonaDeContacto.Name = "btnPersonaDeContacto";
-			this.btnPersonaDeContacto.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-			this.btnPersonaDeContacto.Rotation = 0D;
-			this.btnPersonaDeContacto.Size = new System.Drawing.Size(264, 45);
-			this.btnPersonaDeContacto.TabIndex = 3;
-			this.btnPersonaDeContacto.Text = "Personas de Contacto";
-			this.btnPersonaDeContacto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnPersonaDeContacto.UseVisualStyleBackColor = false;
-			this.btnPersonaDeContacto.Click += new System.EventHandler(this.btnPersonaDeContacto_Click);
-			// 
 			// btnClientesXZona
 			// 
 			this.btnClientesXZona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
@@ -544,7 +621,7 @@
 			this.btnGestionClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnGestionClientes.IconSize = 20;
 			this.btnGestionClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnGestionClientes.Location = new System.Drawing.Point(0, 765);
+			this.btnGestionClientes.Location = new System.Drawing.Point(0, 716);
 			this.btnGestionClientes.Name = "btnGestionClientes";
 			this.btnGestionClientes.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
 			this.btnGestionClientes.Rotation = 0D;
@@ -570,7 +647,7 @@
 			this.btnCumplimientoDeMetas.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnCumplimientoDeMetas.IconSize = 20;
 			this.btnCumplimientoDeMetas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnCumplimientoDeMetas.Location = new System.Drawing.Point(0, 720);
+			this.btnCumplimientoDeMetas.Location = new System.Drawing.Point(0, 671);
 			this.btnCumplimientoDeMetas.Name = "btnCumplimientoDeMetas";
 			this.btnCumplimientoDeMetas.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
 			this.btnCumplimientoDeMetas.Rotation = 0D;
@@ -596,7 +673,7 @@
 			this.btnReportePedidos.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnReportePedidos.IconSize = 20;
 			this.btnReportePedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnReportePedidos.Location = new System.Drawing.Point(0, 675);
+			this.btnReportePedidos.Location = new System.Drawing.Point(0, 626);
 			this.btnReportePedidos.Name = "btnReportePedidos";
 			this.btnReportePedidos.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
 			this.btnReportePedidos.Rotation = 0D;
@@ -608,18 +685,6 @@
 			this.btnReportePedidos.UseCompatibleTextRendering = true;
 			this.btnReportePedidos.UseVisualStyleBackColor = false;
 			this.btnReportePedidos.Click += new System.EventHandler(this.btnReportePedidos_Click);
-			// 
-			// pnlGestionEmpleados
-			// 
-			this.pnlGestionEmpleados.Controls.Add(this.btnSeguimientoYControl);
-			this.pnlGestionEmpleados.Controls.Add(this.btnCarteras);
-			this.pnlGestionEmpleados.Controls.Add(this.btnRutas);
-			this.pnlGestionEmpleados.Controls.Add(this.btnEmpleados);
-			this.pnlGestionEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlGestionEmpleados.Location = new System.Drawing.Point(0, 480);
-			this.pnlGestionEmpleados.Name = "pnlGestionEmpleados";
-			this.pnlGestionEmpleados.Size = new System.Drawing.Size(264, 195);
-			this.pnlGestionEmpleados.TabIndex = 5;
 			// 
 			// btnSeguimientoYControl
 			// 
@@ -726,7 +791,7 @@
 			this.btnGestionEmpleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnGestionEmpleados.IconSize = 20;
 			this.btnGestionEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnGestionEmpleados.Location = new System.Drawing.Point(0, 435);
+			this.btnGestionEmpleados.Location = new System.Drawing.Point(0, 386);
 			this.btnGestionEmpleados.Name = "btnGestionEmpleados";
 			this.btnGestionEmpleados.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
 			this.btnGestionEmpleados.Rotation = 0D;
@@ -738,40 +803,6 @@
 			this.btnGestionEmpleados.UseCompatibleTextRendering = true;
 			this.btnGestionEmpleados.UseVisualStyleBackColor = false;
 			this.btnGestionEmpleados.Click += new System.EventHandler(this.btnGestionEmpleados_Click);
-			// 
-			// pnlGestionZonas
-			// 
-			this.pnlGestionZonas.Controls.Add(this.btnPromocionXZona);
-			this.pnlGestionZonas.Controls.Add(this.btnProductoXZona);
-			this.pnlGestionZonas.Controls.Add(this.btnZona);
-			this.pnlGestionZonas.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlGestionZonas.Location = new System.Drawing.Point(0, 285);
-			this.pnlGestionZonas.Name = "pnlGestionZonas";
-			this.pnlGestionZonas.Size = new System.Drawing.Size(264, 150);
-			this.pnlGestionZonas.TabIndex = 3;
-			// 
-			// btnPromocionXZona
-			// 
-			this.btnPromocionXZona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-			this.btnPromocionXZona.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnPromocionXZona.FlatAppearance.BorderSize = 0;
-			this.btnPromocionXZona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnPromocionXZona.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-			this.btnPromocionXZona.ForeColor = System.Drawing.Color.Gainsboro;
-			this.btnPromocionXZona.IconChar = FontAwesome.Sharp.IconChar.None;
-			this.btnPromocionXZona.IconColor = System.Drawing.Color.Black;
-			this.btnPromocionXZona.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.btnPromocionXZona.IconSize = 16;
-			this.btnPromocionXZona.Location = new System.Drawing.Point(0, 90);
-			this.btnPromocionXZona.Name = "btnPromocionXZona";
-			this.btnPromocionXZona.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-			this.btnPromocionXZona.Rotation = 0D;
-			this.btnPromocionXZona.Size = new System.Drawing.Size(264, 45);
-			this.btnPromocionXZona.TabIndex = 4;
-			this.btnPromocionXZona.Text = "Promoción x Zona";
-			this.btnPromocionXZona.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnPromocionXZona.UseVisualStyleBackColor = false;
-			this.btnPromocionXZona.Click += new System.EventHandler(this.btnPromocionXZona_Click);
 			// 
 			// btnProductoXZona
 			// 
@@ -844,18 +875,6 @@
 			this.btnGestionarZonas.UseCompatibleTextRendering = true;
 			this.btnGestionarZonas.UseVisualStyleBackColor = false;
 			this.btnGestionarZonas.Click += new System.EventHandler(this.btnGestionarZonas_Click);
-			// 
-			// pnlGestionProducto
-			// 
-			this.pnlGestionProducto.Controls.Add(this.btnPromocion);
-			this.pnlGestionProducto.Controls.Add(this.btnProducto);
-			this.pnlGestionProducto.Controls.Add(this.btnSubfamilia);
-			this.pnlGestionProducto.Controls.Add(this.btnFamilia);
-			this.pnlGestionProducto.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlGestionProducto.Location = new System.Drawing.Point(0, 45);
-			this.pnlGestionProducto.Name = "pnlGestionProducto";
-			this.pnlGestionProducto.Size = new System.Drawing.Size(264, 195);
-			this.pnlGestionProducto.TabIndex = 1;
 			// 
 			// btnPromocion
 			// 
@@ -975,25 +994,6 @@
 			this.btnGestionProducto.UseVisualStyleBackColor = false;
 			this.btnGestionProducto.Click += new System.EventHandler(this.btnGestionProducto_Click);
 			// 
-			// pnlCabecera
-			// 
-			this.pnlCabecera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-			this.pnlCabecera.Controls.Add(this.btnBuscar);
-			this.pnlCabecera.Controls.Add(this.lblCountRows);
-			this.pnlCabecera.Controls.Add(this.btnLeft);
-			this.pnlCabecera.Controls.Add(this.btnRight);
-			this.pnlCabecera.Controls.Add(this.btnEliminar);
-			this.pnlCabecera.Controls.Add(this.btnActualizar);
-			this.pnlCabecera.Controls.Add(this.btnNuevo);
-			this.pnlCabecera.Controls.Add(this.btnAtras);
-			this.pnlCabecera.Controls.Add(this.pnlCargo);
-			this.pnlCabecera.Controls.Add(this.pnlControlBox);
-			this.pnlCabecera.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlCabecera.Location = new System.Drawing.Point(0, 0);
-			this.pnlCabecera.Name = "pnlCabecera";
-			this.pnlCabecera.Size = new System.Drawing.Size(960, 75);
-			this.pnlCabecera.TabIndex = 0;
-			// 
 			// btnBuscar
 			// 
 			this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
@@ -1017,21 +1017,6 @@
 			this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.btnBuscar.UseVisualStyleBackColor = false;
 			this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-			// 
-			// lblCountRows
-			// 
-			this.lblCountRows.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.lblCountRows.AutoSize = true;
-			this.lblCountRows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-			this.lblCountRows.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.lblCountRows.ForeColor = System.Drawing.Color.Gainsboro;
-			this.lblCountRows.Location = new System.Drawing.Point(773, 40);
-			this.lblCountRows.Name = "lblCountRows";
-			this.lblCountRows.Size = new System.Drawing.Size(45, 20);
-			this.lblCountRows.TabIndex = 19;
-			this.lblCountRows.Text = "rows";
-			this.lblCountRows.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// btnLeft
 			// 
@@ -1175,16 +1160,6 @@
 			this.btnAtras.UseVisualStyleBackColor = false;
 			this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
 			// 
-			// pnlCargo
-			// 
-			this.pnlCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-			this.pnlCargo.Controls.Add(this.btnHome);
-			this.pnlCargo.Dock = System.Windows.Forms.DockStyle.Left;
-			this.pnlCargo.Location = new System.Drawing.Point(0, 32);
-			this.pnlCargo.Name = "pnlCargo";
-			this.pnlCargo.Size = new System.Drawing.Size(285, 43);
-			this.pnlCargo.TabIndex = 1;
-			// 
 			// btnHome
 			// 
 			this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
@@ -1209,31 +1184,6 @@
 			this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.btnHome.UseVisualStyleBackColor = false;
 			this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-			// 
-			// pnlControlBox
-			// 
-			this.pnlControlBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-			this.pnlControlBox.Controls.Add(this.lblControlName);
-			this.pnlControlBox.Controls.Add(this.btnMinimizar);
-			this.pnlControlBox.Controls.Add(this.btnMaximizar);
-			this.pnlControlBox.Controls.Add(this.btnSalir);
-			this.pnlControlBox.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlControlBox.Location = new System.Drawing.Point(0, 0);
-			this.pnlControlBox.Name = "pnlControlBox";
-			this.pnlControlBox.Size = new System.Drawing.Size(960, 32);
-			this.pnlControlBox.TabIndex = 0;
-			this.pnlControlBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
-			// 
-			// lblControlName
-			// 
-			this.lblControlName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.lblControlName.Location = new System.Drawing.Point(12, 5);
-			this.lblControlName.Name = "lblControlName";
-			this.lblControlName.Size = new System.Drawing.Size(252, 22);
-			this.lblControlName.TabIndex = 74;
-			this.lblControlName.Text = " Crewman System";
-			this.lblControlName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.lblControlName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblControlName_MouseDown);
 			// 
 			// btnMinimizar
 			// 
@@ -1322,7 +1272,6 @@
 			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmPanel_MouseDown);
 			this.pnlContenedor.ResumeLayout(false);
 			this.pnlChildForm.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.pnlLateralIzquierdo.ResumeLayout(false);
 			this.pnlEmpleado.ResumeLayout(false);
 			this.pnlEmpGestionPedidos.ResumeLayout(false);
@@ -1336,6 +1285,7 @@
 			this.pnlCabecera.PerformLayout();
 			this.pnlCargo.ResumeLayout(false);
 			this.pnlControlBox.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -1368,7 +1318,6 @@
 		private System.Windows.Forms.Panel pnlControlBox;
 		private System.Windows.Forms.Panel pnlJefeDeVentas;
 		private System.Windows.Forms.Panel pnlGestionClientes;
-		private FontAwesome.Sharp.IconButton btnPersonaDeContacto;
 		private FontAwesome.Sharp.IconButton btnClientesXZona;
 		private FontAwesome.Sharp.IconButton btnClientes;
 		private FontAwesome.Sharp.IconButton btnGestionClientes;
@@ -1381,7 +1330,6 @@
 		private FontAwesome.Sharp.IconButton btnEmpleados;
 		private FontAwesome.Sharp.IconButton btnGestionEmpleados;
 		private System.Windows.Forms.Panel pnlGestionZonas;
-		private FontAwesome.Sharp.IconButton btnPromocionXZona;
 		private FontAwesome.Sharp.IconButton btnProductoXZona;
 		private FontAwesome.Sharp.IconButton btnZona;
 		private FontAwesome.Sharp.IconButton btnGestionarZonas;
