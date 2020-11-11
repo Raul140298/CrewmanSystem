@@ -12,6 +12,7 @@ namespace CrewmanSystem
 {
 	public partial class frmNuevoProducto : Form
 	{
+        ProductoWS.ProductoWSClient daoProducto;
         FamiliaWS.FamiliaWSClient daoFamilia;
         SubFamiliaWS.SubFamiliaWSClient daoSubfamilia;
 
@@ -21,6 +22,7 @@ namespace CrewmanSystem
 
             daoFamilia = new FamiliaWS.FamiliaWSClient();
             daoSubfamilia = new SubFamiliaWS.SubFamiliaWSClient();
+            daoProducto = new ProductoWS.ProductoWSClient();
 
             FamiliaWS.familia[] misFamilias = daoFamilia.listarFamilias();
             if (misFamilias != null)
@@ -77,8 +79,19 @@ namespace CrewmanSystem
                     }
                 }
             }
-
-            //HACER LO QUE TIENE QUE HACER:
+            //AQUI VA EL INSERTAR
+            frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
+            if (formInsertar.ShowDialog() == DialogResult.OK)
+            {
+                ProductoWS.producto producto = new ProductoWS.producto();
+                producto.nombre = txtNombre.Text;
+                producto.subFamilia = new ProductoWS.subFamilia();
+                producto.subFamilia.idSubFamilia = ((SubFamiliaWS.subFamilia)cboSubfamilia.SelectedItem).idSubFamilia;
+                
+                int resultado = daoProducto.insertarProducto(producto);
+                txtId.Text = resultado.ToString();
+                //Usar resultado para ver si se inserto correctamente
+            }
         }
 
 		private void cboFamilia_SelectedIndexChanged(object sender, EventArgs e)

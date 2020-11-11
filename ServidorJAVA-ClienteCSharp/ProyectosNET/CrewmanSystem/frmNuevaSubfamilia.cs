@@ -49,7 +49,7 @@ namespace CrewmanSystem
                             if (!textBox.Text.All(Char.IsLetter))
                             {
                                 MessageBox.Show("Los datos de " +
-                                    textBox.Name.Substring(3) + " no son correctos");
+                                    textBox.Name.Substring(3) + " solo pueden contener letras");
                                 return;
                             }
                         }
