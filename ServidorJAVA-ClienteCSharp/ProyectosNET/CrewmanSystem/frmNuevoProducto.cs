@@ -85,9 +85,10 @@ namespace CrewmanSystem
             {
                 ProductoWS.producto producto = new ProductoWS.producto();
                 producto.nombre = txtNombre.Text;
+                producto.precioSugerido = float.Parse(txtPrecioSugerido.Text);
                 producto.subFamilia = new ProductoWS.subFamilia();
                 producto.subFamilia.idSubFamilia = ((SubFamiliaWS.subFamilia)cboSubfamilia.SelectedItem).idSubFamilia;
-                
+
                 int resultado = daoProducto.insertarProducto(producto);
                 txtId.Text = resultado.ToString();
                 //Usar resultado para ver si se inserto correctamente
