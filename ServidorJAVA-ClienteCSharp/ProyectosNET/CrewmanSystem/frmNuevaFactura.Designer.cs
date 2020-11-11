@@ -31,11 +31,11 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnBuscarPedido = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dtpEmision = new System.Windows.Forms.DateTimePicker();
+            this.textMonto = new System.Windows.Forms.TextBox();
+            this.textObservacion = new System.Windows.Forms.TextBox();
+            this.dtpVencimiento = new System.Windows.Forms.DateTimePicker();
+            this.txtImpuestos = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -88,47 +88,48 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // dateTimePicker1
+            // dtpEmision
             // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(244, 208);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(434, 22);
-            this.dateTimePicker1.TabIndex = 90;
-            this.dateTimePicker1.Value = new System.DateTime(2020, 11, 4, 9, 52, 39, 0);
+            this.dtpEmision.Enabled = false;
+            this.dtpEmision.Location = new System.Drawing.Point(244, 244);
+            this.dtpEmision.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpEmision.Name = "dtpEmision";
+            this.dtpEmision.Size = new System.Drawing.Size(434, 22);
+            this.dtpEmision.TabIndex = 90;
+            this.dtpEmision.Value = new System.DateTime(2020, 11, 4, 9, 52, 39, 0);
             // 
-            // textBox1
+            // textMonto
             // 
-            this.textBox1.Location = new System.Drawing.Point(244, 118);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(97, 22);
-            this.textBox1.TabIndex = 91;
+            this.textMonto.Location = new System.Drawing.Point(244, 118);
+            this.textMonto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textMonto.Name = "textMonto";
+            this.textMonto.Size = new System.Drawing.Size(154, 22);
+            this.textMonto.TabIndex = 91;
             // 
-            // textBox2
+            // textObservacion
             // 
-            this.textBox2.Location = new System.Drawing.Point(244, 163);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(97, 22);
-            this.textBox2.TabIndex = 92;
+            this.textObservacion.Location = new System.Drawing.Point(244, 163);
+            this.textObservacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textObservacion.Multiline = true;
+            this.textObservacion.Name = "textObservacion";
+            this.textObservacion.Size = new System.Drawing.Size(434, 57);
+            this.textObservacion.TabIndex = 92;
             // 
-            // dateTimePicker2
+            // dtpVencimiento
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(244, 252);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(434, 22);
-            this.dateTimePicker2.TabIndex = 93;
+            this.dtpVencimiento.Location = new System.Drawing.Point(244, 288);
+            this.dtpVencimiento.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpVencimiento.Name = "dtpVencimiento";
+            this.dtpVencimiento.Size = new System.Drawing.Size(434, 22);
+            this.dtpVencimiento.TabIndex = 93;
             // 
-            // textBox3
+            // txtImpuestos
             // 
-            this.textBox3.Location = new System.Drawing.Point(244, 301);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(97, 22);
-            this.textBox3.TabIndex = 94;
+            this.txtImpuestos.Location = new System.Drawing.Point(244, 337);
+            this.txtImpuestos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtImpuestos.Name = "txtImpuestos";
+            this.txtImpuestos.Size = new System.Drawing.Size(154, 22);
+            this.txtImpuestos.TabIndex = 94;
             // 
             // label2
             // 
@@ -154,7 +155,7 @@
             // label4
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Location = new System.Drawing.Point(59, 210);
+            this.label4.Location = new System.Drawing.Point(59, 246);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(178, 22);
             this.label4.TabIndex = 97;
@@ -165,7 +166,7 @@
             // label5
             // 
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Location = new System.Drawing.Point(59, 252);
+            this.label5.Location = new System.Drawing.Point(59, 288);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(178, 22);
             this.label5.TabIndex = 98;
@@ -176,7 +177,7 @@
             // label6
             // 
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Location = new System.Drawing.Point(59, 301);
+            this.label6.Location = new System.Drawing.Point(59, 337);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(178, 22);
             this.label6.TabIndex = 99;
@@ -198,7 +199,7 @@
             this.txtMontoPendiente.Enabled = false;
             this.txtMontoPendiente.Location = new System.Drawing.Point(244, 75);
             this.txtMontoPendiente.Name = "txtMontoPendiente";
-            this.txtMontoPendiente.Size = new System.Drawing.Size(97, 22);
+            this.txtMontoPendiente.Size = new System.Drawing.Size(154, 22);
             this.txtMontoPendiente.TabIndex = 103;
             // 
             // label7
@@ -224,11 +225,11 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txtImpuestos);
+            this.Controls.Add(this.dtpVencimiento);
+            this.Controls.Add(this.textObservacion);
+            this.Controls.Add(this.textMonto);
+            this.Controls.Add(this.dtpEmision);
             this.Controls.Add(this.btnBuscarPedido);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGuardar);
@@ -244,11 +245,11 @@
 		private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnBuscarPedido;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DateTimePicker dtpEmision;
+        private System.Windows.Forms.TextBox textMonto;
+        private System.Windows.Forms.TextBox textObservacion;
+        private System.Windows.Forms.DateTimePicker dtpVencimiento;
+        private System.Windows.Forms.TextBox txtImpuestos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

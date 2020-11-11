@@ -28,10 +28,13 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cboEstadoPedido = new System.Windows.Forms.ComboBox();
+            this.cboTipoPedido = new System.Windows.Forms.ComboBox();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,15 +50,14 @@
             this.MONTO_PAGAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIPO_PEDIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBuscarCliente = new System.Windows.Forms.Button();
-            this.cboTipoPedido = new System.Windows.Forms.ComboBox();
-            this.cboEstadoPedido = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.cboEstadoPedido);
             this.panel1.Controls.Add(this.cboTipoPedido);
             this.panel1.Controls.Add(this.btnBuscarCliente);
@@ -72,6 +74,39 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 251);
             this.panel1.TabIndex = 48;
+            // 
+            // cboEstadoPedido
+            // 
+            this.cboEstadoPedido.FormattingEnabled = true;
+            this.cboEstadoPedido.Location = new System.Drawing.Point(195, 102);
+            this.cboEstadoPedido.Name = "cboEstadoPedido";
+            this.cboEstadoPedido.Size = new System.Drawing.Size(263, 24);
+            this.cboEstadoPedido.TabIndex = 87;
+            // 
+            // cboTipoPedido
+            // 
+            this.cboTipoPedido.FormattingEnabled = true;
+            this.cboTipoPedido.Location = new System.Drawing.Point(195, 55);
+            this.cboTipoPedido.Name = "cboTipoPedido";
+            this.cboTipoPedido.Size = new System.Drawing.Size(263, 24);
+            this.cboTipoPedido.TabIndex = 86;
+            // 
+            // btnBuscarCliente
+            // 
+            this.btnBuscarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnBuscarCliente.FlatAppearance.BorderSize = 0;
+            this.btnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarCliente.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(417, 12);
+            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Padding = new System.Windows.Forms.Padding(2, 0, 0, 1);
+            this.btnBuscarCliente.Size = new System.Drawing.Size(41, 22);
+            this.btnBuscarCliente.TabIndex = 85;
+            this.btnBuscarCliente.Text = "...";
+            this.btnBuscarCliente.UseVisualStyleBackColor = false;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // label3
             // 
@@ -110,7 +145,7 @@
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(179, 22);
             this.lblID.TabIndex = 57;
-            this.lblID.Text = "Rango Fechas :";
+            this.lblID.Text = "Fecha Inicial :";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnBuscar
@@ -119,7 +154,7 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(510, 12);
+            this.btnBuscar.Location = new System.Drawing.Point(499, 12);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(160, 40);
             this.btnBuscar.TabIndex = 55;
@@ -130,21 +165,21 @@
             // 
             this.dtpRangoFin.Location = new System.Drawing.Point(195, 194);
             this.dtpRangoFin.Name = "dtpRangoFin";
-            this.dtpRangoFin.Size = new System.Drawing.Size(280, 22);
+            this.dtpRangoFin.Size = new System.Drawing.Size(263, 22);
             this.dtpRangoFin.TabIndex = 53;
             // 
             // dtpRangoIni
             // 
             this.dtpRangoIni.Location = new System.Drawing.Point(195, 149);
             this.dtpRangoIni.Name = "dtpRangoIni";
-            this.dtpRangoIni.Size = new System.Drawing.Size(280, 22);
+            this.dtpRangoIni.Size = new System.Drawing.Size(263, 22);
             this.dtpRangoIni.TabIndex = 52;
             // 
             // txtCliente
             // 
             this.txtCliente.Location = new System.Drawing.Point(195, 12);
             this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(234, 22);
+            this.txtCliente.Size = new System.Drawing.Size(199, 22);
             this.txtCliente.TabIndex = 46;
             // 
             // dataGridView1
@@ -156,14 +191,14 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -180,20 +215,20 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(800, 199);
             this.dataGridView1.TabIndex = 49;
@@ -246,38 +281,15 @@
             this.ESTADO.ReadOnly = true;
             this.ESTADO.Width = 89;
             // 
-            // btnBuscarCliente
+            // label4
             // 
-            this.btnBuscarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnBuscarCliente.FlatAppearance.BorderSize = 0;
-            this.btnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarCliente.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnBuscarCliente.Location = new System.Drawing.Point(441, 11);
-            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Padding = new System.Windows.Forms.Padding(2, 0, 0, 1);
-            this.btnBuscarCliente.Size = new System.Drawing.Size(34, 22);
-            this.btnBuscarCliente.TabIndex = 85;
-            this.btnBuscarCliente.Text = "...";
-            this.btnBuscarCliente.UseVisualStyleBackColor = false;
-            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
-            // 
-            // cboTipoPedido
-            // 
-            this.cboTipoPedido.FormattingEnabled = true;
-            this.cboTipoPedido.Location = new System.Drawing.Point(195, 55);
-            this.cboTipoPedido.Name = "cboTipoPedido";
-            this.cboTipoPedido.Size = new System.Drawing.Size(280, 24);
-            this.cboTipoPedido.TabIndex = 86;
-            // 
-            // cboEstadoPedido
-            // 
-            this.cboEstadoPedido.FormattingEnabled = true;
-            this.cboEstadoPedido.Location = new System.Drawing.Point(195, 102);
-            this.cboEstadoPedido.Name = "cboEstadoPedido";
-            this.cboEstadoPedido.Size = new System.Drawing.Size(280, 24);
-            this.cboEstadoPedido.TabIndex = 87;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Location = new System.Drawing.Point(3, 196);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(179, 22);
+            this.label4.TabIndex = 88;
+            this.label4.Text = "Fecha Final :";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmBuscarPedido
             // 
@@ -316,5 +328,6 @@
         private System.Windows.Forms.Button btnBuscarCliente;
         private System.Windows.Forms.ComboBox cboEstadoPedido;
         private System.Windows.Forms.ComboBox cboTipoPedido;
+        private System.Windows.Forms.Label label4;
     }
 }

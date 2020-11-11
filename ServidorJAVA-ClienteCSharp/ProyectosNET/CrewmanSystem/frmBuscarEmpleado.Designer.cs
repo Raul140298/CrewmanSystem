@@ -32,6 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBuscarZona = new System.Windows.Forms.Button();
+            this.txtNombreZona = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,9 +49,6 @@
             this.ID_ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SUMA_VENTAS_MENSUAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBuscarZona = new System.Windows.Forms.Button();
-            this.txtNombreZona = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +70,41 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 190);
             this.panel1.TabIndex = 46;
+            // 
+            // btnBuscarZona
+            // 
+            this.btnBuscarZona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnBuscarZona.FlatAppearance.BorderSize = 0;
+            this.btnBuscarZona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarZona.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarZona.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnBuscarZona.Location = new System.Drawing.Point(440, 142);
+            this.btnBuscarZona.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarZona.Name = "btnBuscarZona";
+            this.btnBuscarZona.Padding = new System.Windows.Forms.Padding(2, 0, 0, 1);
+            this.btnBuscarZona.Size = new System.Drawing.Size(34, 22);
+            this.btnBuscarZona.TabIndex = 91;
+            this.btnBuscarZona.Text = "...";
+            this.btnBuscarZona.UseVisualStyleBackColor = false;
+            this.btnBuscarZona.Click += new System.EventHandler(this.btnBuscarZona_Click);
+            // 
+            // txtNombreZona
+            // 
+            this.txtNombreZona.Location = new System.Drawing.Point(194, 143);
+            this.txtNombreZona.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombreZona.Name = "txtNombreZona";
+            this.txtNombreZona.Size = new System.Drawing.Size(223, 22);
+            this.txtNombreZona.TabIndex = 89;
+            // 
+            // label3
+            // 
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Location = new System.Drawing.Point(111, 143);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 22);
+            this.label3.TabIndex = 90;
+            this.label3.Text = "Zona :";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnBuscar
             // 
@@ -233,41 +268,6 @@
             this.SUMA_VENTAS_MENSUAL.Name = "SUMA_VENTAS_MENSUAL";
             this.SUMA_VENTAS_MENSUAL.ReadOnly = true;
             this.SUMA_VENTAS_MENSUAL.Width = 137;
-            // 
-            // btnBuscarZona
-            // 
-            this.btnBuscarZona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnBuscarZona.FlatAppearance.BorderSize = 0;
-            this.btnBuscarZona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarZona.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarZona.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnBuscarZona.Location = new System.Drawing.Point(440, 142);
-            this.btnBuscarZona.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBuscarZona.Name = "btnBuscarZona";
-            this.btnBuscarZona.Padding = new System.Windows.Forms.Padding(2, 0, 0, 1);
-            this.btnBuscarZona.Size = new System.Drawing.Size(34, 22);
-            this.btnBuscarZona.TabIndex = 91;
-            this.btnBuscarZona.Text = "...";
-            this.btnBuscarZona.UseVisualStyleBackColor = false;
-            this.btnBuscarZona.Click += new System.EventHandler(this.btnBuscarZona_Click);
-            // 
-            // txtNombreZona
-            // 
-            this.txtNombreZona.Location = new System.Drawing.Point(194, 143);
-            this.txtNombreZona.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNombreZona.Name = "txtNombreZona";
-            this.txtNombreZona.Size = new System.Drawing.Size(223, 22);
-            this.txtNombreZona.TabIndex = 89;
-            // 
-            // label3
-            // 
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(111, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 22);
-            this.label3.TabIndex = 90;
-            this.label3.Text = "Zona :";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmBuscarEmpleado
             // 
