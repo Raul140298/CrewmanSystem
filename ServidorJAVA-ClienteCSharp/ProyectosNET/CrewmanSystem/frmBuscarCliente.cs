@@ -15,7 +15,19 @@ namespace CrewmanSystem
 		ClienteWS.ClienteWSClient daoCliente;
 		public frmBuscarCliente()
 		{
+			daoCliente = new ClienteWS.ClienteWSClient();
 			InitializeComponent();
+			dataGridView1.AutoGenerateColumns = false;
+			ClienteWS.cliente[] misClientes = daoCliente.listarClientes("", "");
+			if (misClientes != null)
+			{
+				dataGridView1.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
+			}
+			else
+			{
+				dataGridView1.DataSource = new BindingList<ClienteWS.cliente>();
+
+			}
 
 			#region colores de seleccion
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
@@ -50,6 +62,17 @@ namespace CrewmanSystem
 				dataGridView1.DataSource = new BindingList<ClienteWS.cliente>();
 
 			}
+		}
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+			//castear objetos y mostrar valor determinado
+			ClienteWS.cliente cliente = dataGridView1.Rows[e.RowIndex].DataBoundItem
+										as ClienteWS.cliente;
+
+			dataGridView1.Rows[e.RowIndex].Cells["ID_LINEA_CREDITO"].Value = cliente.lineaCredito.idLineaCredito;
+			dataGridView1.Rows[e.RowIndex].Cells["ID_PERSONA_CONTACTO"].Value = cliente.personaContacto.idPersonaContacto;
+			dataGridView1.Rows[e.RowIndex].Cells["ID_CARTERA"].Value = cliente.cartera.idCartera;
 		}
     }
 }

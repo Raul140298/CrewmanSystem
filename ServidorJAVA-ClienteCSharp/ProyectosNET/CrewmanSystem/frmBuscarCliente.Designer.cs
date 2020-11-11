@@ -39,12 +39,11 @@
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_LINEA_CREDITO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_PERSONA_CONTACTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_CARTERA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_REGISTRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_ULTIMA_COMPRA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -136,12 +135,11 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.NOMBRE,
+            this.RAZON_SOCIAL,
             this.ID_LINEA_CREDITO,
             this.ID_PERSONA_CONTACTO,
             this.ID_CARTERA,
             this.RUC,
-            this.RAZON_SOCIAL,
             this.FECHA_REGISTRO,
             this.FECHA_ULTIMA_COMPRA,
             this.GRUPO,
@@ -169,25 +167,27 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(800, 347);
             this.dataGridView1.TabIndex = 48;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ID
             // 
+            this.ID.DataPropertyName = "idCliente";
             this.ID.HeaderText = "Id";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             this.ID.Width = 50;
             // 
-            // NOMBRE
+            // RAZON_SOCIAL
             // 
-            this.NOMBRE.HeaderText = "Nombre";
-            this.NOMBRE.MinimumWidth = 6;
-            this.NOMBRE.Name = "NOMBRE";
-            this.NOMBRE.ReadOnly = true;
-            this.NOMBRE.Width = 96;
+            this.RAZON_SOCIAL.DataPropertyName = "razonSocial";
+            this.RAZON_SOCIAL.HeaderText = "Razón Social";
+            this.RAZON_SOCIAL.MinimumWidth = 6;
+            this.RAZON_SOCIAL.Name = "RAZON_SOCIAL";
+            this.RAZON_SOCIAL.ReadOnly = true;
+            this.RAZON_SOCIAL.Width = 136;
             // 
             // ID_LINEA_CREDITO
             // 
@@ -215,22 +215,16 @@
             // 
             // RUC
             // 
+            this.RUC.DataPropertyName = "ruc";
             this.RUC.HeaderText = "Ruc";
             this.RUC.MinimumWidth = 6;
             this.RUC.Name = "RUC";
             this.RUC.ReadOnly = true;
             this.RUC.Width = 67;
             // 
-            // RAZON_SOCIAL
-            // 
-            this.RAZON_SOCIAL.HeaderText = "Razón Social";
-            this.RAZON_SOCIAL.MinimumWidth = 6;
-            this.RAZON_SOCIAL.Name = "RAZON_SOCIAL";
-            this.RAZON_SOCIAL.ReadOnly = true;
-            this.RAZON_SOCIAL.Width = 136;
-            // 
             // FECHA_REGISTRO
             // 
+            this.FECHA_REGISTRO.DataPropertyName = "fechaRegistro";
             this.FECHA_REGISTRO.HeaderText = "Fecha Registro";
             this.FECHA_REGISTRO.MinimumWidth = 6;
             this.FECHA_REGISTRO.Name = "FECHA_REGISTRO";
@@ -239,6 +233,7 @@
             // 
             // FECHA_ULTIMA_COMPRA
             // 
+            this.FECHA_ULTIMA_COMPRA.DataPropertyName = "fechaUltimaCompra";
             this.FECHA_ULTIMA_COMPRA.HeaderText = "Fecha Última Compra";
             this.FECHA_ULTIMA_COMPRA.MinimumWidth = 6;
             this.FECHA_ULTIMA_COMPRA.Name = "FECHA_ULTIMA_COMPRA";
@@ -247,6 +242,7 @@
             // 
             // GRUPO
             // 
+            this.GRUPO.DataPropertyName = "grupo";
             this.GRUPO.HeaderText = "Grupo";
             this.GRUPO.MinimumWidth = 6;
             this.GRUPO.Name = "GRUPO";
@@ -255,6 +251,7 @@
             // 
             // TIPO
             // 
+            this.TIPO.DataPropertyName = "tipoEmpresa";
             this.TIPO.HeaderText = "Tipo Cliente";
             this.TIPO.MinimumWidth = 6;
             this.TIPO.Name = "TIPO";
@@ -263,6 +260,7 @@
             // 
             // DIRECCION
             // 
+            this.DIRECCION.DataPropertyName = "direccion";
             this.DIRECCION.HeaderText = "Dirección";
             this.DIRECCION.MinimumWidth = 6;
             this.DIRECCION.Name = "DIRECCION";
@@ -290,21 +288,20 @@
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.TextBox txtRazonSocial;
 		private System.Windows.Forms.TextBox txtGrupo;
-		private System.Windows.Forms.DataGridView dataGridView1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-		private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ID_LINEA_CREDITO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ID_PERSONA_CONTACTO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ID_CARTERA;
-		private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
-		private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
-		private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ULTIMA_COMPRA;
-		private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn TIPO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label lblID;
 		private System.Windows.Forms.Button btnBuscar;
-	}
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_LINEA_CREDITO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_PERSONA_CONTACTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_CARTERA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ULTIMA_COMPRA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
+    }
 }
