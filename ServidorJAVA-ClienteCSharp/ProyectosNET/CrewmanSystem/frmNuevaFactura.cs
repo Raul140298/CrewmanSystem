@@ -19,11 +19,17 @@ namespace CrewmanSystem
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            foreach (Control x in this.Controls)
+            foreach (Control c in this.Controls)
             {
-                if (x is TextBox)
+                if (c is TextBox)
                 {
-                    MessageBox.Show(x.Name);
+                    TextBox textBox = c as TextBox;
+                    if (textBox.Text == string.Empty && textBox.Name != "txtIdPedido" && textBox.Name != "txtMontoPendiente")
+                    {
+                        MessageBox.Show("Falta llenar los datos de " +
+                            textBox.Name.Substring(3));
+                        return;
+                    }
                 }
             }
         }

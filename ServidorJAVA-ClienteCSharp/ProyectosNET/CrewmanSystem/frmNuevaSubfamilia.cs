@@ -30,8 +30,34 @@ namespace CrewmanSystem
                             textBox.Name.Substring(3));
                         return;
                     }
+                    else
+                    {
+                        if (textBox == txtDescripcion)
+                        {
+                            if (!textBox.Text.All(Char.IsLetter))
+                            {
+                                MessageBox.Show("Los datos de " +
+                                    textBox.Name.Substring(3) + " no son correctos");
+                                return;
+                            }
+                        }
+                    }
                 }
+
+                if (c is ComboBox)
+				{
+                    ComboBox cmbBox = c as ComboBox;
+                    if(cmbBox.SelectedIndex == -1)
+					{
+                        MessageBox.Show("Falta llenar los datos de " +
+                            cmbBox.Name.Substring(3));
+                        return;
+                    }
+                }
+
             }
+
+            //Aqui va el insertar
         }
 	}
 }
