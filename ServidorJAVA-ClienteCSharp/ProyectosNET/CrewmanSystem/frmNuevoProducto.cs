@@ -12,19 +12,23 @@ namespace CrewmanSystem
 {
 	public partial class frmNuevoProducto : Form
 	{
-		public frmNuevoProducto()
+        FamiliaWS.FamiliaWSClient daoFamilia;
+        SubFamiliaWS.SubFamiliaWSClient daoSubfamilia;
+
+        public frmNuevoProducto()
 		{
 			InitializeComponent();
-		}
 
-        private void label4_Click(object sender, EventArgs e)
-        {
+            daoFamilia = new FamiliaWS.FamiliaWSClient();
+            daoSubfamilia = new SubFamiliaWS.SubFamiliaWSClient();
 
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
+            FamiliaWS.familia[] misFamilias = daoFamilia.listarFamilias();
+            if (misFamilias != null)
+            {
+                cboFamilia.DataSource = new BindingList<FamiliaWS.familia>(misFamilias.ToArray());
+                cboFamilia.ValueMember = "idFamilia";
+                cboFamilia.DisplayMember = "descripcion";
+            }
         }
 
 		private void btnGuardar_Click(object sender, EventArgs e)
@@ -40,10 +44,57 @@ namespace CrewmanSystem
                             textBox.Name.Substring(3));
                         return;
                     }
+                    else
+                    {
+                        if (textBox == txtNombre)
+                        {
+                            if (!textBox.Text.All(Char.IsLetter))
+                            {
+                                MessageBox.Show("Los datos de " +
+                                    textBox.Name.Substring(3) + " no son correctos");
+                                return;
+                            }
+                        }
+                        if (textBox == txtPrecioSugerido)
+                        {
+                            if (!textBox.Text.All(Char.IsDigit))
+                            {
+                                MessageBox.Show("Los datos de " +
+                                    textBox.Name.Substring(3) + " no son correctos");
+                                return;
+                            }
+                        }
+                    }
+                }
+                if (c is ComboBox)
+                {
+                    ComboBox cmbBox = c as ComboBox;
+                    if (cmbBox.SelectedIndex == -1)
+                    {
+                        MessageBox.Show("Falta llenar los datos de " +
+                            cmbBox.Name.Substring(3));
+                        return;
+                    }
                 }
             }
 
             //HACER LO QUE TIENE QUE HACER:
+        }
+
+		private void cboFamilia_SelectedIndexChanged(object sender, EventArgs e)
+		{
+            SubFamiliaWS.subFamilia[] misSubfamilias = daoSubfamilia.listarSubFamilias(((FamiliaWS.familia)cboFamilia.SelectedItem).descripcion);
+            if (misSubfamilias != null)
+            {
+                cboSubfamilia.DataSource = new BindingList<SubFamiliaWS.subFamilia>(misSubfamilias.ToArray());
+                cboSubfamilia.ValueMember = "idSubFamilia";
+                cboSubfamilia.DisplayMember = "descripcionSubFamilia";
+            }
+        }
+
+		private void cboSubfamilia_SelectedIndexChanged(object sender, EventArgs e)
+		{
+            
         }
 	}
 }

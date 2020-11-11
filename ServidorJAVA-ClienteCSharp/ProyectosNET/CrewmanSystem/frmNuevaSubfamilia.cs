@@ -12,12 +12,22 @@ namespace CrewmanSystem
 {
 	public partial class frmNuevaSubfamilia : Form
 	{
-		public frmNuevaSubfamilia()
-		{
-			InitializeComponent();
-		}
+        FamiliaWS.FamiliaWSClient daoFamilia;
+        public frmNuevaSubfamilia()
+        {
+            InitializeComponent();
 
-		private void btnGuardar_Click(object sender, EventArgs e)
+            daoFamilia = new FamiliaWS.FamiliaWSClient();
+            FamiliaWS.familia[] misFamilias = daoFamilia.listarFamilias();
+            if (misFamilias != null)
+            {
+                cboFamilia.DataSource = new BindingList<FamiliaWS.familia>(misFamilias.ToArray());
+                cboFamilia.ValueMember = "idFamilia";
+                cboFamilia.DisplayMember = "descripcion";
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
 		{
             foreach (Control c in panel2.Controls)
             {
