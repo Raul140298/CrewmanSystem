@@ -18,7 +18,7 @@ namespace CrewmanSystem
 			daoQueja = new QuejaWS.QuejaWSClient();
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
-			QuejaWS.queja[] misQuejas = daoQueja.listarQuejas(0).ToArray();
+			QuejaWS.queja[] misQuejas = daoQueja.listarQuejas(0);
 			if (misQuejas != null)
 			{
 				dataGridView1.DataSource = new BindingList<QuejaWS.queja>(misQuejas.ToArray());
