@@ -87,7 +87,6 @@
 			this.cboSubfamilia.Name = "cboSubfamilia";
 			this.cboSubfamilia.Size = new System.Drawing.Size(280, 24);
 			this.cboSubfamilia.TabIndex = 49;
-			this.cboSubfamilia.SelectedIndexChanged += new System.EventHandler(this.cboSubfamilia_SelectedIndexChanged);
 			// 
 			// cboFamilia
 			// 

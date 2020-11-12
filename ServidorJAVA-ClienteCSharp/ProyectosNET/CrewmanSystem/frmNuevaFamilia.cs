@@ -36,6 +36,7 @@ namespace CrewmanSystem
 					{
                         if(textBox == txtDescripcion)
 						{
+                            //String aux = textBox.Text;
                             if(!textBox.Text.All(Char.IsLetter))
 							{
                                 MessageBox.Show("Los datos de " +

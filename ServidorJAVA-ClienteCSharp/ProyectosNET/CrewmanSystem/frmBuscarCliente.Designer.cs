@@ -167,7 +167,6 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(800, 347);
             this.dataGridView1.TabIndex = 48;
             // 
