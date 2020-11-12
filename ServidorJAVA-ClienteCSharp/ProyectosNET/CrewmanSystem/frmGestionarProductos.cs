@@ -26,7 +26,6 @@ namespace CrewmanSystem
 			else
 			{
 				dataGridView1.DataSource = new BindingList<ProductoWS.producto>();
-
 			}
 
 			#region colores de seleccion
@@ -43,7 +42,7 @@ namespace CrewmanSystem
 
 		private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
 		{
-			//castear objetos y mostrar valor determinado
+			//Castear objetos y mostrar valor determinado
 			ProductoWS.producto producto = dataGridView1.Rows[e.RowIndex].DataBoundItem
 											as ProductoWS.producto;
 

@@ -113,10 +113,5 @@ namespace CrewmanSystem
                 cboSubfamilia.DisplayMember = "descripcionSubFamilia";
             }
         }
-
-		private void cboSubfamilia_SelectedIndexChanged(object sender, EventArgs e)
-		{
-            
-        }
 	}
 }
