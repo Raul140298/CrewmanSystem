@@ -31,9 +31,8 @@ namespace CrewmanSystem
 				foreach (PedidoWS.pedido p in misPedidos)
 				{
 					ClienteWS.cliente c = new ClienteWS.cliente();
-					c.idCliente = p.cliente.idCliente;
 
-					c = daoCliente.obtenerCliente();
+					c = daoCliente.obtenerCliente(p.cliente.idCliente);
 
 					p.cliente.razonSocial = c.razonSocial;
 				}
