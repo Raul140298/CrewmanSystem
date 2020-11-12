@@ -199,7 +199,7 @@ public class PedidoMySQL implements PedidoDAO{
     public void mostrar(Pedido pedido) {
         if(pedido.getCliente().getIdCliente()>0){
             ClienteDAO daoCliente = new ClienteMySQL();
-            daoCliente.obtenerCliente(pedido.getCliente());
+            pedido.setCliente(daoCliente.obtenerCliente(pedido.getCliente().getIdCliente()));
         }
         if(pedido.getEmpleado().getIdEmpleado()>0){
             EmpleadoDAO daoEmpleado = new EmpleadoMySQL();

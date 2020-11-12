@@ -246,16 +246,20 @@ public class ClienteMySQL implements ClienteDAO{
     }
     
     @Override
-    public int obtenerCliente(Cliente cliente){
-        int resultado = 0;
+    public Cliente obtenerCliente(int idCliente){
+        Cliente cliente = new Cliente();
+        int resultado=0;
         Integer entero;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             String sql ="{ call MOSTRAR_CLIENTE(?)}";
             cs = con.prepareCall(sql);
-            cs.setInt("_ID_CLIENTE", cliente.getIdCliente());
+            cs.setInt("_ID_CLIENTE", idCliente);
             resultado = cs.executeUpdate();
+            
+            if(resultado == 0) return null;
+            
             rs = cs.getResultSet();
             rs.next();
             
@@ -268,6 +272,7 @@ public class ClienteMySQL implements ClienteDAO{
             entero = rs.getInt("ID_CARTERA");
             if(entero!=null)cliente.getCartera().setIdCartera(entero.intValue());
             
+            cliente.setIdCliente(idCliente);
             cliente.setRuc(rs.getString("RUC"));
             cliente.setRazonSocial(rs.getString("RAZON_SOCIAL"));
             cliente.setFechaRegistro(rs.getDate("FECHA_REGISTRO"));
@@ -284,6 +289,6 @@ public class ClienteMySQL implements ClienteDAO{
                 System.out.println(ex.getMessage());
             }
         }
-        return resultado;
+        return cliente;
     }
 }

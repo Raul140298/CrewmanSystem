@@ -55,23 +55,30 @@ public class Main{
     
     
     public static void main(String[] args) {
-        gestionarFamilias();
-        gestionarSubFamilias();
-        gestionarMarcas();
-        gestionarZonas();
-        gestionarClientes();
-        gestionarEmpleados();
-        gestionarProductos();
-        gestionarProductoXZona();
-        gestionarPromociones();
-        gestionarPromocionXProducto();
-        gestionarPromocionXZona();
-        gestionarPedidos();
-        gestionarLineasDePedido();
-        gestionarFacturas();
-        gestionarNotasDeCredito();
-        gestionarGuiasDeRemision();
-        gestionarQuejas();
+//        gestionarFamilias();
+//        gestionarSubFamilias();
+//        gestionarMarcas();
+//        gestionarZonas();
+//       gestionarClientes();
+//        gestionarEmpleados();
+//        gestionarProductos();
+//        gestionarProductoXZona();
+//        gestionarPromociones();
+//        gestionarPromocionXProducto();
+//        gestionarPromocionXZona();
+//        gestionarPedidos();
+//        gestionarLineasDePedido();
+//        gestionarFacturas();
+//        gestionarNotasDeCredito();
+//        gestionarGuiasDeRemision();
+//        gestionarQuejas();
+
+           Cliente cliente = new Cliente();
+           cliente.setIdCliente(14);
+           
+           //daoCliente.obtenerCliente(cliente);
+           
+           //System.out.print(cliente.getRazonSocial());
                 
         System.out.println("EL MODELADO HA CONCLUIDO");
     }
@@ -480,7 +487,7 @@ public class Main{
         System.out.println("LISTADO DE PEDIDOS");
         System.out.println("==================================================================================");
         for(Pedido p:misPedidos){
-            daoCliente.obtenerCliente(p.getCliente());
+            daoCliente.obtenerCliente(p.getCliente().getIdCliente());
             System.out.println(p.getIdPedido()+" - "+p.getFechaRegistro()+" - "+p.getCliente().getRuc()+" - "+p.getMontoTotal()+" - "+p.getMontoPagar()+" - "+String.valueOf(p.getTipoPedido())+" - "+String.valueOf(p.getEstadoPedido()));
         }
         System.out.println("\n");
