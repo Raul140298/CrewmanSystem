@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CrewmanSystem.ZonaWS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace CrewmanSystem
 {
 	public partial class frmBuscarZona : Form
 	{
+		ZonaWS.ZonaWSClient daoZona = new ZonaWS.ZonaWSClient();
 		public frmBuscarZona()
 		{
 			InitializeComponent();
@@ -27,5 +29,20 @@ namespace CrewmanSystem
 			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
-	}
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+			//daoZona = new ZonaWS.ZonaWSClient();
+			////ZonaWS.zona[] misZonas = daoZona(txtNombre.Text);
+			//if (misZonas != null)
+			//{
+			//	dataGridView1.DataSource = new BindingList<ZonaWS.zona>(misZonas.ToArray());
+			//}
+			//else
+			//{
+			//	dataGridView1.DataSource = new BindingList<ZonaWS.zona>();
+
+			//}
+		}
+    }
 }
