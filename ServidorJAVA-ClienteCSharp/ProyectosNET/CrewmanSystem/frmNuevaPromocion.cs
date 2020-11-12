@@ -12,10 +12,14 @@ namespace CrewmanSystem
 {
 	public partial class frmNuevaPromocion : Form
 	{
-		public frmNuevaPromocion()
+        ZonaWS.ZonaWSClient daoZona = new ZonaWS.ZonaWSClient();
+        public frmNuevaPromocion()
 		{
 			InitializeComponent();
-		}
+            cboZona.DataSource = new BindingList<ZonaWS.zona>(daoZona.listarZonas().ToArray());
+            cboZona.ValueMember = "idZona";
+            cboZona.DisplayMember = "nombre";
+        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {

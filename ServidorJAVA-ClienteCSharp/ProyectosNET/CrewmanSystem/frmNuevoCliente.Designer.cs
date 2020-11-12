@@ -160,6 +160,7 @@
             // 
             // dtpFechaInicio
             // 
+            this.dtpFechaInicio.Enabled = false;
             this.dtpFechaInicio.Location = new System.Drawing.Point(241, 121);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(347, 22);
