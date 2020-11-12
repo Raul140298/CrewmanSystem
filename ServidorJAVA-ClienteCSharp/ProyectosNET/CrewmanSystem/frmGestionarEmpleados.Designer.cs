@@ -33,9 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_VENDEDOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.APELLIDO_PATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.APELLIDO_MATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SUMA_VENTAS_MENSUAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -62,16 +62,16 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.ID_VENDEDOR,
             this.NOMBRE,
-            this.ID_ZONA,
+            this.APELLIDO_PATERNO,
+            this.APELLIDO_MATERNO,
             this.ZONA,
             this.SUMA_VENTAS_MENSUAL});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -90,9 +90,8 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(600, 366);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 2;
-            
             // 
             // ID
             // 
@@ -101,16 +100,7 @@
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
-            this.ID.Width = 43;
-            // 
-            // ID_VENDEDOR
-            // 
-            this.ID_VENDEDOR.DataPropertyName = "jefe";
-            this.ID_VENDEDOR.HeaderText = "Id Vendedor";
-            this.ID_VENDEDOR.MinimumWidth = 6;
-            this.ID_VENDEDOR.Name = "ID_VENDEDOR";
-            this.ID_VENDEDOR.ReadOnly = true;
-            this.ID_VENDEDOR.Width = 109;
+            this.ID.Width = 50;
             // 
             // NOMBRE
             // 
@@ -119,25 +109,33 @@
             this.NOMBRE.MinimumWidth = 6;
             this.NOMBRE.Name = "NOMBRE";
             this.NOMBRE.ReadOnly = true;
-            this.NOMBRE.Width = 82;
+            this.NOMBRE.Width = 96;
             // 
-            // ID_ZONA
+            // APELLIDO_PATERNO
             // 
-            this.ID_ZONA.DataPropertyName = "idZona";
-            this.ID_ZONA.HeaderText = "Id Zona";
-            this.ID_ZONA.MinimumWidth = 6;
-            this.ID_ZONA.Name = "ID_ZONA";
-            this.ID_ZONA.ReadOnly = true;
-            this.ID_ZONA.Width = 80;
+            this.APELLIDO_PATERNO.DataPropertyName = "apellidoPaterno";
+            this.APELLIDO_PATERNO.HeaderText = "Apellido Paterno";
+            this.APELLIDO_PATERNO.MinimumWidth = 6;
+            this.APELLIDO_PATERNO.Name = "APELLIDO_PATERNO";
+            this.APELLIDO_PATERNO.ReadOnly = true;
+            this.APELLIDO_PATERNO.Width = 159;
+            // 
+            // APELLIDO_MATERNO
+            // 
+            this.APELLIDO_MATERNO.DataPropertyName = "apellidoMaterno";
+            this.APELLIDO_MATERNO.HeaderText = "Apellido Materno";
+            this.APELLIDO_MATERNO.MinimumWidth = 6;
+            this.APELLIDO_MATERNO.Name = "APELLIDO_MATERNO";
+            this.APELLIDO_MATERNO.ReadOnly = true;
+            this.APELLIDO_MATERNO.Width = 162;
             // 
             // ZONA
             // 
-            this.ZONA.DataPropertyName = "Zona";
             this.ZONA.HeaderText = "Zona";
             this.ZONA.MinimumWidth = 6;
             this.ZONA.Name = "ZONA";
             this.ZONA.ReadOnly = true;
-            this.ZONA.Width = 65;
+            this.ZONA.Width = 73;
             // 
             // SUMA_VENTAS_MENSUAL
             // 
@@ -146,15 +144,15 @@
             this.SUMA_VENTAS_MENSUAL.MinimumWidth = 6;
             this.SUMA_VENTAS_MENSUAL.Name = "SUMA_VENTAS_MENSUAL";
             this.SUMA_VENTAS_MENSUAL.ReadOnly = true;
-            this.SUMA_VENTAS_MENSUAL.Width = 116;
+            this.SUMA_VENTAS_MENSUAL.Width = 137;
             // 
             // frmGestionarEmpleados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmGestionarEmpleados";
             this.Text = "frmGestionarEmpleados";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -166,9 +164,9 @@
 
 		private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_VENDEDOR;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_ZONA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_PATERNO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_MATERNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
         private System.Windows.Forms.DataGridViewTextBoxColumn SUMA_VENTAS_MENSUAL;
     }

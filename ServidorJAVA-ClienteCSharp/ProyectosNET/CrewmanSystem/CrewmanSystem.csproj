@@ -1044,10 +1044,19 @@
     </None>
     <None Include="Connected Services\ZonaWS\configuration91.svcinfo" />
     <None Include="Connected Services\ZonaWS\configuration.svcinfo" />
+    <None Include="Connected Services\ZonaWS\CrewmanSystem.ZonaWS.actualizarZonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ZonaWS\CrewmanSystem.ZonaWS.eliminarZonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ZonaWS\CrewmanSystem.ZonaWS.insertarZonaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ZonaWS\CrewmanSystem.ZonaWS.listarZonasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ZonaWS\CrewmanSystem.ZonaWS.mostrarZonaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ZonaWS\CrewmanSystem.ZonaWS.zona.datasource">
