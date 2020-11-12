@@ -24,21 +24,18 @@ namespace CrewmanSystem
 
 			dataGridView1.AutoGenerateColumns = false;
 			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos();
-			ClienteWS.cliente[] misClientes = daoCliente.listarClientes("", "");
+			//ClienteWS.cliente[] misClientes = daoCliente.listarClientes("", "");
 
 			if (misPedidos != null)
-			{
-				foreach(PedidoWS.pedido p in misPedidos)
+			{		
+				foreach (PedidoWS.pedido p in misPedidos)
 				{
-					MessageBox.Show(p.cliente.idCliente.ToString());
-					
-					foreach(ClienteWS.cliente c in misClientes)
-					{
-						if(c.idCliente == p.cliente.idCliente)
-						{
-							p.cliente.razonSocial = c.razonSocial;
-						}
-					}
+					ClienteWS.cliente c = new ClienteWS.cliente();
+					c.idCliente = p.cliente.idCliente;
+
+					c = daoCliente.obtenerCliente();
+
+					p.cliente.razonSocial = c.razonSocial;
 				}
 				dataGridView1.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
 			}
@@ -67,7 +64,6 @@ namespace CrewmanSystem
 			as PedidoWS.pedido;
 
 			dataGridView1.Rows[e.RowIndex].Cells["CLIENTE"].Value = pedido.cliente.razonSocial;
-
 		}
 	}
 }

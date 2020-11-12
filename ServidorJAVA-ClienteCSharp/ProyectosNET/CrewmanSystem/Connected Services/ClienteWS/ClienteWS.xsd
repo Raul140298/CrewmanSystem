@@ -321,12 +321,12 @@
   </xs:complexType>
   <xs:complexType name="obtenerCliente">
     <xs:sequence>
-      <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
+      <xs:element name="idCliente" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="obtenerClienteResponse">
     <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element minOccurs="0" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarClientes">
