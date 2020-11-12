@@ -55,5 +55,14 @@ namespace CrewmanSystem
 			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
-    }
+
+		private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+		{
+			//castear objetos y mostrar valor determinado
+			EmpleadoWS.empleado empleado = dataGridView1.Rows[e.RowIndex].DataBoundItem
+			as EmpleadoWS.empleado;
+
+			dataGridView1.Rows[e.RowIndex].Cells["ZONA"].Value = empleado.zona.idZona;
+		}
+	}
 }
