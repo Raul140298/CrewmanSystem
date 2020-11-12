@@ -12,10 +12,9 @@ namespace CrewmanSystem
 {
 	public partial class frmBuscarCliente : Form
 	{
-		ClienteWS.ClienteWSClient daoCliente;
+		ClienteWS.ClienteWSClient daoCliente = new ClienteWS.ClienteWSClient();
 		public frmBuscarCliente()
 		{
-			daoCliente = new ClienteWS.ClienteWSClient();
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
 			ClienteWS.cliente[] misClientes = daoCliente.listarClientes("", "");
@@ -51,7 +50,6 @@ namespace CrewmanSystem
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-			daoCliente = new ClienteWS.ClienteWSClient();
 			ClienteWS.cliente[] misClientes = daoCliente.listarClientes(txtRazonSocial.Text, txtGrupo.Text);
 			if (misClientes != null)
 			{
