@@ -40,9 +40,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_LINEA_CREDITO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_PERSONA_CONTACTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_CARTERA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_REGISTRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_ULTIMA_COMPRA = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -136,9 +133,6 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.RAZON_SOCIAL,
-            this.ID_LINEA_CREDITO,
-            this.ID_PERSONA_CONTACTO,
-            this.ID_CARTERA,
             this.RUC,
             this.FECHA_REGISTRO,
             this.FECHA_ULTIMA_COMPRA,
@@ -187,30 +181,6 @@
             this.RAZON_SOCIAL.Name = "RAZON_SOCIAL";
             this.RAZON_SOCIAL.ReadOnly = true;
             this.RAZON_SOCIAL.Width = 136;
-            // 
-            // ID_LINEA_CREDITO
-            // 
-            this.ID_LINEA_CREDITO.HeaderText = "Id Línea Crédito";
-            this.ID_LINEA_CREDITO.MinimumWidth = 6;
-            this.ID_LINEA_CREDITO.Name = "ID_LINEA_CREDITO";
-            this.ID_LINEA_CREDITO.ReadOnly = true;
-            this.ID_LINEA_CREDITO.Width = 155;
-            // 
-            // ID_PERSONA_CONTACTO
-            // 
-            this.ID_PERSONA_CONTACTO.HeaderText = "Id Persona Contacto";
-            this.ID_PERSONA_CONTACTO.MinimumWidth = 6;
-            this.ID_PERSONA_CONTACTO.Name = "ID_PERSONA_CONTACTO";
-            this.ID_PERSONA_CONTACTO.ReadOnly = true;
-            this.ID_PERSONA_CONTACTO.Width = 189;
-            // 
-            // ID_CARTERA
-            // 
-            this.ID_CARTERA.HeaderText = "Id Cartera";
-            this.ID_CARTERA.MinimumWidth = 6;
-            this.ID_CARTERA.Name = "ID_CARTERA";
-            this.ID_CARTERA.ReadOnly = true;
-            this.ID_CARTERA.Width = 111;
             // 
             // RUC
             // 
@@ -293,9 +263,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_LINEA_CREDITO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_PERSONA_CONTACTO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_CARTERA;
         private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ULTIMA_COMPRA;

@@ -46,10 +46,6 @@ namespace CrewmanSystem
 			//castear objetos y mostrar valor determinado
 			ClienteWS.cliente cliente = dataGridView1.Rows[e.RowIndex].DataBoundItem
 										as ClienteWS.cliente;
-
-			dataGridView1.Rows[e.RowIndex].Cells["ID_LINEA_CREDITO"].Value = cliente.lineaCredito.idLineaCredito;
-			dataGridView1.Rows[e.RowIndex].Cells["ID_PERSONA_CONTACTO"].Value = cliente.personaContacto.idPersonaContacto;
-			dataGridView1.Rows[e.RowIndex].Cells["ID_CARTERA"].Value = cliente.cartera.idCartera;
 		}
 	}
 }
