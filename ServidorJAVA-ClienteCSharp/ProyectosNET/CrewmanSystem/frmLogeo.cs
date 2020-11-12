@@ -31,6 +31,7 @@ namespace CrewmanSystem
             txtContraseña.Text = "";
             txtContraseña.UseSystemPasswordChar = true;
             lblMensajeError.Visible = false;
+
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)

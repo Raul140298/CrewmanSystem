@@ -15,7 +15,8 @@ namespace CrewmanSystem
         ProductoWS.ProductoWSClient daoProducto;
         FamiliaWS.FamiliaWSClient daoFamilia;
         SubFamiliaWS.SubFamiliaWSClient daoSubfamilia;
-
+        MarcaWS.MarcaWSClient daoMarca;
+        string[] unidades = {"gr","ml"};
         public frmNuevoProducto()
 		{
 			InitializeComponent();
@@ -23,8 +24,12 @@ namespace CrewmanSystem
             daoFamilia = new FamiliaWS.FamiliaWSClient();
             daoSubfamilia = new SubFamiliaWS.SubFamiliaWSClient();
             daoProducto = new ProductoWS.ProductoWSClient();
-
+            daoMarca = new MarcaWS.MarcaWSClient();
+            cboMarca.DataSource = new BindingList<MarcaWS.marca>(daoMarca.listarMarcas().ToArray());
+            cboMarca.ValueMember = "idMarca";
+            cboMarca.DisplayMember = "nombre";
             FamiliaWS.familia[] misFamilias = daoFamilia.listarFamilias();
+            cboUnidades.DataSource = unidades;
             if (misFamilias != null)
             {
                 cboFamilia.DataSource = new BindingList<FamiliaWS.familia>(misFamilias.ToArray());
@@ -88,7 +93,10 @@ namespace CrewmanSystem
                 producto.precioSugerido = float.Parse(txtPrecioSugerido.Text);
                 producto.subFamilia = new ProductoWS.subFamilia();
                 producto.subFamilia.idSubFamilia = ((SubFamiliaWS.subFamilia)cboSubfamilia.SelectedItem).idSubFamilia;
-
+                producto.marca = new ProductoWS.marca();
+                producto.marca.idMarca = ((MarcaWS.marca)cboMarca.SelectedItem).idMarca;
+                producto.unidades = cboUnidades.SelectedItem.ToString();
+                producto.cantUnidad = Convert.ToDouble(txtCantidad.Text);
                 int resultado = daoProducto.insertarProducto(producto);
                 txtId.Text = resultado.ToString();
                 //Usar resultado para ver si se inserto correctamente
