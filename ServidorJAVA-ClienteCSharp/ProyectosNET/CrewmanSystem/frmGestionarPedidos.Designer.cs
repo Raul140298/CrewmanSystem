@@ -91,6 +91,7 @@
 			this.dataGridView1.RowTemplate.Height = 24;
 			this.dataGridView1.Size = new System.Drawing.Size(800, 450);
 			this.dataGridView1.TabIndex = 2;
+			this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
 			// 
 			// ID
 			// 
@@ -103,7 +104,6 @@
 			// 
 			// CLIENTE
 			// 
-			this.CLIENTE.DataPropertyName = "cliente";
 			this.CLIENTE.HeaderText = "Cliente";
 			this.CLIENTE.MinimumWidth = 6;
 			this.CLIENTE.Name = "CLIENTE";
