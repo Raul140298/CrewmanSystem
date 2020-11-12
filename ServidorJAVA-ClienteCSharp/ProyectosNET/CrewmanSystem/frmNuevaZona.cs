@@ -33,6 +33,19 @@ namespace CrewmanSystem
 							textBox.Name.Substring(3));
 						return;
 					}
+					else
+					{
+						if (textBox == txtNombre)
+						{
+							String txtNombreAux = string.Join("", textBox.Text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
+							if (!txtNombreAux.All(Char.IsLetter))
+							{
+								MessageBox.Show("Los datos de " +
+									textBox.Name.Substring(3) + " solo pueden contener letras");
+								return;
+							}
+						}
+					}
 				}
 			}
 
@@ -45,7 +58,6 @@ namespace CrewmanSystem
 				txtId.Text = resultado.ToString();
 				//Usar resultado para ver si se inserto correctamente
 			}
-				
         }
     }
 }
