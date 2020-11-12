@@ -41,30 +41,22 @@ namespace CrewmanSystem
                     }
                     else
                     {
-                        if (textBox == txtNombre)
+                        if (textBox == txtDNI | textBox == txtTelefono1 | textBox == txtTelefono2)
                         {
-                            if (!textBox.Text.All(Char.IsLetter))
+                            if (!textBox.Text.All(Char.IsDigit))
+                            {
+                                MessageBox.Show("Los datos de " +
+                                textBox.Name.Substring(3) + " solo pueden contener dígitos");
+                                return;
+                            }
+                        }
+                        if (textBox == txtNombre | textBox == txtApPaterno | textBox == txtApMaterno)
+                        {
+                            String txtNombreAux = string.Join("", textBox.Text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
+                            if (!txtNombreAux.Trim().All(Char.IsLetter))
                             {
                                 MessageBox.Show("Los datos de " +
                                     textBox.Name.Substring(3) + " solo pueden contener letras");
-                                return;
-                            }
-                        }
-                        if (textBox == txtTelefono1)
-                        {
-                            if (!textBox.Text.All(Char.IsDigit))
-                            {
-                                MessageBox.Show("Los datos de " +
-                                    textBox.Name.Substring(3) + " solo pueden contener dígitos");
-                                return;
-                            }
-                        }
-                        if (textBox == txtTelefono2)
-                        {
-                            if (!textBox.Text.All(Char.IsDigit))
-                            {
-                                MessageBox.Show("Los datos de " +
-                                    textBox.Name.Substring(3) + " solo pueden contener dígitos");
                                 return;
                             }
                         }

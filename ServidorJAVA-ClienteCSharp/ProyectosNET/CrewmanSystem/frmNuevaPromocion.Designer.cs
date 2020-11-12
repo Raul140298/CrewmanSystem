@@ -43,6 +43,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cboZona = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -66,7 +67,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.cboZona = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -181,7 +181,7 @@
             this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(179, 48);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(47, 22);
+            this.txtId.Size = new System.Drawing.Size(85, 22);
             this.txtId.TabIndex = 63;
             // 
             // groupBox2
@@ -194,6 +194,14 @@
             this.groupBox2.TabIndex = 76;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Zonas";
+            // 
+            // cboZona
+            // 
+            this.cboZona.FormattingEnabled = true;
+            this.cboZona.Location = new System.Drawing.Point(160, 46);
+            this.cboZona.Name = "cboZona";
+            this.cboZona.Size = new System.Drawing.Size(239, 24);
+            this.cboZona.TabIndex = 86;
             // 
             // label2
             // 
@@ -212,7 +220,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(687, 429);
+            this.panel1.Size = new System.Drawing.Size(708, 429);
             this.panel1.TabIndex = 75;
             // 
             // btnGuardar
@@ -235,7 +243,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 794);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(687, 65);
+            this.panel2.Size = new System.Drawing.Size(708, 65);
             this.panel2.TabIndex = 76;
             // 
             // groupBox3
@@ -257,7 +265,6 @@
             this.groupBox3.TabIndex = 93;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Productos";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // btnBuscarProducto
             // 
@@ -351,7 +358,6 @@
             this.label7.TabIndex = 75;
             this.label7.Text = "Descuento :";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -369,7 +375,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 429);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(687, 228);
+            this.panel6.Size = new System.Drawing.Size(708, 228);
             this.panel6.TabIndex = 79;
             // 
             // panel7
@@ -380,7 +386,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 657);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(687, 137);
+            this.panel7.Size = new System.Drawing.Size(708, 137);
             this.panel7.TabIndex = 80;
             // 
             // dataGridView2
@@ -429,7 +435,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(647, 137);
+            this.dataGridView2.Size = new System.Drawing.Size(668, 137);
             this.dataGridView2.TabIndex = 110;
             // 
             // dataGridViewTextBoxColumn1
@@ -467,7 +473,7 @@
             // panel8
             // 
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(667, 0);
+            this.panel8.Location = new System.Drawing.Point(688, 0);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(20, 137);
             this.panel8.TabIndex = 109;
@@ -480,20 +486,12 @@
             this.panel9.Size = new System.Drawing.Size(20, 137);
             this.panel9.TabIndex = 108;
             // 
-            // cboZona
-            // 
-            this.cboZona.FormattingEnabled = true;
-            this.cboZona.Location = new System.Drawing.Point(160, 46);
-            this.cboZona.Name = "cboZona";
-            this.cboZona.Size = new System.Drawing.Size(239, 24);
-            this.cboZona.TabIndex = 86;
-            // 
             // frmNuevaPromocion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(708, 561);
+            this.ClientSize = new System.Drawing.Size(729, 561);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);

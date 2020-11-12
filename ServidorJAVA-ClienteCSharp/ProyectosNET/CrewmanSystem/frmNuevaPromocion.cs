@@ -21,16 +21,6 @@ namespace CrewmanSystem
             cboZona.DisplayMember = "nombre";
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBuscarProductoXZona_Click(object sender, EventArgs e)
         {
             frmBuscarZona formBusquedaZona = new frmBuscarZona();
@@ -38,16 +28,6 @@ namespace CrewmanSystem
             {
 
             }
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnBuscarProductoXZona_Click_1(object sender, EventArgs e)
@@ -86,13 +66,13 @@ namespace CrewmanSystem
 
             foreach (Control c in groupBox2.Controls)
             {
-                if (c is TextBox)
+                if (c is ComboBox)
                 {
-                    TextBox textBox = c as TextBox;
-                    if (textBox.Text == string.Empty && textBox.Name != "txtId")
+                    ComboBox cmbBox = c as ComboBox;
+                    if (cmbBox.SelectedIndex == -1)
                     {
                         MessageBox.Show("Falta llenar los datos de " +
-                            textBox.Name.Substring(3) + " de " + groupBox2.Text);
+                            cmbBox.Name.Substring(3));
                         return;
                     }
                 }

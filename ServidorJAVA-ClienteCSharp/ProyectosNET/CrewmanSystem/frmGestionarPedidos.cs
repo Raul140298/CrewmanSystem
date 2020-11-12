@@ -13,13 +13,23 @@ namespace CrewmanSystem
 	public partial class frmGestionarPedidos : Form
 	{
 		PedidoWS.PedidoWSClient daoPedido;
-		
+		ClienteWS.ClienteWSClient daoCliente;
+
 		public frmGestionarPedidos()
 		{
 			daoPedido = new PedidoWS.PedidoWSClient();
+			daoCliente = new ClienteWS.ClienteWSClient();
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
 			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos();
+			//foreach(PedidoWS.pedido pedido in misPedidos)
+   //         {
+			//	ClienteWS.cliente cliente = new ClienteWS.cliente();
+			//	cliente.idCliente = pedido.cliente.idCliente;
+			//	int resultado = daoCliente.obtenerCliente(cliente);
+			//	if (resultado != 0) pedido.cliente.razonSocial = cliente.razonSocial;
+   //         }
+
 			if (misPedidos != null)
 			{
 				dataGridView1.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());

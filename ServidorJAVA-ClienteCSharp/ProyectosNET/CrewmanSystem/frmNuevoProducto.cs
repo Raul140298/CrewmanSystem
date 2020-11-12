@@ -66,7 +66,7 @@ namespace CrewmanSystem
                         if (textBox == txtPrecioSugerido)
                         {
                             try{
-                                double precio = Double.Parse(textBox.Text);
+                                double precio = Convert.ToDouble(textBox.Text);
                             }
                             catch (Exception)
                             {
@@ -74,12 +74,15 @@ namespace CrewmanSystem
                                     textBox.Name.Substring(3) + " solo pueden contener dígitos");
                                 return;
                             }
-                            //if (!textBox.Text.All(Char.IsDigit))
-                            //{
-                            //    MessageBox.Show("Los datos de " +
-                            //        textBox.Name.Substring(3) + " solo pueden contener dígitos");
-                            //    return;
-                            //}
+                        }
+                        if(textBox == txtStock)
+                        {
+                            if (!textBox.Text.All(Char.IsDigit))
+                            {
+                                MessageBox.Show("Los datos de " +
+                                    textBox.Name.Substring(3) + " solo pueden contener dígitos");
+                                return;
+                            }
                         }
                     }
                 }
@@ -107,6 +110,7 @@ namespace CrewmanSystem
                 producto.marca.idMarca = ((MarcaWS.marca)cboMarca.SelectedItem).idMarca;
                 producto.unidades = cboUnidades.SelectedItem.ToString();
                 producto.cantUnidad = Convert.ToDouble(txtCantidad.Text);
+                producto.stock = Convert.ToInt32(txtStock.Text);
                 int resultado = daoProducto.insertarProducto(producto);
                 txtId.Text = resultado.ToString();
                 //Usar resultado para ver si se inserto correctamente

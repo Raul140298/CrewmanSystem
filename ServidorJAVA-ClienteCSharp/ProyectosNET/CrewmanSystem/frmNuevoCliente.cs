@@ -35,6 +35,38 @@ namespace CrewmanSystem
                             textBox.Name.Substring(3));
                         return;
                     }
+                    else
+                    {
+                        if (textBox == txtRuc)
+                        {
+                            if (!textBox.Text.All(Char.IsDigit))
+                            {
+                                MessageBox.Show("Los datos de " +
+                                textBox.Name.Substring(3) + " solo pueden contener dígitos");
+                                return;
+                            }
+                        }
+                        if (textBox == txtGrupo)
+                        {
+                            String txtNombreAux = string.Join("", textBox.Text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
+                            if (!txtNombreAux.Trim().All(Char.IsLetter))
+                            {
+                                MessageBox.Show("Los datos de " +
+                                    textBox.Name.Substring(3) + " solo pueden contener letras");
+                                return;
+                            }
+                        }
+                    }
+                }
+                if (c is ComboBox)
+                {
+                    ComboBox cmbBox = c as ComboBox;
+                    if (cmbBox.SelectedIndex == -1)
+                    {
+                        MessageBox.Show("Falta llenar los datos de " +
+                            cmbBox.Name.Substring(3));
+                        return;
+                    }
                 }
             }
 
@@ -48,6 +80,28 @@ namespace CrewmanSystem
                         MessageBox.Show("Falta llenar los datos de " +
                             textBox.Name.Substring(3));
                         return;
+                    }
+                    else
+                    {
+                        if (textBox == txtDNI | textBox == txtTelefono1 | textBox == txtTelefono2)
+                        {
+                            if (!textBox.Text.All(Char.IsDigit))
+                            {
+                                MessageBox.Show("Los datos de " +
+                                textBox.Name.Substring(3) + " solo pueden contener dígitos");
+                                return;
+                            }
+                        }
+                        if (textBox == txtNombre | textBox == txtApPaterno | textBox == txtApMaterno)
+                        {
+                            String txtNombreAux = string.Join("", textBox.Text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
+                            if (!txtNombreAux.Trim().All(Char.IsLetter))
+                            {
+                                MessageBox.Show("Los datos de " +
+                                    textBox.Name.Substring(3) + " solo pueden contener letras");
+                                return;
+                            }
+                        }
                     }
                 }
             }
