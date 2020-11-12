@@ -340,6 +340,7 @@ public class Main{
         misProductos=daoProducto.listar(nombre,familia,subFamilia,marca);
         System.out.println("LISTADO DE PRODUCTOS");
         System.out.println("==================================================================================");
+        System.out.println("Nombre: "+nombre);
         System.out.println("Familia: "+familia);
         System.out.println("Subfamilia: "+subFamilia);
         System.out.println("Marca: "+marca);
@@ -357,13 +358,14 @@ public class Main{
         ProductoXZona pxz1=new ProductoXZona(misProductos.get(2), misZonas.get(2), 9.30);
         daoProductoXZona.insertar(pxz1);
         
-        String zona="";
-        String producto="";
-        misProductosXZonas=daoProductoXZona.listar(producto,zona);
+        int idZona=1;
+            String nombre="";
+        String familia="";
+        String subFamilia="";
+        String marca="";
+        misProductosXZonas=daoProductoXZona.listar(nombre,familia,subFamilia,marca,idZona);
         System.out.println("LISTADO DE PRODUCTOS POR ZONA");
         System.out.println("==================================================================================");
-        System.out.println("Producto: "+producto);
-        System.out.println("Zona: "+zona);
         System.out.println("==================================================================================");
         for(ProductoXZona pxz:misProductosXZonas) 
             System.out.println(pxz.getIdProductoXZona()+" - "+pxz.getProducto().getIdProducto()+" - "+pxz.getProducto().getNombre()+" - "+

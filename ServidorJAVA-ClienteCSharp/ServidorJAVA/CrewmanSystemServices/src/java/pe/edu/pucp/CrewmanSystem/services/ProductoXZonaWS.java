@@ -35,12 +35,13 @@ public class ProductoXZonaWS
         }
         return resultado;
     }
-    
+    //String nombre,String familiaStr,String subFamiliaStr,String marcaStr,int idZona
     @WebMethod(operationName = "listarProductosXZonas")
-    public ArrayList<ProductoXZona> listarProductoXZonas(@WebParam(name = "productoStr") String productoStr, @WebParam(name = "zonaStr") String zonaStr) {
+    public ArrayList<ProductoXZona> listarProductoXZonas(@WebParam(name = "nombre") String nombre, @WebParam(name = "familiaStr") String familiaStr, 
+            @WebParam(name = "subFamiliaStr") String subFamiliaStr, @WebParam(name = "marcaStr") String marcaStr, @WebParam(name = "idZona") int idZona) {
         ArrayList<ProductoXZona> misProductoXZonas = new ArrayList<>();
         try{
-            misProductoXZonas = daoProductoXZona.listar(productoStr, zonaStr);
+            misProductoXZonas = daoProductoXZona.listar(nombre, familiaStr,subFamiliaStr,marcaStr,idZona);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
