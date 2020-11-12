@@ -554,6 +554,11 @@ namespace CrewmanSystem
 		{
 			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarPromociones(),true, true, true, true, true);
 		}
+
+		private void btnMarca_Click(object sender, EventArgs e)
+		{
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarMarcas(), true, true, true, false, false);
+		}
 		#endregion
 
 		#region GESTIONZONAS
@@ -788,8 +793,8 @@ namespace CrewmanSystem
 		}
 
 
-		#endregion
 
-		
-	}
+        #endregion
+
+    }
 }
