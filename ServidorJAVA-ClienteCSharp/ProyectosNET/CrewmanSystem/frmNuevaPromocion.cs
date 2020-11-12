@@ -21,27 +21,10 @@ namespace CrewmanSystem
             cboZona.DisplayMember = "nombre";
         }
 
-        private void btnBuscarProductoXZona_Click(object sender, EventArgs e)
-        {
-            frmBuscarZona formBusquedaZona = new frmBuscarZona();
-            if(formBusquedaZona.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-        }
-
-        private void btnBuscarProductoXZona_Click_1(object sender, EventArgs e)
-        {
-            frmBuscarZona formBusquedaZona = new frmBuscarZona();
-            if(formBusquedaZona.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-        }
-
         private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
-            frmBuscarProductoPorZona formBusquedaProductoPorZona = new frmBuscarProductoPorZona();
+            int idZona = ((ZonaWS.zona)cboZona.SelectedItem).idZona;
+            frmBuscarProductoPorZona formBusquedaProductoPorZona = new frmBuscarProductoPorZona(idZona);
             if(formBusquedaProductoPorZona.ShowDialog() == DialogResult.OK)
             {
 
@@ -89,8 +72,36 @@ namespace CrewmanSystem
                             textBox.Name.Substring(3) + " de " + groupBox3.Text);
                         return;
                     }
+                    else
+                    {
+                        if (textBox == txtDescuento)
+                        {
+                            try
+                            {
+                                double resultado = Convert.ToDouble(txtDescuento.Text);
+                            }
+                            catch (Exception)
+                            {
+                                return;
+                            }
+                        }
+                        if (textBox == txtStock)
+                        {
+                            try
+                            {
+                                int resultado = Convert.ToInt32(txtDescuento.Text);
+                            }
+                            catch (Exception)
+                            {
+                                return;
+                            }
+                        }
+
+                    }
                 }
             }
+            
+
         }
 	}
 }

@@ -39,10 +39,5 @@ namespace CrewmanSystem
 			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
-
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-			MessageBox.Show(sender.ToString());
-		}
-	}
+    }
 }

@@ -42,15 +42,18 @@ public class ProductoXZonaMySQL implements ProductoXZonaDAO{
     }
     
     @Override
-    public ArrayList<ProductoXZona> listar(String productoStr,String zonaStr){
+    public ArrayList<ProductoXZona> listar(String nombre,String familiaStr,String subFamiliaStr,String marcaStr,int idZona){
         ArrayList<ProductoXZona> productoszonas = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             String sql ="{ call LISTAR_PRODUCTOXZONA (?,?) }";
             cs = con.prepareCall(sql);
-            cs.setString("_P_NOMBRE", productoStr);
-            cs.setString("_Z_NOMBRE", zonaStr);
+            cs.setString("_P_NOMBRE", nombre);
+            cs.setString("_F_NOMBRE", familiaStr);
+            cs.setString("_S_NOMBRE", subFamiliaStr);
+            cs.setString("_M_NOMBRE", marcaStr);
+            cs.setInt("_ID_ZONA", idZona);
             cs.executeUpdate();
             rs = cs.getResultSet();
             while(rs.next()){
