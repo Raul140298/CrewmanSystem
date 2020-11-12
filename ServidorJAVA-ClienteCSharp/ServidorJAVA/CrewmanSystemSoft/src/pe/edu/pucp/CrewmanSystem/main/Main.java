@@ -149,8 +149,13 @@ public class Main{
 //        cliente1.setPersonaContacto(perCont1);
 //        daoCliente.insertar(cliente1);
         
-        misClientes=daoCliente.listar();
+        String razonSocial = "";
+        String grupo = "";
+        misClientes=daoCliente.listar(razonSocial,grupo);
         System.out.println("LISTADO DE CLIENTES");
+        System.out.println("==================================================================================");
+        System.out.println("Razon social: "+razonSocial);
+        System.out.println("Grupo: "+grupo);
         System.out.println("==================================================================================");
         for(Cliente c:misClientes) System.out.println(c.getIdCliente()+" - "+c.getRuc()+" - "+c.getRazonSocial()+
                 " - "+c.getGrupo()+" - "+c.getTipoEmpresa()+" - "+c.getDireccion()+" - "+sdf.format(c.getFechaRegistro()));
