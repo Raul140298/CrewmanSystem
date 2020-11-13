@@ -26,6 +26,16 @@ namespace CrewmanSystem.PromocionWS {
         System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.listarPromocionsResponse> listarPromocionsAsync(CrewmanSystem.PromocionWS.listarPromocionsRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/eliminarPromocionRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/eliminarPromocionResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.PromocionWS.eliminarPromocionResponse eliminarPromocion(CrewmanSystem.PromocionWS.eliminarPromocionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/eliminarPromocionRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/eliminarPromocionResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.eliminarPromocionResponse> eliminarPromocionAsync(CrewmanSystem.PromocionWS.eliminarPromocionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/insertarPromocionRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/insertarPromocionResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -46,16 +56,6 @@ namespace CrewmanSystem.PromocionWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/actualizarPromocionRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/actualizarPromocionResponse" +
             "")]
         System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.actualizarPromocionResponse> actualizarPromocionAsync(CrewmanSystem.PromocionWS.actualizarPromocionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/eliminarPromocionRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/eliminarPromocionResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.PromocionWS.eliminarPromocionResponse eliminarPromocion(CrewmanSystem.PromocionWS.eliminarPromocionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/eliminarPromocionRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/eliminarPromocionResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.eliminarPromocionResponse> eliminarPromocionAsync(CrewmanSystem.PromocionWS.eliminarPromocionRequest request);
     }
     
     /// <remarks/>
@@ -230,6 +230,8 @@ namespace CrewmanSystem.PromocionWS {
         
         private int idPromocionXProductoField;
         
+        private double precioRealField;
+        
         private producto productoField;
         
         private promocion promocionField;
@@ -276,6 +278,18 @@ namespace CrewmanSystem.PromocionWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public double precioReal {
+            get {
+                return this.precioRealField;
+            }
+            set {
+                this.precioRealField = value;
+                this.RaisePropertyChanged("precioReal");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public producto producto {
             get {
                 return this.productoField;
@@ -287,7 +301,7 @@ namespace CrewmanSystem.PromocionWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public promocion promocion {
             get {
                 return this.promocionField;
@@ -299,7 +313,7 @@ namespace CrewmanSystem.PromocionWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int stock {
             get {
                 return this.stockField;
@@ -311,7 +325,7 @@ namespace CrewmanSystem.PromocionWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public int stockReservado {
             get {
                 return this.stockReservadoField;
@@ -3415,6 +3429,42 @@ namespace CrewmanSystem.PromocionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPromocion", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarPromocionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idPromocion;
+        
+        public eliminarPromocionRequest() {
+        }
+        
+        public eliminarPromocionRequest(int idPromocion) {
+            this.idPromocion = idPromocion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPromocionResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarPromocionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarPromocionResponse() {
+        }
+        
+        public eliminarPromocionResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPromocion", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertarPromocionRequest {
         
@@ -3484,42 +3534,6 @@ namespace CrewmanSystem.PromocionWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPromocion", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarPromocionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPromocion;
-        
-        public eliminarPromocionRequest() {
-        }
-        
-        public eliminarPromocionRequest(int idPromocion) {
-            this.idPromocion = idPromocion;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPromocionResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarPromocionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarPromocionResponse() {
-        }
-        
-        public eliminarPromocionResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface PromocionWSChannel : CrewmanSystem.PromocionWS.PromocionWS, System.ServiceModel.IClientChannel {
     }
@@ -3575,6 +3589,29 @@ namespace CrewmanSystem.PromocionWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.PromocionWS.eliminarPromocionResponse CrewmanSystem.PromocionWS.PromocionWS.eliminarPromocion(CrewmanSystem.PromocionWS.eliminarPromocionRequest request) {
+            return base.Channel.eliminarPromocion(request);
+        }
+        
+        public int eliminarPromocion(int idPromocion) {
+            CrewmanSystem.PromocionWS.eliminarPromocionRequest inValue = new CrewmanSystem.PromocionWS.eliminarPromocionRequest();
+            inValue.idPromocion = idPromocion;
+            CrewmanSystem.PromocionWS.eliminarPromocionResponse retVal = ((CrewmanSystem.PromocionWS.PromocionWS)(this)).eliminarPromocion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.eliminarPromocionResponse> CrewmanSystem.PromocionWS.PromocionWS.eliminarPromocionAsync(CrewmanSystem.PromocionWS.eliminarPromocionRequest request) {
+            return base.Channel.eliminarPromocionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.eliminarPromocionResponse> eliminarPromocionAsync(int idPromocion) {
+            CrewmanSystem.PromocionWS.eliminarPromocionRequest inValue = new CrewmanSystem.PromocionWS.eliminarPromocionRequest();
+            inValue.idPromocion = idPromocion;
+            return ((CrewmanSystem.PromocionWS.PromocionWS)(this)).eliminarPromocionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CrewmanSystem.PromocionWS.insertarPromocionResponse CrewmanSystem.PromocionWS.PromocionWS.insertarPromocion(CrewmanSystem.PromocionWS.insertarPromocionRequest request) {
             return base.Channel.insertarPromocion(request);
         }
@@ -3618,29 +3655,6 @@ namespace CrewmanSystem.PromocionWS {
             CrewmanSystem.PromocionWS.actualizarPromocionRequest inValue = new CrewmanSystem.PromocionWS.actualizarPromocionRequest();
             inValue.promocion = promocion;
             return ((CrewmanSystem.PromocionWS.PromocionWS)(this)).actualizarPromocionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.PromocionWS.eliminarPromocionResponse CrewmanSystem.PromocionWS.PromocionWS.eliminarPromocion(CrewmanSystem.PromocionWS.eliminarPromocionRequest request) {
-            return base.Channel.eliminarPromocion(request);
-        }
-        
-        public int eliminarPromocion(int idPromocion) {
-            CrewmanSystem.PromocionWS.eliminarPromocionRequest inValue = new CrewmanSystem.PromocionWS.eliminarPromocionRequest();
-            inValue.idPromocion = idPromocion;
-            CrewmanSystem.PromocionWS.eliminarPromocionResponse retVal = ((CrewmanSystem.PromocionWS.PromocionWS)(this)).eliminarPromocion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.eliminarPromocionResponse> CrewmanSystem.PromocionWS.PromocionWS.eliminarPromocionAsync(CrewmanSystem.PromocionWS.eliminarPromocionRequest request) {
-            return base.Channel.eliminarPromocionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.eliminarPromocionResponse> eliminarPromocionAsync(int idPromocion) {
-            CrewmanSystem.PromocionWS.eliminarPromocionRequest inValue = new CrewmanSystem.PromocionWS.eliminarPromocionRequest();
-            inValue.idPromocion = idPromocion;
-            return ((CrewmanSystem.PromocionWS.PromocionWS)(this)).eliminarPromocionAsync(inValue);
         }
     }
 }

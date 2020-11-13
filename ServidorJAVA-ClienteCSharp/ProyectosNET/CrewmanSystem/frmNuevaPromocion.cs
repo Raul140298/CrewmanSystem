@@ -15,7 +15,6 @@ namespace CrewmanSystem
         private ZonaWS.ZonaWSClient daoZona;
         private PromocionWS.PromocionWSClient daoPromocion;
         private PromocionXProductoWS.PromocionXProductoWSClient daoPromocionXProducto;
-        private PromocionXZonaWS.PromocionXZonaWSClient daoPromocionXZona;
         private ProductoXZonaWS.productoXZona miProductoXZona;
         private BindingList<PromocionXProductoWS.promocionXProducto> misPromocionXProducto;
 
@@ -24,7 +23,6 @@ namespace CrewmanSystem
 			InitializeComponent();
             daoPromocion = new PromocionWS.PromocionWSClient();
             daoPromocionXProducto = new PromocionXProductoWS.PromocionXProductoWSClient();
-            daoPromocionXZona = new PromocionXZonaWS.PromocionXZonaWSClient();
             daoZona = new ZonaWS.ZonaWSClient();
             cboZona.DataSource = new BindingList<ZonaWS.zona>(daoZona.listarZonas().ToArray());
             cboZona.ValueMember = "idZona";
@@ -41,6 +39,9 @@ namespace CrewmanSystem
             {
                 miProductoXZona = formBusquedaProductoPorZona.ProductoXZonaSeleccionado;
                 txtNombreProducto.Text = miProductoXZona.producto.nombre;
+                txtPrecioReal.Text = miProductoXZona.precioReal.ToString();
+                txtCantUnidades.Text = miProductoXZona.producto.cantUnidad.ToString();
+                txtUnidades.Text = miProductoXZona.producto.unidades.ToString();
                 txtPrecioReal.Text = miProductoXZona.precioReal.ToString();
             }
         }
@@ -143,6 +144,8 @@ namespace CrewmanSystem
                     promocion.listaPromocionXProducto[cont].producto = new PromocionWS.producto();
                     promocion.listaPromocionXProducto[cont].producto.idProducto =
                         ((PromocionXProductoWS.promocionXProducto)misPromocionXProducto.ElementAt(cont)).producto.idProducto;
+                    promocion.listaPromocionXProducto[cont].precioReal=
+                        ((PromocionXProductoWS.promocionXProducto)misPromocionXProducto.ElementAt(cont)).precioReal;
                     promocion.listaPromocionXProducto[cont].descuento =
                         ((PromocionXProductoWS.promocionXProducto)misPromocionXProducto.ElementAt(cont)).descuento;
                     promocion.listaPromocionXProducto[cont].stock =
@@ -181,6 +184,7 @@ namespace CrewmanSystem
             nuevoPromocionXProducto.producto = new PromocionXProductoWS.producto();
             nuevoPromocionXProducto.producto.idProducto = miProductoXZona.producto.idProducto;
             nuevoPromocionXProducto.producto.nombre = miProductoXZona.producto.nombre;
+            nuevoPromocionXProducto.precioReal = miProductoXZona.precioReal;
             nuevoPromocionXProducto.descuento = Convert.ToInt32(txtDescuento.Text);
             nuevoPromocionXProducto.stock = Convert.ToInt32(txtStock.Text);
 
@@ -188,6 +192,9 @@ namespace CrewmanSystem
             cargarTablaPromocionXProducto();
             txtDescuento.Text = "";
             txtStock.Text = "";
+            txtPrecioReal.Text = "";
+            txtUnidades.Text = "";
+            txtCantUnidades.Text = "";
         }
 
         private void btnRemoveProducto_Click(object sender, EventArgs e)

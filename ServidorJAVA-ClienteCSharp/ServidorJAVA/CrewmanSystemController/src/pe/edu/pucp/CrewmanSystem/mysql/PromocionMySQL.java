@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import pe.edu.pucp.CrewmanSystem.dao.PromocionXProductoDAO;
 import pe.edu.pucp.CrewmanSystem.model.PromocionXProducto;
+import pe.edu.pucp.CrewmanSystem.model.Zona;
 
 public class PromocionMySQL implements PromocionDAO{
     Connection con;
@@ -83,8 +84,7 @@ public class PromocionMySQL implements PromocionDAO{
             String sql ="{ call ELIMINAR_PROMOCION (?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_PROMOCION", idPromocion);
-            cs.executeUpdate();
-            resultado = 1;
+            resultado = cs.executeUpdate();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -112,9 +112,11 @@ public class PromocionMySQL implements PromocionDAO{
             rs = cs.getResultSet();
             while(rs.next()){
                 Promocion promocion=new Promocion();
+                Zona zona = new Zona();
                 promocion.setIdPromocion(rs.getInt("ID_PROMOCION"));
                 promocion.setNombre(rs.getString("NOMBRE"));
-                promocion.setDescripcion(rs.getString("DESCRIPCION"));
+                zona.setNombre(rs.getString("ZONA"));
+                promocion.setZona(zona);
                 promocion.setFechaInicio(rs.getDate("FECHA_INICIO"));
                 promocion.setFechaFin(rs.getDate("FECHA_FIN"));
                 promocions.add(promocion);

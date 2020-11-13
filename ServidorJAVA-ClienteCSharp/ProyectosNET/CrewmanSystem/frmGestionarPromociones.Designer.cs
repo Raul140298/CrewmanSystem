@@ -36,7 +36,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_INICIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_FIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlGestion.SuspendLayout();
@@ -49,9 +49,9 @@
             this.pnlGestion.Controls.Add(this.pnlGridView);
             this.pnlGestion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGestion.Location = new System.Drawing.Point(0, 0);
-            this.pnlGestion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlGestion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlGestion.Name = "pnlGestion";
-            this.pnlGestion.Size = new System.Drawing.Size(511, 411);
+            this.pnlGestion.Size = new System.Drawing.Size(681, 506);
             this.pnlGestion.TabIndex = 1;
             // 
             // pnlGridView
@@ -59,9 +59,9 @@
             this.pnlGridView.Controls.Add(this.dataGridView1);
             this.pnlGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGridView.Location = new System.Drawing.Point(0, 0);
-            this.pnlGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlGridView.Name = "pnlGridView";
-            this.pnlGridView.Size = new System.Drawing.Size(511, 411);
+            this.pnlGridView.Size = new System.Drawing.Size(681, 506);
             this.pnlGridView.TabIndex = 11;
             // 
             // dataGridView1
@@ -86,14 +86,14 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.NOMBRE,
-            this.DESCRIPCION,
+            this.ZONA,
             this.FECHA_INICIO,
             this.FECHA_FIN});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -112,8 +112,9 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(511, 411);
+            this.dataGridView1.Size = new System.Drawing.Size(681, 506);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
             // ID
             // 
@@ -122,7 +123,7 @@
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
-            this.ID.Width = 43;
+            this.ID.Width = 50;
             // 
             // NOMBRE
             // 
@@ -131,16 +132,15 @@
             this.NOMBRE.MinimumWidth = 6;
             this.NOMBRE.Name = "NOMBRE";
             this.NOMBRE.ReadOnly = true;
-            this.NOMBRE.Width = 82;
+            this.NOMBRE.Width = 96;
             // 
-            // DESCRIPCION
+            // ZONA
             // 
-            this.DESCRIPCION.DataPropertyName = "descripcion";
-            this.DESCRIPCION.HeaderText = "Descripción";
-            this.DESCRIPCION.MinimumWidth = 6;
-            this.DESCRIPCION.Name = "DESCRIPCION";
-            this.DESCRIPCION.ReadOnly = true;
-            this.DESCRIPCION.Width = 106;
+            this.ZONA.HeaderText = "Zona";
+            this.ZONA.MinimumWidth = 6;
+            this.ZONA.Name = "ZONA";
+            this.ZONA.ReadOnly = true;
+            this.ZONA.Width = 73;
             // 
             // FECHA_INICIO
             // 
@@ -149,7 +149,7 @@
             this.FECHA_INICIO.MinimumWidth = 6;
             this.FECHA_INICIO.Name = "FECHA_INICIO";
             this.FECHA_INICIO.ReadOnly = true;
-            this.FECHA_INICIO.Width = 107;
+            this.FECHA_INICIO.Width = 127;
             // 
             // FECHA_FIN
             // 
@@ -158,15 +158,15 @@
             this.FECHA_FIN.MinimumWidth = 6;
             this.FECHA_FIN.Name = "FECHA_FIN";
             this.FECHA_FIN.ReadOnly = true;
-            this.FECHA_FIN.Width = 94;
+            this.FECHA_FIN.Width = 111;
             // 
             // frmGestionarPromociones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 411);
+            this.ClientSize = new System.Drawing.Size(681, 506);
             this.Controls.Add(this.pnlGestion);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmGestionarPromociones";
             this.Text = "frmGestionarPromociones";
             this.pnlGestion.ResumeLayout(false);
@@ -183,7 +183,7 @@
 		private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPCION;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_INICIO;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_FIN;
     }

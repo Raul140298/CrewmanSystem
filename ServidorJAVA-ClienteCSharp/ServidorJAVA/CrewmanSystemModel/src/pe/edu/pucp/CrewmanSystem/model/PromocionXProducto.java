@@ -5,6 +5,7 @@ public class PromocionXProducto {
     private int idPromocionXProducto;
     private Promocion promocion;
     private Producto producto;
+    private double precioReal;
     private int descuento;
     private int stock;
     private int stockReservado;
@@ -41,6 +42,14 @@ public class PromocionXProducto {
 
     public void setPromocion(Promocion promocion) {
         this.promocion = promocion;
+    }
+
+    public double getPrecioReal() {
+        return precioReal;
+    }
+
+    public void setPrecioReal(double precioReal) {
+        this.precioReal = precioReal;
     }
 
     public Producto getProducto() {

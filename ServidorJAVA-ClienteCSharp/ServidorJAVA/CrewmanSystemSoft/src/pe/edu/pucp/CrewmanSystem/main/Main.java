@@ -61,7 +61,7 @@ public class Main{
 //        gestionarEmpleados();
 //        gestionarProductos();
 //        gestionarProductoXZona();
-//        gestionarPromociones();
+        gestionarPromociones();
 //        gestionarPromocionXProducto();
 //        gestionarPedidos();
 //        gestionarLineasDePedido();
@@ -407,7 +407,7 @@ public class Main{
         Date fechaFin=null;
         try{
             fechaIni=sdf.parse("10-09-2020");
-            fechaFin=sdf.parse("26-12-2020");
+            fechaFin=sdf.parse("26-12-2021");
         } catch(Exception e){
             System.out.println("Error en Gestionar Promociones");
         }

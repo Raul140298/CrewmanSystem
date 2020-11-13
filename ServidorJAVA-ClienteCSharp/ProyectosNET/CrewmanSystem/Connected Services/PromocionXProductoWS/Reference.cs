@@ -58,6 +58,8 @@ namespace CrewmanSystem.PromocionXProductoWS {
         
         private int idPromocionXProductoField;
         
+        private double precioRealField;
+        
         private producto productoField;
         
         private promocion promocionField;
@@ -104,6 +106,18 @@ namespace CrewmanSystem.PromocionXProductoWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public double precioReal {
+            get {
+                return this.precioRealField;
+            }
+            set {
+                this.precioRealField = value;
+                this.RaisePropertyChanged("precioReal");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public producto producto {
             get {
                 return this.productoField;
@@ -115,7 +129,7 @@ namespace CrewmanSystem.PromocionXProductoWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public promocion promocion {
             get {
                 return this.promocionField;
@@ -127,7 +141,7 @@ namespace CrewmanSystem.PromocionXProductoWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public int stock {
             get {
                 return this.stockField;
@@ -139,7 +153,7 @@ namespace CrewmanSystem.PromocionXProductoWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public int stockReservado {
             get {
                 return this.stockReservadoField;

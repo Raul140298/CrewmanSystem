@@ -146,11 +146,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\PromocionXZonaWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Connected Services\QuejaWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -303,12 +298,6 @@
     </Compile>
     <Compile Include="frmGestionarPromociones.Designer.cs">
       <DependentUpon>frmGestionarPromociones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmGestionarPromocionesXZona.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGestionarPromocionesXZona.Designer.cs">
-      <DependentUpon>frmGestionarPromocionesXZona.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGestionarQuejas.cs">
       <SubType>Form</SubType>
@@ -554,9 +543,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionarPromociones.resx">
       <DependentUpon>frmGestionarPromociones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmGestionarPromocionesXZona.resx">
-      <DependentUpon>frmGestionarPromocionesXZona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionarQuejas.resx">
       <DependentUpon>frmGestionarQuejas.cs</DependentUpon>
@@ -978,19 +964,6 @@
     <None Include="Connected Services\PromocionXProductoWS\PromocionXProductoWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\PromocionXZonaWS\CrewmanSystem.PromocionXZonaWS.insertarPromocionXZonaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PromocionXZonaWS\CrewmanSystem.PromocionXZonaWS.listarPromocionXZonaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PromocionXZonaWS\CrewmanSystem.PromocionXZonaWS.promocionXZona.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PromocionXZonaWS\PromocionXZonaWS.wsdl" />
-    <None Include="Connected Services\PromocionXZonaWS\PromocionXZonaWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\QuejaWS\CrewmanSystem.QuejaWS.actualizarQuejaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1153,12 +1126,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\PromocionXZonaWS\configuration91.svcinfo" />
-    <None Include="Connected Services\PromocionXZonaWS\configuration.svcinfo" />
-    <None Include="Connected Services\PromocionXZonaWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <None Include="Connected Services\QuejaWS\configuration91.svcinfo" />
     <None Include="Connected Services\QuejaWS\configuration.svcinfo" />
     <None Include="Connected Services\QuejaWS\Reference.svcmap">
@@ -1230,7 +1197,6 @@
     <WCFMetadataStorage Include="Connected Services\ProductoXZonaWS\" />
     <WCFMetadataStorage Include="Connected Services\PromocionWS\" />
     <WCFMetadataStorage Include="Connected Services\PromocionXProductoWS\" />
-    <WCFMetadataStorage Include="Connected Services\PromocionXZonaWS\" />
     <WCFMetadataStorage Include="Connected Services\QuejaWS\" />
     <WCFMetadataStorage Include="Connected Services\SubFamiliaWS\" />
     <WCFMetadataStorage Include="Connected Services\VisitaWS\" />

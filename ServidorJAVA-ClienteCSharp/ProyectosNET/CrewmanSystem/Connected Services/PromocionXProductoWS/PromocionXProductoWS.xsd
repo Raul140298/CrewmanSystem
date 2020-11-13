@@ -19,6 +19,7 @@
       <xs:element name="activo" type="xs:boolean" />
       <xs:element name="descuento" type="xs:int" />
       <xs:element name="idPromocionXProducto" type="xs:int" />
+      <xs:element name="precioReal" type="xs:double" />
       <xs:element minOccurs="0" name="producto" type="tns:producto" />
       <xs:element minOccurs="0" name="promocion" type="tns:promocion" />
       <xs:element name="stock" type="xs:int" />
