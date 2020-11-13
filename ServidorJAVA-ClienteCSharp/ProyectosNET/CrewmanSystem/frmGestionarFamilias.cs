@@ -48,8 +48,8 @@ namespace CrewmanSystem
 			//Preguntar al profe
 			if (e.StateChanged != DataGridViewElementStates.Selected)
 			{
-				frmVentanaPrincipal.act.Enabled = false;
-				frmVentanaPrincipal.elim.Enabled = false;
+				//frmVentanaPrincipal.act.Enabled = false;
+				//frmVentanaPrincipal.elim.Enabled = false;
 				return;
 			}
 			else
@@ -64,6 +64,12 @@ namespace CrewmanSystem
 		{
 			familiaSeleccionada = (FamiliaWS.familia)dgv.CurrentRow.DataBoundItem;
 			daoFamilia.eliminarFamilia(familiaSeleccionada.idFamilia);
+		}
+
+		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			frmVentanaPrincipal.act.Enabled = false;
+			frmVentanaPrincipal.elim.Enabled = false;
 		}
 	}
 }
