@@ -38,7 +38,7 @@ namespace CrewmanSystem
 
         private void cargarTabla()
         {
-            misProductoXZona = daoProductoXZona.listarProductosXZonas(txtNombre.Text, txtFamilia.Text, txtSubfamilia.Text, txtMarca.Text, 125);
+            misProductoXZona = daoProductoXZona.listarProductosXZonas(txtNombre.Text, txtFamilia.Text, txtSubfamilia.Text, txtMarca.Text, idZona);
             if (misProductoXZona != null)
             {
                 dgvProductos.DataSource = new BindingList<ProductoXZonaWS.productoXZona>(misProductoXZona.ToArray());

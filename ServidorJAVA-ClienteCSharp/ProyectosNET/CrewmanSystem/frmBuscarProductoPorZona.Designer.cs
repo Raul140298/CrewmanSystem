@@ -32,6 +32,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SUBFAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRECIO_REAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRECIO_SUGERIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CANT_UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.STOCK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,16 +53,6 @@
             this.txtFamilia = new System.Windows.Forms.TextBox();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SUBFAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRECIO_REAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRECIO_SUGERIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CANT_UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.STOCK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -90,7 +90,7 @@
             this.dgvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProductos.EnableHeadersVisualStyles = false;
             this.dgvProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.dgvProductos.Location = new System.Drawing.Point(0, 196);
+            this.dgvProductos.Location = new System.Drawing.Point(0, 128);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -109,123 +109,9 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductos.RowTemplate.Height = 24;
-            this.dgvProductos.Size = new System.Drawing.Size(800, 254);
+            this.dgvProductos.Size = new System.Drawing.Size(998, 322);
             this.dgvProductos.TabIndex = 48;
             this.dgvProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProductos_CellFormatting);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnSeleccionar);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.lblID);
-            this.panel1.Controls.Add(this.btnBuscar);
-            this.panel1.Controls.Add(this.txtSubfamilia);
-            this.panel1.Controls.Add(this.txtFamilia);
-            this.panel1.Controls.Add(this.txtMarca);
-            this.panel1.Controls.Add(this.txtNombre);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 196);
-            this.panel1.TabIndex = 47;
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnSeleccionar.FlatAppearance.BorderSize = 0;
-            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.Location = new System.Drawing.Point(487, 84);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(160, 40);
-            this.btnSeleccionar.TabIndex = 63;
-            this.btnSeleccionar.Text = "SELECCIONAR";
-            this.btnSeleccionar.UseVisualStyleBackColor = false;
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
-            // 
-            // label5
-            // 
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Location = new System.Drawing.Point(11, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 22);
-            this.label5.TabIndex = 62;
-            this.label5.Text = "Nombre :";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label4
-            // 
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Location = new System.Drawing.Point(11, 55);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 22);
-            this.label4.TabIndex = 61;
-            this.label4.Text = "Marca :";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label3
-            // 
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(11, 102);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 22);
-            this.label3.TabIndex = 60;
-            this.label3.Text = "Familia :";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblID
-            // 
-            this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Location = new System.Drawing.Point(11, 147);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(140, 22);
-            this.lblID.TabIndex = 59;
-            this.lblID.Text = "Subfamilia :";
-            this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(487, 12);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(160, 40);
-            this.btnBuscar.TabIndex = 54;
-            this.btnBuscar.Text = "BUSCAR";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // txtSubfamilia
-            // 
-            this.txtSubfamilia.Location = new System.Drawing.Point(157, 147);
-            this.txtSubfamilia.Name = "txtSubfamilia";
-            this.txtSubfamilia.Size = new System.Drawing.Size(280, 22);
-            this.txtSubfamilia.TabIndex = 53;
-            // 
-            // txtFamilia
-            // 
-            this.txtFamilia.Location = new System.Drawing.Point(157, 102);
-            this.txtFamilia.Name = "txtFamilia";
-            this.txtFamilia.Size = new System.Drawing.Size(280, 22);
-            this.txtFamilia.TabIndex = 51;
-            // 
-            // txtMarca
-            // 
-            this.txtMarca.Location = new System.Drawing.Point(157, 55);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(280, 22);
-            this.txtMarca.TabIndex = 49;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(157, 12);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(280, 22);
-            this.txtNombre.TabIndex = 46;
             // 
             // ID
             // 
@@ -309,11 +195,125 @@
             this.STOCK.ReadOnly = true;
             this.STOCK.Width = 79;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnSeleccionar);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblID);
+            this.panel1.Controls.Add(this.btnBuscar);
+            this.panel1.Controls.Add(this.txtSubfamilia);
+            this.panel1.Controls.Add(this.txtFamilia);
+            this.panel1.Controls.Add(this.txtMarca);
+            this.panel1.Controls.Add(this.txtNombre);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(998, 128);
+            this.panel1.TabIndex = 47;
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnSeleccionar.FlatAppearance.BorderSize = 0;
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
+            this.btnSeleccionar.Location = new System.Drawing.Point(686, 73);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(140, 30);
+            this.btnSeleccionar.TabIndex = 63;
+            this.btnSeleccionar.Text = "SELECCIONAR";
+            this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
+            // label5
+            // 
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Location = new System.Drawing.Point(13, 34);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(140, 22);
+            this.label5.TabIndex = 62;
+            this.label5.Text = "Nombre :";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label4
+            // 
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Location = new System.Drawing.Point(358, 34);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 22);
+            this.label4.TabIndex = 61;
+            this.label4.Text = "Marca :";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label3
+            // 
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Location = new System.Drawing.Point(13, 77);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(140, 22);
+            this.label3.TabIndex = 60;
+            this.label3.Text = "Familia :";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblID
+            // 
+            this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblID.Location = new System.Drawing.Point(361, 77);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(97, 22);
+            this.lblID.TabIndex = 59;
+            this.lblID.Text = "Subfamilia :";
+            this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(686, 30);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(140, 30);
+            this.btnBuscar.TabIndex = 54;
+            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtSubfamilia
+            // 
+            this.txtSubfamilia.Location = new System.Drawing.Point(464, 77);
+            this.txtSubfamilia.Name = "txtSubfamilia";
+            this.txtSubfamilia.Size = new System.Drawing.Size(176, 22);
+            this.txtSubfamilia.TabIndex = 53;
+            // 
+            // txtFamilia
+            // 
+            this.txtFamilia.Location = new System.Drawing.Point(159, 77);
+            this.txtFamilia.Name = "txtFamilia";
+            this.txtFamilia.Size = new System.Drawing.Size(176, 22);
+            this.txtFamilia.TabIndex = 51;
+            // 
+            // txtMarca
+            // 
+            this.txtMarca.Location = new System.Drawing.Point(464, 34);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(176, 22);
+            this.txtMarca.TabIndex = 49;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(159, 34);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(176, 22);
+            this.txtNombre.TabIndex = 46;
+            // 
             // frmBuscarProductoPorZona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(998, 450);
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.panel1);
             this.Name = "frmBuscarProductoPorZona";

@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/PromocionWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="actualizarPromocion">
-    <part name="parameters" element="tns:actualizarPromocion" />
+  <message name="listarPromocions">
+    <part name="parameters" element="tns:listarPromocions" />
   </message>
-  <message name="actualizarPromocionResponse">
-    <part name="parameters" element="tns:actualizarPromocionResponse" />
+  <message name="listarPromocionsResponse">
+    <part name="parameters" element="tns:listarPromocionsResponse" />
   </message>
   <message name="insertarPromocion">
     <part name="parameters" element="tns:insertarPromocion" />
@@ -17,39 +17,39 @@
   <message name="insertarPromocionResponse">
     <part name="parameters" element="tns:insertarPromocionResponse" />
   </message>
+  <message name="actualizarPromocion">
+    <part name="parameters" element="tns:actualizarPromocion" />
+  </message>
+  <message name="actualizarPromocionResponse">
+    <part name="parameters" element="tns:actualizarPromocionResponse" />
+  </message>
   <message name="eliminarPromocion">
     <part name="parameters" element="tns:eliminarPromocion" />
   </message>
   <message name="eliminarPromocionResponse">
     <part name="parameters" element="tns:eliminarPromocionResponse" />
   </message>
-  <message name="listarPromocions">
-    <part name="parameters" element="tns:listarPromocions" />
-  </message>
-  <message name="listarPromocionsResponse">
-    <part name="parameters" element="tns:listarPromocionsResponse" />
-  </message>
   <portType name="PromocionWS">
-    <operation name="actualizarPromocion">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/actualizarPromocionRequest" message="tns:actualizarPromocion" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/actualizarPromocionResponse" message="tns:actualizarPromocionResponse" />
+    <operation name="listarPromocions">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/listarPromocionsRequest" message="tns:listarPromocions" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/listarPromocionsResponse" message="tns:listarPromocionsResponse" />
     </operation>
     <operation name="insertarPromocion">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/insertarPromocionRequest" message="tns:insertarPromocion" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/insertarPromocionResponse" message="tns:insertarPromocionResponse" />
     </operation>
+    <operation name="actualizarPromocion">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/actualizarPromocionRequest" message="tns:actualizarPromocion" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/actualizarPromocionResponse" message="tns:actualizarPromocionResponse" />
+    </operation>
     <operation name="eliminarPromocion">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/eliminarPromocionRequest" message="tns:eliminarPromocion" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/eliminarPromocionResponse" message="tns:eliminarPromocionResponse" />
     </operation>
-    <operation name="listarPromocions">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/listarPromocionsRequest" message="tns:listarPromocions" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/listarPromocionsResponse" message="tns:listarPromocionsResponse" />
-    </operation>
   </portType>
   <binding name="PromocionWSPortBinding" type="tns:PromocionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="actualizarPromocion">
+    <operation name="listarPromocions">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -67,7 +67,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarPromocion">
+    <operation name="actualizarPromocion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +76,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarPromocions">
+    <operation name="eliminarPromocion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

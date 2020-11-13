@@ -9,6 +9,10 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Date;
+import pe.edu.pucp.CrewmanSystem.dao.PromocionXProductoDAO;
+import pe.edu.pucp.CrewmanSystem.dao.PromocionXZonaDAO;
+import pe.edu.pucp.CrewmanSystem.model.PromocionXProducto;
+import pe.edu.pucp.CrewmanSystem.model.PromocionXZona;
 
 public class PromocionMySQL implements PromocionDAO{
     Connection con;
@@ -33,6 +37,18 @@ public class PromocionMySQL implements PromocionDAO{
             cs.executeUpdate();
             resultado = cs.getInt("_ID_PROMOCION");
             promocion.setIdPromocion(resultado);
+            
+            PromocionXZonaDAO daoPromocionXZona = new PromocionXZonaMySQL();
+            PromocionXZona pxz = new PromocionXZona();
+            pxz.getPromocion().setIdPromocion(resultado);
+            pxz.getZona().setIdZona(promocion.getZona().getIdZona());
+            daoPromocionXZona.insertar(pxz);
+            
+            PromocionXProductoDAO daoPromocionXProducto = new PromocionXProductoMySQL();
+            for(PromocionXProducto pxp : promocion.getListaPromocionXProducto()){
+                pxp.getPromocion().setIdPromocion(resultado);
+                daoPromocionXProducto.insertar(pxp);
+           }
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{

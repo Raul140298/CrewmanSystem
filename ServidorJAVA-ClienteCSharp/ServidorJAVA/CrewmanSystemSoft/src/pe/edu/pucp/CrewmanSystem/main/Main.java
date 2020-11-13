@@ -73,13 +73,23 @@ public class Main{
 //        gestionarGuiasDeRemision();
 //        gestionarQuejas();
 
-           Cliente cliente = new Cliente();
-           cliente.setIdCliente(14);
-           
-           //daoCliente.obtenerCliente(cliente);
-           
-           //System.out.print(cliente.getRazonSocial());
-                
+//        misZonas = daoZona.listar();
+//        Promocion promo = new Promocion();
+//        promo.setNombre("Promocion por fin de semana");
+//        promo.setDescripcion("Aprovecha por este fin de temporada");
+//        try{
+//            promo.setFechaInicio(sdf.parse("12-11-2020"));
+//            promo.setFechaFin(sdf.parse("23-12-2020"));
+//        }catch(Exception e){
+//            System.out.println("MAL");
+//        }
+//        promo.setZona(misZonas.get(2));
+//        misPromocionXProducto = new ArrayList<>();
+//        PromocionXProducto pxp = new PromocionXProducto();
+//        pxp.set
+//        
+//        misPromocionXProducto.add(e);
+//        promo.setListaPromocionXProducto(misPromocionXProducto);
         System.out.println("EL MODELADO HA CONCLUIDO");
     }
     

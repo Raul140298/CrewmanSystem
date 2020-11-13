@@ -14,6 +14,8 @@ namespace CrewmanSystem
 	{
         private ZonaWS.ZonaWSClient daoZona;
         private PromocionWS.PromocionWSClient daoPromocion;
+        private PromocionXProductoWS.PromocionXProductoWSClient daoPromocionXProducto;
+        private PromocionXZonaWS.PromocionXZonaWSClient daoPromocionXZona;
         private ProductoXZonaWS.productoXZona miProductoXZona;
         private BindingList<PromocionXProductoWS.promocionXProducto> misPromocionXProducto;
 
@@ -21,12 +23,13 @@ namespace CrewmanSystem
 		{
 			InitializeComponent();
             daoPromocion = new PromocionWS.PromocionWSClient();
+            daoPromocionXProducto = new PromocionXProductoWS.PromocionXProductoWSClient();
+            daoPromocionXZona = new PromocionXZonaWS.PromocionXZonaWSClient();
             daoZona = new ZonaWS.ZonaWSClient();
             cboZona.DataSource = new BindingList<ZonaWS.zona>(daoZona.listarZonas().ToArray());
             cboZona.ValueMember = "idZona";
             cboZona.DisplayMember = "nombre";
             misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>();
-            dgvPromocionXProducto.AutoGenerateColumns = false;
             cargarTablaPromocionXProducto();
         }
 
@@ -119,24 +122,57 @@ namespace CrewmanSystem
                 //}
             }
 
-            //Chambon llenar los datos tmr
-            //Llenalo no seas flojo tmr oe
-            PromocionWS.promocion promocion = new PromocionWS.promocion();
-            promocion.nombre = txtNombre.Text;
-            promocion.descripcion = txtDescripcion.Text;
-            promocion.fechaInicio = dtpFechaInicio.Value;
-            promocion.fechaInicioSpecified = true;
-            promocion.fechaFin = dtpFechaFin.Value;
-            promocion.fechaFinSpecified = true;
+            frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
+            if (formInsertar.ShowDialog() == DialogResult.OK)
+            {
+                PromocionWS.promocion promocion = new PromocionWS.promocion();
+                promocion.zona = new PromocionWS.zona();
+                promocion.zona.idZona = ((ZonaWS.zona)cboZona.SelectedItem).idZona;
+                promocion.nombre = txtNombre.Text;
+                promocion.descripcion = txtDescripcion.Text;
+                promocion.fechaInicio = dtpFechaInicio.Value;
+                promocion.fechaInicioSpecified = true;
+                promocion.fechaFin = dtpFechaFin.Value;
+                promocion.fechaFinSpecified = true;
 
-            //int idZona = ((ZonaWS.zona)cboZona.SelectedItem).idZona;
-            //promocion.zona = cbo
-            //promocion.
+                int numPromocionXProducto = misPromocionXProducto.Count;
+                promocion.listaPromocionXProducto = new PromocionWS.promocionXProducto[numPromocionXProducto];
+                for (int cont = 0; cont<numPromocionXProducto; cont++)
+                {
+                    promocion.listaPromocionXProducto[cont] = new PromocionWS.promocionXProducto(); 
+                    promocion.listaPromocionXProducto[cont].producto = new PromocionWS.producto();
+                    promocion.listaPromocionXProducto[cont].producto.idProducto =
+                        ((PromocionXProductoWS.promocionXProducto)misPromocionXProducto.ElementAt(cont)).producto.idProducto;
+                    promocion.listaPromocionXProducto[cont].descuento =
+                        ((PromocionXProductoWS.promocionXProducto)misPromocionXProducto.ElementAt(cont)).descuento;
+                    promocion.listaPromocionXProducto[cont].stock =
+                        ((PromocionXProductoWS.promocionXProducto)misPromocionXProducto.ElementAt(cont)).stock;
+                }
+                int idPromocion = daoPromocion.insertarPromocion(promocion);
+                txtId.Text = idPromocion.ToString();
+            }
         }
 
         private void btnAddProducto_Click(object sender, EventArgs e)
         {
-            foreach(PromocionXProductoWS.promocionXProducto pXp in misPromocionXProducto)
+            try{
+                int descuento = Convert.ToInt32(txtDescuento.Text);
+            }
+            catch (Exception){
+                MessageBox.Show("Los datos de " +
+                    txtDescuento.Name.Substring(3) + " solo pueden contener dígitos");
+                return;
+            }
+            try{
+                int stock = Convert.ToInt32(txtStock.Text);
+            }
+            catch (Exception){
+                MessageBox.Show("Los datos de " +
+                    txtStock.Name.Substring(3) + " solo pueden contener dígitos");
+                return;
+            }
+
+            foreach (PromocionXProductoWS.promocionXProducto pXp in misPromocionXProducto)
             {
                 if (pXp.producto.idProducto == miProductoXZona.producto.idProducto) return;
             }
@@ -144,6 +180,7 @@ namespace CrewmanSystem
             PromocionXProductoWS.promocionXProducto nuevoPromocionXProducto = new PromocionXProductoWS.promocionXProducto();
             nuevoPromocionXProducto.producto = new PromocionXProductoWS.producto();
             nuevoPromocionXProducto.producto.idProducto = miProductoXZona.producto.idProducto;
+            nuevoPromocionXProducto.producto.nombre = miProductoXZona.producto.nombre;
             nuevoPromocionXProducto.descuento = Convert.ToInt32(txtDescuento.Text);
             nuevoPromocionXProducto.stock = Convert.ToInt32(txtStock.Text);
 
@@ -164,18 +201,29 @@ namespace CrewmanSystem
         {
             if (misPromocionXProducto != null)
             {
+                dgvPromocionXProducto.AutoGenerateColumns = false;
                 dgvPromocionXProducto.DataSource = misPromocionXProducto;
             }
             else
             {
+                dgvPromocionXProducto.AutoGenerateColumns = false;
                 dgvPromocionXProducto.DataSource = new BindingList<ProductoXZonaWS.productoXZona>();
             }
         }
 
         private void cboZona_SelectedIndexChanged(object sender, EventArgs e)
         {
-            misPromocionXProducto = null;
+            misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>();
             cargarTablaPromocionXProducto();
+        }
+
+        private void dgvPromocionXProducto_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            PromocionXProductoWS.promocionXProducto pxp = dgvPromocionXProducto.Rows[e.RowIndex].DataBoundItem
+            as PromocionXProductoWS.promocionXProducto;
+
+            dgvPromocionXProducto.Rows[e.RowIndex].Cells["NRO"].Value = e.RowIndex+1;
+            dgvPromocionXProducto.Rows[e.RowIndex].Cells["NOMBRE_PRODUCTO"].Value = pxp.producto.nombre;
         }
     }
 }

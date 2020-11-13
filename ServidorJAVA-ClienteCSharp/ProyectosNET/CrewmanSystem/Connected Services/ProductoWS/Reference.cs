@@ -26,26 +26,6 @@ namespace CrewmanSystem.ProductoWS {
         System.Threading.Tasks.Task<CrewmanSystem.ProductoWS.actualizarProductoResponse> actualizarProductoAsync(CrewmanSystem.ProductoWS.actualizarProductoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/eliminarProductoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/eliminarProductoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.ProductoWS.eliminarProductoResponse eliminarProducto(CrewmanSystem.ProductoWS.eliminarProductoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/eliminarProductoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/eliminarProductoResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.ProductoWS.eliminarProductoResponse> eliminarProductoAsync(CrewmanSystem.ProductoWS.eliminarProductoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/listarProductosRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/listarProductosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.ProductoWS.listarProductosResponse listarProductos(CrewmanSystem.ProductoWS.listarProductosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/listarProductosRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/listarProductosResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.ProductoWS.listarProductosResponse> listarProductosAsync(CrewmanSystem.ProductoWS.listarProductosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/mostrarProductoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/mostrarProductoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -56,6 +36,16 @@ namespace CrewmanSystem.ProductoWS {
         System.Threading.Tasks.Task<CrewmanSystem.ProductoWS.mostrarProductoResponse> mostrarProductoAsync(CrewmanSystem.ProductoWS.mostrarProductoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/eliminarProductoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/eliminarProductoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.ProductoWS.eliminarProductoResponse eliminarProducto(CrewmanSystem.ProductoWS.eliminarProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/eliminarProductoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/eliminarProductoResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.ProductoWS.eliminarProductoResponse> eliminarProductoAsync(CrewmanSystem.ProductoWS.eliminarProductoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/insertarProductoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/insertarProductoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -64,6 +54,16 @@ namespace CrewmanSystem.ProductoWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/insertarProductoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/insertarProductoResponse")]
         System.Threading.Tasks.Task<CrewmanSystem.ProductoWS.insertarProductoResponse> insertarProductoAsync(CrewmanSystem.ProductoWS.insertarProductoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/listarProductosRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/listarProductosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.ProductoWS.listarProductosResponse listarProductos(CrewmanSystem.ProductoWS.listarProductosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/listarProductosRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ProductoWS/listarProductosResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.ProductoWS.listarProductosResponse> listarProductosAsync(CrewmanSystem.ProductoWS.listarProductosRequest request);
     }
     
     /// <remarks/>
@@ -3413,6 +3413,42 @@ namespace CrewmanSystem.ProductoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarProducto", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class mostrarProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idProducto;
+        
+        public mostrarProductoRequest() {
+        }
+        
+        public mostrarProductoRequest(int idProducto) {
+            this.idProducto = idProducto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarProductoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class mostrarProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.ProductoWS.producto @return;
+        
+        public mostrarProductoResponse() {
+        }
+        
+        public mostrarProductoResponse(CrewmanSystem.ProductoWS.producto @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProducto", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
     public partial class eliminarProductoRequest {
         
@@ -3442,6 +3478,42 @@ namespace CrewmanSystem.ProductoWS {
         }
         
         public eliminarProductoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProducto", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.ProductoWS.producto producto;
+        
+        public insertarProductoRequest() {
+        }
+        
+        public insertarProductoRequest(CrewmanSystem.ProductoWS.producto producto) {
+            this.producto = producto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProductoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarProductoResponse() {
+        }
+        
+        public insertarProductoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -3497,78 +3569,6 @@ namespace CrewmanSystem.ProductoWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarProducto", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class mostrarProductoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idProducto;
-        
-        public mostrarProductoRequest() {
-        }
-        
-        public mostrarProductoRequest(int idProducto) {
-            this.idProducto = idProducto;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarProductoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class mostrarProductoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.ProductoWS.producto @return;
-        
-        public mostrarProductoResponse() {
-        }
-        
-        public mostrarProductoResponse(CrewmanSystem.ProductoWS.producto @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProducto", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarProductoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.ProductoWS.producto producto;
-        
-        public insertarProductoRequest() {
-        }
-        
-        public insertarProductoRequest(CrewmanSystem.ProductoWS.producto producto) {
-            this.producto = producto;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProductoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarProductoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarProductoResponse() {
-        }
-        
-        public insertarProductoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ProductoWSChannel : CrewmanSystem.ProductoWS.ProductoWS, System.ServiceModel.IClientChannel {
     }
@@ -3620,6 +3620,29 @@ namespace CrewmanSystem.ProductoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.ProductoWS.mostrarProductoResponse CrewmanSystem.ProductoWS.ProductoWS.mostrarProducto(CrewmanSystem.ProductoWS.mostrarProductoRequest request) {
+            return base.Channel.mostrarProducto(request);
+        }
+        
+        public CrewmanSystem.ProductoWS.producto mostrarProducto(int idProducto) {
+            CrewmanSystem.ProductoWS.mostrarProductoRequest inValue = new CrewmanSystem.ProductoWS.mostrarProductoRequest();
+            inValue.idProducto = idProducto;
+            CrewmanSystem.ProductoWS.mostrarProductoResponse retVal = ((CrewmanSystem.ProductoWS.ProductoWS)(this)).mostrarProducto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.ProductoWS.mostrarProductoResponse> CrewmanSystem.ProductoWS.ProductoWS.mostrarProductoAsync(CrewmanSystem.ProductoWS.mostrarProductoRequest request) {
+            return base.Channel.mostrarProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.ProductoWS.mostrarProductoResponse> mostrarProductoAsync(int idProducto) {
+            CrewmanSystem.ProductoWS.mostrarProductoRequest inValue = new CrewmanSystem.ProductoWS.mostrarProductoRequest();
+            inValue.idProducto = idProducto;
+            return ((CrewmanSystem.ProductoWS.ProductoWS)(this)).mostrarProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CrewmanSystem.ProductoWS.eliminarProductoResponse CrewmanSystem.ProductoWS.ProductoWS.eliminarProducto(CrewmanSystem.ProductoWS.eliminarProductoRequest request) {
             return base.Channel.eliminarProducto(request);
         }
@@ -3640,6 +3663,29 @@ namespace CrewmanSystem.ProductoWS {
             CrewmanSystem.ProductoWS.eliminarProductoRequest inValue = new CrewmanSystem.ProductoWS.eliminarProductoRequest();
             inValue.idProducto = idProducto;
             return ((CrewmanSystem.ProductoWS.ProductoWS)(this)).eliminarProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.ProductoWS.insertarProductoResponse CrewmanSystem.ProductoWS.ProductoWS.insertarProducto(CrewmanSystem.ProductoWS.insertarProductoRequest request) {
+            return base.Channel.insertarProducto(request);
+        }
+        
+        public int insertarProducto(CrewmanSystem.ProductoWS.producto producto) {
+            CrewmanSystem.ProductoWS.insertarProductoRequest inValue = new CrewmanSystem.ProductoWS.insertarProductoRequest();
+            inValue.producto = producto;
+            CrewmanSystem.ProductoWS.insertarProductoResponse retVal = ((CrewmanSystem.ProductoWS.ProductoWS)(this)).insertarProducto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.ProductoWS.insertarProductoResponse> CrewmanSystem.ProductoWS.ProductoWS.insertarProductoAsync(CrewmanSystem.ProductoWS.insertarProductoRequest request) {
+            return base.Channel.insertarProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.ProductoWS.insertarProductoResponse> insertarProductoAsync(CrewmanSystem.ProductoWS.producto producto) {
+            CrewmanSystem.ProductoWS.insertarProductoRequest inValue = new CrewmanSystem.ProductoWS.insertarProductoRequest();
+            inValue.producto = producto;
+            return ((CrewmanSystem.ProductoWS.ProductoWS)(this)).insertarProductoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3669,52 +3715,6 @@ namespace CrewmanSystem.ProductoWS {
             inValue.subFamiliaStr = subFamiliaStr;
             inValue.marcaStr = marcaStr;
             return ((CrewmanSystem.ProductoWS.ProductoWS)(this)).listarProductosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.ProductoWS.mostrarProductoResponse CrewmanSystem.ProductoWS.ProductoWS.mostrarProducto(CrewmanSystem.ProductoWS.mostrarProductoRequest request) {
-            return base.Channel.mostrarProducto(request);
-        }
-        
-        public CrewmanSystem.ProductoWS.producto mostrarProducto(int idProducto) {
-            CrewmanSystem.ProductoWS.mostrarProductoRequest inValue = new CrewmanSystem.ProductoWS.mostrarProductoRequest();
-            inValue.idProducto = idProducto;
-            CrewmanSystem.ProductoWS.mostrarProductoResponse retVal = ((CrewmanSystem.ProductoWS.ProductoWS)(this)).mostrarProducto(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.ProductoWS.mostrarProductoResponse> CrewmanSystem.ProductoWS.ProductoWS.mostrarProductoAsync(CrewmanSystem.ProductoWS.mostrarProductoRequest request) {
-            return base.Channel.mostrarProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.ProductoWS.mostrarProductoResponse> mostrarProductoAsync(int idProducto) {
-            CrewmanSystem.ProductoWS.mostrarProductoRequest inValue = new CrewmanSystem.ProductoWS.mostrarProductoRequest();
-            inValue.idProducto = idProducto;
-            return ((CrewmanSystem.ProductoWS.ProductoWS)(this)).mostrarProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.ProductoWS.insertarProductoResponse CrewmanSystem.ProductoWS.ProductoWS.insertarProducto(CrewmanSystem.ProductoWS.insertarProductoRequest request) {
-            return base.Channel.insertarProducto(request);
-        }
-        
-        public int insertarProducto(CrewmanSystem.ProductoWS.producto producto) {
-            CrewmanSystem.ProductoWS.insertarProductoRequest inValue = new CrewmanSystem.ProductoWS.insertarProductoRequest();
-            inValue.producto = producto;
-            CrewmanSystem.ProductoWS.insertarProductoResponse retVal = ((CrewmanSystem.ProductoWS.ProductoWS)(this)).insertarProducto(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.ProductoWS.insertarProductoResponse> CrewmanSystem.ProductoWS.ProductoWS.insertarProductoAsync(CrewmanSystem.ProductoWS.insertarProductoRequest request) {
-            return base.Channel.insertarProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.ProductoWS.insertarProductoResponse> insertarProductoAsync(CrewmanSystem.ProductoWS.producto producto) {
-            CrewmanSystem.ProductoWS.insertarProductoRequest inValue = new CrewmanSystem.ProductoWS.insertarProductoRequest();
-            inValue.producto = producto;
-            return ((CrewmanSystem.ProductoWS.ProductoWS)(this)).insertarProductoAsync(inValue);
         }
     }
 }

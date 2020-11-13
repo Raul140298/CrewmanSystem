@@ -59,20 +59,21 @@ public class ProductoXZonaMySQL implements ProductoXZonaDAO{
             while(rs.next()){
                 ProductoXZona pz=new ProductoXZona();
                 Producto p=new Producto();
-                Zona z=new Zona();
                 pz.setIdProductoXZona(rs.getInt("ID_PRODUCTOXZONA"));
-                pz.setPrecioReal(rs.getDouble("PRECIOREAL"));
-                pz.setFechaInicio(rs.getDate("FECHA_INICIO"));
-                
+                                
                 p.setIdProducto(rs.getInt("ID_PRODUCTO"));
-                p.setNombre(rs.getString("P_NOMBRE"));
-                p.setPrecioSugerido(rs.getDouble("PRECIO_SUGERIDO"));
+                p.setNombre(rs.getString("NOMBRE"));
+                p.getSubFamilia().setDescripcionSubFamilia(rs.getString("S_DESCRIPCION"));
+                p.getSubFamilia().getFamilia().setDescripcion(rs.getString("F_DESCRIPCION"));
+                p.getMarca().setNombre(rs.getString("M_NOMBRE"));
                 
-                z.setIdZona(rs.getInt("ID_ZONA"));
-                z.setNombre(rs.getString("Z_NOMBRE"));
+                pz.setPrecioReal(rs.getDouble("PRECIOREAL"));
+                p.setPrecioSugerido(rs.getDouble("PRECIO_SUGERIDO"));
+                p.setCantUnidad(rs.getInt("CANT_UNIDADES"));
+                p.setUnidades(rs.getString("UNIDADES"));
+                p.setStock(rs.getInt("STOCK"));
                 
                 pz.setProducto(p);
-                pz.setZona(z);
                 productoszonas.add(pz);
             }
         }catch(Exception ex){

@@ -158,8 +158,8 @@ public class PedidoWS
         return resultado;
     }
     
-    @WebMethod(operationName = "mostrar")
-    public void mostrar(@WebParam(name = "pedido") Pedido pedido)
+    @WebMethod(operationName = "mostrarPedido")
+    public void mostrarPedido(@WebParam(name = "pedido") Pedido pedido)
     {
         try
         {

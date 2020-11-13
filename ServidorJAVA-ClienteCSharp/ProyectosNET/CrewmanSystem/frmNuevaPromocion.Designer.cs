@@ -49,6 +49,8 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtPrecioReal = new System.Windows.Forms.TextBox();
             this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.btnAddProducto = new System.Windows.Forms.Button();
             this.btnRemoveProducto = new System.Windows.Forms.Button();
@@ -61,14 +63,12 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dgvPromocionXProducto = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRE_PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DESCUENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.STOCK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.txtPrecioReal = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -199,6 +199,7 @@
             // 
             // cboZona
             // 
+            this.cboZona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboZona.FormattingEnabled = true;
             this.cboZona.Location = new System.Drawing.Point(160, 46);
             this.cboZona.Name = "cboZona";
@@ -223,7 +224,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(708, 429);
+            this.panel1.Size = new System.Drawing.Size(729, 429);
             this.panel1.TabIndex = 75;
             // 
             // btnGuardar
@@ -232,7 +233,7 @@
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(35, 12);
+            this.btnGuardar.Location = new System.Drawing.Point(279, 13);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(160, 40);
             this.btnGuardar.TabIndex = 68;
@@ -246,7 +247,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 817);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(708, 65);
+            this.panel2.Size = new System.Drawing.Size(729, 65);
             this.panel2.TabIndex = 76;
             // 
             // groupBox3
@@ -270,6 +271,25 @@
             this.groupBox3.TabIndex = 93;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Productos";
+            // 
+            // label3
+            // 
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Location = new System.Drawing.Point(45, 114);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 22);
+            this.label3.TabIndex = 85;
+            this.label3.Text = "Precio Real :";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtPrecioReal
+            // 
+            this.txtPrecioReal.Enabled = false;
+            this.txtPrecioReal.Location = new System.Drawing.Point(154, 114);
+            this.txtPrecioReal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPrecioReal.Name = "txtPrecioReal";
+            this.txtPrecioReal.Size = new System.Drawing.Size(72, 22);
+            this.txtPrecioReal.TabIndex = 84;
             // 
             // btnBuscarProducto
             // 
@@ -383,7 +403,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 429);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(708, 251);
+            this.panel6.Size = new System.Drawing.Size(729, 251);
             this.panel6.TabIndex = 79;
             // 
             // panel7
@@ -394,7 +414,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 680);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(708, 137);
+            this.panel7.Size = new System.Drawing.Size(729, 137);
             this.panel7.TabIndex = 80;
             // 
             // dgvPromocionXProducto
@@ -417,14 +437,15 @@
             this.dgvPromocionXProducto.ColumnHeadersHeight = 30;
             this.dgvPromocionXProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPromocionXProducto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.NombreProducto,
-            this.Column1,
-            this.Column2});
+            this.NRO,
+            this.NOMBRE_PRODUCTO,
+            this.DESCUENTO,
+            this.STOCK});
             this.dgvPromocionXProducto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPromocionXProducto.EnableHeadersVisualStyles = false;
             this.dgvPromocionXProducto.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.dgvPromocionXProducto.Location = new System.Drawing.Point(20, 0);
+            this.dgvPromocionXProducto.MultiSelect = false;
             this.dgvPromocionXProducto.Name = "dgvPromocionXProducto";
             this.dgvPromocionXProducto.ReadOnly = true;
             this.dgvPromocionXProducto.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -443,45 +464,48 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvPromocionXProducto.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPromocionXProducto.RowTemplate.Height = 24;
-            this.dgvPromocionXProducto.Size = new System.Drawing.Size(668, 137);
+            this.dgvPromocionXProducto.Size = new System.Drawing.Size(689, 137);
             this.dgvPromocionXProducto.TabIndex = 110;
+            this.dgvPromocionXProducto.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPromocionXProducto_CellFormatting);
             // 
-            // dataGridViewTextBoxColumn1
+            // NRO
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 50;
+            this.NRO.HeaderText = "Nro";
+            this.NRO.MinimumWidth = 6;
+            this.NRO.Name = "NRO";
+            this.NRO.ReadOnly = true;
+            this.NRO.Width = 64;
             // 
-            // NombreProducto
+            // NOMBRE_PRODUCTO
             // 
-            this.NombreProducto.HeaderText = "Producto";
-            this.NombreProducto.MinimumWidth = 6;
-            this.NombreProducto.Name = "NombreProducto";
-            this.NombreProducto.ReadOnly = true;
-            this.NombreProducto.Width = 104;
+            this.NOMBRE_PRODUCTO.HeaderText = "Producto";
+            this.NOMBRE_PRODUCTO.MinimumWidth = 6;
+            this.NOMBRE_PRODUCTO.Name = "NOMBRE_PRODUCTO";
+            this.NOMBRE_PRODUCTO.ReadOnly = true;
+            this.NOMBRE_PRODUCTO.Width = 104;
             // 
-            // Column1
+            // DESCUENTO
             // 
-            this.Column1.HeaderText = "Descuento";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 118;
+            this.DESCUENTO.DataPropertyName = "descuento";
+            this.DESCUENTO.HeaderText = "Descuento";
+            this.DESCUENTO.MinimumWidth = 6;
+            this.DESCUENTO.Name = "DESCUENTO";
+            this.DESCUENTO.ReadOnly = true;
+            this.DESCUENTO.Width = 118;
             // 
-            // Column2
+            // STOCK
             // 
-            this.Column2.HeaderText = "Stock";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 79;
+            this.STOCK.DataPropertyName = "stock";
+            this.STOCK.HeaderText = "Stock";
+            this.STOCK.MinimumWidth = 6;
+            this.STOCK.Name = "STOCK";
+            this.STOCK.ReadOnly = true;
+            this.STOCK.Width = 79;
             // 
             // panel8
             // 
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(688, 0);
+            this.panel8.Location = new System.Drawing.Point(709, 0);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(20, 137);
             this.panel8.TabIndex = 109;
@@ -494,30 +518,12 @@
             this.panel9.Size = new System.Drawing.Size(20, 137);
             this.panel9.TabIndex = 108;
             // 
-            // txtPrecioReal
-            // 
-            this.txtPrecioReal.Location = new System.Drawing.Point(154, 114);
-            this.txtPrecioReal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPrecioReal.Name = "txtPrecioReal";
-            this.txtPrecioReal.Size = new System.Drawing.Size(72, 22);
-            this.txtPrecioReal.TabIndex = 84;
-            // 
-            // label3
-            // 
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(45, 114);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 22);
-            this.label3.TabIndex = 85;
-            this.label3.Text = "Precio Real :";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // frmNuevaPromocion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(729, 561);
+            this.ClientSize = new System.Drawing.Size(750, 561);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);
@@ -569,14 +575,14 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.DataGridView dgvPromocionXProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.ComboBox cboZona;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPrecioReal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NRO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE_PRODUCTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DESCUENTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STOCK;
     }
 }
