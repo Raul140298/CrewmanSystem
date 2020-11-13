@@ -26,7 +26,6 @@ namespace CrewmanSystem
 			else
 			{
 				dataGridView1.DataSource = new BindingList<FamiliaWS.familia>();
-
 			}
 			#region colores de seleccion
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
@@ -39,10 +38,5 @@ namespace CrewmanSystem
 			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
-
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-			MessageBox.Show(sender.ToString());
-		}
-	}
+    }
 }

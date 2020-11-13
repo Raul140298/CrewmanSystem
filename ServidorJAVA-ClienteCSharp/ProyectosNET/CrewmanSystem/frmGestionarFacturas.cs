@@ -12,7 +12,7 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarFacturas : Form
 	{
-		FacturaWS.FacturaWSClient daoFactura;
+		private FacturaWS.FacturaWSClient daoFactura;
 		public frmGestionarFacturas()
 		{
 			daoFactura = new FacturaWS.FacturaWSClient();

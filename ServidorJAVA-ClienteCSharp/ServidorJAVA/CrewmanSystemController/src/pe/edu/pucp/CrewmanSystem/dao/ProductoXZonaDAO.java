@@ -5,5 +5,5 @@ import java.util.ArrayList;
 public interface ProductoXZonaDAO
 {
     int insertar(ProductoXZona productoXZona);
-    ArrayList<ProductoXZona> listar(String productoStr,String zonaStr);
+    ArrayList<ProductoXZona> listar(String nombre,String familiaStr,String subFamiliaStr,String marcaStr,int idZona);
 }

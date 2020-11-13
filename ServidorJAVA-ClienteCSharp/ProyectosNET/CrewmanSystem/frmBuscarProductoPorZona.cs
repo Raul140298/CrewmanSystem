@@ -12,20 +12,75 @@ namespace CrewmanSystem
 {
     public partial class frmBuscarProductoPorZona : Form
     {
-        public frmBuscarProductoPorZona()
+        private ProductoXZonaWS.ProductoXZonaWSClient daoProductoXZona;
+        private ProductoXZonaWS.productoXZona[] misProductoXZona;
+        private ProductoXZonaWS.productoXZona productoXZonaSeleccionado;
+        private int idZona;
+
+        public frmBuscarProductoPorZona(int idZonaParam)
         {
             InitializeComponent();
-
+            idZona = idZonaParam;
+            daoProductoXZona = new ProductoXZonaWS.ProductoXZonaWSClient();
+            dgvProductos.AutoGenerateColumns = false;
+            cargarTabla();
             #region colores de seleccion
-            dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-            dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+            dgvProductos.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvProductos.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-            dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-            dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+            dgvProductos.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvProductos.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-            dataGridView1.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
-            dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+            dgvProductos.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvProductos.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
             #endregion
+        }
+
+        private void cargarTabla()
+        {
+            misProductoXZona = daoProductoXZona.listarProductosXZonas(txtNombre.Text, txtFamilia.Text, txtSubfamilia.Text, txtMarca.Text, idZona);
+            if (misProductoXZona != null)
+            {
+                dgvProductos.DataSource = new BindingList<ProductoXZonaWS.productoXZona>(misProductoXZona.ToArray());
+            }
+            else
+            {
+                dgvProductos.DataSource = new BindingList<ProductoXZonaWS.productoXZona>();
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            cargarTabla();
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            if (dgvProductos.CurrentRow.Index<0)
+            {
+                return;
+            }
+            productoXZonaSeleccionado = (ProductoXZonaWS.productoXZona)dgvProductos.CurrentRow.DataBoundItem;
+            this.DialogResult = DialogResult.OK;
+        }
+
+        public ProductoXZonaWS.productoXZona ProductoXZonaSeleccionado
+        { get => productoXZonaSeleccionado; set => productoXZonaSeleccionado = value; }
+
+        private void dgvProductos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            //castear objetos y mostrar valor determinado
+            ProductoXZonaWS.productoXZona productoXZona = dgvProductos.Rows[e.RowIndex].DataBoundItem
+            as ProductoXZonaWS.productoXZona;
+
+            dgvProductos.Rows[e.RowIndex].Cells["NOMBRE"].Value = productoXZona.producto.nombre;
+            dgvProductos.Rows[e.RowIndex].Cells["SUBFAMILIA"].Value = productoXZona.producto.subFamilia.descripcionSubFamilia;
+            dgvProductos.Rows[e.RowIndex].Cells["FAMILIA"].Value = productoXZona.producto.subFamilia.familia.descripcion;
+            dgvProductos.Rows[e.RowIndex].Cells["MARCA"].Value = productoXZona.producto.marca.nombre;
+            dgvProductos.Rows[e.RowIndex].Cells["PRECIO_SUGERIDO"].Value = productoXZona.producto.precioSugerido;
+            dgvProductos.Rows[e.RowIndex].Cells["CANT_UNIDADES"].Value = productoXZona.producto.cantUnidad;
+            dgvProductos.Rows[e.RowIndex].Cells["UNIDADES"].Value = productoXZona.producto.unidades;
+            dgvProductos.Rows[e.RowIndex].Cells["STOCK"].Value = productoXZona.producto.stock;
         }
     }
 }

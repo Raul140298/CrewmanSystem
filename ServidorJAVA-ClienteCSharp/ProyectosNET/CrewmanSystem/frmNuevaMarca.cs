@@ -12,7 +12,7 @@ namespace CrewmanSystem
 {
 	public partial class frmNuevaMarca : Form
 	{
-        MarcaWS.MarcaWSClient daoMarca;
+        private MarcaWS.MarcaWSClient daoMarca;
 		public frmNuevaMarca()
 		{
 			InitializeComponent();

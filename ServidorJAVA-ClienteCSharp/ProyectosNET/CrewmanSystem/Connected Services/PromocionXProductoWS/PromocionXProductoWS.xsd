@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.CrewmanSystem.pucp.edu.pe/" targetNamespace="http://services.CrewmanSystem.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="insertarProductoXZona" type="tns:insertarProductoXZona" />
-  <xs:element name="insertarProductoXZonaResponse" type="tns:insertarProductoXZonaResponse" />
-  <xs:element name="listarProductosXZonas" type="tns:listarProductosXZonas" />
-  <xs:element name="listarProductosXZonasResponse" type="tns:listarProductosXZonasResponse" />
-  <xs:complexType name="insertarProductoXZona">
+  <xs:element name="insertarPromocionXProducto" type="tns:insertarPromocionXProducto" />
+  <xs:element name="insertarPromocionXProductoResponse" type="tns:insertarPromocionXProductoResponse" />
+  <xs:element name="listarPromocionXProducto" type="tns:listarPromocionXProducto" />
+  <xs:element name="listarPromocionXProductoResponse" type="tns:listarPromocionXProductoResponse" />
+  <xs:complexType name="listarPromocionXProducto">
     <xs:sequence>
-      <xs:element minOccurs="0" name="productoXZona" type="tns:productoXZona" />
+      <xs:element name="idPromocion" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="productoXZona">
+  <xs:complexType name="listarPromocionXProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:promocionXProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="promocionXProducto">
     <xs:sequence>
       <xs:element name="activo" type="xs:boolean" />
-      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
-      <xs:element name="idProductoXZona" type="xs:int" />
+      <xs:element name="descuento" type="xs:int" />
+      <xs:element name="idPromocionXProducto" type="xs:int" />
       <xs:element name="precioReal" type="xs:double" />
       <xs:element minOccurs="0" name="producto" type="tns:producto" />
-      <xs:element minOccurs="0" name="zona" type="tns:zona" />
+      <xs:element minOccurs="0" name="promocion" type="tns:promocion" />
+      <xs:element name="stock" type="xs:int" />
+      <xs:element name="stockReservado" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="producto">
@@ -36,26 +42,14 @@
       <xs:element minOccurs="0" name="unidades" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="promocionXProducto">
+  <xs:complexType name="productoXZona">
     <xs:sequence>
       <xs:element name="activo" type="xs:boolean" />
-      <xs:element name="descuento" type="xs:int" />
-      <xs:element name="idPromocionXProducto" type="xs:int" />
-      <xs:element minOccurs="0" name="producto" type="tns:producto" />
-      <xs:element minOccurs="0" name="promocion" type="tns:promocion" />
-      <xs:element name="stock" type="xs:int" />
-      <xs:element name="stockReservado" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="promocion">
-    <xs:sequence>
-      <xs:element name="activo" type="xs:boolean" />
-      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
       <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
-      <xs:element name="idPromocion" type="xs:int" />
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaPromocionXProducto" nillable="true" type="tns:promocionXProducto" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="idProductoXZona" type="xs:int" />
+      <xs:element name="precioReal" type="xs:double" />
+      <xs:element minOccurs="0" name="producto" type="tns:producto" />
       <xs:element minOccurs="0" name="zona" type="tns:zona" />
     </xs:sequence>
   </xs:complexType>
@@ -272,6 +266,18 @@
       <xs:element minOccurs="0" name="zona" type="tns:zona" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="promocion">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+      <xs:element name="idPromocion" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaPromocionXProducto" nillable="true" type="tns:promocionXProducto" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="zona" type="tns:zona" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="marca">
     <xs:sequence>
       <xs:element name="activo" type="xs:boolean" />
@@ -294,23 +300,14 @@
       <xs:element name="idFamilia" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarProductoXZonaResponse">
+  <xs:complexType name="insertarPromocionXProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="promocionXProducto" type="tns:promocionXProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPromocionXProductoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarProductosXZonas">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-      <xs:element minOccurs="0" name="familiaStr" type="xs:string" />
-      <xs:element minOccurs="0" name="subFamiliaStr" type="xs:string" />
-      <xs:element minOccurs="0" name="marcaStr" type="xs:string" />
-      <xs:element name="idZona" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarProductosXZonasResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:productoXZona" />
     </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="estadoPedido">

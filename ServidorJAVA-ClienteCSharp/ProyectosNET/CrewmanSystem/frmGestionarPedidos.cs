@@ -12,8 +12,8 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarPedidos : Form
 	{
-		PedidoWS.PedidoWSClient daoPedido;
-		ClienteWS.ClienteWSClient daoCliente;
+		private PedidoWS.PedidoWSClient daoPedido;
+		private ClienteWS.ClienteWSClient daoCliente;
 		
 		public frmGestionarPedidos()
 		{

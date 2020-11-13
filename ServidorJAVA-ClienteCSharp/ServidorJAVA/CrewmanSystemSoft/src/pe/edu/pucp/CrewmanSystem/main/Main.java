@@ -33,8 +33,6 @@ public class Main{
     private static ArrayList<Promocion> misPromociones;
     private static PromocionXProductoDAO daoPromocionXProducto=new PromocionXProductoMySQL();
     private static ArrayList<PromocionXProducto> misPromocionXProducto;
-    private static PromocionXZonaDAO daoPromocionXZona=new PromocionXZonaMySQL();
-    private static ArrayList<PromocionXZona> misPromocionXZona;
     private static PedidoDAO daoPedido=new PedidoMySQL();
     private static ArrayList<Pedido> misPedidos;
     private static LineaPedidoDAO daoLineaPedido=new LineaPedidoMySQL();
@@ -63,9 +61,8 @@ public class Main{
 //        gestionarEmpleados();
 //        gestionarProductos();
 //        gestionarProductoXZona();
-//        gestionarPromociones();
+        gestionarPromociones();
 //        gestionarPromocionXProducto();
-//        gestionarPromocionXZona();
 //        gestionarPedidos();
 //        gestionarLineasDePedido();
 //        gestionarFacturas();
@@ -73,13 +70,23 @@ public class Main{
 //        gestionarGuiasDeRemision();
 //        gestionarQuejas();
 
-           Cliente cliente = new Cliente();
-           cliente.setIdCliente(14);
-           
-           //daoCliente.obtenerCliente(cliente);
-           
-           //System.out.print(cliente.getRazonSocial());
-                
+//        misZonas = daoZona.listar();
+//        Promocion promo = new Promocion();
+//        promo.setNombre("Promocion por fin de semana");
+//        promo.setDescripcion("Aprovecha por este fin de temporada");
+//        try{
+//            promo.setFechaInicio(sdf.parse("12-11-2020"));
+//            promo.setFechaFin(sdf.parse("23-12-2020"));
+//        }catch(Exception e){
+//            System.out.println("MAL");
+//        }
+//        promo.setZona(misZonas.get(2));
+//        misPromocionXProducto = new ArrayList<>();
+//        PromocionXProducto pxp = new PromocionXProducto();
+//        pxp.set
+//        
+//        misPromocionXProducto.add(e);
+//        promo.setListaPromocionXProducto(misPromocionXProducto);
         System.out.println("EL MODELADO HA CONCLUIDO");
     }
     
@@ -226,7 +233,7 @@ public class Main{
                 System.out.println("SUMA DE VENTAS: "+miEmpleado.getSumVentas());
                 System.out.println("OBJETIVO DE VENTAS: "+miEmpleado.getObjetivoVentas());
                 
-                daoZona.mostrar(miEmpleado);
+                daoZona.mostrar(miEmpleado.getIdEmpleado());
                 System.out.println("\nZONA DEL VENDEDOR");
                 System.out.println("==================================================================================");
                 System.out.println(miEmpleado.getZona().getIdZona()+" - "+miEmpleado.getZona().getNombre());
@@ -340,6 +347,7 @@ public class Main{
         misProductos=daoProducto.listar(nombre,familia,subFamilia,marca);
         System.out.println("LISTADO DE PRODUCTOS");
         System.out.println("==================================================================================");
+        System.out.println("Nombre: "+nombre);
         System.out.println("Familia: "+familia);
         System.out.println("Subfamilia: "+subFamilia);
         System.out.println("Marca: "+marca);
@@ -357,13 +365,14 @@ public class Main{
         ProductoXZona pxz1=new ProductoXZona(misProductos.get(2), misZonas.get(2), 9.30);
         daoProductoXZona.insertar(pxz1);
         
-        String zona="";
-        String producto="";
-        misProductosXZonas=daoProductoXZona.listar(producto,zona);
+        int idZona=1;
+            String nombre="";
+        String familia="";
+        String subFamilia="";
+        String marca="";
+        misProductosXZonas=daoProductoXZona.listar(nombre,familia,subFamilia,marca,idZona);
         System.out.println("LISTADO DE PRODUCTOS POR ZONA");
         System.out.println("==================================================================================");
-        System.out.println("Producto: "+producto);
-        System.out.println("Zona: "+zona);
         System.out.println("==================================================================================");
         for(ProductoXZona pxz:misProductosXZonas) 
             System.out.println(pxz.getIdProductoXZona()+" - "+pxz.getProducto().getIdProducto()+" - "+pxz.getProducto().getNombre()+" - "+
@@ -398,7 +407,7 @@ public class Main{
         Date fechaFin=null;
         try{
             fechaIni=sdf.parse("10-09-2020");
-            fechaFin=sdf.parse("26-12-2020");
+            fechaFin=sdf.parse("26-12-2021");
         } catch(Exception e){
             System.out.println("Error en Gestionar Promociones");
         }
@@ -434,20 +443,6 @@ public class Main{
         System.out.println("==================================================================================");
         for(PromocionXProducto pxp:misPromocionXProducto) 
             System.out.println(pxp.getIdPromocionXProducto()+" - "+pxp.getProducto().getNombre()+" - "+pxp.getDescuento()+" - "+pxp.getStock()); 
-        System.out.println("\n");
-    }
-    
-    private static void gestionarPromocionXZona(){
-//        misPromociones=daoPromocion.listar();
-//        misZonas=daoZona.listar();
-//        PromocionXZona miPromoXZona = new PromocionXZona(misPromociones.get(0), misZonas.get(0));
-//        daoPromocionXZona.insertar(miPromoXZona);
-        
-        misPromocionXZona=daoPromocionXZona.listar(misPromociones.get(0).getIdPromocion());
-        System.out.println("LISTADO DE PROMOCION POR ZONA");
-        System.out.println("==================================================================================");
-        for(PromocionXZona pxz:misPromocionXZona) 
-            System.out.println(pxz.getIdPromocionXZona()+" - "+pxz.getZona().getNombre()); 
         System.out.println("\n");
     }
     

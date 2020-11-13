@@ -12,7 +12,7 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarGuiasRemision : Form
 	{
-		GuiaRemisionWS.GuiaRemisionWSClient daoGuiaRemision;
+		private GuiaRemisionWS.GuiaRemisionWSClient daoGuiaRemision;
 		public frmGestionarGuiasRemision()
 		{
 			daoGuiaRemision = new GuiaRemisionWS.GuiaRemisionWSClient();

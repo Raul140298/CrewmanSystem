@@ -12,13 +12,13 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarPromociones : Form
 	{
-		PromocionWS.PromocionWSClient daoPromocion;
+		private PromocionWS.PromocionWSClient daoPromocion;
 		public frmGestionarPromociones()
 		{
 			daoPromocion = new PromocionWS.PromocionWSClient();
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
-			PromocionWS.promocion[] misPromocions = daoPromocion.listarPromocions("", DateTime.MinValue, DateTime.Today);
+			PromocionWS.promocion[] misPromocions = daoPromocion.listarPromocions("", DateTime.MinValue, DateTime.MaxValue);
 			if (misPromocions != null)
 			{
 				dataGridView1.DataSource = new BindingList<PromocionWS.promocion>(misPromocions.ToArray());
@@ -26,7 +26,6 @@ namespace CrewmanSystem
 			else
 			{
 				dataGridView1.DataSource = new BindingList<PromocionWS.promocion>();
-
 			}
 
 			#region colores de seleccion
@@ -40,5 +39,13 @@ namespace CrewmanSystem
 			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
-	}
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+			PromocionWS.promocion promocion = dataGridView1.Rows[e.RowIndex].DataBoundItem
+			as PromocionWS.promocion;
+
+			dataGridView1.Rows[e.RowIndex].Cells["ZONA"].Value = promocion.zona.nombre;
+		}
+    }
 }

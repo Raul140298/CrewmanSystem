@@ -12,39 +12,37 @@ namespace CrewmanSystem
 {
 	public partial class frmNuevaPromocion : Form
 	{
-        ZonaWS.ZonaWSClient daoZona = new ZonaWS.ZonaWSClient();
+        private ZonaWS.ZonaWSClient daoZona;
+        private PromocionWS.PromocionWSClient daoPromocion;
+        private PromocionXProductoWS.PromocionXProductoWSClient daoPromocionXProducto;
+        private ProductoXZonaWS.productoXZona miProductoXZona;
+        private BindingList<PromocionXProductoWS.promocionXProducto> misPromocionXProducto;
+
         public frmNuevaPromocion()
 		{
 			InitializeComponent();
+            daoPromocion = new PromocionWS.PromocionWSClient();
+            daoPromocionXProducto = new PromocionXProductoWS.PromocionXProductoWSClient();
+            daoZona = new ZonaWS.ZonaWSClient();
             cboZona.DataSource = new BindingList<ZonaWS.zona>(daoZona.listarZonas().ToArray());
             cboZona.ValueMember = "idZona";
             cboZona.DisplayMember = "nombre";
-        }
-
-        private void btnBuscarProductoXZona_Click(object sender, EventArgs e)
-        {
-            frmBuscarZona formBusquedaZona = new frmBuscarZona();
-            if(formBusquedaZona.ShowDialog() == DialogResult.OK)
-            {
-
-            }
-        }
-
-        private void btnBuscarProductoXZona_Click_1(object sender, EventArgs e)
-        {
-            frmBuscarZona formBusquedaZona = new frmBuscarZona();
-            if(formBusquedaZona.ShowDialog() == DialogResult.OK)
-            {
-
-            }
+            misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>();
+            cargarTablaPromocionXProducto();
         }
 
         private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
-            frmBuscarProductoPorZona formBusquedaProductoPorZona = new frmBuscarProductoPorZona();
+            int idZona = ((ZonaWS.zona)cboZona.SelectedItem).idZona;
+            frmBuscarProductoPorZona formBusquedaProductoPorZona = new frmBuscarProductoPorZona(idZona);
             if(formBusquedaProductoPorZona.ShowDialog() == DialogResult.OK)
             {
-
+                miProductoXZona = formBusquedaProductoPorZona.ProductoXZonaSeleccionado;
+                txtNombreProducto.Text = miProductoXZona.producto.nombre;
+                txtPrecioReal.Text = miProductoXZona.precioReal.ToString();
+                txtCantUnidades.Text = miProductoXZona.producto.cantUnidad.ToString();
+                txtUnidades.Text = miProductoXZona.producto.unidades.ToString();
+                txtPrecioReal.Text = miProductoXZona.precioReal.ToString();
             }
         }
 
@@ -78,19 +76,168 @@ namespace CrewmanSystem
                 }
             }
 
-            foreach (Control c in groupBox3.Controls)
+            if (misPromocionXProducto == null)
             {
-                if (c is TextBox)
+                MessageBox.Show("Falta agregar los productos de la promocion");
+                return;
+            }
+
+            //Este foreach no se deberia usar
+            //foreach (Control c in groupBox3.Controls)
+            {
+                //if (c is TextBox)
+                //{
+                //    TextBox textBox = c as TextBox;
+                //    if (textBox.Text == string.Empty && textBox.Name != "txtId")
+                //    {
+                //        MessageBox.Show("Falta llenar los datos de " +
+                //            textBox.Name.Substring(3) + " de " + groupBox3.Text);
+                //        return;
+                //    }
+                //    else
+                //    {
+                //        if (textBox == txtDescuento)
+                //        {
+                //            try
+                //            {
+                //                double resultado = Convert.ToDouble(txtDescuento.Text);
+                //            }
+                //            catch (Exception)
+                //            {
+                //                return;
+                //            }
+                //        }
+                //        if (textBox == txtStock)
+                //        {
+                //            try
+                //            {
+                //                int resultado = Convert.ToInt32(txtDescuento.Text);
+                //            }
+                //            catch (Exception)
+                //            {
+                //                return;
+                //            }
+                //        }
+
+                //    }
+                //}
+            }
+
+            frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
+            if (formInsertar.ShowDialog() == DialogResult.OK)
+            {
+                PromocionWS.promocion promocion = new PromocionWS.promocion();
+                promocion.zona = new PromocionWS.zona();
+                promocion.zona.idZona = ((ZonaWS.zona)cboZona.SelectedItem).idZona;
+                promocion.nombre = txtNombre.Text;
+                promocion.descripcion = txtDescripcion.Text;
+                promocion.fechaInicio = dtpFechaInicio.Value;
+                promocion.fechaInicioSpecified = true;
+                promocion.fechaFin = dtpFechaFin.Value;
+                promocion.fechaFinSpecified = true;
+
+                int numPromocionXProducto = misPromocionXProducto.Count;
+                promocion.listaPromocionXProducto = new PromocionWS.promocionXProducto[numPromocionXProducto];
+                for (int cont = 0; cont<numPromocionXProducto; cont++)
                 {
-                    TextBox textBox = c as TextBox;
-                    if (textBox.Text == string.Empty && textBox.Name != "txtId")
-                    {
-                        MessageBox.Show("Falta llenar los datos de " +
-                            textBox.Name.Substring(3) + " de " + groupBox3.Text);
-                        return;
-                    }
+                    promocion.listaPromocionXProducto[cont] = new PromocionWS.promocionXProducto(); 
+                    promocion.listaPromocionXProducto[cont].producto = new PromocionWS.producto();
+                    promocion.listaPromocionXProducto[cont].producto.idProducto =
+                        ((PromocionXProductoWS.promocionXProducto)misPromocionXProducto.ElementAt(cont)).producto.idProducto;
+                    promocion.listaPromocionXProducto[cont].precioReal=
+                        ((PromocionXProductoWS.promocionXProducto)misPromocionXProducto.ElementAt(cont)).precioReal;
+                    promocion.listaPromocionXProducto[cont].descuento =
+                        ((PromocionXProductoWS.promocionXProducto)misPromocionXProducto.ElementAt(cont)).descuento;
+                    promocion.listaPromocionXProducto[cont].stock =
+                        ((PromocionXProductoWS.promocionXProducto)misPromocionXProducto.ElementAt(cont)).stock;
                 }
+                int idPromocion = daoPromocion.insertarPromocion(promocion);
+                txtId.Text = idPromocion.ToString();
             }
         }
-	}
+
+        private void btnAddProducto_Click(object sender, EventArgs e)
+        {
+            if(txtNombreProducto.Text == "")
+            {
+                MessageBox.Show("Debe escoger un producto");
+                return;
+            }
+            try{
+                int descuento = Convert.ToInt32(txtDescuento.Text);
+            }
+            catch (Exception){
+                MessageBox.Show("Los datos de " +
+                    txtDescuento.Name.Substring(3) + " solo pueden contener dígitos");
+                return;
+            }
+            try{
+                int stock = Convert.ToInt32(txtStock.Text);
+            }
+            catch (Exception){
+                MessageBox.Show("Los datos de " +
+                    txtStock.Name.Substring(3) + " solo pueden contener dígitos");
+                return;
+            }
+
+            foreach (PromocionXProductoWS.promocionXProducto pXp in misPromocionXProducto)
+            {
+                if (pXp.producto.idProducto == miProductoXZona.producto.idProducto) return;
+            }
+
+            PromocionXProductoWS.promocionXProducto nuevoPromocionXProducto = new PromocionXProductoWS.promocionXProducto();
+            nuevoPromocionXProducto.producto = new PromocionXProductoWS.producto();
+            nuevoPromocionXProducto.producto.idProducto = miProductoXZona.producto.idProducto;
+            nuevoPromocionXProducto.producto.nombre = miProductoXZona.producto.nombre;
+            nuevoPromocionXProducto.producto.cantUnidad = miProductoXZona.producto.cantUnidad;
+            nuevoPromocionXProducto.producto.unidades = miProductoXZona.producto.unidades;
+            nuevoPromocionXProducto.precioReal = miProductoXZona.precioReal;
+            nuevoPromocionXProducto.descuento = Convert.ToInt32(txtDescuento.Text);
+            nuevoPromocionXProducto.stock = Convert.ToInt32(txtStock.Text);
+
+            misPromocionXProducto.Add(nuevoPromocionXProducto);
+            cargarTablaPromocionXProducto();
+            txtDescuento.Text = "";
+            txtStock.Text = "";
+            txtPrecioReal.Text = "";
+            txtUnidades.Text = "";
+            txtCantUnidades.Text = "";
+            txtNombreProducto.Text = "";
+        }
+
+        private void btnRemoveProducto_Click(object sender, EventArgs e)
+        {
+            if (dgvPromocionXProducto.CurrentRow == null || dgvPromocionXProducto.CurrentRow.Index < 0)
+            {
+                return;
+            }
+            int indice = dgvPromocionXProducto.CurrentRow.Index;
+            misPromocionXProducto.RemoveAt(indice);
+            cargarTablaPromocionXProducto();
+        }
+
+        private void cargarTablaPromocionXProducto()
+        {
+            dgvPromocionXProducto.AutoGenerateColumns = false;
+            dgvPromocionXProducto.DataSource = misPromocionXProducto;
+        }
+
+        private void cboZona_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>();
+            cargarTablaPromocionXProducto();
+        }
+
+        private void dgvPromocionXProducto_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            PromocionXProductoWS.promocionXProducto pxp = dgvPromocionXProducto.Rows[e.RowIndex].DataBoundItem
+            as PromocionXProductoWS.promocionXProducto;
+
+            dgvPromocionXProducto.Rows[e.RowIndex].Cells["NRO"].Value = e.RowIndex+1;
+            dgvPromocionXProducto.Rows[e.RowIndex].Cells["NOMBRE_PRODUCTO"].Value = pxp.producto.nombre;
+            dgvPromocionXProducto.Rows[e.RowIndex].Cells["CANT_UNIDADES"].Value = pxp.producto.cantUnidad;
+            dgvPromocionXProducto.Rows[e.RowIndex].Cells["UNIDADES"].Value = pxp.producto.unidades;
+
+        }
+    }
 }

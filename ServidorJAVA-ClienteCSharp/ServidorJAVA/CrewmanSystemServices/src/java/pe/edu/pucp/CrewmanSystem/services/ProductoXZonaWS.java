@@ -26,21 +26,22 @@ public class ProductoXZonaWS
         daoProductoXZona = new ProductoXZonaMySQL();
     }
     @WebMethod(operationName = "insertarProductoXZona")
-    public int insertarProductoXZona(@WebParam(name = "productoXZona") ProductoXZona producto){
+    public int insertarProductoXZona(@WebParam(name = "productoXZona") ProductoXZona productoXZona){
         int resultado = 0;
         try{
-            resultado = daoProductoXZona.insertar(producto);
+            resultado = daoProductoXZona.insertar(productoXZona);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
         return resultado;
     }
-    
+
     @WebMethod(operationName = "listarProductosXZonas")
-    public ArrayList<ProductoXZona> listarProductoXZonas(@WebParam(name = "productoStr") String productoStr, @WebParam(name = "zonaStr") String zonaStr) {
+    public ArrayList<ProductoXZona> listarProductosXZonas(@WebParam(name = "nombre") String nombre, @WebParam(name = "familiaStr") String familiaStr, 
+            @WebParam(name = "subFamiliaStr") String subFamiliaStr, @WebParam(name = "marcaStr") String marcaStr, @WebParam(name = "idZona") int idZona) {
         ArrayList<ProductoXZona> misProductoXZonas = new ArrayList<>();
         try{
-            misProductoXZonas = daoProductoXZona.listar(productoStr, zonaStr);
+            misProductoXZonas = daoProductoXZona.listar(nombre,familiaStr,subFamiliaStr,marcaStr,idZona);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }

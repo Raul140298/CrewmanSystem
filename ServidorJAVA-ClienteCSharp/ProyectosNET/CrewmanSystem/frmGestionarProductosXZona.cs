@@ -12,13 +12,13 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarProductosXZona : Form
 	{
-		ProductoXZonaWS.ProductoXZonaWSClient daoProductosXZona;
+		private ProductoXZonaWS.ProductoXZonaWSClient daoProductosXZona;
 		public frmGestionarProductosXZona()
 		{
 			daoProductosXZona = new ProductoXZonaWS.ProductoXZonaWSClient();
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
-			ProductoXZonaWS.productoXZona[] misProductoXZonas = daoProductosXZona.listarProductosXZonas("", "");
+			ProductoXZonaWS.productoXZona[] misProductoXZonas = daoProductosXZona.listarProductosXZonas("","","","",Program.empleado.idEmpleado);
 			if (misProductoXZonas != null)
 			{
 				dataGridView1.DataSource = new BindingList<ProductoXZonaWS.productoXZona>(misProductoXZonas.ToArray());

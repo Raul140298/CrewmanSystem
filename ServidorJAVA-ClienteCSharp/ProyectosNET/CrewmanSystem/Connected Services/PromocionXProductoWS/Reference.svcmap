@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="78dbba73-265d-4f5e-a7e6-deea4b10481c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="63d4d33d-187d-438f-ab7d-fa8835890ca5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.80.91.225:8080/CrewmanSystemServices/PromocionXZonaWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.80.91.225:8080/CrewmanSystemServices/PromocionXProductoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PromocionXZonaWS.wsdl" MetadataType="Wsdl" ID="4dce04f7-4d00-47bd-8ac0-e244b69ed250" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/PromocionXZonaWS?WSDL" />
-    <MetadataFile FileName="PromocionXZonaWS.xsd" MetadataType="Schema" ID="0e5907ed-8824-47bc-be72-0bf9c0058e6f" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/PromocionXZonaWS?xsd=1" />
+    <MetadataFile FileName="PromocionXProductoWS.wsdl" MetadataType="Wsdl" ID="451d9c91-565f-4716-820e-d0bee275603d" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/PromocionXProductoWS?WSDL" />
+    <MetadataFile FileName="PromocionXProductoWS.xsd" MetadataType="Schema" ID="60656afb-cb38-4a98-9685-ce9cc9ee7ebe" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/PromocionXProductoWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

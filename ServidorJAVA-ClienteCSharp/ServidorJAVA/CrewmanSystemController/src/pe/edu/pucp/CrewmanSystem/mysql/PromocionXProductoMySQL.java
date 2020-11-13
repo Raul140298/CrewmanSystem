@@ -22,11 +22,12 @@ public class PromocionXProductoMySQL implements PromocionXProductoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            String sql ="{ call INSERTAR_PROMOCIONXPRODUCTO(?,?,?,?,?)}";
+            String sql ="{ call INSERTAR_PROMOCIONXPRODUCTO(?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_PROMOCIONXPRODUCTO", java.sql.Types.INTEGER);
             cs.setInt("_ID_PROMOCION", promocionXProducto.getPromocion().getIdPromocion());
             cs.setInt("_ID_PRODUCTO", promocionXProducto.getProducto().getIdProducto());
+            cs.setDouble("_PRECIO_REAL", promocionXProducto.getPrecioReal());
             cs.setInt("_DESCUENTO", promocionXProducto.getDescuento());
             cs.setInt("_STOCK", promocionXProducto.getStock());
             cs.executeUpdate();
@@ -61,9 +62,12 @@ public class PromocionXProductoMySQL implements PromocionXProductoDAO{
                 Producto producto= new Producto();
                 promocionXProducto.setIdPromocionXProducto(rs.getInt("ID_PROMOCIONXPRODUCTO"));
                 
-                producto=daoProducto.mostrar(rs.getInt("ID_PRODUCTO"));
+                producto.setNombre(rs.getString("NOMBRE"));
+                producto.setCantUnidad(rs.getInt("CANT_UNIDADES"));
+                producto.setUnidades(rs.getString("UNIDADES"));
                 promocionXProducto.setProducto(producto);
                 
+                promocionXProducto.setPrecioReal(rs.getDouble("PRECIO_REAL"));
                 promocionXProducto.setDescuento(rs.getInt("DESCUENTO"));
                 promocionXProducto.setStock(rs.getInt("STOCK"));
                 promocionXProducto.setStockReservado(rs.getInt("STOCK_RESERVADO"));

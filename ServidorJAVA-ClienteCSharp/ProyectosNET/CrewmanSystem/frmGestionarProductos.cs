@@ -12,7 +12,7 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarProductos : Form
 	{
-		ProductoWS.ProductoWSClient daoProducto;
+		private ProductoWS.ProductoWSClient daoProducto;
 		public frmGestionarProductos()
 		{
 			daoProducto = new ProductoWS.ProductoWSClient();

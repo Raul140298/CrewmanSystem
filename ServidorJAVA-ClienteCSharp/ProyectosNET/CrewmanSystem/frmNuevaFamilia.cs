@@ -12,7 +12,7 @@ namespace CrewmanSystem
 {
 	public partial class frmNuevaFamilia : Form
 	{
-        FamiliaWS.FamiliaWSClient daoFamilia;
+        private FamiliaWS.FamiliaWSClient daoFamilia;
         public frmNuevaFamilia()
 		{
 			InitializeComponent();

@@ -112,19 +112,21 @@ public class ZonaMySQL implements ZonaDAO
     }   
 
     @Override
-    public int mostrar(Empleado empleado) {
+    public Zona mostrar(int idEmpleado) {
         int resultado = 0;
+        Zona zona = new Zona();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             String sql ="{ call MOSTRAR_ZONA_DE_EMPLEADO (?)}";
             cs = con.prepareCall(sql);
-            cs.setInt("_ID_EMPLEADO", empleado.getIdEmpleado());
+            cs.setInt("_ID_EMPLEADO", idEmpleado);
             resultado = cs.executeUpdate();
+            if(resultado==0)return null;
             rs = cs.getResultSet();
             rs.next();
-            empleado.getZona().setIdZona(rs.getInt("ID_ZONA"));
-            empleado.getZona().setNombre(rs.getString("NOMBRE"));
+            zona.setIdZona(rs.getInt("ID_ZONA"));
+            zona.setNombre(rs.getString("NOMBRE"));
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -134,6 +136,6 @@ public class ZonaMySQL implements ZonaDAO
                 System.out.println(ex.getMessage());
             }
         }
-        return resultado;
+        return zona;
     }
 }

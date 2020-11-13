@@ -12,7 +12,7 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarZonas : Form
 	{
-		ZonaWS.ZonaWSClient daoZona;
+		private ZonaWS.ZonaWSClient daoZona;
 		public frmGestionarZonas()
 		{
 			daoZona = new ZonaWS.ZonaWSClient();

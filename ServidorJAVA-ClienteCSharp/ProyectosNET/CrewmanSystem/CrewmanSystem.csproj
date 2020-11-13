@@ -141,7 +141,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\PromocionXZonaWS\Reference.cs">
+    <Compile Include="Connected Services\PromocionXProductoWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -281,12 +281,6 @@
     <Compile Include="frmGestionarPedidos.Designer.cs">
       <DependentUpon>frmGestionarPedidos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGestionarPersonaContacto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGestionarPersonaContacto.Designer.cs">
-      <DependentUpon>frmGestionarPersonaContacto.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmGestionarProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,12 +298,6 @@
     </Compile>
     <Compile Include="frmGestionarPromociones.Designer.cs">
       <DependentUpon>frmGestionarPromociones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmGestionarPromocionesXZona.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGestionarPromocionesXZona.Designer.cs">
-      <DependentUpon>frmGestionarPromocionesXZona.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGestionarQuejas.cs">
       <SubType>Form</SubType>
@@ -388,12 +376,6 @@
     </Compile>
     <Compile Include="frmNuevaMarca.Designer.cs">
       <DependentUpon>frmNuevaMarca.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmNuevaPersonaDeContacto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmNuevaPersonaDeContacto.Designer.cs">
-      <DependentUpon>frmNuevaPersonaDeContacto.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNuevaPromocion.cs">
       <SubType>Form</SubType>
@@ -562,9 +544,6 @@
     <EmbeddedResource Include="frmGestionarPromociones.resx">
       <DependentUpon>frmGestionarPromociones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGestionarPromocionesXZona.resx">
-      <DependentUpon>frmGestionarPromocionesXZona.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmGestionarQuejas.resx">
       <DependentUpon>frmGestionarQuejas.cs</DependentUpon>
     </EmbeddedResource>
@@ -603,9 +582,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNuevaMarca.resx">
       <DependentUpon>frmNuevaMarca.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmNuevaPersonaDeContacto.resx">
-      <DependentUpon>frmNuevaPersonaDeContacto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNuevaPromocion.resx">
       <DependentUpon>frmNuevaPromocion.cs</DependentUpon>
@@ -975,17 +951,17 @@
     <None Include="Connected Services\PromocionWS\PromocionWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\PromocionXZonaWS\CrewmanSystem.PromocionXZonaWS.insertarPromocionXZonaResponse.datasource">
+    <None Include="Connected Services\PromocionXProductoWS\CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PromocionXZonaWS\CrewmanSystem.PromocionXZonaWS.listarPromocionXZonaResponse.datasource">
+    <None Include="Connected Services\PromocionXProductoWS\CrewmanSystem.PromocionXProductoWS.listarPromocionXProductoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PromocionXZonaWS\CrewmanSystem.PromocionXZonaWS.promocionXZona.datasource">
+    <None Include="Connected Services\PromocionXProductoWS\CrewmanSystem.PromocionXProductoWS.promocionXProducto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PromocionXZonaWS\PromocionXZonaWS.wsdl" />
-    <None Include="Connected Services\PromocionXZonaWS\PromocionXZonaWS.xsd">
+    <None Include="Connected Services\PromocionXProductoWS\PromocionXProductoWS.wsdl" />
+    <None Include="Connected Services\PromocionXProductoWS\PromocionXProductoWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\QuejaWS\CrewmanSystem.QuejaWS.actualizarQuejaResponse.datasource">
@@ -1150,12 +1126,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\PromocionXZonaWS\configuration91.svcinfo" />
-    <None Include="Connected Services\PromocionXZonaWS\configuration.svcinfo" />
-    <None Include="Connected Services\PromocionXZonaWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <None Include="Connected Services\QuejaWS\configuration91.svcinfo" />
     <None Include="Connected Services\QuejaWS\configuration.svcinfo" />
     <None Include="Connected Services\QuejaWS\Reference.svcmap">
@@ -1183,6 +1153,12 @@
     <None Include="Connected Services\EmpleadoWS\configuration91.svcinfo" />
     <None Include="Connected Services\EmpleadoWS\configuration.svcinfo" />
     <None Include="Connected Services\EmpleadoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\PromocionXProductoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\PromocionXProductoWS\configuration.svcinfo" />
+    <None Include="Connected Services\PromocionXProductoWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -1220,7 +1196,7 @@
     <WCFMetadataStorage Include="Connected Services\ProductoWS\" />
     <WCFMetadataStorage Include="Connected Services\ProductoXZonaWS\" />
     <WCFMetadataStorage Include="Connected Services\PromocionWS\" />
-    <WCFMetadataStorage Include="Connected Services\PromocionXZonaWS\" />
+    <WCFMetadataStorage Include="Connected Services\PromocionXProductoWS\" />
     <WCFMetadataStorage Include="Connected Services\QuejaWS\" />
     <WCFMetadataStorage Include="Connected Services\SubFamiliaWS\" />
     <WCFMetadataStorage Include="Connected Services\VisitaWS\" />

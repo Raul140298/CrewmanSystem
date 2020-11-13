@@ -9,5 +9,5 @@ public interface ZonaDAO
     int actualizar(Zona zona);
     int eliminar(int idZona);
     ArrayList<Zona> listar();
-    int mostrar(Empleado empleado);
+    Zona mostrar(int idEmpleado);
 }

@@ -62,13 +62,13 @@ public class ZonaWS {
     }
     
     @WebMethod(operationName = "mostrarZona")
-    public int mostrarZona(@WebParam(name = "empleado") Empleado empleado){
-        int resultado = 0;
+    public Zona mostrarZona(@WebParam(name = "idEmpleado") int idEmpleado){
+        Zona zona = new Zona();
         try{
-            resultado = daoZona.mostrar(empleado);
+            zona = daoZona.mostrar(idEmpleado);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
-        return resultado;
+        return zona;
     }    
 }
