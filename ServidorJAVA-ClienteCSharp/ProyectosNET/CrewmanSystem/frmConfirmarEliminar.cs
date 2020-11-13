@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CrewmanSystem
 {
-	public partial class frmConfirmarSalir : Form
+	public partial class frmConfirmarEliminar : Form
 	{
-		public frmConfirmarSalir()
+		public frmConfirmarEliminar()
 		{
 			InitializeComponent();
 		}
@@ -21,6 +21,7 @@ namespace CrewmanSystem
 		{
 			this.Hide();
 			this.Close();
+			this.DialogResult = DialogResult.OK;
 		}
 
 		private void btnCerrarSesion_Click(object sender, EventArgs e)

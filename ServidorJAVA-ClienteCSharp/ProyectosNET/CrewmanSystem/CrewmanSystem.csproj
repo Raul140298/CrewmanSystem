@@ -221,11 +221,11 @@
     <Compile Include="frmConfirmarInsertar.Designer.cs">
       <DependentUpon>frmConfirmarInsertar.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConfirmarSalir.cs">
+    <Compile Include="frmConfirmarEliminar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmConfirmarSalir.Designer.cs">
-      <DependentUpon>frmConfirmarSalir.cs</DependentUpon>
+    <Compile Include="frmConfirmarEliminar.Designer.cs">
+      <DependentUpon>frmConfirmarEliminar.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGestionarCarteras.cs">
       <SubType>Form</SubType>
@@ -505,8 +505,8 @@
     <EmbeddedResource Include="frmConfirmarInsertar.resx">
       <DependentUpon>frmConfirmarInsertar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmConfirmarSalir.resx">
-      <DependentUpon>frmConfirmarSalir.cs</DependentUpon>
+    <EmbeddedResource Include="frmConfirmarEliminar.resx">
+      <DependentUpon>frmConfirmarEliminar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionarCarteras.resx">
       <DependentUpon>frmGestionarCarteras.cs</DependentUpon>
