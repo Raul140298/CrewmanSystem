@@ -22,9 +22,10 @@ public class PromocionMySQL implements PromocionDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            String sql ="{ call INSERTAR_PROMOCION(?,?,?,?,?)}";
+            String sql ="{ call INSERTAR_PROMOCION(?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_PROMOCION", java.sql.Types.INTEGER);
+            cs.setInt("_ID_ZONA", promocion.getZona().getIdZona());
             cs.setString("_NOMBRE", promocion.getNombre());
             cs.setString("_DESCRIPCION", promocion.getDescripcion());
             cs.setDate("_FECHA_INICIO", new java.sql.Date(promocion.getFechaInicio().getTime()));

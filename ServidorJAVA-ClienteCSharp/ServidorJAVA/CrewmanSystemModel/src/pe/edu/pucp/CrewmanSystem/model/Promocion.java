@@ -10,7 +10,7 @@ public class Promocion {
     private Date fechaInicio;
     private Date fechaFin;
     private ArrayList<PromocionXProducto> listaPromocionXProducto;
-    private ArrayList<PromocionXZona> listaPromocionXZona;
+    private Zona zona;
     private boolean activo;
     
     //CONSTRUCTORES
@@ -19,7 +19,7 @@ public class Promocion {
         this.fechaFin=null;
         this.activo=true;
         listaPromocionXProducto=new ArrayList<>();
-        listaPromocionXZona=new ArrayList<>();
+        zona = new Zona();
     }
     
     public Promocion(String nombre, String descripcion){
@@ -27,7 +27,7 @@ public class Promocion {
         this.descripcion = descripcion;
         this.activo=true;
         listaPromocionXProducto=new ArrayList<>();
-        listaPromocionXZona=new ArrayList<>();
+        zona = new Zona();
     }
     //GETTERS y SETTERS   
 
@@ -79,12 +79,12 @@ public class Promocion {
         this.listaPromocionXProducto = listaPromocionXProducto;
     }
 
-    public ArrayList<PromocionXZona> getListaPromocionXZona() {
-        return listaPromocionXZona;
+    public Zona getZona() {
+        return zona;
     }
 
-    public void setListaPromocionXZona(ArrayList<PromocionXZona> listaPromocionXZona) {
-        this.listaPromocionXZona = listaPromocionXZona;
+    public void setZona(Zona zona) {
+        this.zona = zona;
     }
 
     public boolean getActivo() {
