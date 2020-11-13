@@ -17,27 +17,27 @@ namespace CrewmanSystem
 		{
 			daoQueja = new QuejaWS.QuejaWSClient();
 			InitializeComponent();
-			dataGridView1.AutoGenerateColumns = false;
+			dgvQuejas.AutoGenerateColumns = false;
 			QuejaWS.queja[] misQuejas = daoQueja.listarQuejas(0);
 			if (misQuejas != null)
 			{
-				dataGridView1.DataSource = new BindingList<QuejaWS.queja>(misQuejas.ToArray());
+				dgvQuejas.DataSource = new BindingList<QuejaWS.queja>(misQuejas.ToArray());
 			}
 			else
 			{
-				dataGridView1.DataSource = new BindingList<QuejaWS.queja>();
+				dgvQuejas.DataSource = new BindingList<QuejaWS.queja>();
 
 			}
 
 			#region colores de seleccion
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvQuejas.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvQuejas.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvQuejas.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvQuejas.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvQuejas.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvQuejas.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
 	}

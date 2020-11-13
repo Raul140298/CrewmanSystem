@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBuscarZona = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtNombreZona = new System.Windows.Forms.TextBox();
@@ -44,7 +45,6 @@
             this.PRECIO_REAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_INICIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_FIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBuscarZona = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +60,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 81);
             this.panel1.TabIndex = 46;
+            // 
+            // btnBuscarZona
+            // 
+            this.btnBuscarZona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnBuscarZona.FlatAppearance.BorderSize = 0;
+            this.btnBuscarZona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarZona.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarZona.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnBuscarZona.Location = new System.Drawing.Point(396, 12);
+            this.btnBuscarZona.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarZona.Name = "btnBuscarZona";
+            this.btnBuscarZona.Padding = new System.Windows.Forms.Padding(2, 0, 0, 1);
+            this.btnBuscarZona.Size = new System.Drawing.Size(34, 22);
+            this.btnBuscarZona.TabIndex = 92;
+            this.btnBuscarZona.Text = "...";
+            this.btnBuscarZona.UseVisualStyleBackColor = false;
             // 
             // lblID
             // 
@@ -124,6 +140,7 @@
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.dataGridView1.Location = new System.Drawing.Point(0, 81);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -208,22 +225,6 @@
             this.FECHA_FIN.Name = "FECHA_FIN";
             this.FECHA_FIN.ReadOnly = true;
             this.FECHA_FIN.Width = 111;
-            // 
-            // btnBuscarZona
-            // 
-            this.btnBuscarZona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnBuscarZona.FlatAppearance.BorderSize = 0;
-            this.btnBuscarZona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarZona.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarZona.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnBuscarZona.Location = new System.Drawing.Point(396, 12);
-            this.btnBuscarZona.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBuscarZona.Name = "btnBuscarZona";
-            this.btnBuscarZona.Padding = new System.Windows.Forms.Padding(2, 0, 0, 1);
-            this.btnBuscarZona.Size = new System.Drawing.Size(34, 22);
-            this.btnBuscarZona.TabIndex = 92;
-            this.btnBuscarZona.Text = "...";
-            this.btnBuscarZona.UseVisualStyleBackColor = false;
             // 
             // frmBuscarProductoXZona
             // 

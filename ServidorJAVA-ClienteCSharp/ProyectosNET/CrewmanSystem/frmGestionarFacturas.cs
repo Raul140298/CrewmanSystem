@@ -17,26 +17,26 @@ namespace CrewmanSystem
 		{
 			daoFactura = new FacturaWS.FacturaWSClient();
 			InitializeComponent();
-			dataGridView1.AutoGenerateColumns = false;
+			dgvFacturas.AutoGenerateColumns = false;
 			FacturaWS.factura[] misFacturas = daoFactura.listarFacturas(0);
 			if (misFacturas != null)
 			{
-				dataGridView1.DataSource = new BindingList<FacturaWS.factura>(misFacturas.ToArray());
+				dgvFacturas.DataSource = new BindingList<FacturaWS.factura>(misFacturas.ToArray());
 			}
 			else
 			{
-				dataGridView1.DataSource = new BindingList<FacturaWS.factura>();
+				dgvFacturas.DataSource = new BindingList<FacturaWS.factura>();
 
 			}
 			#region colores de seleccion
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvFacturas.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvFacturas.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvFacturas.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvFacturas.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvFacturas.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvFacturas.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
 	}

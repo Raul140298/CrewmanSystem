@@ -22,7 +22,7 @@ namespace CrewmanSystem
 
 			InitializeComponent();
 
-			dataGridView1.AutoGenerateColumns = false;
+			dgvPedidos.AutoGenerateColumns = false;
 			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos();
 			//ClienteWS.cliente[] misClientes = daoCliente.listarClientes("", "");
 
@@ -36,33 +36,33 @@ namespace CrewmanSystem
 
 					p.cliente.razonSocial = c.razonSocial;
 				}
-				dataGridView1.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
+				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
 			}
 			else
 			{
-				dataGridView1.DataSource = new BindingList<PedidoWS.pedido>();
+				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>();
 
 			}
 
 			#region colores de seleccion
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvPedidos.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvPedidos.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvPedidos.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvPedidos.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvPedidos.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvPedidos.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
 
 		private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
 		{
 			//castear objetos y mostrar valor determinado
-			PedidoWS.pedido pedido = dataGridView1.Rows[e.RowIndex].DataBoundItem
+			PedidoWS.pedido pedido = dgvPedidos.Rows[e.RowIndex].DataBoundItem
 			as PedidoWS.pedido;
 
-			dataGridView1.Rows[e.RowIndex].Cells["CLIENTE"].Value = pedido.cliente.razonSocial;
+			dgvPedidos.Rows[e.RowIndex].Cells["CLIENTE"].Value = pedido.cliente.razonSocial;
 		}
 	}
 }
