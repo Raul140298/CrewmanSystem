@@ -17,28 +17,28 @@ namespace CrewmanSystem
 		{
 			daoVisita = new VisitaWS.VisitaWSClient();
 			InitializeComponent();
-			dataGridView1.AutoGenerateColumns = false;
+			dgvVisitas.AutoGenerateColumns = false;
 			VisitaWS.visita[] misVisitas = daoVisita.listarVisitas(null);
 			if (misVisitas != null)
 			{
-				dataGridView1.DataSource = new BindingList<VisitaWS.visita>(misVisitas.ToArray());
+				dgvVisitas.DataSource = new BindingList<VisitaWS.visita>(misVisitas.ToArray());
 			}
 			else
 			{
-				dataGridView1.DataSource = new BindingList<VisitaWS.visita>();
+				dgvVisitas.DataSource = new BindingList<VisitaWS.visita>();
 
 			}
 
 
 			#region colores de seleccion
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvVisitas.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvVisitas.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvVisitas.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvVisitas.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvVisitas.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvVisitas.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
 
