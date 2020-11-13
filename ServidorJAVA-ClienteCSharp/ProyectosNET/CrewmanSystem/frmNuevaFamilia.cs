@@ -17,7 +17,7 @@ namespace CrewmanSystem
         {
             InitializeComponent();
             if (frmVentanaPrincipal.nBtn == 1)
-            {
+            {   //OBTNER DATOS DE FILA SELECCIONADA
                 frmGestionarFamilias.familiaSeleccionada = (FamiliaWS.familia)frmGestionarFamilias.dgv.CurrentRow.DataBoundItem;
                 txtId.Text = frmGestionarFamilias.familiaSeleccionada.idFamilia.ToString();
                 txtDescripcion.Text = frmGestionarFamilias.familiaSeleccionada.descripcion;
@@ -55,7 +55,7 @@ namespace CrewmanSystem
             }
             frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
             if (formInsertar.ShowDialog() == DialogResult.OK)
-            {
+            {   //VERIFICAR QUE TIPO DE BOTÓN SE MACHUCÓ Y DEPENDIENDO HACER ALGO
                 FamiliaWS.familia familia = new FamiliaWS.familia();
                 familia.descripcion = txtDescripcion.Text;
                 if (frmVentanaPrincipal.nBtn == 0)

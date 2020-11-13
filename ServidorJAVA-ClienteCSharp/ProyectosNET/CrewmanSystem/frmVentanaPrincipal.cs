@@ -527,10 +527,9 @@ namespace CrewmanSystem
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarCliente());
 					break;
 				default:
-					MessageBox.Show("Error: El formulario aun no existe");
+					MessageBox.Show("Error: El formulario aún no existe");
 					break;
 			}
-
 			ActivaBoton(Program.pantallas.Last());
 		}
 		#endregion
@@ -797,9 +796,6 @@ namespace CrewmanSystem
 			}
 			modificaPagina();
 		}
-
-
-
         #endregion
 
     }
