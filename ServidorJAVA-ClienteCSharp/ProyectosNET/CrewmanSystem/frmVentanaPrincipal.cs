@@ -18,9 +18,9 @@ namespace CrewmanSystem
 	{
 		private CrewPantalla padre;
 		private Form child;
-		private BTNestado estado = BTNestado.vacio;
-		private int nMaxAnt = 7;
-		private int nHojaDGV = 1;
+		private BTNestado estado;
+		private int nMaxAnt;
+		private int nHojaDGV;
 		private Size anterior;
 		public static IconButton act;
 		public static IconButton elim;
@@ -32,6 +32,9 @@ namespace CrewmanSystem
 			InitializeComponent();
 			//COMIENZO DEL CODIGO
 			customizeDesign();
+			estado = BTNestado.vacio;
+			nMaxAnt = 7;
+			nHojaDGV = 1;
 			act = btnActualizar;
 			elim = btnEliminar;
 			//logeoExitoso
