@@ -33,8 +33,6 @@ public class Main{
     private static ArrayList<Promocion> misPromociones;
     private static PromocionXProductoDAO daoPromocionXProducto=new PromocionXProductoMySQL();
     private static ArrayList<PromocionXProducto> misPromocionXProducto;
-    private static PromocionXZonaDAO daoPromocionXZona=new PromocionXZonaMySQL();
-    private static ArrayList<PromocionXZona> misPromocionXZona;
     private static PedidoDAO daoPedido=new PedidoMySQL();
     private static ArrayList<Pedido> misPedidos;
     private static LineaPedidoDAO daoLineaPedido=new LineaPedidoMySQL();
@@ -65,7 +63,6 @@ public class Main{
 //        gestionarProductoXZona();
 //        gestionarPromociones();
 //        gestionarPromocionXProducto();
-//        gestionarPromocionXZona();
 //        gestionarPedidos();
 //        gestionarLineasDePedido();
 //        gestionarFacturas();
@@ -446,20 +443,6 @@ public class Main{
         System.out.println("==================================================================================");
         for(PromocionXProducto pxp:misPromocionXProducto) 
             System.out.println(pxp.getIdPromocionXProducto()+" - "+pxp.getProducto().getNombre()+" - "+pxp.getDescuento()+" - "+pxp.getStock()); 
-        System.out.println("\n");
-    }
-    
-    private static void gestionarPromocionXZona(){
-//        misPromociones=daoPromocion.listar();
-//        misZonas=daoZona.listar();
-//        PromocionXZona miPromoXZona = new PromocionXZona(misPromociones.get(0), misZonas.get(0));
-//        daoPromocionXZona.insertar(miPromoXZona);
-        
-        misPromocionXZona=daoPromocionXZona.listar(misPromociones.get(0).getIdPromocion());
-        System.out.println("LISTADO DE PROMOCION POR ZONA");
-        System.out.println("==================================================================================");
-        for(PromocionXZona pxz:misPromocionXZona) 
-            System.out.println(pxz.getIdPromocionXZona()+" - "+pxz.getZona().getNombre()); 
         System.out.println("\n");
     }
     

@@ -52,9 +52,6 @@
     <service name="NotaDeCreditoWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.NotaDeCreditoWS</implementation-class>
     </service>
-    <service name="PromocionXZonaWS">
-      <implementation-class>pe.edu.pucp.CrewmanSystem.services.PromocionXZonaWS</implementation-class>
-    </service>
     <service name="FamiliaWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.FamiliaWS</implementation-class>
     </service>
