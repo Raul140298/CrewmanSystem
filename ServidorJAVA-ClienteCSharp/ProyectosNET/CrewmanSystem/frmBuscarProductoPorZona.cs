@@ -56,7 +56,7 @@ namespace CrewmanSystem
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            if (dgvProductos.CurrentRow.Index>1)
+            if (dgvProductos.CurrentRow.Index<0)
             {
                 return;
             }

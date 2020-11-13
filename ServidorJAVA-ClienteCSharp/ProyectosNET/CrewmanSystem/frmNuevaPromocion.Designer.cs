@@ -49,6 +49,10 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtUnidades = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtCantUnidades = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPrecioReal = new System.Windows.Forms.TextBox();
             this.btnBuscarProducto = new System.Windows.Forms.Button();
@@ -63,8 +67,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dgvPromocionXProducto = new System.Windows.Forms.DataGridView();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.NRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE_PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CANT_UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,10 +74,8 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCUENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.STOCK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtCantUnidades = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtUnidades = new System.Windows.Forms.TextBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -231,7 +231,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(729, 429);
+            this.panel1.Size = new System.Drawing.Size(750, 429);
             this.panel1.TabIndex = 75;
             // 
             // btnGuardar
@@ -254,7 +254,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 809);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(729, 65);
+            this.panel2.Size = new System.Drawing.Size(750, 65);
             this.panel2.TabIndex = 76;
             // 
             // groupBox3
@@ -282,6 +282,44 @@
             this.groupBox3.TabIndex = 93;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Productos";
+            // 
+            // txtUnidades
+            // 
+            this.txtUnidades.Enabled = false;
+            this.txtUnidades.Location = new System.Drawing.Point(347, 101);
+            this.txtUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUnidades.Name = "txtUnidades";
+            this.txtUnidades.Size = new System.Drawing.Size(72, 22);
+            this.txtUnidades.TabIndex = 89;
+            // 
+            // label5
+            // 
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Location = new System.Drawing.Point(262, 101);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 22);
+            this.label5.TabIndex = 88;
+            this.label5.Text = "Unidades :";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label4
+            // 
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Location = new System.Drawing.Point(7, 101);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(141, 22);
+            this.label4.TabIndex = 87;
+            this.label4.Text = "Cant. Unidades :";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtCantUnidades
+            // 
+            this.txtCantUnidades.Enabled = false;
+            this.txtCantUnidades.Location = new System.Drawing.Point(154, 101);
+            this.txtCantUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCantUnidades.Name = "txtCantUnidades";
+            this.txtCantUnidades.Size = new System.Drawing.Size(81, 22);
+            this.txtCantUnidades.TabIndex = 86;
             // 
             // label3
             // 
@@ -414,7 +452,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 429);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(729, 243);
+            this.panel6.Size = new System.Drawing.Size(750, 243);
             this.panel6.TabIndex = 79;
             // 
             // panel7
@@ -425,7 +463,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 672);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(729, 137);
+            this.panel7.Size = new System.Drawing.Size(750, 137);
             this.panel7.TabIndex = 80;
             // 
             // dgvPromocionXProducto
@@ -478,25 +516,9 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvPromocionXProducto.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPromocionXProducto.RowTemplate.Height = 24;
-            this.dgvPromocionXProducto.Size = new System.Drawing.Size(689, 137);
+            this.dgvPromocionXProducto.Size = new System.Drawing.Size(710, 137);
             this.dgvPromocionXProducto.TabIndex = 110;
             this.dgvPromocionXProducto.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPromocionXProducto_CellFormatting);
-            // 
-            // panel8
-            // 
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(709, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(20, 137);
-            this.panel8.TabIndex = 109;
-            // 
-            // panel9
-            // 
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(20, 137);
-            this.panel9.TabIndex = 108;
             // 
             // NRO
             // 
@@ -557,50 +579,28 @@
             this.STOCK.ReadOnly = true;
             this.STOCK.Width = 79;
             // 
-            // label4
+            // panel8
             // 
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Location = new System.Drawing.Point(7, 101);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 22);
-            this.label4.TabIndex = 87;
-            this.label4.Text = "Cant. Unidades :";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel8.Location = new System.Drawing.Point(730, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(20, 137);
+            this.panel8.TabIndex = 109;
             // 
-            // txtCantUnidades
+            // panel9
             // 
-            this.txtCantUnidades.Enabled = false;
-            this.txtCantUnidades.Location = new System.Drawing.Point(154, 101);
-            this.txtCantUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCantUnidades.Name = "txtCantUnidades";
-            this.txtCantUnidades.Size = new System.Drawing.Size(81, 22);
-            this.txtCantUnidades.TabIndex = 86;
-            // 
-            // label5
-            // 
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Location = new System.Drawing.Point(262, 101);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 22);
-            this.label5.TabIndex = 88;
-            this.label5.Text = "Unidades :";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtUnidades
-            // 
-            this.txtUnidades.Enabled = false;
-            this.txtUnidades.Location = new System.Drawing.Point(347, 101);
-            this.txtUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUnidades.Name = "txtUnidades";
-            this.txtUnidades.Size = new System.Drawing.Size(72, 22);
-            this.txtUnidades.TabIndex = 89;
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(20, 137);
+            this.panel9.TabIndex = 108;
             // 
             // frmNuevaPromocion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(750, 561);
+            this.ClientSize = new System.Drawing.Size(771, 561);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);

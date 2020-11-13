@@ -158,6 +158,11 @@ namespace CrewmanSystem
 
         private void btnAddProducto_Click(object sender, EventArgs e)
         {
+            if(txtNombreProducto.Text == "")
+            {
+                MessageBox.Show("Debe escoger un producto");
+                return;
+            }
             try{
                 int descuento = Convert.ToInt32(txtDescuento.Text);
             }
@@ -184,6 +189,8 @@ namespace CrewmanSystem
             nuevoPromocionXProducto.producto = new PromocionXProductoWS.producto();
             nuevoPromocionXProducto.producto.idProducto = miProductoXZona.producto.idProducto;
             nuevoPromocionXProducto.producto.nombre = miProductoXZona.producto.nombre;
+            nuevoPromocionXProducto.producto.cantUnidad = miProductoXZona.producto.cantUnidad;
+            nuevoPromocionXProducto.producto.unidades = miProductoXZona.producto.unidades;
             nuevoPromocionXProducto.precioReal = miProductoXZona.precioReal;
             nuevoPromocionXProducto.descuento = Convert.ToInt32(txtDescuento.Text);
             nuevoPromocionXProducto.stock = Convert.ToInt32(txtStock.Text);
@@ -195,10 +202,15 @@ namespace CrewmanSystem
             txtPrecioReal.Text = "";
             txtUnidades.Text = "";
             txtCantUnidades.Text = "";
+            txtNombreProducto.Text = "";
         }
 
         private void btnRemoveProducto_Click(object sender, EventArgs e)
         {
+            if (dgvPromocionXProducto.CurrentRow == null || dgvPromocionXProducto.CurrentRow.Index < 0)
+            {
+                return;
+            }
             int indice = dgvPromocionXProducto.CurrentRow.Index;
             misPromocionXProducto.RemoveAt(indice);
             cargarTablaPromocionXProducto();
@@ -206,16 +218,8 @@ namespace CrewmanSystem
 
         private void cargarTablaPromocionXProducto()
         {
-            if (misPromocionXProducto != null)
-            {
-                dgvPromocionXProducto.AutoGenerateColumns = false;
-                dgvPromocionXProducto.DataSource = misPromocionXProducto;
-            }
-            else
-            {
-                dgvPromocionXProducto.AutoGenerateColumns = false;
-                dgvPromocionXProducto.DataSource = new BindingList<ProductoXZonaWS.productoXZona>();
-            }
+            dgvPromocionXProducto.AutoGenerateColumns = false;
+            dgvPromocionXProducto.DataSource = misPromocionXProducto;
         }
 
         private void cboZona_SelectedIndexChanged(object sender, EventArgs e)
@@ -231,6 +235,9 @@ namespace CrewmanSystem
 
             dgvPromocionXProducto.Rows[e.RowIndex].Cells["NRO"].Value = e.RowIndex+1;
             dgvPromocionXProducto.Rows[e.RowIndex].Cells["NOMBRE_PRODUCTO"].Value = pxp.producto.nombre;
+            dgvPromocionXProducto.Rows[e.RowIndex].Cells["CANT_UNIDADES"].Value = pxp.producto.cantUnidad;
+            dgvPromocionXProducto.Rows[e.RowIndex].Cells["UNIDADES"].Value = pxp.producto.unidades;
+
         }
     }
 }
