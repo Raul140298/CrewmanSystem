@@ -26,6 +26,7 @@ namespace CrewmanSystem
             cboZona.ValueMember = "idZona";
             cboZona.DisplayMember = "nombre";
             misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>();
+            dgvPromocionXProducto.AutoGenerateColumns = false;
             cargarTablaPromocionXProducto();
         }
 
