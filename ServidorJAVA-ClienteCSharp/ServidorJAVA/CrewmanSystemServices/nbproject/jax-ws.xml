@@ -43,11 +43,11 @@
     <service name="ClienteXZonaWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.ClienteXZonaWS</implementation-class>
     </service>
-    <service name="ProductoWS">
-      <implementation-class>pe.edu.pucp.CrewmanSystem.services.ProductoWS</implementation-class>
-    </service>
     <service name="VisitaWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.VisitaWS</implementation-class>
+    </service>
+    <service name="ProductoWS">
+      <implementation-class>pe.edu.pucp.CrewmanSystem.services.ProductoWS</implementation-class>
     </service>
     <service name="NotaDeCreditoWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.NotaDeCreditoWS</implementation-class>

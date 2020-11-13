@@ -22,6 +22,7 @@ namespace CrewmanSystem
             InitializeComponent();
             idZona = idZonaParam;
             daoProductoXZona = new ProductoXZonaWS.ProductoXZonaWSClient();
+            dgvProductos.AutoGenerateColumns = false;
             cargarTabla();
             #region colores de seleccion
             dgvProductos.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
@@ -37,7 +38,7 @@ namespace CrewmanSystem
 
         private void cargarTabla()
         {
-            misProductoXZona = daoProductoXZona.listarProductosXZonas(txtNombre.Text,txtFamilia.Text,txtSubfamilia.Text,txtMarca.Text,idZona);
+            misProductoXZona = daoProductoXZona.listarProductosXZonas(txtNombre.Text, txtFamilia.Text, txtSubfamilia.Text, txtMarca.Text, 125);
             if (misProductoXZona != null)
             {
                 dgvProductos.DataSource = new BindingList<ProductoXZonaWS.productoXZona>(misProductoXZona.ToArray());
@@ -50,39 +51,16 @@ namespace CrewmanSystem
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            foreach (Control c in panel1.Controls)
-            {
-                if (c is TextBox)
-                {
-                    TextBox textBox = c as TextBox;
-                    if (textBox.Text == string.Empty && textBox.Name != "txtId")
-                    {
-                        MessageBox.Show("Falta llenar los datos de " +
-                            textBox.Name.Substring(3));
-                        return;
-                    }
-                    else
-                    {
-                        if (textBox == txtNombre | textBox == txtFamilia | textBox == txtSubfamilia | textBox == txtMarca)
-                        {
-                            String txtNombreAux = string.Join("", textBox.Text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
-                            if (!txtNombreAux.Trim().All(Char.IsLetter))
-                            {
-                                MessageBox.Show("Los datos de " +
-                                    textBox.Name.Substring(3) + " solo pueden contener letras");
-                                return;
-                            }
-                        }
-                    }
-                }
-            }
-            //AQUI VA EL BUSCAR
             cargarTabla();
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            productoXZonaSeleccionado = (ProductoXZonaWS.productoXZona) dgvProductos.CurrentRow.DataBoundItem;
+            if (dgvProductos.CurrentRow.Index>1)
+            {
+                return;
+            }
+            productoXZonaSeleccionado = (ProductoXZonaWS.productoXZona)dgvProductos.CurrentRow.DataBoundItem;
             this.DialogResult = DialogResult.OK;
         }
 
@@ -104,6 +82,5 @@ namespace CrewmanSystem
             dgvProductos.Rows[e.RowIndex].Cells["UNIDADES"].Value = productoXZona.producto.unidades;
             dgvProductos.Rows[e.RowIndex].Cells["STOCK"].Value = productoXZona.producto.stock;
         }
-    }
     }
 }

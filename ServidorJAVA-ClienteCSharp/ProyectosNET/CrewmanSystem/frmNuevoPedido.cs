@@ -38,11 +38,11 @@ namespace CrewmanSystem
 
         private void btnBuscarProductoXZona_Click(object sender, EventArgs e)
         {
-            frmBuscarProductoPorZona formBusquedaProductoPorZona = new frmBuscarProductoPorZona();
-            if(formBusquedaProductoPorZona.ShowDialog() == DialogResult.OK)
-            {
+            //frmBuscarProductoPorZona formBusquedaProductoPorZona = new frmBuscarProductoPorZona(Program.empleado.idEmpleado);
+            //if(formBusquedaProductoPorZona.ShowDialog() == DialogResult.OK)
+            //{
 
-            }
+            //}
         }
     }
 }

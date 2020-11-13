@@ -516,9 +516,6 @@ namespace CrewmanSystem
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoCliente());
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarCliente());
 					break;
-				case "frmGestionarPersonaContacto":
-					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaPersonaDeContacto());
-					break;
 				default:
 					MessageBox.Show("Error: El formulario aun no existe");
 					break;

@@ -273,8 +273,8 @@
       <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
       <xs:element name="idPromocion" type="xs:int" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="listaPromocionXProducto" nillable="true" type="tns:promocionXProducto" />
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaPromocionXZona" nillable="true" type="tns:promocionXZona" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="zona" type="tns:zona" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="marca">

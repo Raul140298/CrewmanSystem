@@ -18,7 +18,7 @@ namespace CrewmanSystem
 			daoProductosXZona = new ProductoXZonaWS.ProductoXZonaWSClient();
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
-			ProductoXZonaWS.productoXZona[] misProductoXZonas = daoProductosXZona.listarProductosXZonas("", "");
+			ProductoXZonaWS.productoXZona[] misProductoXZonas = daoProductosXZona.listarProductosXZonas("","","","",Program.empleado.idEmpleado);
 			if (misProductoXZonas != null)
 			{
 				dataGridView1.DataSource = new BindingList<ProductoXZonaWS.productoXZona>(misProductoXZonas.ToArray());

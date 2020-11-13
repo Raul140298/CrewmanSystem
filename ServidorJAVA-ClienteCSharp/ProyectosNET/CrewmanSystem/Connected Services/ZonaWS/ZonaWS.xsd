@@ -10,6 +10,16 @@
   <xs:element name="listarZonasResponse" type="tns:listarZonasResponse" />
   <xs:element name="mostrarZona" type="tns:mostrarZona" />
   <xs:element name="mostrarZonaResponse" type="tns:mostrarZonaResponse" />
+  <xs:complexType name="eliminarZona">
+    <xs:sequence>
+      <xs:element name="idZona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarZonaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarZona">
     <xs:sequence>
       <xs:element minOccurs="0" name="zona" type="tns:zona" />
@@ -214,15 +224,7 @@
       <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
       <xs:element name="idPromocion" type="xs:int" />
       <xs:element minOccurs="0" maxOccurs="unbounded" name="listaPromocionXProducto" nillable="true" type="tns:promocionXProducto" />
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaPromocionXZona" nillable="true" type="tns:promocionXZona" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="promocionXZona">
-    <xs:sequence>
-      <xs:element name="activo" type="xs:boolean" />
-      <xs:element name="idPromocionXZona" type="xs:int" />
-      <xs:element minOccurs="0" name="promocion" type="tns:promocion" />
       <xs:element minOccurs="0" name="zona" type="tns:zona" />
     </xs:sequence>
   </xs:complexType>
@@ -300,17 +302,15 @@
       <xs:element minOccurs="0" name="zona" type="tns:zona" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="promocionXZona">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="idPromocionXZona" type="xs:int" />
+      <xs:element minOccurs="0" name="promocion" type="tns:promocion" />
+      <xs:element minOccurs="0" name="zona" type="tns:zona" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarZonaResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarZona">
-    <xs:sequence>
-      <xs:element name="idZona" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarZonaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -327,12 +327,12 @@
   </xs:complexType>
   <xs:complexType name="mostrarZona">
     <xs:sequence>
-      <xs:element minOccurs="0" name="empleado" type="tns:empleado" />
+      <xs:element name="idEmpleado" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="mostrarZonaResponse">
     <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element minOccurs="0" name="return" type="tns:zona" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarZonas">
