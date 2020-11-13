@@ -47,11 +47,11 @@ public class ProductoXZonaMySQL implements ProductoXZonaDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            String sql ="{ call LISTAR_PRODUCTOXZONA (?,?) }";
+            String sql ="{ call LISTAR_PRODUCTOXZONA (?,?,?,?,?) }";
             cs = con.prepareCall(sql);
-            cs.setString("_P_NOMBRE", nombre);
-            cs.setString("_F_NOMBRE", familiaStr);
-            cs.setString("_S_NOMBRE", subFamiliaStr);
+            cs.setString("_NOMBRE", nombre);
+            cs.setString("_F_DESCRIPCION", familiaStr);
+            cs.setString("_S_DESCRIPCION", subFamiliaStr);
             cs.setString("_M_NOMBRE", marcaStr);
             cs.setInt("_ID_ZONA", idZona);
             cs.executeUpdate();
