@@ -13,8 +13,8 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarEmpleados : Form
 	{
-		EmpleadoWS.EmpleadoWSClient daoEmpleado;
-		ZonaWS.ZonaWSClient daoZona;
+		private EmpleadoWS.EmpleadoWSClient daoEmpleado;
+		private ZonaWS.ZonaWSClient daoZona;
 		public frmGestionarEmpleados()
 		{
 			daoEmpleado = new EmpleadoWS.EmpleadoWSClient();

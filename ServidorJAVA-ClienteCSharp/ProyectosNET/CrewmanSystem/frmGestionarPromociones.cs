@@ -12,7 +12,7 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarPromociones : Form
 	{
-		PromocionWS.PromocionWSClient daoPromocion;
+		private PromocionWS.PromocionWSClient daoPromocion;
 		public frmGestionarPromociones()
 		{
 			daoPromocion = new PromocionWS.PromocionWSClient();

@@ -12,7 +12,7 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarMarcas : Form
 	{
-		MarcaWS.MarcaWSClient daoMarca;
+		private MarcaWS.MarcaWSClient daoMarca;
 		public frmGestionarMarcas()
 		{
 			daoMarca = new MarcaWS.MarcaWSClient();

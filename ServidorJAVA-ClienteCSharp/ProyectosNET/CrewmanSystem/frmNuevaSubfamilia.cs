@@ -12,8 +12,8 @@ namespace CrewmanSystem
 {
 	public partial class frmNuevaSubfamilia : Form
 	{
-        SubFamiliaWS.SubFamiliaWSClient daoSubfamilia;
-        FamiliaWS.FamiliaWSClient daoFamilia;
+        private SubFamiliaWS.SubFamiliaWSClient daoSubfamilia;
+        private FamiliaWS.FamiliaWSClient daoFamilia;
         public frmNuevaSubfamilia()
         {
             InitializeComponent();
