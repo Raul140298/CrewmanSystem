@@ -35,7 +35,7 @@ namespace CrewmanSystem
                     if (textBox.Text == string.Empty && textBox.Name != "txtId")
                     {
                         MessageBox.Show("Falta llenar los datos de " +
-                            textBox.Name.Substring(3));
+                            textBox.Name.Substring(3), "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     else
@@ -46,7 +46,7 @@ namespace CrewmanSystem
                             if (!txtNombreAux.All(Char.IsLetter))
                             {
                                 MessageBox.Show("Los datos de " +
-                                    textBox.Name.Substring(3) + " solo pueden contener letras");
+                                    textBox.Name.Substring(3) + " solo pueden contener letras", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
                         }

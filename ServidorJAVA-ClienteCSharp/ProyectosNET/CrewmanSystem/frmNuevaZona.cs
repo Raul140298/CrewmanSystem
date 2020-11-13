@@ -48,15 +48,21 @@ namespace CrewmanSystem
 					}
 				}
 			}
-
+			
 			frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
 			if (formInsertar.ShowDialog() == DialogResult.OK)
 			{
 				ZonaWS.zona zona = new ZonaWS.zona();
 				zona.nombre = txtNombre.Text;
-				int resultado = daoZona.insertarZona(zona);
-				txtId.Text = resultado.ToString();
-				//Usar resultado para ver si se inserto correctamente
+				if (frmVentanaPrincipal.nBtn == 0) {
+					int resultado = daoZona.insertarZona(zona);
+					txtId.Text = resultado.ToString();
+				}
+                else if(frmVentanaPrincipal.nBtn == 1)
+                {
+					zona.idZona = Convert.ToInt32(txtId.Text);
+					daoZona.actualizarZona(zona);
+                }
 			}
         }
     }
