@@ -69,7 +69,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 199);
+            this.panel1.Size = new System.Drawing.Size(985, 100);
             this.panel1.TabIndex = 45;
             // 
             // label5
@@ -85,9 +85,9 @@
             // label4
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Location = new System.Drawing.Point(11, 55);
+            this.label4.Location = new System.Drawing.Point(384, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 22);
+            this.label4.Size = new System.Drawing.Size(85, 22);
             this.label4.TabIndex = 61;
             this.label4.Text = "Marca :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -95,7 +95,7 @@
             // label3
             // 
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(11, 102);
+            this.label3.Location = new System.Drawing.Point(11, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 22);
             this.label3.TabIndex = 60;
@@ -105,9 +105,9 @@
             // lblID
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Location = new System.Drawing.Point(11, 147);
+            this.lblID.Location = new System.Drawing.Point(366, 52);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(140, 22);
+            this.lblID.Size = new System.Drawing.Size(103, 22);
             this.lblID.TabIndex = 59;
             this.lblID.Text = "Subfamilia :";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -118,39 +118,40 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(487, 12);
+            this.btnBuscar.Location = new System.Drawing.Point(707, 28);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(160, 40);
+            this.btnBuscar.Size = new System.Drawing.Size(144, 30);
             this.btnBuscar.TabIndex = 54;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtSubfamilia
             // 
-            this.txtSubfamilia.Location = new System.Drawing.Point(157, 147);
+            this.txtSubfamilia.Location = new System.Drawing.Point(475, 52);
             this.txtSubfamilia.Name = "txtSubfamilia";
-            this.txtSubfamilia.Size = new System.Drawing.Size(280, 22);
+            this.txtSubfamilia.Size = new System.Drawing.Size(189, 22);
             this.txtSubfamilia.TabIndex = 53;
             // 
             // txtFamilia
             // 
-            this.txtFamilia.Location = new System.Drawing.Point(157, 102);
+            this.txtFamilia.Location = new System.Drawing.Point(157, 52);
             this.txtFamilia.Name = "txtFamilia";
-            this.txtFamilia.Size = new System.Drawing.Size(280, 22);
+            this.txtFamilia.Size = new System.Drawing.Size(189, 22);
             this.txtFamilia.TabIndex = 51;
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(157, 55);
+            this.txtMarca.Location = new System.Drawing.Point(475, 12);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(280, 22);
+            this.txtMarca.Size = new System.Drawing.Size(189, 22);
             this.txtMarca.TabIndex = 49;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(157, 12);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(280, 22);
+            this.txtNombre.Size = new System.Drawing.Size(189, 22);
             this.txtNombre.TabIndex = 46;
             // 
             // dataGridView1
@@ -185,7 +186,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.dataGridView1.Location = new System.Drawing.Point(0, 199);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 100);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -204,11 +205,13 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 418);
+            this.dataGridView1.Size = new System.Drawing.Size(985, 517);
             this.dataGridView1.TabIndex = 46;
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
             // ID
             // 
+            this.ID.DataPropertyName = "idProducto";
             this.ID.HeaderText = "Id";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
@@ -217,6 +220,7 @@
             // 
             // NOMBRE
             // 
+            this.NOMBRE.DataPropertyName = "nombre";
             this.NOMBRE.HeaderText = "Nombre";
             this.NOMBRE.MinimumWidth = 6;
             this.NOMBRE.Name = "NOMBRE";
@@ -249,6 +253,7 @@
             // 
             // PRECIOSUGERIDO
             // 
+            this.PRECIOSUGERIDO.DataPropertyName = "precioSugerido";
             this.PRECIOSUGERIDO.HeaderText = "Precio Sugerido";
             this.PRECIOSUGERIDO.MinimumWidth = 6;
             this.PRECIOSUGERIDO.Name = "PRECIOSUGERIDO";
@@ -257,6 +262,7 @@
             // 
             // CANT_UNIDADES
             // 
+            this.CANT_UNIDADES.DataPropertyName = "cantUnidad";
             this.CANT_UNIDADES.HeaderText = "Cantidad Unid.";
             this.CANT_UNIDADES.MinimumWidth = 6;
             this.CANT_UNIDADES.Name = "CANT_UNIDADES";
@@ -265,6 +271,7 @@
             // 
             // UNIDADES
             // 
+            this.UNIDADES.DataPropertyName = "unidades";
             this.UNIDADES.HeaderText = "Unidades";
             this.UNIDADES.MinimumWidth = 6;
             this.UNIDADES.Name = "UNIDADES";
@@ -273,6 +280,7 @@
             // 
             // STOCK
             // 
+            this.STOCK.DataPropertyName = "stock";
             this.STOCK.HeaderText = "Stock";
             this.STOCK.MinimumWidth = 6;
             this.STOCK.Name = "STOCK";
@@ -283,7 +291,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 617);
+            this.ClientSize = new System.Drawing.Size(985, 617);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Name = "frmBuscarProducto";
@@ -303,19 +311,19 @@
 		private System.Windows.Forms.TextBox txtMarca;
 		private System.Windows.Forms.TextBox txtNombre;
 		private System.Windows.Forms.DataGridView dataGridView1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-		private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
-		private System.Windows.Forms.DataGridViewTextBoxColumn SUBFAMILIA;
-		private System.Windows.Forms.DataGridViewTextBoxColumn FAMILIA;
-		private System.Windows.Forms.DataGridViewTextBoxColumn MARCA;
-		private System.Windows.Forms.DataGridViewTextBoxColumn PRECIOSUGERIDO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn CANT_UNIDADES;
-		private System.Windows.Forms.DataGridViewTextBoxColumn UNIDADES;
-		private System.Windows.Forms.DataGridViewTextBoxColumn STOCK;
 		private System.Windows.Forms.Button btnBuscar;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label lblID;
-	}
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SUBFAMILIA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FAMILIA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MARCA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRECIOSUGERIDO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CANT_UNIDADES;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UNIDADES;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STOCK;
+    }
 }
