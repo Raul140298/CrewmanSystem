@@ -22,6 +22,9 @@ namespace CrewmanSystem
 		private int nMaxAnt = 7;
 		private int nHojaDGV = 1;
 		private Size anterior;
+		public static IconButton act;
+		public static IconButton elim;
+		public static int nBtn;
 
 		public frmVentanaPrincipal()
 		{
@@ -29,6 +32,8 @@ namespace CrewmanSystem
 			InitializeComponent();
 			//COMIENZO DEL CODIGO
 			customizeDesign();
+			act = btnActualizar;
+			elim = btnEliminar;
 			//logeoExitoso
 			logeoExitoso(Program.empleado.cargo.idCargo);
 
@@ -457,6 +462,7 @@ namespace CrewmanSystem
 			string formulario = "";
 			if (Program.pantallas.Count < 1) return;
 			if(Program.pantallas.Last().Formulario != null) formulario = Program.pantallas.Last().Formulario.GetType().Name;
+			nBtn = boton;
 			switch (formulario)
 			{		
 				case "frmGestionarZonas":
@@ -499,6 +505,7 @@ namespace CrewmanSystem
 					break;
 				case "frmGestionarFamilias":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaFamilia());
+					if (boton == 2) frmGestionarFamilias.eliminar();
 					break;
 				case "frmGestionarFacturas":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaFactura());
@@ -759,12 +766,11 @@ namespace CrewmanSystem
 		{
 			estado = BTNestado.eliminar;
 			estadoBotones();
-			frmConfirmarSalir confirma = new frmConfirmarSalir();
+			frmConfirmarEliminar confirma = new frmConfirmarEliminar();
 			if(confirma.ShowDialog() == DialogResult.OK)
             {
-
-            }
-			//llamarMetodosDAO((IconButton)sender, 2);
+				llamarMetodosDAO((IconButton)sender, 2);
+			}
 		}
 
 		private void btnBuscar_Click(object sender, EventArgs e)

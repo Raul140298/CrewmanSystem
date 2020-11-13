@@ -12,11 +12,15 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarFamilias : Form
 	{
-		FamiliaWS.FamiliaWSClient daoFamilia;
+		public static FamiliaWS.FamiliaWSClient daoFamilia;
+		public static FamiliaWS.familia familiaSeleccionada;
+		public static DataGridView dgv;
+
 		public frmGestionarFamilias()
 		{
 			daoFamilia = new FamiliaWS.FamiliaWSClient();
 			InitializeComponent();
+			dgv = dataGridView1;
 			dataGridView1.AutoGenerateColumns = false;
 			FamiliaWS.familia[] misFamilias = daoFamilia.listarFamilias();
 			if (misFamilias != null)
@@ -38,5 +42,28 @@ namespace CrewmanSystem
 			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
-    }
+
+		private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+		{
+			//Preguntar al profe
+			if (e.StateChanged != DataGridViewElementStates.Selected)
+			{
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+			}
+
+		}
+
+		public static void eliminar()
+		{
+			familiaSeleccionada = (FamiliaWS.familia)dgv.CurrentRow.DataBoundItem;
+			daoFamilia.eliminarFamilia(familiaSeleccionada.idFamilia);
+		}
+	}
 }

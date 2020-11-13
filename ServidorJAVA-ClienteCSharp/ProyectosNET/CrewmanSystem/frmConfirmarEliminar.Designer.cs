@@ -1,6 +1,6 @@
 ﻿namespace CrewmanSystem
 {
-	partial class frmConfirmarSalir
+	partial class frmConfirmarEliminar
 	{
 		/// <summary>
 		/// Required designer variable.
