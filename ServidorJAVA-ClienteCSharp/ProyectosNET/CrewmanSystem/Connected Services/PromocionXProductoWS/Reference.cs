@@ -8,40 +8,40 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CrewmanSystem.ProductoXZonaWS {
+namespace CrewmanSystem.PromocionXProductoWS {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", ConfigurationName="ProductoXZonaWS.ProductoXZonaWS")]
-    public interface ProductoXZonaWS {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", ConfigurationName="PromocionXProductoWS.PromocionXProductoWS")]
+    public interface PromocionXProductoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoXZonaWS/insertarProductoXZonaRe" +
-            "quest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ProductoXZonaWS/insertarProductoXZonaRe" +
-            "sponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionXProductoWS/listarPromocionXPr" +
+            "oductoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionXProductoWS/listarPromocionXPr" +
+            "oductoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.ProductoXZonaWS.insertarProductoXZonaResponse insertarProductoXZona(CrewmanSystem.ProductoXZonaWS.insertarProductoXZonaRequest request);
+        CrewmanSystem.PromocionXProductoWS.listarPromocionXProductoResponse listarPromocionXProducto(CrewmanSystem.PromocionXProductoWS.listarPromocionXProductoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoXZonaWS/insertarProductoXZonaRe" +
-            "quest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ProductoXZonaWS/insertarProductoXZonaRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.ProductoXZonaWS.insertarProductoXZonaResponse> insertarProductoXZonaAsync(CrewmanSystem.ProductoXZonaWS.insertarProductoXZonaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionXProductoWS/listarPromocionXPr" +
+            "oductoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionXProductoWS/listarPromocionXPr" +
+            "oductoResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.PromocionXProductoWS.listarPromocionXProductoResponse> listarPromocionXProductoAsync(CrewmanSystem.PromocionXProductoWS.listarPromocionXProductoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoXZonaWS/listarProductosXZonasRe" +
-            "quest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ProductoXZonaWS/listarProductosXZonasRe" +
-            "sponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionXProductoWS/insertarPromocionX" +
+            "ProductoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionXProductoWS/insertarPromocionX" +
+            "ProductoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.ProductoXZonaWS.listarProductosXZonasResponse listarProductosXZonas(CrewmanSystem.ProductoXZonaWS.listarProductosXZonasRequest request);
+        CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoResponse insertarPromocionXProducto(CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoXZonaWS/listarProductosXZonasRe" +
-            "quest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ProductoXZonaWS/listarProductosXZonasRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.ProductoXZonaWS.listarProductosXZonasResponse> listarProductosXZonasAsync(CrewmanSystem.ProductoXZonaWS.listarProductosXZonasRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionXProductoWS/insertarPromocionX" +
+            "ProductoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionXProductoWS/insertarPromocionX" +
+            "ProductoResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoResponse> insertarPromocionXProductoAsync(CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoRequest request);
     }
     
     /// <remarks/>
@@ -50,25 +50,21 @@ namespace CrewmanSystem.ProductoXZonaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/")]
-    public partial class productoXZona : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class promocionXProducto : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool activoField;
         
-        private System.DateTime fechaFinField;
+        private int descuentoField;
         
-        private bool fechaFinFieldSpecified;
-        
-        private System.DateTime fechaInicioField;
-        
-        private bool fechaInicioFieldSpecified;
-        
-        private int idProductoXZonaField;
-        
-        private double precioRealField;
+        private int idPromocionXProductoField;
         
         private producto productoField;
         
-        private zona zonaField;
+        private promocion promocionField;
+        
+        private int stockField;
+        
+        private int stockReservadoField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -84,78 +80,30 @@ namespace CrewmanSystem.ProductoXZonaWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime fechaFin {
+        public int descuento {
             get {
-                return this.fechaFinField;
+                return this.descuentoField;
             }
             set {
-                this.fechaFinField = value;
-                this.RaisePropertyChanged("fechaFin");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaFinSpecified {
-            get {
-                return this.fechaFinFieldSpecified;
-            }
-            set {
-                this.fechaFinFieldSpecified = value;
-                this.RaisePropertyChanged("fechaFinSpecified");
+                this.descuentoField = value;
+                this.RaisePropertyChanged("descuento");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime fechaInicio {
+        public int idPromocionXProducto {
             get {
-                return this.fechaInicioField;
+                return this.idPromocionXProductoField;
             }
             set {
-                this.fechaInicioField = value;
-                this.RaisePropertyChanged("fechaInicio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaInicioSpecified {
-            get {
-                return this.fechaInicioFieldSpecified;
-            }
-            set {
-                this.fechaInicioFieldSpecified = value;
-                this.RaisePropertyChanged("fechaInicioSpecified");
+                this.idPromocionXProductoField = value;
+                this.RaisePropertyChanged("idPromocionXProducto");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int idProductoXZona {
-            get {
-                return this.idProductoXZonaField;
-            }
-            set {
-                this.idProductoXZonaField = value;
-                this.RaisePropertyChanged("idProductoXZona");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public double precioReal {
-            get {
-                return this.precioRealField;
-            }
-            set {
-                this.precioRealField = value;
-                this.RaisePropertyChanged("precioReal");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public producto producto {
             get {
                 return this.productoField;
@@ -167,14 +115,38 @@ namespace CrewmanSystem.ProductoXZonaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public zona zona {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public promocion promocion {
             get {
-                return this.zonaField;
+                return this.promocionField;
             }
             set {
-                this.zonaField = value;
-                this.RaisePropertyChanged("zona");
+                this.promocionField = value;
+                this.RaisePropertyChanged("promocion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int stock {
+            get {
+                return this.stockField;
+            }
+            set {
+                this.stockField = value;
+                this.RaisePropertyChanged("stock");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public int stockReservado {
+            get {
+                return this.stockReservadoField;
+            }
+            set {
+                this.stockReservadoField = value;
+                this.RaisePropertyChanged("stockReservado");
             }
         }
         
@@ -380,127 +352,9 @@ namespace CrewmanSystem.ProductoXZonaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/")]
-    public partial class promocionXProducto : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class productoXZona : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool activoField;
-        
-        private int descuentoField;
-        
-        private int idPromocionXProductoField;
-        
-        private producto productoField;
-        
-        private promocion promocionField;
-        
-        private int stockField;
-        
-        private int stockReservadoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int descuento {
-            get {
-                return this.descuentoField;
-            }
-            set {
-                this.descuentoField = value;
-                this.RaisePropertyChanged("descuento");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int idPromocionXProducto {
-            get {
-                return this.idPromocionXProductoField;
-            }
-            set {
-                this.idPromocionXProductoField = value;
-                this.RaisePropertyChanged("idPromocionXProducto");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public producto producto {
-            get {
-                return this.productoField;
-            }
-            set {
-                this.productoField = value;
-                this.RaisePropertyChanged("producto");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public promocion promocion {
-            get {
-                return this.promocionField;
-            }
-            set {
-                this.promocionField = value;
-                this.RaisePropertyChanged("promocion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int stock {
-            get {
-                return this.stockField;
-            }
-            set {
-                this.stockField = value;
-                this.RaisePropertyChanged("stock");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public int stockReservado {
-            get {
-                return this.stockReservadoField;
-            }
-            set {
-                this.stockReservadoField = value;
-                this.RaisePropertyChanged("stockReservado");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/")]
-    public partial class promocion : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private bool activoField;
-        
-        private string descripcionField;
         
         private System.DateTime fechaFinField;
         
@@ -510,11 +364,11 @@ namespace CrewmanSystem.ProductoXZonaWS {
         
         private bool fechaInicioFieldSpecified;
         
-        private int idPromocionField;
+        private int idProductoXZonaField;
         
-        private promocionXProducto[] listaPromocionXProductoField;
+        private double precioRealField;
         
-        private string nombreField;
+        private producto productoField;
         
         private zona zonaField;
         
@@ -532,18 +386,6 @@ namespace CrewmanSystem.ProductoXZonaWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string descripcion {
-            get {
-                return this.descripcionField;
-            }
-            set {
-                this.descripcionField = value;
-                this.RaisePropertyChanged("descripcion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public System.DateTime fechaFin {
             get {
                 return this.fechaFinField;
@@ -567,7 +409,7 @@ namespace CrewmanSystem.ProductoXZonaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public System.DateTime fechaInicio {
             get {
                 return this.fechaInicioField;
@@ -591,43 +433,43 @@ namespace CrewmanSystem.ProductoXZonaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int idPromocion {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public int idProductoXZona {
             get {
-                return this.idPromocionField;
+                return this.idProductoXZonaField;
             }
             set {
-                this.idPromocionField = value;
-                this.RaisePropertyChanged("idPromocion");
+                this.idProductoXZonaField = value;
+                this.RaisePropertyChanged("idProductoXZona");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("listaPromocionXProducto", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=5)]
-        public promocionXProducto[] listaPromocionXProducto {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public double precioReal {
             get {
-                return this.listaPromocionXProductoField;
+                return this.precioRealField;
             }
             set {
-                this.listaPromocionXProductoField = value;
-                this.RaisePropertyChanged("listaPromocionXProducto");
+                this.precioRealField = value;
+                this.RaisePropertyChanged("precioReal");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public producto producto {
+            get {
+                return this.productoField;
+            }
+            set {
+                this.productoField = value;
+                this.RaisePropertyChanged("producto");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public zona zona {
             get {
                 return this.zonaField;
@@ -1698,6 +1540,164 @@ namespace CrewmanSystem.ProductoXZonaWS {
             set {
                 this.nombreField = value;
                 this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/")]
+    public partial class promocion : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private bool activoField;
+        
+        private string descripcionField;
+        
+        private System.DateTime fechaFinField;
+        
+        private bool fechaFinFieldSpecified;
+        
+        private System.DateTime fechaInicioField;
+        
+        private bool fechaInicioFieldSpecified;
+        
+        private int idPromocionField;
+        
+        private promocionXProducto[] listaPromocionXProductoField;
+        
+        private string nombreField;
+        
+        private zona zonaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string descripcion {
+            get {
+                return this.descripcionField;
+            }
+            set {
+                this.descripcionField = value;
+                this.RaisePropertyChanged("descripcion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public System.DateTime fechaFin {
+            get {
+                return this.fechaFinField;
+            }
+            set {
+                this.fechaFinField = value;
+                this.RaisePropertyChanged("fechaFin");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaFinSpecified {
+            get {
+                return this.fechaFinFieldSpecified;
+            }
+            set {
+                this.fechaFinFieldSpecified = value;
+                this.RaisePropertyChanged("fechaFinSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public System.DateTime fechaInicio {
+            get {
+                return this.fechaInicioField;
+            }
+            set {
+                this.fechaInicioField = value;
+                this.RaisePropertyChanged("fechaInicio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaInicioSpecified {
+            get {
+                return this.fechaInicioFieldSpecified;
+            }
+            set {
+                this.fechaInicioFieldSpecified = value;
+                this.RaisePropertyChanged("fechaInicioSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int idPromocion {
+            get {
+                return this.idPromocionField;
+            }
+            set {
+                this.idPromocionField = value;
+                this.RaisePropertyChanged("idPromocion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("listaPromocionXProducto", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=5)]
+        public promocionXProducto[] listaPromocionXProducto {
+            get {
+                return this.listaPromocionXProductoField;
+            }
+            set {
+                this.listaPromocionXProductoField = value;
+                this.RaisePropertyChanged("listaPromocionXProducto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public zona zona {
+            get {
+                return this.zonaField;
+            }
+            set {
+                this.zonaField = value;
+                this.RaisePropertyChanged("zona");
             }
         }
         
@@ -3355,174 +3355,146 @@ namespace CrewmanSystem.ProductoXZonaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProductoXZona", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarProductoXZonaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPromocionXProducto", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPromocionXProductoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.ProductoXZonaWS.productoXZona productoXZona;
+        public int idPromocion;
         
-        public insertarProductoXZonaRequest() {
+        public listarPromocionXProductoRequest() {
         }
         
-        public insertarProductoXZonaRequest(CrewmanSystem.ProductoXZonaWS.productoXZona productoXZona) {
-            this.productoXZona = productoXZona;
+        public listarPromocionXProductoRequest(int idPromocion) {
+            this.idPromocion = idPromocion;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProductoXZonaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarProductoXZonaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPromocionXProductoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPromocionXProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.PromocionXProductoWS.promocionXProducto[] @return;
+        
+        public listarPromocionXProductoResponse() {
+        }
+        
+        public listarPromocionXProductoResponse(CrewmanSystem.PromocionXProductoWS.promocionXProducto[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPromocionXProducto", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarPromocionXProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.PromocionXProductoWS.promocionXProducto promocionXProducto;
+        
+        public insertarPromocionXProductoRequest() {
+        }
+        
+        public insertarPromocionXProductoRequest(CrewmanSystem.PromocionXProductoWS.promocionXProducto promocionXProducto) {
+            this.promocionXProducto = promocionXProducto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPromocionXProductoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarPromocionXProductoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertarProductoXZonaResponse() {
+        public insertarPromocionXProductoResponse() {
         }
         
-        public insertarProductoXZonaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProductosXZonas", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarProductosXZonasRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string familiaStr;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string subFamiliaStr;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string marcaStr;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idZona;
-        
-        public listarProductosXZonasRequest() {
-        }
-        
-        public listarProductosXZonasRequest(string nombre, string familiaStr, string subFamiliaStr, string marcaStr, int idZona) {
-            this.nombre = nombre;
-            this.familiaStr = familiaStr;
-            this.subFamiliaStr = subFamiliaStr;
-            this.marcaStr = marcaStr;
-            this.idZona = idZona;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProductosXZonasResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarProductosXZonasResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.ProductoXZonaWS.productoXZona[] @return;
-        
-        public listarProductosXZonasResponse() {
-        }
-        
-        public listarProductosXZonasResponse(CrewmanSystem.ProductoXZonaWS.productoXZona[] @return) {
+        public insertarPromocionXProductoResponse(int @return) {
             this.@return = @return;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ProductoXZonaWSChannel : CrewmanSystem.ProductoXZonaWS.ProductoXZonaWS, System.ServiceModel.IClientChannel {
+    public interface PromocionXProductoWSChannel : CrewmanSystem.PromocionXProductoWS.PromocionXProductoWS, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ProductoXZonaWSClient : System.ServiceModel.ClientBase<CrewmanSystem.ProductoXZonaWS.ProductoXZonaWS>, CrewmanSystem.ProductoXZonaWS.ProductoXZonaWS {
+    public partial class PromocionXProductoWSClient : System.ServiceModel.ClientBase<CrewmanSystem.PromocionXProductoWS.PromocionXProductoWS>, CrewmanSystem.PromocionXProductoWS.PromocionXProductoWS {
         
-        public ProductoXZonaWSClient() {
+        public PromocionXProductoWSClient() {
         }
         
-        public ProductoXZonaWSClient(string endpointConfigurationName) : 
+        public PromocionXProductoWSClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public ProductoXZonaWSClient(string endpointConfigurationName, string remoteAddress) : 
+        public PromocionXProductoWSClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public ProductoXZonaWSClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public PromocionXProductoWSClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public ProductoXZonaWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public PromocionXProductoWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.ProductoXZonaWS.insertarProductoXZonaResponse CrewmanSystem.ProductoXZonaWS.ProductoXZonaWS.insertarProductoXZona(CrewmanSystem.ProductoXZonaWS.insertarProductoXZonaRequest request) {
-            return base.Channel.insertarProductoXZona(request);
+        CrewmanSystem.PromocionXProductoWS.listarPromocionXProductoResponse CrewmanSystem.PromocionXProductoWS.PromocionXProductoWS.listarPromocionXProducto(CrewmanSystem.PromocionXProductoWS.listarPromocionXProductoRequest request) {
+            return base.Channel.listarPromocionXProducto(request);
         }
         
-        public int insertarProductoXZona(CrewmanSystem.ProductoXZonaWS.productoXZona productoXZona) {
-            CrewmanSystem.ProductoXZonaWS.insertarProductoXZonaRequest inValue = new CrewmanSystem.ProductoXZonaWS.insertarProductoXZonaRequest();
-            inValue.productoXZona = productoXZona;
-            CrewmanSystem.ProductoXZonaWS.insertarProductoXZonaResponse retVal = ((CrewmanSystem.ProductoXZonaWS.ProductoXZonaWS)(this)).insertarProductoXZona(inValue);
+        public CrewmanSystem.PromocionXProductoWS.promocionXProducto[] listarPromocionXProducto(int idPromocion) {
+            CrewmanSystem.PromocionXProductoWS.listarPromocionXProductoRequest inValue = new CrewmanSystem.PromocionXProductoWS.listarPromocionXProductoRequest();
+            inValue.idPromocion = idPromocion;
+            CrewmanSystem.PromocionXProductoWS.listarPromocionXProductoResponse retVal = ((CrewmanSystem.PromocionXProductoWS.PromocionXProductoWS)(this)).listarPromocionXProducto(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.ProductoXZonaWS.insertarProductoXZonaResponse> CrewmanSystem.ProductoXZonaWS.ProductoXZonaWS.insertarProductoXZonaAsync(CrewmanSystem.ProductoXZonaWS.insertarProductoXZonaRequest request) {
-            return base.Channel.insertarProductoXZonaAsync(request);
+        System.Threading.Tasks.Task<CrewmanSystem.PromocionXProductoWS.listarPromocionXProductoResponse> CrewmanSystem.PromocionXProductoWS.PromocionXProductoWS.listarPromocionXProductoAsync(CrewmanSystem.PromocionXProductoWS.listarPromocionXProductoRequest request) {
+            return base.Channel.listarPromocionXProductoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CrewmanSystem.ProductoXZonaWS.insertarProductoXZonaResponse> insertarProductoXZonaAsync(CrewmanSystem.ProductoXZonaWS.productoXZona productoXZona) {
-            CrewmanSystem.ProductoXZonaWS.insertarProductoXZonaRequest inValue = new CrewmanSystem.ProductoXZonaWS.insertarProductoXZonaRequest();
-            inValue.productoXZona = productoXZona;
-            return ((CrewmanSystem.ProductoXZonaWS.ProductoXZonaWS)(this)).insertarProductoXZonaAsync(inValue);
+        public System.Threading.Tasks.Task<CrewmanSystem.PromocionXProductoWS.listarPromocionXProductoResponse> listarPromocionXProductoAsync(int idPromocion) {
+            CrewmanSystem.PromocionXProductoWS.listarPromocionXProductoRequest inValue = new CrewmanSystem.PromocionXProductoWS.listarPromocionXProductoRequest();
+            inValue.idPromocion = idPromocion;
+            return ((CrewmanSystem.PromocionXProductoWS.PromocionXProductoWS)(this)).listarPromocionXProductoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.ProductoXZonaWS.listarProductosXZonasResponse CrewmanSystem.ProductoXZonaWS.ProductoXZonaWS.listarProductosXZonas(CrewmanSystem.ProductoXZonaWS.listarProductosXZonasRequest request) {
-            return base.Channel.listarProductosXZonas(request);
+        CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoResponse CrewmanSystem.PromocionXProductoWS.PromocionXProductoWS.insertarPromocionXProducto(CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoRequest request) {
+            return base.Channel.insertarPromocionXProducto(request);
         }
         
-        public CrewmanSystem.ProductoXZonaWS.productoXZona[] listarProductosXZonas(string nombre, string familiaStr, string subFamiliaStr, string marcaStr, int idZona) {
-            CrewmanSystem.ProductoXZonaWS.listarProductosXZonasRequest inValue = new CrewmanSystem.ProductoXZonaWS.listarProductosXZonasRequest();
-            inValue.nombre = nombre;
-            inValue.familiaStr = familiaStr;
-            inValue.subFamiliaStr = subFamiliaStr;
-            inValue.marcaStr = marcaStr;
-            inValue.idZona = idZona;
-            CrewmanSystem.ProductoXZonaWS.listarProductosXZonasResponse retVal = ((CrewmanSystem.ProductoXZonaWS.ProductoXZonaWS)(this)).listarProductosXZonas(inValue);
+        public int insertarPromocionXProducto(CrewmanSystem.PromocionXProductoWS.promocionXProducto promocionXProducto) {
+            CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoRequest inValue = new CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoRequest();
+            inValue.promocionXProducto = promocionXProducto;
+            CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoResponse retVal = ((CrewmanSystem.PromocionXProductoWS.PromocionXProductoWS)(this)).insertarPromocionXProducto(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.ProductoXZonaWS.listarProductosXZonasResponse> CrewmanSystem.ProductoXZonaWS.ProductoXZonaWS.listarProductosXZonasAsync(CrewmanSystem.ProductoXZonaWS.listarProductosXZonasRequest request) {
-            return base.Channel.listarProductosXZonasAsync(request);
+        System.Threading.Tasks.Task<CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoResponse> CrewmanSystem.PromocionXProductoWS.PromocionXProductoWS.insertarPromocionXProductoAsync(CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoRequest request) {
+            return base.Channel.insertarPromocionXProductoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CrewmanSystem.ProductoXZonaWS.listarProductosXZonasResponse> listarProductosXZonasAsync(string nombre, string familiaStr, string subFamiliaStr, string marcaStr, int idZona) {
-            CrewmanSystem.ProductoXZonaWS.listarProductosXZonasRequest inValue = new CrewmanSystem.ProductoXZonaWS.listarProductosXZonasRequest();
-            inValue.nombre = nombre;
-            inValue.familiaStr = familiaStr;
-            inValue.subFamiliaStr = subFamiliaStr;
-            inValue.marcaStr = marcaStr;
-            inValue.idZona = idZona;
-            return ((CrewmanSystem.ProductoXZonaWS.ProductoXZonaWS)(this)).listarProductosXZonasAsync(inValue);
+        public System.Threading.Tasks.Task<CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoResponse> insertarPromocionXProductoAsync(CrewmanSystem.PromocionXProductoWS.promocionXProducto promocionXProducto) {
+            CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoRequest inValue = new CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoRequest();
+            inValue.promocionXProducto = promocionXProducto;
+            return ((CrewmanSystem.PromocionXProductoWS.PromocionXProductoWS)(this)).insertarPromocionXProductoAsync(inValue);
         }
     }
 }

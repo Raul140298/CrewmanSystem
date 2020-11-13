@@ -12,7 +12,7 @@ namespace CrewmanSystem
 {
 	public partial class frmBuscarCliente : Form
 	{
-		ClienteWS.ClienteWSClient daoCliente = new ClienteWS.ClienteWSClient();
+		private ClienteWS.ClienteWSClient daoCliente = new ClienteWS.ClienteWSClient();
 		public frmBuscarCliente()
 		{
 			InitializeComponent();

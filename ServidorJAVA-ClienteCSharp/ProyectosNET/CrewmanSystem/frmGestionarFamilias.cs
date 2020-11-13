@@ -26,7 +26,6 @@ namespace CrewmanSystem
 			else
 			{
 				dataGridView1.DataSource = new BindingList<FamiliaWS.familia>();
-
 			}
 			#region colores de seleccion
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;

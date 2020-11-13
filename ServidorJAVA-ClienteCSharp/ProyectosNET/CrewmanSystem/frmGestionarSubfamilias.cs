@@ -12,7 +12,7 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarSubfamilias : Form
 	{
-		SubFamiliaWS.SubFamiliaWSClient daoSubFamilia;
+		private SubFamiliaWS.SubFamiliaWSClient daoSubFamilia;
 		public frmGestionarSubfamilias()
 		{
 			daoSubFamilia = new SubFamiliaWS.SubFamiliaWSClient();

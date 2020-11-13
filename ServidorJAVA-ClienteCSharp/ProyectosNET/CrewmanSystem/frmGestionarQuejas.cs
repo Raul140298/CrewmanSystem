@@ -12,7 +12,7 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarQuejas : Form
 	{
-		QuejaWS.QuejaWSClient daoQueja;
+		private QuejaWS.QuejaWSClient daoQueja;
 		public frmGestionarQuejas()
 		{
 			daoQueja = new QuejaWS.QuejaWSClient();

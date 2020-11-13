@@ -226,7 +226,7 @@ public class Main{
                 System.out.println("SUMA DE VENTAS: "+miEmpleado.getSumVentas());
                 System.out.println("OBJETIVO DE VENTAS: "+miEmpleado.getObjetivoVentas());
                 
-                daoZona.mostrar(miEmpleado);
+                daoZona.mostrar(miEmpleado.getIdEmpleado());
                 System.out.println("\nZONA DEL VENDEDOR");
                 System.out.println("==================================================================================");
                 System.out.println(miEmpleado.getZona().getIdZona()+" - "+miEmpleado.getZona().getNombre());
