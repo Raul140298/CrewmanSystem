@@ -21,7 +21,18 @@ namespace CrewmanSystem
         public frmNuevaPromocion()
 		{
 			InitializeComponent();
-            daoPromocion = new PromocionWS.PromocionWSClient();
+            #region colores de seleccion
+            dgvPromocionXProducto.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvPromocionXProducto.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+            dgvPromocionXProducto.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvPromocionXProducto.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+            dgvPromocionXProducto.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvPromocionXProducto.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			#endregion
+
+			daoPromocion = new PromocionWS.PromocionWSClient();
             daoPromocionXProducto = new PromocionXProductoWS.PromocionXProductoWSClient();
             daoZona = new ZonaWS.ZonaWSClient();
             cboZona.DataSource = new BindingList<ZonaWS.zona>(daoZona.listarZonas().ToArray());
@@ -51,6 +62,8 @@ namespace CrewmanSystem
                 else misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>(auxPromoXProd.ToArray());
                 cargarTablaPromocionXProducto();
             }
+
+
         }
 
         private void btnBuscarProducto_Click(object sender, EventArgs e)
