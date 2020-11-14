@@ -36,6 +36,18 @@ namespace CrewmanSystem
                 cboFamilia.ValueMember = "idFamilia";
                 cboFamilia.DisplayMember = "descripcion";
             }
+            if (frmVentanaPrincipal.nBtn == 1)
+            {   //OBTNER DATOS DE FILA SELECCIONADA
+                frmGestionarProductos.productoSeleccionado = (ProductoWS.producto)frmGestionarProductos.dgv.CurrentRow.DataBoundItem;
+                txtId.Text = frmGestionarProductos.productoSeleccionado.idProducto.ToString();
+                txtNombre.Text = frmGestionarProductos.productoSeleccionado.nombre;
+                cboFamilia.SelectedValue = frmGestionarProductos.productoSeleccionado.subFamilia.familia.idFamilia;
+                cboSubfamilia.SelectedValue = frmGestionarProductos.productoSeleccionado.subFamilia.idSubFamilia;
+                cboMarca.SelectedValue = frmGestionarProductos.productoSeleccionado.marca.idMarca;
+                txtCantidad.Text = frmGestionarProductos.productoSeleccionado.cantUnidad.ToString();
+                txtPrecioSugerido.Text = frmGestionarProductos.productoSeleccionado.precioSugerido.ToString();
+                txtStock.Text = frmGestionarProductos.productoSeleccionado.stock.ToString();
+            }
         }
 
 		private void btnGuardar_Click(object sender, EventArgs e)
@@ -111,8 +123,20 @@ namespace CrewmanSystem
                 producto.unidades = cboUnidades.SelectedItem.ToString();
                 producto.cantUnidad = Convert.ToDouble(txtCantidad.Text);
                 producto.stock = Convert.ToInt32(txtStock.Text);
-                int resultado = daoProducto.insertarProducto(producto);
-                txtId.Text = resultado.ToString();
+                //Usar resultado para ver si se inserto correctamente
+                if (frmVentanaPrincipal.nBtn == 0)
+                {
+                    int resultado = daoProducto.insertarProducto(producto);
+                    txtId.Text = resultado.ToString();
+                }
+                else if (frmVentanaPrincipal.nBtn == 1)
+                {
+                    producto.idProducto = Int32.Parse(txtId.Text);
+                    if (daoProducto.actualizarProducto(producto) == 0)
+                    {
+                        MessageBox.Show("No está insertando");
+                    }
+                }
                 //Usar resultado para ver si se inserto correctamente
             }
         }

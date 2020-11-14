@@ -12,11 +12,15 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarSubfamilias : Form
 	{
-		private SubFamiliaWS.SubFamiliaWSClient daoSubFamilia;
+		public static SubFamiliaWS.SubFamiliaWSClient daoSubFamilia;
+		public static SubFamiliaWS.subFamilia subfamiliaSeleccionada;
+		public static DataGridView dgv;
+
 		public frmGestionarSubfamilias()
 		{
 			daoSubFamilia = new SubFamiliaWS.SubFamiliaWSClient();
 			InitializeComponent();
+			dgv = dataGridView1;
 			dataGridView1.AutoGenerateColumns = false;
 			SubFamiliaWS.subFamilia[] misSubFamilias = daoSubFamilia.listarSubFamilias("");
 			if (misSubFamilias != null)
@@ -48,6 +52,34 @@ namespace CrewmanSystem
 			as SubFamiliaWS.subFamilia;
 
 			dataGridView1.Rows[e.RowIndex].Cells["FAMILIA"].Value = subfamilia.familia.descripcion;
+		}
+
+		private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+		{
+			//Preguntar al profe
+			if (e.StateChanged != DataGridViewElementStates.Selected)
+			{
+				//frmVentanaPrincipal.act.Enabled = false;
+				//frmVentanaPrincipal.elim.Enabled = false;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+			}
+		}
+
+		public static void eliminar()
+		{
+			subfamiliaSeleccionada = (SubFamiliaWS.subFamilia)dgv.CurrentRow.DataBoundItem;
+			daoSubFamilia.eliminarSubFamilia(subfamiliaSeleccionada.idSubFamilia);
+		}
+
+		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			frmVentanaPrincipal.act.Enabled = false;
+			frmVentanaPrincipal.elim.Enabled = false;
 		}
 	}
 }
