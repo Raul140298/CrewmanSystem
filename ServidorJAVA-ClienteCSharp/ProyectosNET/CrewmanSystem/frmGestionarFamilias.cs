@@ -20,30 +20,30 @@ namespace CrewmanSystem
 		{
 			daoFamilia = new FamiliaWS.FamiliaWSClient();
 			InitializeComponent();
-			dgv = dataGridView1;
-			dataGridView1.AutoGenerateColumns = false;
+			dgv = dgvFamilias;
+			dgvFamilias.AutoGenerateColumns = false;
 			FamiliaWS.familia[] misFamilias = daoFamilia.listarFamilias();
 			if (misFamilias != null)
 			{
-				dataGridView1.DataSource = new BindingList<FamiliaWS.familia>(misFamilias.ToArray());
+				dgvFamilias.DataSource = new BindingList<FamiliaWS.familia>(misFamilias.ToArray());
 			}
 			else
 			{
-				dataGridView1.DataSource = new BindingList<FamiliaWS.familia>();
+				dgvFamilias.DataSource = new BindingList<FamiliaWS.familia>();
 			}
 			#region colores de seleccion
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvFamilias.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvFamilias.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvFamilias.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvFamilias.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvFamilias.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvFamilias.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
 
-		private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+		private void dgvFamilias_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
 		{
 			//Preguntar al profe
 			if (e.StateChanged != DataGridViewElementStates.Selected)
@@ -65,5 +65,5 @@ namespace CrewmanSystem
 			familiaSeleccionada = (FamiliaWS.familia)dgv.CurrentRow.DataBoundItem;
 			daoFamilia.eliminarFamilia(familiaSeleccionada.idFamilia);
 		}
-	}
+    }
 }
