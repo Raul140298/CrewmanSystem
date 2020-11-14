@@ -16,6 +16,17 @@ namespace CrewmanSystem.SubFamiliaWS {
     public interface SubFamiliaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/insertarSubFamiliaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/insertarSubFamiliaResponse" +
+            "")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.SubFamiliaWS.insertarSubFamiliaResponse insertarSubFamilia(CrewmanSystem.SubFamiliaWS.insertarSubFamiliaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/insertarSubFamiliaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/insertarSubFamiliaResponse" +
+            "")]
+        System.Threading.Tasks.Task<CrewmanSystem.SubFamiliaWS.insertarSubFamiliaResponse> insertarSubFamiliaAsync(CrewmanSystem.SubFamiliaWS.insertarSubFamiliaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/actualizarSubFamiliaReques" +
             "t", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/actualizarSubFamiliaRespon" +
             "se")]
@@ -47,21 +58,10 @@ namespace CrewmanSystem.SubFamiliaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/listarSubFamiliasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/listarSubFamiliasResponse")]
         System.Threading.Tasks.Task<CrewmanSystem.SubFamiliaWS.listarSubFamiliasResponse> listarSubFamiliasAsync(CrewmanSystem.SubFamiliaWS.listarSubFamiliasRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/insertarSubFamiliaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/insertarSubFamiliaResponse" +
-            "")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.SubFamiliaWS.insertarSubFamiliaResponse insertarSubFamilia(CrewmanSystem.SubFamiliaWS.insertarSubFamiliaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/insertarSubFamiliaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/insertarSubFamiliaResponse" +
-            "")]
-        System.Threading.Tasks.Task<CrewmanSystem.SubFamiliaWS.insertarSubFamiliaResponse> insertarSubFamiliaAsync(CrewmanSystem.SubFamiliaWS.insertarSubFamiliaRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -135,7 +135,7 @@ namespace CrewmanSystem.SubFamiliaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -191,6 +191,42 @@ namespace CrewmanSystem.SubFamiliaWS {
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarSubFamilia", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarSubFamiliaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.SubFamiliaWS.subFamilia subFamilia;
+        
+        public insertarSubFamiliaRequest() {
+        }
+        
+        public insertarSubFamiliaRequest(CrewmanSystem.SubFamiliaWS.subFamilia subFamilia) {
+            this.subFamilia = subFamilia;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarSubFamiliaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarSubFamiliaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarSubFamiliaResponse() {
+        }
+        
+        public insertarSubFamiliaResponse(int @return) {
+            this.@return = @return;
         }
     }
     
@@ -302,42 +338,6 @@ namespace CrewmanSystem.SubFamiliaWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarSubFamilia", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarSubFamiliaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.SubFamiliaWS.subFamilia subFamilia;
-        
-        public insertarSubFamiliaRequest() {
-        }
-        
-        public insertarSubFamiliaRequest(CrewmanSystem.SubFamiliaWS.subFamilia subFamilia) {
-            this.subFamilia = subFamilia;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarSubFamiliaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarSubFamiliaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarSubFamiliaResponse() {
-        }
-        
-        public insertarSubFamiliaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface SubFamiliaWSChannel : CrewmanSystem.SubFamiliaWS.SubFamiliaWS, System.ServiceModel.IClientChannel {
     }
@@ -363,6 +363,29 @@ namespace CrewmanSystem.SubFamiliaWS {
         
         public SubFamiliaWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.SubFamiliaWS.insertarSubFamiliaResponse CrewmanSystem.SubFamiliaWS.SubFamiliaWS.insertarSubFamilia(CrewmanSystem.SubFamiliaWS.insertarSubFamiliaRequest request) {
+            return base.Channel.insertarSubFamilia(request);
+        }
+        
+        public int insertarSubFamilia(CrewmanSystem.SubFamiliaWS.subFamilia subFamilia) {
+            CrewmanSystem.SubFamiliaWS.insertarSubFamiliaRequest inValue = new CrewmanSystem.SubFamiliaWS.insertarSubFamiliaRequest();
+            inValue.subFamilia = subFamilia;
+            CrewmanSystem.SubFamiliaWS.insertarSubFamiliaResponse retVal = ((CrewmanSystem.SubFamiliaWS.SubFamiliaWS)(this)).insertarSubFamilia(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.SubFamiliaWS.insertarSubFamiliaResponse> CrewmanSystem.SubFamiliaWS.SubFamiliaWS.insertarSubFamiliaAsync(CrewmanSystem.SubFamiliaWS.insertarSubFamiliaRequest request) {
+            return base.Channel.insertarSubFamiliaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.SubFamiliaWS.insertarSubFamiliaResponse> insertarSubFamiliaAsync(CrewmanSystem.SubFamiliaWS.subFamilia subFamilia) {
+            CrewmanSystem.SubFamiliaWS.insertarSubFamiliaRequest inValue = new CrewmanSystem.SubFamiliaWS.insertarSubFamiliaRequest();
+            inValue.subFamilia = subFamilia;
+            return ((CrewmanSystem.SubFamiliaWS.SubFamiliaWS)(this)).insertarSubFamiliaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -432,29 +455,6 @@ namespace CrewmanSystem.SubFamiliaWS {
             CrewmanSystem.SubFamiliaWS.listarSubFamiliasRequest inValue = new CrewmanSystem.SubFamiliaWS.listarSubFamiliasRequest();
             inValue.familia = familia;
             return ((CrewmanSystem.SubFamiliaWS.SubFamiliaWS)(this)).listarSubFamiliasAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.SubFamiliaWS.insertarSubFamiliaResponse CrewmanSystem.SubFamiliaWS.SubFamiliaWS.insertarSubFamilia(CrewmanSystem.SubFamiliaWS.insertarSubFamiliaRequest request) {
-            return base.Channel.insertarSubFamilia(request);
-        }
-        
-        public int insertarSubFamilia(CrewmanSystem.SubFamiliaWS.subFamilia subFamilia) {
-            CrewmanSystem.SubFamiliaWS.insertarSubFamiliaRequest inValue = new CrewmanSystem.SubFamiliaWS.insertarSubFamiliaRequest();
-            inValue.subFamilia = subFamilia;
-            CrewmanSystem.SubFamiliaWS.insertarSubFamiliaResponse retVal = ((CrewmanSystem.SubFamiliaWS.SubFamiliaWS)(this)).insertarSubFamilia(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.SubFamiliaWS.insertarSubFamiliaResponse> CrewmanSystem.SubFamiliaWS.SubFamiliaWS.insertarSubFamiliaAsync(CrewmanSystem.SubFamiliaWS.insertarSubFamiliaRequest request) {
-            return base.Channel.insertarSubFamiliaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.SubFamiliaWS.insertarSubFamiliaResponse> insertarSubFamiliaAsync(CrewmanSystem.SubFamiliaWS.subFamilia subFamilia) {
-            CrewmanSystem.SubFamiliaWS.insertarSubFamiliaRequest inValue = new CrewmanSystem.SubFamiliaWS.insertarSubFamiliaRequest();
-            inValue.subFamilia = subFamilia;
-            return ((CrewmanSystem.SubFamiliaWS.SubFamiliaWS)(this)).insertarSubFamiliaAsync(inValue);
         }
     }
 }

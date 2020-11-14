@@ -707,6 +707,9 @@
     <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.listarPorJefeVentasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.mostrarPersonaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

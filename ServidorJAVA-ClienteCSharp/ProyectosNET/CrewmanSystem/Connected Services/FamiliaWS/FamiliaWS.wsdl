@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/FamiliaWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="listarFamilias">
-    <part name="parameters" element="tns:listarFamilias" />
+  <message name="actualizarFamilia">
+    <part name="parameters" element="tns:actualizarFamilia" />
   </message>
-  <message name="listarFamiliasResponse">
-    <part name="parameters" element="tns:listarFamiliasResponse" />
+  <message name="actualizarFamiliaResponse">
+    <part name="parameters" element="tns:actualizarFamiliaResponse" />
   </message>
   <message name="eliminarFamilia">
     <part name="parameters" element="tns:eliminarFamilia" />
@@ -23,16 +23,16 @@
   <message name="insertarFamiliaResponse">
     <part name="parameters" element="tns:insertarFamiliaResponse" />
   </message>
-  <message name="actualizarFamilia">
-    <part name="parameters" element="tns:actualizarFamilia" />
+  <message name="listarFamilias">
+    <part name="parameters" element="tns:listarFamilias" />
   </message>
-  <message name="actualizarFamiliaResponse">
-    <part name="parameters" element="tns:actualizarFamiliaResponse" />
+  <message name="listarFamiliasResponse">
+    <part name="parameters" element="tns:listarFamiliasResponse" />
   </message>
   <portType name="FamiliaWS">
-    <operation name="listarFamilias">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/listarFamiliasRequest" message="tns:listarFamilias" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/listarFamiliasResponse" message="tns:listarFamiliasResponse" />
+    <operation name="actualizarFamilia">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/actualizarFamiliaRequest" message="tns:actualizarFamilia" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/actualizarFamiliaResponse" message="tns:actualizarFamiliaResponse" />
     </operation>
     <operation name="eliminarFamilia">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/eliminarFamiliaRequest" message="tns:eliminarFamilia" />
@@ -42,14 +42,14 @@
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/insertarFamiliaRequest" message="tns:insertarFamilia" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/insertarFamiliaResponse" message="tns:insertarFamiliaResponse" />
     </operation>
-    <operation name="actualizarFamilia">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/actualizarFamiliaRequest" message="tns:actualizarFamilia" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/actualizarFamiliaResponse" message="tns:actualizarFamiliaResponse" />
+    <operation name="listarFamilias">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/listarFamiliasRequest" message="tns:listarFamilias" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/listarFamiliasResponse" message="tns:listarFamiliasResponse" />
     </operation>
   </portType>
   <binding name="FamiliaWSPortBinding" type="tns:FamiliaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarFamilias">
+    <operation name="actualizarFamilia">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +76,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarFamilia">
+    <operation name="listarFamilias">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
