@@ -20,41 +20,41 @@ namespace CrewmanSystem
 		{
 			daoSubFamilia = new SubFamiliaWS.SubFamiliaWSClient();
 			InitializeComponent();
-			dgv = dataGridView1;
-			dataGridView1.AutoGenerateColumns = false;
+			dgv = dgvSubfamilias;
+			dgvSubfamilias.AutoGenerateColumns = false;
 			SubFamiliaWS.subFamilia[] misSubFamilias = daoSubFamilia.listarSubFamilias("");
 			if (misSubFamilias != null)
 			{
-				dataGridView1.DataSource = new BindingList<SubFamiliaWS.subFamilia>(misSubFamilias.ToArray());
+				dgvSubfamilias.DataSource = new BindingList<SubFamiliaWS.subFamilia>(misSubFamilias.ToArray());
 			}
 			else
 			{
-				dataGridView1.DataSource = new BindingList<SubFamiliaWS.subFamilia>();
+				dgvSubfamilias.DataSource = new BindingList<SubFamiliaWS.subFamilia>();
 
 			}
 
 			#region colores de seleccion
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvSubfamilias.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvSubfamilias.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvSubfamilias.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvSubfamilias.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvSubfamilias.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvSubfamilias.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
 
-		private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+		private void dgvSubfamilias_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
 		{
 			//castear objetos y mostrar valor determinado
-			SubFamiliaWS.subFamilia subfamilia = dataGridView1.Rows[e.RowIndex].DataBoundItem
+			SubFamiliaWS.subFamilia subfamilia = dgvSubfamilias.Rows[e.RowIndex].DataBoundItem
 			as SubFamiliaWS.subFamilia;
 
-			dataGridView1.Rows[e.RowIndex].Cells["FAMILIA"].Value = subfamilia.familia.descripcion;
+			dgvSubfamilias.Rows[e.RowIndex].Cells["FAMILIA"].Value = subfamilia.familia.descripcion;
 		}
 
-		private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+		private void dgvSubfamilias_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
 		{
 			//Preguntar al profe
 			if (e.StateChanged != DataGridViewElementStates.Selected)
@@ -76,10 +76,10 @@ namespace CrewmanSystem
 			daoSubFamilia.eliminarSubFamilia(subfamiliaSeleccionada.idSubFamilia);
 		}
 
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		private void dgvSubfamilias_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
 			frmVentanaPrincipal.act.Enabled = false;
 			frmVentanaPrincipal.elim.Enabled = false;
 		}
-	}
+    }
 }

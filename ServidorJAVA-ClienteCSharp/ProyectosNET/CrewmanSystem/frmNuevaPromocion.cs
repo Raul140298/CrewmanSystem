@@ -40,7 +40,8 @@ namespace CrewmanSystem
                 dtpFechaFin.Value = frmGestionarPromociones.promocionSeleccionada.fechaFin;
                 cboZona.SelectedValue = frmGestionarPromociones.promocionSeleccionada.zona.idZona;
                 //Listar los productos de la promoción.
-                PromocionXProductoWS.promocionXProducto[] misPromocions = daoPromocionXProducto.listarPromocionXProducto(frmGestionarPromociones.promocionSeleccionada.idPromocion);
+                BindingList<PromocionXProductoWS.promocionXProducto> misPromocions = 
+                    new BindingList<PromocionXProductoWS.promocionXProducto>(daoPromocionXProducto.listarPromocionXProducto(frmGestionarPromociones.promocionSeleccionada.idPromocion).ToArray());
                 cargarTablaPromocionXProducto();
             }
         }
