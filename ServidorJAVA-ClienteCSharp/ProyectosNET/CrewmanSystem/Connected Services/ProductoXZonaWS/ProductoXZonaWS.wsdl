@@ -5,31 +5,31 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/ProductoXZonaWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="insertarProductoXZona">
-    <part name="parameters" element="tns:insertarProductoXZona" />
-  </message>
-  <message name="insertarProductoXZonaResponse">
-    <part name="parameters" element="tns:insertarProductoXZonaResponse" />
-  </message>
   <message name="listarProductosXZonas">
     <part name="parameters" element="tns:listarProductosXZonas" />
   </message>
   <message name="listarProductosXZonasResponse">
     <part name="parameters" element="tns:listarProductosXZonasResponse" />
   </message>
+  <message name="insertarProductoXZona">
+    <part name="parameters" element="tns:insertarProductoXZona" />
+  </message>
+  <message name="insertarProductoXZonaResponse">
+    <part name="parameters" element="tns:insertarProductoXZonaResponse" />
+  </message>
   <portType name="ProductoXZonaWS">
-    <operation name="insertarProductoXZona">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoXZonaWS/insertarProductoXZonaRequest" message="tns:insertarProductoXZona" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoXZonaWS/insertarProductoXZonaResponse" message="tns:insertarProductoXZonaResponse" />
-    </operation>
     <operation name="listarProductosXZonas">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoXZonaWS/listarProductosXZonasRequest" message="tns:listarProductosXZonas" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoXZonaWS/listarProductosXZonasResponse" message="tns:listarProductosXZonasResponse" />
     </operation>
+    <operation name="insertarProductoXZona">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoXZonaWS/insertarProductoXZonaRequest" message="tns:insertarProductoXZona" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoXZonaWS/insertarProductoXZonaResponse" message="tns:insertarProductoXZonaResponse" />
+    </operation>
   </portType>
   <binding name="ProductoXZonaWSPortBinding" type="tns:ProductoXZonaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarProductoXZona">
+    <operation name="listarProductosXZonas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -38,7 +38,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarProductosXZonas">
+    <operation name="insertarProductoXZona">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

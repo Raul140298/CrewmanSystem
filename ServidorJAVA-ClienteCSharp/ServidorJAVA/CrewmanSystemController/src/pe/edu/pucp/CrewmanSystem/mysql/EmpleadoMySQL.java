@@ -253,4 +253,53 @@ public class EmpleadoMySQL implements EmpleadoDAO{
         }
         return resultado;
     }
+    
+    @Override
+    public ArrayList<Empleado> listarPorJefeVentasYZona(int idJefeVentas, String nombre, String apellidoPaterno, String apellidoMaterno, int idZona) {
+         ArrayList<Empleado> empleados = new ArrayList<>();
+        Integer entero;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            String sql ="{ call LISTAR_EMPLEADO_POR_JEFE_Y_ZONA (?,?,?,?,?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_JEFE", idJefeVentas);
+            cs.setString("_NOMBRE", nombre);
+            cs.setString("_APELLIDO_PATERNO", apellidoPaterno);
+            cs.setString("_APELLIDO_MATERNO", apellidoMaterno);
+            cs.setInt("_ID_ZONA",idZona);
+            cs.executeUpdate();
+            rs = cs.getResultSet();
+            while(rs.next()){
+                Empleado empleado= new Empleado();
+                empleado.setIdEmpleado(rs.getInt("ID_EMPLEADO"));
+                
+                Cargo cargo=new Cargo(1,"VENDEDOR");
+                empleado.setCargo(cargo);
+                
+                PersonaDAO daoPersona = new PersonaMySQL();
+                Persona persona = daoPersona.mostrar(rs.getInt("ID_PERSONA")); 
+                empleado.asignarPersona(persona);
+                
+                entero=rs.getInt("ID_CARTERA");
+                if(entero!=null) empleado.getCartera().setIdCartera(entero.intValue());
+                
+                empleado.setSumVentas(rs.getDouble("SUMA_VENTAS_MES"));
+                empleado.setObjetivoVentas(rs.getDouble("OBJETIVO_VENTAS"));
+                empleado.setFechaCreacion(rs.getDate("FECHA_CREACION"));
+                empleado.setUsuario("USUARIO"); 
+
+                empleados.add(empleado);
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return empleados;
+    }
 }

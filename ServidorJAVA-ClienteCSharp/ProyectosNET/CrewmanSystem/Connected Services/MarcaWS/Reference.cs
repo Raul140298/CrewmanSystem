@@ -25,6 +25,15 @@ namespace CrewmanSystem.MarcaWS {
         System.Threading.Tasks.Task<CrewmanSystem.MarcaWS.insertarMarcaResponse> insertarMarcaAsync(CrewmanSystem.MarcaWS.insertarMarcaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/eliminarMarcaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/eliminarMarcaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.MarcaWS.eliminarMarcaResponse eliminarMarca(CrewmanSystem.MarcaWS.eliminarMarcaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/eliminarMarcaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/eliminarMarcaResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.MarcaWS.eliminarMarcaResponse> eliminarMarcaAsync(CrewmanSystem.MarcaWS.eliminarMarcaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/listarMarcasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/listarMarcasResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -41,19 +50,10 @@ namespace CrewmanSystem.MarcaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/actualizarMarcaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/actualizarMarcaResponse")]
         System.Threading.Tasks.Task<CrewmanSystem.MarcaWS.actualizarMarcaResponse> actualizarMarcaAsync(CrewmanSystem.MarcaWS.actualizarMarcaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/eliminarMarcaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/eliminarMarcaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.MarcaWS.eliminarMarcaResponse eliminarMarca(CrewmanSystem.MarcaWS.eliminarMarcaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/eliminarMarcaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/eliminarMarcaResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.MarcaWS.eliminarMarcaResponse> eliminarMarcaAsync(CrewmanSystem.MarcaWS.eliminarMarcaRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -151,6 +151,42 @@ namespace CrewmanSystem.MarcaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMarca", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarMarcaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idMarca;
+        
+        public eliminarMarcaRequest() {
+        }
+        
+        public eliminarMarcaRequest(int idMarca) {
+            this.idMarca = idMarca;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMarcaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarMarcaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarMarcaResponse() {
+        }
+        
+        public eliminarMarcaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarMarcas", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
     public partial class listarMarcasRequest {
         
@@ -212,42 +248,6 @@ namespace CrewmanSystem.MarcaWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMarca", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarMarcaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idMarca;
-        
-        public eliminarMarcaRequest() {
-        }
-        
-        public eliminarMarcaRequest(int idMarca) {
-            this.idMarca = idMarca;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMarcaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarMarcaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarMarcaResponse() {
-        }
-        
-        public eliminarMarcaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface MarcaWSChannel : CrewmanSystem.MarcaWS.MarcaWS, System.ServiceModel.IClientChannel {
     }
@@ -299,6 +299,29 @@ namespace CrewmanSystem.MarcaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.MarcaWS.eliminarMarcaResponse CrewmanSystem.MarcaWS.MarcaWS.eliminarMarca(CrewmanSystem.MarcaWS.eliminarMarcaRequest request) {
+            return base.Channel.eliminarMarca(request);
+        }
+        
+        public int eliminarMarca(int idMarca) {
+            CrewmanSystem.MarcaWS.eliminarMarcaRequest inValue = new CrewmanSystem.MarcaWS.eliminarMarcaRequest();
+            inValue.idMarca = idMarca;
+            CrewmanSystem.MarcaWS.eliminarMarcaResponse retVal = ((CrewmanSystem.MarcaWS.MarcaWS)(this)).eliminarMarca(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.MarcaWS.eliminarMarcaResponse> CrewmanSystem.MarcaWS.MarcaWS.eliminarMarcaAsync(CrewmanSystem.MarcaWS.eliminarMarcaRequest request) {
+            return base.Channel.eliminarMarcaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.MarcaWS.eliminarMarcaResponse> eliminarMarcaAsync(int idMarca) {
+            CrewmanSystem.MarcaWS.eliminarMarcaRequest inValue = new CrewmanSystem.MarcaWS.eliminarMarcaRequest();
+            inValue.idMarca = idMarca;
+            return ((CrewmanSystem.MarcaWS.MarcaWS)(this)).eliminarMarcaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CrewmanSystem.MarcaWS.listarMarcasResponse CrewmanSystem.MarcaWS.MarcaWS.listarMarcas(CrewmanSystem.MarcaWS.listarMarcasRequest request) {
             return base.Channel.listarMarcas(request);
         }
@@ -340,29 +363,6 @@ namespace CrewmanSystem.MarcaWS {
             CrewmanSystem.MarcaWS.actualizarMarcaRequest inValue = new CrewmanSystem.MarcaWS.actualizarMarcaRequest();
             inValue.marca = marca;
             return ((CrewmanSystem.MarcaWS.MarcaWS)(this)).actualizarMarcaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.MarcaWS.eliminarMarcaResponse CrewmanSystem.MarcaWS.MarcaWS.eliminarMarca(CrewmanSystem.MarcaWS.eliminarMarcaRequest request) {
-            return base.Channel.eliminarMarca(request);
-        }
-        
-        public int eliminarMarca(int idMarca) {
-            CrewmanSystem.MarcaWS.eliminarMarcaRequest inValue = new CrewmanSystem.MarcaWS.eliminarMarcaRequest();
-            inValue.idMarca = idMarca;
-            CrewmanSystem.MarcaWS.eliminarMarcaResponse retVal = ((CrewmanSystem.MarcaWS.MarcaWS)(this)).eliminarMarca(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.MarcaWS.eliminarMarcaResponse> CrewmanSystem.MarcaWS.MarcaWS.eliminarMarcaAsync(CrewmanSystem.MarcaWS.eliminarMarcaRequest request) {
-            return base.Channel.eliminarMarcaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.MarcaWS.eliminarMarcaResponse> eliminarMarcaAsync(int idMarca) {
-            CrewmanSystem.MarcaWS.eliminarMarcaRequest inValue = new CrewmanSystem.MarcaWS.eliminarMarcaRequest();
-            inValue.idMarca = idMarca;
-            return ((CrewmanSystem.MarcaWS.MarcaWS)(this)).eliminarMarcaAsync(inValue);
         }
     }
 }
