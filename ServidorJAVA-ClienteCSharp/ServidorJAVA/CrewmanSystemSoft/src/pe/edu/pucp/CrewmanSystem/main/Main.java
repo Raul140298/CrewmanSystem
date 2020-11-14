@@ -62,7 +62,7 @@ public class Main{
 //        gestionarProductos();
 //        gestionarProductoXZona();
 //      gestionarPromociones();
-        gestionarPromocionXProducto();
+       gestionarPromocionXProducto();
 //        gestionarPedidos();
 //        gestionarLineasDePedido();
 //        gestionarFacturas();
