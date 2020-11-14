@@ -26,9 +26,13 @@ namespace CrewmanSystem
                     TextBox textBox = c as TextBox;
                     if (textBox.Text == string.Empty && textBox.Name != "txtIdPedido" && textBox.Name != "txtMontoPendiente")
                     {
-                        MessageBox.Show("Falta llenar los datos de " +
-                            textBox.Name.Substring(3));
+                        MessageBox.Show("Falta llenar los datos de " + textBox.Name.Substring(3), 
+                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
+                    }
+                    else
+                    {
+
                     }
                 }
             }
