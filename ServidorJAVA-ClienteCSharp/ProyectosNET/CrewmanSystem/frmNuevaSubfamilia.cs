@@ -34,6 +34,7 @@ namespace CrewmanSystem
                 txtId.Text = frmGestionarSubfamilias.subfamiliaSeleccionada.idSubFamilia.ToString();
                 txtDescripcion.Text = frmGestionarSubfamilias.subfamiliaSeleccionada.descripcionSubFamilia;
                 cboFamilia.SelectedValue = frmGestionarSubfamilias.subfamiliaSeleccionada.familia.idFamilia;
+                cboFamilia.Enabled = false;
             }
         }
 
