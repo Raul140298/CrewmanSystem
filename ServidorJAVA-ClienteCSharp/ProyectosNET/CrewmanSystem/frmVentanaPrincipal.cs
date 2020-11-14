@@ -508,6 +508,7 @@ namespace CrewmanSystem
 					break;
 				case "frmGestionarPedidos":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoPedido());
+					if (boton == 2) frmGestionarPedidos.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarPedido());
 					break;
 				case "frmGestionarMarcas":
@@ -522,6 +523,7 @@ namespace CrewmanSystem
 					break;
 				case "frmGestionarFacturas":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaFactura());
+					if (boton == 2) frmGestionarFacturas.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarFactura());
 					break;
 				case "frmGestionarEmpleadosXZona":
@@ -789,7 +791,7 @@ namespace CrewmanSystem
 
 		private void btnBuscar_Click(object sender, EventArgs e)
 		{
-			antBtn = 1;
+			//antBtn = 1;
 			estado = BTNestado.buscar;
 			estadoBotones();
 			llamarMetodosDAO((IconButton)sender, 3);

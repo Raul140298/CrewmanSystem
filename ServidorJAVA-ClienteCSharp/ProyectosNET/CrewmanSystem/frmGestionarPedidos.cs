@@ -12,7 +12,9 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarPedidos : Form
 	{
-		private PedidoWS.PedidoWSClient daoPedido;
+		public static PedidoWS.PedidoWSClient daoPedido;
+		public static PedidoWS.pedido pedidoSeleccionado;
+		public static DataGridView dgv;
 		private ClienteWS.ClienteWSClient daoCliente;
 		
 		public frmGestionarPedidos()
@@ -21,7 +23,7 @@ namespace CrewmanSystem
 			daoCliente = new ClienteWS.ClienteWSClient();
 
 			InitializeComponent();
-
+			dgv = dgvPedidos;
 			dgvPedidos.AutoGenerateColumns = false;
 			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos();
 			//ClienteWS.cliente[] misClientes = daoCliente.listarClientes("", "");
@@ -63,6 +65,34 @@ namespace CrewmanSystem
 			as PedidoWS.pedido;
 
 			dgvPedidos.Rows[e.RowIndex].Cells["CLIENTE"].Value = pedido.cliente.razonSocial;
+		}
+
+		private void dgvPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			frmVentanaPrincipal.act.Enabled = false;
+			frmVentanaPrincipal.elim.Enabled = false;
+		}
+
+		private void dgvPedidos_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+		{
+			//Preguntar al profe
+			if (e.StateChanged != DataGridViewElementStates.Selected)
+			{
+				//frmVentanaPrincipal.act.Enabled = false;
+				//frmVentanaPrincipal.elim.Enabled = false;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+			}
+		}
+
+		public static void eliminar()
+		{
+			pedidoSeleccionado = (PedidoWS.pedido)dgv.CurrentRow.DataBoundItem;
+			daoPedido.eliminarPedido(pedidoSeleccionado.idPedido);
 		}
 	}
 }
