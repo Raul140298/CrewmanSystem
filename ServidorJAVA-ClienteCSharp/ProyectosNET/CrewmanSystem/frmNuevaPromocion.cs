@@ -29,6 +29,20 @@ namespace CrewmanSystem
             cboZona.DisplayMember = "nombre";
             misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>();
             cargarTablaPromocionXProducto();
+
+            if (frmVentanaPrincipal.nBtn == 1)
+            {   //OBTNER DATOS DE FILA SELECCIONADA
+                frmGestionarPromociones.promocionSeleccionada = (PromocionWS.promocion)frmGestionarPromociones.dgv.CurrentRow.DataBoundItem;
+                txtId.Text = frmGestionarPromociones.promocionSeleccionada.idPromocion.ToString();
+                txtNombre.Text = frmGestionarPromociones.promocionSeleccionada.nombre;
+                txtDescripcion.Text = frmGestionarPromociones.promocionSeleccionada.descripcion;
+                dtpFechaInicio.Value = frmGestionarPromociones.promocionSeleccionada.fechaInicio;
+                dtpFechaFin.Value = frmGestionarPromociones.promocionSeleccionada.fechaFin;
+                cboZona.SelectedValue = frmGestionarPromociones.promocionSeleccionada.zona.idZona;
+                //Listar los productos de la promoción.
+                PromocionXProductoWS.promocionXProducto[] misPromocions = daoPromocionXProducto.listarPromocionXProducto(frmGestionarPromociones.promocionSeleccionada.idPromocion);
+                cargarTablaPromocionXProducto();
+            }
         }
 
         private void btnBuscarProducto_Click(object sender, EventArgs e)
@@ -55,25 +69,11 @@ namespace CrewmanSystem
                     TextBox textBox = c as TextBox;
                     if (textBox.Text == string.Empty && textBox.Name != "txtId")
                     {
-                        MessageBox.Show("Falta llenar los datos de " + textBox.Name.Substring(3),
-                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Falta llenar los datos de " +
+                            textBox.Name.Substring(3) + " de " + groupBox1.Text);
                         return;
                     }
-                    else
-                    {
-                        if(textBox.Text == "")
-                        {
-                            MessageBox.Show("Falta completar los campos de texto de "+textBox.Name.Substring(3),
-                                "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return;
-                        }
-                    }
                 }
-            }
-            if(dtpFechaInicio.Value > dtpFechaFin.Value)
-            {
-                MessageBox.Show("Rango de fechas incorrecto de la promocion",
-                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             foreach (Control c in groupBox2.Controls)
@@ -83,8 +83,8 @@ namespace CrewmanSystem
                     ComboBox cmbBox = c as ComboBox;
                     if (cmbBox.SelectedIndex == -1)
                     {
-                        MessageBox.Show("Falta escoger el dato de " + cmbBox.Name.Substring(3),
-                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Falta llenar los datos de " +
+                            cmbBox.Name.Substring(3));
                         return;
                     }
                 }
@@ -92,10 +92,50 @@ namespace CrewmanSystem
 
             if (misPromocionXProducto == null)
             {
-                MessageBox.Show("Falta agregar los productos de la promocion",
-                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Falta agregar los productos de la promocion");
                 return;
             }
+
+            //Este foreach no se deberia usar
+            foreach (Control c in groupBox3.Controls)
+            {
+				if (c is TextBox)
+				{
+					TextBox textBox = c as TextBox;
+					if (textBox.Text == string.Empty && textBox.Name != "txtId")
+					{
+						MessageBox.Show("Falta llenar los datos de " +
+							textBox.Name.Substring(3) + " de " + groupBox3.Text);
+						return;
+					}
+					else
+					{
+						if (textBox == txtDescuento)
+						{
+							try
+							{
+								double resultado = Convert.ToDouble(txtDescuento.Text);
+							}
+							catch (Exception)
+							{
+								return;
+							}
+						}
+						if (textBox == txtStock)
+						{
+							try
+							{
+								int resultado = Convert.ToInt32(txtDescuento.Text);
+							}
+							catch (Exception)
+							{
+								return;
+							}
+						}
+
+					}
+				}
+			}
 
             frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
             if (formInsertar.ShowDialog() == DialogResult.OK)
@@ -125,8 +165,19 @@ namespace CrewmanSystem
                     promocion.listaPromocionXProducto[cont].stock =
                         ((PromocionXProductoWS.promocionXProducto)misPromocionXProducto.ElementAt(cont)).stock;
                 }
-                int idPromocion = daoPromocion.insertarPromocion(promocion);
-                txtId.Text = idPromocion.ToString();
+                if (frmVentanaPrincipal.nBtn == 0)
+                {
+                    int idPromocion = daoPromocion.insertarPromocion(promocion);
+                    txtId.Text = idPromocion.ToString();
+                }
+                else if (frmVentanaPrincipal.nBtn == 1)
+                {
+                    promocion.idPromocion = Int32.Parse(txtId.Text);
+                    if (daoPromocion.actualizarPromocion(promocion) == 0)
+                    {
+                        MessageBox.Show("No está insertando");
+                    }
+                }
             }
         }
 
@@ -134,24 +185,23 @@ namespace CrewmanSystem
         {
             if(txtNombreProducto.Text == "")
             {
-                MessageBox.Show("Debe escoger un producto",
-                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe escoger un producto");
                 return;
             }
             try{
                 int descuento = Convert.ToInt32(txtDescuento.Text);
             }
             catch (Exception){
-                MessageBox.Show("Los datos de " +txtDescuento.Name.Substring(3) + " solo pueden contener dígitos",
-                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Los datos de " +
+                    txtDescuento.Name.Substring(3) + " solo pueden contener dígitos");
                 return;
             }
             try{
                 int stock = Convert.ToInt32(txtStock.Text);
             }
             catch (Exception){
-                MessageBox.Show("Los datos de " +txtStock.Name.Substring(3) + " solo pueden contener dígitos",
-                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Los datos de " +
+                    txtStock.Name.Substring(3) + " solo pueden contener dígitos");
                 return;
             }
 

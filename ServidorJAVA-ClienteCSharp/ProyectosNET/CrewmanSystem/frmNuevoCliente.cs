@@ -13,14 +13,17 @@ namespace CrewmanSystem
 	public partial class frmNuevoCliente : Form
 	{
         ClienteWS.ClienteWSClient daoCliente = new ClienteWS.ClienteWSClient();
+        PersonaContactoWS.PersonaContactoWSClient daoPersonaContacto = new PersonaContactoWS.PersonaContactoWSClient();
         ZonaWS.ZonaWSClient daoZona = new ZonaWS.ZonaWSClient();
+        
+
 		public frmNuevoCliente()
 		{
 			InitializeComponent();
             cboZona.DataSource = new BindingList<ZonaWS.zona>(daoZona.listarZonas().ToArray());
             cboZona.ValueMember = "idZona";
             cboZona.DisplayMember = "nombre";
-
+            
             if (frmVentanaPrincipal.nBtn == 1)
             {   //OBTNER DATOS DE FILA SELECCIONADA
                 frmGestionarClientes.clienteSeleccionado = (ClienteWS.cliente)frmGestionarClientes.dgv.CurrentRow.DataBoundItem;
@@ -33,14 +36,19 @@ namespace CrewmanSystem
                 dtpFechaInicio.Value = frmGestionarClientes.clienteSeleccionado.fechaRegistro;
 
                 //PERSONA CONTACTO
-                txtIdPC.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.idPersonaContacto.ToString();
-                txtDNI.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.dni.ToString();
-                txtNombre.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.nombre;
-                txtApMaterno.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.apellidoMaterno;
-                txtApPaterno.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.apellidoPaterno;
-                txtTelefono1.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.telefono1.ToString();
-                txtTelefono2.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.telefono2.ToString();
-                txtCorreo.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.correo.ToString();
+                PersonaContactoWS.personaContacto personaC = new PersonaContactoWS.personaContacto();
+
+                personaC.idPersonaContacto = frmGestionarClientes.clienteSeleccionado.personaContacto.idPersonaContacto;
+                personaC = daoPersonaContacto.mostrarPersonaContacto(personaC.idPersonaContacto);
+
+                txtIdPC.Text = personaC.idPersonaContacto.ToString();
+                txtDNI.Text = personaC.dni.ToString();
+                txtNombre.Text = personaC.nombre;
+                txtApMaterno.Text = personaC.apellidoMaterno;
+                txtApPaterno.Text = personaC.apellidoPaterno;
+                txtTelefono1.Text = personaC.telefono1.ToString();
+                txtTelefono2.Text = personaC.telefono2.ToString();
+                txtCorreo.Text = personaC.correo.ToString();
             }
         }
 
@@ -53,8 +61,8 @@ namespace CrewmanSystem
                     TextBox textBox = c as TextBox;
                     if (textBox.Text == string.Empty && textBox.Name != "txtIdC")
                     {
-                        MessageBox.Show("Falta llenar los datos de " + textBox.Name.Substring(3),
-                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Falta llenar los datos de " +
+                            textBox.Name.Substring(3));
                         return;
                     }
                     else
@@ -63,8 +71,8 @@ namespace CrewmanSystem
                         {
                             if (!textBox.Text.All(Char.IsDigit))
                             {
-                                MessageBox.Show("Los datos de " + textBox.Name.Substring(3) + " solo pueden contener dígitos",
-                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show("Los datos de " +
+                                textBox.Name.Substring(3) + " solo pueden contener dígitos");
                                 return;
                             }
                         }
@@ -73,8 +81,8 @@ namespace CrewmanSystem
                             String txtNombreAux = string.Join("", textBox.Text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
                             if (!txtNombreAux.Trim().All(Char.IsLetter))
                             {
-                                MessageBox.Show("Los datos de " + textBox.Name.Substring(3) + " solo pueden contener letras",
-                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show("Los datos de " +
+                                    textBox.Name.Substring(3) + " solo pueden contener letras");
                                 return;
                             }
                         }
@@ -85,8 +93,8 @@ namespace CrewmanSystem
                     ComboBox cmbBox = c as ComboBox;
                     if (cmbBox.SelectedIndex == -1)
                     {
-                        MessageBox.Show("Falta llenar los datos de " +cmbBox.Name.Substring(3),
-                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Falta llenar los datos de " +
+                            cmbBox.Name.Substring(3));
                         return;
                     }
                 }
@@ -99,8 +107,8 @@ namespace CrewmanSystem
                     TextBox textBox = c as TextBox;
                     if (textBox.Text == string.Empty && textBox.Name != "txtIdPC")
                     {
-                        MessageBox.Show("Falta llenar los datos de " +textBox.Name.Substring(3),
-                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Falta llenar los datos de " +
+                            textBox.Name.Substring(3));
                         return;
                     }
                     else
@@ -110,8 +118,7 @@ namespace CrewmanSystem
                             if (!textBox.Text.All(Char.IsDigit))
                             {
                                 MessageBox.Show("Los datos de " +
-                                textBox.Name.Substring(3) + " solo pueden contener dígitos",
-                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                textBox.Name.Substring(3) + " solo pueden contener dígitos");
                                 return;
                             }
                         }
@@ -120,8 +127,8 @@ namespace CrewmanSystem
                             String txtNombreAux = string.Join("", textBox.Text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
                             if (!txtNombreAux.Trim().All(Char.IsLetter))
                             {
-                                MessageBox.Show("Los datos de " +textBox.Name.Substring(3) + " solo pueden contener letras",
-                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show("Los datos de " +
+                                    textBox.Name.Substring(3) + " solo pueden contener letras");
                                 return;
                             }
                         }
@@ -133,48 +140,37 @@ namespace CrewmanSystem
             if (formInsertar.ShowDialog() == DialogResult.OK)
             {
                 ClienteWS.cliente cliente = new ClienteWS.cliente();
+                PersonaContactoWS.personaContacto personaContacto = new PersonaContactoWS.personaContacto();
+
                 cliente.ruc = txtRuc.Text;
                 cliente.razonSocial = txtRazonSocial.Text;
                 cliente.fechaRegistro = DateTime.Now;
                 cliente.grupo = txtGrupo.Text;
                 cliente.zona = new ClienteWS.zona();
                 cliente.zona.idZona = ((ZonaWS.zona) cboZona.SelectedItem).idZona;
-                cliente.personaContacto = new ClienteWS.personaContacto();
-                cliente.personaContacto.dni = txtDNI.Text;
-                cliente.personaContacto.nombre = txtNombre.Text;
-                cliente.personaContacto.apellidoPaterno = txtApPaterno.Text;
-                cliente.personaContacto.apellidoMaterno = txtApMaterno.Text;
-                cliente.personaContacto.telefono1 = txtTelefono1.Text;
-                cliente.personaContacto.telefono2 = txtTelefono2.Text;
-                cliente.personaContacto.correo = txtCorreo.Text;
+                cliente.direccion = txtDireccion.Text;
+
+                personaContacto = new PersonaContactoWS.personaContacto();
+                personaContacto.dni = txtDNI.Text;
+                personaContacto.nombre = txtNombre.Text;
+                personaContacto.apellidoPaterno = txtApPaterno.Text;
+                personaContacto.apellidoMaterno = txtApMaterno.Text;
+                personaContacto.telefono1 = txtTelefono1.Text;
+                personaContacto.telefono2 = txtTelefono2.Text;
+                personaContacto.correo = txtCorreo.Text;
                 
                 if (frmVentanaPrincipal.nBtn == 0)
                 {
                     int resultado = daoCliente.insertarCliente(cliente);
                     txtIdC.Text = cliente.idCliente.ToString();
                     txtIdPC.Text = cliente.personaContacto.idPersonaContacto.ToString();
-                    if (resultado == 0)
-                    {
-                        MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Se insertó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
                 }
                 else if (frmVentanaPrincipal.nBtn == 1)
                 {
                     cliente.idCliente = Int32.Parse(txtIdC.Text);
                     cliente.personaContacto.idPersonaContacto = Int32.Parse(txtIdPC.Text);
-                    int resultado = daoCliente.actualizarCliente(cliente);
-                    if (resultado == 0)
-                    {
-                        MessageBox.Show("No se actualizó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Se actualizó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    daoCliente.actualizarCliente(cliente);
+                    daoPersonaContacto.actualizarPersonaContacto(personaContacto);
                 }
             }
         }
