@@ -16,6 +16,12 @@ namespace CrewmanSystem
 		public frmNuevaMarca()
 		{
 			InitializeComponent();
+            if (frmVentanaPrincipal.nBtn == 1)
+            {   //OBTNER DATOS DE FILA SELECCIONADA
+                frmGestionarMarcas.marcaSeleccionada = (MarcaWS.marca)frmGestionarMarcas.dgv.CurrentRow.DataBoundItem;
+                txtId.Text = frmGestionarMarcas.marcaSeleccionada.idMarca.ToString();
+                txtNombre.Text = frmGestionarMarcas.marcaSeleccionada.nombre;
+            }
             daoMarca = new MarcaWS.MarcaWSClient();
 		}
 
@@ -53,9 +59,16 @@ namespace CrewmanSystem
             {
                 MarcaWS.marca marca = new MarcaWS.marca();
                 marca.nombre = txtNombre.Text;
-                int resultado = daoMarca.insertarMarca(marca);
-                txtId.Text = resultado.ToString();
-                //Usar resultado para ver si se inserto correctamente
+                if (frmVentanaPrincipal.nBtn == 0)
+                {
+                    int resultado = daoMarca.insertarMarca(marca);
+                    txtId.Text = resultado.ToString();
+                }
+                else if (frmVentanaPrincipal.nBtn == 1)
+                {
+                    marca.idMarca = Int32.Parse(txtId.Text);
+                    daoMarca.actualizarMarca(marca);
+                }
             }
         }
     }

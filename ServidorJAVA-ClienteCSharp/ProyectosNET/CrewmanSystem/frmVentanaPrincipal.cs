@@ -488,6 +488,7 @@ namespace CrewmanSystem
 					break;
 				case "frmGestionarPromociones":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaPromocion());
+					if (boton == 2) frmGestionarPromociones.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarPromocion());
 					break;
 				case "frmGestionarProductosXZona":
@@ -505,6 +506,7 @@ namespace CrewmanSystem
 					break;
 				case "frmGestionarMarcas":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaMarca());
+					if (boton == 2) frmGestionarMarcas.eliminar();
 					break;
 				case "frmGestionarGuiasRemision":
 					break;
@@ -520,12 +522,14 @@ namespace CrewmanSystem
 					break;
 				case "frmGestionarEmpleados":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoEmpleado());
+					if (boton == 2) frmGestionarEmpleados.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarEmpleado());
 					break;
 				case "frmGestionarCarteras":
 					break;
 				case "frmGestionarClientes":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoCliente());
+					if (boton == 2) frmGestionarClientes.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarCliente());
 					break;
 				default:

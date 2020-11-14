@@ -12,13 +12,17 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarClientes : Form
 	{
-		private ClienteWS.ClienteWSClient daoCliente;
+		public static ClienteWS.ClienteWSClient daoCliente;
+		public static ClienteWS.cliente clienteSeleccionado;
+		public static DataGridView dgv;
 
 		public frmGestionarClientes()
 		{
 			daoCliente = new ClienteWS.ClienteWSClient();
 
 			InitializeComponent();
+			dgv = dataGridView1;
+
 			dataGridView1.AutoGenerateColumns = false;
 			ClienteWS.cliente[] misClientes = daoCliente.listarClientes("","");
             if (misClientes != null)
@@ -48,6 +52,34 @@ namespace CrewmanSystem
 			//castear objetos y mostrar valor determinado
 			ClienteWS.cliente cliente = dataGridView1.Rows[e.RowIndex].DataBoundItem
 										as ClienteWS.cliente;
+		}
+
+		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			frmVentanaPrincipal.act.Enabled = false;
+			frmVentanaPrincipal.elim.Enabled = false;
+		}
+
+		private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+		{
+			//Preguntar al profe
+			if (e.StateChanged != DataGridViewElementStates.Selected)
+			{
+				//frmVentanaPrincipal.act.Enabled = false;
+				//frmVentanaPrincipal.elim.Enabled = false;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+			}
+		}
+
+		public static void eliminar()
+		{
+			clienteSeleccionado = (ClienteWS.cliente)dgv.CurrentRow.DataBoundItem;
+			daoCliente.eliminarCliente(clienteSeleccionado.idCliente);
 		}
 	}
 }

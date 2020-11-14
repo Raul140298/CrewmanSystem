@@ -13,13 +13,17 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarEmpleados : Form
 	{
-		private EmpleadoWS.EmpleadoWSClient daoEmpleado;
+		public static EmpleadoWS.EmpleadoWSClient daoEmpleado;
+		public static EmpleadoWS.empleado empleadoSeleccionado;
+		public static DataGridView dgv;
+
 		private ZonaWS.ZonaWSClient daoZona;
 		public frmGestionarEmpleados()
 		{
 			daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
 			daoZona = new ZonaWS.ZonaWSClient();
 			InitializeComponent();
+			dgv = dataGridView1;
 			dataGridView1.AutoGenerateColumns = false;
 			EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado, "", "", "");
 
@@ -63,6 +67,34 @@ namespace CrewmanSystem
 			as EmpleadoWS.empleado;
 
 			dataGridView1.Rows[e.RowIndex].Cells["ZONA"].Value = empleado.zona.idZona;
+		}
+
+		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			frmVentanaPrincipal.act.Enabled = false;
+			frmVentanaPrincipal.elim.Enabled = false;
+		}
+
+		private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+		{
+			//Preguntar al profe
+			if (e.StateChanged != DataGridViewElementStates.Selected)
+			{
+				//frmVentanaPrincipal.act.Enabled = false;
+				//frmVentanaPrincipal.elim.Enabled = false;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+			}
+		}
+
+		public static void eliminar()
+		{
+			empleadoSeleccionado = (EmpleadoWS.empleado)dgv.CurrentRow.DataBoundItem;
+			daoEmpleado.eliminarEmpleado(empleadoSeleccionado.idEmpleado);
 		}
 	}
 }

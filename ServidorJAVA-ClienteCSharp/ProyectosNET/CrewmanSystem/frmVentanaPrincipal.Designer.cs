@@ -113,7 +113,7 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1253, 751);
+            this.pnlContenedor.Size = new System.Drawing.Size(960, 751);
             this.pnlContenedor.TabIndex = 1;
             this.pnlContenedor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlContenedor_MouseDown);
             // 
@@ -123,7 +123,7 @@
             this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlChildForm.Location = new System.Drawing.Point(285, 75);
             this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(968, 676);
+            this.pnlChildForm.Size = new System.Drawing.Size(675, 676);
             this.pnlChildForm.TabIndex = 3;
             this.pnlChildForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlChildForm_MouseDown);
             // 
@@ -131,7 +131,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::CrewmanSystem.Properties.Resources.MARCADEAGUA;
-            this.pictureBox1.Location = new System.Drawing.Point(827, 536);
+            this.pictureBox1.Location = new System.Drawing.Point(534, 536);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(117, 124);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -161,7 +161,7 @@
             this.pnlEmpleado.Controls.Add(this.pnlEmpGestionProductos);
             this.pnlEmpleado.Controls.Add(this.btnEmpGestionProductos);
             this.pnlEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEmpleado.Location = new System.Drawing.Point(0, 878);
+            this.pnlEmpleado.Location = new System.Drawing.Point(0, 911);
             this.pnlEmpleado.Name = "pnlEmpleado";
             this.pnlEmpleado.Size = new System.Drawing.Size(264, 838);
             this.pnlEmpleado.TabIndex = 1;
@@ -180,7 +180,7 @@
             this.btnVisitas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVisitas.IconSize = 20;
             this.btnVisitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVisitas.Location = new System.Drawing.Point(0, 436);
+            this.btnVisitas.Location = new System.Drawing.Point(0, 449);
             this.btnVisitas.Name = "btnVisitas";
             this.btnVisitas.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnVisitas.Rotation = 0D;
@@ -206,7 +206,7 @@
             this.btnPromociones.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPromociones.IconSize = 20;
             this.btnPromociones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPromociones.Location = new System.Drawing.Point(0, 391);
+            this.btnPromociones.Location = new System.Drawing.Point(0, 404);
             this.btnPromociones.Name = "btnPromociones";
             this.btnPromociones.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnPromociones.Rotation = 0D;
@@ -226,7 +226,7 @@
             this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpGestionFacturas);
             this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpPedidos);
             this.pnlEmpGestionPedidos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEmpGestionPedidos.Location = new System.Drawing.Point(0, 196);
+            this.pnlEmpGestionPedidos.Location = new System.Drawing.Point(0, 209);
             this.pnlEmpGestionPedidos.Name = "pnlEmpGestionPedidos";
             this.pnlEmpGestionPedidos.Size = new System.Drawing.Size(264, 195);
             this.pnlEmpGestionPedidos.TabIndex = 3;
@@ -336,7 +336,7 @@
             this.btnEmpGestionPedidos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEmpGestionPedidos.IconSize = 20;
             this.btnEmpGestionPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpGestionPedidos.Location = new System.Drawing.Point(0, 151);
+            this.btnEmpGestionPedidos.Location = new System.Drawing.Point(0, 164);
             this.btnEmpGestionPedidos.Name = "btnEmpGestionPedidos";
             this.btnEmpGestionPedidos.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnEmpGestionPedidos.Rotation = 0D;
@@ -354,7 +354,7 @@
             this.pnlEmpGestionProductos.Controls.Add(this.btnEmpProductoXZona);
             this.pnlEmpGestionProductos.Controls.Add(this.btnEmpProducto);
             this.pnlEmpGestionProductos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEmpGestionProductos.Location = new System.Drawing.Point(0, 45);
+            this.pnlEmpGestionProductos.Location = new System.Drawing.Point(0, 58);
             this.pnlEmpGestionProductos.Name = "pnlEmpGestionProductos";
             this.pnlEmpGestionProductos.Size = new System.Drawing.Size(264, 106);
             this.pnlEmpGestionProductos.TabIndex = 1;
@@ -422,7 +422,7 @@
             this.btnEmpGestionProductos.Name = "btnEmpGestionProductos";
             this.btnEmpGestionProductos.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnEmpGestionProductos.Rotation = 0D;
-            this.btnEmpGestionProductos.Size = new System.Drawing.Size(264, 45);
+            this.btnEmpGestionProductos.Size = new System.Drawing.Size(264, 58);
             this.btnEmpGestionProductos.TabIndex = 0;
             this.btnEmpGestionProductos.Text = "  Gestión de Productos";
             this.btnEmpGestionProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -446,7 +446,7 @@
             this.pnlJefeDeVentas.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlJefeDeVentas.Location = new System.Drawing.Point(0, 0);
             this.pnlJefeDeVentas.Name = "pnlJefeDeVentas";
-            this.pnlJefeDeVentas.Size = new System.Drawing.Size(264, 878);
+            this.pnlJefeDeVentas.Size = new System.Drawing.Size(264, 911);
             this.pnlJefeDeVentas.TabIndex = 0;
             this.pnlJefeDeVentas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlJefeDeVentas_MouseDown);
             // 
@@ -455,9 +455,9 @@
             this.pnlGestionClientes.Controls.Add(this.btnClientesXZona);
             this.pnlGestionClientes.Controls.Add(this.btnClientes);
             this.pnlGestionClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlGestionClientes.Location = new System.Drawing.Point(0, 802);
+            this.pnlGestionClientes.Location = new System.Drawing.Point(0, 796);
             this.pnlGestionClientes.Name = "pnlGestionClientes";
-            this.pnlGestionClientes.Size = new System.Drawing.Size(264, 102);
+            this.pnlGestionClientes.Size = new System.Drawing.Size(264, 101);
             this.pnlGestionClientes.TabIndex = 11;
             // 
             // btnClientesXZona
@@ -472,7 +472,7 @@
             this.btnClientesXZona.IconColor = System.Drawing.Color.Black;
             this.btnClientesXZona.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClientesXZona.IconSize = 16;
-            this.btnClientesXZona.Location = new System.Drawing.Point(0, 45);
+            this.btnClientesXZona.Location = new System.Drawing.Point(0, 55);
             this.btnClientesXZona.Name = "btnClientesXZona";
             this.btnClientesXZona.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnClientesXZona.Rotation = 0D;
@@ -499,7 +499,7 @@
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnClientes.Rotation = 0D;
-            this.btnClientes.Size = new System.Drawing.Size(264, 45);
+            this.btnClientes.Size = new System.Drawing.Size(264, 55);
             this.btnClientes.TabIndex = 1;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -523,7 +523,7 @@
             this.btnGestionClientes.Name = "btnGestionClientes";
             this.btnGestionClientes.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnGestionClientes.Rotation = 0D;
-            this.btnGestionClientes.Size = new System.Drawing.Size(264, 45);
+            this.btnGestionClientes.Size = new System.Drawing.Size(264, 39);
             this.btnGestionClientes.TabIndex = 10;
             this.btnGestionClientes.Text = "  Gestión de Clientes";
             this.btnGestionClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -966,7 +966,7 @@
             this.pnlCabecera.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCabecera.Location = new System.Drawing.Point(0, 0);
             this.pnlCabecera.Name = "pnlCabecera";
-            this.pnlCabecera.Size = new System.Drawing.Size(1253, 75);
+            this.pnlCabecera.Size = new System.Drawing.Size(960, 75);
             this.pnlCabecera.TabIndex = 0;
             // 
             // btnBuscar
@@ -1001,7 +1001,7 @@
             this.lblCountRows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.lblCountRows.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCountRows.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblCountRows.Location = new System.Drawing.Point(1066, 40);
+            this.lblCountRows.Location = new System.Drawing.Point(773, 40);
             this.lblCountRows.Name = "lblCountRows";
             this.lblCountRows.Size = new System.Drawing.Size(45, 20);
             this.lblCountRows.TabIndex = 19;
@@ -1021,7 +1021,7 @@
             this.btnLeft.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLeft.IconSize = 16;
             this.btnLeft.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLeft.Location = new System.Drawing.Point(1181, 32);
+            this.btnLeft.Location = new System.Drawing.Point(888, 32);
             this.btnLeft.Name = "btnLeft";
             this.btnLeft.Rotation = 0D;
             this.btnLeft.Size = new System.Drawing.Size(36, 43);
@@ -1044,7 +1044,7 @@
             this.btnRight.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRight.IconSize = 16;
             this.btnRight.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRight.Location = new System.Drawing.Point(1217, 32);
+            this.btnRight.Location = new System.Drawing.Point(924, 32);
             this.btnRight.Name = "btnRight";
             this.btnRight.Rotation = 0D;
             this.btnRight.Size = new System.Drawing.Size(36, 43);
@@ -1195,7 +1195,7 @@
             this.pnlControlBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlControlBox.Location = new System.Drawing.Point(0, 0);
             this.pnlControlBox.Name = "pnlControlBox";
-            this.pnlControlBox.Size = new System.Drawing.Size(1253, 32);
+            this.pnlControlBox.Size = new System.Drawing.Size(960, 32);
             this.pnlControlBox.TabIndex = 0;
             this.pnlControlBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
@@ -1223,7 +1223,7 @@
             this.btnMinimizar.IconColor = System.Drawing.Color.Black;
             this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimizar.IconSize = 20;
-            this.btnMinimizar.Location = new System.Drawing.Point(1154, 0);
+            this.btnMinimizar.Location = new System.Drawing.Point(861, 0);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.btnMinimizar.Rotation = 0D;
@@ -1245,7 +1245,7 @@
             this.btnMaximizar.IconColor = System.Drawing.Color.Black;
             this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximizar.IconSize = 20;
-            this.btnMaximizar.Location = new System.Drawing.Point(1187, 0);
+            this.btnMaximizar.Location = new System.Drawing.Point(894, 0);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Padding = new System.Windows.Forms.Padding(2, 4, 0, 0);
             this.btnMaximizar.Rotation = 0D;
@@ -1269,7 +1269,7 @@
             this.btnSalir.IconColor = System.Drawing.Color.Black;
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 20;
-            this.btnSalir.Location = new System.Drawing.Point(1220, 0);
+            this.btnSalir.Location = new System.Drawing.Point(927, 0);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(4, 4, 0, 0);
             this.btnSalir.Rotation = 0D;
@@ -1283,7 +1283,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.ClientSize = new System.Drawing.Size(1253, 751);
+            this.ClientSize = new System.Drawing.Size(960, 751);
             this.Controls.Add(this.pnlContenedor);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -12,11 +12,15 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarPromociones : Form
 	{
-		private PromocionWS.PromocionWSClient daoPromocion;
+		public static PromocionWS.PromocionWSClient daoPromocion;
+		public static PromocionWS.promocion promocionSeleccionada;
+		public static DataGridView dgv;
+
 		public frmGestionarPromociones()
 		{
 			daoPromocion = new PromocionWS.PromocionWSClient();
 			InitializeComponent();
+			dgv = dataGridView1;
 			dataGridView1.AutoGenerateColumns = false;
 			PromocionWS.promocion[] misPromocions = daoPromocion.listarPromocions("", DateTime.MinValue, DateTime.MaxValue);
 			if (misPromocions != null)
@@ -47,5 +51,34 @@ namespace CrewmanSystem
 
 			dataGridView1.Rows[e.RowIndex].Cells["ZONA"].Value = promocion.zona.nombre;
 		}
-    }
+
+		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			frmVentanaPrincipal.act.Enabled = false;
+			frmVentanaPrincipal.elim.Enabled = false;
+		}
+
+		private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+		{
+			//Preguntar al profe
+			if (e.StateChanged != DataGridViewElementStates.Selected)
+			{
+				//frmVentanaPrincipal.act.Enabled = false;
+				//frmVentanaPrincipal.elim.Enabled = false;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+			}
+		}
+
+		public static void eliminar()
+		{
+			promocionSeleccionada = (PromocionWS.promocion)dgv.CurrentRow.DataBoundItem;
+			daoPromocion.eliminarPromocion(promocionSeleccionada.idPromocion);
+		}
+
+	}
 }
