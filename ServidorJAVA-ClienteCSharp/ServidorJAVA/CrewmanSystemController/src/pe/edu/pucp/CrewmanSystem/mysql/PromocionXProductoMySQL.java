@@ -66,7 +66,6 @@ public class PromocionXProductoMySQL implements PromocionXProductoDAO{
                 producto.setCantUnidad(rs.getInt("CANT_UNIDADES"));
                 producto.setUnidades(rs.getString("UNIDADES"));
                 promocionXProducto.setProducto(producto);
-                
                 promocionXProducto.setPrecioReal(rs.getDouble("PRECIO_REAL"));
                 promocionXProducto.setDescuento(rs.getInt("DESCUENTO"));
                 promocionXProducto.setStock(rs.getInt("STOCK"));

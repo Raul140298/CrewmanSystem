@@ -45,6 +45,7 @@ namespace CrewmanSystem
                 btnAddProducto.Enabled = false;
                 btnRemoveProducto.Enabled = false;
                 btnBuscarProducto.Enabled = false;
+                cboZona.Enabled = false;
                 int idPromocion = frmGestionarPromociones.promocionSeleccionada.idPromocion;
                 PromocionXProductoWS.promocionXProducto[] auxPromoXProd = daoPromocionXProducto.listarPromocionXProducto(idPromocion);
                 if (auxPromoXProd.Length == 0) misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>();
