@@ -101,7 +101,7 @@
             // label10
             // 
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label10.Location = new System.Drawing.Point(0, 497);
+            this.label10.Location = new System.Drawing.Point(0, 486);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(200, 22);
             this.label10.TabIndex = 80;
@@ -212,18 +212,20 @@
             // 
             // cboZona
             // 
+            this.cboZona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboZona.FormattingEnabled = true;
-            this.cboZona.Location = new System.Drawing.Point(8, 444);
-            this.cboZona.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboZona.Location = new System.Drawing.Point(8, 437);
+            this.cboZona.Margin = new System.Windows.Forms.Padding(4);
             this.cboZona.Name = "cboZona";
             this.cboZona.Size = new System.Drawing.Size(277, 24);
             this.cboZona.TabIndex = 114;
             // 
             // cboCargo
             // 
+            this.cboCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCargo.FormattingEnabled = true;
             this.cboCargo.Location = new System.Drawing.Point(8, 390);
-            this.cboCargo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboCargo.Margin = new System.Windows.Forms.Padding(4);
             this.cboCargo.Name = "cboCargo";
             this.cboCargo.Size = new System.Drawing.Size(277, 24);
             this.cboCargo.TabIndex = 113;
@@ -234,10 +236,10 @@
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(5, 540);
+            this.btnGuardar.Location = new System.Drawing.Point(8, 535);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(160, 39);
+            this.btnGuardar.Size = new System.Drawing.Size(160, 30);
             this.btnGuardar.TabIndex = 112;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -246,7 +248,7 @@
             // rbFemenino
             // 
             this.rbFemenino.AutoSize = true;
-            this.rbFemenino.Location = new System.Drawing.Point(61, 498);
+            this.rbFemenino.Location = new System.Drawing.Point(8, 486);
             this.rbFemenino.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbFemenino.Name = "rbFemenino";
             this.rbFemenino.Size = new System.Drawing.Size(37, 21);
@@ -258,7 +260,7 @@
             // rbMasculino
             // 
             this.rbMasculino.AutoSize = true;
-            this.rbMasculino.Location = new System.Drawing.Point(5, 498);
+            this.rbMasculino.Location = new System.Drawing.Point(58, 486);
             this.rbMasculino.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbMasculino.Name = "rbMasculino";
             this.rbMasculino.Size = new System.Drawing.Size(40, 21);

@@ -34,8 +34,8 @@ namespace CrewmanSystem
                     TextBox textBox = c as TextBox;
                     if (textBox.Text == string.Empty && textBox.Name != "txtId")
                     {
-                        MessageBox.Show("Falta llenar los datos de " +
-                            textBox.Name.Substring(3), "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Falta llenar los datos de " + textBox.Name.Substring(3), 
+                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     else
@@ -45,14 +45,15 @@ namespace CrewmanSystem
                             String txtNombreAux = string.Join("", textBox.Text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
                             if (!txtNombreAux.All(Char.IsLetter))
                             {
-                                MessageBox.Show("Los datos de " +
-                                    textBox.Name.Substring(3) + " solo pueden contener letras", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show("Los datos de " + textBox.Name.Substring(3) + " solo pueden contener letras", 
+                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
                         }
                     }
                 }
             }
+
             frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
             if (formInsertar.ShowDialog() == DialogResult.OK)
             {   //VERIFICAR QUE TIPO DE BOTÓN SE MACHUCÓ Y DEPENDIENDO HACER ALGO
@@ -62,11 +63,27 @@ namespace CrewmanSystem
                 {
                     int resultado = daoFamilia.insertarFamilia(familia);
                     txtId.Text = resultado.ToString();
+                    if (resultado == 0)
+                    {
+                        MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se insertó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else if (frmVentanaPrincipal.nBtn == 1)
                 {
                     familia.idFamilia = Int32.Parse(txtId.Text);
-                    daoFamilia.actualizarFamilia(familia);
+                    int resultado = daoFamilia.actualizarFamilia(familia);
+                    if (resultado == 0)
+                    {
+                        MessageBox.Show("No se actualizó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se actualizó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }

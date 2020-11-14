@@ -53,8 +53,8 @@ namespace CrewmanSystem
                     TextBox textBox = c as TextBox;
                     if (textBox.Text == string.Empty && textBox.Name != "txtIdC")
                     {
-                        MessageBox.Show("Falta llenar los datos de " +
-                            textBox.Name.Substring(3));
+                        MessageBox.Show("Falta llenar los datos de " + textBox.Name.Substring(3),
+                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     else
@@ -63,8 +63,8 @@ namespace CrewmanSystem
                         {
                             if (!textBox.Text.All(Char.IsDigit))
                             {
-                                MessageBox.Show("Los datos de " +
-                                textBox.Name.Substring(3) + " solo pueden contener dígitos");
+                                MessageBox.Show("Los datos de " + textBox.Name.Substring(3) + " solo pueden contener dígitos",
+                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
                         }
@@ -73,8 +73,8 @@ namespace CrewmanSystem
                             String txtNombreAux = string.Join("", textBox.Text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
                             if (!txtNombreAux.Trim().All(Char.IsLetter))
                             {
-                                MessageBox.Show("Los datos de " +
-                                    textBox.Name.Substring(3) + " solo pueden contener letras");
+                                MessageBox.Show("Los datos de " + textBox.Name.Substring(3) + " solo pueden contener letras",
+                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
                         }
@@ -85,8 +85,8 @@ namespace CrewmanSystem
                     ComboBox cmbBox = c as ComboBox;
                     if (cmbBox.SelectedIndex == -1)
                     {
-                        MessageBox.Show("Falta llenar los datos de " +
-                            cmbBox.Name.Substring(3));
+                        MessageBox.Show("Falta llenar los datos de " +cmbBox.Name.Substring(3),
+                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                 }
@@ -99,8 +99,8 @@ namespace CrewmanSystem
                     TextBox textBox = c as TextBox;
                     if (textBox.Text == string.Empty && textBox.Name != "txtIdPC")
                     {
-                        MessageBox.Show("Falta llenar los datos de " +
-                            textBox.Name.Substring(3));
+                        MessageBox.Show("Falta llenar los datos de " +textBox.Name.Substring(3),
+                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     else
@@ -110,7 +110,8 @@ namespace CrewmanSystem
                             if (!textBox.Text.All(Char.IsDigit))
                             {
                                 MessageBox.Show("Los datos de " +
-                                textBox.Name.Substring(3) + " solo pueden contener dígitos");
+                                textBox.Name.Substring(3) + " solo pueden contener dígitos",
+                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
                         }
@@ -119,8 +120,8 @@ namespace CrewmanSystem
                             String txtNombreAux = string.Join("", textBox.Text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
                             if (!txtNombreAux.Trim().All(Char.IsLetter))
                             {
-                                MessageBox.Show("Los datos de " +
-                                    textBox.Name.Substring(3) + " solo pueden contener letras");
+                                MessageBox.Show("Los datos de " +textBox.Name.Substring(3) + " solo pueden contener letras",
+                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
                         }
@@ -152,12 +153,28 @@ namespace CrewmanSystem
                     int resultado = daoCliente.insertarCliente(cliente);
                     txtIdC.Text = cliente.idCliente.ToString();
                     txtIdPC.Text = cliente.personaContacto.idPersonaContacto.ToString();
+                    if (resultado == 0)
+                    {
+                        MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se insertó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else if (frmVentanaPrincipal.nBtn == 1)
                 {
                     cliente.idCliente = Int32.Parse(txtIdC.Text);
                     cliente.personaContacto.idPersonaContacto = Int32.Parse(txtIdPC.Text);
-                    daoCliente.actualizarCliente(cliente);
+                    int resultado = daoCliente.actualizarCliente(cliente);
+                    if (resultado == 0)
+                    {
+                        MessageBox.Show("No se actualizó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se actualizó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }
