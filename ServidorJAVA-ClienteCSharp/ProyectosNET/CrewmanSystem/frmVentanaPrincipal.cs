@@ -25,7 +25,6 @@ namespace CrewmanSystem
 		public static IconButton act;
 		public static IconButton elim;
 		public static int nBtn;
-		public static int antBtn;
 
 		public frmVentanaPrincipal()
 		{
@@ -256,7 +255,6 @@ namespace CrewmanSystem
 					}
 					else//SI ES DE PANEL
 					{
-						frmVentanaPrincipal.antBtn = 0;
 						if (Program.pantallas.Last().Tipo == BTNtipo.btnDePanel) DesactivaBoton(Program.pantallas.Last());//Desactivamos el anterior que sea de panel
 					}
 	
@@ -789,7 +787,6 @@ namespace CrewmanSystem
 
 		private void btnBuscar_Click(object sender, EventArgs e)
 		{
-			antBtn = 1;
 			estado = BTNestado.buscar;
 			estadoBotones();
 			llamarMetodosDAO((IconButton)sender, 3);

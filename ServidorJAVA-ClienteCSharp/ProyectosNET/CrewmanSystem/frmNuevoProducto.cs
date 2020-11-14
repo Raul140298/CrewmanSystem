@@ -38,7 +38,7 @@ namespace CrewmanSystem
             }
             if (frmVentanaPrincipal.nBtn == 1)
             {   //OBTNER DATOS DE FILA SELECCIONADA
-                if(frmVentanaPrincipal.antBtn == 0)
+                if (Program.pantallas[Program.pantallas.Count-1].Formulario.Name == "frmGestionarProductos")
                 {
                     frmGestionarProductos.productoSeleccionado = (ProductoWS.producto)frmGestionarProductos.dgv.CurrentRow.DataBoundItem;
                     txtId.Text = frmGestionarProductos.productoSeleccionado.idProducto.ToString();
