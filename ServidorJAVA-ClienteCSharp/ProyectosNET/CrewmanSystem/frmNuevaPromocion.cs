@@ -96,48 +96,51 @@ namespace CrewmanSystem
                 return;
             }
 
-            //Este foreach no se deberia usar
-            foreach (Control c in groupBox3.Controls)
-            {
-				if (c is TextBox)
-				{
-					TextBox textBox = c as TextBox;
-					if (textBox.Text == string.Empty && textBox.Name != "txtId")
-					{
-						MessageBox.Show("Falta llenar los datos de " +
-							textBox.Name.Substring(3) + " de " + groupBox3.Text);
-						return;
-					}
-					else
-					{
-						if (textBox == txtDescuento)
-						{
-							try
-							{
-								double resultado = Convert.ToDouble(txtDescuento.Text);
-							}
-							catch (Exception)
-							{
-								return;
-							}
-						}
-						if (textBox == txtStock)
-						{
-							try
-							{
-								int resultado = Convert.ToInt32(txtDescuento.Text);
-							}
-							catch (Exception)
-							{
-								return;
-							}
-						}
+			//Este foreach no se deberia usar
+            if(frmVentanaPrincipal.nBtn == 0)
+			{
+                foreach (Control c in groupBox3.Controls)
+                {
+                    if (c is TextBox)
+                    {
+                        TextBox textBox = c as TextBox;
+                        if (textBox.Text == string.Empty && textBox.Name != "txtId")
+                        {
+                            MessageBox.Show("Falta llenar los datos de " +
+                                textBox.Name.Substring(3) + " de " + groupBox3.Text);
+                            return;
+                        }
+                        else
+                        {
+                            if (textBox == txtDescuento)
+                            {
+                                try
+                                {
+                                    double resultado = Convert.ToDouble(txtDescuento.Text);
+                                }
+                                catch (Exception)
+                                {
+                                    return;
+                                }
+                            }
+                            if (textBox == txtStock)
+                            {
+                                try
+                                {
+                                    int resultado = Convert.ToInt32(txtDescuento.Text);
+                                }
+                                catch (Exception)
+                                {
+                                    return;
+                                }
+                            }
 
-					}
-				}
-			}
+                        }
+                    }
+                }
+            }
 
-            frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
+			frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
             if (formInsertar.ShowDialog() == DialogResult.OK)
             {
                 PromocionWS.promocion promocion = new PromocionWS.promocion();

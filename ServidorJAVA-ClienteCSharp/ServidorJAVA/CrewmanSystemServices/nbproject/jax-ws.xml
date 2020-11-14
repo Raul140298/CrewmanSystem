@@ -7,29 +7,11 @@
     <service name="MarcaWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.MarcaWS</implementation-class>
     </service>
-    <service name="ProductoXZonaWS">
-      <implementation-class>pe.edu.pucp.CrewmanSystem.services.ProductoXZonaWS</implementation-class>
-    </service>
-    <service name="PromocionXProductoWS">
-      <implementation-class>pe.edu.pucp.CrewmanSystem.services.PromocionXProductoWS</implementation-class>
-    </service>
-    <service name="SubFamiliaWS">
-      <implementation-class>pe.edu.pucp.CrewmanSystem.services.SubFamiliaWS</implementation-class>
-    </service>
-    <service name="GuiaRemisionWS">
-      <implementation-class>pe.edu.pucp.CrewmanSystem.services.GuiaRemisionWS</implementation-class>
-    </service>
-    <service name="EmpleadoXZonaWS">
-      <implementation-class>pe.edu.pucp.CrewmanSystem.services.EmpleadoXZonaWS</implementation-class>
-    </service>
-    <service name="EmpleadoWS">
-      <implementation-class>pe.edu.pucp.CrewmanSystem.services.EmpleadoWS</implementation-class>
-    </service>
-    <service name="PedidoWS">
-      <implementation-class>pe.edu.pucp.CrewmanSystem.services.PedidoWS</implementation-class>
-    </service>
     <service name="PromocionWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.PromocionWS</implementation-class>
+    </service>
+    <service name="ProductoXZonaWS">
+      <implementation-class>pe.edu.pucp.CrewmanSystem.services.ProductoXZonaWS</implementation-class>
     </service>
     <service name="ClienteWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.ClienteWS</implementation-class>
@@ -37,20 +19,32 @@
     <service name="PersonaContactoWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.PersonaContactoWS</implementation-class>
     </service>
+    <service name="PromocionXProductoWS">
+      <implementation-class>pe.edu.pucp.CrewmanSystem.services.PromocionXProductoWS</implementation-class>
+    </service>
     <service name="CarteraWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.CarteraWS</implementation-class>
+    </service>
+    <service name="SubFamiliaWS">
+      <implementation-class>pe.edu.pucp.CrewmanSystem.services.SubFamiliaWS</implementation-class>
     </service>
     <service name="ClienteXZonaWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.ClienteXZonaWS</implementation-class>
     </service>
-    <service name="VisitaWS">
-      <implementation-class>pe.edu.pucp.CrewmanSystem.services.VisitaWS</implementation-class>
+    <service name="GuiaRemisionWS">
+      <implementation-class>pe.edu.pucp.CrewmanSystem.services.GuiaRemisionWS</implementation-class>
     </service>
     <service name="ProductoWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.ProductoWS</implementation-class>
     </service>
+    <service name="VisitaWS">
+      <implementation-class>pe.edu.pucp.CrewmanSystem.services.VisitaWS</implementation-class>
+    </service>
     <service name="NotaDeCreditoWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.NotaDeCreditoWS</implementation-class>
+    </service>
+    <service name="EmpleadoXZonaWS">
+      <implementation-class>pe.edu.pucp.CrewmanSystem.services.EmpleadoXZonaWS</implementation-class>
     </service>
     <service name="FamiliaWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.FamiliaWS</implementation-class>
@@ -63,6 +57,12 @@
     </service>
     <service name="ZonaWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.ZonaWS</implementation-class>
+    </service>
+    <service name="EmpleadoWS">
+      <implementation-class>pe.edu.pucp.CrewmanSystem.services.EmpleadoWS</implementation-class>
+    </service>
+    <service name="PedidoWS">
+      <implementation-class>pe.edu.pucp.CrewmanSystem.services.PedidoWS</implementation-class>
     </service>
     <service name="FacturaWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.FacturaWS</implementation-class>

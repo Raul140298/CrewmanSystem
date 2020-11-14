@@ -113,7 +113,7 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(960, 751);
+            this.pnlContenedor.Size = new System.Drawing.Size(1260, 751);
             this.pnlContenedor.TabIndex = 1;
             this.pnlContenedor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlContenedor_MouseDown);
             // 
@@ -123,7 +123,7 @@
             this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlChildForm.Location = new System.Drawing.Point(285, 75);
             this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(675, 676);
+            this.pnlChildForm.Size = new System.Drawing.Size(975, 676);
             this.pnlChildForm.TabIndex = 3;
             this.pnlChildForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlChildForm_MouseDown);
             // 
@@ -131,7 +131,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::CrewmanSystem.Properties.Resources.MARCADEAGUA;
-            this.pictureBox1.Location = new System.Drawing.Point(534, 536);
+            this.pictureBox1.Location = new System.Drawing.Point(834, 536);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(117, 124);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -966,7 +966,7 @@
             this.pnlCabecera.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCabecera.Location = new System.Drawing.Point(0, 0);
             this.pnlCabecera.Name = "pnlCabecera";
-            this.pnlCabecera.Size = new System.Drawing.Size(960, 75);
+            this.pnlCabecera.Size = new System.Drawing.Size(1260, 75);
             this.pnlCabecera.TabIndex = 0;
             // 
             // btnBuscar
@@ -1001,7 +1001,7 @@
             this.lblCountRows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.lblCountRows.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCountRows.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblCountRows.Location = new System.Drawing.Point(773, 40);
+            this.lblCountRows.Location = new System.Drawing.Point(1073, 40);
             this.lblCountRows.Name = "lblCountRows";
             this.lblCountRows.Size = new System.Drawing.Size(45, 20);
             this.lblCountRows.TabIndex = 19;
@@ -1021,7 +1021,7 @@
             this.btnLeft.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLeft.IconSize = 16;
             this.btnLeft.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLeft.Location = new System.Drawing.Point(888, 32);
+            this.btnLeft.Location = new System.Drawing.Point(1188, 32);
             this.btnLeft.Name = "btnLeft";
             this.btnLeft.Rotation = 0D;
             this.btnLeft.Size = new System.Drawing.Size(36, 43);
@@ -1044,7 +1044,7 @@
             this.btnRight.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRight.IconSize = 16;
             this.btnRight.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRight.Location = new System.Drawing.Point(924, 32);
+            this.btnRight.Location = new System.Drawing.Point(1224, 32);
             this.btnRight.Name = "btnRight";
             this.btnRight.Rotation = 0D;
             this.btnRight.Size = new System.Drawing.Size(36, 43);
@@ -1195,7 +1195,7 @@
             this.pnlControlBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlControlBox.Location = new System.Drawing.Point(0, 0);
             this.pnlControlBox.Name = "pnlControlBox";
-            this.pnlControlBox.Size = new System.Drawing.Size(960, 32);
+            this.pnlControlBox.Size = new System.Drawing.Size(1260, 32);
             this.pnlControlBox.TabIndex = 0;
             this.pnlControlBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
@@ -1223,7 +1223,7 @@
             this.btnMinimizar.IconColor = System.Drawing.Color.Black;
             this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimizar.IconSize = 20;
-            this.btnMinimizar.Location = new System.Drawing.Point(861, 0);
+            this.btnMinimizar.Location = new System.Drawing.Point(1161, 0);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.btnMinimizar.Rotation = 0D;
@@ -1245,7 +1245,7 @@
             this.btnMaximizar.IconColor = System.Drawing.Color.Black;
             this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximizar.IconSize = 20;
-            this.btnMaximizar.Location = new System.Drawing.Point(894, 0);
+            this.btnMaximizar.Location = new System.Drawing.Point(1194, 0);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Padding = new System.Windows.Forms.Padding(2, 4, 0, 0);
             this.btnMaximizar.Rotation = 0D;
@@ -1269,7 +1269,7 @@
             this.btnSalir.IconColor = System.Drawing.Color.Black;
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 20;
-            this.btnSalir.Location = new System.Drawing.Point(927, 0);
+            this.btnSalir.Location = new System.Drawing.Point(1227, 0);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(4, 4, 0, 0);
             this.btnSalir.Rotation = 0D;
@@ -1283,7 +1283,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.ClientSize = new System.Drawing.Size(960, 751);
+            this.ClientSize = new System.Drawing.Size(1260, 751);
             this.Controls.Add(this.pnlContenedor);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

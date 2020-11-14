@@ -58,11 +58,11 @@ public class Main{
 //        gestionarMarcas();
 //        gestionarZonas();
 //       gestionarClientes();
-        gestionarEmpleados();
+//        gestionarEmpleados();
 //        gestionarProductos();
 //        gestionarProductoXZona();
-//        gestionarPromociones();
-//        gestionarPromocionXProducto();
+//      gestionarPromociones();
+        gestionarPromocionXProducto();
 //        gestionarPedidos();
 //        gestionarLineasDePedido();
 //        gestionarFacturas();
