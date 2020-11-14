@@ -472,7 +472,7 @@ namespace CrewmanSystem
 			{		
 				case "frmGestionarZonas":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaZona());
-					//if(boton == 2 )llamarFormulario(new frmEliminarZona());
+					if(boton == 2 ) frmGestionarZonas.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarZona());
 					break;
 				case "frmGestionarVisitas":
@@ -789,7 +789,7 @@ namespace CrewmanSystem
 
 		private void btnBuscar_Click(object sender, EventArgs e)
 		{
-			frmVentanaPrincipal.antBtn = 1;
+			antBtn = 1;
 			estado = BTNestado.buscar;
 			estadoBotones();
 			llamarMetodosDAO((IconButton)sender, 3);
