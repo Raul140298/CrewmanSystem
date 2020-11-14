@@ -34,13 +34,13 @@ namespace CrewmanSystem
 
                 //PERSONA CONTACTO
                 txtIdPC.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.idPersonaContacto.ToString();
-                //txtDNI.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.dni.ToString();
+                txtDNI.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.dni.ToString();
                 txtNombre.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.nombre;
                 txtApMaterno.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.apellidoMaterno;
                 txtApPaterno.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.apellidoPaterno;
-                //txtTelefono1.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.telefono1.ToString();
-                //txtTelefono2.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.telefono2.ToString();
-                //txtCorreo.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.correo.ToString();
+                txtTelefono1.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.telefono1.ToString();
+                txtTelefono2.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.telefono2.ToString();
+                txtCorreo.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.correo.ToString();
             }
         }
 
