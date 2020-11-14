@@ -38,15 +38,30 @@ namespace CrewmanSystem
             }
             if (frmVentanaPrincipal.nBtn == 1)
             {   //OBTNER DATOS DE FILA SELECCIONADA
-                frmGestionarProductos.productoSeleccionado = (ProductoWS.producto)frmGestionarProductos.dgv.CurrentRow.DataBoundItem;
-                txtId.Text = frmGestionarProductos.productoSeleccionado.idProducto.ToString();
-                txtNombre.Text = frmGestionarProductos.productoSeleccionado.nombre;
-                cboFamilia.SelectedValue = frmGestionarProductos.productoSeleccionado.subFamilia.familia.idFamilia;
-                cboSubfamilia.SelectedValue = frmGestionarProductos.productoSeleccionado.subFamilia.idSubFamilia;
-                cboMarca.SelectedValue = frmGestionarProductos.productoSeleccionado.marca.idMarca;
-                txtCantidad.Text = frmGestionarProductos.productoSeleccionado.cantUnidad.ToString();
-                txtPrecioSugerido.Text = frmGestionarProductos.productoSeleccionado.precioSugerido.ToString();
-                txtStock.Text = frmGestionarProductos.productoSeleccionado.stock.ToString();
+                if(frmVentanaPrincipal.antBtn == 0)
+                {
+                    frmGestionarProductos.productoSeleccionado = (ProductoWS.producto)frmGestionarProductos.dgv.CurrentRow.DataBoundItem;
+                    txtId.Text = frmGestionarProductos.productoSeleccionado.idProducto.ToString();
+                    txtNombre.Text = frmGestionarProductos.productoSeleccionado.nombre;
+                    cboFamilia.SelectedValue = frmGestionarProductos.productoSeleccionado.subFamilia.familia.idFamilia;
+                    cboSubfamilia.SelectedValue = frmGestionarProductos.productoSeleccionado.subFamilia.idSubFamilia;
+                    cboMarca.SelectedValue = frmGestionarProductos.productoSeleccionado.marca.idMarca;
+                    txtCantidad.Text = frmGestionarProductos.productoSeleccionado.cantUnidad.ToString();
+                    txtPrecioSugerido.Text = frmGestionarProductos.productoSeleccionado.precioSugerido.ToString();
+                    txtStock.Text = frmGestionarProductos.productoSeleccionado.stock.ToString();
+                }
+                else
+                {
+                    frmBuscarProducto.productoSeleccionado = (ProductoWS.producto)frmBuscarProducto.dgv.CurrentRow.DataBoundItem;
+                    txtId.Text = frmBuscarProducto.productoSeleccionado.idProducto.ToString();
+                    txtNombre.Text = frmBuscarProducto.productoSeleccionado.nombre;
+                    cboFamilia.SelectedValue = frmBuscarProducto.productoSeleccionado.subFamilia.familia.idFamilia;
+                    cboSubfamilia.SelectedValue = frmBuscarProducto.productoSeleccionado.subFamilia.idSubFamilia;
+                    cboMarca.SelectedValue = frmBuscarProducto.productoSeleccionado.marca.idMarca;
+                    txtCantidad.Text = frmBuscarProducto.productoSeleccionado.cantUnidad.ToString();
+                    txtPrecioSugerido.Text = frmBuscarProducto.productoSeleccionado.precioSugerido.ToString();
+                    txtStock.Text = frmBuscarProducto.productoSeleccionado.stock.ToString();
+                }
             }
         }
 
@@ -146,9 +161,16 @@ namespace CrewmanSystem
             SubFamiliaWS.subFamilia[] misSubfamilias = daoSubfamilia.listarSubFamilias(((FamiliaWS.familia)cboFamilia.SelectedItem).descripcion);
             if (misSubfamilias != null)
             {
+                cboSubfamilia.Enabled = true;
+                btnGuardar.Enabled = true;
                 cboSubfamilia.DataSource = new BindingList<SubFamiliaWS.subFamilia>(misSubfamilias.ToArray());
                 cboSubfamilia.ValueMember = "idSubFamilia";
                 cboSubfamilia.DisplayMember = "descripcionSubFamilia";
+            }
+            else
+            {
+                cboSubfamilia.Enabled = false;
+                btnGuardar.Enabled = false;
             }
         }
 	}

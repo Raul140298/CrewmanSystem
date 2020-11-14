@@ -210,6 +210,7 @@
             this.dgvProductos.Size = new System.Drawing.Size(985, 517);
             this.dgvProductos.TabIndex = 46;
             this.dgvProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProductos_CellFormatting);
+            this.dgvProductos.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvProductos_RowStateChanged);
             // 
             // ID
             // 

@@ -12,11 +12,14 @@ namespace CrewmanSystem
 {
 	public partial class frmBuscarProducto : Form
 	{
-		private ProductoWS.ProductoWSClient daoProducto;
+		private static ProductoWS.ProductoWSClient daoProducto;
+		public static ProductoWS.producto productoSeleccionado;
+		public static DataGridView dgv;
 		public frmBuscarProducto()
 		{
 			daoProducto = new ProductoWS.ProductoWSClient();
 			InitializeComponent();
+			dgv = dgvProductos;
 			completarTabla();
 			#region colores de seleccion
 			dgvProductos.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
@@ -53,5 +56,27 @@ namespace CrewmanSystem
 
 			dgvProductos.Rows[e.RowIndex].Cells["MARCA"].Value = producto.marca.nombre;
 		}
-    }
+
+		private void dgvProductos_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+		{
+			//Preguntar al profe
+			if (e.StateChanged != DataGridViewElementStates.Selected)
+			{
+				//frmVentanaPrincipal.act.Enabled = false;
+				//frmVentanaPrincipal.elim.Enabled = false;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+			}
+		}
+
+		public static void eliminar()
+		{
+			productoSeleccionado = (ProductoWS.producto)dgv.CurrentRow.DataBoundItem;
+			daoProducto.eliminarProducto(productoSeleccionado.idProducto);
+		}
+	}
 }
