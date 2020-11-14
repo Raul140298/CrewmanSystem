@@ -59,9 +59,9 @@ public class Main{
 //        gestionarZonas();
 //       gestionarClientes();
 //        gestionarEmpleados();
-//        gestionarProductos();
+        gestionarProductos();
 //        gestionarProductoXZona();
-        gestionarPromociones();
+//        gestionarPromociones();
 //        gestionarPromocionXProducto();
 //        gestionarPedidos();
 //        gestionarLineasDePedido();
@@ -104,9 +104,16 @@ public class Main{
     }
         
     private static void gestionarSubFamilias(){
-//        misFamilias=daoFamilia.listar();
-//        SubFamilia subFamilia1= new SubFamilia(misFamilias.get(1),"Paletas");
-//        daoSubFamilia.insertar(subFamilia1);
+        //misFamilias=daoFamilia.listar();
+        Familia familia1 = new Familia();
+        familia1.setIdFamilia(14);
+        SubFamilia subFamilia1= new SubFamilia();
+        subFamilia1.setIdSubFamilia(18);
+        subFamilia1.setDescripcionSubFamilia("Quesos");
+        subFamilia1.setFamilia(familia1);
+        subFamilia1.setActivo(true);
+        
+        daoSubFamilia.actualizar(subFamilia1);
 
         String familia = "";
         misSubFamilias=daoSubFamilia.listar(familia);
@@ -337,8 +344,11 @@ public class Main{
     private static void gestionarProductos(){
         misMarcas=daoMarca.listar();
         misSubFamilias=daoSubFamilia.listar("");
-//        Producto prod1 = new Producto(misMarcas.get(0),misSubFamilias.get(0),"Lollipop", 200, "gr", 2.5,45000);
+        Producto prod1 = new Producto(misMarcas.get(0),misSubFamilias.get(0),"Lollipop", 400, "gr", 2.7,45000);
 //        daoProducto.insertar(prod1);
+        //Producto prod = new Producto();
+        daoProducto.actualizar(prod1);
+        
         String nombre="";
         String familia="";
         String subFamilia="";

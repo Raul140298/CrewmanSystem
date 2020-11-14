@@ -146,7 +146,7 @@ namespace CrewmanSystem
 					btnActualizar.BackColor = Program.color0;
 					btnEliminar.BackColor = Program.color0;
 					btnBuscar.BackColor = Program.color0;
-					desactivaBotonesCabecera(true, false, true, true, true);
+					desactivaBotonesCabecera(true, false, false, true, true);
 					break;
 				case BTNestado.nuevo:
 					btnNuevo.BackColor = Program.colorR;
@@ -478,6 +478,7 @@ namespace CrewmanSystem
 					break;
 				case "frmGestionarSubfamilias":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaSubfamilia());
+					if (boton == 2) frmGestionarSubfamilias.eliminar();
 					break;
 				case "frmGestionarRutas":
 					break;
@@ -495,6 +496,7 @@ namespace CrewmanSystem
 					break;
 				case "frmGestionarProductos":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoProducto());
+					if (boton == 2) frmGestionarProductos.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarProducto());
 					break;
 				case "frmGestionarPedidos":

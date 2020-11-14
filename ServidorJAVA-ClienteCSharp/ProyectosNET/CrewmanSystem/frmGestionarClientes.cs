@@ -13,9 +13,11 @@ namespace CrewmanSystem
 	public partial class frmGestionarClientes : Form
 	{
 		private ClienteWS.ClienteWSClient daoCliente;
+
 		public frmGestionarClientes()
 		{
 			daoCliente = new ClienteWS.ClienteWSClient();
+
 			InitializeComponent();
 			dataGridView1.AutoGenerateColumns = false;
 			ClienteWS.cliente[] misClientes = daoCliente.listarClientes("","");

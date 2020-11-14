@@ -17,7 +17,7 @@ namespace CrewmanSystem
         public frmNuevaSubfamilia()
         {
             InitializeComponent();
-
+            
             daoSubfamilia = new SubFamiliaWS.SubFamiliaWSClient();
             daoFamilia = new FamiliaWS.FamiliaWSClient();
             FamiliaWS.familia[] misFamilias = daoFamilia.listarFamilias();
@@ -26,6 +26,14 @@ namespace CrewmanSystem
                 cboFamilia.DataSource = new BindingList<FamiliaWS.familia>(misFamilias.ToArray());
                 cboFamilia.ValueMember = "idFamilia";
                 cboFamilia.DisplayMember = "descripcion";
+            }
+
+            if (frmVentanaPrincipal.nBtn == 1)
+            {   //OBTNER DATOS DE FILA SELECCIONADA
+                frmGestionarSubfamilias.subfamiliaSeleccionada = (SubFamiliaWS.subFamilia)frmGestionarSubfamilias.dgv.CurrentRow.DataBoundItem;
+                txtId.Text = frmGestionarSubfamilias.subfamiliaSeleccionada.idSubFamilia.ToString();
+                txtDescripcion.Text = frmGestionarSubfamilias.subfamiliaSeleccionada.descripcionSubFamilia;
+                cboFamilia.SelectedValue = frmGestionarSubfamilias.subfamiliaSeleccionada.familia.idFamilia;
             }
         }
 
@@ -78,9 +86,20 @@ namespace CrewmanSystem
                 subFamilia.familia = new SubFamiliaWS.familia();
                 subFamilia.familia.idFamilia = ((FamiliaWS.familia)cboFamilia.SelectedItem).idFamilia;
 
-                int resultado = daoSubfamilia.insertarSubFamilia(subFamilia);
-                txtId.Text = resultado.ToString();
                 //Usar resultado para ver si se inserto correctamente
+                if (frmVentanaPrincipal.nBtn == 0)
+                {
+                    int resultado = daoSubfamilia.insertarSubFamilia(subFamilia);
+                    txtId.Text = resultado.ToString();
+                }
+                else if (frmVentanaPrincipal.nBtn == 1)
+                {
+                    subFamilia.idSubFamilia = Int32.Parse(txtId.Text);
+                    if (daoSubfamilia.actualizarSubFamilia(subFamilia) == 0)
+					{
+                        MessageBox.Show("No está insertando");
+					}
+                }
             }
         }
 	}
