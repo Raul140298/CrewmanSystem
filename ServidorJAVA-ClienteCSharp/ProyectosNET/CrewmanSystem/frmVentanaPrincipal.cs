@@ -151,17 +151,29 @@ namespace CrewmanSystem
 					break;
 				case BTNestado.nuevo:
 					btnNuevo.BackColor = Program.colorR;
+					btnActualizar.BackColor = Program.color0;
+					btnEliminar.BackColor = Program.color0;
+					btnBuscar.BackColor = Program.color0;
 					desactivaBotonesCabecera(false, false, false, false, false);
 					break;
 				case BTNestado.actualizar:
 					btnActualizar.BackColor = Program.colorR;
+					btnNuevo.BackColor = Program.color0;
+					btnEliminar.BackColor = Program.color0;
+					btnBuscar.BackColor = Program.color0;
 					desactivaBotonesCabecera(false, false, false, false, false);
 					break;
 				case BTNestado.eliminar:
 					btnEliminar.BackColor = Program.colorR;
+					btnNuevo.BackColor = Program.color0;
+					btnActualizar.BackColor = Program.color0;
+					btnBuscar.BackColor = Program.color0;
 					break;
 				case BTNestado.buscar:
 					btnBuscar.BackColor = Program.colorR;
+					btnNuevo.BackColor = Program.color0;
+					btnActualizar.BackColor = Program.color0;
+					btnEliminar.BackColor = Program.color0;
 					desactivaBotonesCabecera(false, false, false, false, false);
 					break;
 				default:
