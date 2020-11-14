@@ -58,8 +58,8 @@ public class Main{
 //        gestionarMarcas();
 //        gestionarZonas();
 //       gestionarClientes();
-//        gestionarEmpleados();
-        gestionarProductos();
+        gestionarEmpleados();
+//        gestionarProductos();
 //        gestionarProductoXZona();
 //        gestionarPromociones();
 //        gestionarPromocionXProducto();
@@ -227,7 +227,7 @@ public class Main{
 
 //        miEmpleado.setUsuario("keikomontmont");
 //        miEmpleado.setContraseña("matangalachanga");
-        Empleado miEmpleado = daoEmpleado.permitirAccesoEmpleado("javieraltrod","bancopichincha");
+        Empleado miEmpleado = daoEmpleado.permitirAccesoEmpleado("rauljl1","rauljl1");
         
         if(miEmpleado.getIdEmpleado()!=0){
             System.out.println("==================================================================================");
@@ -283,8 +283,23 @@ public class Main{
                 String nombre="";
                 String apellidoPaterno="";
                 String apellidoMaterno="";
+                int idZona=138;
                 misEmpleados=daoEmpleado.listarPorJefeVentas(miEmpleado.getIdEmpleado(),nombre,apellidoPaterno,apellidoMaterno);
                 System.out.println("LISTADO DE VENDEDORES A CARGO");
+                System.out.println("==================================================================================");
+                System.out.println("Nombre: "+nombre);
+                System.out.println("Apellido Paterno: "+apellidoPaterno);
+                System.out.println("Apellido Materno: "+apellidoMaterno);
+                System.out.println("==================================================================================");
+                for(Empleado e:misEmpleados){
+                    System.out.print(e.getIdEmpleado()+" - "+e.getDni()+" - "+e.getNombre()+" - "+e.getApellidoPaterno()+" - "+e.getApellidoMaterno()+" - "+e.getGenero()+" - "+e.getCargo().getNombre()+" - "+e.getSumVentas()+" - "+e.getObjetivoVentas());
+                    if(e.getZona().getIdZona()>0) System.out.println(" - "+e.getZona().getNombre());
+                    else System.out.println("");
+                }
+                System.out.println("\n");
+                System.out.println("==================================================================================");
+                 misEmpleados=daoEmpleado.listarPorJefeVentasYZona(miEmpleado.getIdEmpleado(),nombre,apellidoPaterno,apellidoMaterno,idZona);
+                System.out.println("LISTADO DE VENDEDORES A CARGO POR ZONA");
                 System.out.println("==================================================================================");
                 System.out.println("Nombre: "+nombre);
                 System.out.println("Apellido Paterno: "+apellidoPaterno);

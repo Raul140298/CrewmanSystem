@@ -11,4 +11,5 @@ public interface EmpleadoDAO{
     //Para las funciones que requieran informacion del empleado
     int obtenerEmpleado(Empleado empleado);
     ArrayList<Empleado> listarPorJefeVentas(int idEmpleado,String nombre,String apellidoPaterno,String apellidoMaterno);
+    ArrayList<Empleado>listarPorJefeVentasYZona(int idJefeVentas,String nombre,String apellidoPaterno,String apellidoMaterno,int idZona);
 }
