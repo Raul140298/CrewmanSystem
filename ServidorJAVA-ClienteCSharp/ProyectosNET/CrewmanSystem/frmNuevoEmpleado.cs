@@ -24,6 +24,36 @@ namespace CrewmanSystem
             cboZona.DataSource= new BindingList<ZonaWS.zona>(daoZona.listarZonas().ToArray());
             cboZona.ValueMember = "idZona";
             cboZona.DisplayMember = "nombre";
+
+            if (frmVentanaPrincipal.nBtn == 1)
+            {   //OBTNER DATOS DE FILA SELECCIONADA
+                frmGestionarEmpleados.empleadoSeleccionado = (EmpleadoWS.empleado)frmGestionarEmpleados.dgv.CurrentRow.DataBoundItem;
+                txtID.Text = frmGestionarEmpleados.empleadoSeleccionado.idEmpleado.ToString();
+                txtDNI.Text = frmGestionarEmpleados.empleadoSeleccionado.dni.ToString();
+                txtNombre.Text = frmGestionarEmpleados.empleadoSeleccionado.nombre;
+                txtApMaterno.Text = frmGestionarEmpleados.empleadoSeleccionado.apellidoMaterno;
+                txtApPaterno.Text = frmGestionarEmpleados.empleadoSeleccionado.apellidoPaterno;
+                txtTelefono1.Text = frmGestionarEmpleados.empleadoSeleccionado.telefono1.ToString();
+                txtTelefono2.Text = frmGestionarEmpleados.empleadoSeleccionado.telefono2.ToString();
+                txtCorreo.Text = frmGestionarEmpleados.empleadoSeleccionado.correo.ToString();
+                if(frmGestionarEmpleados.empleadoSeleccionado.cargo.idCargo == 1)
+				{
+                    cboCargo.DisplayMember = "EMPLEADO";
+				}
+                else if (frmGestionarEmpleados.empleadoSeleccionado.cargo.idCargo == 2)
+				{
+                    cboCargo.DisplayMember = "JEFE DE VENTAS";
+				}
+                cboZona.SelectedValue = frmGestionarEmpleados.empleadoSeleccionado.zona.idZona;
+                if(frmGestionarEmpleados.empleadoSeleccionado.genero == 'M')
+				{
+                    rbMasculino.Checked = true;
+				}
+				else
+				{
+                    rbFemenino.Checked = true;
+                }
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -99,9 +129,16 @@ namespace CrewmanSystem
                 else
                     empleado.genero = 'F';
 
-                int resultado = daoEmpleado.insertarEmpleado(empleado);
-                txtID.Text = resultado.ToString();
-                //Usar resultado para ver si se inserto correctamente
+                if (frmVentanaPrincipal.nBtn == 0)
+                {
+                    int resultado = daoEmpleado.insertarEmpleado(empleado);
+                    txtID.Text = resultado.ToString();
+                }
+                else if (frmVentanaPrincipal.nBtn == 1)
+                {
+                    empleado.idEmpleado = Int32.Parse(txtID.Text);
+                    daoEmpleado.actualizarEmpleado(empleado);
+                }
             }
         }
     }
