@@ -463,7 +463,9 @@ public class Main{
 //        pxp2.setCantidad(3000);
 //        daoPromocionXProducto.actualizar(pxp2);
 //        daoPromocionXProducto.eliminar(0);
-        misPromocionXProducto=daoPromocionXProducto.listar(misPromociones.get(0).getIdPromocion());
+
+//        misPromocionXProducto=daoPromocionXProducto.listar(misPromociones.get(0).getIdPromocion());
+        misPromocionXProducto=daoPromocionXProducto.listar(6);
         System.out.println("LISTADO DE PROMOCION POR PRODUCTO");
         System.out.println("==================================================================================");
         for(PromocionXProducto pxp:misPromocionXProducto) 
