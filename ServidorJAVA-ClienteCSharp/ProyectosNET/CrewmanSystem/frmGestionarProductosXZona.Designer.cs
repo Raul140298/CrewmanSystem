@@ -33,9 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvProductoXZona = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRECIO_REAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductoXZona)).BeginInit();
@@ -62,9 +60,7 @@
             this.dgvProductoXZona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvProductoXZona.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.ID_PRODUCTO,
             this.PRODUCTO,
-            this.ID_ZONA,
             this.ZONA,
             this.PRECIO_REAL});
             this.dgvProductoXZona.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -103,14 +99,6 @@
             this.ID.ReadOnly = true;
             this.ID.Width = 50;
             // 
-            // ID_PRODUCTO
-            // 
-            this.ID_PRODUCTO.HeaderText = "Id Producto";
-            this.ID_PRODUCTO.MinimumWidth = 6;
-            this.ID_PRODUCTO.Name = "ID_PRODUCTO";
-            this.ID_PRODUCTO.ReadOnly = true;
-            this.ID_PRODUCTO.Width = 122;
-            // 
             // PRODUCTO
             // 
             this.PRODUCTO.HeaderText = "Producto";
@@ -118,14 +106,6 @@
             this.PRODUCTO.Name = "PRODUCTO";
             this.PRODUCTO.ReadOnly = true;
             this.PRODUCTO.Width = 104;
-            // 
-            // ID_ZONA
-            // 
-            this.ID_ZONA.HeaderText = "Id Zona";
-            this.ID_ZONA.MinimumWidth = 6;
-            this.ID_ZONA.Name = "ID_ZONA";
-            this.ID_ZONA.ReadOnly = true;
-            this.ID_ZONA.Width = 91;
             // 
             // ZONA
             // 
@@ -161,9 +141,7 @@
 
 		private System.Windows.Forms.DataGridView dgvProductoXZona;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_PRODUCTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_ZONA;
         private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO_REAL;
     }
