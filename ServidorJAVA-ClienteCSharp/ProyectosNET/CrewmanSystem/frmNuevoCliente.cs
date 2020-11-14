@@ -20,6 +20,28 @@ namespace CrewmanSystem
             cboZona.DataSource = new BindingList<ZonaWS.zona>(daoZona.listarZonas().ToArray());
             cboZona.ValueMember = "idZona";
             cboZona.DisplayMember = "nombre";
+
+            if (frmVentanaPrincipal.nBtn == 1)
+            {   //OBTNER DATOS DE FILA SELECCIONADA
+                frmGestionarClientes.clienteSeleccionado = (ClienteWS.cliente)frmGestionarClientes.dgv.CurrentRow.DataBoundItem;
+                txtIdC.Text = frmGestionarClientes.clienteSeleccionado.idCliente.ToString();
+                txtRuc.Text = frmGestionarClientes.clienteSeleccionado.ruc.ToString();
+                txtRazonSocial.Text = frmGestionarClientes.clienteSeleccionado.razonSocial;
+                txtGrupo.Text = frmGestionarClientes.clienteSeleccionado.grupo;
+                txtDireccion.Text = frmGestionarClientes.clienteSeleccionado.direccion;
+                cboZona.SelectedValue = frmGestionarClientes.clienteSeleccionado.zona.idZona;
+                dtpFechaInicio.Value = frmGestionarClientes.clienteSeleccionado.fechaRegistro;
+
+                //PERSONA CONTACTO
+                txtIdPC.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.idPersonaContacto.ToString();
+                //txtDNI.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.dni.ToString();
+                txtNombre.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.nombre;
+                txtApMaterno.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.apellidoMaterno;
+                txtApPaterno.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.apellidoPaterno;
+                //txtTelefono1.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.telefono1.ToString();
+                //txtTelefono2.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.telefono2.ToString();
+                //txtCorreo.Text = frmGestionarClientes.clienteSeleccionado.personaContacto.correo.ToString();
+            }
         }
 
 		private void btnGuardar_Click(object sender, EventArgs e)
@@ -124,10 +146,19 @@ namespace CrewmanSystem
                 cliente.personaContacto.telefono1 = txtTelefono1.Text;
                 cliente.personaContacto.telefono2 = txtTelefono2.Text;
                 cliente.personaContacto.correo = txtCorreo.Text;
-                int resultado = daoCliente.insertarCliente(cliente);
-                txtIdC.Text = cliente.idCliente.ToString();
-                txtIdPC.Text = cliente.personaContacto.idPersonaContacto.ToString();
-                //Usar resultado para ver si se inserto correctamente
+                
+                if (frmVentanaPrincipal.nBtn == 0)
+                {
+                    int resultado = daoCliente.insertarCliente(cliente);
+                    txtIdC.Text = cliente.idCliente.ToString();
+                    txtIdPC.Text = cliente.personaContacto.idPersonaContacto.ToString();
+                }
+                else if (frmVentanaPrincipal.nBtn == 1)
+                {
+                    cliente.idCliente = Int32.Parse(txtIdC.Text);
+                    cliente.personaContacto.idPersonaContacto = Int32.Parse(txtIdPC.Text);
+                    daoCliente.actualizarCliente(cliente);
+                }
             }
         }
 	}
