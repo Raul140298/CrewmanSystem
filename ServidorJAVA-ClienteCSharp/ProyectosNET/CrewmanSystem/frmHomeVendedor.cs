@@ -15,6 +15,12 @@ namespace CrewmanSystem
 		public frmHomeVendedor()
 		{
 			InitializeComponent();
+			lblNombre.Text = Program.empleado.nombre + " " +
+				Program.empleado.apellidoPaterno + " " +
+				Program.empleado.apellidoMaterno;
+
+			lblZona.Text = Program.empleado.zona.nombre;
+			lblDni.Text = Program.empleado.dni;
 		}
 	}
 }
