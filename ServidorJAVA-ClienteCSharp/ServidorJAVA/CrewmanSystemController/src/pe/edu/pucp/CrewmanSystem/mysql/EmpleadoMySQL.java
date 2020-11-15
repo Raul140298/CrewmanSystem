@@ -16,6 +16,7 @@ import pe.edu.pucp.CrewmanSystem.dao.PersonaDAO;
 import pe.edu.pucp.CrewmanSystem.model.Cargo;
 import pe.edu.pucp.CrewmanSystem.model.EmpleadoXZona;
 import pe.edu.pucp.CrewmanSystem.model.Persona;
+import pe.edu.pucp.CrewmanSystem.model.Zona;
 
 public class EmpleadoMySQL implements EmpleadoDAO{
     Connection con;
@@ -92,6 +93,11 @@ public class EmpleadoMySQL implements EmpleadoDAO{
                 EmpleadoXZona empxzona = new EmpleadoXZona(empleado.getZona(),empleado);
                 daoEXZ.insertar(empxzona);
             }
+            else{
+                st = con.createStatement();
+                sql = "UPDATE EMPLEADOXZONA SET ACTIVO=0 WHERE ID_EMPLEADO = "+empleado.getIdEmpleado();
+                st.executeUpdate(sql);
+            }
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -139,10 +145,14 @@ public class EmpleadoMySQL implements EmpleadoDAO{
             rs = cs.getResultSet();
             while(rs.next()){
                 Empleado empleado= new Empleado();
+                Empleado jefe = new Empleado();
                 empleado.setIdEmpleado(rs.getInt("ID_EMPLEADO"));
                 
                 Cargo cargo=new Cargo(1,"VENDEDOR");
                 empleado.setCargo(cargo);
+                
+                jefe.setIdEmpleado(rs.getInt("ID_JEFE"));
+                empleado.setJefe(jefe);
                 
                 PersonaDAO daoPersona = new PersonaMySQL();
                 Persona persona = daoPersona.mostrar(rs.getInt("ID_PERSONA")); 
@@ -154,9 +164,29 @@ public class EmpleadoMySQL implements EmpleadoDAO{
                 empleado.setSumVentas(rs.getDouble("SUMA_VENTAS_MES"));
                 empleado.setObjetivoVentas(rs.getDouble("OBJETIVO_VENTAS"));
                 empleado.setFechaCreacion(rs.getDate("FECHA_CREACION"));
-                empleado.setUsuario("USUARIO"); 
-
+                empleado.setUsuario("USUARIO");
                 empleados.add(empleado);
+            }
+            rs.close();
+            for(Empleado e : empleados){
+                Zona zona = new Zona();
+                st=con.createStatement();
+                sql = "SELECT Z.ID_ZONA, Z.NOMBRE "
+                        + "FROM EMPLEADOXZONA EXZ, ZONA Z "
+                        + "WHERE EXZ.ID_EMPLEADO = "+e.getIdEmpleado()+" AND EXZ.ID_ZONA=Z.ID_ZONA AND EXZ.ACTIVO=1";
+                rs = st.executeQuery(sql);
+                if(rs.next()){
+                    entero = rs.getInt("ID_ZONA");
+                    if(entero!=null){
+                        zona.setIdZona(entero.intValue());
+                        zona.setNombre(rs.getString("NOMBRE"));
+                    } 
+                    else{
+                        zona.setIdZona(0);
+                        zona.setNombre("");
+                    }
+                }
+                e.setZona(zona);
             }
         }catch(Exception ex){
             System.out.println(ex.getMessage());
