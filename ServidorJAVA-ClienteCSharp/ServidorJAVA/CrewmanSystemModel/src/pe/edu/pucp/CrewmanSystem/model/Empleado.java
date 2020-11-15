@@ -145,9 +145,7 @@ public class Empleado extends Persona{
     public void setCords(int[] cords) {
         this.cords = cords;
     }
-
-    
-                
+     
     public void generarReporteCumplimientoVentas(){
 //        EmpleadoDAO daoEmpleado=new EmpleadoMySQL();
 //        ArrayList<Empleado> empleadoes=daoEmpleado.listar();

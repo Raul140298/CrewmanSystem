@@ -62,7 +62,7 @@ public class Main{
 //        gestionarProductos();
 //        gestionarProductoXZona();
 //      gestionarPromociones();
-       gestionarPromocionXProducto();
+//       gestionarPromocionXProducto();
 //        gestionarPedidos();
 //        gestionarLineasDePedido();
 //        gestionarFacturas();
@@ -87,6 +87,24 @@ public class Main{
 //        
 //        misPromocionXProducto.add(e);
 //        promo.setListaPromocionXProducto(misPromocionXProducto);
+
+
+        misEmpleados = daoEmpleado.listarPorJefeVentas(21, "", "", "");
+        for(Empleado e : misEmpleados){
+            System.out.println(e.getIdEmpleado()+" "+e.getNombre()+" "+e.getApellidoPaterno()+""+e.getObjetivoVentas()+" "+e.getZona().getIdZona()+" "+e.getZona().getNombre());
+        }
+        Empleado miEmpleado = misEmpleados.get(1);
+        
+        miEmpleado.setApellidoPaterno("Cardozo");
+        miEmpleado.setObjetivoVentas(3500);
+        miEmpleado.getZona().setIdZona(151);
+        
+        int resultado = daoEmpleado.actualizar(miEmpleado);
+        System.out.println(resultado);
+        misEmpleados = daoEmpleado.listarPorJefeVentas(21, "", "", "");
+        for(Empleado e : misEmpleados){
+            System.out.println(e.getIdEmpleado()+" "+e.getNombre()+" "+e.getApellidoPaterno()+""+e.getObjetivoVentas()+" "+e.getZona().getIdZona()+" "+e.getZona().getNombre());
+        }
         System.out.println("EL MODELADO HA CONCLUIDO");
     }
     

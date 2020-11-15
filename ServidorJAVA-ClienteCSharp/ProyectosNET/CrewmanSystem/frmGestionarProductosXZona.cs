@@ -18,7 +18,7 @@ namespace CrewmanSystem
 			daoProductosXZona = new ProductoXZonaWS.ProductoXZonaWSClient();
 			InitializeComponent();
 			dgvProductoXZona.AutoGenerateColumns = false;
-			ProductoXZonaWS.productoXZona[] misProductoXZonas = daoProductosXZona.listarProductosXZonas("","","","",Program.empleado.idEmpleado);
+			ProductoXZonaWS.productoXZona[] misProductoXZonas = daoProductosXZona.listarProductosXZonas("","","","",0);
 			if (misProductoXZonas != null)
 			{
 				dgvProductoXZona.DataSource = new BindingList<ProductoXZonaWS.productoXZona>(misProductoXZonas.ToArray());
@@ -26,7 +26,6 @@ namespace CrewmanSystem
 			else
 			{
 				dgvProductoXZona.DataSource = new BindingList<ProductoXZonaWS.productoXZona>();
-
 			}
 
 			#region colores de seleccion
@@ -47,10 +46,13 @@ namespace CrewmanSystem
 			ProductoXZonaWS.productoXZona productoXZona = dgvProductoXZona.Rows[e.RowIndex].DataBoundItem
 			as ProductoXZonaWS.productoXZona;
 
-			dgvProductoXZona.Rows[e.RowIndex].Cells["ID_PRODUCTO"].Value = productoXZona.producto.idProducto;
 			dgvProductoXZona.Rows[e.RowIndex].Cells["PRODUCTO"].Value = productoXZona.producto.nombre;
-			dgvProductoXZona.Rows[e.RowIndex].Cells["ID_ZONA"].Value = productoXZona.zona.idZona;
+			dgvProductoXZona.Rows[e.RowIndex].Cells["CANT_UNIDADES"].Value = productoXZona.producto.cantUnidad;
+			dgvProductoXZona.Rows[e.RowIndex].Cells["UNIDADES"].Value = productoXZona.producto.unidades;
 			dgvProductoXZona.Rows[e.RowIndex].Cells["ZONA"].Value = productoXZona.zona.nombre;
+			dgvProductoXZona.Rows[e.RowIndex].Cells["SUBFAMILIA"].Value = productoXZona.producto.subFamilia.descripcionSubFamilia;
+			dgvProductoXZona.Rows[e.RowIndex].Cells["FAMILIA"].Value = productoXZona.producto.subFamilia.familia.descripcion;
+			dgvProductoXZona.Rows[e.RowIndex].Cells["MARCA"].Value = productoXZona.producto.marca.nombre;
 		}
 	}
 }

@@ -15,6 +15,7 @@ namespace CrewmanSystem
 		private static ProductoWS.ProductoWSClient daoProducto;
 		public static ProductoWS.producto productoSeleccionado;
 		public static DataGridView dgv;
+		
 		public frmBuscarProducto()
 		{
 			daoProducto = new ProductoWS.ProductoWSClient();
