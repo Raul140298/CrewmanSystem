@@ -28,7 +28,6 @@ namespace CrewmanSystem
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(true);
 			Application.Run(new frmLogeo());
-
 		}
 	}
 }

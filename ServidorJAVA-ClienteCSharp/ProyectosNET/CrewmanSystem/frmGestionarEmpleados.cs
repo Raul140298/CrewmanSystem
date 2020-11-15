@@ -66,7 +66,7 @@ namespace CrewmanSystem
 			EmpleadoWS.empleado empleado = dataGridView1.Rows[e.RowIndex].DataBoundItem
 			as EmpleadoWS.empleado;
 
-			dataGridView1.Rows[e.RowIndex].Cells["ZONA"].Value = empleado.zona.idZona;
+			dataGridView1.Rows[e.RowIndex].Cells["ZONA"].Value = empleado.zona.nombre;
 		}
 
 		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

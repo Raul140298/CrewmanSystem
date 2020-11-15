@@ -22,30 +22,6 @@
   <xs:element name="obtenerEmpleadoResponse" type="tns:obtenerEmpleadoResponse" />
   <xs:element name="permitirAccesoEmpleado" type="tns:permitirAccesoEmpleado" />
   <xs:element name="permitirAccesoEmpleadoResponse" type="tns:permitirAccesoEmpleadoResponse" />
-  <xs:complexType name="actualizarPersona">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="persona" type="tns:persona" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="persona">
-    <xs:sequence>
-      <xs:element name="activo" type="xs:boolean" />
-      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
-      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
-      <xs:element minOccurs="0" name="correo" type="xs:string" />
-      <xs:element minOccurs="0" name="dni" type="xs:string" />
-      <xs:element name="genero" type="xs:unsignedShort" />
-      <xs:element name="idPersona" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-      <xs:element minOccurs="0" name="telefono1" type="xs:string" />
-      <xs:element minOccurs="0" name="telefono2" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarPersonaResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="actualizarEmpleado">
     <xs:sequence>
       <xs:element minOccurs="0" name="empleado" type="tns:empleado" />
@@ -71,6 +47,20 @@
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="persona">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element name="genero" type="xs:unsignedShort" />
+      <xs:element name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono1" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono2" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="cargo">
     <xs:sequence>
@@ -324,6 +314,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarEmpleadoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="persona" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarPersonaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
