@@ -16,31 +16,8 @@ namespace CrewmanSystem.PromocionWS {
     public interface PromocionWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/listarPromocionsRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/listarPromocionsResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.PromocionWS.listarPromocionsResponse listarPromocions(CrewmanSystem.PromocionWS.listarPromocionsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/listarPromocionsRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/listarPromocionsResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.listarPromocionsResponse> listarPromocionsAsync(CrewmanSystem.PromocionWS.listarPromocionsRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/actualizarPromocionRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/actualizarPromocionResponse" +
-            "")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.PromocionWS.actualizarPromocionResponse actualizarPromocion(CrewmanSystem.PromocionWS.actualizarPromocionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/actualizarPromocionRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/actualizarPromocionResponse" +
-            "")]
-        System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.actualizarPromocionResponse> actualizarPromocionAsync(CrewmanSystem.PromocionWS.actualizarPromocionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/eliminarPromocionRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/eliminarPromocionResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         CrewmanSystem.PromocionWS.eliminarPromocionResponse eliminarPromocion(CrewmanSystem.PromocionWS.eliminarPromocionRequest request);
         
@@ -56,6 +33,64 @@ namespace CrewmanSystem.PromocionWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/insertarPromocionRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/insertarPromocionResponse")]
         System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.insertarPromocionResponse> insertarPromocionAsync(CrewmanSystem.PromocionWS.insertarPromocionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/actualizarPromocionRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/actualizarPromocionResponse" +
+            "")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.PromocionWS.actualizarPromocionResponse actualizarPromocion(CrewmanSystem.PromocionWS.actualizarPromocionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/actualizarPromocionRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/actualizarPromocionResponse" +
+            "")]
+        System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.actualizarPromocionResponse> actualizarPromocionAsync(CrewmanSystem.PromocionWS.actualizarPromocionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/listarPromocionsRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/listarPromocionsResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.PromocionWS.listarPromocionsResponse listarPromocions(CrewmanSystem.PromocionWS.listarPromocionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/listarPromocionsRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PromocionWS/listarPromocionsResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.listarPromocionsResponse> listarPromocionsAsync(CrewmanSystem.PromocionWS.listarPromocionsRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPromocion", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarPromocionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idPromocion;
+        
+        public eliminarPromocionRequest() {
+        }
+        
+        public eliminarPromocionRequest(int idPromocion) {
+            this.idPromocion = idPromocion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPromocionResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarPromocionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarPromocionResponse() {
+        }
+        
+        public eliminarPromocionResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     /// <remarks/>
@@ -3383,45 +3418,35 @@ namespace CrewmanSystem.PromocionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPromocions", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarPromocionsRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPromocion", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarPromocionRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
+        public CrewmanSystem.PromocionWS.promocion promocion;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fechaIni;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fechaFin;
-        
-        public listarPromocionsRequest() {
+        public insertarPromocionRequest() {
         }
         
-        public listarPromocionsRequest(string nombre, System.DateTime fechaIni, System.DateTime fechaFin) {
-            this.nombre = nombre;
-            this.fechaIni = fechaIni;
-            this.fechaFin = fechaFin;
+        public insertarPromocionRequest(CrewmanSystem.PromocionWS.promocion promocion) {
+            this.promocion = promocion;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPromocionsResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarPromocionsResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPromocionResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarPromocionResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.PromocionWS.promocion[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarPromocionsResponse() {
+        public insertarPromocionResponse() {
         }
         
-        public listarPromocionsResponse(CrewmanSystem.PromocionWS.promocion[] @return) {
+        public insertarPromocionResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -3465,71 +3490,45 @@ namespace CrewmanSystem.PromocionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPromocion", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarPromocionRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPromocions", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPromocionsRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPromocion;
+        public string nombre;
         
-        public eliminarPromocionRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fechaIni;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fechaFin;
+        
+        public listarPromocionsRequest() {
         }
         
-        public eliminarPromocionRequest(int idPromocion) {
-            this.idPromocion = idPromocion;
+        public listarPromocionsRequest(string nombre, System.DateTime fechaIni, System.DateTime fechaFin) {
+            this.nombre = nombre;
+            this.fechaIni = fechaIni;
+            this.fechaFin = fechaFin;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPromocionResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarPromocionResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPromocionsResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPromocionsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.PromocionWS.promocion[] @return;
         
-        public eliminarPromocionResponse() {
+        public listarPromocionsResponse() {
         }
         
-        public eliminarPromocionResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPromocion", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarPromocionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.PromocionWS.promocion promocion;
-        
-        public insertarPromocionRequest() {
-        }
-        
-        public insertarPromocionRequest(CrewmanSystem.PromocionWS.promocion promocion) {
-            this.promocion = promocion;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPromocionResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarPromocionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarPromocionResponse() {
-        }
-        
-        public insertarPromocionResponse(int @return) {
+        public listarPromocionsResponse(CrewmanSystem.PromocionWS.promocion[] @return) {
             this.@return = @return;
         }
     }
@@ -3559,56 +3558,6 @@ namespace CrewmanSystem.PromocionWS {
         
         public PromocionWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.PromocionWS.listarPromocionsResponse CrewmanSystem.PromocionWS.PromocionWS.listarPromocions(CrewmanSystem.PromocionWS.listarPromocionsRequest request) {
-            return base.Channel.listarPromocions(request);
-        }
-        
-        public CrewmanSystem.PromocionWS.promocion[] listarPromocions(string nombre, System.DateTime fechaIni, System.DateTime fechaFin) {
-            CrewmanSystem.PromocionWS.listarPromocionsRequest inValue = new CrewmanSystem.PromocionWS.listarPromocionsRequest();
-            inValue.nombre = nombre;
-            inValue.fechaIni = fechaIni;
-            inValue.fechaFin = fechaFin;
-            CrewmanSystem.PromocionWS.listarPromocionsResponse retVal = ((CrewmanSystem.PromocionWS.PromocionWS)(this)).listarPromocions(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.listarPromocionsResponse> CrewmanSystem.PromocionWS.PromocionWS.listarPromocionsAsync(CrewmanSystem.PromocionWS.listarPromocionsRequest request) {
-            return base.Channel.listarPromocionsAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.listarPromocionsResponse> listarPromocionsAsync(string nombre, System.DateTime fechaIni, System.DateTime fechaFin) {
-            CrewmanSystem.PromocionWS.listarPromocionsRequest inValue = new CrewmanSystem.PromocionWS.listarPromocionsRequest();
-            inValue.nombre = nombre;
-            inValue.fechaIni = fechaIni;
-            inValue.fechaFin = fechaFin;
-            return ((CrewmanSystem.PromocionWS.PromocionWS)(this)).listarPromocionsAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.PromocionWS.actualizarPromocionResponse CrewmanSystem.PromocionWS.PromocionWS.actualizarPromocion(CrewmanSystem.PromocionWS.actualizarPromocionRequest request) {
-            return base.Channel.actualizarPromocion(request);
-        }
-        
-        public int actualizarPromocion(CrewmanSystem.PromocionWS.promocion promocion) {
-            CrewmanSystem.PromocionWS.actualizarPromocionRequest inValue = new CrewmanSystem.PromocionWS.actualizarPromocionRequest();
-            inValue.promocion = promocion;
-            CrewmanSystem.PromocionWS.actualizarPromocionResponse retVal = ((CrewmanSystem.PromocionWS.PromocionWS)(this)).actualizarPromocion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.actualizarPromocionResponse> CrewmanSystem.PromocionWS.PromocionWS.actualizarPromocionAsync(CrewmanSystem.PromocionWS.actualizarPromocionRequest request) {
-            return base.Channel.actualizarPromocionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.actualizarPromocionResponse> actualizarPromocionAsync(CrewmanSystem.PromocionWS.promocion promocion) {
-            CrewmanSystem.PromocionWS.actualizarPromocionRequest inValue = new CrewmanSystem.PromocionWS.actualizarPromocionRequest();
-            inValue.promocion = promocion;
-            return ((CrewmanSystem.PromocionWS.PromocionWS)(this)).actualizarPromocionAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3655,6 +3604,56 @@ namespace CrewmanSystem.PromocionWS {
             CrewmanSystem.PromocionWS.insertarPromocionRequest inValue = new CrewmanSystem.PromocionWS.insertarPromocionRequest();
             inValue.promocion = promocion;
             return ((CrewmanSystem.PromocionWS.PromocionWS)(this)).insertarPromocionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.PromocionWS.actualizarPromocionResponse CrewmanSystem.PromocionWS.PromocionWS.actualizarPromocion(CrewmanSystem.PromocionWS.actualizarPromocionRequest request) {
+            return base.Channel.actualizarPromocion(request);
+        }
+        
+        public int actualizarPromocion(CrewmanSystem.PromocionWS.promocion promocion) {
+            CrewmanSystem.PromocionWS.actualizarPromocionRequest inValue = new CrewmanSystem.PromocionWS.actualizarPromocionRequest();
+            inValue.promocion = promocion;
+            CrewmanSystem.PromocionWS.actualizarPromocionResponse retVal = ((CrewmanSystem.PromocionWS.PromocionWS)(this)).actualizarPromocion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.actualizarPromocionResponse> CrewmanSystem.PromocionWS.PromocionWS.actualizarPromocionAsync(CrewmanSystem.PromocionWS.actualizarPromocionRequest request) {
+            return base.Channel.actualizarPromocionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.actualizarPromocionResponse> actualizarPromocionAsync(CrewmanSystem.PromocionWS.promocion promocion) {
+            CrewmanSystem.PromocionWS.actualizarPromocionRequest inValue = new CrewmanSystem.PromocionWS.actualizarPromocionRequest();
+            inValue.promocion = promocion;
+            return ((CrewmanSystem.PromocionWS.PromocionWS)(this)).actualizarPromocionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.PromocionWS.listarPromocionsResponse CrewmanSystem.PromocionWS.PromocionWS.listarPromocions(CrewmanSystem.PromocionWS.listarPromocionsRequest request) {
+            return base.Channel.listarPromocions(request);
+        }
+        
+        public CrewmanSystem.PromocionWS.promocion[] listarPromocions(string nombre, System.DateTime fechaIni, System.DateTime fechaFin) {
+            CrewmanSystem.PromocionWS.listarPromocionsRequest inValue = new CrewmanSystem.PromocionWS.listarPromocionsRequest();
+            inValue.nombre = nombre;
+            inValue.fechaIni = fechaIni;
+            inValue.fechaFin = fechaFin;
+            CrewmanSystem.PromocionWS.listarPromocionsResponse retVal = ((CrewmanSystem.PromocionWS.PromocionWS)(this)).listarPromocions(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.listarPromocionsResponse> CrewmanSystem.PromocionWS.PromocionWS.listarPromocionsAsync(CrewmanSystem.PromocionWS.listarPromocionsRequest request) {
+            return base.Channel.listarPromocionsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.PromocionWS.listarPromocionsResponse> listarPromocionsAsync(string nombre, System.DateTime fechaIni, System.DateTime fechaFin) {
+            CrewmanSystem.PromocionWS.listarPromocionsRequest inValue = new CrewmanSystem.PromocionWS.listarPromocionsRequest();
+            inValue.nombre = nombre;
+            inValue.fechaIni = fechaIni;
+            inValue.fechaFin = fechaFin;
+            return ((CrewmanSystem.PromocionWS.PromocionWS)(this)).listarPromocionsAsync(inValue);
         }
     }
 }
