@@ -37,7 +37,11 @@ namespace CrewmanSystem
 		private void completarTabla()
         {
 			dgvProductos.AutoGenerateColumns = false;
-			dgvProductos.DataSource = new BindingList<ProductoWS.producto>(daoProducto.listarProductos(txtNombre.Text, txtFamilia.Text, txtSubfamilia.Text, txtMarca.Text).ToArray());
+			ProductoWS.producto[] listaProductos = daoProducto.listarProductos(txtNombre.Text, txtFamilia.Text, txtSubfamilia.Text, txtMarca.Text);
+			BindingList<ProductoWS.producto> misProductos = new BindingList<ProductoWS.producto>();
+			if (listaProductos!=null)
+				misProductos=new BindingList<ProductoWS.producto>(listaProductos.ToArray());
+			dgvProductos.DataSource = misProductos;
 		}
 
         private void btnBuscar_Click(object sender, EventArgs e)
