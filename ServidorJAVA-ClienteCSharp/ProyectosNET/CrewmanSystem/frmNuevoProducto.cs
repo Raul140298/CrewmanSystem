@@ -49,6 +49,10 @@ namespace CrewmanSystem
                     txtCantidad.Text = frmGestionarProductos.productoSeleccionado.cantUnidad.ToString();
                     txtPrecioSugerido.Text = frmGestionarProductos.productoSeleccionado.precioSugerido.ToString();
                     txtStock.Text = frmGestionarProductos.productoSeleccionado.stock.ToString();
+
+                    cboFamilia.Enabled = false;
+                    cboSubfamilia.Enabled = false;
+                    cboMarca.Enabled = false;
                 }
                 else
                 {
