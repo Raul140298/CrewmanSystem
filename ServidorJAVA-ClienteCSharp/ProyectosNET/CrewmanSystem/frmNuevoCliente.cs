@@ -26,29 +26,58 @@ namespace CrewmanSystem
             
             if (frmVentanaPrincipal.nBtn == 1)
             {   //OBTNER DATOS DE FILA SELECCIONADA
-                frmGestionarClientes.clienteSeleccionado = (ClienteWS.cliente)frmGestionarClientes.dgv.CurrentRow.DataBoundItem;
-                txtIdC.Text = frmGestionarClientes.clienteSeleccionado.idCliente.ToString();
-                txtRuc.Text = frmGestionarClientes.clienteSeleccionado.ruc.ToString();
-                txtRazonSocial.Text = frmGestionarClientes.clienteSeleccionado.razonSocial;
-                txtGrupo.Text = frmGestionarClientes.clienteSeleccionado.grupo;
-                txtDireccion.Text = frmGestionarClientes.clienteSeleccionado.direccion;
-                cboZona.SelectedValue = frmGestionarClientes.clienteSeleccionado.zona.idZona;
-                dtpFechaInicio.Value = frmGestionarClientes.clienteSeleccionado.fechaRegistro;
+                if (Program.pantallas[Program.pantallas.Count - 1].Formulario.Name == "frmGestionarClientes")
+                {
+                    frmGestionarClientes.clienteSeleccionado = (ClienteWS.cliente)frmGestionarClientes.dgv.CurrentRow.DataBoundItem;
+                    txtIdC.Text = frmGestionarClientes.clienteSeleccionado.idCliente.ToString();
+                    txtRuc.Text = frmGestionarClientes.clienteSeleccionado.ruc.ToString();
+                    txtRazonSocial.Text = frmGestionarClientes.clienteSeleccionado.razonSocial;
+                    txtGrupo.Text = frmGestionarClientes.clienteSeleccionado.grupo;
+                    txtDireccion.Text = frmGestionarClientes.clienteSeleccionado.direccion;
+                    cboZona.SelectedValue = frmGestionarClientes.clienteSeleccionado.zona.idZona;
+                    dtpFechaInicio.Value = frmGestionarClientes.clienteSeleccionado.fechaRegistro;
 
-                //PERSONA CONTACTO
-                PersonaContactoWS.personaContacto personaC = new PersonaContactoWS.personaContacto();
+                    //PERSONA CONTACTO
+                    PersonaContactoWS.personaContacto personaC = new PersonaContactoWS.personaContacto();
 
-                personaC.idPersonaContacto = frmGestionarClientes.clienteSeleccionado.personaContacto.idPersonaContacto;
-                personaC = daoPersonaContacto.mostrarPersonaContacto(personaC.idPersonaContacto);
+                    personaC.idPersonaContacto = frmGestionarClientes.clienteSeleccionado.personaContacto.idPersonaContacto;
+                    personaC = daoPersonaContacto.mostrarPersonaContacto(personaC.idPersonaContacto);
 
-                txtIdPC.Text = personaC.idPersonaContacto.ToString();
-                txtDNI.Text = personaC.dni.ToString();
-                txtNombre.Text = personaC.nombre;
-                txtApMaterno.Text = personaC.apellidoMaterno;
-                txtApPaterno.Text = personaC.apellidoPaterno;
-                txtTelefono1.Text = personaC.telefono1.ToString();
-                txtTelefono2.Text = personaC.telefono2.ToString();
-                txtCorreo.Text = personaC.correo.ToString();
+                    txtIdPC.Text = personaC.idPersonaContacto.ToString();
+                    txtDNI.Text = personaC.dni.ToString();
+                    txtNombre.Text = personaC.nombre;
+                    txtApMaterno.Text = personaC.apellidoMaterno;
+                    txtApPaterno.Text = personaC.apellidoPaterno;
+                    txtTelefono1.Text = personaC.telefono1.ToString();
+                    txtTelefono2.Text = personaC.telefono2.ToString();
+                    txtCorreo.Text = personaC.correo.ToString();
+                }
+                else
+                {
+                    frmBuscarCliente.clienteSeleccionado = (ClienteWS.cliente)frmBuscarCliente.dgv.CurrentRow.DataBoundItem;
+                    txtIdC.Text = frmBuscarCliente.clienteSeleccionado.idCliente.ToString();
+                    txtRuc.Text = frmBuscarCliente.clienteSeleccionado.ruc.ToString();
+                    txtRazonSocial.Text = frmBuscarCliente.clienteSeleccionado.razonSocial;
+                    txtGrupo.Text = frmBuscarCliente.clienteSeleccionado.grupo;
+                    txtDireccion.Text = frmBuscarCliente.clienteSeleccionado.direccion;
+                    cboZona.SelectedValue = frmBuscarCliente.clienteSeleccionado.zona.idZona;
+                    dtpFechaInicio.Value = frmBuscarCliente.clienteSeleccionado.fechaRegistro;
+
+                    //PERSONA CONTACTO
+                    PersonaContactoWS.personaContacto personaC = new PersonaContactoWS.personaContacto();
+
+                    personaC.idPersonaContacto = frmBuscarCliente.clienteSeleccionado.personaContacto.idPersonaContacto;
+                    personaC = daoPersonaContacto.mostrarPersonaContacto(personaC.idPersonaContacto);
+
+                    txtIdPC.Text = personaC.idPersonaContacto.ToString();
+                    txtDNI.Text = personaC.dni.ToString();
+                    txtNombre.Text = personaC.nombre;
+                    txtApMaterno.Text = personaC.apellidoMaterno;
+                    txtApPaterno.Text = personaC.apellidoPaterno;
+                    txtTelefono1.Text = personaC.telefono1.ToString();
+                    txtTelefono2.Text = personaC.telefono2.ToString();
+                    txtCorreo.Text = personaC.correo.ToString();
+                }
             }
         }
 

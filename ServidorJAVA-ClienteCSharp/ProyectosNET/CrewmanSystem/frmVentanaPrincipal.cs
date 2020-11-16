@@ -505,6 +505,10 @@ namespace CrewmanSystem
 					if (boton == 2) frmGestionarPromociones.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarPromocion());
 					break;
+				case "frmBuscarPromocion":
+					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaPromocion());
+					if (boton == 2) frmBuscarPromocion.eliminar();
+					break;
 				case "frmGestionarProductosXZona":
 					if (boton == 0) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoProductoXZona());
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarProductoXZona());
@@ -551,6 +555,10 @@ namespace CrewmanSystem
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoCliente());
 					if (boton == 2) frmGestionarClientes.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarCliente());
+					break;
+				case "frmBuscarCliente":
+					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoCliente());
+					if (boton == 2) frmBuscarCliente.eliminar();
 					break;
 				default:
 					MessageBox.Show("Error: El formulario aún no existe");
