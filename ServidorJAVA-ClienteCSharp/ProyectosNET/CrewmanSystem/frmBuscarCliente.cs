@@ -12,41 +12,43 @@ namespace CrewmanSystem
 {
 	public partial class frmBuscarCliente : Form
 	{
-		private ClienteWS.ClienteWSClient daoCliente = new ClienteWS.ClienteWSClient();
+		public static ClienteWS.ClienteWSClient daoCliente;
+		public static ClienteWS.cliente clienteSeleccionado;
+		public static DataGridView dgv;
 
 		public frmBuscarCliente()
 		{
+			daoCliente = new ClienteWS.ClienteWSClient();
 			InitializeComponent();
-			dataGridView1.AutoGenerateColumns = false;
+			dgv = dgvClientes;
+			dgvClientes.AutoGenerateColumns = false;
 			ClienteWS.cliente[] misClientes = daoCliente.listarClientes("", "");
 			if (misClientes != null)
 			{
-				dataGridView1.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
+				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
 			}
 			else
 			{
-				dataGridView1.DataSource = new BindingList<ClienteWS.cliente>();
+				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>();
 
 			}
 
 			#region colores de seleccion
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvClientes.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvClientes.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvClientes.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvClientes.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvClientes.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvClientes.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
 
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-			frmMostrarCliente formBusquedaClientes = new frmMostrarCliente();
-			if (formBusquedaClientes.ShowDialog() == DialogResult.OK) 
-			{ 
-			}
+			frmVentanaPrincipal.act.Enabled = false;
+			frmVentanaPrincipal.elim.Enabled = false;
 		}
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -54,20 +56,42 @@ namespace CrewmanSystem
 			ClienteWS.cliente[] misClientes = daoCliente.listarClientes(txtRazonSocial.Text, txtGrupo.Text);
 			if (misClientes != null)
 			{
-				dataGridView1.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
+				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
 			}
 			else
 			{
-				dataGridView1.DataSource = new BindingList<ClienteWS.cliente>();
+				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>();
 
 			}
 		}
 
-        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void dgvClientes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-			//castear objetos y mostrar valor determinado
-			ClienteWS.cliente cliente = dataGridView1.Rows[e.RowIndex].DataBoundItem
-										as ClienteWS.cliente;
+            //castear objetos y mostrar valor determinado
+            ClienteWS.cliente cliente = dgvClientes.Rows[e.RowIndex].DataBoundItem
+                                        as ClienteWS.cliente;
+        }
+
+		private void dgvClientes_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+		{
+			//Preguntar al profe
+			if (e.StateChanged != DataGridViewElementStates.Selected)
+			{
+				//frmVentanaPrincipal.act.Enabled = false;
+				//frmVentanaPrincipal.elim.Enabled = false;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+			}
 		}
-    }
+
+		public static void eliminar()
+		{
+			clienteSeleccionado = (ClienteWS.cliente)dgv.CurrentRow.DataBoundItem;
+			daoCliente.eliminarCliente(clienteSeleccionado.idCliente);
+		}
+	}
 }
