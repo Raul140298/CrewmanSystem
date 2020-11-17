@@ -472,7 +472,7 @@
             this.btnClientesXZona.IconColor = System.Drawing.Color.Black;
             this.btnClientesXZona.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClientesXZona.IconSize = 16;
-            this.btnClientesXZona.Location = new System.Drawing.Point(0, 55);
+            this.btnClientesXZona.Location = new System.Drawing.Point(0, 49);
             this.btnClientesXZona.Name = "btnClientesXZona";
             this.btnClientesXZona.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnClientesXZona.Rotation = 0D;
@@ -499,7 +499,7 @@
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnClientes.Rotation = 0D;
-            this.btnClientes.Size = new System.Drawing.Size(264, 55);
+            this.btnClientes.Size = new System.Drawing.Size(264, 49);
             this.btnClientes.TabIndex = 1;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
