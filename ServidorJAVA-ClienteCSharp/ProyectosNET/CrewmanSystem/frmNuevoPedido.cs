@@ -12,26 +12,61 @@ namespace CrewmanSystem
 {
 	public partial class frmNuevoPedido : Form
 	{
+        public static ClienteWS.cliente clienteSeleccionado;
+        public static ClienteWS.ClienteWSClient daoCliente;
+        public static ProductoXZonaWS.productoXZona productoXZonaSeleccionado;
+        public static PedidoWS.pedido pedido;
 		public frmNuevoPedido()
 		{
-			InitializeComponent();
+            daoCliente = new ClienteWS.ClienteWSClient();
+            InitializeComponent();
 		}
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
-            frmBuscarCliente formBusquedaCliente = new frmBuscarCliente();
+            frmBuscarCliente formBusquedaCliente = new frmBuscarCliente(1);
             if (formBusquedaCliente.ShowDialog() == DialogResult.OK)
             {
+                clienteSeleccionado = frmBuscarCliente.clienteSeleccionado;
 
+                txtRucCliente.Text = clienteSeleccionado.ruc.ToString();
+                txtRazonSocial.Text = clienteSeleccionado.razonSocial;
+                //pedido.lineasPedidos = null;
+                txtIdProducto.Text = "";
+                txtNombreProducto.Text = "";
+                txtPrecioUnitario.Text = "";
+                productoXZonaSeleccionado = null;
+                //completarTabla();
+            }
+        }
+
+        private void completarTabla()
+        {
+            dgvLineas.AutoGenerateColumns = false;
+            if (pedido.lineasPedidos != null)
+            {
+                //dgvLineas.DataSource = new BindingList<LineaPedidoWS.lineaPedido>(pedido.lineasPedidos.ToArray());
+            }
+            else
+            {
+                //dgvLineas.DataSource = new BindingList<LineaPedidoWS.lineaPedido>();
             }
         }
 
         private void btnBuscarProductoXZona_Click(object sender, EventArgs e)
         {
-            if (txtNombreCliente.Text == "")
+            if (txtRazonSocial.Text == "")
             {
                 MessageBox.Show("Debe escoger un cliente","Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
+            }
+            frmBuscarProductoPorZona formBusquedaProductoPorZona = new frmBuscarProductoPorZona(clienteSeleccionado.zona.idZona);
+            if (formBusquedaProductoPorZona.ShowDialog() == DialogResult.OK)
+            {
+                productoXZonaSeleccionado = frmBuscarProductoPorZona.productoXZonaSeleccionado;
+                txtIdProducto.Text = productoXZonaSeleccionado.idProductoXZona.ToString();
+                txtNombreProducto.Text = productoXZonaSeleccionado.producto.nombre;
+                txtPrecioUnitario.Text = productoXZonaSeleccionado.precioReal.ToString();
             }
         }
     }

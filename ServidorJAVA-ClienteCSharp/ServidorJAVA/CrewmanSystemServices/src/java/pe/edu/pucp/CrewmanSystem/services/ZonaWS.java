@@ -70,5 +70,16 @@ public class ZonaWS {
             System.out.println(e.getMessage());
         }
         return zona;
-    }    
+    } 
+    
+    @WebMethod(operationName = "mostrarZonaCliente")
+    public Zona mostrarZonaCliente(@WebParam(name = "idCliente") int idCliente){
+        Zona zona = new Zona();
+        try{
+            zona = daoZona.mostrar(idCliente);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return zona;
+    } 
 }

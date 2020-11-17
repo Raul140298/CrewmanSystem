@@ -44,7 +44,35 @@ namespace CrewmanSystem
 			dgvClientes.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
+		public frmBuscarCliente(int popup)
+		{
+			daoCliente = new ClienteWS.ClienteWSClient();
+			InitializeComponent();
+			dgv = dgvClientes;
+			dgvClientes.AutoGenerateColumns = false;
+			ClienteWS.cliente[] misClientes = daoCliente.listarClientes("", "");
+			if (misClientes != null)
+			{
+				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
+			}
+			else
+			{
+				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>();
 
+			}
+
+			btnSeleccionar.Visible = true;
+			#region colores de seleccion
+			dgvClientes.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvClientes.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+			dgvClientes.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvClientes.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+			dgvClientes.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvClientes.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			#endregion
+		}
 		private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 			frmVentanaPrincipal.act.Enabled = false;
@@ -93,5 +121,12 @@ namespace CrewmanSystem
 			clienteSeleccionado = (ClienteWS.cliente)dgv.CurrentRow.DataBoundItem;
 			daoCliente.eliminarCliente(clienteSeleccionado.idCliente);
 		}
-	}
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+			clienteSeleccionado = (ClienteWS.cliente)dgv.CurrentRow.DataBoundItem;
+			this.DialogResult = DialogResult.OK;
+			this.Close();
+		}
+    }
 }

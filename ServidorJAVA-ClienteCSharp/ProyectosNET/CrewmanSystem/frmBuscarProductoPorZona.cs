@@ -14,7 +14,7 @@ namespace CrewmanSystem
     {
         private ProductoXZonaWS.ProductoXZonaWSClient daoProductoXZona;
         private ProductoXZonaWS.productoXZona[] misProductoXZona;
-        private ProductoXZonaWS.productoXZona productoXZonaSeleccionado;
+        public static ProductoXZonaWS.productoXZona productoXZonaSeleccionado;
         private int idZona;
 
         public frmBuscarProductoPorZona(int idZonaParam)
