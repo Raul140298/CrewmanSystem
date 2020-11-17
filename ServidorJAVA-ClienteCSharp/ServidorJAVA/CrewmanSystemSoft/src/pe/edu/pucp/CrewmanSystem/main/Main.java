@@ -106,7 +106,25 @@ public class Main{
 //            System.out.println(e.getIdEmpleado()+" "+e.getNombre()+" "+e.getApellidoPaterno()+""+e.getObjetivoVentas()+" "+e.getZona().getIdZona()+" "+e.getZona().getNombre());
 //        }
 
-        Zona zona = daoZona.mostrarZonaCliente(14);
+        //Zona zona = daoZona.mostrarZonaCliente(14);
+        Pedido pedido = new Pedido();
+        pedido.setDireccionEntrega("Almacen 2 javier prado");
+        pedido.getCliente().setIdCliente(14);
+        pedido.getEmpleado().setIdEmpleado(25);
+        pedido.setMontoTotal(255);
+        misLineasDePedido = new ArrayList<LineaPedido>();
+        LineaPedido lp1 = new LineaPedido();
+        lp1.setCantidad(25);
+        lp1.setMontoSubTotal(180);
+        lp1.getProductoXZona().setIdProductoXZona(68);
+        LineaPedido lp2 = new LineaPedido();
+        lp2.setCantidad(30);
+        lp2.setMontoSubTotal(75);
+        lp2.getProductoXZona().setIdProductoXZona(69);
+        misLineasDePedido.add(lp1);
+        misLineasDePedido.add(lp2);
+        pedido.setLineasPedidos(misLineasDePedido);
+        daoPedido.insertar(pedido);
         System.out.println("EL MODELADO HA CONCLUIDO");
     }
     

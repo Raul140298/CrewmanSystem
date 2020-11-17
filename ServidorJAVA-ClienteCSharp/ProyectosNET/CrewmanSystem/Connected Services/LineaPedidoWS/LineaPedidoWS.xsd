@@ -1,32 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.CrewmanSystem.pucp.edu.pe/" targetNamespace="http://services.CrewmanSystem.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="actualizarPedido" type="tns:actualizarPedido" />
-  <xs:element name="actualizarPedidoResponse" type="tns:actualizarPedidoResponse" />
-  <xs:element name="anular" type="tns:anular" />
-  <xs:element name="anularResponse" type="tns:anularResponse" />
-  <xs:element name="aprobarBorrador" type="tns:aprobarBorrador" />
-  <xs:element name="aprobarBorradorResponse" type="tns:aprobarBorradorResponse" />
-  <xs:element name="culminarPedido" type="tns:culminarPedido" />
-  <xs:element name="culminarPedidoResponse" type="tns:culminarPedidoResponse" />
-  <xs:element name="eliminarPedido" type="tns:eliminarPedido" />
-  <xs:element name="eliminarPedidoResponse" type="tns:eliminarPedidoResponse" />
-  <xs:element name="generarReporte" type="tns:generarReporte" />
-  <xs:element name="generarReporteResponse" type="tns:generarReporteResponse" />
-  <xs:element name="insertarPedido" type="tns:insertarPedido" />
-  <xs:element name="insertarPedidoResponse" type="tns:insertarPedidoResponse" />
-  <xs:element name="insertarTotal" type="tns:insertarTotal" />
-  <xs:element name="insertarTotalResponse" type="tns:insertarTotalResponse" />
-  <xs:element name="liberarStock" type="tns:liberarStock" />
-  <xs:element name="liberarStockResponse" type="tns:liberarStockResponse" />
-  <xs:element name="listarPedidos" type="tns:listarPedidos" />
-  <xs:element name="listarPedidosResponse" type="tns:listarPedidosResponse" />
-  <xs:element name="mostrarPedido" type="tns:mostrarPedido" />
-  <xs:element name="mostrarPedidoResponse" type="tns:mostrarPedidoResponse" />
-  <xs:element name="obtenerPedido" type="tns:obtenerPedido" />
-  <xs:element name="obtenerPedidoResponse" type="tns:obtenerPedidoResponse" />
-  <xs:complexType name="liberarStock">
+  <xs:element name="actualizarLineaPedido" type="tns:actualizarLineaPedido" />
+  <xs:element name="actualizarLineaPedidoResponse" type="tns:actualizarLineaPedidoResponse" />
+  <xs:element name="eliminarLineaPedido" type="tns:eliminarLineaPedido" />
+  <xs:element name="eliminarLineaPedidoResponse" type="tns:eliminarLineaPedidoResponse" />
+  <xs:element name="insertarLineaPedido" type="tns:insertarLineaPedido" />
+  <xs:element name="insertarLineaPedidoResponse" type="tns:insertarLineaPedidoResponse" />
+  <xs:element name="listarLineaPedidos" type="tns:listarLineaPedidos" />
+  <xs:element name="listarLineaPedidosResponse" type="tns:listarLineaPedidosResponse" />
+  <xs:complexType name="actualizarLineaPedido">
     <xs:sequence>
+      <xs:element minOccurs="0" name="lineaPedido" type="tns:lineaPedido" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lineaPedido">
+    <xs:sequence>
+      <xs:element name="cantidad" type="xs:int" />
+      <xs:element name="cantidadPromo" type="xs:int" />
+      <xs:element name="idLineaPedido" type="xs:int" />
+      <xs:element name="montoSubTotal" type="xs:double" />
       <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
+      <xs:element minOccurs="0" name="productoXZona" type="tns:productoXZona" />
+      <xs:element minOccurs="0" name="promocionXProducto" type="tns:promocionXProducto" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="pedido">
@@ -296,17 +291,6 @@
       <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="lineaPedido">
-    <xs:sequence>
-      <xs:element name="cantidad" type="xs:int" />
-      <xs:element name="cantidadPromo" type="xs:int" />
-      <xs:element name="idLineaPedido" type="xs:int" />
-      <xs:element name="montoSubTotal" type="xs:double" />
-      <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
-      <xs:element minOccurs="0" name="productoXZona" type="tns:productoXZona" />
-      <xs:element minOccurs="0" name="promocionXProducto" type="tns:promocionXProducto" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="queja">
     <xs:sequence>
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
@@ -315,111 +299,37 @@
       <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="liberarStockResponse">
+  <xs:complexType name="actualizarLineaPedidoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="anular">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="anularResponse">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="generarReporte">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idPedido" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="generarReporteResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pedido" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerPedido">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerPedidoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarTotal">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarTotalResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="aprobarBorrador">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="aprobarBorradorResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="culminarPedido">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="culminarPedidoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarPedido">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="lineaPedido" type="tns:pedido" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarPedidoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarPedidos">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarPedidosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pedido" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarPedido">
+  <xs:complexType name="listarLineaPedidos">
     <xs:sequence>
       <xs:element name="idPedido" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarPedidoResponse">
+  <xs:complexType name="listarLineaPedidosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:lineaPedido" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarLineaPedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lineaPedido" type="tns:lineaPedido" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarLineaPedidoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="mostrarPedido">
+  <xs:complexType name="eliminarLineaPedido">
     <xs:sequence>
-      <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
+      <xs:element name="idLineaPedido" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="mostrarPedidoResponse">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="insertarPedido">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="lineaPedido" type="tns:pedido" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarPedidoResponse">
+  <xs:complexType name="eliminarLineaPedidoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
