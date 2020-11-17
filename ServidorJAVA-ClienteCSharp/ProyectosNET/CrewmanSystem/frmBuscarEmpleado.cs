@@ -25,7 +25,7 @@ namespace CrewmanSystem
 			ZonaWS.zona[] listaZonas=daoZona.listarZonas();
 			ZonaWS.zona zonaDefault = new ZonaWS.zona();
 			zonaDefault.idZona = 0;
-			zonaDefault.nombre = "Ninguna";
+			zonaDefault.nombre = "---------";
 
 			if (listaZonas == null)
 			{

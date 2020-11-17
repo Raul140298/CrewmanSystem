@@ -20,15 +20,19 @@ namespace CrewmanSystem
 			daoZona = new ZonaWS.ZonaWSClient();
 			InitializeComponent();
 			ZonaWS.zona[] misZonas = daoZona.listarZonas();
+			ZonaWS.zona vacio = new ZonaWS.zona();
+			vacio.idZona = 0;
+			vacio.nombre = "---------";
+			ZonaWS.zona[] vacioA = { vacio };
 			BindingList<ZonaWS.zona> listaZonas;
-			if (misZonas != null) listaZonas = new BindingList<ZonaWS.zona>(misZonas);
-			else listaZonas = new BindingList<ZonaWS.zona>();
+			if (misZonas != null) listaZonas = new BindingList<ZonaWS.zona>(vacioA.Concat(misZonas).ToArray());
+			else listaZonas = new BindingList<ZonaWS.zona>(vacioA.ToArray());
 		
 			cboZona.DataSource = listaZonas;
 			cboZona.ValueMember = "idZona";
 			cboZona.DisplayMember = "nombre";
 
-			cboZona.SelectedValue = Program.empleado.zona.idZona;
+			cboZona.SelectedItem = vacio;
 			completarTabla();
 			#region colores de seleccion
 			dgvProductoXZona.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
