@@ -16,26 +16,6 @@ namespace CrewmanSystem.ZonaWS {
     public interface ZonaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/actualizarZonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/actualizarZonaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.ZonaWS.actualizarZonaResponse actualizarZona(CrewmanSystem.ZonaWS.actualizarZonaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/actualizarZonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/actualizarZonaResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.actualizarZonaResponse> actualizarZonaAsync(CrewmanSystem.ZonaWS.actualizarZonaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/listarZonasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/listarZonasResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.ZonaWS.listarZonasResponse listarZonas(CrewmanSystem.ZonaWS.listarZonasRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/listarZonasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/listarZonasResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.listarZonasResponse> listarZonasAsync(CrewmanSystem.ZonaWS.listarZonasRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -44,6 +24,16 @@ namespace CrewmanSystem.ZonaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaResponse")]
         System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.mostrarZonaResponse> mostrarZonaAsync(CrewmanSystem.ZonaWS.mostrarZonaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/actualizarZonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/actualizarZonaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.ZonaWS.actualizarZonaResponse actualizarZona(CrewmanSystem.ZonaWS.actualizarZonaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/actualizarZonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/actualizarZonaResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.actualizarZonaResponse> actualizarZonaAsync(CrewmanSystem.ZonaWS.actualizarZonaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/eliminarZonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/eliminarZonaResponse")]
@@ -64,6 +54,16 @@ namespace CrewmanSystem.ZonaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/insertarZonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/insertarZonaResponse")]
         System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.insertarZonaResponse> insertarZonaAsync(CrewmanSystem.ZonaWS.insertarZonaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/listarZonasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/listarZonasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.ZonaWS.listarZonasResponse listarZonas(CrewmanSystem.ZonaWS.listarZonasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/listarZonasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/listarZonasResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.listarZonasResponse> listarZonasAsync(CrewmanSystem.ZonaWS.listarZonasRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaClienteRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaClienteResponse")]
@@ -3401,70 +3401,6 @@ namespace CrewmanSystem.ZonaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarZona", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarZonaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.ZonaWS.zona zona;
-        
-        public actualizarZonaRequest() {
-        }
-        
-        public actualizarZonaRequest(CrewmanSystem.ZonaWS.zona zona) {
-            this.zona = zona;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarZonaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarZonaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarZonaResponse() {
-        }
-        
-        public actualizarZonaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarZonas", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarZonasRequest {
-        
-        public listarZonasRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarZonasResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarZonasResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.ZonaWS.zona[] @return;
-        
-        public listarZonasResponse() {
-        }
-        
-        public listarZonasResponse(CrewmanSystem.ZonaWS.zona[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarZona", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
     public partial class mostrarZonaRequest {
         
@@ -3494,6 +3430,42 @@ namespace CrewmanSystem.ZonaWS {
         }
         
         public mostrarZonaResponse(CrewmanSystem.ZonaWS.zona @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarZona", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarZonaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.ZonaWS.zona zona;
+        
+        public actualizarZonaRequest() {
+        }
+        
+        public actualizarZonaRequest(CrewmanSystem.ZonaWS.zona zona) {
+            this.zona = zona;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarZonaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarZonaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarZonaResponse() {
+        }
+        
+        public actualizarZonaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -3573,6 +3545,34 @@ namespace CrewmanSystem.ZonaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarZonas", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarZonasRequest {
+        
+        public listarZonasRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarZonasResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarZonasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.ZonaWS.zona[] @return;
+        
+        public listarZonasResponse() {
+        }
+        
+        public listarZonasResponse(CrewmanSystem.ZonaWS.zona[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarZonaCliente", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
     public partial class mostrarZonaClienteRequest {
         
@@ -3634,50 +3634,6 @@ namespace CrewmanSystem.ZonaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.ZonaWS.actualizarZonaResponse CrewmanSystem.ZonaWS.ZonaWS.actualizarZona(CrewmanSystem.ZonaWS.actualizarZonaRequest request) {
-            return base.Channel.actualizarZona(request);
-        }
-        
-        public int actualizarZona(CrewmanSystem.ZonaWS.zona zona) {
-            CrewmanSystem.ZonaWS.actualizarZonaRequest inValue = new CrewmanSystem.ZonaWS.actualizarZonaRequest();
-            inValue.zona = zona;
-            CrewmanSystem.ZonaWS.actualizarZonaResponse retVal = ((CrewmanSystem.ZonaWS.ZonaWS)(this)).actualizarZona(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.actualizarZonaResponse> CrewmanSystem.ZonaWS.ZonaWS.actualizarZonaAsync(CrewmanSystem.ZonaWS.actualizarZonaRequest request) {
-            return base.Channel.actualizarZonaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.actualizarZonaResponse> actualizarZonaAsync(CrewmanSystem.ZonaWS.zona zona) {
-            CrewmanSystem.ZonaWS.actualizarZonaRequest inValue = new CrewmanSystem.ZonaWS.actualizarZonaRequest();
-            inValue.zona = zona;
-            return ((CrewmanSystem.ZonaWS.ZonaWS)(this)).actualizarZonaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.ZonaWS.listarZonasResponse CrewmanSystem.ZonaWS.ZonaWS.listarZonas(CrewmanSystem.ZonaWS.listarZonasRequest request) {
-            return base.Channel.listarZonas(request);
-        }
-        
-        public CrewmanSystem.ZonaWS.zona[] listarZonas() {
-            CrewmanSystem.ZonaWS.listarZonasRequest inValue = new CrewmanSystem.ZonaWS.listarZonasRequest();
-            CrewmanSystem.ZonaWS.listarZonasResponse retVal = ((CrewmanSystem.ZonaWS.ZonaWS)(this)).listarZonas(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.listarZonasResponse> CrewmanSystem.ZonaWS.ZonaWS.listarZonasAsync(CrewmanSystem.ZonaWS.listarZonasRequest request) {
-            return base.Channel.listarZonasAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.listarZonasResponse> listarZonasAsync() {
-            CrewmanSystem.ZonaWS.listarZonasRequest inValue = new CrewmanSystem.ZonaWS.listarZonasRequest();
-            return ((CrewmanSystem.ZonaWS.ZonaWS)(this)).listarZonasAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CrewmanSystem.ZonaWS.mostrarZonaResponse CrewmanSystem.ZonaWS.ZonaWS.mostrarZona(CrewmanSystem.ZonaWS.mostrarZonaRequest request) {
             return base.Channel.mostrarZona(request);
         }
@@ -3698,6 +3654,29 @@ namespace CrewmanSystem.ZonaWS {
             CrewmanSystem.ZonaWS.mostrarZonaRequest inValue = new CrewmanSystem.ZonaWS.mostrarZonaRequest();
             inValue.idEmpleado = idEmpleado;
             return ((CrewmanSystem.ZonaWS.ZonaWS)(this)).mostrarZonaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.ZonaWS.actualizarZonaResponse CrewmanSystem.ZonaWS.ZonaWS.actualizarZona(CrewmanSystem.ZonaWS.actualizarZonaRequest request) {
+            return base.Channel.actualizarZona(request);
+        }
+        
+        public int actualizarZona(CrewmanSystem.ZonaWS.zona zona) {
+            CrewmanSystem.ZonaWS.actualizarZonaRequest inValue = new CrewmanSystem.ZonaWS.actualizarZonaRequest();
+            inValue.zona = zona;
+            CrewmanSystem.ZonaWS.actualizarZonaResponse retVal = ((CrewmanSystem.ZonaWS.ZonaWS)(this)).actualizarZona(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.actualizarZonaResponse> CrewmanSystem.ZonaWS.ZonaWS.actualizarZonaAsync(CrewmanSystem.ZonaWS.actualizarZonaRequest request) {
+            return base.Channel.actualizarZonaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.actualizarZonaResponse> actualizarZonaAsync(CrewmanSystem.ZonaWS.zona zona) {
+            CrewmanSystem.ZonaWS.actualizarZonaRequest inValue = new CrewmanSystem.ZonaWS.actualizarZonaRequest();
+            inValue.zona = zona;
+            return ((CrewmanSystem.ZonaWS.ZonaWS)(this)).actualizarZonaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3744,6 +3723,27 @@ namespace CrewmanSystem.ZonaWS {
             CrewmanSystem.ZonaWS.insertarZonaRequest inValue = new CrewmanSystem.ZonaWS.insertarZonaRequest();
             inValue.zona = zona;
             return ((CrewmanSystem.ZonaWS.ZonaWS)(this)).insertarZonaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.ZonaWS.listarZonasResponse CrewmanSystem.ZonaWS.ZonaWS.listarZonas(CrewmanSystem.ZonaWS.listarZonasRequest request) {
+            return base.Channel.listarZonas(request);
+        }
+        
+        public CrewmanSystem.ZonaWS.zona[] listarZonas() {
+            CrewmanSystem.ZonaWS.listarZonasRequest inValue = new CrewmanSystem.ZonaWS.listarZonasRequest();
+            CrewmanSystem.ZonaWS.listarZonasResponse retVal = ((CrewmanSystem.ZonaWS.ZonaWS)(this)).listarZonas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.listarZonasResponse> CrewmanSystem.ZonaWS.ZonaWS.listarZonasAsync(CrewmanSystem.ZonaWS.listarZonasRequest request) {
+            return base.Channel.listarZonasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.listarZonasResponse> listarZonasAsync() {
+            CrewmanSystem.ZonaWS.listarZonasRequest inValue = new CrewmanSystem.ZonaWS.listarZonasRequest();
+            return ((CrewmanSystem.ZonaWS.ZonaWS)(this)).listarZonasAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

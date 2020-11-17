@@ -76,7 +76,7 @@ public class ZonaWS {
     public Zona mostrarZonaCliente(@WebParam(name = "idCliente") int idCliente){
         Zona zona = new Zona();
         try{
-            zona = daoZona.mostrar(idCliente);
+            zona = daoZona.mostrarZonaCliente(idCliente);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
