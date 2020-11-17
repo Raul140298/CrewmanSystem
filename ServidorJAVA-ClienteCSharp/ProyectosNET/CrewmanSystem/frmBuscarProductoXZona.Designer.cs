@@ -32,10 +32,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtSubfamilia = new System.Windows.Forms.TextBox();
+            this.txtFamilia = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.cboZona = new System.Windows.Forms.ComboBox();
             this.lblID = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dgvProductosXZona = new System.Windows.Forms.DataGridView();
+            this.dgvProductoXZona = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CANT_UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,34 +54,111 @@
             this.FAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosXZona)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductoXZona)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtSubfamilia);
+            this.panel1.Controls.Add(this.txtFamilia);
+            this.panel1.Controls.Add(this.txtMarca);
+            this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.cboZona);
             this.panel1.Controls.Add(this.lblID);
             this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 81);
+            this.panel1.Size = new System.Drawing.Size(800, 160);
             this.panel1.TabIndex = 46;
+            // 
+            // label5
+            // 
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Location = new System.Drawing.Point(48, 67);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(101, 22);
+            this.label5.TabIndex = 70;
+            this.label5.Text = "Nombre :";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label4
+            // 
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Location = new System.Drawing.Point(382, 67);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 22);
+            this.label4.TabIndex = 69;
+            this.label4.Text = "Marca :";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label3
+            // 
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Location = new System.Drawing.Point(48, 107);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 22);
+            this.label3.TabIndex = 68;
+            this.label3.Text = "Familia :";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Location = new System.Drawing.Point(364, 107);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 22);
+            this.label1.TabIndex = 67;
+            this.label1.Text = "Subfamilia :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtSubfamilia
+            // 
+            this.txtSubfamilia.Location = new System.Drawing.Point(473, 107);
+            this.txtSubfamilia.Name = "txtSubfamilia";
+            this.txtSubfamilia.Size = new System.Drawing.Size(189, 22);
+            this.txtSubfamilia.TabIndex = 66;
+            // 
+            // txtFamilia
+            // 
+            this.txtFamilia.Location = new System.Drawing.Point(155, 107);
+            this.txtFamilia.Name = "txtFamilia";
+            this.txtFamilia.Size = new System.Drawing.Size(189, 22);
+            this.txtFamilia.TabIndex = 65;
+            // 
+            // txtMarca
+            // 
+            this.txtMarca.Location = new System.Drawing.Point(473, 67);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(189, 22);
+            this.txtMarca.TabIndex = 64;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(155, 67);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(189, 22);
+            this.txtNombre.TabIndex = 63;
             // 
             // cboZona
             // 
+            this.cboZona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboZona.FormattingEnabled = true;
-            this.cboZona.Location = new System.Drawing.Point(158, 12);
+            this.cboZona.Location = new System.Drawing.Point(155, 27);
             this.cboZona.Name = "cboZona";
-            this.cboZona.Size = new System.Drawing.Size(263, 24);
+            this.cboZona.Size = new System.Drawing.Size(196, 24);
             this.cboZona.TabIndex = 56;
             // 
             // lblID
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Location = new System.Drawing.Point(12, 12);
+            this.lblID.Location = new System.Drawing.Point(45, 26);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(140, 22);
+            this.lblID.Size = new System.Drawing.Size(103, 22);
             this.lblID.TabIndex = 55;
             this.lblID.Text = "Zona :";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -84,23 +169,23 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(495, 12);
+            this.btnBuscar.Location = new System.Drawing.Point(473, 23);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(160, 40);
+            this.btnBuscar.Size = new System.Drawing.Size(189, 30);
             this.btnBuscar.TabIndex = 53;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // dgvProductosXZona
+            // dgvProductoXZona
             // 
-            this.dgvProductosXZona.AllowUserToAddRows = false;
-            this.dgvProductosXZona.AllowUserToDeleteRows = false;
-            this.dgvProductosXZona.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvProductosXZona.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvProductosXZona.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.dgvProductosXZona.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvProductosXZona.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvProductoXZona.AllowUserToAddRows = false;
+            this.dgvProductoXZona.AllowUserToDeleteRows = false;
+            this.dgvProductoXZona.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvProductoXZona.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvProductoXZona.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dgvProductoXZona.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvProductoXZona.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,10 +193,10 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductosXZona.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProductosXZona.ColumnHeadersHeight = 30;
-            this.dgvProductosXZona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvProductosXZona.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProductoXZona.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProductoXZona.ColumnHeadersHeight = 30;
+            this.dgvProductoXZona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvProductoXZona.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.PRODUCTO,
             this.CANT_UNIDADES,
@@ -121,14 +206,14 @@
             this.SUBFAMILIA,
             this.FAMILIA,
             this.MARCA});
-            this.dgvProductosXZona.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProductosXZona.EnableHeadersVisualStyles = false;
-            this.dgvProductosXZona.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.dgvProductosXZona.Location = new System.Drawing.Point(0, 81);
-            this.dgvProductosXZona.MultiSelect = false;
-            this.dgvProductosXZona.Name = "dgvProductosXZona";
-            this.dgvProductosXZona.ReadOnly = true;
-            this.dgvProductosXZona.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvProductoXZona.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProductoXZona.EnableHeadersVisualStyles = false;
+            this.dgvProductoXZona.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.dgvProductoXZona.Location = new System.Drawing.Point(0, 160);
+            this.dgvProductoXZona.MultiSelect = false;
+            this.dgvProductoXZona.Name = "dgvProductoXZona";
+            this.dgvProductoXZona.ReadOnly = true;
+            this.dgvProductoXZona.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,17 +221,17 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductosXZona.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvProductosXZona.RowHeadersWidth = 51;
+            this.dgvProductoXZona.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvProductoXZona.RowHeadersWidth = 51;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvProductosXZona.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvProductosXZona.RowTemplate.Height = 24;
-            this.dgvProductosXZona.Size = new System.Drawing.Size(800, 369);
-            this.dgvProductosXZona.TabIndex = 47;
-            this.dgvProductosXZona.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProductosXZona_CellFormatting);
+            this.dgvProductoXZona.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvProductoXZona.RowTemplate.Height = 24;
+            this.dgvProductoXZona.Size = new System.Drawing.Size(800, 290);
+            this.dgvProductoXZona.TabIndex = 47;
+            this.dgvProductoXZona.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProductoXZona_CellFormatting);
             // 
             // ID
             // 
@@ -227,12 +312,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgvProductosXZona);
+            this.Controls.Add(this.dgvProductoXZona);
             this.Controls.Add(this.panel1);
             this.Name = "frmBuscarProductoXZona";
             this.Text = "frmProductoXZona";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosXZona)).EndInit();
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductoXZona)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -240,10 +326,18 @@
 		#endregion
 
 		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.DataGridView dgvProductoXZona;
 		private System.Windows.Forms.Button btnBuscar;
 		private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.ComboBox cboZona;
-        private System.Windows.Forms.DataGridView dgvProductosXZona;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtSubfamilia;
+        private System.Windows.Forms.TextBox txtFamilia;
+        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn CANT_UNIDADES;
