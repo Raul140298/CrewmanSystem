@@ -28,43 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbZona = new System.Windows.Forms.GroupBox();
+            this.cboZona = new System.Windows.Forms.ComboBox();
+            this.lblNombreZona = new System.Windows.Forms.Label();
             this.lblNombreProducto = new System.Windows.Forms.Label();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
             this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.gbProducto = new System.Windows.Forms.GroupBox();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.txtPrecioReal = new System.Windows.Forms.TextBox();
-            this.lblPrecio = new System.Windows.Forms.Label();
-            this.lblNombreZona = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.cboZona = new System.Windows.Forms.ComboBox();
-            this.dgvProductoXZona = new System.Windows.Forms.DataGridView();
             this.txtUnidades = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCantUnidades = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPrecioSugerido = new System.Windows.Forms.TextBox();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.txtPrecioReal = new System.Windows.Forms.TextBox();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dgvProducto = new System.Windows.Forms.DataGridView();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.NRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CANT_UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRECIO_REAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbZona.SuspendLayout();
             this.gbProducto.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductoXZona)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducto)).BeginInit();
             this.SuspendLayout();
             // 
             // gbZona
@@ -77,6 +76,25 @@
             this.gbZona.TabIndex = 7;
             this.gbZona.TabStop = false;
             this.gbZona.Text = "Datos de la Zona";
+            // 
+            // cboZona
+            // 
+            this.cboZona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboZona.FormattingEnabled = true;
+            this.cboZona.Location = new System.Drawing.Point(166, 50);
+            this.cboZona.Name = "cboZona";
+            this.cboZona.Size = new System.Drawing.Size(231, 24);
+            this.cboZona.TabIndex = 6;
+            // 
+            // lblNombreZona
+            // 
+            this.lblNombreZona.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblNombreZona.Location = new System.Drawing.Point(60, 51);
+            this.lblNombreZona.Name = "lblNombreZona";
+            this.lblNombreZona.Size = new System.Drawing.Size(100, 23);
+            this.lblNombreZona.TabIndex = 3;
+            this.lblNombreZona.Text = "Zona :";
+            this.lblNombreZona.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblNombreProducto
             // 
@@ -130,170 +148,6 @@
             this.gbProducto.TabIndex = 8;
             this.gbProducto.TabStop = false;
             this.gbProducto.Text = "Datos del Producto";
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnRemove.FlatAppearance.BorderSize = 0;
-            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnRemove.Location = new System.Drawing.Point(523, 117);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(40, 23);
-            this.btnRemove.TabIndex = 9;
-            this.btnRemove.Text = "-";
-            this.btnRemove.UseVisualStyleBackColor = false;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAdd.Location = new System.Drawing.Point(477, 117);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(40, 23);
-            this.btnAdd.TabIndex = 8;
-            this.btnAdd.Text = "+";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // txtPrecioReal
-            // 
-            this.txtPrecioReal.Location = new System.Drawing.Point(378, 117);
-            this.txtPrecioReal.Name = "txtPrecioReal";
-            this.txtPrecioReal.Size = new System.Drawing.Size(81, 22);
-            this.txtPrecioReal.TabIndex = 7;
-            // 
-            // lblPrecio
-            // 
-            this.lblPrecio.Location = new System.Drawing.Point(20, 116);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(141, 23);
-            this.lblPrecio.TabIndex = 6;
-            this.lblPrecio.Text = "Precio Sugerido :";
-            this.lblPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblNombreZona
-            // 
-            this.lblNombreZona.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblNombreZona.Location = new System.Drawing.Point(60, 51);
-            this.lblNombreZona.Name = "lblNombreZona";
-            this.lblNombreZona.Size = new System.Drawing.Size(100, 23);
-            this.lblNombreZona.TabIndex = 3;
-            this.lblNombreZona.Text = "Zona :";
-            this.lblNombreZona.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.gbProducto);
-            this.panel1.Controls.Add(this.gbZona);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(794, 313);
-            this.panel1.TabIndex = 9;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnGuardar);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 427);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(794, 74);
-            this.panel2.TabIndex = 10;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnGuardar.Location = new System.Drawing.Point(234, 22);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(160, 30);
-            this.btnGuardar.TabIndex = 9;
-            this.btnGuardar.Text = "GUARDAR";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.dgvProductoXZona);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 313);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(794, 114);
-            this.panel3.TabIndex = 11;
-            // 
-            // panel5
-            // 
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(771, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(23, 114);
-            this.panel5.TabIndex = 9;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(23, 114);
-            this.panel4.TabIndex = 0;
-            // 
-            // cboZona
-            // 
-            this.cboZona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboZona.FormattingEnabled = true;
-            this.cboZona.Location = new System.Drawing.Point(166, 50);
-            this.cboZona.Name = "cboZona";
-            this.cboZona.Size = new System.Drawing.Size(231, 24);
-            this.cboZona.TabIndex = 6;
-            this.cboZona.SelectedIndexChanged += new System.EventHandler(this.cboZona_SelectedIndexChanged);
-            // 
-            // dgvProductoXZona
-            // 
-            this.dgvProductoXZona.AllowUserToAddRows = false;
-            this.dgvProductoXZona.AllowUserToDeleteRows = false;
-            this.dgvProductoXZona.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvProductoXZona.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvProductoXZona.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.dgvProductoXZona.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvProductoXZona.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(4)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductoXZona.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProductoXZona.ColumnHeadersHeight = 30;
-            this.dgvProductoXZona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvProductoXZona.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NRO,
-            this.PRODUCTO,
-            this.CANT_UNIDADES,
-            this.UNIDADES,
-            this.ZONA,
-            this.PRECIO_REAL});
-            this.dgvProductoXZona.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProductoXZona.EnableHeadersVisualStyles = false;
-            this.dgvProductoXZona.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.dgvProductoXZona.Location = new System.Drawing.Point(23, 0);
-            this.dgvProductoXZona.MultiSelect = false;
-            this.dgvProductoXZona.Name = "dgvProductoXZona";
-            this.dgvProductoXZona.ReadOnly = true;
-            this.dgvProductoXZona.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvProductoXZona.RowHeadersWidth = 51;
-            this.dgvProductoXZona.RowTemplate.Height = 24;
-            this.dgvProductoXZona.Size = new System.Drawing.Size(748, 114);
-            this.dgvProductoXZona.TabIndex = 10;
-            this.dgvProductoXZona.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProductoXZona_CellFormatting);
             // 
             // txtUnidades
             // 
@@ -352,6 +206,149 @@
             this.txtPrecioSugerido.Size = new System.Drawing.Size(81, 22);
             this.txtPrecioSugerido.TabIndex = 90;
             // 
+            // btnRemove
+            // 
+            this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnRemove.FlatAppearance.BorderSize = 0;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnRemove.Location = new System.Drawing.Point(523, 117);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(40, 23);
+            this.btnRemove.TabIndex = 9;
+            this.btnRemove.Text = "-";
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAdd.Location = new System.Drawing.Point(477, 117);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(40, 23);
+            this.btnAdd.TabIndex = 8;
+            this.btnAdd.Text = "+";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // txtPrecioReal
+            // 
+            this.txtPrecioReal.Location = new System.Drawing.Point(378, 117);
+            this.txtPrecioReal.Name = "txtPrecioReal";
+            this.txtPrecioReal.Size = new System.Drawing.Size(81, 22);
+            this.txtPrecioReal.TabIndex = 7;
+            // 
+            // lblPrecio
+            // 
+            this.lblPrecio.Location = new System.Drawing.Point(20, 116);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(141, 23);
+            this.lblPrecio.TabIndex = 6;
+            this.lblPrecio.Text = "Precio Sugerido :";
+            this.lblPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.gbProducto);
+            this.panel1.Controls.Add(this.gbZona);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(794, 313);
+            this.panel1.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnGuardar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 427);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(794, 74);
+            this.panel2.TabIndex = 10;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnGuardar.Location = new System.Drawing.Point(234, 22);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(160, 30);
+            this.btnGuardar.TabIndex = 9;
+            this.btnGuardar.Text = "GUARDAR";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dgvProducto);
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 313);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(794, 114);
+            this.panel3.TabIndex = 11;
+            // 
+            // dgvProducto
+            // 
+            this.dgvProducto.AllowUserToAddRows = false;
+            this.dgvProducto.AllowUserToDeleteRows = false;
+            this.dgvProducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvProducto.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvProducto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dgvProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvProducto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(4)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvProducto.ColumnHeadersHeight = 30;
+            this.dgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvProducto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NRO,
+            this.PRODUCTO,
+            this.CANT_UNIDADES,
+            this.UNIDADES,
+            this.PRECIO_REAL});
+            this.dgvProducto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProducto.EnableHeadersVisualStyles = false;
+            this.dgvProducto.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.dgvProducto.Location = new System.Drawing.Point(23, 0);
+            this.dgvProducto.MultiSelect = false;
+            this.dgvProducto.Name = "dgvProducto";
+            this.dgvProducto.ReadOnly = true;
+            this.dgvProducto.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvProducto.RowHeadersWidth = 51;
+            this.dgvProducto.RowTemplate.Height = 24;
+            this.dgvProducto.Size = new System.Drawing.Size(748, 114);
+            this.dgvProducto.TabIndex = 10;
+            this.dgvProducto.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProductoXZona_CellFormatting);
+            // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(771, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(23, 114);
+            this.panel5.TabIndex = 9;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(23, 114);
+            this.panel4.TabIndex = 0;
+            // 
             // NRO
             // 
             this.NRO.HeaderText = "Nro";
@@ -362,7 +359,6 @@
             // 
             // PRODUCTO
             // 
-            this.PRODUCTO.DataPropertyName = "nombre";
             this.PRODUCTO.HeaderText = "Producto";
             this.PRODUCTO.MinimumWidth = 6;
             this.PRODUCTO.Name = "PRODUCTO";
@@ -371,7 +367,6 @@
             // 
             // CANT_UNIDADES
             // 
-            this.CANT_UNIDADES.DataPropertyName = "cantUnidad";
             this.CANT_UNIDADES.HeaderText = "Cant. Unidades";
             this.CANT_UNIDADES.MinimumWidth = 6;
             this.CANT_UNIDADES.Name = "CANT_UNIDADES";
@@ -380,20 +375,11 @@
             // 
             // UNIDADES
             // 
-            this.UNIDADES.DataPropertyName = "unidades";
             this.UNIDADES.HeaderText = "Unidades";
             this.UNIDADES.MinimumWidth = 6;
             this.UNIDADES.Name = "UNIDADES";
             this.UNIDADES.ReadOnly = true;
             this.UNIDADES.Width = 107;
-            // 
-            // ZONA
-            // 
-            this.ZONA.HeaderText = "Zona";
-            this.ZONA.MinimumWidth = 6;
-            this.ZONA.Name = "ZONA";
-            this.ZONA.ReadOnly = true;
-            this.ZONA.Width = 73;
             // 
             // PRECIO_REAL
             // 
@@ -420,7 +406,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductoXZona)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,7 +430,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox cboZona;
-        private System.Windows.Forms.DataGridView dgvProductoXZona;
+        private System.Windows.Forms.DataGridView dgvProducto;
         private System.Windows.Forms.TextBox txtUnidades;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -455,7 +441,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn CANT_UNIDADES;
         private System.Windows.Forms.DataGridViewTextBoxColumn UNIDADES;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO_REAL;
     }
 }

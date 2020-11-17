@@ -21,12 +21,14 @@ namespace CrewmanSystem
             daoSubfamilia = new SubFamiliaWS.SubFamiliaWSClient();
             daoFamilia = new FamiliaWS.FamiliaWSClient();
             FamiliaWS.familia[] misFamilias = daoFamilia.listarFamilias();
-            if (misFamilias != null)
-            {
-                cboFamilia.DataSource = new BindingList<FamiliaWS.familia>(misFamilias.ToArray());
-                cboFamilia.ValueMember = "idFamilia";
-                cboFamilia.DisplayMember = "descripcion";
-            }
+            BindingList<FamiliaWS.familia> listaFamilias;
+            if (misFamilias != null) listaFamilias = new BindingList<FamiliaWS.familia>(misFamilias.ToArray());
+            else listaFamilias = new BindingList<FamiliaWS.familia>();
+
+            cboFamilia.DataSource = listaFamilias;
+            cboFamilia.ValueMember = "idFamilia";
+            cboFamilia.DisplayMember = "descripcion";
+
 
             if (frmVentanaPrincipal.nBtn == 1)
             {   //OBTNER DATOS DE FILA SELECCIONADA

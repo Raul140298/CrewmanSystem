@@ -35,6 +35,7 @@ namespace CrewmanSystem
                 cboFamilia.DataSource = new BindingList<FamiliaWS.familia>(misFamilias.ToArray());
                 cboFamilia.ValueMember = "idFamilia";
                 cboFamilia.DisplayMember = "descripcion";
+                
             }
             if (frmVentanaPrincipal.nBtn == 1)
             {   //OBTNER DATOS DE FILA SELECCIONADA
@@ -46,6 +47,7 @@ namespace CrewmanSystem
                     cboFamilia.SelectedValue = frmGestionarProductos.productoSeleccionado.subFamilia.familia.idFamilia;
                     cboSubfamilia.SelectedValue = frmGestionarProductos.productoSeleccionado.subFamilia.idSubFamilia;
                     cboMarca.SelectedValue = frmGestionarProductos.productoSeleccionado.marca.idMarca;
+                    cboUnidades.SelectedItem = frmGestionarProductos.productoSeleccionado.unidades;
                     txtCantidad.Text = frmGestionarProductos.productoSeleccionado.cantUnidad.ToString();
                     txtPrecioSugerido.Text = frmGestionarProductos.productoSeleccionado.precioSugerido.ToString();
                     txtStock.Text = frmGestionarProductos.productoSeleccionado.stock.ToString();
@@ -147,16 +149,30 @@ namespace CrewmanSystem
                 {
                     int resultado = daoProducto.insertarProducto(producto);
                     txtId.Text = resultado.ToString();
+                    if (resultado == 0)
+                    {
+                        MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se insertó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else if (frmVentanaPrincipal.nBtn == 1)
                 {
                     producto.idProducto = Int32.Parse(txtId.Text);
-                    if (daoProducto.actualizarProducto(producto) == 0)
+                    producto.stockReservado = frmGestionarProductos.productoSeleccionado.stockReservado;
+                    int resultado = daoProducto.actualizarProducto(producto);
+                    if (resultado == 0)
                     {
-                        MessageBox.Show("No está insertando");
+                        MessageBox.Show("No se actualizó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se actualizó correctamente", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                //Usar resultado para ver si se inserto correctamente
             }
         }
 

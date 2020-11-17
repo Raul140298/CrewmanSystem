@@ -43,6 +43,7 @@ namespace CrewmanSystem
 
             if (Program.empleado != null)
 			{
+                Program.empleado.zona.idZona = daoZona.mostrarZona(Program.empleado.idEmpleado).idZona;
                 Program.empleado.zona.nombre = daoZona.mostrarZona(Program.empleado.idEmpleado).nombre;
 				this.Hide();
 				datosValidos = true;

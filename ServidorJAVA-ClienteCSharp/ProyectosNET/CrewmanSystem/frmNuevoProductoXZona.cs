@@ -39,10 +39,10 @@ namespace CrewmanSystem
 
         private void btnBuscarProducto_Click_1(object sender, EventArgs e)
         {
-            frmBuscarProducto formBusquedaProducto = new frmBuscarProducto();
+            frmBuscarProducto_V2 formBusquedaProducto = new frmBuscarProducto_V2();
             if (formBusquedaProducto.ShowDialog() == DialogResult.OK)
             {
-                miProducto = frmBuscarProducto.productoSeleccionado;
+                miProducto = frmBuscarProducto_V2.productoSeleccionado;
                 txtNombreProducto.Text = miProducto.nombre;
                 txtCantUnidades.Text = miProducto.cantUnidad.ToString();
                 txtUnidades.Text = miProducto.unidades;
@@ -65,7 +65,28 @@ namespace CrewmanSystem
                 return;
             }
             //COPIAR LNEAS 135 DE NUEVA PROMOCION
+            frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
+            if (formInsertar.ShowDialog() == DialogResult.OK)
+            {
+                int numProductos = misProductoXZona.Count();
+                for(int i = 0; i < numProductos; i++)
+                {
+                    ProductoXZonaWS.productoXZona pxz = new ProductoXZonaWS.productoXZona();
+                    pxz.producto = new ProductoXZonaWS.producto();
+                    pxz.producto.idProducto = ((ProductoXZonaWS.productoXZona)misProductoXZona.ElementAt(i)).producto.idProducto;
+                    pxz.zona = new ProductoXZonaWS.zona();
+                    pxz.zona.idZona = ((ZonaWS.zona)cboZona.SelectedItem).idZona;
+                    pxz.precioReal = ((ProductoXZonaWS.productoXZona)misProductoXZona.ElementAt(i)).precioReal;
 
+                    int resultado = daoProductoXZona.insertarProductoXZona(pxz);
+                    if (resultado == 0)
+                    {
+                        MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+                MessageBox.Show("Se insertó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -83,7 +104,7 @@ namespace CrewmanSystem
             catch (Exception)
             {
                 MessageBox.Show("Los datos de " + txtPrecioReal.Name.Substring(3) + " solo pueden contener dígitos",
-                    "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             
@@ -107,38 +128,35 @@ namespace CrewmanSystem
             txtUnidades.Text = "";
             txtCantUnidades.Text = "";
             txtNombreProducto.Text = "";
+            txtPrecioSugerido.Text = "";
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if (dgvProductoXZona.CurrentRow == null || dgvProductoXZona.CurrentRow.Index < 0)
+            if (dgvProducto.CurrentRow == null || dgvProducto.CurrentRow.Index < 0)
             {
                 return;
             }
-            int indice = dgvProductoXZona.CurrentRow.Index;
+            int indice = dgvProducto.CurrentRow.Index;
             misProductoXZona.RemoveAt(indice);
             cargarTabla();
         }
 
         private void cargarTabla()
         {
-            dgvProductoXZona.AutoGenerateColumns = false;
-            dgvProductoXZona.DataSource = misProductoXZona;
-        }
-
-        private void cboZona_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            misProductoXZona = new BindingList<ProductoXZonaWS.productoXZona>();
-            cargarTabla();
+            dgvProducto.AutoGenerateColumns = false;
+            dgvProducto.DataSource = misProductoXZona;
         }
 
         private void dgvProductoXZona_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            ProductoXZonaWS.productoXZona pxz = dgvProductoXZona.Rows[e.RowIndex].DataBoundItem
+            ProductoXZonaWS.productoXZona pxz = dgvProducto.Rows[e.RowIndex].DataBoundItem
                 as ProductoXZonaWS.productoXZona;
 
-            dgvProductoXZona.Rows[e.RowIndex].Cells["NRO"].Value = e.RowIndex + 1;
-            dgvProductoXZona.Rows[e.RowIndex].Cells["ZONA"].Value = pxz.zona.nombre;
+            dgvProducto.Rows[e.RowIndex].Cells["NRO"].Value = e.RowIndex + 1;
+            dgvProducto.Rows[e.RowIndex].Cells["PRODUCTO"].Value = pxz.producto.nombre;
+            dgvProducto.Rows[e.RowIndex].Cells["CANT_UNIDADES"].Value = pxz.producto.cantUnidad;
+            dgvProducto.Rows[e.RowIndex].Cells["UNIDADES"].Value = pxz.producto.unidades;
         }
     }
 }
