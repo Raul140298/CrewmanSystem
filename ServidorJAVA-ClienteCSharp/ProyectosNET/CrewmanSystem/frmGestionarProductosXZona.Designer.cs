@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvProductoXZona = new System.Windows.Forms.DataGridView();
+            this.dgvProductosXZona = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CANT_UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,18 +41,18 @@
             this.SUBFAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductoXZona)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosXZona)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvProductoXZona
+            // dgvProductosXZona
             // 
-            this.dgvProductoXZona.AllowUserToAddRows = false;
-            this.dgvProductoXZona.AllowUserToDeleteRows = false;
-            this.dgvProductoXZona.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvProductoXZona.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvProductoXZona.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.dgvProductoXZona.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvProductoXZona.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvProductosXZona.AllowUserToAddRows = false;
+            this.dgvProductosXZona.AllowUserToDeleteRows = false;
+            this.dgvProductosXZona.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvProductosXZona.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvProductosXZona.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dgvProductosXZona.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvProductosXZona.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -60,10 +60,10 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductoXZona.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProductoXZona.ColumnHeadersHeight = 30;
-            this.dgvProductoXZona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvProductoXZona.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProductosXZona.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProductosXZona.ColumnHeadersHeight = 30;
+            this.dgvProductosXZona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvProductosXZona.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.PRODUCTO,
             this.CANT_UNIDADES,
@@ -73,14 +73,14 @@
             this.SUBFAMILIA,
             this.FAMILIA,
             this.MARCA});
-            this.dgvProductoXZona.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProductoXZona.EnableHeadersVisualStyles = false;
-            this.dgvProductoXZona.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.dgvProductoXZona.Location = new System.Drawing.Point(0, 0);
-            this.dgvProductoXZona.MultiSelect = false;
-            this.dgvProductoXZona.Name = "dgvProductoXZona";
-            this.dgvProductoXZona.ReadOnly = true;
-            this.dgvProductoXZona.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvProductosXZona.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProductosXZona.EnableHeadersVisualStyles = false;
+            this.dgvProductosXZona.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.dgvProductosXZona.Location = new System.Drawing.Point(0, 0);
+            this.dgvProductosXZona.MultiSelect = false;
+            this.dgvProductosXZona.Name = "dgvProductosXZona";
+            this.dgvProductosXZona.ReadOnly = true;
+            this.dgvProductosXZona.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -88,17 +88,17 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductoXZona.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvProductoXZona.RowHeadersWidth = 51;
+            this.dgvProductosXZona.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvProductosXZona.RowHeadersWidth = 51;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvProductoXZona.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvProductoXZona.RowTemplate.Height = 24;
-            this.dgvProductoXZona.Size = new System.Drawing.Size(800, 450);
-            this.dgvProductoXZona.TabIndex = 2;
-            this.dgvProductoXZona.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
+            this.dgvProductosXZona.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvProductosXZona.RowTemplate.Height = 24;
+            this.dgvProductosXZona.Size = new System.Drawing.Size(800, 450);
+            this.dgvProductosXZona.TabIndex = 2;
+            this.dgvProductosXZona.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProductosXZona_CellFormatting);
             // 
             // ID
             // 
@@ -179,17 +179,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgvProductoXZona);
+            this.Controls.Add(this.dgvProductosXZona);
             this.Name = "frmGestionarProductosXZona";
             this.Text = "frmGestionarProductosXZona";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductoXZona)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosXZona)).EndInit();
             this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private System.Windows.Forms.DataGridView dgvProductoXZona;
+		private System.Windows.Forms.DataGridView dgvProductosXZona;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn CANT_UNIDADES;
