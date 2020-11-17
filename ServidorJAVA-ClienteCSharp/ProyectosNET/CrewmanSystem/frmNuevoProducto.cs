@@ -35,18 +35,39 @@ namespace CrewmanSystem
                 cboFamilia.DataSource = new BindingList<FamiliaWS.familia>(misFamilias.ToArray());
                 cboFamilia.ValueMember = "idFamilia";
                 cboFamilia.DisplayMember = "descripcion";
+                
             }
             if (frmVentanaPrincipal.nBtn == 1)
             {   //OBTNER DATOS DE FILA SELECCIONADA
-                frmGestionarProductos.productoSeleccionado = (ProductoWS.producto)frmGestionarProductos.dgv.CurrentRow.DataBoundItem;
-                txtId.Text = frmGestionarProductos.productoSeleccionado.idProducto.ToString();
-                txtNombre.Text = frmGestionarProductos.productoSeleccionado.nombre;
-                cboFamilia.SelectedValue = frmGestionarProductos.productoSeleccionado.subFamilia.familia.idFamilia;
-                cboSubfamilia.SelectedValue = frmGestionarProductos.productoSeleccionado.subFamilia.idSubFamilia;
-                cboMarca.SelectedValue = frmGestionarProductos.productoSeleccionado.marca.idMarca;
-                txtCantidad.Text = frmGestionarProductos.productoSeleccionado.cantUnidad.ToString();
-                txtPrecioSugerido.Text = frmGestionarProductos.productoSeleccionado.precioSugerido.ToString();
-                txtStock.Text = frmGestionarProductos.productoSeleccionado.stock.ToString();
+                if (Program.pantallas[Program.pantallas.Count-1].Formulario.Name == "frmGestionarProductos")
+                {
+                    frmGestionarProductos.productoSeleccionado = (ProductoWS.producto)frmGestionarProductos.dgv.CurrentRow.DataBoundItem;
+                    txtId.Text = frmGestionarProductos.productoSeleccionado.idProducto.ToString();
+                    txtNombre.Text = frmGestionarProductos.productoSeleccionado.nombre;
+                    cboFamilia.SelectedValue = frmGestionarProductos.productoSeleccionado.subFamilia.familia.idFamilia;
+                    cboSubfamilia.SelectedValue = frmGestionarProductos.productoSeleccionado.subFamilia.idSubFamilia;
+                    cboMarca.SelectedValue = frmGestionarProductos.productoSeleccionado.marca.idMarca;
+                    cboUnidades.SelectedItem = frmGestionarProductos.productoSeleccionado.unidades;
+                    txtCantidad.Text = frmGestionarProductos.productoSeleccionado.cantUnidad.ToString();
+                    txtPrecioSugerido.Text = frmGestionarProductos.productoSeleccionado.precioSugerido.ToString();
+                    txtStock.Text = frmGestionarProductos.productoSeleccionado.stock.ToString();
+
+                    cboFamilia.Enabled = false;
+                    cboSubfamilia.Enabled = false;
+                    cboMarca.Enabled = false;
+                }
+                else
+                {
+                    frmBuscarProducto.productoSeleccionado = (ProductoWS.producto)frmBuscarProducto.dgv.CurrentRow.DataBoundItem;
+                    txtId.Text = frmBuscarProducto.productoSeleccionado.idProducto.ToString();
+                    txtNombre.Text = frmBuscarProducto.productoSeleccionado.nombre;
+                    cboFamilia.SelectedValue = frmBuscarProducto.productoSeleccionado.subFamilia.familia.idFamilia;
+                    cboSubfamilia.SelectedValue = frmBuscarProducto.productoSeleccionado.subFamilia.idSubFamilia;
+                    cboMarca.SelectedValue = frmBuscarProducto.productoSeleccionado.marca.idMarca;
+                    txtCantidad.Text = frmBuscarProducto.productoSeleccionado.cantUnidad.ToString();
+                    txtPrecioSugerido.Text = frmBuscarProducto.productoSeleccionado.precioSugerido.ToString();
+                    txtStock.Text = frmBuscarProducto.productoSeleccionado.stock.ToString();
+                }
             }
         }
 
@@ -128,16 +149,30 @@ namespace CrewmanSystem
                 {
                     int resultado = daoProducto.insertarProducto(producto);
                     txtId.Text = resultado.ToString();
+                    if (resultado == 0)
+                    {
+                        MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se insertó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else if (frmVentanaPrincipal.nBtn == 1)
                 {
                     producto.idProducto = Int32.Parse(txtId.Text);
-                    if (daoProducto.actualizarProducto(producto) == 0)
+                    producto.stockReservado = frmGestionarProductos.productoSeleccionado.stockReservado;
+                    int resultado = daoProducto.actualizarProducto(producto);
+                    if (resultado == 0)
                     {
-                        MessageBox.Show("No está insertando");
+                        MessageBox.Show("No se actualizó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se actualizó correctamente", "Mensaje de Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                //Usar resultado para ver si se inserto correctamente
             }
         }
 
@@ -146,9 +181,16 @@ namespace CrewmanSystem
             SubFamiliaWS.subFamilia[] misSubfamilias = daoSubfamilia.listarSubFamilias(((FamiliaWS.familia)cboFamilia.SelectedItem).descripcion);
             if (misSubfamilias != null)
             {
+                cboSubfamilia.Enabled = true;
+                btnGuardar.Enabled = true;
                 cboSubfamilia.DataSource = new BindingList<SubFamiliaWS.subFamilia>(misSubfamilias.ToArray());
                 cboSubfamilia.ValueMember = "idSubFamilia";
                 cboSubfamilia.DisplayMember = "descripcionSubFamilia";
+            }
+            else
+            {
+                cboSubfamilia.Enabled = false;
+                btnGuardar.Enabled = false;
             }
         }
 	}

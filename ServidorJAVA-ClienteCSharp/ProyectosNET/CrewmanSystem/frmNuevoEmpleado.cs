@@ -21,9 +21,21 @@ namespace CrewmanSystem
             daoZona = new ZonaWS.ZonaWSClient();
             daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
             cboCargo.DataSource = cargos;
-            cboZona.DataSource= new BindingList<ZonaWS.zona>(daoZona.listarZonas().ToArray());
+
+            ZonaWS.zona[] auxZonas = daoZona.listarZonas();
+            ZonaWS.zona[] miLista = new ZonaWS.zona[auxZonas.Length + 1];
+            ZonaWS.zona zonaPorDefecto = new ZonaWS.zona();
+            zonaPorDefecto.idZona = 0;
+            zonaPorDefecto.nombre = "Ninguno";
+            miLista[0] = zonaPorDefecto;
+            for (int i = 0; i < auxZonas.Length; i++) miLista[i+1] = auxZonas[i];
+
+            BindingList<ZonaWS.zona> listaZonas = new BindingList<ZonaWS.zona>(miLista.ToArray());
+            cboZona.DataSource= listaZonas;
             cboZona.ValueMember = "idZona";
             cboZona.DisplayMember = "nombre";
+            txtSumaVentas.Text = "0.00";
+            txtSumaVentas.Enabled = false;
 
             if (frmVentanaPrincipal.nBtn == 1)
             {   //OBTNER DATOS DE FILA SELECCIONADA
@@ -36,23 +48,18 @@ namespace CrewmanSystem
                 txtTelefono1.Text = frmGestionarEmpleados.empleadoSeleccionado.telefono1.ToString();
                 txtTelefono2.Text = frmGestionarEmpleados.empleadoSeleccionado.telefono2.ToString();
                 txtCorreo.Text = frmGestionarEmpleados.empleadoSeleccionado.correo.ToString();
-                if(frmGestionarEmpleados.empleadoSeleccionado.cargo.idCargo == 1)
-				{
-                    cboCargo.DisplayMember = "EMPLEADO";
-				}
-                else if (frmGestionarEmpleados.empleadoSeleccionado.cargo.idCargo == 2)
-				{
-                    cboCargo.DisplayMember = "JEFE DE VENTAS";
-				}
+                txtObjetivoVentas.Text = frmGestionarEmpleados.empleadoSeleccionado.objetivoVentas.ToString();
+                txtSumaVentas.Text = frmGestionarEmpleados.empleadoSeleccionado.sumVentas.ToString();
+                txtDNI.Enabled = false;
+
+                if(frmGestionarEmpleados.empleadoSeleccionado.cargo.idCargo == 1) cboCargo.DisplayMember = "EMPLEADO";
+                else if (frmGestionarEmpleados.empleadoSeleccionado.cargo.idCargo == 2) cboCargo.DisplayMember = "JEFE DE VENTAS";
+                cboCargo.Enabled = false;
+
                 cboZona.SelectedValue = frmGestionarEmpleados.empleadoSeleccionado.zona.idZona;
-                if(frmGestionarEmpleados.empleadoSeleccionado.genero == 'M')
-				{
-                    rbMasculino.Checked = true;
-				}
-				else
-				{
-                    rbFemenino.Checked = true;
-                }
+
+                if (frmGestionarEmpleados.empleadoSeleccionado.genero == 'M') rbMasculino.Checked = true;
+                else rbFemenino.Checked = true;
             }
         }
 
@@ -65,8 +72,8 @@ namespace CrewmanSystem
                     TextBox textBox = c as TextBox;
                     if (textBox.Text == string.Empty && textBox.Name != "txtID")
                     {
-                        MessageBox.Show("Falta llenar los datos de " +
-                            textBox.Name.Substring(3));
+                        MessageBox.Show("Falta llenar los datos de " + textBox.Name.Substring(3),
+                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     else
@@ -76,7 +83,8 @@ namespace CrewmanSystem
                             if (!textBox.Text.All(Char.IsDigit))
                             {
                                 MessageBox.Show("Los datos de " +
-                                textBox.Name.Substring(3) + " solo pueden contener dígitos");
+                                textBox.Name.Substring(3) + " solo pueden contener dígitos",
+                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
                         }
@@ -85,8 +93,8 @@ namespace CrewmanSystem
                             String txtNombreAux = string.Join("", textBox.Text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
                             if (!txtNombreAux.Trim().All(Char.IsLetter))
                             {
-                                MessageBox.Show("Los datos de " +
-                                    textBox.Name.Substring(3) + " solo pueden contener letras");
+                                MessageBox.Show("Los datos de " + textBox.Name.Substring(3) + " solo pueden contener letras",
+                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
                         }
@@ -97,8 +105,8 @@ namespace CrewmanSystem
                     ComboBox cmbBox = c as ComboBox;
                     if (cmbBox.SelectedIndex == -1)
                     {
-                        MessageBox.Show("Falta llenar los datos de " +
-                            cmbBox.Name.Substring(3));
+                        MessageBox.Show("Falta llenar los datos de " + cmbBox.Name.Substring(3),
+                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                 }
@@ -117,27 +125,42 @@ namespace CrewmanSystem
                 empleado.correo = txtCorreo.Text;
                 empleado.jefe = new EmpleadoWS.empleado();
                 empleado.jefe.idEmpleado = Program.empleado.idEmpleado;
+                empleado.sumVentas = Convert.ToDouble(txtSumaVentas.Text);
+                empleado.objetivoVentas = Convert.ToDouble(txtObjetivoVentas.Text);
                 empleado.cargo = new EmpleadoWS.cargo();
-                if (cboCargo.SelectedItem.ToString() == "VENDEDOR")
-                    empleado.cargo.idCargo = 1;
-                else
-                    empleado.cargo.idCargo = 2;
+                if (cboCargo.SelectedItem.ToString() == "VENDEDOR") empleado.cargo.idCargo = 1;
+                else empleado.cargo.idCargo = 2;
                 empleado.zona = new EmpleadoWS.zona();
                 empleado.zona.idZona = ((ZonaWS.zona)cboZona.SelectedItem).idZona;
-                if (rbMasculino.Checked)
-                    empleado.genero = 'M';
-                else
-                    empleado.genero = 'F';
+                if (rbMasculino.Checked) empleado.genero = 'M';
+                else empleado.genero = 'F';
 
                 if (frmVentanaPrincipal.nBtn == 0)
                 {
                     int resultado = daoEmpleado.insertarEmpleado(empleado);
                     txtID.Text = resultado.ToString();
+                    if (resultado == 0)
+                    {
+                        MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se insertó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else if (frmVentanaPrincipal.nBtn == 1)
                 {
-                    empleado.idEmpleado = Int32.Parse(txtID.Text);
-                    daoEmpleado.actualizarEmpleado(empleado);
+                    empleado.idEmpleado = Convert.ToInt32(txtID.Text);
+                    empleado.idPersona = frmGestionarEmpleados.empleadoSeleccionado.idPersona;
+                    int resultado = daoEmpleado.actualizarEmpleado(empleado);
+                    if (resultado == 0)
+                    {
+                        MessageBox.Show("No se actualizó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se actualizó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }

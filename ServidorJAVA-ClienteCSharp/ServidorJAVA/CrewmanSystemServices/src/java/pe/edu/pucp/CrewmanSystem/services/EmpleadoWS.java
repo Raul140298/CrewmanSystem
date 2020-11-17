@@ -92,6 +92,21 @@ public class EmpleadoWS
         return misEmpleados;
     }
     
+    @WebMethod(operationName = "listarPorJefeVentasYZona")
+    public ArrayList<Empleado> listarPorJefeVentasYZona(
+            @WebParam(name = "idEmpleado") int idEmpleado,
+            @WebParam(name = "nombre") String nombre,
+            @WebParam(name = "apellidoPaterno") String apellidoPaterno,
+            @WebParam(name = "apellidoMaterno") String apellidoMaterno,
+            @WebParam(name = "idZona") int idZona) {
+        ArrayList<Empleado> misEmpleados = new ArrayList<>();
+        try{
+            misEmpleados = daoEmpleado.listarPorJefeVentasYZona(idEmpleado, nombre, apellidoPaterno, apellidoMaterno,idZona);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return misEmpleados;
+    }
     @WebMethod(operationName = "insertarPersona")
     public int insertarPersona(@WebParam(name = "persona") Persona persona) {
         int resultado = 0;

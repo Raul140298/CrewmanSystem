@@ -21,14 +21,75 @@ namespace CrewmanSystem
         public frmNuevaPromocion()
 		{
 			InitializeComponent();
-            daoPromocion = new PromocionWS.PromocionWSClient();
+            #region colores de seleccion
+            dgvPromocionXProducto.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvPromocionXProducto.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+            dgvPromocionXProducto.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvPromocionXProducto.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+            dgvPromocionXProducto.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvPromocionXProducto.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			#endregion
+
+			daoPromocion = new PromocionWS.PromocionWSClient();
             daoPromocionXProducto = new PromocionXProductoWS.PromocionXProductoWSClient();
             daoZona = new ZonaWS.ZonaWSClient();
             cboZona.DataSource = new BindingList<ZonaWS.zona>(daoZona.listarZonas().ToArray());
             cboZona.ValueMember = "idZona";
             cboZona.DisplayMember = "nombre";
-            misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>();
-            cargarTablaPromocionXProducto();
+
+            if (frmVentanaPrincipal.nBtn == 1)
+            {   //OBTNER DATOS DE FILA SELECCIONADA
+                if (Program.pantallas[Program.pantallas.Count - 1].Formulario.Name == "frmGestionarPromociones")
+                {
+                    frmGestionarPromociones.promocionSeleccionada = (PromocionWS.promocion)frmGestionarPromociones.dgv.CurrentRow.DataBoundItem;
+                    txtId.Text = frmGestionarPromociones.promocionSeleccionada.idPromocion.ToString();
+                    txtNombre.Text = frmGestionarPromociones.promocionSeleccionada.nombre;
+                    txtDescripcion.Text = frmGestionarPromociones.promocionSeleccionada.descripcion;
+                    dtpFechaInicio.Value = frmGestionarPromociones.promocionSeleccionada.fechaInicio;
+                    dtpFechaFin.Value = frmGestionarPromociones.promocionSeleccionada.fechaFin;
+                    cboZona.SelectedValue = frmGestionarPromociones.promocionSeleccionada.zona.idZona;
+                    //Listar los productos de la promoción.
+                    txtDescuento.Enabled = false;
+                    txtStock.Enabled = false;
+                    btnAddProducto.Enabled = false;
+                    btnRemoveProducto.Enabled = false;
+                    btnBuscarProducto.Enabled = false;
+                    cboZona.Enabled = false;
+                    int idPromocion = frmGestionarPromociones.promocionSeleccionada.idPromocion;
+                    PromocionXProductoWS.promocionXProducto[] auxPromoXProd = daoPromocionXProducto.listarPromocionXProducto(idPromocion);
+                    if (auxPromoXProd.Length == 0) misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>();
+                    else misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>(auxPromoXProd.ToArray());
+                }
+                else
+                {
+                    frmBuscarPromocion.promocionSeleccionada = (PromocionWS.promocion)frmBuscarPromocion.dgv.CurrentRow.DataBoundItem;
+                    txtId.Text = frmBuscarPromocion.promocionSeleccionada.idPromocion.ToString();
+                    txtNombre.Text = frmBuscarPromocion.promocionSeleccionada.nombre;
+                    txtDescripcion.Text = frmBuscarPromocion.promocionSeleccionada.descripcion;
+                    dtpFechaInicio.Value = frmBuscarPromocion.promocionSeleccionada.fechaInicio;
+                    dtpFechaFin.Value = frmBuscarPromocion.promocionSeleccionada.fechaFin;
+                    cboZona.SelectedValue = frmBuscarPromocion.promocionSeleccionada.zona.idZona;
+                    //Listar los productos de la promoción.
+                    txtDescuento.Enabled = false;
+                    txtStock.Enabled = false;
+                    btnAddProducto.Enabled = false;
+                    btnRemoveProducto.Enabled = false;
+                    btnBuscarProducto.Enabled = false;
+                    cboZona.Enabled = false;
+                    int idPromocion = frmBuscarPromocion.promocionSeleccionada.idPromocion;
+                    PromocionXProductoWS.promocionXProducto[] auxPromoXProd = daoPromocionXProducto.listarPromocionXProducto(idPromocion);
+                    if (auxPromoXProd.Length == 0) misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>();
+                    else misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>(auxPromoXProd.ToArray());
+                }  
+                cargarTabla();
+            }
+            else
+            {
+                misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>();
+                cargarTabla();
+            }
         }
 
         private void btnBuscarProducto_Click(object sender, EventArgs e)
@@ -55,8 +116,8 @@ namespace CrewmanSystem
                     TextBox textBox = c as TextBox;
                     if (textBox.Text == string.Empty && textBox.Name != "txtId")
                     {
-                        MessageBox.Show("Falta llenar los datos de " +
-                            textBox.Name.Substring(3) + " de " + groupBox1.Text);
+                        MessageBox.Show("Falta llenar los datos de " +textBox.Name.Substring(3),
+                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                 }
@@ -69,61 +130,21 @@ namespace CrewmanSystem
                     ComboBox cmbBox = c as ComboBox;
                     if (cmbBox.SelectedIndex == -1)
                     {
-                        MessageBox.Show("Falta llenar los datos de " +
-                            cmbBox.Name.Substring(3));
+                        MessageBox.Show("Falta llenar los datos de " + cmbBox.Name.Substring(3),
+                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                 }
             }
 
-            if (misPromocionXProducto == null)
+            if (misPromocionXProducto == null || misPromocionXProducto.Count==0)
             {
-                MessageBox.Show("Falta agregar los productos de la promocion");
+                MessageBox.Show("Falta agregar los productos de la promocion",
+                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            //Este foreach no se deberia usar
-            //foreach (Control c in groupBox3.Controls)
-            {
-                //if (c is TextBox)
-                //{
-                //    TextBox textBox = c as TextBox;
-                //    if (textBox.Text == string.Empty && textBox.Name != "txtId")
-                //    {
-                //        MessageBox.Show("Falta llenar los datos de " +
-                //            textBox.Name.Substring(3) + " de " + groupBox3.Text);
-                //        return;
-                //    }
-                //    else
-                //    {
-                //        if (textBox == txtDescuento)
-                //        {
-                //            try
-                //            {
-                //                double resultado = Convert.ToDouble(txtDescuento.Text);
-                //            }
-                //            catch (Exception)
-                //            {
-                //                return;
-                //            }
-                //        }
-                //        if (textBox == txtStock)
-                //        {
-                //            try
-                //            {
-                //                int resultado = Convert.ToInt32(txtDescuento.Text);
-                //            }
-                //            catch (Exception)
-                //            {
-                //                return;
-                //            }
-                //        }
-
-                //    }
-                //}
-            }
-
-            frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
+			frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
             if (formInsertar.ShowDialog() == DialogResult.OK)
             {
                 PromocionWS.promocion promocion = new PromocionWS.promocion();
@@ -151,8 +172,32 @@ namespace CrewmanSystem
                     promocion.listaPromocionXProducto[cont].stock =
                         ((PromocionXProductoWS.promocionXProducto)misPromocionXProducto.ElementAt(cont)).stock;
                 }
-                int idPromocion = daoPromocion.insertarPromocion(promocion);
-                txtId.Text = idPromocion.ToString();
+                if (frmVentanaPrincipal.nBtn == 0)
+                {
+                    int resultado = daoPromocion.insertarPromocion(promocion);
+                    txtId.Text = resultado.ToString();
+                    if (resultado == 0)
+                    {
+                        MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se insertó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else if (frmVentanaPrincipal.nBtn == 1)
+                {
+                    promocion.idPromocion = Int32.Parse(txtId.Text);
+                    int resultado = daoPromocion.actualizarPromocion(promocion);
+                    if (resultado == 0)
+                    {
+                        MessageBox.Show("No se actualizó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se actualizó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
             }
         }
 
@@ -160,15 +205,15 @@ namespace CrewmanSystem
         {
             if(txtNombreProducto.Text == "")
             {
-                MessageBox.Show("Debe escoger un producto");
+                MessageBox.Show("Debe escoger un producto", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             try{
                 int descuento = Convert.ToInt32(txtDescuento.Text);
             }
             catch (Exception){
-                MessageBox.Show("Los datos de " +
-                    txtDescuento.Name.Substring(3) + " solo pueden contener dígitos");
+                MessageBox.Show("Los datos de " + txtDescuento.Name.Substring(3) + " solo pueden contener dígitos", 
+                    "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             try{
@@ -176,7 +221,8 @@ namespace CrewmanSystem
             }
             catch (Exception){
                 MessageBox.Show("Los datos de " +
-                    txtStock.Name.Substring(3) + " solo pueden contener dígitos");
+                    txtStock.Name.Substring(3) + " solo pueden contener dígitos", 
+                    "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -196,7 +242,7 @@ namespace CrewmanSystem
             nuevoPromocionXProducto.stock = Convert.ToInt32(txtStock.Text);
 
             misPromocionXProducto.Add(nuevoPromocionXProducto);
-            cargarTablaPromocionXProducto();
+            cargarTabla();
             txtDescuento.Text = "";
             txtStock.Text = "";
             txtPrecioReal.Text = "";
@@ -213,10 +259,10 @@ namespace CrewmanSystem
             }
             int indice = dgvPromocionXProducto.CurrentRow.Index;
             misPromocionXProducto.RemoveAt(indice);
-            cargarTablaPromocionXProducto();
+            cargarTabla();
         }
 
-        private void cargarTablaPromocionXProducto()
+        private void cargarTabla()
         {
             dgvPromocionXProducto.AutoGenerateColumns = false;
             dgvPromocionXProducto.DataSource = misPromocionXProducto;
@@ -225,7 +271,7 @@ namespace CrewmanSystem
         private void cboZona_SelectedIndexChanged(object sender, EventArgs e)
         {
             misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>();
-            cargarTablaPromocionXProducto();
+            cargarTabla();
         }
 
         private void dgvPromocionXProducto_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

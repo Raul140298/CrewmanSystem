@@ -12,11 +12,15 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarFacturas : Form
 	{
-		private FacturaWS.FacturaWSClient daoFactura;
+		public static FacturaWS.FacturaWSClient daoFactura;
+		public static FacturaWS.factura facturaSeleccionada;
+		public static DataGridView dgv;
+
 		public frmGestionarFacturas()
 		{
 			daoFactura = new FacturaWS.FacturaWSClient();
 			InitializeComponent();
+			dgv = dgvFacturas;
 			dgvFacturas.AutoGenerateColumns = false;
 			FacturaWS.factura[] misFacturas = daoFactura.listarFacturas(0);
 			if (misFacturas != null)
@@ -38,6 +42,34 @@ namespace CrewmanSystem
 			dgvFacturas.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dgvFacturas.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
+		}
+
+		private void dgvFacturas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			frmVentanaPrincipal.act.Enabled = false;
+			frmVentanaPrincipal.elim.Enabled = false;
+		}
+
+		private void dgvFacturas_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+		{
+			//Preguntar al profe
+			if (e.StateChanged != DataGridViewElementStates.Selected)
+			{
+				//frmVentanaPrincipal.act.Enabled = false;
+				//frmVentanaPrincipal.elim.Enabled = false;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+			}
+		}
+
+		public static void eliminar()
+		{
+			facturaSeleccionada = (FacturaWS.factura)dgv.CurrentRow.DataBoundItem;
+			daoFactura.eliminarFactura(facturaSeleccionada);
 		}
 	}
 }

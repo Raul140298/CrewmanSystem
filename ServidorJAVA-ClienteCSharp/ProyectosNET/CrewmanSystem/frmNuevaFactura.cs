@@ -26,21 +26,42 @@ namespace CrewmanSystem
                     TextBox textBox = c as TextBox;
                     if (textBox.Text == string.Empty && textBox.Name != "txtIdPedido" && textBox.Name != "txtMontoPendiente")
                     {
-                        MessageBox.Show("Falta llenar los datos de " +
-                            textBox.Name.Substring(3));
+                        MessageBox.Show("Falta llenar los datos de " + textBox.Name.Substring(3), 
+                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
+                    }
+                    else
+                    {
+                        try
+                        {
+                            double monto = Convert.ToDouble(txtMonto.Text);
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show("Los datos de " + txtMonto.Name.Substring(3) + " solo pueden contener dígitos",
+                                "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                        try
+                        {
+                            double impuestos = Convert.ToDouble(txtImpuestos.Text);
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show("Los datos de " +
+                                txtImpuestos.Name.Substring(3) + " solo pueden contener dígitos");
+                            return;
+                        }
                     }
                 }
             }
-        }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtIdProducto_TextChanged(object sender, EventArgs e)
-        {
+            if (dtpEmision.Value > dtpVencimiento.Value)
+            {
+                MessageBox.Show("Rango de fechas inválido","Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            //Insertar factura
 
         }
 
@@ -53,19 +74,5 @@ namespace CrewmanSystem
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

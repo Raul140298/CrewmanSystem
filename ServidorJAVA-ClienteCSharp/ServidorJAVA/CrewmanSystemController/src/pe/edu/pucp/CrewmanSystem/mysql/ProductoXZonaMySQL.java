@@ -59,19 +59,25 @@ public class ProductoXZonaMySQL implements ProductoXZonaDAO{
             while(rs.next()){
                 ProductoXZona pz=new ProductoXZona();
                 Producto p=new Producto();
+                Zona z = new Zona();
                 pz.setIdProductoXZona(rs.getInt("ID_PRODUCTOXZONA"));
                                 
                 p.setIdProducto(rs.getInt("ID_PRODUCTO"));
                 p.setNombre(rs.getString("NOMBRE"));
-                p.getSubFamilia().setDescripcionSubFamilia(rs.getString("S_DESCRIPCION"));
-                p.getSubFamilia().getFamilia().setDescripcion(rs.getString("F_DESCRIPCION"));
-                p.getMarca().setNombre(rs.getString("M_NOMBRE"));
-                
-                pz.setPrecioReal(rs.getDouble("PRECIOREAL"));
-                p.setPrecioSugerido(rs.getDouble("PRECIO_SUGERIDO"));
                 p.setCantUnidad(rs.getInt("CANT_UNIDADES"));
                 p.setUnidades(rs.getString("UNIDADES"));
                 p.setStock(rs.getInt("STOCK"));
+                p.setStockReservado(rs.getInt("STOCK_RESERVADO"));
+                
+                pz.setPrecioReal(rs.getDouble("PRECIOREAL"));
+                
+                z.setIdZona(rs.getInt("ID_ZONA"));
+                z.setNombre(rs.getString("ZONA"));
+                pz.setZona(z);
+                
+                p.getSubFamilia().setDescripcionSubFamilia(rs.getString("S_DESCRIPCION"));
+                p.getSubFamilia().getFamilia().setDescripcion(rs.getString("F_DESCRIPCION"));
+                p.getMarca().setNombre(rs.getString("M_NOMBRE"));
                 
                 pz.setProducto(p);
                 productoszonas.add(pz);

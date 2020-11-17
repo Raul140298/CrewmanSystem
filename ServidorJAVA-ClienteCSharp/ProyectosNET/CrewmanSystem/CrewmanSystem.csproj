@@ -203,6 +203,12 @@
     <Compile Include="frmBuscarProductoPorZona.Designer.cs">
       <DependentUpon>frmBuscarProductoPorZona.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscarProducto_V2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarProducto_V2.Designer.cs">
+      <DependentUpon>frmBuscarProducto_V2.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscarPromocion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -496,6 +502,9 @@
     <EmbeddedResource Include="frmBuscarProductoXZona.resx">
       <DependentUpon>frmBuscarProductoXZona.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarProducto_V2.resx">
+      <DependentUpon>frmBuscarProducto_V2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarPromocion.resx">
       <DependentUpon>frmBuscarPromocion.cs</DependentUpon>
     </EmbeddedResource>
@@ -705,6 +714,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.listarPorJefeVentasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.mostrarPersonaResponse.datasource">

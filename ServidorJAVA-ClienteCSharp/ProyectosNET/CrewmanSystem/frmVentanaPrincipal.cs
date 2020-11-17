@@ -25,6 +25,7 @@ namespace CrewmanSystem
 		public static IconButton act;
 		public static IconButton elim;
 		public static int nBtn;
+		public static int antBtn;
 
 		public frmVentanaPrincipal()
 		{
@@ -150,17 +151,29 @@ namespace CrewmanSystem
 					break;
 				case BTNestado.nuevo:
 					btnNuevo.BackColor = Program.colorR;
+					btnActualizar.BackColor = Program.color0;
+					btnEliminar.BackColor = Program.color0;
+					btnBuscar.BackColor = Program.color0;
 					desactivaBotonesCabecera(false, false, false, false, false);
 					break;
 				case BTNestado.actualizar:
 					btnActualizar.BackColor = Program.colorR;
+					btnNuevo.BackColor = Program.color0;
+					btnEliminar.BackColor = Program.color0;
+					btnBuscar.BackColor = Program.color0;
 					desactivaBotonesCabecera(false, false, false, false, false);
 					break;
 				case BTNestado.eliminar:
 					btnEliminar.BackColor = Program.colorR;
+					btnNuevo.BackColor = Program.color0;
+					btnActualizar.BackColor = Program.color0;
+					btnBuscar.BackColor = Program.color0;
 					break;
 				case BTNestado.buscar:
 					btnBuscar.BackColor = Program.colorR;
+					btnNuevo.BackColor = Program.color0;
+					btnActualizar.BackColor = Program.color0;
+					btnEliminar.BackColor = Program.color0;
 					desactivaBotonesCabecera(false, false, false, false, false);
 					break;
 				default:
@@ -255,6 +268,7 @@ namespace CrewmanSystem
 					}
 					else//SI ES DE PANEL
 					{
+						frmVentanaPrincipal.antBtn = 0;
 						if (Program.pantallas.Last().Tipo == BTNtipo.btnDePanel) DesactivaBoton(Program.pantallas.Last());//Desactivamos el anterior que sea de panel
 					}
 	
@@ -470,7 +484,7 @@ namespace CrewmanSystem
 			{		
 				case "frmGestionarZonas":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaZona());
-					//if(boton == 2 )llamarFormulario(new frmEliminarZona());
+					if(boton == 2 ) frmGestionarZonas.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarZona());
 					break;
 				case "frmGestionarVisitas":
@@ -491,6 +505,10 @@ namespace CrewmanSystem
 					if (boton == 2) frmGestionarPromociones.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarPromocion());
 					break;
+				case "frmBuscarPromocion":
+					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaPromocion());
+					if (boton == 2) frmBuscarPromocion.eliminar();
+					break;
 				case "frmGestionarProductosXZona":
 					if (boton == 0) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoProductoXZona());
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarProductoXZona());
@@ -500,8 +518,13 @@ namespace CrewmanSystem
 					if (boton == 2) frmGestionarProductos.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarProducto());
 					break;
+				case "frmBuscarProducto":
+					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoProducto());
+					if (boton == 2) frmBuscarProducto.eliminar();
+					break;
 				case "frmGestionarPedidos":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoPedido());
+					if (boton == 2) frmGestionarPedidos.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarPedido());
 					break;
 				case "frmGestionarMarcas":
@@ -516,6 +539,7 @@ namespace CrewmanSystem
 					break;
 				case "frmGestionarFacturas":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaFactura());
+					if (boton == 2) frmGestionarFacturas.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarFactura());
 					break;
 				case "frmGestionarEmpleadosXZona":
@@ -531,6 +555,10 @@ namespace CrewmanSystem
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoCliente());
 					if (boton == 2) frmGestionarClientes.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarCliente());
+					break;
+				case "frmBuscarCliente":
+					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoCliente());
+					if (boton == 2) frmBuscarCliente.eliminar();
 					break;
 				default:
 					MessageBox.Show("Error: El formulario aún no existe");
@@ -783,6 +811,7 @@ namespace CrewmanSystem
 
 		private void btnBuscar_Click(object sender, EventArgs e)
 		{
+			//antBtn = 1;
 			estado = BTNestado.buscar;
 			estadoBotones();
 			llamarMetodosDAO((IconButton)sender, 3);

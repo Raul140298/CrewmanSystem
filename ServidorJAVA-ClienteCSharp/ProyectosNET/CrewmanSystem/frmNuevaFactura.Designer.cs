@@ -32,7 +32,7 @@
             this.btnBuscarPedido = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpEmision = new System.Windows.Forms.DateTimePicker();
-            this.textMonto = new System.Windows.Forms.TextBox();
+            this.txtMonto = new System.Windows.Forms.TextBox();
             this.textObservacion = new System.Windows.Forms.TextBox();
             this.dtpVencimiento = new System.Windows.Forms.DateTimePicker();
             this.txtImpuestos = new System.Windows.Forms.TextBox();
@@ -54,7 +54,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(244, 397);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(160, 40);
+            this.btnGuardar.Size = new System.Drawing.Size(154, 30);
             this.btnGuardar.TabIndex = 49;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -86,7 +86,6 @@
             this.label1.TabIndex = 85;
             this.label1.Text = "Código del Pedido :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dtpEmision
             // 
@@ -98,13 +97,13 @@
             this.dtpEmision.TabIndex = 90;
             this.dtpEmision.Value = new System.DateTime(2020, 11, 4, 9, 52, 39, 0);
             // 
-            // textMonto
+            // txtMonto
             // 
-            this.textMonto.Location = new System.Drawing.Point(244, 118);
-            this.textMonto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textMonto.Name = "textMonto";
-            this.textMonto.Size = new System.Drawing.Size(154, 22);
-            this.textMonto.TabIndex = 91;
+            this.txtMonto.Location = new System.Drawing.Point(244, 118);
+            this.txtMonto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.Size = new System.Drawing.Size(154, 22);
+            this.txtMonto.TabIndex = 91;
             // 
             // textObservacion
             // 
@@ -140,7 +139,6 @@
             this.label2.TabIndex = 95;
             this.label2.Text = "Monto :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -161,7 +159,6 @@
             this.label4.TabIndex = 97;
             this.label4.Text = "Fecha de emisión :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -172,7 +169,6 @@
             this.label5.TabIndex = 98;
             this.label5.Text = "Fecha de vencimiento :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -228,7 +224,7 @@
             this.Controls.Add(this.txtImpuestos);
             this.Controls.Add(this.dtpVencimiento);
             this.Controls.Add(this.textObservacion);
-            this.Controls.Add(this.textMonto);
+            this.Controls.Add(this.txtMonto);
             this.Controls.Add(this.dtpEmision);
             this.Controls.Add(this.btnBuscarPedido);
             this.Controls.Add(this.label1);
@@ -246,7 +242,7 @@
         private System.Windows.Forms.Button btnBuscarPedido;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpEmision;
-        private System.Windows.Forms.TextBox textMonto;
+        private System.Windows.Forms.TextBox txtMonto;
         private System.Windows.Forms.TextBox textObservacion;
         private System.Windows.Forms.DateTimePicker dtpVencimiento;
         private System.Windows.Forms.TextBox txtImpuestos;

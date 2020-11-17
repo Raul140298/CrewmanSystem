@@ -33,11 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvProductoXZona = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CANT_UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRECIO_REAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SUBFAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductoXZona)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,11 +65,14 @@
             this.dgvProductoXZona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvProductoXZona.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.ID_PRODUCTO,
             this.PRODUCTO,
-            this.ID_ZONA,
+            this.CANT_UNIDADES,
+            this.UNIDADES,
             this.ZONA,
-            this.PRECIO_REAL});
+            this.PRECIO_REAL,
+            this.SUBFAMILIA,
+            this.FAMILIA,
+            this.MARCA});
             this.dgvProductoXZona.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProductoXZona.EnableHeadersVisualStyles = false;
             this.dgvProductoXZona.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
@@ -103,14 +109,6 @@
             this.ID.ReadOnly = true;
             this.ID.Width = 50;
             // 
-            // ID_PRODUCTO
-            // 
-            this.ID_PRODUCTO.HeaderText = "Id Producto";
-            this.ID_PRODUCTO.MinimumWidth = 6;
-            this.ID_PRODUCTO.Name = "ID_PRODUCTO";
-            this.ID_PRODUCTO.ReadOnly = true;
-            this.ID_PRODUCTO.Width = 122;
-            // 
             // PRODUCTO
             // 
             this.PRODUCTO.HeaderText = "Producto";
@@ -119,13 +117,21 @@
             this.PRODUCTO.ReadOnly = true;
             this.PRODUCTO.Width = 104;
             // 
-            // ID_ZONA
+            // CANT_UNIDADES
             // 
-            this.ID_ZONA.HeaderText = "Id Zona";
-            this.ID_ZONA.MinimumWidth = 6;
-            this.ID_ZONA.Name = "ID_ZONA";
-            this.ID_ZONA.ReadOnly = true;
-            this.ID_ZONA.Width = 91;
+            this.CANT_UNIDADES.HeaderText = "Cant. Unidades";
+            this.CANT_UNIDADES.MinimumWidth = 6;
+            this.CANT_UNIDADES.Name = "CANT_UNIDADES";
+            this.CANT_UNIDADES.ReadOnly = true;
+            this.CANT_UNIDADES.Width = 151;
+            // 
+            // UNIDADES
+            // 
+            this.UNIDADES.HeaderText = "Unidades";
+            this.UNIDADES.MinimumWidth = 6;
+            this.UNIDADES.Name = "UNIDADES";
+            this.UNIDADES.ReadOnly = true;
+            this.UNIDADES.Width = 107;
             // 
             // ZONA
             // 
@@ -144,6 +150,30 @@
             this.PRECIO_REAL.ReadOnly = true;
             this.PRECIO_REAL.Width = 85;
             // 
+            // SUBFAMILIA
+            // 
+            this.SUBFAMILIA.HeaderText = "Subfamilia";
+            this.SUBFAMILIA.MinimumWidth = 6;
+            this.SUBFAMILIA.Name = "SUBFAMILIA";
+            this.SUBFAMILIA.ReadOnly = true;
+            this.SUBFAMILIA.Width = 115;
+            // 
+            // FAMILIA
+            // 
+            this.FAMILIA.HeaderText = "Familia";
+            this.FAMILIA.MinimumWidth = 6;
+            this.FAMILIA.Name = "FAMILIA";
+            this.FAMILIA.ReadOnly = true;
+            this.FAMILIA.Width = 91;
+            // 
+            // MARCA
+            // 
+            this.MARCA.HeaderText = "Marca";
+            this.MARCA.MinimumWidth = 6;
+            this.MARCA.Name = "MARCA";
+            this.MARCA.ReadOnly = true;
+            this.MARCA.Width = 84;
+            // 
             // frmGestionarProductosXZona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -161,10 +191,13 @@
 
 		private System.Windows.Forms.DataGridView dgvProductoXZona;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_PRODUCTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_ZONA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CANT_UNIDADES;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UNIDADES;
         private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO_REAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SUBFAMILIA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FAMILIA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MARCA;
     }
 }

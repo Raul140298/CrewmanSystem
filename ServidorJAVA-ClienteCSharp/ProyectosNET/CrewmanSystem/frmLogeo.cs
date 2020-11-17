@@ -15,10 +15,12 @@ namespace CrewmanSystem
 	public partial class frmLogeo : Form
 	{
         private EmpleadoWS.EmpleadoWSClient daoEmpleado;
+        private ZonaWS.ZonaWSClient daoZona;
 
         public frmLogeo()
         {
             daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
+            daoZona = new ZonaWS.ZonaWSClient();
 
             InitializeComponent();
 
@@ -41,6 +43,8 @@ namespace CrewmanSystem
 
             if (Program.empleado != null)
 			{
+                Program.empleado.zona.idZona = daoZona.mostrarZona(Program.empleado.idEmpleado).idZona;
+                Program.empleado.zona.nombre = daoZona.mostrarZona(Program.empleado.idEmpleado).nombre;
 				this.Hide();
 				datosValidos = true;
 				Program.panel = new frmVentanaPrincipal();

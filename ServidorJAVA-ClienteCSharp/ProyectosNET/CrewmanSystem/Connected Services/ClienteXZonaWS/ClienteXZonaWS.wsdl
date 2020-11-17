@@ -5,17 +5,17 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/ClienteXZonaWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="insertarClienteXZona">
-    <part name="parameters" element="tns:insertarClienteXZona" />
-  </message>
-  <message name="insertarClienteXZonaResponse">
-    <part name="parameters" element="tns:insertarClienteXZonaResponse" />
-  </message>
   <message name="eliminarClienteXZona">
     <part name="parameters" element="tns:eliminarClienteXZona" />
   </message>
   <message name="eliminarClienteXZonaResponse">
     <part name="parameters" element="tns:eliminarClienteXZonaResponse" />
+  </message>
+  <message name="insertarClienteXZona">
+    <part name="parameters" element="tns:insertarClienteXZona" />
+  </message>
+  <message name="insertarClienteXZonaResponse">
+    <part name="parameters" element="tns:insertarClienteXZonaResponse" />
   </message>
   <message name="obtenerClientePorZona">
     <part name="parameters" element="tns:obtenerClientePorZona" />
@@ -24,13 +24,13 @@
     <part name="parameters" element="tns:obtenerClientePorZonaResponse" />
   </message>
   <portType name="ClienteXZonaWS">
-    <operation name="insertarClienteXZona">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteXZonaWS/insertarClienteXZonaRequest" message="tns:insertarClienteXZona" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteXZonaWS/insertarClienteXZonaResponse" message="tns:insertarClienteXZonaResponse" />
-    </operation>
     <operation name="eliminarClienteXZona">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteXZonaWS/eliminarClienteXZonaRequest" message="tns:eliminarClienteXZona" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteXZonaWS/eliminarClienteXZonaResponse" message="tns:eliminarClienteXZonaResponse" />
+    </operation>
+    <operation name="insertarClienteXZona">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteXZonaWS/insertarClienteXZonaRequest" message="tns:insertarClienteXZona" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteXZonaWS/insertarClienteXZonaResponse" message="tns:insertarClienteXZonaResponse" />
     </operation>
     <operation name="obtenerClientePorZona">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteXZonaWS/obtenerClientePorZonaRequest" message="tns:obtenerClientePorZona" />
@@ -39,7 +39,7 @@
   </portType>
   <binding name="ClienteXZonaWSPortBinding" type="tns:ClienteXZonaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarClienteXZona">
+    <operation name="eliminarClienteXZona">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -48,7 +48,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarClienteXZona">
+    <operation name="insertarClienteXZona">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

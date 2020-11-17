@@ -240,7 +240,7 @@
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(259, 13);
+            this.btnGuardar.Location = new System.Drawing.Point(279, 13);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(160, 40);
             this.btnGuardar.TabIndex = 68;
@@ -295,9 +295,9 @@
             // label5
             // 
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Location = new System.Drawing.Point(262, 101);
+            this.label5.Location = new System.Drawing.Point(239, 101);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 22);
+            this.label5.Size = new System.Drawing.Size(102, 22);
             this.label5.TabIndex = 88;
             this.label5.Text = "Unidades :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -324,9 +324,9 @@
             // label3
             // 
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(45, 139);
+            this.label3.Location = new System.Drawing.Point(0, 139);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 22);
+            this.label3.Size = new System.Drawing.Size(148, 22);
             this.label3.TabIndex = 85;
             this.label3.Text = "Precio Real :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -419,9 +419,9 @@
             // label8
             // 
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Location = new System.Drawing.Point(262, 178);
+            this.label8.Location = new System.Drawing.Point(239, 178);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 22);
+            this.label8.Size = new System.Drawing.Size(102, 22);
             this.label8.TabIndex = 76;
             this.label8.Text = "Stock :";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -429,9 +429,9 @@
             // label7
             // 
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Location = new System.Drawing.Point(45, 178);
+            this.label7.Location = new System.Drawing.Point(0, 178);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 22);
+            this.label7.Size = new System.Drawing.Size(148, 22);
             this.label7.TabIndex = 75;
             this.label7.Text = "Descuento :";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -439,9 +439,9 @@
             // label6
             // 
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Location = new System.Drawing.Point(45, 61);
+            this.label6.Location = new System.Drawing.Point(7, 61);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 22);
+            this.label6.Size = new System.Drawing.Size(141, 22);
             this.label6.TabIndex = 74;
             this.label6.Text = "Producto :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

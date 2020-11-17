@@ -59,10 +59,10 @@ public class Main{
 //        gestionarZonas();
 //       gestionarClientes();
 //        gestionarEmpleados();
-        gestionarProductos();
+//        gestionarProductos();
 //        gestionarProductoXZona();
-//        gestionarPromociones();
-//        gestionarPromocionXProducto();
+//      gestionarPromociones();
+//       gestionarPromocionXProducto();
 //        gestionarPedidos();
 //        gestionarLineasDePedido();
 //        gestionarFacturas();
@@ -87,6 +87,24 @@ public class Main{
 //        
 //        misPromocionXProducto.add(e);
 //        promo.setListaPromocionXProducto(misPromocionXProducto);
+
+
+        misEmpleados = daoEmpleado.listarPorJefeVentas(21, "", "", "");
+        for(Empleado e : misEmpleados){
+            System.out.println(e.getIdEmpleado()+" "+e.getNombre()+" "+e.getApellidoPaterno()+""+e.getObjetivoVentas()+" "+e.getZona().getIdZona()+" "+e.getZona().getNombre());
+        }
+        Empleado miEmpleado = misEmpleados.get(1);
+        
+        miEmpleado.setApellidoPaterno("Cardozo");
+        miEmpleado.setObjetivoVentas(3500);
+        miEmpleado.getZona().setIdZona(151);
+        
+        int resultado = daoEmpleado.actualizar(miEmpleado);
+        System.out.println(resultado);
+        misEmpleados = daoEmpleado.listarPorJefeVentas(21, "", "", "");
+        for(Empleado e : misEmpleados){
+            System.out.println(e.getIdEmpleado()+" "+e.getNombre()+" "+e.getApellidoPaterno()+""+e.getObjetivoVentas()+" "+e.getZona().getIdZona()+" "+e.getZona().getNombre());
+        }
         System.out.println("EL MODELADO HA CONCLUIDO");
     }
     
@@ -227,7 +245,7 @@ public class Main{
 
 //        miEmpleado.setUsuario("keikomontmont");
 //        miEmpleado.setContraseña("matangalachanga");
-        Empleado miEmpleado = daoEmpleado.permitirAccesoEmpleado("javieraltrod","bancopichincha");
+        Empleado miEmpleado = daoEmpleado.permitirAccesoEmpleado("rauljl1","rauljl1");
         
         if(miEmpleado.getIdEmpleado()!=0){
             System.out.println("==================================================================================");
@@ -283,8 +301,23 @@ public class Main{
                 String nombre="";
                 String apellidoPaterno="";
                 String apellidoMaterno="";
+                int idZona=138;
                 misEmpleados=daoEmpleado.listarPorJefeVentas(miEmpleado.getIdEmpleado(),nombre,apellidoPaterno,apellidoMaterno);
                 System.out.println("LISTADO DE VENDEDORES A CARGO");
+                System.out.println("==================================================================================");
+                System.out.println("Nombre: "+nombre);
+                System.out.println("Apellido Paterno: "+apellidoPaterno);
+                System.out.println("Apellido Materno: "+apellidoMaterno);
+                System.out.println("==================================================================================");
+                for(Empleado e:misEmpleados){
+                    System.out.print(e.getIdEmpleado()+" - "+e.getDni()+" - "+e.getNombre()+" - "+e.getApellidoPaterno()+" - "+e.getApellidoMaterno()+" - "+e.getGenero()+" - "+e.getCargo().getNombre()+" - "+e.getSumVentas()+" - "+e.getObjetivoVentas());
+                    if(e.getZona().getIdZona()>0) System.out.println(" - "+e.getZona().getNombre());
+                    else System.out.println("");
+                }
+                System.out.println("\n");
+                System.out.println("==================================================================================");
+                 misEmpleados=daoEmpleado.listarPorJefeVentasYZona(miEmpleado.getIdEmpleado(),nombre,apellidoPaterno,apellidoMaterno,idZona);
+                System.out.println("LISTADO DE VENDEDORES A CARGO POR ZONA");
                 System.out.println("==================================================================================");
                 System.out.println("Nombre: "+nombre);
                 System.out.println("Apellido Paterno: "+apellidoPaterno);
@@ -448,7 +481,7 @@ public class Main{
 //        pxp2.setCantidad(3000);
 //        daoPromocionXProducto.actualizar(pxp2);
 //        daoPromocionXProducto.eliminar(0);
-        misPromocionXProducto=daoPromocionXProducto.listar(misPromociones.get(0).getIdPromocion());
+        misPromocionXProducto=daoPromocionXProducto.listar(6);
         System.out.println("LISTADO DE PROMOCION POR PRODUCTO");
         System.out.println("==================================================================================");
         for(PromocionXProducto pxp:misPromocionXProducto) 

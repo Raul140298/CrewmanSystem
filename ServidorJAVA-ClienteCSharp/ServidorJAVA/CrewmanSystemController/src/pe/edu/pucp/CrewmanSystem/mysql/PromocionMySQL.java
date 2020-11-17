@@ -115,6 +115,8 @@ public class PromocionMySQL implements PromocionDAO{
                 Zona zona = new Zona();
                 promocion.setIdPromocion(rs.getInt("ID_PROMOCION"));
                 promocion.setNombre(rs.getString("NOMBRE"));
+                promocion.setDescripcion(rs.getString("DESCRIPCION"));
+                zona.setIdZona(rs.getInt("ID_ZONA"));
                 zona.setNombre(rs.getString("ZONA"));
                 promocion.setZona(zona);
                 promocion.setFechaInicio(rs.getDate("FECHA_INICIO"));

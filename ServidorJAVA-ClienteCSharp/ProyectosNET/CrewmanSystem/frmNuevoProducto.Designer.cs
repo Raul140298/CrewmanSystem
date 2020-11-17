@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtStock = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.cboUnidades = new System.Windows.Forms.ComboBox();
             this.cboMarca = new System.Windows.Forms.ComboBox();
@@ -39,6 +40,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtStock = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +71,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(462, 594);
             this.panel2.TabIndex = 5;
+            // 
+            // txtStock
+            // 
+            this.txtStock.Location = new System.Drawing.Point(3, 397);
+            this.txtStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(280, 22);
+            this.txtStock.TabIndex = 56;
             // 
             // txtCantidad
             // 
@@ -137,7 +145,7 @@
             // 
             this.cboFamilia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFamilia.FormattingEnabled = true;
-            this.cboFamilia.Location = new System.Drawing.Point(5, 123);
+            this.cboFamilia.Location = new System.Drawing.Point(5, 125);
             this.cboFamilia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboFamilia.Name = "cboFamilia";
             this.cboFamilia.Size = new System.Drawing.Size(280, 24);
@@ -179,6 +187,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(157, 594);
             this.panel1.TabIndex = 4;
+            // 
+            // label7
+            // 
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label7.Location = new System.Drawing.Point(-6, 397);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(157, 22);
+            this.label7.TabIndex = 54;
+            this.label7.Text = "Stock :";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
             // 
@@ -223,7 +241,7 @@
             // label3
             // 
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(0, 169);
+            this.label3.Location = new System.Drawing.Point(0, 171);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(157, 22);
             this.label3.TabIndex = 49;
@@ -233,7 +251,7 @@
             // label2
             // 
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Location = new System.Drawing.Point(0, 123);
+            this.label2.Location = new System.Drawing.Point(1, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 22);
             this.label2.TabIndex = 48;
@@ -259,24 +277,6 @@
             this.lblID.TabIndex = 46;
             this.lblID.Text = "Id :";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label7
-            // 
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Location = new System.Drawing.Point(-6, 397);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(157, 22);
-            this.label7.TabIndex = 54;
-            this.label7.Text = "Stock :";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtStock
-            // 
-            this.txtStock.Location = new System.Drawing.Point(3, 397);
-            this.txtStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(280, 22);
-            this.txtStock.TabIndex = 56;
             // 
             // frmNuevoProducto
             // 

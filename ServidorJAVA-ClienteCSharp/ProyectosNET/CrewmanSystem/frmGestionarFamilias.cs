@@ -43,7 +43,7 @@ namespace CrewmanSystem
 			#endregion
 		}
 
-		private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+		private void dgvFamilias_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
 		{
 			//Preguntar al profe
 			if (e.StateChanged != DataGridViewElementStates.Selected)
@@ -66,7 +66,7 @@ namespace CrewmanSystem
 			daoFamilia.eliminarFamilia(familiaSeleccionada.idFamilia);
 		}
 
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		private void dgvFamilias_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
 			frmVentanaPrincipal.act.Enabled = false;
 			frmVentanaPrincipal.elim.Enabled = false;

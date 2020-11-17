@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/CarteraWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="insertarCartera">
-    <part name="parameters" element="tns:insertarCartera" />
+  <message name="actualizarCartera">
+    <part name="parameters" element="tns:actualizarCartera" />
   </message>
-  <message name="insertarCarteraResponse">
-    <part name="parameters" element="tns:insertarCarteraResponse" />
+  <message name="actualizarCarteraResponse">
+    <part name="parameters" element="tns:actualizarCarteraResponse" />
   </message>
   <message name="eliminarCartera">
     <part name="parameters" element="tns:eliminarCartera" />
@@ -17,29 +17,29 @@
   <message name="eliminarCarteraResponse">
     <part name="parameters" element="tns:eliminarCarteraResponse" />
   </message>
-  <message name="actualizarCartera">
-    <part name="parameters" element="tns:actualizarCartera" />
+  <message name="insertarCartera">
+    <part name="parameters" element="tns:insertarCartera" />
   </message>
-  <message name="actualizarCarteraResponse">
-    <part name="parameters" element="tns:actualizarCarteraResponse" />
+  <message name="insertarCarteraResponse">
+    <part name="parameters" element="tns:insertarCarteraResponse" />
   </message>
   <portType name="CarteraWS">
-    <operation name="insertarCartera">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/insertarCarteraRequest" message="tns:insertarCartera" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/insertarCarteraResponse" message="tns:insertarCarteraResponse" />
+    <operation name="actualizarCartera">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/actualizarCarteraRequest" message="tns:actualizarCartera" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/actualizarCarteraResponse" message="tns:actualizarCarteraResponse" />
     </operation>
     <operation name="eliminarCartera">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/eliminarCarteraRequest" message="tns:eliminarCartera" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/eliminarCarteraResponse" message="tns:eliminarCarteraResponse" />
     </operation>
-    <operation name="actualizarCartera">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/actualizarCarteraRequest" message="tns:actualizarCartera" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/actualizarCarteraResponse" message="tns:actualizarCarteraResponse" />
+    <operation name="insertarCartera">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/insertarCarteraRequest" message="tns:insertarCartera" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/insertarCarteraResponse" message="tns:insertarCarteraResponse" />
     </operation>
   </portType>
   <binding name="CarteraWSPortBinding" type="tns:CarteraWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarCartera">
+    <operation name="actualizarCartera">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -57,7 +57,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarCartera">
+    <operation name="insertarCartera">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

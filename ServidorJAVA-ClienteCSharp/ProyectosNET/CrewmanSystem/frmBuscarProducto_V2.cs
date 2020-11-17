@@ -10,17 +10,15 @@ using System.Windows.Forms;
 
 namespace CrewmanSystem
 {
-	public partial class frmBuscarProducto : Form
-	{
-		private static ProductoWS.ProductoWSClient daoProducto;
-		public static ProductoWS.producto productoSeleccionado;
-		public static DataGridView dgv;
-		
-		public frmBuscarProducto()
-		{
+    public partial class frmBuscarProducto_V2 : Form
+    {
+        private static ProductoWS.ProductoWSClient daoProducto;
+        public static ProductoWS.producto productoSeleccionado;
+
+        public frmBuscarProducto_V2()
+        {
 			daoProducto = new ProductoWS.ProductoWSClient();
 			InitializeComponent();
-			dgv = dgvProductos;
 			completarTabla();
 			#region colores de seleccion
 			dgvProductos.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
@@ -34,13 +32,16 @@ namespace CrewmanSystem
 			#endregion
 		}
 
+		public ProductoWS.producto ProductoSeleccionado
+		{ get => productoSeleccionado; set => productoSeleccionado = value; }
+
 		private void completarTabla()
-        {
+		{
 			dgvProductos.AutoGenerateColumns = false;
 			ProductoWS.producto[] listaProductos = daoProducto.listarProductos(txtNombre.Text, txtFamilia.Text, txtSubfamilia.Text, txtMarca.Text);
 			BindingList<ProductoWS.producto> misProductos = new BindingList<ProductoWS.producto>();
-			if (listaProductos!=null)
-				misProductos=new BindingList<ProductoWS.producto>(listaProductos.ToArray());
+			if (listaProductos != null)
+				misProductos = new BindingList<ProductoWS.producto>(listaProductos.ToArray());
 			dgvProductos.DataSource = misProductos;
 		}
 
@@ -48,6 +49,16 @@ namespace CrewmanSystem
         {
 			completarTabla();
         }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+			if (dgvProductos.CurrentRow.Index < 0)
+			{
+				return;
+			}
+			productoSeleccionado = (ProductoWS.producto)dgvProductos.CurrentRow.DataBoundItem;
+			this.DialogResult = DialogResult.OK;
+		}
 
         private void dgvProductos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -61,27 +72,5 @@ namespace CrewmanSystem
 
 			dgvProductos.Rows[e.RowIndex].Cells["MARCA"].Value = producto.marca.nombre;
 		}
-
-		private void dgvProductos_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-		{
-			//Preguntar al profe
-			if (e.StateChanged != DataGridViewElementStates.Selected)
-			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
-				return;
-			}
-			else
-			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
-			}
-		}
-
-		public static void eliminar()
-		{
-			productoSeleccionado = (ProductoWS.producto)dgv.CurrentRow.DataBoundItem;
-			daoProducto.eliminarProducto(productoSeleccionado.idProducto);
-		}
-	}
+    }
 }
