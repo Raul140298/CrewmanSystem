@@ -3,7 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Repositorios/CrewmanSystem/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/dao/ZonaDAO.java</file>
+            <file>file:/C:/Repositorios/CrewmanSystem/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/mysql/ClienteXZonaMySQL.java</file>
+            <file>file:/C:/Repositorios/CrewmanSystem/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/mysql/ClienteMySQL.java</file>
             <file>file:/C:/Repositorios/CrewmanSystem/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/mysql/PromocionMySQL.java</file>
+            <file>file:/C:/Repositorios/CrewmanSystem/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemController/src/pe/edu/pucp/CrewmanSystem/mysql/ZonaMySQL.java</file>
         </group>
     </open-files>
 </project-private>
