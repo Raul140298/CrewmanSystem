@@ -11,18 +11,6 @@
   <message name="actualizarZonaResponse">
     <part name="parameters" element="tns:actualizarZonaResponse" />
   </message>
-  <message name="insertarZona">
-    <part name="parameters" element="tns:insertarZona" />
-  </message>
-  <message name="insertarZonaResponse">
-    <part name="parameters" element="tns:insertarZonaResponse" />
-  </message>
-  <message name="eliminarZona">
-    <part name="parameters" element="tns:eliminarZona" />
-  </message>
-  <message name="eliminarZonaResponse">
-    <part name="parameters" element="tns:eliminarZonaResponse" />
-  </message>
   <message name="listarZonas">
     <part name="parameters" element="tns:listarZonas" />
   </message>
@@ -35,18 +23,28 @@
   <message name="mostrarZonaResponse">
     <part name="parameters" element="tns:mostrarZonaResponse" />
   </message>
+  <message name="eliminarZona">
+    <part name="parameters" element="tns:eliminarZona" />
+  </message>
+  <message name="eliminarZonaResponse">
+    <part name="parameters" element="tns:eliminarZonaResponse" />
+  </message>
+  <message name="insertarZona">
+    <part name="parameters" element="tns:insertarZona" />
+  </message>
+  <message name="insertarZonaResponse">
+    <part name="parameters" element="tns:insertarZonaResponse" />
+  </message>
+  <message name="mostrarZonaCliente">
+    <part name="parameters" element="tns:mostrarZonaCliente" />
+  </message>
+  <message name="mostrarZonaClienteResponse">
+    <part name="parameters" element="tns:mostrarZonaClienteResponse" />
+  </message>
   <portType name="ZonaWS">
     <operation name="actualizarZona">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/actualizarZonaRequest" message="tns:actualizarZona" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/actualizarZonaResponse" message="tns:actualizarZonaResponse" />
-    </operation>
-    <operation name="insertarZona">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/insertarZonaRequest" message="tns:insertarZona" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/insertarZonaResponse" message="tns:insertarZonaResponse" />
-    </operation>
-    <operation name="eliminarZona">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/eliminarZonaRequest" message="tns:eliminarZona" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/eliminarZonaResponse" message="tns:eliminarZonaResponse" />
     </operation>
     <operation name="listarZonas">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/listarZonasRequest" message="tns:listarZonas" />
@@ -55,6 +53,18 @@
     <operation name="mostrarZona">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaRequest" message="tns:mostrarZona" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaResponse" message="tns:mostrarZonaResponse" />
+    </operation>
+    <operation name="eliminarZona">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/eliminarZonaRequest" message="tns:eliminarZona" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/eliminarZonaResponse" message="tns:eliminarZonaResponse" />
+    </operation>
+    <operation name="insertarZona">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/insertarZonaRequest" message="tns:insertarZona" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/insertarZonaResponse" message="tns:insertarZonaResponse" />
+    </operation>
+    <operation name="mostrarZonaCliente">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaClienteRequest" message="tns:mostrarZonaCliente" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaClienteResponse" message="tns:mostrarZonaClienteResponse" />
     </operation>
   </portType>
   <binding name="ZonaWSPortBinding" type="tns:ZonaWS">
@@ -68,7 +78,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarZona">
+    <operation name="listarZonas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarZona">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -86,7 +105,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarZonas">
+    <operation name="insertarZona">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -95,7 +114,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="mostrarZona">
+    <operation name="mostrarZonaCliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

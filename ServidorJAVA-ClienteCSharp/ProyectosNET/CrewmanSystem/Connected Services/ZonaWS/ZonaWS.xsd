@@ -9,10 +9,17 @@
   <xs:element name="listarZonas" type="tns:listarZonas" />
   <xs:element name="listarZonasResponse" type="tns:listarZonasResponse" />
   <xs:element name="mostrarZona" type="tns:mostrarZona" />
+  <xs:element name="mostrarZonaCliente" type="tns:mostrarZonaCliente" />
+  <xs:element name="mostrarZonaClienteResponse" type="tns:mostrarZonaClienteResponse" />
   <xs:element name="mostrarZonaResponse" type="tns:mostrarZonaResponse" />
-  <xs:complexType name="insertarZona">
+  <xs:complexType name="mostrarZonaCliente">
     <xs:sequence>
-      <xs:element minOccurs="0" name="zona" type="tns:zona" />
+      <xs:element name="idCliente" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mostrarZonaClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:zona" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="zona">
@@ -301,17 +308,22 @@
       <xs:element minOccurs="0" name="zona" type="tns:zona" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarZonaResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="eliminarZona">
     <xs:sequence>
       <xs:element name="idZona" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarZonaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarZona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="zona" type="tns:zona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarZonaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

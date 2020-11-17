@@ -26,26 +26,6 @@ namespace CrewmanSystem.ZonaWS {
         System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.actualizarZonaResponse> actualizarZonaAsync(CrewmanSystem.ZonaWS.actualizarZonaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/insertarZonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/insertarZonaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.ZonaWS.insertarZonaResponse insertarZona(CrewmanSystem.ZonaWS.insertarZonaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/insertarZonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/insertarZonaResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.insertarZonaResponse> insertarZonaAsync(CrewmanSystem.ZonaWS.insertarZonaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/eliminarZonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/eliminarZonaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.ZonaWS.eliminarZonaResponse eliminarZona(CrewmanSystem.ZonaWS.eliminarZonaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/eliminarZonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/eliminarZonaResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.eliminarZonaResponse> eliminarZonaAsync(CrewmanSystem.ZonaWS.eliminarZonaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/listarZonasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/listarZonasResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -64,10 +44,40 @@ namespace CrewmanSystem.ZonaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaResponse")]
         System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.mostrarZonaResponse> mostrarZonaAsync(CrewmanSystem.ZonaWS.mostrarZonaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/eliminarZonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/eliminarZonaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.ZonaWS.eliminarZonaResponse eliminarZona(CrewmanSystem.ZonaWS.eliminarZonaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/eliminarZonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/eliminarZonaResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.eliminarZonaResponse> eliminarZonaAsync(CrewmanSystem.ZonaWS.eliminarZonaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/insertarZonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/insertarZonaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.ZonaWS.insertarZonaResponse insertarZona(CrewmanSystem.ZonaWS.insertarZonaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/insertarZonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/insertarZonaResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.insertarZonaResponse> insertarZonaAsync(CrewmanSystem.ZonaWS.insertarZonaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaClienteRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaClienteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.ZonaWS.mostrarZonaClienteResponse mostrarZonaCliente(CrewmanSystem.ZonaWS.mostrarZonaClienteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaClienteRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaClienteResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.mostrarZonaClienteResponse> mostrarZonaClienteAsync(CrewmanSystem.ZonaWS.mostrarZonaClienteRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -183,7 +193,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -313,7 +323,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -555,7 +565,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -685,7 +695,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -890,7 +900,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -936,7 +946,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1010,7 +1020,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1168,7 +1178,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1298,7 +1308,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1484,7 +1494,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1628,7 +1638,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1688,7 +1698,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1762,7 +1772,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1822,7 +1832,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1952,7 +1962,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2096,7 +2106,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2226,7 +2236,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2314,7 +2324,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2612,7 +2622,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/")]
     public enum estadoPedido {
@@ -2631,7 +2641,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2831,7 +2841,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2933,7 +2943,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3049,7 +3059,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3165,7 +3175,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/")]
     public enum tipoPedido {
@@ -3180,7 +3190,7 @@ namespace CrewmanSystem.ZonaWS {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personaContacto))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(empleado))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3338,7 +3348,7 @@ namespace CrewmanSystem.ZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3427,78 +3437,6 @@ namespace CrewmanSystem.ZonaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarZona", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarZonaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.ZonaWS.zona zona;
-        
-        public insertarZonaRequest() {
-        }
-        
-        public insertarZonaRequest(CrewmanSystem.ZonaWS.zona zona) {
-            this.zona = zona;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarZonaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarZonaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarZonaResponse() {
-        }
-        
-        public insertarZonaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarZona", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarZonaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idZona;
-        
-        public eliminarZonaRequest() {
-        }
-        
-        public eliminarZonaRequest(int idZona) {
-            this.idZona = idZona;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarZonaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarZonaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarZonaResponse() {
-        }
-        
-        public eliminarZonaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarZonas", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
     public partial class listarZonasRequest {
         
@@ -3560,6 +3498,114 @@ namespace CrewmanSystem.ZonaWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarZona", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarZonaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idZona;
+        
+        public eliminarZonaRequest() {
+        }
+        
+        public eliminarZonaRequest(int idZona) {
+            this.idZona = idZona;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarZonaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarZonaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarZonaResponse() {
+        }
+        
+        public eliminarZonaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarZona", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarZonaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.ZonaWS.zona zona;
+        
+        public insertarZonaRequest() {
+        }
+        
+        public insertarZonaRequest(CrewmanSystem.ZonaWS.zona zona) {
+            this.zona = zona;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarZonaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarZonaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarZonaResponse() {
+        }
+        
+        public insertarZonaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarZonaCliente", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class mostrarZonaClienteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idCliente;
+        
+        public mostrarZonaClienteRequest() {
+        }
+        
+        public mostrarZonaClienteRequest(int idCliente) {
+            this.idCliente = idCliente;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarZonaClienteResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class mostrarZonaClienteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.ZonaWS.zona @return;
+        
+        public mostrarZonaClienteResponse() {
+        }
+        
+        public mostrarZonaClienteResponse(CrewmanSystem.ZonaWS.zona @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ZonaWSChannel : CrewmanSystem.ZonaWS.ZonaWS, System.ServiceModel.IClientChannel {
     }
@@ -3611,52 +3657,6 @@ namespace CrewmanSystem.ZonaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.ZonaWS.insertarZonaResponse CrewmanSystem.ZonaWS.ZonaWS.insertarZona(CrewmanSystem.ZonaWS.insertarZonaRequest request) {
-            return base.Channel.insertarZona(request);
-        }
-        
-        public int insertarZona(CrewmanSystem.ZonaWS.zona zona) {
-            CrewmanSystem.ZonaWS.insertarZonaRequest inValue = new CrewmanSystem.ZonaWS.insertarZonaRequest();
-            inValue.zona = zona;
-            CrewmanSystem.ZonaWS.insertarZonaResponse retVal = ((CrewmanSystem.ZonaWS.ZonaWS)(this)).insertarZona(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.insertarZonaResponse> CrewmanSystem.ZonaWS.ZonaWS.insertarZonaAsync(CrewmanSystem.ZonaWS.insertarZonaRequest request) {
-            return base.Channel.insertarZonaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.insertarZonaResponse> insertarZonaAsync(CrewmanSystem.ZonaWS.zona zona) {
-            CrewmanSystem.ZonaWS.insertarZonaRequest inValue = new CrewmanSystem.ZonaWS.insertarZonaRequest();
-            inValue.zona = zona;
-            return ((CrewmanSystem.ZonaWS.ZonaWS)(this)).insertarZonaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.ZonaWS.eliminarZonaResponse CrewmanSystem.ZonaWS.ZonaWS.eliminarZona(CrewmanSystem.ZonaWS.eliminarZonaRequest request) {
-            return base.Channel.eliminarZona(request);
-        }
-        
-        public int eliminarZona(int idZona) {
-            CrewmanSystem.ZonaWS.eliminarZonaRequest inValue = new CrewmanSystem.ZonaWS.eliminarZonaRequest();
-            inValue.idZona = idZona;
-            CrewmanSystem.ZonaWS.eliminarZonaResponse retVal = ((CrewmanSystem.ZonaWS.ZonaWS)(this)).eliminarZona(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.eliminarZonaResponse> CrewmanSystem.ZonaWS.ZonaWS.eliminarZonaAsync(CrewmanSystem.ZonaWS.eliminarZonaRequest request) {
-            return base.Channel.eliminarZonaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.eliminarZonaResponse> eliminarZonaAsync(int idZona) {
-            CrewmanSystem.ZonaWS.eliminarZonaRequest inValue = new CrewmanSystem.ZonaWS.eliminarZonaRequest();
-            inValue.idZona = idZona;
-            return ((CrewmanSystem.ZonaWS.ZonaWS)(this)).eliminarZonaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CrewmanSystem.ZonaWS.listarZonasResponse CrewmanSystem.ZonaWS.ZonaWS.listarZonas(CrewmanSystem.ZonaWS.listarZonasRequest request) {
             return base.Channel.listarZonas(request);
         }
@@ -3698,6 +3698,75 @@ namespace CrewmanSystem.ZonaWS {
             CrewmanSystem.ZonaWS.mostrarZonaRequest inValue = new CrewmanSystem.ZonaWS.mostrarZonaRequest();
             inValue.idEmpleado = idEmpleado;
             return ((CrewmanSystem.ZonaWS.ZonaWS)(this)).mostrarZonaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.ZonaWS.eliminarZonaResponse CrewmanSystem.ZonaWS.ZonaWS.eliminarZona(CrewmanSystem.ZonaWS.eliminarZonaRequest request) {
+            return base.Channel.eliminarZona(request);
+        }
+        
+        public int eliminarZona(int idZona) {
+            CrewmanSystem.ZonaWS.eliminarZonaRequest inValue = new CrewmanSystem.ZonaWS.eliminarZonaRequest();
+            inValue.idZona = idZona;
+            CrewmanSystem.ZonaWS.eliminarZonaResponse retVal = ((CrewmanSystem.ZonaWS.ZonaWS)(this)).eliminarZona(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.eliminarZonaResponse> CrewmanSystem.ZonaWS.ZonaWS.eliminarZonaAsync(CrewmanSystem.ZonaWS.eliminarZonaRequest request) {
+            return base.Channel.eliminarZonaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.eliminarZonaResponse> eliminarZonaAsync(int idZona) {
+            CrewmanSystem.ZonaWS.eliminarZonaRequest inValue = new CrewmanSystem.ZonaWS.eliminarZonaRequest();
+            inValue.idZona = idZona;
+            return ((CrewmanSystem.ZonaWS.ZonaWS)(this)).eliminarZonaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.ZonaWS.insertarZonaResponse CrewmanSystem.ZonaWS.ZonaWS.insertarZona(CrewmanSystem.ZonaWS.insertarZonaRequest request) {
+            return base.Channel.insertarZona(request);
+        }
+        
+        public int insertarZona(CrewmanSystem.ZonaWS.zona zona) {
+            CrewmanSystem.ZonaWS.insertarZonaRequest inValue = new CrewmanSystem.ZonaWS.insertarZonaRequest();
+            inValue.zona = zona;
+            CrewmanSystem.ZonaWS.insertarZonaResponse retVal = ((CrewmanSystem.ZonaWS.ZonaWS)(this)).insertarZona(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.insertarZonaResponse> CrewmanSystem.ZonaWS.ZonaWS.insertarZonaAsync(CrewmanSystem.ZonaWS.insertarZonaRequest request) {
+            return base.Channel.insertarZonaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.insertarZonaResponse> insertarZonaAsync(CrewmanSystem.ZonaWS.zona zona) {
+            CrewmanSystem.ZonaWS.insertarZonaRequest inValue = new CrewmanSystem.ZonaWS.insertarZonaRequest();
+            inValue.zona = zona;
+            return ((CrewmanSystem.ZonaWS.ZonaWS)(this)).insertarZonaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.ZonaWS.mostrarZonaClienteResponse CrewmanSystem.ZonaWS.ZonaWS.mostrarZonaCliente(CrewmanSystem.ZonaWS.mostrarZonaClienteRequest request) {
+            return base.Channel.mostrarZonaCliente(request);
+        }
+        
+        public CrewmanSystem.ZonaWS.zona mostrarZonaCliente(int idCliente) {
+            CrewmanSystem.ZonaWS.mostrarZonaClienteRequest inValue = new CrewmanSystem.ZonaWS.mostrarZonaClienteRequest();
+            inValue.idCliente = idCliente;
+            CrewmanSystem.ZonaWS.mostrarZonaClienteResponse retVal = ((CrewmanSystem.ZonaWS.ZonaWS)(this)).mostrarZonaCliente(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.mostrarZonaClienteResponse> CrewmanSystem.ZonaWS.ZonaWS.mostrarZonaClienteAsync(CrewmanSystem.ZonaWS.mostrarZonaClienteRequest request) {
+            return base.Channel.mostrarZonaClienteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.ZonaWS.mostrarZonaClienteResponse> mostrarZonaClienteAsync(int idCliente) {
+            CrewmanSystem.ZonaWS.mostrarZonaClienteRequest inValue = new CrewmanSystem.ZonaWS.mostrarZonaClienteRequest();
+            inValue.idCliente = idCliente;
+            return ((CrewmanSystem.ZonaWS.ZonaWS)(this)).mostrarZonaClienteAsync(inValue);
         }
     }
 }

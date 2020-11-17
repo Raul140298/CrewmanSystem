@@ -13,12 +13,12 @@ namespace CrewmanSystem
 	public partial class frmNuevoPedido : Form
 	{
         public static ClienteWS.cliente clienteSeleccionado;
-        public static ClienteWS.ClienteWSClient daoCliente;
+        public static ZonaWS.ZonaWSClient daoZona;
         public static ProductoXZonaWS.productoXZona productoXZonaSeleccionado;
         public static PedidoWS.pedido pedido;
 		public frmNuevoPedido()
 		{
-            daoCliente = new ClienteWS.ClienteWSClient();
+            daoZona = new ZonaWS.ZonaWSClient();
             InitializeComponent();
 		}
 
@@ -28,7 +28,9 @@ namespace CrewmanSystem
             if (formBusquedaCliente.ShowDialog() == DialogResult.OK)
             {
                 clienteSeleccionado = frmBuscarCliente.clienteSeleccionado;
-
+                ZonaWS.zona zona = daoZona.mostrarZonaCliente(clienteSeleccionado.idCliente);
+                clienteSeleccionado.zona = new ClienteWS.zona();
+                clienteSeleccionado.zona.idZona = zona.idZona;
                 txtRucCliente.Text = clienteSeleccionado.ruc.ToString();
                 txtRazonSocial.Text = clienteSeleccionado.razonSocial;
                 //pedido.lineasPedidos = null;

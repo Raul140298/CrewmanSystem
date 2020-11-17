@@ -1044,6 +1044,9 @@
     <None Include="Connected Services\ZonaWS\CrewmanSystem.ZonaWS.listarZonasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ZonaWS\CrewmanSystem.ZonaWS.mostrarZonaClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ZonaWS\CrewmanSystem.ZonaWS.mostrarZonaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

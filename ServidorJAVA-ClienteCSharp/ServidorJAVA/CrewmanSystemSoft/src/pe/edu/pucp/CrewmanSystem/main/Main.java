@@ -89,22 +89,24 @@ public class Main{
 //        promo.setListaPromocionXProducto(misPromocionXProducto);
 
 
-        misEmpleados = daoEmpleado.listarPorJefeVentas(21, "", "", "");
-        for(Empleado e : misEmpleados){
-            System.out.println(e.getIdEmpleado()+" "+e.getNombre()+" "+e.getApellidoPaterno()+""+e.getObjetivoVentas()+" "+e.getZona().getIdZona()+" "+e.getZona().getNombre());
-        }
-        Empleado miEmpleado = misEmpleados.get(1);
-        
-        miEmpleado.setApellidoPaterno("Cardozo");
-        miEmpleado.setObjetivoVentas(3500);
-        miEmpleado.getZona().setIdZona(151);
-        
-        int resultado = daoEmpleado.actualizar(miEmpleado);
-        System.out.println(resultado);
-        misEmpleados = daoEmpleado.listarPorJefeVentas(21, "", "", "");
-        for(Empleado e : misEmpleados){
-            System.out.println(e.getIdEmpleado()+" "+e.getNombre()+" "+e.getApellidoPaterno()+""+e.getObjetivoVentas()+" "+e.getZona().getIdZona()+" "+e.getZona().getNombre());
-        }
+//        misEmpleados = daoEmpleado.listarPorJefeVentas(21, "", "", "");
+//        for(Empleado e : misEmpleados){
+//            System.out.println(e.getIdEmpleado()+" "+e.getNombre()+" "+e.getApellidoPaterno()+""+e.getObjetivoVentas()+" "+e.getZona().getIdZona()+" "+e.getZona().getNombre());
+//        }
+//        Empleado miEmpleado = misEmpleados.get(1);
+//        
+//        miEmpleado.setApellidoPaterno("Cardozo");
+//        miEmpleado.setObjetivoVentas(3500);
+//        miEmpleado.getZona().setIdZona(151);
+//        
+//        int resultado = daoEmpleado.actualizar(miEmpleado);
+//        System.out.println(resultado);
+//        misEmpleados = daoEmpleado.listarPorJefeVentas(21, "", "", "");
+//        for(Empleado e : misEmpleados){
+//            System.out.println(e.getIdEmpleado()+" "+e.getNombre()+" "+e.getApellidoPaterno()+""+e.getObjetivoVentas()+" "+e.getZona().getIdZona()+" "+e.getZona().getNombre());
+//        }
+
+        Zona zona = daoZona.mostrarZonaCliente(14);
         System.out.println("EL MODELADO HA CONCLUIDO");
     }
     

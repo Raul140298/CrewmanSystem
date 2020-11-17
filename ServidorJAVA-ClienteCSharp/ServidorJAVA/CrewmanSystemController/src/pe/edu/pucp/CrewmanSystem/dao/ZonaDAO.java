@@ -10,4 +10,5 @@ public interface ZonaDAO
     int eliminar(int idZona);
     ArrayList<Zona> listar();
     Zona mostrar(int idEmpleado);
+    Zona mostrarZonaCliente(int idCliente);
 }
