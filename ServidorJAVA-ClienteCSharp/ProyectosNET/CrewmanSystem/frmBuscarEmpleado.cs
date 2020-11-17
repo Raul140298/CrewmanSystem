@@ -96,7 +96,21 @@ namespace CrewmanSystem
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-			EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado, txtNombre.Text, txtApPaterno.Text, txtApMaterno.Text);
+			ZonaWS.zona zonaSeleccionada = new ZonaWS.zona();
+			zonaSeleccionada = (ZonaWS.zona)cboZona.SelectedItem;
+
+			if (zonaSeleccionada.idZona == 0)
+			{
+				EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado, txtNombre.Text, txtApPaterno.Text, txtApMaterno.Text);
+				dataGridView1.DataSource = misEmpleados;
+				dataGridView1.Refresh();
+			}
+            else
+            {
+				EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentasYZona(Program.empleado.idEmpleado, txtNombre.Text, txtApPaterno.Text, txtApMaterno.Text,zonaSeleccionada.idZona);
+				dataGridView1.DataSource = misEmpleados;
+				dataGridView1.Refresh();
+			}
 		}
     }
 }
