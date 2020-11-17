@@ -22,8 +22,8 @@ public class LineaPedidoWS {
     }
     
     @WebMethod(operationName = "insertarLineaPedido")
-    public double insertarLineaPedido(@WebParam(name = "lineaPedido") LineaPedido lineaPedido){
-        double resultado = 0;
+    public int insertarLineaPedido(@WebParam(name = "lineaPedido") LineaPedido lineaPedido){
+        int resultado = 0;
         try{
             resultado = daoLineaPedido.insertar(lineaPedido);
         }catch(Exception e){

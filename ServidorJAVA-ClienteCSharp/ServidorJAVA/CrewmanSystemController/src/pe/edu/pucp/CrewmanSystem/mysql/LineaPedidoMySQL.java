@@ -17,23 +17,22 @@ public class LineaPedidoMySQL implements LineaPedidoDAO{
     ResultSet rs;
     
     @Override
-    public double insertar(LineaPedido lineaPedido)
+    public int insertar(LineaPedido lineaPedido)
     {
-        double resultado = 0;
+        int resultado = 0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             String sql ="{ call INSERTAR_LINEAPEDIDO(?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_LINEA_PEDIDO", java.sql.Types.INTEGER);
-            cs.registerOutParameter("_SUBTOTAL", java.sql.Types.DOUBLE);
+            cs.setDouble("_SUBTOTAL", lineaPedido.getMontoSubTotal());
             cs.setInt("_ID_PEDIDO", lineaPedido.getPedido().getIdPedido());
             cs.setInt("_ID_PRODUCTOXZONA", lineaPedido.getProductoXZona().getIdProductoXZona());
             cs.setInt("_CANTIDAD", lineaPedido.getCantidad());
             cs.executeUpdate();
-            lineaPedido.setIdLineaPedido(cs.getInt("_ID_LINEA_PEDIDO"));
-            resultado = cs.getDouble("_SUBTOTAL");
-            lineaPedido.setMontoSubTotal(resultado);
+            resultado = cs.getInt("_ID_LINEA_PEDIDO");
+            lineaPedido.setIdLineaPedido(resultado);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{

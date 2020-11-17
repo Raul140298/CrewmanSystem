@@ -28,12 +28,12 @@ public class PedidoMySQL implements PedidoDAO{
     @Override
     public int insertar(Pedido pedido){
         int resultado = 0;
-        double subtotal = 0;
         PedidoDAO daoPedido = new PedidoMySQL();
         LineaPedidoDAO daoLinea = new LineaPedidoMySQL();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            con.setAutoCommit(false);
             String sql ="{ call INSERTAR_BORRADOR(?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_PEDIDO", java.sql.Types.INTEGER);
@@ -44,13 +44,26 @@ public class PedidoMySQL implements PedidoDAO{
             cs.executeUpdate();
             resultado = cs.getInt("_ID_PEDIDO");
             pedido.setIdPedido(resultado);
-            
             for(LineaPedido l : pedido.getLineasPedidos()){
                 l.setPedido(pedido);
-                subtotal = daoLinea.insertar(l);
-                pedido.setMontoTotal(pedido.getMontoTotal()+subtotal);
+                sql ="{ call INSERTAR_LINEAPEDIDO(?,?,?,?,?)}";
+                cs = con.prepareCall(sql);
+                cs.registerOutParameter("_ID_LINEA_PEDIDO", java.sql.Types.INTEGER);
+                cs.setDouble("_SUBTOTAL", l.getMontoSubTotal());
+                cs.setInt("_ID_PEDIDO", l.getPedido().getIdPedido());
+                cs.setInt("_ID_PRODUCTOXZONA", l.getProductoXZona().getIdProductoXZona());
+                cs.setInt("_CANTIDAD", l.getCantidad());
+                cs.executeUpdate();
+                cs.getInt("_ID_LINEA_PEDIDO");
+                //subtotal = daoLinea.insertar(l);
+                //pedido.setMontoTotal(pedido.getMontoTotal()+subtotal);
             }
-            daoPedido.insertarTotal(pedido);
+            sql ="{ call INSERTAR_TOTAL_PEDIDO(?,?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_PEDIDO", pedido.getIdPedido());
+            cs.setDouble("_MONTO_TOTAL", pedido.getMontoTotal());
+            cs.executeUpdate();
+            con.commit();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
