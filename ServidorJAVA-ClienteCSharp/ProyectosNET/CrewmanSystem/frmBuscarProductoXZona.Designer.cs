@@ -151,6 +151,7 @@
             this.cboZona.Location = new System.Drawing.Point(155, 27);
             this.cboZona.Name = "cboZona";
             this.cboZona.Size = new System.Drawing.Size(196, 24);
+            this.cboZona.Sorted = true;
             this.cboZona.TabIndex = 56;
             // 
             // lblID
