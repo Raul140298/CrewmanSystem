@@ -41,48 +41,35 @@ namespace CrewmanSystem
 
             if (frmVentanaPrincipal.nBtn == 1)
             {   //OBTNER DATOS DE FILA SELECCIONADA
+                PromocionWS.promocion miPromocion = new PromocionWS.promocion();
+
                 if (Program.pantallas[Program.pantallas.Count - 1].Formulario.Name == "frmGestionarPromociones")
                 {
                     frmGestionarPromociones.promocionSeleccionada = (PromocionWS.promocion)frmGestionarPromociones.dgv.CurrentRow.DataBoundItem;
-                    txtId.Text = frmGestionarPromociones.promocionSeleccionada.idPromocion.ToString();
-                    txtNombre.Text = frmGestionarPromociones.promocionSeleccionada.nombre;
-                    txtDescripcion.Text = frmGestionarPromociones.promocionSeleccionada.descripcion;
-                    dtpFechaInicio.Value = frmGestionarPromociones.promocionSeleccionada.fechaInicio;
-                    dtpFechaFin.Value = frmGestionarPromociones.promocionSeleccionada.fechaFin;
-                    cboZona.SelectedValue = frmGestionarPromociones.promocionSeleccionada.zona.idZona;
-                    //Listar los productos de la promoción.
-                    txtDescuento.Enabled = false;
-                    txtStock.Enabled = false;
-                    btnAddProducto.Enabled = false;
-                    btnRemoveProducto.Enabled = false;
-                    btnBuscarProducto.Enabled = false;
-                    cboZona.Enabled = false;
-                    int idPromocion = frmGestionarPromociones.promocionSeleccionada.idPromocion;
-                    PromocionXProductoWS.promocionXProducto[] auxPromoXProd = daoPromocionXProducto.listarPromocionXProducto(idPromocion);
-                    if (auxPromoXProd.Length == 0) misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>();
-                    else misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>(auxPromoXProd.ToArray());
+                    miPromocion = frmGestionarPromociones.promocionSeleccionada;
                 }
                 else
                 {
                     frmBuscarPromocion.promocionSeleccionada = (PromocionWS.promocion)frmBuscarPromocion.dgv.CurrentRow.DataBoundItem;
-                    txtId.Text = frmBuscarPromocion.promocionSeleccionada.idPromocion.ToString();
-                    txtNombre.Text = frmBuscarPromocion.promocionSeleccionada.nombre;
-                    txtDescripcion.Text = frmBuscarPromocion.promocionSeleccionada.descripcion;
-                    dtpFechaInicio.Value = frmBuscarPromocion.promocionSeleccionada.fechaInicio;
-                    dtpFechaFin.Value = frmBuscarPromocion.promocionSeleccionada.fechaFin;
-                    cboZona.SelectedValue = frmBuscarPromocion.promocionSeleccionada.zona.idZona;
-                    //Listar los productos de la promoción.
-                    txtDescuento.Enabled = false;
-                    txtStock.Enabled = false;
-                    btnAddProducto.Enabled = false;
-                    btnRemoveProducto.Enabled = false;
-                    btnBuscarProducto.Enabled = false;
-                    cboZona.Enabled = false;
-                    int idPromocion = frmBuscarPromocion.promocionSeleccionada.idPromocion;
-                    PromocionXProductoWS.promocionXProducto[] auxPromoXProd = daoPromocionXProducto.listarPromocionXProducto(idPromocion);
-                    if (auxPromoXProd.Length == 0) misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>();
-                    else misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>(auxPromoXProd.ToArray());
-                }  
+                    miPromocion = frmBuscarPromocion.promocionSeleccionada;
+                }
+                txtId.Text = miPromocion.idPromocion.ToString();
+                txtNombre.Text = miPromocion.nombre;
+                txtDescripcion.Text = miPromocion.descripcion;
+                dtpFechaInicio.Value = miPromocion.fechaInicio;
+                dtpFechaFin.Value = miPromocion.fechaFin;
+                cboZona.SelectedValue = miPromocion.zona.idZona;
+                //Listar los productos de la promoción.
+                txtDescuento.Enabled = false;
+                txtStock.Enabled = false;
+                btnAddProducto.Enabled = false;
+                btnRemoveProducto.Enabled = false;
+                btnBuscarProducto.Enabled = false;
+                cboZona.Enabled = false;
+                int idPromocion = miPromocion.idPromocion;
+                PromocionXProductoWS.promocionXProducto[] auxPromoXProd = daoPromocionXProducto.listarPromocionXProducto(idPromocion);
+                if (auxPromoXProd.Length == 0) misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>();
+                else misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>(auxPromoXProd);
                 cargarTabla();
             }
             else
@@ -258,7 +245,9 @@ namespace CrewmanSystem
                 return;
             }
             int indice = dgvPromocionXProducto.CurrentRow.Index;
-            dgvPromocionXProducto.Rows.RemoveAt(indice);
+            dgvPromocionXProducto.DataSource = new BindingList<PromocionXProductoWS.promocionXProducto>();
+            misPromocionXProducto.RemoveAt(indice);
+            dgvPromocionXProducto.DataSource = misPromocionXProducto;
             cargarTabla();
         }
 
@@ -267,21 +256,23 @@ namespace CrewmanSystem
             dgvPromocionXProducto.DataSource = null;
             dgvPromocionXProducto.AutoGenerateColumns = false;
             dgvPromocionXProducto.DataSource = misPromocionXProducto;
-            int contRow = 0;
-            foreach(PromocionXProductoWS.promocionXProducto pxp in misPromocionXProducto)
-            {
-                dgvPromocionXProducto.Rows[contRow].Cells["NRO"].Value = contRow + 1;
-                dgvPromocionXProducto.Rows[contRow].Cells["NOMBRE_PRODUCTO"].Value = pxp.producto.nombre;
-                dgvPromocionXProducto.Rows[contRow].Cells["CANT_UNIDADES"].Value = pxp.producto.cantUnidad;
-                dgvPromocionXProducto.Rows[contRow].Cells["UNIDADES"].Value = pxp.producto.unidades;
-                contRow++;
-            }
         }
 
         private void cboZona_SelectedIndexChanged(object sender, EventArgs e)
         {
             misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>();
             cargarTabla();
+        }
+
+        private void dgvPromocionXProducto_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            PromocionXProductoWS.promocionXProducto p = dgvPromocionXProducto.Rows[e.RowIndex].DataBoundItem
+                as PromocionXProductoWS.promocionXProducto;
+
+            dgvPromocionXProducto.Rows[e.RowIndex].Cells["NRO"].Value = e.RowIndex + 1;
+            dgvPromocionXProducto.Rows[e.RowIndex].Cells["NOMBRE_PRODUCTO"].Value = p.producto.nombre;
+            dgvPromocionXProducto.Rows[e.RowIndex].Cells["CANT_UNIDADES"].Value = p.producto.cantUnidad;
+            dgvPromocionXProducto.Rows[e.RowIndex].Cells["UNIDADES"].Value = p.producto.unidades;
         }
     }
 }

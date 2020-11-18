@@ -64,9 +64,14 @@ namespace CrewmanSystem
                     cboFamilia.SelectedValue = frmBuscarProducto.productoSeleccionado.subFamilia.familia.idFamilia;
                     cboSubfamilia.SelectedValue = frmBuscarProducto.productoSeleccionado.subFamilia.idSubFamilia;
                     cboMarca.SelectedValue = frmBuscarProducto.productoSeleccionado.marca.idMarca;
+                    cboUnidades.SelectedItem = frmBuscarProducto.productoSeleccionado.unidades;
                     txtCantidad.Text = frmBuscarProducto.productoSeleccionado.cantUnidad.ToString();
                     txtPrecioSugerido.Text = frmBuscarProducto.productoSeleccionado.precioSugerido.ToString();
                     txtStock.Text = frmBuscarProducto.productoSeleccionado.stock.ToString();
+
+                    cboFamilia.Enabled = false;
+                    cboSubfamilia.Enabled = false;
+                    cboMarca.Enabled = false;
                 }
             }
         }
