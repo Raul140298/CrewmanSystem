@@ -72,13 +72,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 251);
+            this.panel1.Size = new System.Drawing.Size(800, 263);
             this.panel1.TabIndex = 48;
             // 
             // label4
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Location = new System.Drawing.Point(3, 196);
+            this.label4.Location = new System.Drawing.Point(3, 212);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(179, 22);
             this.label4.TabIndex = 88;
@@ -88,7 +88,7 @@
             // cboEstadoPedido
             // 
             this.cboEstadoPedido.FormattingEnabled = true;
-            this.cboEstadoPedido.Location = new System.Drawing.Point(195, 102);
+            this.cboEstadoPedido.Location = new System.Drawing.Point(195, 118);
             this.cboEstadoPedido.Name = "cboEstadoPedido";
             this.cboEstadoPedido.Size = new System.Drawing.Size(263, 24);
             this.cboEstadoPedido.TabIndex = 87;
@@ -96,7 +96,7 @@
             // cboTipoPedido
             // 
             this.cboTipoPedido.FormattingEnabled = true;
-            this.cboTipoPedido.Location = new System.Drawing.Point(195, 55);
+            this.cboTipoPedido.Location = new System.Drawing.Point(195, 71);
             this.cboTipoPedido.Name = "cboTipoPedido";
             this.cboTipoPedido.Size = new System.Drawing.Size(263, 24);
             this.cboTipoPedido.TabIndex = 86;
@@ -108,7 +108,7 @@
             this.btnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarCliente.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnBuscarCliente.Location = new System.Drawing.Point(417, 12);
+            this.btnBuscarCliente.Location = new System.Drawing.Point(417, 28);
             this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Padding = new System.Windows.Forms.Padding(2, 0, 0, 1);
@@ -121,7 +121,7 @@
             // label3
             // 
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(3, 12);
+            this.label3.Location = new System.Drawing.Point(3, 28);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(179, 22);
             this.label3.TabIndex = 60;
@@ -131,7 +131,7 @@
             // label2
             // 
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Location = new System.Drawing.Point(3, 55);
+            this.label2.Location = new System.Drawing.Point(3, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(179, 22);
             this.label2.TabIndex = 59;
@@ -141,7 +141,7 @@
             // label1
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Location = new System.Drawing.Point(3, 102);
+            this.label1.Location = new System.Drawing.Point(3, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(179, 22);
             this.label1.TabIndex = 58;
@@ -151,7 +151,7 @@
             // lblID
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Location = new System.Drawing.Point(3, 149);
+            this.lblID.Location = new System.Drawing.Point(3, 165);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(179, 22);
             this.lblID.TabIndex = 57;
@@ -164,30 +164,30 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(499, 12);
+            this.btnBuscar.Location = new System.Drawing.Point(499, 28);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(160, 40);
+            this.btnBuscar.Size = new System.Drawing.Size(160, 30);
             this.btnBuscar.TabIndex = 55;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // dtpRangoFin
             // 
-            this.dtpRangoFin.Location = new System.Drawing.Point(195, 194);
+            this.dtpRangoFin.Location = new System.Drawing.Point(195, 210);
             this.dtpRangoFin.Name = "dtpRangoFin";
             this.dtpRangoFin.Size = new System.Drawing.Size(263, 22);
             this.dtpRangoFin.TabIndex = 53;
             // 
             // dtpRangoIni
             // 
-            this.dtpRangoIni.Location = new System.Drawing.Point(195, 149);
+            this.dtpRangoIni.Location = new System.Drawing.Point(195, 165);
             this.dtpRangoIni.Name = "dtpRangoIni";
             this.dtpRangoIni.Size = new System.Drawing.Size(263, 22);
             this.dtpRangoIni.TabIndex = 52;
             // 
             // txtCliente
             // 
-            this.txtCliente.Location = new System.Drawing.Point(195, 12);
+            this.txtCliente.Location = new System.Drawing.Point(195, 28);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(199, 22);
             this.txtCliente.TabIndex = 46;
@@ -221,7 +221,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.dataGridView1.Location = new System.Drawing.Point(0, 251);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 263);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -241,7 +241,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 199);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 187);
             this.dataGridView1.TabIndex = 49;
             // 
             // ID

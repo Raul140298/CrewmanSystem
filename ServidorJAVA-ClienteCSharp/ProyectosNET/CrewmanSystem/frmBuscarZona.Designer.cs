@@ -44,7 +44,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(184, 12);
+            this.txtNombre.Location = new System.Drawing.Point(184, 31);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 22);
             this.txtNombre.TabIndex = 46;
@@ -57,13 +57,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1143, 65);
+            this.panel1.Size = new System.Drawing.Size(1143, 90);
             this.panel1.TabIndex = 47;
             // 
             // lblID
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Location = new System.Drawing.Point(12, 12);
+            this.lblID.Location = new System.Drawing.Point(12, 31);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(140, 22);
             this.lblID.TabIndex = 54;
@@ -76,9 +76,9 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(417, 12);
+            this.btnBuscar.Location = new System.Drawing.Point(416, 27);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(160, 40);
+            this.btnBuscar.Size = new System.Drawing.Size(160, 30);
             this.btnBuscar.TabIndex = 53;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -109,7 +109,7 @@
             this.dgvZonas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvZonas.EnableHeadersVisualStyles = false;
             this.dgvZonas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.dgvZonas.Location = new System.Drawing.Point(0, 65);
+            this.dgvZonas.Location = new System.Drawing.Point(0, 90);
             this.dgvZonas.MultiSelect = false;
             this.dgvZonas.Name = "dgvZonas";
             this.dgvZonas.ReadOnly = true;
@@ -129,7 +129,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvZonas.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvZonas.RowTemplate.Height = 24;
-            this.dgvZonas.Size = new System.Drawing.Size(1143, 385);
+            this.dgvZonas.Size = new System.Drawing.Size(1143, 360);
             this.dgvZonas.TabIndex = 48;
             // 
             // ID
