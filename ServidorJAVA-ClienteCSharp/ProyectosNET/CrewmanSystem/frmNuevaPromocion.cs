@@ -258,32 +258,30 @@ namespace CrewmanSystem
                 return;
             }
             int indice = dgvPromocionXProducto.CurrentRow.Index;
-            misPromocionXProducto.RemoveAt(indice);
+            dgvPromocionXProducto.Rows.RemoveAt(indice);
             cargarTabla();
         }
 
         private void cargarTabla()
         {
+            dgvPromocionXProducto.DataSource = null;
             dgvPromocionXProducto.AutoGenerateColumns = false;
             dgvPromocionXProducto.DataSource = misPromocionXProducto;
+            int contRow = 0;
+            foreach(PromocionXProductoWS.promocionXProducto pxp in misPromocionXProducto)
+            {
+                dgvPromocionXProducto.Rows[contRow].Cells["NRO"].Value = contRow + 1;
+                dgvPromocionXProducto.Rows[contRow].Cells["NOMBRE_PRODUCTO"].Value = pxp.producto.nombre;
+                dgvPromocionXProducto.Rows[contRow].Cells["CANT_UNIDADES"].Value = pxp.producto.cantUnidad;
+                dgvPromocionXProducto.Rows[contRow].Cells["UNIDADES"].Value = pxp.producto.unidades;
+                contRow++;
+            }
         }
 
         private void cboZona_SelectedIndexChanged(object sender, EventArgs e)
         {
             misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>();
             cargarTabla();
-        }
-
-        private void dgvPromocionXProducto_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            PromocionXProductoWS.promocionXProducto pxp = dgvPromocionXProducto.Rows[e.RowIndex].DataBoundItem
-            as PromocionXProductoWS.promocionXProducto;
-
-            dgvPromocionXProducto.Rows[e.RowIndex].Cells["NRO"].Value = e.RowIndex+1;
-            dgvPromocionXProducto.Rows[e.RowIndex].Cells["NOMBRE_PRODUCTO"].Value = pxp.producto.nombre;
-            dgvPromocionXProducto.Rows[e.RowIndex].Cells["CANT_UNIDADES"].Value = pxp.producto.cantUnidad;
-            dgvPromocionXProducto.Rows[e.RowIndex].Cells["UNIDADES"].Value = pxp.producto.unidades;
-
         }
     }
 }

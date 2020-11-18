@@ -518,7 +518,6 @@
             this.dgvPromocionXProducto.RowTemplate.Height = 24;
             this.dgvPromocionXProducto.Size = new System.Drawing.Size(710, 137);
             this.dgvPromocionXProducto.TabIndex = 110;
-            this.dgvPromocionXProducto.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPromocionXProducto_CellFormatting);
             // 
             // NRO
             // 
