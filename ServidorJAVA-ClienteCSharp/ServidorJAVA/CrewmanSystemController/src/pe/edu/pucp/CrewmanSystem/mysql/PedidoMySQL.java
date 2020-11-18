@@ -83,23 +83,40 @@ public class PedidoMySQL implements PedidoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            String sql ="{ call ACTUALIZAR_PEDIDO(?,?,?,?)}";
+            con.setAutoCommit(false);
+            String sql ="{ call ACTUALIZAR_PEDIDO(?,?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_PEDIDO", pedido.getIdPedido());
-            cs.setInt("_ID_CLIENTE", pedido.getCliente().getIdCliente());
-            cs.setInt("_ID_EMPLEADO", pedido.getEmpleado().getIdEmpleado());
             cs.setString("_DIRECCION_ENTREGA", pedido.getDireccionEntrega());
             resultado = cs.executeUpdate();
-            
-            LineaPedidoDAO daoLinea = new LineaPedidoMySQL();
             for(LineaPedido lp : pedido.getLineasPedidos()){
                 if(lp.getIdLineaPedido() != 0){
-                    daoLinea.actualizar(lp);
+                    sql ="{ call ACTUALIZAR_LINEAPEDIDO(?,?)}";
+                    cs = con.prepareCall(sql);
+                    cs.setInt("_ID_LINEA_PEDIDO", lp.getIdLineaPedido());
+                    cs.setInt("_CANTIDAD", lp.getCantidad());
+                    resultado=cs.executeUpdate();
                 }
                 else{
-                    daoLinea.insertar(lp);
+                    Pedido p = new Pedido();
+                    p.setIdPedido(pedido.getIdPedido());
+                    lp.setPedido(p);
+                    sql ="{ call INSERTAR_LINEAPEDIDO(?,?,?,?,?)}";
+                    cs = con.prepareCall(sql);
+                    cs.registerOutParameter("_ID_LINEA_PEDIDO", java.sql.Types.INTEGER);
+                    cs.setDouble("_SUBTOTAL", lp.getMontoSubTotal());
+                    cs.setInt("_ID_PEDIDO", lp.getPedido().getIdPedido());
+                    cs.setInt("_ID_PRODUCTOXZONA", lp.getProductoXZona().getIdProductoXZona());
+                    cs.setInt("_CANTIDAD", lp.getCantidad());
+                    cs.executeUpdate();
                 }
             }
+            sql ="{ call INSERTAR_TOTAL_PEDIDO(?,?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_PEDIDO", pedido.getIdPedido());
+            cs.setDouble("_MONTO_TOTAL", pedido.getMontoTotal());
+            cs.executeUpdate();
+            con.commit();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -156,8 +173,8 @@ public class PedidoMySQL implements PedidoDAO{
                 pedido.setEmpleado(vendedor);
                 
                 pedido.setFechaEstim(rs.getDate("FECHA_ESTIMADA"));
-                pedido.setFechaRegistro(rs.getDate("FECHA_APROBADO"));
-                pedido.setFechaAprobado(rs.getDate("FECHA_REGISTRO"));
+                pedido.setFechaAprobado(rs.getDate("FECHA_APROBADO"));
+                pedido.setFechaRegistro(rs.getDate("FECHA_REGISTRO"));
                 pedido.setMontoTotal(rs.getDouble("MONTO_TOTAL"));
                 pedido.setMontoPagar(rs.getDouble("MONTO_PAGAR"));
                 pedido.setDireccionEntrega(rs.getString("DIRECCION_ENTREGA"));
