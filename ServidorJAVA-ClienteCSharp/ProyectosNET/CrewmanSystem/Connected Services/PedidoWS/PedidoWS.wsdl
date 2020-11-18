@@ -5,35 +5,11 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/PedidoWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="culminarPedido">
-    <part name="parameters" element="tns:culminarPedido" />
+  <message name="insertarTotal">
+    <part name="parameters" element="tns:insertarTotal" />
   </message>
-  <message name="culminarPedidoResponse">
-    <part name="parameters" element="tns:culminarPedidoResponse" />
-  </message>
-  <message name="aprobarBorrador">
-    <part name="parameters" element="tns:aprobarBorrador" />
-  </message>
-  <message name="aprobarBorradorResponse">
-    <part name="parameters" element="tns:aprobarBorradorResponse" />
-  </message>
-  <message name="anular">
-    <part name="parameters" element="tns:anular" />
-  </message>
-  <message name="anularResponse">
-    <part name="parameters" element="tns:anularResponse" />
-  </message>
-  <message name="mostrarPedido">
-    <part name="parameters" element="tns:mostrarPedido" />
-  </message>
-  <message name="mostrarPedidoResponse">
-    <part name="parameters" element="tns:mostrarPedidoResponse" />
-  </message>
-  <message name="obtenerPedido">
-    <part name="parameters" element="tns:obtenerPedido" />
-  </message>
-  <message name="obtenerPedidoResponse">
-    <part name="parameters" element="tns:obtenerPedidoResponse" />
+  <message name="insertarTotalResponse">
+    <part name="parameters" element="tns:insertarTotalResponse" />
   </message>
   <message name="liberarStock">
     <part name="parameters" element="tns:liberarStock" />
@@ -41,23 +17,11 @@
   <message name="liberarStockResponse">
     <part name="parameters" element="tns:liberarStockResponse" />
   </message>
-  <message name="generarReporte">
-    <part name="parameters" element="tns:generarReporte" />
+  <message name="anular">
+    <part name="parameters" element="tns:anular" />
   </message>
-  <message name="generarReporteResponse">
-    <part name="parameters" element="tns:generarReporteResponse" />
-  </message>
-  <message name="insertarTotal">
-    <part name="parameters" element="tns:insertarTotal" />
-  </message>
-  <message name="insertarTotalResponse">
-    <part name="parameters" element="tns:insertarTotalResponse" />
-  </message>
-  <message name="eliminarPedido">
-    <part name="parameters" element="tns:eliminarPedido" />
-  </message>
-  <message name="eliminarPedidoResponse">
-    <part name="parameters" element="tns:eliminarPedidoResponse" />
+  <message name="anularResponse">
+    <part name="parameters" element="tns:anularResponse" />
   </message>
   <message name="insertarPedido">
     <part name="parameters" element="tns:insertarPedido" />
@@ -65,11 +29,35 @@
   <message name="insertarPedidoResponse">
     <part name="parameters" element="tns:insertarPedidoResponse" />
   </message>
-  <message name="actualizarPedido">
-    <part name="parameters" element="tns:actualizarPedido" />
+  <message name="obtenerPedido">
+    <part name="parameters" element="tns:obtenerPedido" />
   </message>
-  <message name="actualizarPedidoResponse">
-    <part name="parameters" element="tns:actualizarPedidoResponse" />
+  <message name="obtenerPedidoResponse">
+    <part name="parameters" element="tns:obtenerPedidoResponse" />
+  </message>
+  <message name="generarReporte">
+    <part name="parameters" element="tns:generarReporte" />
+  </message>
+  <message name="generarReporteResponse">
+    <part name="parameters" element="tns:generarReporteResponse" />
+  </message>
+  <message name="aprobarBorrador">
+    <part name="parameters" element="tns:aprobarBorrador" />
+  </message>
+  <message name="aprobarBorradorResponse">
+    <part name="parameters" element="tns:aprobarBorradorResponse" />
+  </message>
+  <message name="mostrarPedido">
+    <part name="parameters" element="tns:mostrarPedido" />
+  </message>
+  <message name="mostrarPedidoResponse">
+    <part name="parameters" element="tns:mostrarPedidoResponse" />
+  </message>
+  <message name="culminarPedido">
+    <part name="parameters" element="tns:culminarPedido" />
+  </message>
+  <message name="culminarPedidoResponse">
+    <part name="parameters" element="tns:culminarPedidoResponse" />
   </message>
   <message name="listarPedidos">
     <part name="parameters" element="tns:listarPedidos" />
@@ -77,95 +65,71 @@
   <message name="listarPedidosResponse">
     <part name="parameters" element="tns:listarPedidosResponse" />
   </message>
+  <message name="actualizarPedido">
+    <part name="parameters" element="tns:actualizarPedido" />
+  </message>
+  <message name="actualizarPedidoResponse">
+    <part name="parameters" element="tns:actualizarPedidoResponse" />
+  </message>
+  <message name="eliminarPedido">
+    <part name="parameters" element="tns:eliminarPedido" />
+  </message>
+  <message name="eliminarPedidoResponse">
+    <part name="parameters" element="tns:eliminarPedidoResponse" />
+  </message>
   <portType name="PedidoWS">
-    <operation name="culminarPedido">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/culminarPedidoRequest" message="tns:culminarPedido" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/culminarPedidoResponse" message="tns:culminarPedidoResponse" />
-    </operation>
-    <operation name="aprobarBorrador">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/aprobarBorradorRequest" message="tns:aprobarBorrador" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/aprobarBorradorResponse" message="tns:aprobarBorradorResponse" />
-    </operation>
-    <operation name="anular">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/anularRequest" message="tns:anular" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/anularResponse" message="tns:anularResponse" />
-    </operation>
-    <operation name="mostrarPedido">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/mostrarPedidoRequest" message="tns:mostrarPedido" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/mostrarPedidoResponse" message="tns:mostrarPedidoResponse" />
-    </operation>
-    <operation name="obtenerPedido">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/obtenerPedidoRequest" message="tns:obtenerPedido" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/obtenerPedidoResponse" message="tns:obtenerPedidoResponse" />
+    <operation name="insertarTotal">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarTotalRequest" message="tns:insertarTotal" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarTotalResponse" message="tns:insertarTotalResponse" />
     </operation>
     <operation name="liberarStock">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/liberarStockRequest" message="tns:liberarStock" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/liberarStockResponse" message="tns:liberarStockResponse" />
     </operation>
-    <operation name="generarReporte">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/generarReporteRequest" message="tns:generarReporte" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/generarReporteResponse" message="tns:generarReporteResponse" />
-    </operation>
-    <operation name="insertarTotal">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarTotalRequest" message="tns:insertarTotal" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarTotalResponse" message="tns:insertarTotalResponse" />
-    </operation>
-    <operation name="eliminarPedido">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/eliminarPedidoRequest" message="tns:eliminarPedido" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/eliminarPedidoResponse" message="tns:eliminarPedidoResponse" />
+    <operation name="anular">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/anularRequest" message="tns:anular" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/anularResponse" message="tns:anularResponse" />
     </operation>
     <operation name="insertarPedido">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarPedidoRequest" message="tns:insertarPedido" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarPedidoResponse" message="tns:insertarPedidoResponse" />
     </operation>
-    <operation name="actualizarPedido">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/actualizarPedidoRequest" message="tns:actualizarPedido" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/actualizarPedidoResponse" message="tns:actualizarPedidoResponse" />
+    <operation name="obtenerPedido">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/obtenerPedidoRequest" message="tns:obtenerPedido" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/obtenerPedidoResponse" message="tns:obtenerPedidoResponse" />
+    </operation>
+    <operation name="generarReporte">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/generarReporteRequest" message="tns:generarReporte" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/generarReporteResponse" message="tns:generarReporteResponse" />
+    </operation>
+    <operation name="aprobarBorrador">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/aprobarBorradorRequest" message="tns:aprobarBorrador" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/aprobarBorradorResponse" message="tns:aprobarBorradorResponse" />
+    </operation>
+    <operation name="mostrarPedido">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/mostrarPedidoRequest" message="tns:mostrarPedido" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/mostrarPedidoResponse" message="tns:mostrarPedidoResponse" />
+    </operation>
+    <operation name="culminarPedido">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/culminarPedidoRequest" message="tns:culminarPedido" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/culminarPedidoResponse" message="tns:culminarPedidoResponse" />
     </operation>
     <operation name="listarPedidos">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/listarPedidosRequest" message="tns:listarPedidos" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/listarPedidosResponse" message="tns:listarPedidosResponse" />
     </operation>
+    <operation name="actualizarPedido">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/actualizarPedidoRequest" message="tns:actualizarPedido" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/actualizarPedidoResponse" message="tns:actualizarPedidoResponse" />
+    </operation>
+    <operation name="eliminarPedido">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/eliminarPedidoRequest" message="tns:eliminarPedido" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/eliminarPedidoResponse" message="tns:eliminarPedidoResponse" />
+    </operation>
   </portType>
   <binding name="PedidoWSPortBinding" type="tns:PedidoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="culminarPedido">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="aprobarBorrador">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="anular">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="mostrarPedido">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="obtenerPedido">
+    <operation name="insertarTotal">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -183,25 +147,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="generarReporte">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarTotal">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarPedido">
+    <operation name="anular">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -219,7 +165,43 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarPedido">
+    <operation name="obtenerPedido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="generarReporte">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="aprobarBorrador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarPedido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="culminarPedido">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -229,6 +211,24 @@
       </output>
     </operation>
     <operation name="listarPedidos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarPedido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPedido">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -16,20 +16,6 @@ namespace CrewmanSystem.LineaPedidoWS {
     public interface LineaPedidoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/insertarLineaPedidoReques" +
-            "t", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/insertarLineaPedidoRespon" +
-            "se")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.LineaPedidoWS.insertarLineaPedidoResponse insertarLineaPedido(CrewmanSystem.LineaPedidoWS.insertarLineaPedidoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/insertarLineaPedidoReques" +
-            "t", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/insertarLineaPedidoRespon" +
-            "se")]
-        System.Threading.Tasks.Task<CrewmanSystem.LineaPedidoWS.insertarLineaPedidoResponse> insertarLineaPedidoAsync(CrewmanSystem.LineaPedidoWS.insertarLineaPedidoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/actualizarLineaPedidoRequ" +
             "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/actualizarLineaPedidoResp" +
             "onse")]
@@ -44,18 +30,18 @@ namespace CrewmanSystem.LineaPedidoWS {
         System.Threading.Tasks.Task<CrewmanSystem.LineaPedidoWS.actualizarLineaPedidoResponse> actualizarLineaPedidoAsync(CrewmanSystem.LineaPedidoWS.actualizarLineaPedidoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/eliminarLineaPedidoReques" +
-            "t", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/eliminarLineaPedidoRespon" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/insertarLineaPedidoReques" +
+            "t", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/insertarLineaPedidoRespon" +
             "se")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoResponse eliminarLineaPedido(CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoRequest request);
+        CrewmanSystem.LineaPedidoWS.insertarLineaPedidoResponse insertarLineaPedido(CrewmanSystem.LineaPedidoWS.insertarLineaPedidoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/eliminarLineaPedidoReques" +
-            "t", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/eliminarLineaPedidoRespon" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/insertarLineaPedidoReques" +
+            "t", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/insertarLineaPedidoRespon" +
             "se")]
-        System.Threading.Tasks.Task<CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoResponse> eliminarLineaPedidoAsync(CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoRequest request);
+        System.Threading.Tasks.Task<CrewmanSystem.LineaPedidoWS.insertarLineaPedidoResponse> insertarLineaPedidoAsync(CrewmanSystem.LineaPedidoWS.insertarLineaPedidoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/listarLineaPedidosRequest" +
@@ -70,6 +56,20 @@ namespace CrewmanSystem.LineaPedidoWS {
             "", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/listarLineaPedidosRespons" +
             "e")]
         System.Threading.Tasks.Task<CrewmanSystem.LineaPedidoWS.listarLineaPedidosResponse> listarLineaPedidosAsync(CrewmanSystem.LineaPedidoWS.listarLineaPedidosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/eliminarLineaPedidoReques" +
+            "t", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/eliminarLineaPedidoRespon" +
+            "se")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoResponse eliminarLineaPedido(CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/eliminarLineaPedidoReques" +
+            "t", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/eliminarLineaPedidoRespon" +
+            "se")]
+        System.Threading.Tasks.Task<CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoResponse> eliminarLineaPedidoAsync(CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoRequest request);
     }
     
     /// <remarks/>
@@ -3397,42 +3397,6 @@ namespace CrewmanSystem.LineaPedidoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarLineaPedido", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarLineaPedidoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.LineaPedidoWS.lineaPedido lineaPedido;
-        
-        public insertarLineaPedidoRequest() {
-        }
-        
-        public insertarLineaPedidoRequest(CrewmanSystem.LineaPedidoWS.lineaPedido lineaPedido) {
-            this.lineaPedido = lineaPedido;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarLineaPedidoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarLineaPedidoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarLineaPedidoResponse() {
-        }
-        
-        public insertarLineaPedidoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarLineaPedido", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
     public partial class actualizarLineaPedidoRequest {
         
@@ -3469,35 +3433,35 @@ namespace CrewmanSystem.LineaPedidoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarLineaPedido", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarLineaPedidoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarLineaPedido", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarLineaPedidoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idLineaPedido;
+        public CrewmanSystem.LineaPedidoWS.lineaPedido lineaPedido;
         
-        public eliminarLineaPedidoRequest() {
+        public insertarLineaPedidoRequest() {
         }
         
-        public eliminarLineaPedidoRequest(int idLineaPedido) {
-            this.idLineaPedido = idLineaPedido;
+        public insertarLineaPedidoRequest(CrewmanSystem.LineaPedidoWS.lineaPedido lineaPedido) {
+            this.lineaPedido = lineaPedido;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarLineaPedidoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarLineaPedidoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarLineaPedidoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarLineaPedidoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public eliminarLineaPedidoResponse() {
+        public insertarLineaPedidoResponse() {
         }
         
-        public eliminarLineaPedidoResponse(int @return) {
+        public insertarLineaPedidoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -3538,6 +3502,42 @@ namespace CrewmanSystem.LineaPedidoWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarLineaPedido", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarLineaPedidoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idLineaPedido;
+        
+        public eliminarLineaPedidoRequest() {
+        }
+        
+        public eliminarLineaPedidoRequest(int idLineaPedido) {
+            this.idLineaPedido = idLineaPedido;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarLineaPedidoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarLineaPedidoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarLineaPedidoResponse() {
+        }
+        
+        public eliminarLineaPedidoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface LineaPedidoWSChannel : CrewmanSystem.LineaPedidoWS.LineaPedidoWS, System.ServiceModel.IClientChannel {
     }
@@ -3566,29 +3566,6 @@ namespace CrewmanSystem.LineaPedidoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.LineaPedidoWS.insertarLineaPedidoResponse CrewmanSystem.LineaPedidoWS.LineaPedidoWS.insertarLineaPedido(CrewmanSystem.LineaPedidoWS.insertarLineaPedidoRequest request) {
-            return base.Channel.insertarLineaPedido(request);
-        }
-        
-        public int insertarLineaPedido(CrewmanSystem.LineaPedidoWS.lineaPedido lineaPedido) {
-            CrewmanSystem.LineaPedidoWS.insertarLineaPedidoRequest inValue = new CrewmanSystem.LineaPedidoWS.insertarLineaPedidoRequest();
-            inValue.lineaPedido = lineaPedido;
-            CrewmanSystem.LineaPedidoWS.insertarLineaPedidoResponse retVal = ((CrewmanSystem.LineaPedidoWS.LineaPedidoWS)(this)).insertarLineaPedido(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.LineaPedidoWS.insertarLineaPedidoResponse> CrewmanSystem.LineaPedidoWS.LineaPedidoWS.insertarLineaPedidoAsync(CrewmanSystem.LineaPedidoWS.insertarLineaPedidoRequest request) {
-            return base.Channel.insertarLineaPedidoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.LineaPedidoWS.insertarLineaPedidoResponse> insertarLineaPedidoAsync(CrewmanSystem.LineaPedidoWS.lineaPedido lineaPedido) {
-            CrewmanSystem.LineaPedidoWS.insertarLineaPedidoRequest inValue = new CrewmanSystem.LineaPedidoWS.insertarLineaPedidoRequest();
-            inValue.lineaPedido = lineaPedido;
-            return ((CrewmanSystem.LineaPedidoWS.LineaPedidoWS)(this)).insertarLineaPedidoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CrewmanSystem.LineaPedidoWS.actualizarLineaPedidoResponse CrewmanSystem.LineaPedidoWS.LineaPedidoWS.actualizarLineaPedido(CrewmanSystem.LineaPedidoWS.actualizarLineaPedidoRequest request) {
             return base.Channel.actualizarLineaPedido(request);
         }
@@ -3612,26 +3589,26 @@ namespace CrewmanSystem.LineaPedidoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoResponse CrewmanSystem.LineaPedidoWS.LineaPedidoWS.eliminarLineaPedido(CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoRequest request) {
-            return base.Channel.eliminarLineaPedido(request);
+        CrewmanSystem.LineaPedidoWS.insertarLineaPedidoResponse CrewmanSystem.LineaPedidoWS.LineaPedidoWS.insertarLineaPedido(CrewmanSystem.LineaPedidoWS.insertarLineaPedidoRequest request) {
+            return base.Channel.insertarLineaPedido(request);
         }
         
-        public int eliminarLineaPedido(int idLineaPedido) {
-            CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoRequest inValue = new CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoRequest();
-            inValue.idLineaPedido = idLineaPedido;
-            CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoResponse retVal = ((CrewmanSystem.LineaPedidoWS.LineaPedidoWS)(this)).eliminarLineaPedido(inValue);
+        public int insertarLineaPedido(CrewmanSystem.LineaPedidoWS.lineaPedido lineaPedido) {
+            CrewmanSystem.LineaPedidoWS.insertarLineaPedidoRequest inValue = new CrewmanSystem.LineaPedidoWS.insertarLineaPedidoRequest();
+            inValue.lineaPedido = lineaPedido;
+            CrewmanSystem.LineaPedidoWS.insertarLineaPedidoResponse retVal = ((CrewmanSystem.LineaPedidoWS.LineaPedidoWS)(this)).insertarLineaPedido(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoResponse> CrewmanSystem.LineaPedidoWS.LineaPedidoWS.eliminarLineaPedidoAsync(CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoRequest request) {
-            return base.Channel.eliminarLineaPedidoAsync(request);
+        System.Threading.Tasks.Task<CrewmanSystem.LineaPedidoWS.insertarLineaPedidoResponse> CrewmanSystem.LineaPedidoWS.LineaPedidoWS.insertarLineaPedidoAsync(CrewmanSystem.LineaPedidoWS.insertarLineaPedidoRequest request) {
+            return base.Channel.insertarLineaPedidoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoResponse> eliminarLineaPedidoAsync(int idLineaPedido) {
-            CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoRequest inValue = new CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoRequest();
-            inValue.idLineaPedido = idLineaPedido;
-            return ((CrewmanSystem.LineaPedidoWS.LineaPedidoWS)(this)).eliminarLineaPedidoAsync(inValue);
+        public System.Threading.Tasks.Task<CrewmanSystem.LineaPedidoWS.insertarLineaPedidoResponse> insertarLineaPedidoAsync(CrewmanSystem.LineaPedidoWS.lineaPedido lineaPedido) {
+            CrewmanSystem.LineaPedidoWS.insertarLineaPedidoRequest inValue = new CrewmanSystem.LineaPedidoWS.insertarLineaPedidoRequest();
+            inValue.lineaPedido = lineaPedido;
+            return ((CrewmanSystem.LineaPedidoWS.LineaPedidoWS)(this)).insertarLineaPedidoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3655,6 +3632,29 @@ namespace CrewmanSystem.LineaPedidoWS {
             CrewmanSystem.LineaPedidoWS.listarLineaPedidosRequest inValue = new CrewmanSystem.LineaPedidoWS.listarLineaPedidosRequest();
             inValue.idPedido = idPedido;
             return ((CrewmanSystem.LineaPedidoWS.LineaPedidoWS)(this)).listarLineaPedidosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoResponse CrewmanSystem.LineaPedidoWS.LineaPedidoWS.eliminarLineaPedido(CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoRequest request) {
+            return base.Channel.eliminarLineaPedido(request);
+        }
+        
+        public int eliminarLineaPedido(int idLineaPedido) {
+            CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoRequest inValue = new CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoRequest();
+            inValue.idLineaPedido = idLineaPedido;
+            CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoResponse retVal = ((CrewmanSystem.LineaPedidoWS.LineaPedidoWS)(this)).eliminarLineaPedido(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoResponse> CrewmanSystem.LineaPedidoWS.LineaPedidoWS.eliminarLineaPedidoAsync(CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoRequest request) {
+            return base.Channel.eliminarLineaPedidoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoResponse> eliminarLineaPedidoAsync(int idLineaPedido) {
+            CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoRequest inValue = new CrewmanSystem.LineaPedidoWS.eliminarLineaPedidoRequest();
+            inValue.idLineaPedido = idLineaPedido;
+            return ((CrewmanSystem.LineaPedidoWS.LineaPedidoWS)(this)).eliminarLineaPedidoAsync(inValue);
         }
     }
 }

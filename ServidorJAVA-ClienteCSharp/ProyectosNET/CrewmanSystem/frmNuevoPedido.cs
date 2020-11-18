@@ -14,18 +14,63 @@ namespace CrewmanSystem
 	{
         public static ClienteWS.cliente clienteSeleccionado = null;
         public static ZonaWS.ZonaWSClient daoZona;
+        public static ClienteWS.ClienteWSClient daoCliente;
         public static PedidoWS.PedidoWSClient daoPedido;
+        public static LineaPedidoWS.LineaPedidoWSClient daoLinea;
         public static ProductoXZonaWS.productoXZona productoXZonaSeleccionado = null;
         public static BindingList<LineaPedidoWS.lineaPedido> lineas;
         public static double montoTotal = 0;
-		public frmNuevoPedido()
-		{
+        string[] estadoBorrador = { "ESPERANDO", "EN_PROCESO" , "CANCELADO" };
+        string[] estadoPedido = { "EN_PROCESO", "FINALIZADO" , "CANCELADO" };
+        public static PedidoWS.pedido pedidoSeleccionado;
+        public frmNuevoPedido()
+        {
             daoZona = new ZonaWS.ZonaWSClient();
             daoPedido = new PedidoWS.PedidoWSClient();
             InitializeComponent();
+            cboEstado.DataSource = estadoBorrador;
             lineas = new BindingList<LineaPedidoWS.lineaPedido>();
             completarTabla();
+            if (frmVentanaPrincipal.nBtn == 1)
+            {
+                daoCliente = new ClienteWS.ClienteWSClient();
+                daoLinea = new LineaPedidoWS.LineaPedidoWSClient();
+                //OBTENER DATOS DE FILA SELECCIONADA
+                if (Program.pantallas[Program.pantallas.Count - 1].Formulario.Name == "frmGestionarPedidos")
+                {
+                    btnBuscarCliente.Enabled = false;
+                    cboEstado.Enabled = true;
 
+                    pedidoSeleccionado = (PedidoWS.pedido)frmGestionarPedidos.dgv.CurrentRow.DataBoundItem;
+                    txtIDOrdenVenta.Text = pedidoSeleccionado.idPedido.ToString();
+                    txtDireccion.Text = pedidoSeleccionado.direccionEntrega;
+                    clienteSeleccionado = daoCliente.obtenerCliente(pedidoSeleccionado.cliente.idCliente);
+                    clienteSeleccionado.idCliente = pedidoSeleccionado.cliente.idCliente;
+                    pedidoSeleccionado.cliente = new PedidoWS.cliente();
+                    pedidoSeleccionado.cliente.idCliente = clienteSeleccionado.idCliente;
+                    txtRucCliente.Text = clienteSeleccionado.ruc.ToString();
+                    txtRazonSocial.Text = clienteSeleccionado.razonSocial;
+                    LineaPedidoWS.lineaPedido[] auxLineas = daoLinea.listarLineaPedidos(pedidoSeleccionado.idPedido);
+                    foreach (LineaPedidoWS.lineaPedido lp in auxLineas)
+                    {
+                        lineas.Add(lp);
+                    }
+                    montoTotal = pedidoSeleccionado.montoTotal;
+                    if(pedidoSeleccionado.tipoPedido == PedidoWS.tipoPedido.BORRADOR)
+                    {
+                        cboEstado.DataSource = estadoBorrador;
+                    }
+                    else
+                    {
+                        cboEstado.DataSource = estadoPedido;
+                    }
+                }
+                else
+                {
+
+                }
+                completarTabla();
+            }
         }
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
@@ -129,9 +174,15 @@ namespace CrewmanSystem
                 MessageBox.Show("Necesita seleccionar un cliente", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (txtDireccion.Text == "")
+            {
+                MessageBox.Show("Necesita especificar la dirección de entrega", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (lineas.Count == 0)
             {
                 MessageBox.Show("Debe añadir al menos un producto", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
             frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
             if (formInsertar.ShowDialog() == DialogResult.OK)
@@ -156,9 +207,34 @@ namespace CrewmanSystem
                     pedido.lineasPedidos[cont].productoXZona.idProductoXZona = lp.productoXZona.idProductoXZona;
                     cont++;
                 }
-                int idPedido = daoPedido.insertarPedido(pedido);
-                pedido.idPedido = idPedido;
-                txtIDOrdenVenta.Text = idPedido.ToString();
+                if (frmVentanaPrincipal.nBtn == 1)
+                {
+                    pedido.idPedido = pedidoSeleccionado.idPedido;
+                    switch (cboEstado.Text)
+                    {
+                        case "EN_PROCESO":
+                            pedido.estadoPedido = PedidoWS.estadoPedido.EN_PROCESO;
+                            break;
+                        case "CANCELADO":
+                            pedido.estadoPedido = PedidoWS.estadoPedido.CANCELADO;
+                            break;
+                        case "FINALIZADO":
+                            pedido.estadoPedido = PedidoWS.estadoPedido.FINALIZADO;
+                            break;
+                    }
+                    daoPedido.actualizarPedido(pedido);
+                    if(pedido.tipoPedido == PedidoWS.tipoPedido.BORRADOR && pedido.estadoPedido == PedidoWS.estadoPedido.EN_PROCESO)
+                    {
+                        MessageBox.Show("Aprobación no implementada", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //daoPedido.aprobarBorrador(pedido);
+                    }
+                }
+                else
+                {
+                    int idPedido = daoPedido.insertarPedido(pedido);
+                    pedido.idPedido = idPedido;
+                    txtIDOrdenVenta.Text = idPedido.ToString();
+                }
             }
         }
     }

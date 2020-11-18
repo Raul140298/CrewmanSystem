@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import pe.edu.pucp.CrewmanSystem.model.Producto;
 import pe.edu.pucp.CrewmanSystem.model.ProductoXZona;
 import pe.edu.pucp.CrewmanSystem.model.PromocionXProducto;
 
@@ -109,7 +110,11 @@ public class LineaPedidoMySQL implements LineaPedidoDAO{
                 lp.setIdLineaPedido(rs.getInt("ID_LINEA_PEDIDO"));
                 ProductoXZona pz=new ProductoXZona();
                 pz.setIdProductoXZona(rs.getInt("ID_PRODUCTOXZONA"));
+                pz.setPrecioReal(rs.getDouble("PRECIOREAL"));
                 lp.setProductoXZona(pz);
+                Producto p = new Producto();
+                p.setNombre(rs.getString("NOMBRE"));
+                lp.getProductoXZona().setProducto(p);
                 PromocionXProducto pp= new PromocionXProducto();
                 lp.setCantidadPromo(rs.getInt("CANTIDAD_PROMO"));
                 if(lp.getCantidadPromo()!=0)pp.setIdPromocionXProducto(rs.getInt("ID_PROMOCIONXPRODUCTO"));

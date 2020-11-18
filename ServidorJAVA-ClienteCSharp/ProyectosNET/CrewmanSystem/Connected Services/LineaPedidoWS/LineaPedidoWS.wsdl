@@ -5,23 +5,17 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/LineaPedidoWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="insertarLineaPedido">
-    <part name="parameters" element="tns:insertarLineaPedido" />
-  </message>
-  <message name="insertarLineaPedidoResponse">
-    <part name="parameters" element="tns:insertarLineaPedidoResponse" />
-  </message>
   <message name="actualizarLineaPedido">
     <part name="parameters" element="tns:actualizarLineaPedido" />
   </message>
   <message name="actualizarLineaPedidoResponse">
     <part name="parameters" element="tns:actualizarLineaPedidoResponse" />
   </message>
-  <message name="eliminarLineaPedido">
-    <part name="parameters" element="tns:eliminarLineaPedido" />
+  <message name="insertarLineaPedido">
+    <part name="parameters" element="tns:insertarLineaPedido" />
   </message>
-  <message name="eliminarLineaPedidoResponse">
-    <part name="parameters" element="tns:eliminarLineaPedidoResponse" />
+  <message name="insertarLineaPedidoResponse">
+    <part name="parameters" element="tns:insertarLineaPedidoResponse" />
   </message>
   <message name="listarLineaPedidos">
     <part name="parameters" element="tns:listarLineaPedidos" />
@@ -29,35 +23,32 @@
   <message name="listarLineaPedidosResponse">
     <part name="parameters" element="tns:listarLineaPedidosResponse" />
   </message>
+  <message name="eliminarLineaPedido">
+    <part name="parameters" element="tns:eliminarLineaPedido" />
+  </message>
+  <message name="eliminarLineaPedidoResponse">
+    <part name="parameters" element="tns:eliminarLineaPedidoResponse" />
+  </message>
   <portType name="LineaPedidoWS">
-    <operation name="insertarLineaPedido">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/insertarLineaPedidoRequest" message="tns:insertarLineaPedido" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/insertarLineaPedidoResponse" message="tns:insertarLineaPedidoResponse" />
-    </operation>
     <operation name="actualizarLineaPedido">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/actualizarLineaPedidoRequest" message="tns:actualizarLineaPedido" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/actualizarLineaPedidoResponse" message="tns:actualizarLineaPedidoResponse" />
     </operation>
-    <operation name="eliminarLineaPedido">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/eliminarLineaPedidoRequest" message="tns:eliminarLineaPedido" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/eliminarLineaPedidoResponse" message="tns:eliminarLineaPedidoResponse" />
+    <operation name="insertarLineaPedido">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/insertarLineaPedidoRequest" message="tns:insertarLineaPedido" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/insertarLineaPedidoResponse" message="tns:insertarLineaPedidoResponse" />
     </operation>
     <operation name="listarLineaPedidos">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/listarLineaPedidosRequest" message="tns:listarLineaPedidos" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/listarLineaPedidosResponse" message="tns:listarLineaPedidosResponse" />
     </operation>
+    <operation name="eliminarLineaPedido">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/eliminarLineaPedidoRequest" message="tns:eliminarLineaPedido" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaPedidoWS/eliminarLineaPedidoResponse" message="tns:eliminarLineaPedidoResponse" />
+    </operation>
   </portType>
   <binding name="LineaPedidoWSPortBinding" type="tns:LineaPedidoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarLineaPedido">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="actualizarLineaPedido">
       <soap:operation soapAction="" />
       <input>
@@ -67,7 +58,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarLineaPedido">
+    <operation name="insertarLineaPedido">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -77,6 +68,15 @@
       </output>
     </operation>
     <operation name="listarLineaPedidos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarLineaPedido">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
