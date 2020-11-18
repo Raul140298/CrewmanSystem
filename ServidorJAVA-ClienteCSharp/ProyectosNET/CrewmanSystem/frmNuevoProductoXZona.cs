@@ -122,7 +122,6 @@ namespace CrewmanSystem
             nuevoProductoXZona.precioReal = Convert.ToDouble(txtPrecioReal.Text); 
 
             misProductoXZona.Add(nuevoProductoXZona);
-            cargarTabla();
             txtNombreProducto.Text = "";
             txtPrecioReal.Text = "";
             txtUnidades.Text = "";
@@ -138,8 +137,9 @@ namespace CrewmanSystem
                 return;
             }
             int indice = dgvProducto.CurrentRow.Index;
+            dgvProducto.DataSource = new BindingList<ProductoWS.producto>();
             misProductoXZona.RemoveAt(indice);
-            cargarTabla();
+            dgvProducto.DataSource = misProductoXZona;
         }
 
         private void cargarTabla()

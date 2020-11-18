@@ -22,7 +22,7 @@ namespace CrewmanSystem
 			ZonaWS.zona[] misZonas = daoZona.listarZonas();
 			ZonaWS.zona vacio = new ZonaWS.zona();
 			vacio.idZona = 0;
-			vacio.nombre = "---------";
+			vacio.nombre = "Cualquiera";
 			ZonaWS.zona[] vacioA = { vacio };
 			BindingList<ZonaWS.zona> listaZonas;
 			if (misZonas != null) listaZonas = new BindingList<ZonaWS.zona>(vacioA.Concat(misZonas).ToArray());

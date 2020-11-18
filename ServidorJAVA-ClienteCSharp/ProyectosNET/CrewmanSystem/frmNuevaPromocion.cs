@@ -229,7 +229,6 @@ namespace CrewmanSystem
             nuevoPromocionXProducto.stock = Convert.ToInt32(txtStock.Text);
 
             misPromocionXProducto.Add(nuevoPromocionXProducto);
-            cargarTabla();
             txtDescuento.Text = "";
             txtStock.Text = "";
             txtPrecioReal.Text = "";
@@ -248,7 +247,6 @@ namespace CrewmanSystem
             dgvPromocionXProducto.DataSource = new BindingList<PromocionXProductoWS.promocionXProducto>();
             misPromocionXProducto.RemoveAt(indice);
             dgvPromocionXProducto.DataSource = misPromocionXProducto;
-            cargarTabla();
         }
 
         private void cargarTabla()
