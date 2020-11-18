@@ -28,51 +28,45 @@ namespace CrewmanSystem
             cboMarca.DataSource = new BindingList<MarcaWS.marca>(daoMarca.listarMarcas().ToArray());
             cboMarca.ValueMember = "idMarca";
             cboMarca.DisplayMember = "nombre";
+            
             FamiliaWS.familia[] misFamilias = daoFamilia.listarFamilias();
             cboUnidades.DataSource = unidades;
             if (misFamilias != null)
-            {
-                cboFamilia.DataSource = new BindingList<FamiliaWS.familia>(misFamilias.ToArray());
-                cboFamilia.ValueMember = "idFamilia";
-                cboFamilia.DisplayMember = "descripcion";
-                
-            }
+                cboFamilia.DataSource = new BindingList<FamiliaWS.familia>(misFamilias);
+            else
+                cboFamilia.DataSource = new BindingList<FamiliaWS.familia>();
+            cboFamilia.ValueMember = "idFamilia";
+            cboFamilia.DisplayMember = "descripcion";
+            
             if (frmVentanaPrincipal.nBtn == 1)
             {   //OBTNER DATOS DE FILA SELECCIONADA
-                if (Program.pantallas[Program.pantallas.Count-1].Formulario.Name == "frmGestionarProductos")
+                ProductoWS.producto miProducto = new ProductoWS.producto();
+
+                if (Program.pantallas[Program.pantallas.Count - 1].Formulario.Name == "frmGestionarProductos")
                 {
                     frmGestionarProductos.productoSeleccionado = (ProductoWS.producto)frmGestionarProductos.dgv.CurrentRow.DataBoundItem;
-                    txtId.Text = frmGestionarProductos.productoSeleccionado.idProducto.ToString();
-                    txtNombre.Text = frmGestionarProductos.productoSeleccionado.nombre;
-                    cboFamilia.SelectedValue = frmGestionarProductos.productoSeleccionado.subFamilia.familia.idFamilia;
-                    cboSubfamilia.SelectedValue = frmGestionarProductos.productoSeleccionado.subFamilia.idSubFamilia;
-                    cboMarca.SelectedValue = frmGestionarProductos.productoSeleccionado.marca.idMarca;
-                    cboUnidades.SelectedItem = frmGestionarProductos.productoSeleccionado.unidades;
-                    txtCantidad.Text = frmGestionarProductos.productoSeleccionado.cantUnidad.ToString();
-                    txtPrecioSugerido.Text = frmGestionarProductos.productoSeleccionado.precioSugerido.ToString();
-                    txtStock.Text = frmGestionarProductos.productoSeleccionado.stock.ToString();
-
-                    cboFamilia.Enabled = false;
-                    cboSubfamilia.Enabled = false;
-                    cboMarca.Enabled = false;
+                    miProducto = frmGestionarProductos.productoSeleccionado;
                 }
                 else
                 {
                     frmBuscarProducto.productoSeleccionado = (ProductoWS.producto)frmBuscarProducto.dgv.CurrentRow.DataBoundItem;
-                    txtId.Text = frmBuscarProducto.productoSeleccionado.idProducto.ToString();
-                    txtNombre.Text = frmBuscarProducto.productoSeleccionado.nombre;
-                    cboFamilia.SelectedValue = frmBuscarProducto.productoSeleccionado.subFamilia.familia.idFamilia;
-                    cboSubfamilia.SelectedValue = frmBuscarProducto.productoSeleccionado.subFamilia.idSubFamilia;
-                    cboMarca.SelectedValue = frmBuscarProducto.productoSeleccionado.marca.idMarca;
-                    cboUnidades.SelectedItem = frmBuscarProducto.productoSeleccionado.unidades;
-                    txtCantidad.Text = frmBuscarProducto.productoSeleccionado.cantUnidad.ToString();
-                    txtPrecioSugerido.Text = frmBuscarProducto.productoSeleccionado.precioSugerido.ToString();
-                    txtStock.Text = frmBuscarProducto.productoSeleccionado.stock.ToString();
-
-                    cboFamilia.Enabled = false;
-                    cboSubfamilia.Enabled = false;
-                    cboMarca.Enabled = false;
+                    miProducto = frmBuscarProducto.productoSeleccionado;
                 }
+                txtId.Text = miProducto.idProducto.ToString();
+                txtNombre.Text = miProducto.nombre;
+                cboFamilia.SelectedValue = miProducto.subFamilia.familia.idFamilia;
+                cboSubfamilia.SelectedValue = miProducto.subFamilia.idSubFamilia;
+                cboMarca.SelectedValue = miProducto.marca.idMarca;
+                cboUnidades.SelectedItem = miProducto.unidades;
+                txtCantidad.Text = miProducto.cantUnidad.ToString();
+                txtPrecioSugerido.Text = miProducto.precioSugerido.ToString();
+                txtStock.Text = miProducto.stock.ToString();
+                txtStockReservado.Text = miProducto.stockReservado.ToString();
+
+                cboFamilia.Enabled = false;
+                cboSubfamilia.Enabled = false;
+                cboMarca.Enabled = false;
+                txtStockReservado.Enabled = false;
             }
         }
 

@@ -49,12 +49,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtStockReservado = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txtStockReservado);
             this.panel2.Controls.Add(this.txtStock);
             this.panel2.Controls.Add(this.txtCantidad);
             this.panel2.Controls.Add(this.cboUnidades);
@@ -66,15 +69,15 @@
             this.panel2.Controls.Add(this.txtNombre);
             this.panel2.Controls.Add(this.txtId);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(157, 0);
+            this.panel2.Location = new System.Drawing.Point(184, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(462, 594);
+            this.panel2.Size = new System.Drawing.Size(435, 594);
             this.panel2.TabIndex = 5;
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(3, 397);
+            this.txtStock.Location = new System.Drawing.Point(5, 397);
             this.txtStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(280, 22);
@@ -122,10 +125,10 @@
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(3, 453);
+            this.btnGuardar.Location = new System.Drawing.Point(6, 478);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(160, 39);
+            this.btnGuardar.Size = new System.Drawing.Size(160, 30);
             this.btnGuardar.TabIndex = 50;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -167,11 +170,12 @@
             this.txtId.Location = new System.Drawing.Point(5, 38);
             this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(47, 22);
+            this.txtId.Size = new System.Drawing.Size(98, 22);
             this.txtId.TabIndex = 17;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
@@ -185,13 +189,13 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(157, 594);
+            this.panel1.Size = new System.Drawing.Size(184, 594);
             this.panel1.TabIndex = 4;
             // 
             // label7
             // 
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Location = new System.Drawing.Point(-6, 397);
+            this.label7.Location = new System.Drawing.Point(18, 397);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(157, 22);
             this.label7.TabIndex = 54;
@@ -201,7 +205,7 @@
             // label6
             // 
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Location = new System.Drawing.Point(-5, 316);
+            this.label6.Location = new System.Drawing.Point(18, 316);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(157, 22);
             this.label6.TabIndex = 53;
@@ -211,7 +215,7 @@
             // label5
             // 
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Location = new System.Drawing.Point(-5, 267);
+            this.label5.Location = new System.Drawing.Point(18, 269);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(157, 22);
             this.label5.TabIndex = 52;
@@ -221,7 +225,7 @@
             // label4
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Location = new System.Drawing.Point(0, 219);
+            this.label4.Location = new System.Drawing.Point(18, 219);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(157, 22);
             this.label4.TabIndex = 51;
@@ -231,7 +235,7 @@
             // lblPrecioSugerido
             // 
             this.lblPrecioSugerido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblPrecioSugerido.Location = new System.Drawing.Point(-5, 358);
+            this.lblPrecioSugerido.Location = new System.Drawing.Point(18, 358);
             this.lblPrecioSugerido.Name = "lblPrecioSugerido";
             this.lblPrecioSugerido.Size = new System.Drawing.Size(157, 22);
             this.lblPrecioSugerido.TabIndex = 50;
@@ -241,7 +245,7 @@
             // label3
             // 
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(0, 171);
+            this.label3.Location = new System.Drawing.Point(18, 171);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(157, 22);
             this.label3.TabIndex = 49;
@@ -251,7 +255,7 @@
             // label2
             // 
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Location = new System.Drawing.Point(1, 125);
+            this.label2.Location = new System.Drawing.Point(18, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 22);
             this.label2.TabIndex = 48;
@@ -261,7 +265,7 @@
             // label1
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Location = new System.Drawing.Point(0, 79);
+            this.label1.Location = new System.Drawing.Point(18, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 22);
             this.label1.TabIndex = 47;
@@ -271,12 +275,30 @@
             // lblID
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Location = new System.Drawing.Point(3, 38);
+            this.lblID.Location = new System.Drawing.Point(20, 38);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(155, 22);
             this.lblID.TabIndex = 46;
             this.lblID.Text = "Id :";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label8
+            // 
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Location = new System.Drawing.Point(18, 437);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(157, 22);
+            this.label8.TabIndex = 55;
+            this.label8.Text = "Stock Reservado :";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtStockReservado
+            // 
+            this.txtStockReservado.Location = new System.Drawing.Point(5, 437);
+            this.txtStockReservado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtStockReservado.Name = "txtStockReservado";
+            this.txtStockReservado.Size = new System.Drawing.Size(280, 22);
+            this.txtStockReservado.TabIndex = 57;
             // 
             // frmNuevoProducto
             // 
@@ -318,5 +340,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtStockReservado;
+        private System.Windows.Forms.Label label8;
     }
 }

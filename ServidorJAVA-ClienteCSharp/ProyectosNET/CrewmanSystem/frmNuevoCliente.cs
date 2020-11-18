@@ -23,61 +23,46 @@ namespace CrewmanSystem
             cboZona.DataSource = new BindingList<ZonaWS.zona>(daoZona.listarZonas().ToArray());
             cboZona.ValueMember = "idZona";
             cboZona.DisplayMember = "nombre";
-            
+
+            ClienteWS.cliente miCliente = new ClienteWS.cliente();
             if (frmVentanaPrincipal.nBtn == 1)
-            {   //OBTNER DATOS DE FILA SELECCIONADA
+            {
+                //OBTNER DATOS DE FILA SELECCIONADA
                 if (Program.pantallas[Program.pantallas.Count - 1].Formulario.Name == "frmGestionarClientes")
                 {
                     frmGestionarClientes.clienteSeleccionado = (ClienteWS.cliente)frmGestionarClientes.dgv.CurrentRow.DataBoundItem;
-                    txtIdC.Text = frmGestionarClientes.clienteSeleccionado.idCliente.ToString();
-                    txtRuc.Text = frmGestionarClientes.clienteSeleccionado.ruc.ToString();
-                    txtRazonSocial.Text = frmGestionarClientes.clienteSeleccionado.razonSocial;
-                    txtGrupo.Text = frmGestionarClientes.clienteSeleccionado.grupo;
-                    txtDireccion.Text = frmGestionarClientes.clienteSeleccionado.direccion;
-                    cboZona.SelectedValue = frmGestionarClientes.clienteSeleccionado.zona.idZona;
-                    dtpFechaInicio.Value = frmGestionarClientes.clienteSeleccionado.fechaRegistro;
-
-                    //PERSONA CONTACTO
-                    PersonaContactoWS.personaContacto personaC = new PersonaContactoWS.personaContacto();
-
-                    personaC.idPersonaContacto = frmGestionarClientes.clienteSeleccionado.personaContacto.idPersonaContacto;
-                    personaC = daoPersonaContacto.mostrarPersonaContacto(personaC.idPersonaContacto);
-
-                    txtIdPC.Text = personaC.idPersonaContacto.ToString();
-                    txtDNI.Text = personaC.dni.ToString();
-                    txtNombre.Text = personaC.nombre;
-                    txtApMaterno.Text = personaC.apellidoMaterno;
-                    txtApPaterno.Text = personaC.apellidoPaterno;
-                    txtTelefono1.Text = personaC.telefono1.ToString();
-                    txtTelefono2.Text = personaC.telefono2.ToString();
-                    txtCorreo.Text = personaC.correo.ToString();
+                    miCliente = frmGestionarClientes.clienteSeleccionado;
                 }
                 else
                 {
                     frmBuscarCliente.clienteSeleccionado = (ClienteWS.cliente)frmBuscarCliente.dgv.CurrentRow.DataBoundItem;
-                    txtIdC.Text = frmBuscarCliente.clienteSeleccionado.idCliente.ToString();
-                    txtRuc.Text = frmBuscarCliente.clienteSeleccionado.ruc.ToString();
-                    txtRazonSocial.Text = frmBuscarCliente.clienteSeleccionado.razonSocial;
-                    txtGrupo.Text = frmBuscarCliente.clienteSeleccionado.grupo;
-                    txtDireccion.Text = frmBuscarCliente.clienteSeleccionado.direccion;
-                    cboZona.SelectedValue = frmBuscarCliente.clienteSeleccionado.zona.idZona;
-                    dtpFechaInicio.Value = frmBuscarCliente.clienteSeleccionado.fechaRegistro;
-
-                    //PERSONA CONTACTO
-                    PersonaContactoWS.personaContacto personaC = new PersonaContactoWS.personaContacto();
-
-                    personaC.idPersonaContacto = frmBuscarCliente.clienteSeleccionado.personaContacto.idPersonaContacto;
-                    personaC = daoPersonaContacto.mostrarPersonaContacto(personaC.idPersonaContacto);
-
-                    txtIdPC.Text = personaC.idPersonaContacto.ToString();
-                    txtDNI.Text = personaC.dni.ToString();
-                    txtNombre.Text = personaC.nombre;
-                    txtApMaterno.Text = personaC.apellidoMaterno;
-                    txtApPaterno.Text = personaC.apellidoPaterno;
-                    txtTelefono1.Text = personaC.telefono1.ToString();
-                    txtTelefono2.Text = personaC.telefono2.ToString();
-                    txtCorreo.Text = personaC.correo.ToString();
+                    miCliente = frmBuscarCliente.clienteSeleccionado;
                 }
+
+                txtIdC.Text = miCliente.idCliente.ToString();
+                txtRuc.Text = miCliente.ruc.ToString();
+                txtRazonSocial.Text = miCliente.razonSocial;
+                txtGrupo.Text = miCliente.grupo;
+                txtDireccion.Text = miCliente.direccion;
+                cboZona.SelectedValue = miCliente.zona.idZona;
+                dtpFechaInicio.Value = miCliente.fechaRegistro;
+
+                //PERSONA CONTACTO
+                PersonaContactoWS.personaContacto personaC = new PersonaContactoWS.personaContacto();
+
+                personaC.idPersonaContacto = miCliente.personaContacto.idPersonaContacto;
+                personaC = daoPersonaContacto.mostrarPersonaContacto(personaC.idPersonaContacto);
+
+                txtIdPC.Text = personaC.idPersonaContacto.ToString();
+                txtDNI.Text = personaC.dni.ToString();
+                txtNombre.Text = personaC.nombre;
+                txtApMaterno.Text = personaC.apellidoMaterno;
+                txtApPaterno.Text = personaC.apellidoPaterno;
+                txtTelefono1.Text = personaC.telefono1.ToString();
+                txtTelefono2.Text = personaC.telefono2.ToString();
+                txtCorreo.Text = personaC.correo.ToString();
+                txtRuc.Enabled = false;
+                txtDNI.Enabled = false;
             }
         }
 
@@ -90,8 +75,8 @@ namespace CrewmanSystem
                     TextBox textBox = c as TextBox;
                     if (textBox.Text == string.Empty && textBox.Name != "txtIdC")
                     {
-                        MessageBox.Show("Falta llenar los datos de " +
-                            textBox.Name.Substring(3));
+                        MessageBox.Show("Falta llenar los datos de " + textBox.Name.Substring(3),
+                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     else
@@ -100,8 +85,8 @@ namespace CrewmanSystem
                         {
                             if (!textBox.Text.All(Char.IsDigit))
                             {
-                                MessageBox.Show("Los datos de " +
-                                textBox.Name.Substring(3) + " solo pueden contener dígitos");
+                                MessageBox.Show("Los datos de " + textBox.Name.Substring(3) + " solo pueden contener dígitos",
+                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
                         }
@@ -110,8 +95,8 @@ namespace CrewmanSystem
                             String txtNombreAux = string.Join("", textBox.Text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
                             if (!txtNombreAux.Trim().All(Char.IsLetter))
                             {
-                                MessageBox.Show("Los datos de " +
-                                    textBox.Name.Substring(3) + " solo pueden contener letras");
+                                MessageBox.Show("Los datos de " +textBox.Name.Substring(3) + " solo pueden contener letras",
+                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
                         }
@@ -122,8 +107,8 @@ namespace CrewmanSystem
                     ComboBox cmbBox = c as ComboBox;
                     if (cmbBox.SelectedIndex == -1)
                     {
-                        MessageBox.Show("Falta llenar los datos de " +
-                            cmbBox.Name.Substring(3));
+                        MessageBox.Show("Falta llenar los datos de " +cmbBox.Name.Substring(3),
+                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                 }
@@ -136,8 +121,8 @@ namespace CrewmanSystem
                     TextBox textBox = c as TextBox;
                     if (textBox.Text == string.Empty && textBox.Name != "txtIdPC")
                     {
-                        MessageBox.Show("Falta llenar los datos de " +
-                            textBox.Name.Substring(3));
+                        MessageBox.Show("Falta llenar los datos de " +textBox.Name.Substring(3),
+                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     else
@@ -146,8 +131,8 @@ namespace CrewmanSystem
                         {
                             if (!textBox.Text.All(Char.IsDigit))
                             {
-                                MessageBox.Show("Los datos de " +
-                                textBox.Name.Substring(3) + " solo pueden contener dígitos");
+                                MessageBox.Show("Los datos de " +textBox.Name.Substring(3) + " solo pueden contener dígitos",
+                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
                         }
@@ -156,8 +141,8 @@ namespace CrewmanSystem
                             String txtNombreAux = string.Join("", textBox.Text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
                             if (!txtNombreAux.Trim().All(Char.IsLetter))
                             {
-                                MessageBox.Show("Los datos de " +
-                                    textBox.Name.Substring(3) + " solo pueden contener letras");
+                                MessageBox.Show("Los datos de " +textBox.Name.Substring(3) + " solo pueden contener letras",
+                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
                         }

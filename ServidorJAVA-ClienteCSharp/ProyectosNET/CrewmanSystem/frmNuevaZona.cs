@@ -19,7 +19,8 @@ namespace CrewmanSystem
 			daoZona = new ZonaWS.ZonaWSClient();
 			InitializeComponent();
 			if (frmVentanaPrincipal.nBtn == 1)
-			{   //OBTNER DATOS DE FILA SELECCIONADA
+			{   
+				//OBTNER DATOS DE FILA SELECCIONADA
 				frmGestionarZonas.zonaSeleccionada = (ZonaWS.zona)frmGestionarZonas.dgv.CurrentRow.DataBoundItem;
 				txtId.Text = frmGestionarZonas.zonaSeleccionada.idZona.ToString();
 				txtNombre.Text = frmGestionarZonas.zonaSeleccionada.nombre;

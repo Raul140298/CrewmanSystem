@@ -177,7 +177,7 @@
             // label2
             // 
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Location = new System.Drawing.Point(0, 103);
+            this.label2.Location = new System.Drawing.Point(0, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 22);
             this.label2.TabIndex = 61;
@@ -187,7 +187,7 @@
             // label1
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Location = new System.Drawing.Point(0, 58);
+            this.label1.Location = new System.Drawing.Point(0, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 22);
             this.label1.TabIndex = 60;
@@ -197,7 +197,7 @@
             // lblID
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Location = new System.Drawing.Point(3, 13);
+            this.lblID.Location = new System.Drawing.Point(3, 24);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(163, 22);
             this.lblID.TabIndex = 59;
@@ -210,7 +210,7 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(488, 9);
+            this.btnBuscar.Location = new System.Drawing.Point(488, 20);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(144, 30);
             this.btnBuscar.TabIndex = 58;
@@ -220,21 +220,21 @@
             // 
             // dtpFechaFIn
             // 
-            this.dtpFechaFIn.Location = new System.Drawing.Point(172, 103);
+            this.dtpFechaFIn.Location = new System.Drawing.Point(172, 114);
             this.dtpFechaFIn.Name = "dtpFechaFIn";
             this.dtpFechaFIn.Size = new System.Drawing.Size(281, 22);
             this.dtpFechaFIn.TabIndex = 56;
             // 
             // dtpFechaInicio
             // 
-            this.dtpFechaInicio.Location = new System.Drawing.Point(172, 58);
+            this.dtpFechaInicio.Location = new System.Drawing.Point(172, 69);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(281, 22);
             this.dtpFechaInicio.TabIndex = 55;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(172, 13);
+            this.txtNombre.Location = new System.Drawing.Point(172, 24);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(281, 22);
             this.txtNombre.TabIndex = 46;

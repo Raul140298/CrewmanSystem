@@ -17,7 +17,8 @@ namespace CrewmanSystem
 		{
 			InitializeComponent();
             if (frmVentanaPrincipal.nBtn == 1)
-            {   //OBTNER DATOS DE FILA SELECCIONADA
+            {   
+                //OBTENER DATOS DE FILA SELECCIONADA
                 frmGestionarMarcas.marcaSeleccionada = (MarcaWS.marca)frmGestionarMarcas.dgv.CurrentRow.DataBoundItem;
                 txtId.Text = frmGestionarMarcas.marcaSeleccionada.idMarca.ToString();
                 txtNombre.Text = frmGestionarMarcas.marcaSeleccionada.nombre;

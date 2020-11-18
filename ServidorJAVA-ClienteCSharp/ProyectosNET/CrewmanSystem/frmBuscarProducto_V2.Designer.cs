@@ -88,7 +88,7 @@
             this.dgvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProductos.EnableHeadersVisualStyles = false;
             this.dgvProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.dgvProductos.Location = new System.Drawing.Point(0, 100);
+            this.dgvProductos.Location = new System.Drawing.Point(0, 117);
             this.dgvProductos.MultiSelect = false;
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
@@ -108,7 +108,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductos.RowTemplate.Height = 24;
-            this.dgvProductos.Size = new System.Drawing.Size(975, 476);
+            this.dgvProductos.Size = new System.Drawing.Size(975, 459);
             this.dgvProductos.TabIndex = 48;
             this.dgvProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProductos_CellFormatting);
             // 
@@ -205,7 +205,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(975, 100);
+            this.panel1.Size = new System.Drawing.Size(975, 117);
             this.panel1.TabIndex = 47;
             // 
             // btnSeleccionar
@@ -214,7 +214,7 @@
             this.btnSeleccionar.FlatAppearance.BorderSize = 0;
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.Location = new System.Drawing.Point(707, 48);
+            this.btnSeleccionar.Location = new System.Drawing.Point(709, 64);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(144, 30);
             this.btnSeleccionar.TabIndex = 63;
@@ -225,7 +225,7 @@
             // label5
             // 
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Location = new System.Drawing.Point(11, 12);
+            this.label5.Location = new System.Drawing.Point(13, 28);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 22);
             this.label5.TabIndex = 62;
@@ -235,7 +235,7 @@
             // label4
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Location = new System.Drawing.Point(384, 12);
+            this.label4.Location = new System.Drawing.Point(386, 28);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 22);
             this.label4.TabIndex = 61;
@@ -245,7 +245,7 @@
             // label3
             // 
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(11, 52);
+            this.label3.Location = new System.Drawing.Point(13, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 22);
             this.label3.TabIndex = 60;
@@ -255,7 +255,7 @@
             // lblID
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Location = new System.Drawing.Point(366, 52);
+            this.lblID.Location = new System.Drawing.Point(368, 68);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(103, 22);
             this.lblID.TabIndex = 59;
@@ -268,7 +268,7 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(707, 8);
+            this.btnBuscar.Location = new System.Drawing.Point(709, 24);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(144, 30);
             this.btnBuscar.TabIndex = 54;
@@ -278,28 +278,28 @@
             // 
             // txtSubfamilia
             // 
-            this.txtSubfamilia.Location = new System.Drawing.Point(475, 52);
+            this.txtSubfamilia.Location = new System.Drawing.Point(477, 68);
             this.txtSubfamilia.Name = "txtSubfamilia";
             this.txtSubfamilia.Size = new System.Drawing.Size(189, 22);
             this.txtSubfamilia.TabIndex = 53;
             // 
             // txtFamilia
             // 
-            this.txtFamilia.Location = new System.Drawing.Point(157, 52);
+            this.txtFamilia.Location = new System.Drawing.Point(159, 68);
             this.txtFamilia.Name = "txtFamilia";
             this.txtFamilia.Size = new System.Drawing.Size(189, 22);
             this.txtFamilia.TabIndex = 51;
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(475, 12);
+            this.txtMarca.Location = new System.Drawing.Point(477, 28);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(189, 22);
             this.txtMarca.TabIndex = 49;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(157, 12);
+            this.txtNombre.Location = new System.Drawing.Point(159, 28);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(189, 22);
             this.txtNombre.TabIndex = 46;
