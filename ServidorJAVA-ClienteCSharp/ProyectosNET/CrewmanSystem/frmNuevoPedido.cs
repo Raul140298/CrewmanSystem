@@ -122,7 +122,7 @@ namespace CrewmanSystem
             {
                 Int32.Parse(txtCantidad.Text);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("La cantidad ingresada no es valida", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
