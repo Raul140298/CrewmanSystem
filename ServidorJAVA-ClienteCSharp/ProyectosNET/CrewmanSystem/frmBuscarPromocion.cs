@@ -88,5 +88,14 @@ namespace CrewmanSystem
 			promocionSeleccionada = (PromocionWS.promocion)dgv.CurrentRow.DataBoundItem;
 			daoPromocion.eliminarPromocion(promocionSeleccionada.idPromocion);
 		}
-	}
+
+        private void dgvPromociones_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+			promocionSeleccionada = (PromocionWS.promocion)dgv.CurrentRow.DataBoundItem;
+			frmMostrarPromocion formMostrarPromocion = new frmMostrarPromocion(promocionSeleccionada);
+			if (formMostrarPromocion.ShowDialog() == DialogResult.OK)
+			{
+			}
+		}
+    }
 }

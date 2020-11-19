@@ -66,7 +66,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textID = new System.Windows.Forms.TextBox();
+            this.txtIdContacto = new System.Windows.Forms.TextBox();
             this.contextMenuStrip2.SuspendLayout();
             this.tbcCliente.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -299,7 +299,7 @@
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.txtNombre);
             this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.textID);
+            this.panel3.Controls.Add(this.txtIdContacto);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
@@ -449,14 +449,14 @@
             this.label14.Text = "Id :";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textID
+            // txtIdContacto
             // 
-            this.textID.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textID.Enabled = false;
-            this.textID.Location = new System.Drawing.Point(167, 18);
-            this.textID.Name = "textID";
-            this.textID.Size = new System.Drawing.Size(129, 22);
-            this.textID.TabIndex = 84;
+            this.txtIdContacto.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtIdContacto.Enabled = false;
+            this.txtIdContacto.Location = new System.Drawing.Point(167, 18);
+            this.txtIdContacto.Name = "txtIdContacto";
+            this.txtIdContacto.Size = new System.Drawing.Size(129, 22);
+            this.txtIdContacto.TabIndex = 84;
             // 
             // frmMostrarCliente
             // 
@@ -466,6 +466,7 @@
             this.Controls.Add(this.tbcCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmMostrarCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalle del Cliente";
             this.contextMenuStrip2.ResumeLayout(false);
             this.tbcCliente.ResumeLayout(false);
@@ -506,7 +507,7 @@
         private System.Windows.Forms.TextBox txtApMaterno;
         private System.Windows.Forms.TextBox txtApPaterno;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox textID;
+        private System.Windows.Forms.TextBox txtIdContacto;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
