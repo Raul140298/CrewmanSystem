@@ -39,7 +39,6 @@ namespace CrewmanSystem
                 if (Program.pantallas[Program.pantallas.Count - 1].Formulario.Name == "frmGestionarPedidos")
                 {
                     btnBuscarCliente.Enabled = false;
-                    cboEstado.Enabled = true;
 
                     pedidoSeleccionado = (PedidoWS.pedido)frmGestionarPedidos.dgv.CurrentRow.DataBoundItem;
                     txtIDOrdenVenta.Text = pedidoSeleccionado.idPedido.ToString();
@@ -54,15 +53,6 @@ namespace CrewmanSystem
                     foreach (LineaPedidoWS.lineaPedido lp in auxLineas)
                     {
                         lineas.Add(lp);
-                    }
-                    montoTotal = pedidoSeleccionado.montoTotal;
-                    if(pedidoSeleccionado.tipoPedido == PedidoWS.tipoPedido.BORRADOR)
-                    {
-                        cboEstado.DataSource = estadoBorrador;
-                    }
-                    else
-                    {
-                        cboEstado.DataSource = estadoPedido;
                     }
                 }
                 else
@@ -210,24 +200,7 @@ namespace CrewmanSystem
                 if (frmVentanaPrincipal.nBtn == 1)
                 {
                     pedido.idPedido = pedidoSeleccionado.idPedido;
-                    switch (cboEstado.Text)
-                    {
-                        case "EN_PROCESO":
-                            pedido.estadoPedido = PedidoWS.estadoPedido.EN_PROCESO;
-                            break;
-                        case "CANCELADO":
-                            pedido.estadoPedido = PedidoWS.estadoPedido.CANCELADO;
-                            break;
-                        case "FINALIZADO":
-                            pedido.estadoPedido = PedidoWS.estadoPedido.FINALIZADO;
-                            break;
-                    }
                     daoPedido.actualizarPedido(pedido);
-                    if(pedido.tipoPedido == PedidoWS.tipoPedido.BORRADOR && pedido.estadoPedido == PedidoWS.estadoPedido.EN_PROCESO)
-                    {
-                        MessageBox.Show("Aprobación no implementada", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        //daoPedido.aprobarBorrador(pedido);
-                    }
                 }
                 else
                 {
