@@ -312,7 +312,7 @@
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.panel1);
             this.Name = "frmBuscarProducto_V2";
-            this.Text = "frmBuscarProducto_V2";
+            this.Text = "Búsqueda de Producto";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

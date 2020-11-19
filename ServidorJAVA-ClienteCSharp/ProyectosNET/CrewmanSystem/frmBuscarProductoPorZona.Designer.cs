@@ -318,7 +318,7 @@
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.panel1);
             this.Name = "frmBuscarProductoPorZona";
-            this.Text = "frmBuscarProductoPorZona";
+            this.Text = "Búsqueda de Producto";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

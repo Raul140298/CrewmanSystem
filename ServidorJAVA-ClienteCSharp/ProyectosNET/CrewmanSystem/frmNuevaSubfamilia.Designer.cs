@@ -59,9 +59,9 @@
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(6, 168);
+            this.btnGuardar.Location = new System.Drawing.Point(6, 175);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(160, 40);
+            this.btnGuardar.Size = new System.Drawing.Size(160, 30);
             this.btnGuardar.TabIndex = 49;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = false;

@@ -81,5 +81,13 @@ namespace CrewmanSystem
 			clienteSeleccionado = (ClienteWS.cliente)dgv.CurrentRow.DataBoundItem;
 			daoCliente.eliminarCliente(clienteSeleccionado.idCliente);
 		}
-	}
+
+        private void dgvClientes_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+			clienteSeleccionado = (ClienteWS.cliente)dgv.CurrentRow.DataBoundItem;
+			frmMostrarCliente formMostrarCliente = new frmMostrarCliente(clienteSeleccionado);
+			if(formMostrarCliente.ShowDialog() == DialogResult.OK) { 
+            }
+        }
+    }
 }
