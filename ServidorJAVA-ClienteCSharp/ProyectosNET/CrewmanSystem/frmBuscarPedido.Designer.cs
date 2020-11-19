@@ -33,37 +33,32 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.cboEstadoPedido = new System.Windows.Forms.ComboBox();
-            this.cboTipoPedido = new System.Windows.Forms.ComboBox();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dtpRangoFin = new System.Windows.Forms.DateTimePicker();
             this.dtpRangoIni = new System.Windows.Forms.DateTimePicker();
             this.txtCliente = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPedidos = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_ESTIMADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MONTO_PAGAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIPO_PEDIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.cboEstadoPedido);
-            this.panel1.Controls.Add(this.cboTipoPedido);
             this.panel1.Controls.Add(this.btnBuscarCliente);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblID);
             this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Controls.Add(this.dtpRangoFin);
@@ -72,34 +67,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 263);
+            this.panel1.Size = new System.Drawing.Size(800, 176);
             this.panel1.TabIndex = 48;
             // 
             // label4
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Location = new System.Drawing.Point(3, 212);
+            this.label4.Location = new System.Drawing.Point(3, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(179, 22);
             this.label4.TabIndex = 88;
             this.label4.Text = "Fecha Final :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cboEstadoPedido
-            // 
-            this.cboEstadoPedido.FormattingEnabled = true;
-            this.cboEstadoPedido.Location = new System.Drawing.Point(195, 118);
-            this.cboEstadoPedido.Name = "cboEstadoPedido";
-            this.cboEstadoPedido.Size = new System.Drawing.Size(263, 24);
-            this.cboEstadoPedido.TabIndex = 87;
-            // 
-            // cboTipoPedido
-            // 
-            this.cboTipoPedido.FormattingEnabled = true;
-            this.cboTipoPedido.Location = new System.Drawing.Point(195, 71);
-            this.cboTipoPedido.Name = "cboTipoPedido";
-            this.cboTipoPedido.Size = new System.Drawing.Size(263, 24);
-            this.cboTipoPedido.TabIndex = 86;
             // 
             // btnBuscarCliente
             // 
@@ -128,30 +107,10 @@
             this.label3.Text = "Cliente :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label2
-            // 
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Location = new System.Drawing.Point(3, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 22);
-            this.label2.TabIndex = 59;
-            this.label2.Text = "Tipo Pedido :";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label1
-            // 
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Location = new System.Drawing.Point(3, 118);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 22);
-            this.label1.TabIndex = 58;
-            this.label1.Text = "Estado Pedido :";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // lblID
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Location = new System.Drawing.Point(3, 165);
+            this.lblID.Location = new System.Drawing.Point(3, 76);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(179, 22);
             this.lblID.TabIndex = 57;
@@ -173,34 +132,35 @@
             // 
             // dtpRangoFin
             // 
-            this.dtpRangoFin.Location = new System.Drawing.Point(195, 210);
+            this.dtpRangoFin.Location = new System.Drawing.Point(195, 121);
             this.dtpRangoFin.Name = "dtpRangoFin";
             this.dtpRangoFin.Size = new System.Drawing.Size(263, 22);
             this.dtpRangoFin.TabIndex = 53;
             // 
             // dtpRangoIni
             // 
-            this.dtpRangoIni.Location = new System.Drawing.Point(195, 165);
+            this.dtpRangoIni.Location = new System.Drawing.Point(195, 76);
             this.dtpRangoIni.Name = "dtpRangoIni";
             this.dtpRangoIni.Size = new System.Drawing.Size(263, 22);
             this.dtpRangoIni.TabIndex = 52;
             // 
             // txtCliente
             // 
+            this.txtCliente.Enabled = false;
             this.txtCliente.Location = new System.Drawing.Point(195, 28);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(199, 22);
             this.txtCliente.TabIndex = 46;
             // 
-            // dataGridView1
+            // dgvPedidos
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvPedidos.AllowUserToAddRows = false;
+            this.dgvPedidos.AllowUserToDeleteRows = false;
+            this.dgvPedidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvPedidos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvPedidos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dgvPedidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvPedidos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -208,24 +168,27 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 30;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPedidos.ColumnHeadersHeight = 30;
+            this.dgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.CLIENTE,
+            this.Column1,
             this.FECHA_ESTIMADA,
+            this.Column2,
             this.MONTO_PAGAR,
+            this.Column3,
             this.TIPO_PEDIDO,
             this.ESTADO});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.dataGridView1.Location = new System.Drawing.Point(0, 263);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPedidos.EnableHeadersVisualStyles = false;
+            this.dgvPedidos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.dgvPedidos.Location = new System.Drawing.Point(0, 176);
+            this.dgvPedidos.MultiSelect = false;
+            this.dgvPedidos.Name = "dgvPedidos";
+            this.dgvPedidos.ReadOnly = true;
+            this.dgvPedidos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -233,19 +196,23 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.RowHeadersWidth = 51;
+            this.dgvPedidos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvPedidos.RowHeadersWidth = 51;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 187);
-            this.dataGridView1.TabIndex = 49;
+            this.dgvPedidos.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvPedidos.RowTemplate.Height = 24;
+            this.dgvPedidos.Size = new System.Drawing.Size(800, 274);
+            this.dgvPedidos.TabIndex = 49;
+            this.dgvPedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPedidos_CellContentClick);
+            this.dgvPedidos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPedidos_CellFormatting);
+            this.dgvPedidos.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvPedidos_RowStateChanged);
             // 
             // ID
             // 
+            this.ID.DataPropertyName = "idPedido";
             this.ID.HeaderText = "Id";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
@@ -260,24 +227,54 @@
             this.CLIENTE.ReadOnly = true;
             this.CLIENTE.Width = 89;
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "fechaAprobado";
+            this.Column1.HeaderText = "Fecha Aprobado";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 159;
+            // 
             // FECHA_ESTIMADA
             // 
+            this.FECHA_ESTIMADA.DataPropertyName = "fechaEstim";
             this.FECHA_ESTIMADA.HeaderText = "Fecha Estimada";
             this.FECHA_ESTIMADA.MinimumWidth = 6;
             this.FECHA_ESTIMADA.Name = "FECHA_ESTIMADA";
             this.FECHA_ESTIMADA.ReadOnly = true;
             this.FECHA_ESTIMADA.Width = 158;
             // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "montoTotal";
+            this.Column2.HeaderText = "Monto Total";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
+            // 
             // MONTO_PAGAR
             // 
+            this.MONTO_PAGAR.DataPropertyName = "montoPagar";
             this.MONTO_PAGAR.HeaderText = "Monto a Pagar";
             this.MONTO_PAGAR.MinimumWidth = 6;
             this.MONTO_PAGAR.Name = "MONTO_PAGAR";
             this.MONTO_PAGAR.ReadOnly = true;
             this.MONTO_PAGAR.Width = 146;
             // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "direccionEntrega";
+            this.Column3.HeaderText = "Dir. de Entrega";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
             // TIPO_PEDIDO
             // 
+            this.TIPO_PEDIDO.DataPropertyName = "tipoPedido";
             this.TIPO_PEDIDO.HeaderText = "Tipo ";
             this.TIPO_PEDIDO.MinimumWidth = 6;
             this.TIPO_PEDIDO.Name = "TIPO_PEDIDO";
@@ -286,6 +283,7 @@
             // 
             // ESTADO
             // 
+            this.ESTADO.DataPropertyName = "estadoPedido";
             this.ESTADO.HeaderText = "Estado";
             this.ESTADO.MinimumWidth = 6;
             this.ESTADO.Name = "ESTADO";
@@ -297,13 +295,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvPedidos);
             this.Controls.Add(this.panel1);
             this.Name = "frmBuscarPedido";
             this.Text = "frmBuscarPedido";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -314,21 +312,20 @@
 		private System.Windows.Forms.TextBox txtCliente;
 		private System.Windows.Forms.DateTimePicker dtpRangoFin;
 		private System.Windows.Forms.DateTimePicker dtpRangoIni;
-		private System.Windows.Forms.DataGridView dataGridView1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-		private System.Windows.Forms.DataGridViewTextBoxColumn CLIENTE;
-		private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ESTIMADA;
-		private System.Windows.Forms.DataGridViewTextBoxColumn MONTO_PAGAR;
-		private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_PEDIDO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
 		private System.Windows.Forms.Button btnBuscar;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Button btnBuscarCliente;
-        private System.Windows.Forms.ComboBox cboEstadoPedido;
-        private System.Windows.Forms.ComboBox cboTipoPedido;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dgvPedidos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CLIENTE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ESTIMADA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MONTO_PAGAR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_PEDIDO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
     }
 }

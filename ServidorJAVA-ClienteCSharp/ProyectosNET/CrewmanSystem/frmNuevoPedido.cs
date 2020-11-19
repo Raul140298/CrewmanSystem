@@ -20,8 +20,8 @@ namespace CrewmanSystem
         public static ProductoXZonaWS.productoXZona productoXZonaSeleccionado = null;
         public static BindingList<LineaPedidoWS.lineaPedido> lineas;
         public static double montoTotal = 0;
-        string[] estadoBorrador = { "ESPERANDO", "EN_PROCESO" , "CANCELADO" };
-        string[] estadoPedido = { "EN_PROCESO", "FINALIZADO" , "CANCELADO" };
+        string[] estadoBorrador = { "ESPERANDO", "EN_PROCESO" };
+        string[] estadoPedido = { "EN_PROCESO", "FINALIZADO" };
         public static PedidoWS.pedido pedidoSeleccionado;
         public frmNuevoPedido()
         {
@@ -35,29 +35,33 @@ namespace CrewmanSystem
             {
                 daoCliente = new ClienteWS.ClienteWSClient();
                 daoLinea = new LineaPedidoWS.LineaPedidoWSClient();
+                btnBuscarCliente.Enabled = false;
                 //OBTENER DATOS DE FILA SELECCIONADA
                 if (Program.pantallas[Program.pantallas.Count - 1].Formulario.Name == "frmGestionarPedidos")
                 {
-                    btnBuscarCliente.Enabled = false;
-
                     pedidoSeleccionado = (PedidoWS.pedido)frmGestionarPedidos.dgv.CurrentRow.DataBoundItem;
-                    txtIDOrdenVenta.Text = pedidoSeleccionado.idPedido.ToString();
-                    txtDireccion.Text = pedidoSeleccionado.direccionEntrega;
-                    clienteSeleccionado = daoCliente.obtenerCliente(pedidoSeleccionado.cliente.idCliente);
-                    clienteSeleccionado.idCliente = pedidoSeleccionado.cliente.idCliente;
-                    pedidoSeleccionado.cliente = new PedidoWS.cliente();
-                    pedidoSeleccionado.cliente.idCliente = clienteSeleccionado.idCliente;
-                    txtRucCliente.Text = clienteSeleccionado.ruc.ToString();
-                    txtRazonSocial.Text = clienteSeleccionado.razonSocial;
-                    LineaPedidoWS.lineaPedido[] auxLineas = daoLinea.listarLineaPedidos(pedidoSeleccionado.idPedido);
-                    foreach (LineaPedidoWS.lineaPedido lp in auxLineas)
-                    {
-                        lineas.Add(lp);
-                    }
+                    
                 }
                 else
                 {
-
+                    pedidoSeleccionado = (PedidoWS.pedido)frmBuscarPedido.dgv.CurrentRow.DataBoundItem;
+                }
+                txtIDOrdenVenta.Text = pedidoSeleccionado.idPedido.ToString();
+                txtDireccion.Text = pedidoSeleccionado.direccionEntrega;
+                clienteSeleccionado = daoCliente.obtenerCliente(pedidoSeleccionado.cliente.idCliente);
+                clienteSeleccionado.idCliente = pedidoSeleccionado.cliente.idCliente;
+                pedidoSeleccionado.cliente = new PedidoWS.cliente();
+                pedidoSeleccionado.cliente.idCliente = clienteSeleccionado.idCliente;
+                ZonaWS.zona zona = daoZona.mostrarZonaCliente(clienteSeleccionado.idCliente);
+                clienteSeleccionado.zona = new ClienteWS.zona();
+                clienteSeleccionado.zona.idZona = zona.idZona;
+                txtRucCliente.Text = clienteSeleccionado.ruc.ToString();
+                txtRazonSocial.Text = clienteSeleccionado.razonSocial;
+                LineaPedidoWS.lineaPedido[] auxLineas = daoLinea.listarLineaPedidos(pedidoSeleccionado.idPedido);
+                montoTotal = pedidoSeleccionado.montoTotal;
+                foreach (LineaPedidoWS.lineaPedido lp in auxLineas)
+                {
+                    lineas.Add(lp);
                 }
                 completarTabla();
             }
@@ -84,6 +88,7 @@ namespace CrewmanSystem
 
         private void completarTabla()
         {
+            dgvLineas.DataSource = null;
             dgvLineas.AutoGenerateColumns = false;
             dgvLineas.DataSource = lineas;
             txtMontoTotal.Text = montoTotal.ToString();
@@ -153,6 +158,7 @@ namespace CrewmanSystem
             }
             int index = dgvLineas.CurrentRow.Index;
             montoTotal -= lineas.ElementAt(index).montoSubTotal;
+            dgvLineas.DataSource = new BindingList<LineaPedidoWS.lineaPedido>();
             lineas.RemoveAt(index);
             completarTabla();
         }

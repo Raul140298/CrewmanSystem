@@ -25,8 +25,7 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgv = dgvPedidos;
 			dgvPedidos.AutoGenerateColumns = false;
-			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos();
-			//ClienteWS.cliente[] misClientes = daoCliente.listarClientes("", "");
+			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos(0, DateTime.MinValue, DateTime.MaxValue, "BORRADOR","ESPERANDO");
 
 			if (misPedidos != null)
 			{		

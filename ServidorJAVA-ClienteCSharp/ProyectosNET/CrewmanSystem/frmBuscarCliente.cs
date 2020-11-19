@@ -15,6 +15,7 @@ namespace CrewmanSystem
 		public static ClienteWS.ClienteWSClient daoCliente;
 		public static ClienteWS.cliente clienteSeleccionado;
 		public static DataGridView dgv;
+		public static int evitarAct = 0;
 
 		public frmBuscarCliente()
 		{
@@ -62,6 +63,7 @@ namespace CrewmanSystem
 			}
 
 			btnSeleccionar.Visible = true;
+			evitarAct = 1;
 			#region colores de seleccion
 			dgvClientes.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dgvClientes.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
@@ -111,8 +113,11 @@ namespace CrewmanSystem
 			}
 			else
 			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
+                if (evitarAct == 0)
+                {
+					frmVentanaPrincipal.act.Enabled = true;
+					frmVentanaPrincipal.elim.Enabled = true;
+				}
 			}
 		}
 

@@ -107,24 +107,29 @@ public class Main{
 //        }
 
         //Zona zona = daoZona.mostrarZonaCliente(14);
-        Pedido pedido = new Pedido();
-        pedido.setIdPedido(54);
-        pedido.setDireccionEntrega("Almacen 2 javier prado");
-        pedido.setMontoTotal(205);
-        misLineasDePedido = new ArrayList<LineaPedido>();
-        LineaPedido lp1 = new LineaPedido();
-        lp1.setCantidad(25);
-        lp1.setMontoSubTotal(180);
-        lp1.getProductoXZona().setIdProductoXZona(68);
-        LineaPedido lp2 = new LineaPedido();
-        lp2.setCantidad(10);
-        lp2.setMontoSubTotal(25);
-        lp2.getProductoXZona().setIdProductoXZona(69);
-        misLineasDePedido.add(lp1);
-        misLineasDePedido.add(lp2);
-        pedido.setLineasPedidos(misLineasDePedido);
-        daoPedido.actualizar(pedido);
-        System.out.println("EL MODELADO HA CONCLUIDO");
+//        Pedido pedido = new Pedido();
+//        pedido.setIdPedido(54);
+//        pedido.setDireccionEntrega("Almacen 2 javier prado");
+//        pedido.setMontoTotal(205);
+//        misLineasDePedido = new ArrayList<LineaPedido>();
+//        LineaPedido lp1 = new LineaPedido();
+//        lp1.setCantidad(25);
+//        lp1.setMontoSubTotal(180);
+//        lp1.getProductoXZona().setIdProductoXZona(68);
+//        LineaPedido lp2 = new LineaPedido();
+//        lp2.setCantidad(10);
+//        lp2.setMontoSubTotal(25);
+//        lp2.getProductoXZona().setIdProductoXZona(69);
+//        misLineasDePedido.add(lp1);
+//        misLineasDePedido.add(lp2);
+//        pedido.setLineasPedidos(misLineasDePedido);
+//        daoPedido.actualizar(pedido);
+//        System.out.println("EL MODELADO HA CONCLUIDO");
+        try{
+            misPedidos = daoPedido.listar(0, sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), "BORRADOR", "ESPERANDO");
+        }catch(Exception e){
+            System.out.println("MAL");
+        }
     }
     
     private static void gestionarFamilias(){
@@ -538,7 +543,7 @@ public class Main{
 //        daoPedido.aprobarBorrador(pedido1);
 //        daoPedido.insertar(pedido1);
 
-        misPedidos=daoPedido.listar();
+        //misPedidos=daoPedido.listar();
         Pedido pedido1 = misPedidos.get(0);
         linea1.setPedido(pedido1);
         System.out.println("LISTADO DE PEDIDOS");
@@ -584,7 +589,7 @@ public class Main{
     }
     
     private static void gestionarFacturas(){
-        misPedidos=daoPedido.listar();
+        //misPedidos=daoPedido.listar();
 //        try{
 //            Date fechaVencimiento=sdf.parse("13-12-2020");
 //            Factura factura=new Factura(misPedidos.get(0),50.00, "TODO OK", 0.18,fechaVencimiento);
@@ -612,7 +617,7 @@ public class Main{
     }
     
     private static void gestionarNotasDeCredito(){
-        misPedidos=daoPedido.listar();
+        //misPedidos=daoPedido.listar();
         misNotasDeCredito=daoNotaDeCredito.listar(0);        
         System.out.println("LISTADO DE NOTAS DE CREDITO DEL PEDIDO "+misPedidos.get(0).getIdPedido());
         System.out.println("==================================================================================");
@@ -622,7 +627,7 @@ public class Main{
     }
     
     private static void gestionarGuiasDeRemision(){
-        misPedidos=daoPedido.listar();
+        //misPedidos=daoPedido.listar();
         
 //        GuiaRemision guiaRemision1= new GuiaRemision(misPedidos.get(0),"Por trasladar");
 //        guiaRemision1.setFechaRegistro(new Date());
@@ -644,7 +649,7 @@ public class Main{
     }
     
     private static void gestionarQuejas(){
-        misPedidos=daoPedido.listar();
+        //misPedidos=daoPedido.listar();
         Queja queja1= new Queja(misPedidos.get(0),"El pedido llego retrasado");
 //        daoQueja.insertar(queja1);
         misQuejas = daoQueja.listar(misPedidos.get(0).getIdPedido());

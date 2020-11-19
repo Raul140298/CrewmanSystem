@@ -6,6 +6,7 @@
 package pe.edu.pucp.CrewmanSystem.services;
 
 import java.util.ArrayList;
+import java.util.Date;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -60,12 +61,16 @@ public class PedidoWS
     }
     
     @WebMethod(operationName = "listarPedidos")
-    public ArrayList<Pedido> listarPedidos() 
+    public ArrayList<Pedido> listarPedidos(@WebParam(name = "idCliente") int idCliente, 
+            @WebParam(name = "fechaIni") Date fechaIni, 
+            @WebParam(name = "fechaFin") Date fechaFin, 
+            @WebParam(name = "tipoPedido") String tipoPedido, 
+            @WebParam(name = "estadoPedido") String estadoPedido) 
     {
         ArrayList<Pedido> misPedidos = new ArrayList<>();
         try
         {
-            misPedidos = daoPedido.listar();
+            misPedidos = daoPedido.listar(idCliente, fechaIni, fechaFin, tipoPedido, estadoPedido);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
