@@ -34,8 +34,6 @@
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FECHA_ESTIMADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MONTO_PAGAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,8 +64,6 @@
             this.dgvPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.CLIENTE,
-            this.Column1,
-            this.FECHA_ESTIMADA,
             this.Column2,
             this.MONTO_PAGAR,
             this.Column3,
@@ -118,24 +114,6 @@
             this.CLIENTE.Name = "CLIENTE";
             this.CLIENTE.ReadOnly = true;
             this.CLIENTE.Width = 89;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "fechaAprobado";
-            this.Column1.HeaderText = "Fecha Aprobado";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 159;
-            // 
-            // FECHA_ESTIMADA
-            // 
-            this.FECHA_ESTIMADA.DataPropertyName = "fechaEstim";
-            this.FECHA_ESTIMADA.HeaderText = "Fecha Estimada";
-            this.FECHA_ESTIMADA.MinimumWidth = 6;
-            this.FECHA_ESTIMADA.Name = "FECHA_ESTIMADA";
-            this.FECHA_ESTIMADA.ReadOnly = true;
-            this.FECHA_ESTIMADA.Width = 158;
             // 
             // Column2
             // 
@@ -200,8 +178,6 @@
 		private System.Windows.Forms.DataGridView dgvPedidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CLIENTE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ESTIMADA;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn MONTO_PAGAR;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
