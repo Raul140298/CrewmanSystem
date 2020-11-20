@@ -246,7 +246,6 @@ public class PedidoMySQL implements PedidoDAO{
     public int aprobarBorrador(Pedido pedido) {
         int resultado = 0;
         boolean reserva = false;
-        LineaPedidoDAO daoLinea = new LineaPedidoMySQL();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
@@ -259,8 +258,7 @@ public class PedidoMySQL implements PedidoDAO{
             resultado = cs.executeUpdate();
             reserva = cs.getBoolean("_ERROR");
             if(reserva){
-                System.out.println("no hay suficiente stock");
-                return resultado;
+                return 0;
             }
         }catch(Exception ex){
             System.out.println(ex.getMessage());

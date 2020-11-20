@@ -125,11 +125,19 @@ public class Main{
 //        pedido.setLineasPedidos(misLineasDePedido);
 //        daoPedido.actualizar(pedido);
 //        System.out.println("EL MODELADO HA CONCLUIDO");
+//        try{
+//            misPedidos = daoPedido.listar(0, sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), "BORRADOR", "ESPERANDO");
+//        }catch(Exception e){
+//            System.out.println("MAL");
+//        }
+        Pedido pedido = new Pedido();
         try{
-            misPedidos = daoPedido.listar(0, sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), "BORRADOR", "ESPERANDO");
+            pedido.setFechaEstim(sdf.parse("01-01-2021"));
         }catch(Exception e){
             System.out.println("MAL");
         }
+        pedido.setIdPedido(55);
+        daoPedido.aprobarBorrador(pedido);
     }
     
     private static void gestionarFamilias(){

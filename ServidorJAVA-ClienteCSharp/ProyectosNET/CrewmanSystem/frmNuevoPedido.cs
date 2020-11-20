@@ -36,6 +36,12 @@ namespace CrewmanSystem
                 daoCliente = new ClienteWS.ClienteWSClient();
                 daoLinea = new LineaPedidoWS.LineaPedidoWSClient();
                 btnBuscarCliente.Enabled = false;
+                if (Program.empleado.cargo.idCargo == 2)
+                {
+                    gboPedido.Enabled = true;
+                    gboLineaPedido.Enabled = false;
+                    gboCliente.Enabled = false;
+                }
                 //OBTENER DATOS DE FILA SELECCIONADA
                 if (Program.pantallas[Program.pantallas.Count - 1].Formulario.Name == "frmGestionarPedidos")
                 {
@@ -190,6 +196,7 @@ namespace CrewmanSystem
                 pedido.empleado.idEmpleado = Program.empleado.idEmpleado;
                 pedido.direccionEntrega = txtDireccion.Text;
                 pedido.montoTotal = montoTotal;
+                pedido.tipoPedido = pedidoSeleccionado.tipoPedido;
                 //agregar lineas
                 int numLineas = lineas.Count;
                 pedido.lineasPedidos = new PedidoWS.lineaPedido[numLineas];
@@ -206,6 +213,22 @@ namespace CrewmanSystem
                 if (frmVentanaPrincipal.nBtn == 1)
                 {
                     pedido.idPedido = pedidoSeleccionado.idPedido;
+                    if (Program.empleado.cargo.idCargo == 2)
+                    {
+                        switch (cboEstado.Text)
+                        {
+                            case "ESPERANDO":
+                                break;
+                            case "EN_PROCESO":
+                                MessageBox.Show("ENTRA");
+                                pedido.fechaEstim = dtpFechaEstimada.Value;
+                                int resultado= 0;
+                                resultado = daoPedido.aprobarBorrador(pedido);
+                                if(resultado != 0)MessageBox.Show("Aprobado con exito", "Mensaje de resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                break;
+                        }
+                        return;
+                    }
                     daoPedido.actualizarPedido(pedido);
                 }
                 else

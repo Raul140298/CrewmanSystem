@@ -654,6 +654,21 @@ namespace CrewmanSystem
 		}
 		#endregion
 
+		#region GESTIONPEDIDOS
+		private void btnGestionPedidos_Click(object sender, EventArgs e)
+		{
+			ClickBoton((IconButton)sender, null, pnlGestionPedidos, Program.colorR, BTNtipo.btnConPanel, null, false, false, false, false, false);
+		}
+		private void btnPedidos_Click(object sender, EventArgs e)
+		{
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarPedidos(), false, true, true, true, true);
+		}
+		private void btnPedReporte_Click(object sender, EventArgs e)
+		{
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmReportePedidos(), false, false, false, false, false);
+		}
+		#endregion
+
 		#region GESTIONCLIENTES
 		private void btnGestionClientes_Click(object sender, EventArgs e)
 		{
@@ -680,11 +695,6 @@ namespace CrewmanSystem
 		private void btnCumplimientoDeMetas_Click(object sender, EventArgs e)
 		{
 			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmListarCumplimientoDeMetas(), false, false, false, false, false);
-		}
-
-		private void btnReportePedidos_Click(object sender, EventArgs e)
-		{
-			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmReportePedidos(), false, false, false, false, false);
 		}
 		#endregion
 
@@ -836,6 +846,5 @@ namespace CrewmanSystem
 			modificaPagina();
 		}
         #endregion
-
     }
 }

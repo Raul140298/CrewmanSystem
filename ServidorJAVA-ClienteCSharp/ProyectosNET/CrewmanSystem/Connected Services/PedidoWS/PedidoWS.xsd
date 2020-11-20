@@ -412,14 +412,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="mostrarPedido">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="mostrarPedidoResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="insertarPedido">
     <xs:sequence>
       <xs:element minOccurs="0" name="lineaPedido" type="tns:pedido" />
@@ -429,6 +421,14 @@
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mostrarPedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mostrarPedidoResponse">
+    <xs:sequence />
   </xs:complexType>
   <xs:simpleType name="estadoPedido">
     <xs:restriction base="xs:string">

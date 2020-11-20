@@ -28,9 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvLineas = new System.Windows.Forms.DataGridView();
@@ -47,12 +47,14 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gboPedido = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
             this.txtIDOrdenVenta = new System.Windows.Forms.TextBox();
             this.dtpFechaVenta = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gboCliente = new System.Windows.Forms.GroupBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
@@ -60,7 +62,7 @@
             this.txtRucCliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gboLineaPedido = new System.Windows.Forms.GroupBox();
             this.btnBuscarProductoXZona = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
@@ -72,17 +74,17 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cboEstado = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.dtpFechaEstimada = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLineas)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gboPedido.SuspendLayout();
+            this.gboCliente.SuspendLayout();
+            this.gboLineaPedido.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -102,9 +104,9 @@
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 528);
+            this.panel3.Location = new System.Drawing.Point(0, 563);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(818, 277);
+            this.panel3.Size = new System.Drawing.Size(818, 242);
             this.panel3.TabIndex = 5;
             // 
             // dgvLineas
@@ -116,14 +118,14 @@
             this.dgvLineas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dgvLineas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvLineas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLineas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLineas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvLineas.ColumnHeadersHeight = 30;
             this.dgvLineas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvLineas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -139,22 +141,22 @@
             this.dgvLineas.Name = "dgvLineas";
             this.dgvLineas.ReadOnly = true;
             this.dgvLineas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLineas.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLineas.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvLineas.RowHeadersWidth = 51;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvLineas.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvLineas.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvLineas.RowTemplate.Height = 24;
-            this.dgvLineas.Size = new System.Drawing.Size(778, 277);
+            this.dgvLineas.Size = new System.Drawing.Size(778, 242);
             this.dgvLineas.TabIndex = 98;
             this.dgvLineas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvLineas_CellFormatting);
             // 
@@ -205,7 +207,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel5.Location = new System.Drawing.Point(798, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(20, 277);
+            this.panel5.Size = new System.Drawing.Size(20, 242);
             this.panel5.TabIndex = 96;
             // 
             // panel4
@@ -213,7 +215,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(20, 277);
+            this.panel4.Size = new System.Drawing.Size(20, 242);
             this.panel4.TabIndex = 0;
             // 
             // panel2
@@ -272,31 +274,53 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.groupBox3);
-            this.panel6.Controls.Add(this.groupBox2);
-            this.panel6.Controls.Add(this.groupBox1);
+            this.panel6.Controls.Add(this.gboPedido);
+            this.panel6.Controls.Add(this.gboCliente);
+            this.panel6.Controls.Add(this.gboLineaPedido);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(818, 528);
+            this.panel6.Size = new System.Drawing.Size(818, 563);
             this.panel6.TabIndex = 3;
             // 
-            // groupBox3
+            // gboPedido
             // 
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.cboEstado);
-            this.groupBox3.Controls.Add(this.txtIDOrdenVenta);
-            this.groupBox3.Controls.Add(this.dtpFechaVenta);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Location = new System.Drawing.Point(19, 14);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(643, 122);
-            this.groupBox3.TabIndex = 97;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Datos de la Orden de Venta";
+            this.gboPedido.Controls.Add(this.dtpFechaEstimada);
+            this.gboPedido.Controls.Add(this.label12);
+            this.gboPedido.Controls.Add(this.label11);
+            this.gboPedido.Controls.Add(this.cboEstado);
+            this.gboPedido.Controls.Add(this.txtIDOrdenVenta);
+            this.gboPedido.Controls.Add(this.dtpFechaVenta);
+            this.gboPedido.Controls.Add(this.label5);
+            this.gboPedido.Controls.Add(this.label4);
+            this.gboPedido.Enabled = false;
+            this.gboPedido.Location = new System.Drawing.Point(19, 14);
+            this.gboPedido.Margin = new System.Windows.Forms.Padding(4);
+            this.gboPedido.Name = "gboPedido";
+            this.gboPedido.Padding = new System.Windows.Forms.Padding(4);
+            this.gboPedido.Size = new System.Drawing.Size(643, 162);
+            this.gboPedido.TabIndex = 97;
+            this.gboPedido.TabStop = false;
+            this.gboPedido.Text = "Datos de la Orden de Venta";
+            // 
+            // label11
+            // 
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label11.Location = new System.Drawing.Point(339, 33);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(66, 22);
+            this.label11.TabIndex = 91;
+            this.label11.Text = "Estado :";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cboEstado
+            // 
+            this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Location = new System.Drawing.Point(411, 31);
+            this.cboEstado.Name = "cboEstado";
+            this.cboEstado.Size = new System.Drawing.Size(207, 24);
+            this.cboEstado.TabIndex = 84;
             // 
             // txtIDOrdenVenta
             // 
@@ -336,23 +360,23 @@
             this.label4.Text = "Id Orden Venta :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // groupBox2
+            // gboCliente
             // 
-            this.groupBox2.Controls.Add(this.txtDireccion);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.btnBuscarCliente);
-            this.groupBox2.Controls.Add(this.txtRazonSocial);
-            this.groupBox2.Controls.Add(this.txtRucCliente);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(20, 143);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(641, 168);
-            this.groupBox2.TabIndex = 96;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos del Cliente";
+            this.gboCliente.Controls.Add(this.txtDireccion);
+            this.gboCliente.Controls.Add(this.label10);
+            this.gboCliente.Controls.Add(this.btnBuscarCliente);
+            this.gboCliente.Controls.Add(this.txtRazonSocial);
+            this.gboCliente.Controls.Add(this.txtRucCliente);
+            this.gboCliente.Controls.Add(this.label3);
+            this.gboCliente.Controls.Add(this.label2);
+            this.gboCliente.Location = new System.Drawing.Point(20, 183);
+            this.gboCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.gboCliente.Name = "gboCliente";
+            this.gboCliente.Padding = new System.Windows.Forms.Padding(4);
+            this.gboCliente.Size = new System.Drawing.Size(641, 168);
+            this.gboCliente.TabIndex = 96;
+            this.gboCliente.TabStop = false;
+            this.gboCliente.Text = "Datos del Cliente";
             // 
             // txtDireccion
             // 
@@ -427,27 +451,27 @@
             this.label2.Text = "Ruc del Cliente :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // groupBox1
+            // gboLineaPedido
             // 
-            this.groupBox1.Controls.Add(this.btnBuscarProductoXZona);
-            this.groupBox1.Controls.Add(this.btnAdd);
-            this.groupBox1.Controls.Add(this.btnRemove);
-            this.groupBox1.Controls.Add(this.txtCantidad);
-            this.groupBox1.Controls.Add(this.txtPrecioUnitario);
-            this.groupBox1.Controls.Add(this.txtNombreProducto);
-            this.groupBox1.Controls.Add(this.txtIdProducto);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(19, 322);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(643, 188);
-            this.groupBox1.TabIndex = 92;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Línea Pedido";
+            this.gboLineaPedido.Controls.Add(this.btnBuscarProductoXZona);
+            this.gboLineaPedido.Controls.Add(this.btnAdd);
+            this.gboLineaPedido.Controls.Add(this.btnRemove);
+            this.gboLineaPedido.Controls.Add(this.txtCantidad);
+            this.gboLineaPedido.Controls.Add(this.txtPrecioUnitario);
+            this.gboLineaPedido.Controls.Add(this.txtNombreProducto);
+            this.gboLineaPedido.Controls.Add(this.txtIdProducto);
+            this.gboLineaPedido.Controls.Add(this.label8);
+            this.gboLineaPedido.Controls.Add(this.label7);
+            this.gboLineaPedido.Controls.Add(this.label6);
+            this.gboLineaPedido.Controls.Add(this.label1);
+            this.gboLineaPedido.Location = new System.Drawing.Point(19, 362);
+            this.gboLineaPedido.Margin = new System.Windows.Forms.Padding(4);
+            this.gboLineaPedido.Name = "gboLineaPedido";
+            this.gboLineaPedido.Padding = new System.Windows.Forms.Padding(4);
+            this.gboLineaPedido.Size = new System.Drawing.Size(643, 188);
+            this.gboLineaPedido.TabIndex = 92;
+            this.gboLineaPedido.TabStop = false;
+            this.gboLineaPedido.Text = "Línea Pedido";
             // 
             // btnBuscarProductoXZona
             // 
@@ -575,25 +599,23 @@
             this.label1.Text = "Código del Producto :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // cboEstado
+            // dtpFechaEstimada
             // 
-            this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEstado.Enabled = false;
-            this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(411, 31);
-            this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(207, 24);
-            this.cboEstado.TabIndex = 84;
+            this.dtpFechaEstimada.Location = new System.Drawing.Point(185, 115);
+            this.dtpFechaEstimada.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpFechaEstimada.Name = "dtpFechaEstimada";
+            this.dtpFechaEstimada.Size = new System.Drawing.Size(434, 22);
+            this.dtpFechaEstimada.TabIndex = 93;
             // 
-            // label11
+            // label12
             // 
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label11.Location = new System.Drawing.Point(339, 33);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 22);
-            this.label11.TabIndex = 91;
-            this.label11.Text = "Estado :";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label12.Location = new System.Drawing.Point(5, 115);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(174, 22);
+            this.label12.TabIndex = 92;
+            this.label12.Text = "Fecha estimada :";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmNuevoPedido
             // 
@@ -611,12 +633,12 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gboPedido.ResumeLayout(false);
+            this.gboPedido.PerformLayout();
+            this.gboCliente.ResumeLayout(false);
+            this.gboCliente.PerformLayout();
+            this.gboLineaPedido.ResumeLayout(false);
+            this.gboLineaPedido.PerformLayout();
             this.ResumeLayout(false);
 
 		}
@@ -630,13 +652,13 @@
 		private System.Windows.Forms.Button btnGuardar;
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Panel panel6;
-		private System.Windows.Forms.GroupBox groupBox2;
+		private System.Windows.Forms.GroupBox gboCliente;
 		private System.Windows.Forms.Button btnBuscarCliente;
 		private System.Windows.Forms.TextBox txtRazonSocial;
 		private System.Windows.Forms.TextBox txtRucCliente;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.GroupBox gboLineaPedido;
 		private System.Windows.Forms.Button btnBuscarProductoXZona;
 		private System.Windows.Forms.Button btnAdd;
 		private System.Windows.Forms.Button btnRemove;
@@ -646,7 +668,7 @@
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.GroupBox groupBox3;
+		private System.Windows.Forms.GroupBox gboPedido;
 		private System.Windows.Forms.TextBox txtIDOrdenVenta;
 		private System.Windows.Forms.DateTimePicker dtpFechaVenta;
 		private System.Windows.Forms.Label label5;
@@ -666,5 +688,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cboEstado;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DateTimePicker dtpFechaEstimada;
+        private System.Windows.Forms.Label label12;
     }
 }
