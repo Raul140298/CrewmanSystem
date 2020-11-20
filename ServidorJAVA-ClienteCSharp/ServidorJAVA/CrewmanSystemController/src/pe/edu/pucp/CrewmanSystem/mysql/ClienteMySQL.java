@@ -16,6 +16,7 @@ import pe.edu.pucp.CrewmanSystem.model.Cliente;
 import pe.edu.pucp.CrewmanSystem.model.ClienteXZona;
 import pe.edu.pucp.CrewmanSystem.model.LineaCredito;
 import pe.edu.pucp.CrewmanSystem.model.PersonaContacto;
+import pe.edu.pucp.CrewmanSystem.model.Zona;
 
 public class ClienteMySQL implements ClienteDAO{
     Connection con;
@@ -49,6 +50,10 @@ public class ClienteMySQL implements ClienteDAO{
             int idPersonaContacto = daoPersonaContacto.insertar(cliente.getPersonaContacto());
             cliente.getPersonaContacto().setIdPersonaContacto(idPersonaContacto);
             
+            ClienteXZonaDAO daoClienteXZona = new ClienteXZonaMySQL();
+            ClienteXZona cxz = new ClienteXZona(cliente,cliente.getZona());
+            int idClienteXZona = daoClienteXZona.insertar(cxz);
+            
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
@@ -78,11 +83,10 @@ public class ClienteMySQL implements ClienteDAO{
             PersonaContactoDAO personaContactoDAO = new PersonaContactoMySQL();
             resultado=personaContactoDAO.actualizar(cliente.getPersonaContacto());
             
-            if(cliente.getZona().getIdZona()>0){
-                ClienteXZonaDAO daoCXZ = new ClienteXZonaMySQL();
-                ClienteXZona clixzona = new ClienteXZona(cliente,cliente.getZona());
-                daoCXZ.insertar(clixzona);
-            }
+            ClienteXZonaDAO daoCXZ = new ClienteXZonaMySQL();
+            ClienteXZona clixzona = new ClienteXZona(cliente,cliente.getZona());
+            daoCXZ.insertar(clixzona);
+            
             if(cliente.getLineaCredito().getIdLineaCredito()>0){
                 LineaCreditoDAO daoLineaCredito = new LineaCreditoMySQL();
                 daoLineaCredito.actualizar(cliente.getLineaCredito());
@@ -122,20 +126,22 @@ public class ClienteMySQL implements ClienteDAO{
     }
 
     @Override
-    public ArrayList<Cliente> listar(String razonSocial, String grupo){
+    public ArrayList<Cliente> listar(String razonSocial, String grupo,int idZona){
         ArrayList<Cliente> clientes = new ArrayList<>();
         Integer entero;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            String sql ="{ call BUSCAR_CLIENTE (?,?)}";
+            String sql ="{ call LISTAR_CLIENTE (?,?,?)}";
             cs = con.prepareCall(sql);
             cs.setString("_RAZON_SOCIAL", razonSocial);
             cs.setString("_GRUPO", grupo);
+            cs.setInt("_ID_ZONA", idZona);
             cs.executeUpdate();
             rs = cs.getResultSet();
             while(rs.next()){
                 Cliente cliente = new Cliente();
+                Zona zona = new Zona();
                 cliente.setIdCliente(rs.getInt("ID_CLIENTE"));
                 entero=rs.getInt("ID_LINEA_DE_CREDITO");
                 if(entero!=null) cliente.getLineaCredito().setIdLineaCredito(entero.intValue());
@@ -153,6 +159,10 @@ public class ClienteMySQL implements ClienteDAO{
                 cliente.setGrupo(rs.getString("GRUPO"));
                 cliente.setTipoEmpresa(rs.getString("TIPOCLIENTE"));
                 cliente.setDireccion(rs.getString("DIRECCION"));
+                
+                zona.setIdZona(rs.getInt("ID_ZONA"));
+                zona.setNombre(rs.getString("NOMBRE"));
+                cliente.setZona(zona);
                 clientes.add(cliente);
             }
         }catch(Exception ex){

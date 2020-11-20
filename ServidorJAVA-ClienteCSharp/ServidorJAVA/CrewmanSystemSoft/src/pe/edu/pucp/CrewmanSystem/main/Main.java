@@ -57,7 +57,7 @@ public class Main{
 //        gestionarSubFamilias();
 //        gestionarMarcas();
 //        gestionarZonas();
-//       gestionarClientes();
+       gestionarClientes();
 //        gestionarEmpleados();
 //        gestionarProductos();
 //        gestionarProductoXZona();
@@ -222,37 +222,37 @@ public class Main{
         
         String razonSocial = "";
         String grupo = "";
-        misClientes=daoCliente.listar(razonSocial,grupo);
+        misClientes=daoCliente.listar(razonSocial,grupo,0);
         System.out.println("LISTADO DE CLIENTES");
         System.out.println("==================================================================================");
         System.out.println("Razon social: "+razonSocial);
         System.out.println("Grupo: "+grupo);
         System.out.println("==================================================================================");
         for(Cliente c:misClientes) System.out.println(c.getIdCliente()+" - "+c.getRuc()+" - "+c.getRazonSocial()+
-                " - "+c.getGrupo()+" - "+c.getTipoEmpresa()+" - "+c.getDireccion()+" - "+sdf.format(c.getFechaRegistro()));
+                " - "+c.getGrupo()+" - "+c.getTipoEmpresa()+" - "+c.getDireccion()+" - "+sdf.format(c.getFechaRegistro())+" - "+c.getZona().getNombre());
         System.out.println("\n");
         
-        Cliente miCliente=misClientes.get(0);
-        daoCliente.mostrar(miCliente);
-        LineaCredito lineaCredito=miCliente.getLineaCredito();
-        Zona zona=miCliente.getZona();
-        PersonaContacto personaContacto = miCliente.getPersonaContacto();
+//        Cliente miCliente=misClientes.get(0);
+//        daoCliente.mostrar(miCliente);
+//        LineaCredito lineaCredito=miCliente.getLineaCredito();
+//        Zona zona=miCliente.getZona();
+//        PersonaContacto personaContacto = miCliente.getPersonaContacto();
         
 //        personaContacto.setCargo("SECRETARIO");
 //        miCliente.setPersonaContacto(personaContacto);
 //        daoCliente.actualizar(miCliente);
 
-        Cartera cartera=miCliente.getCartera();
-        System.out.println("DETALLE DEL CLIENTE "+miCliente.getRuc());
-        System.out.println("==================================================================================");
-        System.out.println("Informacion: "+miCliente.getIdCliente()+" - "+miCliente.getRazonSocial()+" - "+miCliente.getDireccion()+" - "+sdf.format(miCliente.getFechaRegistro()));
-        System.out.println("Persona Contacto: "+personaContacto.getNombre()+" "+personaContacto.getApellidoPaterno()+" "+personaContacto.getApellidoMaterno()+" "+personaContacto.getCargo());
-        if(lineaCredito.getIdLineaCredito()>0)
-            System.out.println("Linea de Credito: "+lineaCredito.getIdLineaCredito()+" - "+lineaCredito.getMontoLineaCredito()+" - "+lineaCredito.getMotivo()+
-            " - Respomsable: "+lineaCredito.getResponsable().getNombre()+" - "+lineaCredito.getResponsable().getApellidoPaterno());
-        if(zona.getIdZona()>0)
-            System.out.println("Zona: "+zona.getIdZona()+" - "+zona.getNombre());
-        System.out.println("\n");
+//        Cartera cartera=miCliente.getCartera();
+//        System.out.println("DETALLE DEL CLIENTE "+miCliente.getRuc());
+//        System.out.println("==================================================================================");
+//        System.out.println("Informacion: "+miCliente.getIdCliente()+" - "+miCliente.getRazonSocial()+" - "+miCliente.getDireccion()+" - "+sdf.format(miCliente.getFechaRegistro()));
+//        System.out.println("Persona Contacto: "+personaContacto.getNombre()+" "+personaContacto.getApellidoPaterno()+" "+personaContacto.getApellidoMaterno()+" "+personaContacto.getCargo());
+//        if(lineaCredito.getIdLineaCredito()>0)
+//            System.out.println("Linea de Credito: "+lineaCredito.getIdLineaCredito()+" - "+lineaCredito.getMontoLineaCredito()+" - "+lineaCredito.getMotivo()+
+//            " - Respomsable: "+lineaCredito.getResponsable().getNombre()+" - "+lineaCredito.getResponsable().getApellidoPaterno());
+//        if(zona.getIdZona()>0)
+//            System.out.println("Zona: "+zona.getIdZona()+" - "+zona.getNombre());
+//        System.out.println("\n");
         
     }
         
