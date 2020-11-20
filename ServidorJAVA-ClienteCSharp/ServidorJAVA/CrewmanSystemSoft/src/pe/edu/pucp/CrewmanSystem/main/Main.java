@@ -57,8 +57,8 @@ public class Main{
 //        gestionarSubFamilias();
 //        gestionarMarcas();
 //        gestionarZonas();
-//       gestionarClientes();
-        gestionarEmpleados();
+       gestionarClientes();
+//        gestionarEmpleados();
 //        gestionarProductos();
 //        gestionarProductoXZona();
 //      gestionarPromociones();
@@ -205,20 +205,22 @@ public class Main{
     }
     
     private static void gestionarClientes(){
-//        Cliente cliente1=new Cliente("10604105301","TIENDITAS DUBAI","EXITOSO","Jr 7 Mz X5 Urb. Santo Domingo");
-//        PersonaContacto perCont1 = new PersonaContacto();
-//        perCont1.setDni("73654128");
-//        perCont1.setCargo("GERENTE");
-//        perCont1.setNombre("Larry");
-//        perCont1.setApellidoPaterno("Carhuancho");
-//        perCont1.setApellidoMaterno("Málaga");
-//        perCont1.setGenero('M');
-//        perCont1.setCorreo("larry_malaga@gmail.com");
-//        perCont1.setTelefono1("985654281");
-//        perCont1.setTelefono2("");
-//        perCont1.setCliente(cliente1);
-//        cliente1.setPersonaContacto(perCont1);
-//        daoCliente.insertar(cliente1);
+        Cliente cliente1=new Cliente("12001804871","TIENDITAS DUBAI","EXITOSO","Jr 7 Mz X5 Urb. Santo Domingo");
+        PersonaContacto perCont1 = new PersonaContacto();
+        perCont1.setDni("76529416");
+        perCont1.setCargo("GERENTE");
+        perCont1.setNombre("Manuel");
+        perCont1.setApellidoPaterno("Torizo");
+        perCont1.setApellidoMaterno("Lozano");
+        perCont1.setGenero('M');
+        perCont1.setCorreo("manuel34_la@gmail.com");
+        perCont1.setTelefono1("980451659");
+        perCont1.setTelefono2("");
+        perCont1.setCliente(cliente1);
+        cliente1.setPersonaContacto(perCont1);
+        cliente1.getZona().setIdZona(125);
+        daoCliente.insertar(cliente1);
+        
         
         String razonSocial = "";
         String grupo = "";

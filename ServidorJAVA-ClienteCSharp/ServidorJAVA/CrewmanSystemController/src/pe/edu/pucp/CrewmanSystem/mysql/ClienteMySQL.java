@@ -30,18 +30,6 @@ public class ClienteMySQL implements ClienteDAO{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             con.setAutoCommit(false);
-            String sql ="{ call INSERTAR_CLIENTE(?,?,?,?,?,?,?)}";
-            cs = con.prepareCall(sql);
-            cs.registerOutParameter("_ID_CLIENTE", java.sql.Types.INTEGER);
-            cs.setString("_RUC", cliente.getRuc());
-            cs.setString("_RAZON_SOCIAL", cliente.getRazonSocial());
-            cs.setDate("_FECHA_REGISTRO", new java.sql.Date(new Date().getTime()));
-            cs.setString("_GRUPO", cliente.getGrupo());
-            cs.setString("_DIRECCION", cliente.getDireccion());
-            cs.setInt("_ID_ZONA", cliente.getZona().getIdZona());
-            resultado = cs.executeUpdate();
-            int idCliente=cs.getInt("_ID_CLIENTE");
-            cliente.setIdCliente(idCliente);
             
             PersonaDAO daoPersona = new PersonaMySQL();
             int idPersona=daoPersona.insertar(cliente.getPersonaContacto());
@@ -51,9 +39,20 @@ public class ClienteMySQL implements ClienteDAO{
             int idPersonaContacto = daoPersonaContacto.insertar(cliente.getPersonaContacto());
             cliente.getPersonaContacto().setIdPersonaContacto(idPersonaContacto);
             
-            ClienteXZonaDAO daoClienteXZona = new ClienteXZonaMySQL();
-            ClienteXZona cxz = new ClienteXZona(cliente,cliente.getZona());
-            int idClienteXZona = daoClienteXZona.insertar(cxz);
+            String sql ="{ call INSERTAR_CLIENTE(?,?,?,?,?,?,?,?)}";
+            cs = con.prepareCall(sql);
+            cs.registerOutParameter("_ID_CLIENTE", java.sql.Types.INTEGER);
+            cs.setString("_RUC", cliente.getRuc());
+            cs.setString("_RAZON_SOCIAL", cliente.getRazonSocial());
+            cs.setDate("_FECHA_REGISTRO", new java.sql.Date(new Date().getTime()));
+            cs.setString("_GRUPO", cliente.getGrupo());
+            cs.setString("_DIRECCION", cliente.getDireccion());
+            cs.setInt("_ID_ZONA", cliente.getZona().getIdZona());
+            cs.setInt("_ID_PERSONA_CONTACTO", idPersonaContacto);
+            resultado = cs.executeUpdate();
+            int idCliente=cs.getInt("_ID_CLIENTE");
+            cliente.setIdCliente(idCliente);
+            
             con.commit();
         }catch(Exception ex){
             try{
