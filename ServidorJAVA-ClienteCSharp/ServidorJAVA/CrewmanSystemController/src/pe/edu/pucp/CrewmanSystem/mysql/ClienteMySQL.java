@@ -29,6 +29,7 @@ public class ClienteMySQL implements ClienteDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            con.setAutoCommit(false);
             String sql ="{ call INSERTAR_CLIENTE(?,?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_CLIENTE", java.sql.Types.INTEGER);
@@ -53,11 +54,17 @@ public class ClienteMySQL implements ClienteDAO{
             ClienteXZonaDAO daoClienteXZona = new ClienteXZonaMySQL();
             ClienteXZona cxz = new ClienteXZona(cliente,cliente.getZona());
             int idClienteXZona = daoClienteXZona.insertar(cxz);
-            
+            con.commit();
         }catch(Exception ex){
+            try{
+                con.rollback();
+            }catch(Exception e){
+                System.out.println(e.getMessage());
+            }
             System.out.println(ex.getMessage());
         }finally{
             try{
+                con.setAutoCommit(true);
                 con.close();
             }catch(Exception ex){
                 System.out.println(ex.getMessage());

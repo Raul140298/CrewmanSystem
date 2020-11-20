@@ -24,7 +24,7 @@ public class PersonaMySQL implements PersonaDAO{
             String sql ="{ call INSERTAR_PERSONA(?,?,?,?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_PERSONA", java.sql.Types.INTEGER);
-            cs.setInt("_ID_PERSONA", persona.getIdPersona());
+            cs.setString("_DNI", persona.getDni());
             cs.setString("_NOMBRE", persona.getNombre());
             cs.setString("_APELLIDO_PATERNO", persona.getApellidoPaterno());
             cs.setString("_APELLIDO_MATERNO", persona.getApellidoMaterno());

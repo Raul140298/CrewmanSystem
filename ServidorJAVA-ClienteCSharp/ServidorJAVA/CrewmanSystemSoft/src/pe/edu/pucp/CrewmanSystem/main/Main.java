@@ -57,8 +57,8 @@ public class Main{
 //        gestionarSubFamilias();
 //        gestionarMarcas();
 //        gestionarZonas();
-       gestionarClientes();
-//        gestionarEmpleados();
+//       gestionarClientes();
+        gestionarEmpleados();
 //        gestionarProductos();
 //        gestionarProductoXZona();
 //      gestionarPromociones();
@@ -258,9 +258,9 @@ public class Main{
         
     private static void gestionarEmpleados(){
 //        Cargo cargo=new Cargo("JEFE DE VENTAS");
-//        Cargo cargo2=new Cargo("EMPLEADO");
-
-//        Empleado empleado1= new Empleado(cargo1,"71421991","Keiko","Montez","Monterroso",'F',"985745102","","keipoper@gmail.com");
+//        Cargo cargo=new Cargo(1, "EMPLEADO");
+//
+//        Empleado empleado1= new Empleado(cargo,"71421991","Keiko","Montez","Monterroso",'F',"985745102","","keipoper@gmail.com");
 //        empleado1.setUsuario("keikomontmont");
 //        empleado1.setContraseña("matangalachanga");
 //        int idJefe=daoEmpleado.insertar(empleado1);
