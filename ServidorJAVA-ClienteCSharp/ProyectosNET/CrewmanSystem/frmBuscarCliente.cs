@@ -12,7 +12,8 @@ namespace CrewmanSystem
 {
 	public partial class frmBuscarCliente : Form
 	{
-		public static ClienteWS.ClienteWSClient daoCliente;
+		private static ClienteWS.ClienteWSClient daoCliente;
+		private static ZonaWS.ZonaWSClient daoZona;
 		public static ClienteWS.cliente clienteSeleccionado;
 		public static DataGridView dgv;
 		public static int evitarAct = 0;
@@ -20,19 +21,26 @@ namespace CrewmanSystem
 		public frmBuscarCliente()
 		{
 			daoCliente = new ClienteWS.ClienteWSClient();
+			daoZona = new ZonaWS.ZonaWSClient();
 			InitializeComponent();
 			dgv = dgvClientes;
 			dgvClientes.AutoGenerateColumns = false;
-			ClienteWS.cliente[] misClientes = daoCliente.listarClientes("", "");
+			ClienteWS.cliente[] misClientes = daoCliente.listarClientes("", "",0);
 			if (misClientes != null)
-			{
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
-			}
 			else
-			{
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>();
-
-			}
+			ZonaWS.zona vacio = new ZonaWS.zona();
+			vacio.idZona = 0;
+			vacio.nombre = "Cualquiera";
+			ZonaWS.zona[] vacioA = { vacio };
+			ZonaWS.zona[] misZonas = daoZona.listarZonas();
+			if (misZonas == null || misZonas.Length < 1) cboZona.DataSource = new BindingList<ZonaWS.zona>(vacioA);
+			else cboZona.DataSource = new BindingList<ZonaWS.zona>(vacioA.Concat(misZonas).ToArray());
+			cboZona.ValueMember = "idZona";
+			cboZona.DisplayMember = "nombre";
+			btnSeleccionar.Visible = false;
+			evitarAct = 0;
 
 			#region colores de seleccion
 			dgvClientes.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
@@ -48,20 +56,25 @@ namespace CrewmanSystem
 		public frmBuscarCliente(int popup)
 		{
 			daoCliente = new ClienteWS.ClienteWSClient();
+			daoZona = new ZonaWS.ZonaWSClient();
 			InitializeComponent();
 			dgv = dgvClientes;
 			dgvClientes.AutoGenerateColumns = false;
-			ClienteWS.cliente[] misClientes = daoCliente.listarClientes("", "");
+			//Revisar el id que se pasa
+			ClienteWS.cliente[] misClientes = daoCliente.listarClientes("", "",0);
 			if (misClientes != null)
-			{
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
-			}
 			else
-			{
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>();
-
-			}
-
+			ZonaWS.zona vacio = new ZonaWS.zona();
+			vacio.idZona = 0;
+			vacio.nombre = "Cualquiera";
+			ZonaWS.zona[] vacioA = { vacio };
+			ZonaWS.zona[] misZonas = daoZona.listarZonas();
+			if (misZonas == null || misZonas.Length < 1) cboZona.DataSource = new BindingList<ZonaWS.zona>(vacioA);
+			else cboZona.DataSource = new BindingList<ZonaWS.zona>(vacioA.Concat(misZonas).ToArray());
+			cboZona.ValueMember = "idZona";
+			cboZona.DisplayMember = "nombre";
 			btnSeleccionar.Visible = true;
 			evitarAct = 1;
 			#region colores de seleccion
@@ -83,16 +96,12 @@ namespace CrewmanSystem
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-			ClienteWS.cliente[] misClientes = daoCliente.listarClientes(txtRazonSocial.Text, txtGrupo.Text);
+			int idZona = ((ZonaWS.zona)cboZona.SelectedItem).idZona;
+			ClienteWS.cliente[] misClientes = daoCliente.listarClientes(txtRazonSocial.Text, txtGrupo.Text, idZona);
 			if (misClientes != null)
-			{
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
-			}
 			else
-			{
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>();
-
-			}
 		}
 
         private void dgvClientes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -100,7 +109,8 @@ namespace CrewmanSystem
             //castear objetos y mostrar valor determinado
             ClienteWS.cliente cliente = dgvClientes.Rows[e.RowIndex].DataBoundItem
                                         as ClienteWS.cliente;
-        }
+			dgvClientes.Rows[e.RowIndex].Cells["ZONA"].Value = cliente.zona.nombre;
+		}
 
 		private void dgvClientes_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
 		{

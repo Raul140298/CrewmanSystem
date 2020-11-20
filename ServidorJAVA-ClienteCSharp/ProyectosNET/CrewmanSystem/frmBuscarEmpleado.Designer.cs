@@ -67,15 +67,15 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 190);
+            this.panel1.Size = new System.Drawing.Size(800, 206);
             this.panel1.TabIndex = 46;
             // 
             // cboZona
             // 
             this.cboZona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboZona.FormattingEnabled = true;
-            this.cboZona.Location = new System.Drawing.Point(195, 143);
-            this.cboZona.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboZona.Location = new System.Drawing.Point(195, 156);
+            this.cboZona.Margin = new System.Windows.Forms.Padding(4);
             this.cboZona.Name = "cboZona";
             this.cboZona.Size = new System.Drawing.Size(280, 24);
             this.cboZona.Sorted = true;
@@ -84,7 +84,7 @@
             // label3
             // 
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(111, 143);
+            this.label3.Location = new System.Drawing.Point(111, 156);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 22);
             this.label3.TabIndex = 90;
@@ -97,10 +97,10 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(509, 12);
+            this.btnBuscar.Location = new System.Drawing.Point(510, 20);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(160, 39);
+            this.btnBuscar.Size = new System.Drawing.Size(160, 30);
             this.btnBuscar.TabIndex = 55;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -109,7 +109,7 @@
             // label1
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Location = new System.Drawing.Point(3, 101);
+            this.label1.Location = new System.Drawing.Point(3, 114);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(176, 22);
             this.label1.TabIndex = 54;
@@ -119,7 +119,7 @@
             // label2
             // 
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Location = new System.Drawing.Point(3, 54);
+            this.label2.Location = new System.Drawing.Point(3, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(176, 22);
             this.label2.TabIndex = 53;
@@ -129,7 +129,7 @@
             // lblID
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Location = new System.Drawing.Point(3, 11);
+            this.lblID.Location = new System.Drawing.Point(3, 24);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(176, 22);
             this.lblID.TabIndex = 52;
@@ -138,7 +138,7 @@
             // 
             // txtApMaterno
             // 
-            this.txtApMaterno.Location = new System.Drawing.Point(195, 101);
+            this.txtApMaterno.Location = new System.Drawing.Point(195, 114);
             this.txtApMaterno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApMaterno.Name = "txtApMaterno";
             this.txtApMaterno.Size = new System.Drawing.Size(280, 22);
@@ -146,7 +146,7 @@
             // 
             // txtApPaterno
             // 
-            this.txtApPaterno.Location = new System.Drawing.Point(195, 54);
+            this.txtApPaterno.Location = new System.Drawing.Point(195, 67);
             this.txtApPaterno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApPaterno.Name = "txtApPaterno";
             this.txtApPaterno.Size = new System.Drawing.Size(280, 22);
@@ -154,7 +154,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(195, 11);
+            this.txtNombre.Location = new System.Drawing.Point(195, 24);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(280, 22);
@@ -189,7 +189,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.dataGridView1.Location = new System.Drawing.Point(0, 190);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 206);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -210,7 +210,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 260);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 244);
             this.dataGridView1.TabIndex = 47;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 

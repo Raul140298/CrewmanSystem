@@ -32,6 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cboZona = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,12 +42,13 @@
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_REGISTRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_ULTIMA_COMPRA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -53,6 +56,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cboZona);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnSeleccionar);
             this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Controls.Add(this.label1);
@@ -62,8 +67,27 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 118);
+            this.panel1.Size = new System.Drawing.Size(800, 160);
             this.panel1.TabIndex = 47;
+            // 
+            // cboZona
+            // 
+            this.cboZona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboZona.FormattingEnabled = true;
+            this.cboZona.Location = new System.Drawing.Point(183, 111);
+            this.cboZona.Name = "cboZona";
+            this.cboZona.Size = new System.Drawing.Size(241, 24);
+            this.cboZona.TabIndex = 55;
+            // 
+            // label2
+            // 
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Location = new System.Drawing.Point(12, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 22);
+            this.label2.TabIndex = 54;
+            this.label2.Text = "Zona :";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnSeleccionar
             // 
@@ -149,17 +173,18 @@
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.RAZON_SOCIAL,
             this.RUC,
+            this.RAZON_SOCIAL,
+            this.GRUPO,
             this.FECHA_REGISTRO,
             this.FECHA_ULTIMA_COMPRA,
-            this.GRUPO,
             this.TIPO,
+            this.ZONA,
             this.DIRECCION});
             this.dgvClientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvClientes.EnableHeadersVisualStyles = false;
             this.dgvClientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.dgvClientes.Location = new System.Drawing.Point(0, 118);
+            this.dgvClientes.Location = new System.Drawing.Point(0, 160);
             this.dgvClientes.MultiSelect = false;
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
@@ -179,7 +204,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvClientes.RowTemplate.Height = 24;
-            this.dgvClientes.Size = new System.Drawing.Size(800, 332);
+            this.dgvClientes.Size = new System.Drawing.Size(800, 290);
             this.dgvClientes.TabIndex = 48;
             this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             this.dgvClientes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvClientes_CellFormatting);
@@ -194,6 +219,15 @@
             this.ID.ReadOnly = true;
             this.ID.Width = 50;
             // 
+            // RUC
+            // 
+            this.RUC.DataPropertyName = "ruc";
+            this.RUC.HeaderText = "Ruc";
+            this.RUC.MinimumWidth = 6;
+            this.RUC.Name = "RUC";
+            this.RUC.ReadOnly = true;
+            this.RUC.Width = 67;
+            // 
             // RAZON_SOCIAL
             // 
             this.RAZON_SOCIAL.DataPropertyName = "razonSocial";
@@ -203,14 +237,14 @@
             this.RAZON_SOCIAL.ReadOnly = true;
             this.RAZON_SOCIAL.Width = 136;
             // 
-            // RUC
+            // GRUPO
             // 
-            this.RUC.DataPropertyName = "ruc";
-            this.RUC.HeaderText = "Ruc";
-            this.RUC.MinimumWidth = 6;
-            this.RUC.Name = "RUC";
-            this.RUC.ReadOnly = true;
-            this.RUC.Width = 67;
+            this.GRUPO.DataPropertyName = "grupo";
+            this.GRUPO.HeaderText = "Grupo";
+            this.GRUPO.MinimumWidth = 6;
+            this.GRUPO.Name = "GRUPO";
+            this.GRUPO.ReadOnly = true;
+            this.GRUPO.Width = 83;
             // 
             // FECHA_REGISTRO
             // 
@@ -230,15 +264,6 @@
             this.FECHA_ULTIMA_COMPRA.ReadOnly = true;
             this.FECHA_ULTIMA_COMPRA.Width = 200;
             // 
-            // GRUPO
-            // 
-            this.GRUPO.DataPropertyName = "grupo";
-            this.GRUPO.HeaderText = "Grupo";
-            this.GRUPO.MinimumWidth = 6;
-            this.GRUPO.Name = "GRUPO";
-            this.GRUPO.ReadOnly = true;
-            this.GRUPO.Width = 83;
-            // 
             // TIPO
             // 
             this.TIPO.DataPropertyName = "tipoEmpresa";
@@ -247,6 +272,14 @@
             this.TIPO.Name = "TIPO";
             this.TIPO.ReadOnly = true;
             this.TIPO.Width = 126;
+            // 
+            // ZONA
+            // 
+            this.ZONA.HeaderText = "Zona";
+            this.ZONA.MinimumWidth = 6;
+            this.ZONA.Name = "ZONA";
+            this.ZONA.ReadOnly = true;
+            this.ZONA.Width = 73;
             // 
             // DIRECCION
             // 
@@ -282,14 +315,17 @@
 		private System.Windows.Forms.Label lblID;
 		private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dgvClientes;
+        private System.Windows.Forms.Button btnSeleccionar;
+        private System.Windows.Forms.ComboBox cboZona;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ULTIMA_COMPRA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
         private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
-        private System.Windows.Forms.Button btnSeleccionar;
     }
 }

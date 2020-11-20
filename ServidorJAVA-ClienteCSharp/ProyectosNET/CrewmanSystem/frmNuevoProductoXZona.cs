@@ -39,10 +39,10 @@ namespace CrewmanSystem
 
         private void btnBuscarProducto_Click_1(object sender, EventArgs e)
         {
-            frmBuscarProducto_V2 formBusquedaProducto = new frmBuscarProducto_V2();
+            frmBuscarProducto formBusquedaProducto = new frmBuscarProducto(1);
             if (formBusquedaProducto.ShowDialog() == DialogResult.OK)
             {
-                miProducto = frmBuscarProducto_V2.productoSeleccionado;
+                miProducto = frmBuscarProducto.productoSeleccionado;
                 txtNombreProducto.Text = miProducto.nombre;
                 txtCantUnidades.Text = miProducto.cantUnidad.ToString();
                 txtUnidades.Text = miProducto.unidades;

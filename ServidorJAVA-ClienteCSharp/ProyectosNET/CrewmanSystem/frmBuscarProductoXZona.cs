@@ -26,7 +26,7 @@ namespace CrewmanSystem
 			ZonaWS.zona[] vacioA = { vacio };
 			BindingList<ZonaWS.zona> listaZonas;
 			if (misZonas != null) listaZonas = new BindingList<ZonaWS.zona>(vacioA.Concat(misZonas).ToArray());
-			else listaZonas = new BindingList<ZonaWS.zona>(vacioA.ToArray());
+			else listaZonas = new BindingList<ZonaWS.zona>(vacioA);
 		
 			cboZona.DataSource = listaZonas;
 			cboZona.ValueMember = "idZona";
