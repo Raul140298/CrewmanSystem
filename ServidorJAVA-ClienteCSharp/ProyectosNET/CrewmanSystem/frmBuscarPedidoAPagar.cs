@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace CrewmanSystem
 {
-	public partial class frmBuscarPedido : Form
-	{
-		public static PedidoWS.pedido[] misPedidos;
-		public static PedidoWS.PedidoWSClient daoPedido = new PedidoWS.PedidoWSClient();
-		public static PedidoWS.pedido pedidoSeleccionado;
-		public static ClienteWS.cliente clienteSeleccionado;
-		public static DataGridView dgv;
-		private ClienteWS.ClienteWSClient daoCliente = new ClienteWS.ClienteWSClient();
-		public frmBuscarPedido()
-		{
+    public partial class frmBuscarPedidoAPagar : Form
+    {
+        public static PedidoWS.pedido[] misPedidos;
+        public static PedidoWS.PedidoWSClient daoPedido = new PedidoWS.PedidoWSClient();
+        public static PedidoWS.pedido pedidoSeleccionado;
+        public static ClienteWS.cliente clienteSeleccionado;
+        public static DataGridView dgv;
+        private ClienteWS.ClienteWSClient daoCliente = new ClienteWS.ClienteWSClient();
+        public frmBuscarPedidoAPagar()
+        {
 			InitializeComponent();
 			dtpRangoIni.Value = dtpRangoIni.MinDate;
 			dtpRangoFin.Value = dtpRangoFin.MaxDate;
@@ -39,10 +39,10 @@ namespace CrewmanSystem
 			#endregion
 		}
 
-        private void completarTabla()
-        {
+		private void completarTabla()
+		{
 			dgvPedidos.AutoGenerateColumns = false;
-			misPedidos = daoPedido.listarPedidos(clienteSeleccionado.idCliente, dtpRangoIni.Value, dtpRangoFin.Value, "BORRADOR", "ESPERANDO");
+			misPedidos = daoPedido.listarPedidos(clienteSeleccionado.idCliente, dtpRangoIni.Value, dtpRangoFin.Value, "PEDIDO", "EN_PROCESO");
 			if (misPedidos != null)
 			{
 				foreach (PedidoWS.pedido p in misPedidos)
@@ -61,7 +61,6 @@ namespace CrewmanSystem
 
 			}
 		}
-
 		private void dgvPedidos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
 		{
 			//castear objetos y mostrar valor determinado
@@ -70,45 +69,25 @@ namespace CrewmanSystem
 
 			dgvPedidos.Rows[e.RowIndex].Cells["CLIENTE"].Value = pedido.cliente.razonSocial;
 		}
-		private void dgvPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-			frmVentanaPrincipal.act.Enabled = false;
-			frmVentanaPrincipal.elim.Enabled = false;
-		}
-
-		private void dgvPedidos_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-		{
-			//Preguntar al profe
-			if (e.StateChanged != DataGridViewElementStates.Selected)
-			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
-				return;
-			}
-			else
-			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
-			}
-		}
 		private void btnBuscarCliente_Click(object sender, EventArgs e)
-        {
+		{
 			frmBuscarCliente formBusquedaCliente = new frmBuscarCliente(1);
-			if(formBusquedaCliente.ShowDialog() == DialogResult.OK)
-            {
+			if (formBusquedaCliente.ShowDialog() == DialogResult.OK)
+			{
 				clienteSeleccionado = frmBuscarCliente.clienteSeleccionado;
 				txtCliente.Text = clienteSeleccionado.razonSocial;
 			}
-        }
-		public static void eliminar()
+		}
+		private void btnBuscar_Click(object sender, EventArgs e)
 		{
-			pedidoSeleccionado = (PedidoWS.pedido)dgv.CurrentRow.DataBoundItem;
-			daoPedido.eliminarPedido(pedidoSeleccionado.idPedido);
+			completarTabla();
 		}
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-			completarTabla();
+			pedidoSeleccionado = (PedidoWS.pedido)dgvPedidos.CurrentRow.DataBoundItem;
+			this.DialogResult = DialogResult.OK;
+			this.Close();
         }
     }
 }

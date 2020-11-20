@@ -12,9 +12,12 @@ namespace CrewmanSystem
 {
 	public partial class frmNuevaFactura : Form
 	{
+        PedidoWS.pedido pedidoSeleccionado = new PedidoWS.pedido();
+        string[] estado = { "PAGADO", "POR PAGAR" };
 		public frmNuevaFactura()
 		{
 			InitializeComponent();
+            cboEstadoPagar.DataSource = estado;
 		}
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -67,10 +70,12 @@ namespace CrewmanSystem
 
         private void btnBuscarProductoXZona_Click(object sender, EventArgs e)
         {
-            frmBuscarPedido formBusquedaPedido = new frmBuscarPedido();
-            if(formBusquedaPedido.ShowDialog() == DialogResult.OK)
+            frmBuscarPedidoAPagar formBusquedaPedidoAPagar = new frmBuscarPedidoAPagar();
+            if(formBusquedaPedidoAPagar.ShowDialog() == DialogResult.OK)
             {
-
+                pedidoSeleccionado = frmBuscarPedidoAPagar.pedidoSeleccionado;
+                txtIdPedido.Text = pedidoSeleccionado.idPedido.ToString();
+                txtMontoPendiente.Text = pedidoSeleccionado.montoPagar.ToString();
             }
         }
 
