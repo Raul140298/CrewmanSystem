@@ -11,7 +11,6 @@ import pe.edu.pucp.CrewmanSystem.dao.ClienteDAO;
 import pe.edu.pucp.CrewmanSystem.dao.ClienteXZonaDAO;
 import pe.edu.pucp.CrewmanSystem.dao.LineaCreditoDAO;
 import pe.edu.pucp.CrewmanSystem.dao.PersonaContactoDAO;
-import pe.edu.pucp.CrewmanSystem.dao.PersonaDAO;
 import pe.edu.pucp.CrewmanSystem.model.Cliente;
 import pe.edu.pucp.CrewmanSystem.model.ClienteXZona;
 import pe.edu.pucp.CrewmanSystem.model.LineaCredito;
@@ -29,17 +28,7 @@ public class ClienteMySQL implements ClienteDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            con.setAutoCommit(false);
-            
-            PersonaDAO daoPersona = new PersonaMySQL();
-            int idPersona=daoPersona.insertar(cliente.getPersonaContacto());
-            cliente.getPersonaContacto().setIdPersona(idPersona);
-            
-            PersonaContactoDAO daoPersonaContacto = new PersonaContactoMySQL();
-            int idPersonaContacto = daoPersonaContacto.insertar(cliente.getPersonaContacto());
-            cliente.getPersonaContacto().setIdPersonaContacto(idPersonaContacto);
-            
-            String sql ="{ call INSERTAR_CLIENTE(?,?,?,?,?,?,?,?)}";
+            String sql ="{ call INSERTAR_CLIENTE(?,?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_CLIENTE", java.sql.Types.INTEGER);
             cs.setString("_RUC", cliente.getRuc());
@@ -48,22 +37,13 @@ public class ClienteMySQL implements ClienteDAO{
             cs.setString("_GRUPO", cliente.getGrupo());
             cs.setString("_DIRECCION", cliente.getDireccion());
             cs.setInt("_ID_ZONA", cliente.getZona().getIdZona());
-            cs.setInt("_ID_PERSONA_CONTACTO", idPersonaContacto);
-            resultado = cs.executeUpdate();
-            int idCliente=cs.getInt("_ID_CLIENTE");
-            cliente.setIdCliente(idCliente);
-            
-            con.commit();
+            cs.executeUpdate();
+            resultado = cs.getInt("_ID_CLIENTE");
+            cliente.setIdCliente(resultado);
         }catch(Exception ex){
-            try{
-                con.rollback();
-            }catch(Exception e){
-                System.out.println(e.getMessage());
-            }
             System.out.println(ex.getMessage());
         }finally{
             try{
-                con.setAutoCommit(true);
                 con.close();
             }catch(Exception ex){
                 System.out.println(ex.getMessage());

@@ -25,10 +25,10 @@ private PersonaContactoDAO daoPersonaContacto;
     }
    
     @WebMethod(operationName = "insertarPersonaContacto")
-    public int insertarPersonaContacto(@WebParam(name = "persona") PersonaContacto persona) {
+    public int insertarPersonaContacto(@WebParam(name = "persona") PersonaContacto persona,@WebParam(name = "idCliente") int idCliente) {
         int resultado = 0;
         try{
-            resultado = daoPersonaContacto.insertar(persona);
+            resultado = daoPersonaContacto.insertar(persona,idCliente);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

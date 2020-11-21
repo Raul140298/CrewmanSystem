@@ -205,21 +205,20 @@ public class Main{
     }
     
     private static void gestionarClientes(){
-        Cliente cliente1=new Cliente("12001804871","TIENDITAS DUBAI","EXITOSO","Jr 7 Mz X5 Urb. Santo Domingo");
+        Cliente cliente1=new Cliente("16512099640","LOS ANDES","NACIONAL","Tercera Zona Av Miro Quesada");
         PersonaContacto perCont1 = new PersonaContacto();
-        perCont1.setDni("76529416");
-        perCont1.setCargo("GERENTE");
-        perCont1.setNombre("Manuel");
-        perCont1.setApellidoPaterno("Torizo");
-        perCont1.setApellidoMaterno("Lozano");
-        perCont1.setGenero('M');
-        perCont1.setCorreo("manuel34_la@gmail.com");
-        perCont1.setTelefono1("980451659");
+        perCont1.setDni("79521650");
+        perCont1.setCargo("SECRETARIA");
+        perCont1.setNombre("Melanie");
+        perCont1.setApellidoPaterno("Hernandez");
+        perCont1.setApellidoMaterno("Albela");
+        perCont1.setGenero('F');
+        perCont1.setCorreo("gab_mrll@gmail.com");
+        perCont1.setTelefono1("984024139");
         perCont1.setTelefono2("");
-        perCont1.setCliente(cliente1);
         cliente1.setPersonaContacto(perCont1);
-        cliente1.getZona().setIdZona(125);
-        daoCliente.insertar(cliente1);
+        cliente1.getZona().setIdZona(149);
+        int resultado = daoCliente.insertar(cliente1);
         
         
         String razonSocial = "";
