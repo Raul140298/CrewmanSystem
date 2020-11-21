@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtpEmision = new System.Windows.Forms.DateTimePicker();
             this.txtMonto = new System.Windows.Forms.TextBox();
-            this.textObservacion = new System.Windows.Forms.TextBox();
+            this.txtObservacion = new System.Windows.Forms.TextBox();
             this.dtpVencimiento = new System.Windows.Forms.DateTimePicker();
             this.txtImpuestos = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,6 +46,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.cboEstadoPagar = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtIdFactura = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnGuardar
@@ -77,7 +79,7 @@
             this.btnBuscarPedido.TabIndex = 86;
             this.btnBuscarPedido.Text = "...";
             this.btnBuscarPedido.UseVisualStyleBackColor = false;
-            this.btnBuscarPedido.Click += new System.EventHandler(this.btnBuscarProductoXZona_Click);
+            this.btnBuscarPedido.Click += new System.EventHandler(this.btnBuscarPedido_Click);
             // 
             // label1
             // 
@@ -107,14 +109,14 @@
             this.txtMonto.Size = new System.Drawing.Size(154, 22);
             this.txtMonto.TabIndex = 91;
             // 
-            // textObservacion
+            // txtObservacion
             // 
-            this.textObservacion.Location = new System.Drawing.Point(244, 163);
-            this.textObservacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textObservacion.Multiline = true;
-            this.textObservacion.Name = "textObservacion";
-            this.textObservacion.Size = new System.Drawing.Size(434, 57);
-            this.textObservacion.TabIndex = 92;
+            this.txtObservacion.Location = new System.Drawing.Point(244, 163);
+            this.txtObservacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtObservacion.Multiline = true;
+            this.txtObservacion.Name = "txtObservacion";
+            this.txtObservacion.Size = new System.Drawing.Size(434, 57);
+            this.txtObservacion.TabIndex = 92;
             // 
             // dtpVencimiento
             // 
@@ -229,11 +231,32 @@
             this.label8.Text = "Estado de pago :";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // label9
+            // 
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label9.Location = new System.Drawing.Point(487, 30);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 22);
+            this.label9.TabIndex = 106;
+            this.label9.Text = "ID Factura :";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtIdFactura
+            // 
+            this.txtIdFactura.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtIdFactura.Enabled = false;
+            this.txtIdFactura.Location = new System.Drawing.Point(581, 30);
+            this.txtIdFactura.Name = "txtIdFactura";
+            this.txtIdFactura.Size = new System.Drawing.Size(97, 22);
+            this.txtIdFactura.TabIndex = 107;
+            // 
             // frmNuevaFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 534);
+            this.Controls.Add(this.txtIdFactura);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cboEstadoPagar);
             this.Controls.Add(this.txtMontoPendiente);
@@ -246,7 +269,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtImpuestos);
             this.Controls.Add(this.dtpVencimiento);
-            this.Controls.Add(this.textObservacion);
+            this.Controls.Add(this.txtObservacion);
             this.Controls.Add(this.txtMonto);
             this.Controls.Add(this.dtpEmision);
             this.Controls.Add(this.btnBuscarPedido);
@@ -266,7 +289,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpEmision;
         private System.Windows.Forms.TextBox txtMonto;
-        private System.Windows.Forms.TextBox textObservacion;
+        private System.Windows.Forms.TextBox txtObservacion;
         private System.Windows.Forms.DateTimePicker dtpVencimiento;
         private System.Windows.Forms.TextBox txtImpuestos;
         private System.Windows.Forms.Label label2;
@@ -279,5 +302,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cboEstadoPagar;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtIdFactura;
     }
 }

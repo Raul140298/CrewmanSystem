@@ -13,6 +13,7 @@ namespace CrewmanSystem
 	public partial class frmNuevaFactura : Form
 	{
         PedidoWS.pedido pedidoSeleccionado = new PedidoWS.pedido();
+        FacturaWS.FacturaWSClient daoFactura = new FacturaWS.FacturaWSClient();
         string[] estado = { "PAGADO", "POR PAGAR" };
 		public frmNuevaFactura()
 		{
@@ -64,14 +65,43 @@ namespace CrewmanSystem
                 MessageBox.Show("Rango de fechas inválido","Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            //Insertar factura
 
+            if (Convert.ToDouble(txtMonto.Text) > Convert.ToDouble(txtMontoPendiente.Text))
+            {
+                MessageBox.Show("Monto de pago excede el monto pendiente", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            //Insertar factura
+            frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
+            if (formInsertar.ShowDialog() == DialogResult.OK)
+            {
+                FacturaWS.factura factura = new FacturaWS.factura();
+                factura.pedido = new FacturaWS.pedido();
+                factura.pedido.idPedido = pedidoSeleccionado.idPedido;
+                factura.monto = Convert.ToDouble(txtMonto.Text);
+                factura.observacion = txtObservacion.Text;
+                factura.fechaEmision = DateTime.Now;
+                factura.fechaVencimiento = dtpVencimiento.Value;
+                factura.impuestos = factura.monto * 0.18;
+                txtImpuestos.Text = factura.impuestos.ToString();
+                if (cboEstadoPagar.Text == "PAGADO")
+                {
+                    factura.estadoPagar = true;
+                }
+                else
+                {
+                    factura.estadoPagar = false;
+                }
+                int idFactura = daoFactura.insertarFactura(factura);
+                txtIdFactura.Text = idFactura.ToString();
+                txtMontoPendiente.Text = (Convert.ToDouble(txtMontoPendiente.Text) - Convert.ToDouble(txtMonto.Text)).ToString();
+            }
         }
 
-        private void btnBuscarProductoXZona_Click(object sender, EventArgs e)
+        private void btnBuscarPedido_Click(object sender, EventArgs e)
         {
             frmBuscarPedidoAPagar formBusquedaPedidoAPagar = new frmBuscarPedidoAPagar();
-            if(formBusquedaPedidoAPagar.ShowDialog() == DialogResult.OK)
+            if (formBusquedaPedidoAPagar.ShowDialog() == DialogResult.OK)
             {
                 pedidoSeleccionado = frmBuscarPedidoAPagar.pedidoSeleccionado;
                 txtIdPedido.Text = pedidoSeleccionado.idPedido.ToString();
