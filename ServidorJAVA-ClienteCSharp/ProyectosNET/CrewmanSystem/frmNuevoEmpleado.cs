@@ -41,26 +41,36 @@ namespace CrewmanSystem
 
             if (frmVentanaPrincipal.nBtn == 1)
             {   //OBTNER DATOS DE FILA SELECCIONADA
-                frmGestionarEmpleados.empleadoSeleccionado = (EmpleadoWS.empleado)frmGestionarEmpleados.dgv.CurrentRow.DataBoundItem;
-                txtID.Text = frmGestionarEmpleados.empleadoSeleccionado.idEmpleado.ToString();
-                txtDNI.Text = frmGestionarEmpleados.empleadoSeleccionado.dni.ToString();
-                txtNombre.Text = frmGestionarEmpleados.empleadoSeleccionado.nombre;
-                txtApMaterno.Text = frmGestionarEmpleados.empleadoSeleccionado.apellidoMaterno;
-                txtApPaterno.Text = frmGestionarEmpleados.empleadoSeleccionado.apellidoPaterno;
-                txtTelefono1.Text = frmGestionarEmpleados.empleadoSeleccionado.telefono1.ToString();
-                txtTelefono2.Text = frmGestionarEmpleados.empleadoSeleccionado.telefono2.ToString();
-                txtCorreo.Text = frmGestionarEmpleados.empleadoSeleccionado.correo.ToString();
-                txtObjetivoVentas.Text = frmGestionarEmpleados.empleadoSeleccionado.objetivoVentas.ToString();
-                txtSumaVentas.Text = frmGestionarEmpleados.empleadoSeleccionado.sumVentas.ToString();
+                EmpleadoWS.empleado miEmpleado;
+                if (Program.pantallas[Program.pantallas.Count - 1].Formulario.Name == "frmGestionarEmpleados")
+                {
+                    frmGestionarEmpleados.empleadoSeleccionado = (EmpleadoWS.empleado)frmGestionarEmpleados.dgv.CurrentRow.DataBoundItem;
+                    miEmpleado = frmGestionarEmpleados.empleadoSeleccionado;
+                }
+                else
+                {
+                    frmBuscarEmpleado.empleadoSeleccionado = (EmpleadoWS.empleado)frmBuscarEmpleado.dgv.CurrentRow.DataBoundItem;
+                    miEmpleado = frmBuscarEmpleado.empleadoSeleccionado;
+                }
+                txtID.Text = miEmpleado.idEmpleado.ToString();
+                txtDNI.Text = miEmpleado.dni.ToString();
+                txtNombre.Text = miEmpleado.nombre;
+                txtApMaterno.Text = miEmpleado.apellidoMaterno;
+                txtApPaterno.Text = miEmpleado.apellidoPaterno;
+                txtTelefono1.Text = miEmpleado.telefono1;
+                txtTelefono2.Text = miEmpleado.telefono2;
+                txtCorreo.Text = miEmpleado.correo.ToString();
+                txtObjetivoVentas.Text = miEmpleado.objetivoVentas.ToString();
+                txtSumaVentas.Text = miEmpleado.sumVentas.ToString();
                 txtDNI.Enabled = false;
 
-                if(frmGestionarEmpleados.empleadoSeleccionado.cargo.idCargo == 1) cboCargo.DisplayMember = "EMPLEADO";
-                else if (frmGestionarEmpleados.empleadoSeleccionado.cargo.idCargo == 2) cboCargo.DisplayMember = "JEFE DE VENTAS";
+                if(miEmpleado.cargo.idCargo == 1) cboCargo.DisplayMember = "EMPLEADO";
+                else if (miEmpleado.cargo.idCargo == 2) cboCargo.DisplayMember = "JEFE DE VENTAS";
                 cboCargo.Enabled = false;
 
-                cboZona.SelectedValue = frmGestionarEmpleados.empleadoSeleccionado.zona.idZona;
+                cboZona.SelectedValue = miEmpleado.zona.idZona;
 
-                if (frmGestionarEmpleados.empleadoSeleccionado.genero == 'M') rbMasculino.Checked = true;
+                if (miEmpleado.genero == 'M') rbMasculino.Checked = true;
                 else rbFemenino.Checked = true;
             }
         }

@@ -75,7 +75,7 @@ namespace CrewmanSystem
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
-            frmBuscarCliente formBusquedaCliente = new frmBuscarCliente(1);
+            frmBuscarCliente formBusquedaCliente = new frmBuscarCliente(1,0);
             if (formBusquedaCliente.ShowDialog() == DialogResult.OK)
             {
                 clienteSeleccionado = frmBuscarCliente.clienteSeleccionado;

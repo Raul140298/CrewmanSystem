@@ -172,6 +172,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="CrewPantalla.cs" />
+    <Compile Include="frmBuscarCartera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarCartera.Designer.cs">
+      <DependentUpon>frmBuscarCartera.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -376,6 +382,12 @@
     <Compile Include="frmMostrarPromocion.Designer.cs">
       <DependentUpon>frmMostrarPromocion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNuevaCartera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevaCartera.Designer.cs">
+      <DependentUpon>frmNuevaCartera.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNuevaFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -492,6 +504,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmBuscarCartera.resx">
+      <DependentUpon>frmBuscarCartera.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarCliente.resx">
       <DependentUpon>frmBuscarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -596,6 +611,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMostrarPromocion.resx">
       <DependentUpon>frmMostrarPromocion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaCartera.resx">
+      <DependentUpon>frmNuevaCartera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNuevaFactura.resx">
       <DependentUpon>frmNuevaFactura.cs</DependentUpon>
