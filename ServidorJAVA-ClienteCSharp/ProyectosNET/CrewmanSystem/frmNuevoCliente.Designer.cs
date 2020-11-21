@@ -61,8 +61,15 @@
             this.label14 = new System.Windows.Forms.Label();
             this.txtIdPC = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.rbFemenino = new System.Windows.Forms.RadioButton();
+            this.rbMasculino = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtCargo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -214,6 +221,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtCargo);
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.rbFemenino);
+            this.groupBox2.Controls.Add(this.rbMasculino);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.txtDNI);
             this.groupBox2.Controls.Add(this.label8);
@@ -232,7 +244,7 @@
             this.groupBox2.Controls.Add(this.txtIdPC);
             this.groupBox2.Location = new System.Drawing.Point(23, 319);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(577, 271);
+            this.groupBox2.Size = new System.Drawing.Size(577, 347);
             this.groupBox2.TabIndex = 156;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Persona Contacto";
@@ -240,7 +252,7 @@
             // label9
             // 
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label9.Location = new System.Drawing.Point(80, 226);
+            this.label9.Location = new System.Drawing.Point(80, 264);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 22);
             this.label9.TabIndex = 132;
@@ -268,7 +280,7 @@
             // txtCorreo
             // 
             this.txtCorreo.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCorreo.Location = new System.Drawing.Point(181, 226);
+            this.txtCorreo.Location = new System.Drawing.Point(181, 264);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(347, 22);
             this.txtCorreo.TabIndex = 123;
@@ -388,7 +400,7 @@
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(242, 605);
+            this.btnGuardar.Location = new System.Drawing.Point(197, 7);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(160, 30);
             this.btnGuardar.TabIndex = 157;
@@ -396,12 +408,73 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // label16
+            // 
+            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label16.Location = new System.Drawing.Point(68, 299);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(94, 22);
+            this.label16.TabIndex = 135;
+            this.label16.Text = "Género :";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // rbFemenino
+            // 
+            this.rbFemenino.AutoSize = true;
+            this.rbFemenino.Location = new System.Drawing.Point(181, 300);
+            this.rbFemenino.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbFemenino.Name = "rbFemenino";
+            this.rbFemenino.Size = new System.Drawing.Size(37, 21);
+            this.rbFemenino.TabIndex = 134;
+            this.rbFemenino.TabStop = true;
+            this.rbFemenino.Text = "F";
+            this.rbFemenino.UseVisualStyleBackColor = true;
+            // 
+            // rbMasculino
+            // 
+            this.rbMasculino.AutoSize = true;
+            this.rbMasculino.Location = new System.Drawing.Point(230, 299);
+            this.rbMasculino.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbMasculino.Name = "rbMasculino";
+            this.rbMasculino.Size = new System.Drawing.Size(40, 21);
+            this.rbMasculino.TabIndex = 133;
+            this.rbMasculino.TabStop = true;
+            this.rbMasculino.Text = "M";
+            this.rbMasculino.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnGuardar);
+            this.panel1.Location = new System.Drawing.Point(23, 688);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(577, 53);
+            this.panel1.TabIndex = 158;
+            // 
+            // label17
+            // 
+            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label17.Location = new System.Drawing.Point(80, 227);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(80, 22);
+            this.label17.TabIndex = 136;
+            this.label17.Text = "Cargo :";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtCargo
+            // 
+            this.txtCargo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCargo.Location = new System.Drawing.Point(181, 227);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(347, 22);
+            this.txtCargo.TabIndex = 137;
+            // 
             // frmNuevoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 663);
-            this.Controls.Add(this.btnGuardar);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(663, 586);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmNuevoCliente";
@@ -410,6 +483,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
 		}
@@ -449,5 +523,11 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtIdPC;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.RadioButton rbFemenino;
+        private System.Windows.Forms.RadioButton rbMasculino;
+        private System.Windows.Forms.TextBox txtCargo;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel panel1;
     }
 }

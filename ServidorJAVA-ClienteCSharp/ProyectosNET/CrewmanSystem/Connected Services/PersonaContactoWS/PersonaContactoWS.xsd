@@ -327,6 +327,7 @@
   <xs:complexType name="insertarPersonaContacto">
     <xs:sequence>
       <xs:element minOccurs="0" name="persona" type="tns:personaContacto" />
+      <xs:element name="idCliente" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarPersonaContactoResponse">

@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,14 +45,13 @@
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SUBFAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRECIOSUGERIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CANT_UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRECIOSUGERIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.STOCK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SUBFAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +73,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(985, 120);
             this.panel1.TabIndex = 45;
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnSeleccionar.FlatAppearance.BorderSize = 0;
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
+            this.btnSeleccionar.Location = new System.Drawing.Point(712, 64);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(144, 30);
+            this.btnSeleccionar.TabIndex = 64;
+            this.btnSeleccionar.Text = "SELECCIONAR";
+            this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // label5
             // 
@@ -178,13 +192,13 @@
             this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.NOMBRE,
-            this.SUBFAMILIA,
-            this.FAMILIA,
-            this.MARCA,
-            this.PRECIOSUGERIDO,
             this.CANT_UNIDADES,
             this.UNIDADES,
-            this.STOCK});
+            this.PRECIOSUGERIDO,
+            this.STOCK,
+            this.MARCA,
+            this.SUBFAMILIA,
+            this.FAMILIA});
             this.dgvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProductos.EnableHeadersVisualStyles = false;
             this.dgvProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
@@ -231,39 +245,6 @@
             this.NOMBRE.ReadOnly = true;
             this.NOMBRE.Width = 96;
             // 
-            // SUBFAMILIA
-            // 
-            this.SUBFAMILIA.HeaderText = "Subfamilia";
-            this.SUBFAMILIA.MinimumWidth = 6;
-            this.SUBFAMILIA.Name = "SUBFAMILIA";
-            this.SUBFAMILIA.ReadOnly = true;
-            this.SUBFAMILIA.Width = 115;
-            // 
-            // FAMILIA
-            // 
-            this.FAMILIA.HeaderText = "Familia";
-            this.FAMILIA.MinimumWidth = 6;
-            this.FAMILIA.Name = "FAMILIA";
-            this.FAMILIA.ReadOnly = true;
-            this.FAMILIA.Width = 91;
-            // 
-            // MARCA
-            // 
-            this.MARCA.HeaderText = "Marca";
-            this.MARCA.MinimumWidth = 6;
-            this.MARCA.Name = "MARCA";
-            this.MARCA.ReadOnly = true;
-            this.MARCA.Width = 84;
-            // 
-            // PRECIOSUGERIDO
-            // 
-            this.PRECIOSUGERIDO.DataPropertyName = "precioSugerido";
-            this.PRECIOSUGERIDO.HeaderText = "Precio Sugerido";
-            this.PRECIOSUGERIDO.MinimumWidth = 6;
-            this.PRECIOSUGERIDO.Name = "PRECIOSUGERIDO";
-            this.PRECIOSUGERIDO.ReadOnly = true;
-            this.PRECIOSUGERIDO.Width = 156;
-            // 
             // CANT_UNIDADES
             // 
             this.CANT_UNIDADES.DataPropertyName = "cantUnidad";
@@ -282,6 +263,15 @@
             this.UNIDADES.ReadOnly = true;
             this.UNIDADES.Width = 107;
             // 
+            // PRECIOSUGERIDO
+            // 
+            this.PRECIOSUGERIDO.DataPropertyName = "precioSugerido";
+            this.PRECIOSUGERIDO.HeaderText = "Precio Sugerido";
+            this.PRECIOSUGERIDO.MinimumWidth = 6;
+            this.PRECIOSUGERIDO.Name = "PRECIOSUGERIDO";
+            this.PRECIOSUGERIDO.ReadOnly = true;
+            this.PRECIOSUGERIDO.Width = 156;
+            // 
             // STOCK
             // 
             this.STOCK.DataPropertyName = "stock";
@@ -291,19 +281,29 @@
             this.STOCK.ReadOnly = true;
             this.STOCK.Width = 79;
             // 
-            // btnSeleccionar
+            // MARCA
             // 
-            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnSeleccionar.FlatAppearance.BorderSize = 0;
-            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.Location = new System.Drawing.Point(712, 64);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(144, 30);
-            this.btnSeleccionar.TabIndex = 64;
-            this.btnSeleccionar.Text = "SELECCIONAR";
-            this.btnSeleccionar.UseVisualStyleBackColor = false;
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            this.MARCA.HeaderText = "Marca";
+            this.MARCA.MinimumWidth = 6;
+            this.MARCA.Name = "MARCA";
+            this.MARCA.ReadOnly = true;
+            this.MARCA.Width = 84;
+            // 
+            // SUBFAMILIA
+            // 
+            this.SUBFAMILIA.HeaderText = "Subfamilia";
+            this.SUBFAMILIA.MinimumWidth = 6;
+            this.SUBFAMILIA.Name = "SUBFAMILIA";
+            this.SUBFAMILIA.ReadOnly = true;
+            this.SUBFAMILIA.Width = 115;
+            // 
+            // FAMILIA
+            // 
+            this.FAMILIA.HeaderText = "Familia";
+            this.FAMILIA.MinimumWidth = 6;
+            this.FAMILIA.Name = "FAMILIA";
+            this.FAMILIA.ReadOnly = true;
+            this.FAMILIA.Width = 91;
             // 
             // frmBuscarProducto
             // 
@@ -334,15 +334,15 @@
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SUBFAMILIA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FAMILIA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MARCA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRECIOSUGERIDO;
         private System.Windows.Forms.DataGridViewTextBoxColumn CANT_UNIDADES;
         private System.Windows.Forms.DataGridViewTextBoxColumn UNIDADES;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRECIOSUGERIDO;
         private System.Windows.Forms.DataGridViewTextBoxColumn STOCK;
-        private System.Windows.Forms.Button btnSeleccionar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MARCA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SUBFAMILIA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FAMILIA;
     }
 }
