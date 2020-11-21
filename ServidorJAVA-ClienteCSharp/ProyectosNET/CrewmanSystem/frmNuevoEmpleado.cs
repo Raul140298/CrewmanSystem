@@ -146,8 +146,20 @@ namespace CrewmanSystem
                 else empleado.cargo.idCargo = 2;
                 empleado.zona = new EmpleadoWS.zona();
                 empleado.zona.idZona = ((ZonaWS.zona)cboZona.SelectedItem).idZona;
-                
-                string usuario_contra = txtNombre.Text + txtApPaterno.Text.Substring(0,3) + txtApMaterno.Text.Substring(0,3);
+
+                string parte1 = txtNombre.Text;
+                string firstLetter = parte1.Substring(0,1);
+                string parte1New = firstLetter.ToLower()+parte1.Substring(1);
+
+                string parte2 = txtApPaterno.Text.Substring(0, 3);
+                firstLetter = parte2.Substring(0, 1);
+                string parte2New = firstLetter.ToLower()+parte2.Substring(1);
+
+                string parte3 = txtApMaterno.Text.Substring(0, 3);
+                firstLetter = parte3.Substring(0, 1);
+                string parte3New = firstLetter.ToLower() + parte3.Substring(1);
+
+                string usuario_contra =  parte1New + parte2New + parte3New;
                 empleado.usuario = usuario_contra;
                 empleado.contraseña = usuario_contra;
 

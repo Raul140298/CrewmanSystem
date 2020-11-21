@@ -67,6 +67,11 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtIdContacto = new System.Windows.Forms.TextBox();
+            this.txtCargo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.rbFemenino = new System.Windows.Forms.RadioButton();
+            this.rbMasculino = new System.Windows.Forms.RadioButton();
             this.contextMenuStrip2.SuspendLayout();
             this.tbcCliente.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -103,7 +108,7 @@
             this.tbcCliente.Location = new System.Drawing.Point(0, 0);
             this.tbcCliente.Name = "tbcCliente";
             this.tbcCliente.SelectedIndex = 0;
-            this.tbcCliente.Size = new System.Drawing.Size(567, 292);
+            this.tbcCliente.Size = new System.Drawing.Size(567, 356);
             this.tbcCliente.TabIndex = 121;
             // 
             // tabPage1
@@ -112,7 +117,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(559, 263);
+            this.tabPage1.Size = new System.Drawing.Size(559, 327);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cliente";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -136,14 +141,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(553, 257);
+            this.panel2.Size = new System.Drawing.Size(553, 321);
             this.panel2.TabIndex = 3;
             // 
             // txtRuc
             // 
             this.txtRuc.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtRuc.Enabled = false;
-            this.txtRuc.Location = new System.Drawing.Point(385, 20);
+            this.txtRuc.Location = new System.Drawing.Point(385, 22);
             this.txtRuc.Name = "txtRuc";
             this.txtRuc.Size = new System.Drawing.Size(129, 22);
             this.txtRuc.TabIndex = 119;
@@ -151,7 +156,7 @@
             // label16
             // 
             this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label16.Location = new System.Drawing.Point(332, 20);
+            this.label16.Location = new System.Drawing.Point(332, 22);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(47, 22);
             this.label16.TabIndex = 121;
@@ -161,9 +166,9 @@
             // label17
             // 
             this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label17.Location = new System.Drawing.Point(0, 20);
+            this.label17.Location = new System.Drawing.Point(33, 22);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(146, 22);
+            this.label17.Size = new System.Drawing.Size(113, 22);
             this.label17.TabIndex = 120;
             this.label17.Text = "Id :";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -172,7 +177,7 @@
             // 
             this.txtId.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(167, 20);
+            this.txtId.Location = new System.Drawing.Point(167, 22);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(129, 22);
             this.txtId.TabIndex = 118;
@@ -180,7 +185,7 @@
             // label7
             // 
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Location = new System.Drawing.Point(75, 201);
+            this.label7.Location = new System.Drawing.Point(75, 203);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 22);
             this.label7.TabIndex = 78;
@@ -191,7 +196,7 @@
             // 
             this.txtZona.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtZona.Enabled = false;
-            this.txtZona.Location = new System.Drawing.Point(167, 201);
+            this.txtZona.Location = new System.Drawing.Point(167, 203);
             this.txtZona.Name = "txtZona";
             this.txtZona.Size = new System.Drawing.Size(347, 22);
             this.txtZona.TabIndex = 117;
@@ -199,7 +204,7 @@
             // label6
             // 
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Location = new System.Drawing.Point(45, 164);
+            this.label6.Location = new System.Drawing.Point(45, 166);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 22);
             this.label6.TabIndex = 77;
@@ -209,15 +214,15 @@
             // dtpFechaInicio
             // 
             this.dtpFechaInicio.Enabled = false;
-            this.dtpFechaInicio.Location = new System.Drawing.Point(167, 92);
+            this.dtpFechaInicio.Location = new System.Drawing.Point(167, 94);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
-            this.dtpFechaInicio.Size = new System.Drawing.Size(280, 22);
+            this.dtpFechaInicio.Size = new System.Drawing.Size(347, 22);
             this.dtpFechaInicio.TabIndex = 116;
             // 
             // label5
             // 
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Location = new System.Drawing.Point(79, 127);
+            this.label5.Location = new System.Drawing.Point(79, 130);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 22);
             this.label5.TabIndex = 76;
@@ -228,7 +233,7 @@
             // 
             this.txtRazon.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtRazon.Enabled = false;
-            this.txtRazon.Location = new System.Drawing.Point(167, 56);
+            this.txtRazon.Location = new System.Drawing.Point(167, 58);
             this.txtRazon.Name = "txtRazon";
             this.txtRazon.Size = new System.Drawing.Size(347, 22);
             this.txtRazon.TabIndex = 114;
@@ -236,7 +241,7 @@
             // label4
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Location = new System.Drawing.Point(50, 92);
+            this.label4.Location = new System.Drawing.Point(50, 94);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 22);
             this.label4.TabIndex = 75;
@@ -247,7 +252,7 @@
             // 
             this.txtDireccion.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtDireccion.Enabled = false;
-            this.txtDireccion.Location = new System.Drawing.Point(167, 164);
+            this.txtDireccion.Location = new System.Drawing.Point(167, 166);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(347, 22);
             this.txtDireccion.TabIndex = 111;
@@ -255,7 +260,7 @@
             // label3
             // 
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(30, 56);
+            this.label3.Location = new System.Drawing.Point(30, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 22);
             this.label3.TabIndex = 74;
@@ -266,7 +271,7 @@
             // 
             this.txtGrupo.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtGrupo.Enabled = false;
-            this.txtGrupo.Location = new System.Drawing.Point(167, 127);
+            this.txtGrupo.Location = new System.Drawing.Point(167, 130);
             this.txtGrupo.Name = "txtGrupo";
             this.txtGrupo.Size = new System.Drawing.Size(347, 22);
             this.txtGrupo.TabIndex = 109;
@@ -277,13 +282,18 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(559, 263);
+            this.tabPage2.Size = new System.Drawing.Size(559, 327);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Persona Contacto";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.txtCargo);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.rbFemenino);
+            this.panel3.Controls.Add(this.rbMasculino);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.txtDNI);
             this.panel3.Controls.Add(this.label8);
@@ -303,13 +313,13 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(553, 257);
+            this.panel3.Size = new System.Drawing.Size(553, 321);
             this.panel3.TabIndex = 3;
             // 
             // label9
             // 
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label9.Location = new System.Drawing.Point(75, 207);
+            this.label9.Location = new System.Drawing.Point(75, 239);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(71, 22);
             this.label9.TabIndex = 116;
@@ -320,7 +330,7 @@
             // 
             this.txtDNI.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtDNI.Enabled = false;
-            this.txtDNI.Location = new System.Drawing.Point(385, 18);
+            this.txtDNI.Location = new System.Drawing.Point(383, 22);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(129, 22);
             this.txtDNI.TabIndex = 97;
@@ -328,9 +338,9 @@
             // label8
             // 
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Location = new System.Drawing.Point(279, 169);
+            this.label8.Location = new System.Drawing.Point(286, 166);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 22);
+            this.label8.Size = new System.Drawing.Size(91, 22);
             this.label8.TabIndex = 115;
             this.label8.Text = "Teléfono 2 :";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -339,7 +349,7 @@
             // 
             this.txtCorreo.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtCorreo.Enabled = false;
-            this.txtCorreo.Location = new System.Drawing.Point(167, 207);
+            this.txtCorreo.Location = new System.Drawing.Point(165, 239);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(347, 22);
             this.txtCorreo.TabIndex = 95;
@@ -347,7 +357,7 @@
             // label10
             // 
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label10.Location = new System.Drawing.Point(44, 169);
+            this.label10.Location = new System.Drawing.Point(44, 166);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(102, 22);
             this.label10.TabIndex = 114;
@@ -358,9 +368,9 @@
             // 
             this.txtTelefono2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtTelefono2.Enabled = false;
-            this.txtTelefono2.Location = new System.Drawing.Point(401, 169);
+            this.txtTelefono2.Location = new System.Drawing.Point(383, 166);
             this.txtTelefono2.Name = "txtTelefono2";
-            this.txtTelefono2.Size = new System.Drawing.Size(113, 22);
+            this.txtTelefono2.Size = new System.Drawing.Size(131, 22);
             this.txtTelefono2.TabIndex = 93;
             // 
             // label12
@@ -377,7 +387,7 @@
             // 
             this.txtTelefono1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtTelefono1.Enabled = false;
-            this.txtTelefono1.Location = new System.Drawing.Point(167, 169);
+            this.txtTelefono1.Location = new System.Drawing.Point(167, 166);
             this.txtTelefono1.Name = "txtTelefono1";
             this.txtTelefono1.Size = new System.Drawing.Size(113, 22);
             this.txtTelefono1.TabIndex = 91;
@@ -385,7 +395,7 @@
             // label13
             // 
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label13.Location = new System.Drawing.Point(332, 18);
+            this.label13.Location = new System.Drawing.Point(339, 22);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(38, 22);
             this.label13.TabIndex = 112;
@@ -396,7 +406,7 @@
             // 
             this.txtApMaterno.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtApMaterno.Enabled = false;
-            this.txtApMaterno.Location = new System.Drawing.Point(167, 133);
+            this.txtApMaterno.Location = new System.Drawing.Point(167, 130);
             this.txtApMaterno.Name = "txtApMaterno";
             this.txtApMaterno.Size = new System.Drawing.Size(347, 22);
             this.txtApMaterno.TabIndex = 89;
@@ -404,7 +414,7 @@
             // label11
             // 
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label11.Location = new System.Drawing.Point(12, 133);
+            this.label11.Location = new System.Drawing.Point(12, 130);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(134, 22);
             this.label11.TabIndex = 110;
@@ -415,7 +425,7 @@
             // 
             this.txtApPaterno.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtApPaterno.Enabled = false;
-            this.txtApPaterno.Location = new System.Drawing.Point(167, 96);
+            this.txtApPaterno.Location = new System.Drawing.Point(167, 94);
             this.txtApPaterno.Name = "txtApPaterno";
             this.txtApPaterno.Size = new System.Drawing.Size(347, 22);
             this.txtApPaterno.TabIndex = 87;
@@ -423,7 +433,7 @@
             // label15
             // 
             this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label15.Location = new System.Drawing.Point(9, 96);
+            this.label15.Location = new System.Drawing.Point(9, 94);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(137, 22);
             this.label15.TabIndex = 109;
@@ -442,7 +452,7 @@
             // label14
             // 
             this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label14.Location = new System.Drawing.Point(0, 18);
+            this.label14.Location = new System.Drawing.Point(0, 22);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(146, 22);
             this.label14.TabIndex = 108;
@@ -453,16 +463,71 @@
             // 
             this.txtIdContacto.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtIdContacto.Enabled = false;
-            this.txtIdContacto.Location = new System.Drawing.Point(167, 18);
+            this.txtIdContacto.Location = new System.Drawing.Point(167, 22);
             this.txtIdContacto.Name = "txtIdContacto";
             this.txtIdContacto.Size = new System.Drawing.Size(129, 22);
             this.txtIdContacto.TabIndex = 84;
+            // 
+            // txtCargo
+            // 
+            this.txtCargo.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtCargo.Enabled = false;
+            this.txtCargo.Location = new System.Drawing.Point(167, 203);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(347, 22);
+            this.txtCargo.TabIndex = 142;
+            // 
+            // label1
+            // 
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Location = new System.Drawing.Point(66, 203);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 22);
+            this.label1.TabIndex = 141;
+            this.label1.Text = "Cargo :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Location = new System.Drawing.Point(52, 274);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 22);
+            this.label2.TabIndex = 140;
+            this.label2.Text = "Género :";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // rbFemenino
+            // 
+            this.rbFemenino.AutoSize = true;
+            this.rbFemenino.Enabled = false;
+            this.rbFemenino.Location = new System.Drawing.Point(165, 275);
+            this.rbFemenino.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbFemenino.Name = "rbFemenino";
+            this.rbFemenino.Size = new System.Drawing.Size(37, 21);
+            this.rbFemenino.TabIndex = 139;
+            this.rbFemenino.TabStop = true;
+            this.rbFemenino.Text = "F";
+            this.rbFemenino.UseVisualStyleBackColor = true;
+            // 
+            // rbMasculino
+            // 
+            this.rbMasculino.AutoSize = true;
+            this.rbMasculino.Enabled = false;
+            this.rbMasculino.Location = new System.Drawing.Point(220, 275);
+            this.rbMasculino.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbMasculino.Name = "rbMasculino";
+            this.rbMasculino.Size = new System.Drawing.Size(40, 21);
+            this.rbMasculino.TabIndex = 138;
+            this.rbMasculino.TabStop = true;
+            this.rbMasculino.Text = "M";
+            this.rbMasculino.UseVisualStyleBackColor = true;
             // 
             // frmMostrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 292);
+            this.ClientSize = new System.Drawing.Size(567, 356);
             this.Controls.Add(this.tbcCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmMostrarCliente";
@@ -520,5 +585,10 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtCargo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton rbFemenino;
+        private System.Windows.Forms.RadioButton rbMasculino;
     }
 }

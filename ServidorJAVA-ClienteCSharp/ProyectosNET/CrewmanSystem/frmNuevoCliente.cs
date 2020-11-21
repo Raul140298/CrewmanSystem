@@ -160,6 +160,9 @@ namespace CrewmanSystem
                 cliente.direccion = txtDireccion.Text;
                 cliente.zona = new ClienteWS.zona();
                 cliente.zona.idZona = ((ZonaWS.zona) cboZona.SelectedItem).idZona;
+                //PENDIENTE REVISIOM -> VOTO PARA SACARLO
+                cliente.lineaCredito = new ClienteWS.lineaCredito();
+                cliente.lineaCredito.idLineaCredito = 0;
 
                 personaContacto.dni = txtDNI.Text;
                 personaContacto.nombre = txtNombre.Text;
@@ -190,9 +193,9 @@ namespace CrewmanSystem
                 else if (frmVentanaPrincipal.nBtn == 1)
                 {
                     cliente.idCliente = Int32.Parse(txtIdC.Text);
-                    cliente.personaContacto.idPersonaContacto = Int32.Parse(txtIdPC.Text);
                     int resultado = daoCliente.actualizarCliente(cliente);
-                    //int resultado = daoPersonaContacto.actualizarPersonaContacto(personaContacto);
+                    personaContacto.idPersonaContacto = Int32.Parse(txtIdPC.Text);
+                    int resultado2 = daoPersonaContacto.actualizarPersonaContacto(personaContacto);
                     if (resultado == 0)
                     {
                         MessageBox.Show("No se actualizó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -54,36 +54,6 @@ namespace CrewmanSystem.ClienteWS {
         System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.obtenerClientesPorCarteraResponse> obtenerClientesPorCarteraAsync(CrewmanSystem.ClienteWS.obtenerClientesPorCarteraRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/insertarClienteRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/insertarClienteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.ClienteWS.insertarClienteResponse insertarCliente(CrewmanSystem.ClienteWS.insertarClienteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/insertarClienteRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/insertarClienteResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.insertarClienteResponse> insertarClienteAsync(CrewmanSystem.ClienteWS.insertarClienteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerClienteRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerClienteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.ClienteWS.obtenerClienteResponse obtenerCliente(CrewmanSystem.ClienteWS.obtenerClienteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerClienteRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerClienteResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.obtenerClienteResponse> obtenerClienteAsync(CrewmanSystem.ClienteWS.obtenerClienteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.ClienteWS.listarClientesResponse listarClientes(CrewmanSystem.ClienteWS.listarClientesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.listarClientesResponse> listarClientesAsync(CrewmanSystem.ClienteWS.listarClientesRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/eliminarClienteRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/eliminarClienteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -102,6 +72,36 @@ namespace CrewmanSystem.ClienteWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/mostrarClienteRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/mostrarClienteResponse")]
         System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.mostrarClienteResponse> mostrarClienteAsync(CrewmanSystem.ClienteWS.mostrarClienteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerClienteRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerClienteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.ClienteWS.obtenerClienteResponse obtenerCliente(CrewmanSystem.ClienteWS.obtenerClienteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerClienteRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerClienteResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.obtenerClienteResponse> obtenerClienteAsync(CrewmanSystem.ClienteWS.obtenerClienteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/insertarClienteRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/insertarClienteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.ClienteWS.insertarClienteResponse insertarCliente(CrewmanSystem.ClienteWS.insertarClienteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/insertarClienteRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/insertarClienteResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.insertarClienteResponse> insertarClienteAsync(CrewmanSystem.ClienteWS.insertarClienteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.ClienteWS.listarClientesResponse listarClientes(CrewmanSystem.ClienteWS.listarClientesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.listarClientesResponse> listarClientesAsync(CrewmanSystem.ClienteWS.listarClientesRequest request);
     }
     
     /// <remarks/>
@@ -3539,124 +3539,6 @@ namespace CrewmanSystem.ClienteWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCliente", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarClienteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.ClienteWS.cliente cliente;
-        
-        public insertarClienteRequest() {
-        }
-        
-        public insertarClienteRequest(CrewmanSystem.ClienteWS.cliente cliente) {
-            this.cliente = cliente;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarClienteResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarClienteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarClienteResponse() {
-        }
-        
-        public insertarClienteResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerCliente", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerClienteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idCliente;
-        
-        public obtenerClienteRequest() {
-        }
-        
-        public obtenerClienteRequest(int idCliente) {
-            this.idCliente = idCliente;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerClienteResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerClienteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.ClienteWS.cliente @return;
-        
-        public obtenerClienteResponse() {
-        }
-        
-        public obtenerClienteResponse(CrewmanSystem.ClienteWS.cliente @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientes", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarClientesRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string razonSocial;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string grupo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idZona;
-        
-        public listarClientesRequest() {
-        }
-        
-        public listarClientesRequest(string razonSocial, string grupo, int idZona) {
-            this.razonSocial = razonSocial;
-            this.grupo = grupo;
-            this.idZona = idZona;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientesResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarClientesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.ClienteWS.cliente[] @return;
-        
-        public listarClientesResponse() {
-        }
-        
-        public listarClientesResponse(CrewmanSystem.ClienteWS.cliente[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCliente", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
     public partial class eliminarClienteRequest {
         
@@ -3722,6 +3604,124 @@ namespace CrewmanSystem.ClienteWS {
         }
         
         public mostrarClienteResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerCliente", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerClienteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idCliente;
+        
+        public obtenerClienteRequest() {
+        }
+        
+        public obtenerClienteRequest(int idCliente) {
+            this.idCliente = idCliente;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerClienteResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerClienteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.ClienteWS.cliente @return;
+        
+        public obtenerClienteResponse() {
+        }
+        
+        public obtenerClienteResponse(CrewmanSystem.ClienteWS.cliente @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCliente", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarClienteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.ClienteWS.cliente cliente;
+        
+        public insertarClienteRequest() {
+        }
+        
+        public insertarClienteRequest(CrewmanSystem.ClienteWS.cliente cliente) {
+            this.cliente = cliente;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarClienteResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarClienteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarClienteResponse() {
+        }
+        
+        public insertarClienteResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientes", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarClientesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string razonSocial;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string grupo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idZona;
+        
+        public listarClientesRequest() {
+        }
+        
+        public listarClientesRequest(string razonSocial, string grupo, int idZona) {
+            this.razonSocial = razonSocial;
+            this.grupo = grupo;
+            this.idZona = idZona;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarClientesResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarClientesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.ClienteWS.cliente[] @return;
+        
+        public listarClientesResponse() {
+        }
+        
+        public listarClientesResponse(CrewmanSystem.ClienteWS.cliente[] @return) {
             this.@return = @return;
         }
     }
@@ -3825,79 +3825,6 @@ namespace CrewmanSystem.ClienteWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.ClienteWS.insertarClienteResponse CrewmanSystem.ClienteWS.ClienteWS.insertarCliente(CrewmanSystem.ClienteWS.insertarClienteRequest request) {
-            return base.Channel.insertarCliente(request);
-        }
-        
-        public int insertarCliente(CrewmanSystem.ClienteWS.cliente cliente) {
-            CrewmanSystem.ClienteWS.insertarClienteRequest inValue = new CrewmanSystem.ClienteWS.insertarClienteRequest();
-            inValue.cliente = cliente;
-            CrewmanSystem.ClienteWS.insertarClienteResponse retVal = ((CrewmanSystem.ClienteWS.ClienteWS)(this)).insertarCliente(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.insertarClienteResponse> CrewmanSystem.ClienteWS.ClienteWS.insertarClienteAsync(CrewmanSystem.ClienteWS.insertarClienteRequest request) {
-            return base.Channel.insertarClienteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.insertarClienteResponse> insertarClienteAsync(CrewmanSystem.ClienteWS.cliente cliente) {
-            CrewmanSystem.ClienteWS.insertarClienteRequest inValue = new CrewmanSystem.ClienteWS.insertarClienteRequest();
-            inValue.cliente = cliente;
-            return ((CrewmanSystem.ClienteWS.ClienteWS)(this)).insertarClienteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.ClienteWS.obtenerClienteResponse CrewmanSystem.ClienteWS.ClienteWS.obtenerCliente(CrewmanSystem.ClienteWS.obtenerClienteRequest request) {
-            return base.Channel.obtenerCliente(request);
-        }
-        
-        public CrewmanSystem.ClienteWS.cliente obtenerCliente(int idCliente) {
-            CrewmanSystem.ClienteWS.obtenerClienteRequest inValue = new CrewmanSystem.ClienteWS.obtenerClienteRequest();
-            inValue.idCliente = idCliente;
-            CrewmanSystem.ClienteWS.obtenerClienteResponse retVal = ((CrewmanSystem.ClienteWS.ClienteWS)(this)).obtenerCliente(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.obtenerClienteResponse> CrewmanSystem.ClienteWS.ClienteWS.obtenerClienteAsync(CrewmanSystem.ClienteWS.obtenerClienteRequest request) {
-            return base.Channel.obtenerClienteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.obtenerClienteResponse> obtenerClienteAsync(int idCliente) {
-            CrewmanSystem.ClienteWS.obtenerClienteRequest inValue = new CrewmanSystem.ClienteWS.obtenerClienteRequest();
-            inValue.idCliente = idCliente;
-            return ((CrewmanSystem.ClienteWS.ClienteWS)(this)).obtenerClienteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.ClienteWS.listarClientesResponse CrewmanSystem.ClienteWS.ClienteWS.listarClientes(CrewmanSystem.ClienteWS.listarClientesRequest request) {
-            return base.Channel.listarClientes(request);
-        }
-        
-        public CrewmanSystem.ClienteWS.cliente[] listarClientes(string razonSocial, string grupo, int idZona) {
-            CrewmanSystem.ClienteWS.listarClientesRequest inValue = new CrewmanSystem.ClienteWS.listarClientesRequest();
-            inValue.razonSocial = razonSocial;
-            inValue.grupo = grupo;
-            inValue.idZona = idZona;
-            CrewmanSystem.ClienteWS.listarClientesResponse retVal = ((CrewmanSystem.ClienteWS.ClienteWS)(this)).listarClientes(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.listarClientesResponse> CrewmanSystem.ClienteWS.ClienteWS.listarClientesAsync(CrewmanSystem.ClienteWS.listarClientesRequest request) {
-            return base.Channel.listarClientesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.listarClientesResponse> listarClientesAsync(string razonSocial, string grupo, int idZona) {
-            CrewmanSystem.ClienteWS.listarClientesRequest inValue = new CrewmanSystem.ClienteWS.listarClientesRequest();
-            inValue.razonSocial = razonSocial;
-            inValue.grupo = grupo;
-            inValue.idZona = idZona;
-            return ((CrewmanSystem.ClienteWS.ClienteWS)(this)).listarClientesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CrewmanSystem.ClienteWS.eliminarClienteResponse CrewmanSystem.ClienteWS.ClienteWS.eliminarCliente(CrewmanSystem.ClienteWS.eliminarClienteRequest request) {
             return base.Channel.eliminarCliente(request);
         }
@@ -3941,6 +3868,79 @@ namespace CrewmanSystem.ClienteWS {
             CrewmanSystem.ClienteWS.mostrarClienteRequest inValue = new CrewmanSystem.ClienteWS.mostrarClienteRequest();
             inValue.cliente = cliente;
             return ((CrewmanSystem.ClienteWS.ClienteWS)(this)).mostrarClienteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.ClienteWS.obtenerClienteResponse CrewmanSystem.ClienteWS.ClienteWS.obtenerCliente(CrewmanSystem.ClienteWS.obtenerClienteRequest request) {
+            return base.Channel.obtenerCliente(request);
+        }
+        
+        public CrewmanSystem.ClienteWS.cliente obtenerCliente(int idCliente) {
+            CrewmanSystem.ClienteWS.obtenerClienteRequest inValue = new CrewmanSystem.ClienteWS.obtenerClienteRequest();
+            inValue.idCliente = idCliente;
+            CrewmanSystem.ClienteWS.obtenerClienteResponse retVal = ((CrewmanSystem.ClienteWS.ClienteWS)(this)).obtenerCliente(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.obtenerClienteResponse> CrewmanSystem.ClienteWS.ClienteWS.obtenerClienteAsync(CrewmanSystem.ClienteWS.obtenerClienteRequest request) {
+            return base.Channel.obtenerClienteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.obtenerClienteResponse> obtenerClienteAsync(int idCliente) {
+            CrewmanSystem.ClienteWS.obtenerClienteRequest inValue = new CrewmanSystem.ClienteWS.obtenerClienteRequest();
+            inValue.idCliente = idCliente;
+            return ((CrewmanSystem.ClienteWS.ClienteWS)(this)).obtenerClienteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.ClienteWS.insertarClienteResponse CrewmanSystem.ClienteWS.ClienteWS.insertarCliente(CrewmanSystem.ClienteWS.insertarClienteRequest request) {
+            return base.Channel.insertarCliente(request);
+        }
+        
+        public int insertarCliente(CrewmanSystem.ClienteWS.cliente cliente) {
+            CrewmanSystem.ClienteWS.insertarClienteRequest inValue = new CrewmanSystem.ClienteWS.insertarClienteRequest();
+            inValue.cliente = cliente;
+            CrewmanSystem.ClienteWS.insertarClienteResponse retVal = ((CrewmanSystem.ClienteWS.ClienteWS)(this)).insertarCliente(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.insertarClienteResponse> CrewmanSystem.ClienteWS.ClienteWS.insertarClienteAsync(CrewmanSystem.ClienteWS.insertarClienteRequest request) {
+            return base.Channel.insertarClienteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.insertarClienteResponse> insertarClienteAsync(CrewmanSystem.ClienteWS.cliente cliente) {
+            CrewmanSystem.ClienteWS.insertarClienteRequest inValue = new CrewmanSystem.ClienteWS.insertarClienteRequest();
+            inValue.cliente = cliente;
+            return ((CrewmanSystem.ClienteWS.ClienteWS)(this)).insertarClienteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.ClienteWS.listarClientesResponse CrewmanSystem.ClienteWS.ClienteWS.listarClientes(CrewmanSystem.ClienteWS.listarClientesRequest request) {
+            return base.Channel.listarClientes(request);
+        }
+        
+        public CrewmanSystem.ClienteWS.cliente[] listarClientes(string razonSocial, string grupo, int idZona) {
+            CrewmanSystem.ClienteWS.listarClientesRequest inValue = new CrewmanSystem.ClienteWS.listarClientesRequest();
+            inValue.razonSocial = razonSocial;
+            inValue.grupo = grupo;
+            inValue.idZona = idZona;
+            CrewmanSystem.ClienteWS.listarClientesResponse retVal = ((CrewmanSystem.ClienteWS.ClienteWS)(this)).listarClientes(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.listarClientesResponse> CrewmanSystem.ClienteWS.ClienteWS.listarClientesAsync(CrewmanSystem.ClienteWS.listarClientesRequest request) {
+            return base.Channel.listarClientesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.ClienteWS.listarClientesResponse> listarClientesAsync(string razonSocial, string grupo, int idZona) {
+            CrewmanSystem.ClienteWS.listarClientesRequest inValue = new CrewmanSystem.ClienteWS.listarClientesRequest();
+            inValue.razonSocial = razonSocial;
+            inValue.grupo = grupo;
+            inValue.idZona = idZona;
+            return ((CrewmanSystem.ClienteWS.ClienteWS)(this)).listarClientesAsync(inValue);
         }
     }
 }

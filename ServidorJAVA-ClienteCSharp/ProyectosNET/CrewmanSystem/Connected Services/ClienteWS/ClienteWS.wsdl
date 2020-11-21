@@ -23,24 +23,6 @@
   <message name="obtenerClientesPorCarteraResponse">
     <part name="parameters" element="tns:obtenerClientesPorCarteraResponse" />
   </message>
-  <message name="insertarCliente">
-    <part name="parameters" element="tns:insertarCliente" />
-  </message>
-  <message name="insertarClienteResponse">
-    <part name="parameters" element="tns:insertarClienteResponse" />
-  </message>
-  <message name="obtenerCliente">
-    <part name="parameters" element="tns:obtenerCliente" />
-  </message>
-  <message name="obtenerClienteResponse">
-    <part name="parameters" element="tns:obtenerClienteResponse" />
-  </message>
-  <message name="listarClientes">
-    <part name="parameters" element="tns:listarClientes" />
-  </message>
-  <message name="listarClientesResponse">
-    <part name="parameters" element="tns:listarClientesResponse" />
-  </message>
   <message name="eliminarCliente">
     <part name="parameters" element="tns:eliminarCliente" />
   </message>
@@ -52,6 +34,24 @@
   </message>
   <message name="mostrarClienteResponse">
     <part name="parameters" element="tns:mostrarClienteResponse" />
+  </message>
+  <message name="obtenerCliente">
+    <part name="parameters" element="tns:obtenerCliente" />
+  </message>
+  <message name="obtenerClienteResponse">
+    <part name="parameters" element="tns:obtenerClienteResponse" />
+  </message>
+  <message name="insertarCliente">
+    <part name="parameters" element="tns:insertarCliente" />
+  </message>
+  <message name="insertarClienteResponse">
+    <part name="parameters" element="tns:insertarClienteResponse" />
+  </message>
+  <message name="listarClientes">
+    <part name="parameters" element="tns:listarClientes" />
+  </message>
+  <message name="listarClientesResponse">
+    <part name="parameters" element="tns:listarClientesResponse" />
   </message>
   <portType name="ClienteWS">
     <operation name="actualizarCliente">
@@ -66,18 +66,6 @@
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerClientesPorCarteraRequest" message="tns:obtenerClientesPorCartera" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerClientesPorCarteraResponse" message="tns:obtenerClientesPorCarteraResponse" />
     </operation>
-    <operation name="insertarCliente">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/insertarClienteRequest" message="tns:insertarCliente" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/insertarClienteResponse" message="tns:insertarClienteResponse" />
-    </operation>
-    <operation name="obtenerCliente">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerClienteRequest" message="tns:obtenerCliente" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerClienteResponse" message="tns:obtenerClienteResponse" />
-    </operation>
-    <operation name="listarClientes">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesRequest" message="tns:listarClientes" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesResponse" message="tns:listarClientesResponse" />
-    </operation>
     <operation name="eliminarCliente">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/eliminarClienteRequest" message="tns:eliminarCliente" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/eliminarClienteResponse" message="tns:eliminarClienteResponse" />
@@ -85,6 +73,18 @@
     <operation name="mostrarCliente">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/mostrarClienteRequest" message="tns:mostrarCliente" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/mostrarClienteResponse" message="tns:mostrarClienteResponse" />
+    </operation>
+    <operation name="obtenerCliente">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerClienteRequest" message="tns:obtenerCliente" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerClienteResponse" message="tns:obtenerClienteResponse" />
+    </operation>
+    <operation name="insertarCliente">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/insertarClienteRequest" message="tns:insertarCliente" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/insertarClienteResponse" message="tns:insertarClienteResponse" />
+    </operation>
+    <operation name="listarClientes">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesRequest" message="tns:listarClientes" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesResponse" message="tns:listarClientesResponse" />
     </operation>
   </portType>
   <binding name="ClienteWSPortBinding" type="tns:ClienteWS">
@@ -116,7 +116,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarCliente">
+    <operation name="eliminarCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarCliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -134,25 +143,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="insertarCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="listarClientes">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarCliente">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="mostrarCliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

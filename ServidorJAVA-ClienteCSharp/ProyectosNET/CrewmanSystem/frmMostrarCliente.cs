@@ -22,7 +22,7 @@ namespace CrewmanSystem
             txtGrupo.Text = miCliente.grupo;
             txtDireccion.Text = miCliente.direccion;
             txtZona.Text = miCliente.zona.nombre;
-            txtIdContacto.Text = miCliente.personaContacto.idPersona.ToString();
+            txtIdContacto.Text = miCliente.personaContacto.idPersonaContacto.ToString();
             txtDNI.Text = miCliente.personaContacto.dni;
             txtNombre.Text = miCliente.personaContacto.nombre;
             txtApPaterno.Text = miCliente.personaContacto.apellidoPaterno;
@@ -30,6 +30,9 @@ namespace CrewmanSystem
             txtTelefono1.Text = miCliente.personaContacto.telefono1;
             txtTelefono2.Text = miCliente.personaContacto.telefono2;
             txtCorreo.Text = miCliente.personaContacto.correo;
+            txtCargo.Text = miCliente.personaContacto.cargo;
+            if (miCliente.personaContacto.genero == 'M') rbMasculino.Checked = true;
+            else rbFemenino.Checked = true;
         }
     }
 }

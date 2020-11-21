@@ -78,7 +78,6 @@
             this.cboZona.Margin = new System.Windows.Forms.Padding(4);
             this.cboZona.Name = "cboZona";
             this.cboZona.Size = new System.Drawing.Size(280, 24);
-            this.cboZona.Sorted = true;
             this.cboZona.TabIndex = 91;
             // 
             // label3

@@ -16,10 +16,25 @@ namespace CrewmanSystem.PersonaContactoWS {
     public interface PersonaContactoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/actualizarPersonaCont" +
+            "actoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/actualizarPersonaCont" +
+            "actoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoResponse actualizarPersonaContacto(CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/actualizarPersonaCont" +
+            "actoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/actualizarPersonaCont" +
+            "actoResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoResponse> actualizarPersonaContactoAsync(CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/eliminarPersonaContac" +
             "toRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/eliminarPersonaContac" +
             "toResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         CrewmanSystem.PersonaContactoWS.eliminarPersonaContactoResponse eliminarPersonaContacto(CrewmanSystem.PersonaContactoWS.eliminarPersonaContactoRequest request);
         
@@ -55,56 +70,6 @@ namespace CrewmanSystem.PersonaContactoWS {
             "oRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/mostrarPersonaContact" +
             "oResponse")]
         System.Threading.Tasks.Task<CrewmanSystem.PersonaContactoWS.mostrarPersonaContactoResponse> mostrarPersonaContactoAsync(CrewmanSystem.PersonaContactoWS.mostrarPersonaContactoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/actualizarPersonaCont" +
-            "actoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/actualizarPersonaCont" +
-            "actoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoResponse actualizarPersonaContacto(CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/actualizarPersonaCont" +
-            "actoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/actualizarPersonaCont" +
-            "actoResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoResponse> actualizarPersonaContactoAsync(CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPersonaContacto", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarPersonaContactoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int persona;
-        
-        public eliminarPersonaContactoRequest() {
-        }
-        
-        public eliminarPersonaContactoRequest(int persona) {
-            this.persona = persona;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPersonaContactoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarPersonaContactoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarPersonaContactoResponse() {
-        }
-        
-        public eliminarPersonaContactoResponse(int @return) {
-            this.@return = @return;
-        }
     }
     
     /// <remarks/>
@@ -3432,6 +3397,78 @@ namespace CrewmanSystem.PersonaContactoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPersonaContacto", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarPersonaContactoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.PersonaContactoWS.personaContacto persona;
+        
+        public actualizarPersonaContactoRequest() {
+        }
+        
+        public actualizarPersonaContactoRequest(CrewmanSystem.PersonaContactoWS.personaContacto persona) {
+            this.persona = persona;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPersonaContactoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarPersonaContactoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarPersonaContactoResponse() {
+        }
+        
+        public actualizarPersonaContactoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPersonaContacto", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarPersonaContactoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int persona;
+        
+        public eliminarPersonaContactoRequest() {
+        }
+        
+        public eliminarPersonaContactoRequest(int persona) {
+            this.persona = persona;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPersonaContactoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarPersonaContactoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarPersonaContactoResponse() {
+        }
+        
+        public eliminarPersonaContactoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPersonaContacto", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertarPersonaContactoRequest {
         
@@ -3506,42 +3543,6 @@ namespace CrewmanSystem.PersonaContactoWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPersonaContacto", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarPersonaContactoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.PersonaContactoWS.personaContacto persona;
-        
-        public actualizarPersonaContactoRequest() {
-        }
-        
-        public actualizarPersonaContactoRequest(CrewmanSystem.PersonaContactoWS.personaContacto persona) {
-            this.persona = persona;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPersonaContactoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarPersonaContactoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarPersonaContactoResponse() {
-        }
-        
-        public actualizarPersonaContactoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface PersonaContactoWSChannel : CrewmanSystem.PersonaContactoWS.PersonaContactoWS, System.ServiceModel.IClientChannel {
     }
@@ -3567,6 +3568,29 @@ namespace CrewmanSystem.PersonaContactoWS {
         
         public PersonaContactoWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoResponse CrewmanSystem.PersonaContactoWS.PersonaContactoWS.actualizarPersonaContacto(CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoRequest request) {
+            return base.Channel.actualizarPersonaContacto(request);
+        }
+        
+        public int actualizarPersonaContacto(CrewmanSystem.PersonaContactoWS.personaContacto persona) {
+            CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoRequest inValue = new CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoRequest();
+            inValue.persona = persona;
+            CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoResponse retVal = ((CrewmanSystem.PersonaContactoWS.PersonaContactoWS)(this)).actualizarPersonaContacto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoResponse> CrewmanSystem.PersonaContactoWS.PersonaContactoWS.actualizarPersonaContactoAsync(CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoRequest request) {
+            return base.Channel.actualizarPersonaContactoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoResponse> actualizarPersonaContactoAsync(CrewmanSystem.PersonaContactoWS.personaContacto persona) {
+            CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoRequest inValue = new CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoRequest();
+            inValue.persona = persona;
+            return ((CrewmanSystem.PersonaContactoWS.PersonaContactoWS)(this)).actualizarPersonaContactoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3638,29 +3662,6 @@ namespace CrewmanSystem.PersonaContactoWS {
             CrewmanSystem.PersonaContactoWS.mostrarPersonaContactoRequest inValue = new CrewmanSystem.PersonaContactoWS.mostrarPersonaContactoRequest();
             inValue.persona = persona;
             return ((CrewmanSystem.PersonaContactoWS.PersonaContactoWS)(this)).mostrarPersonaContactoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoResponse CrewmanSystem.PersonaContactoWS.PersonaContactoWS.actualizarPersonaContacto(CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoRequest request) {
-            return base.Channel.actualizarPersonaContacto(request);
-        }
-        
-        public int actualizarPersonaContacto(CrewmanSystem.PersonaContactoWS.personaContacto persona) {
-            CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoRequest inValue = new CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoRequest();
-            inValue.persona = persona;
-            CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoResponse retVal = ((CrewmanSystem.PersonaContactoWS.PersonaContactoWS)(this)).actualizarPersonaContacto(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoResponse> CrewmanSystem.PersonaContactoWS.PersonaContactoWS.actualizarPersonaContactoAsync(CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoRequest request) {
-            return base.Channel.actualizarPersonaContactoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoResponse> actualizarPersonaContactoAsync(CrewmanSystem.PersonaContactoWS.personaContacto persona) {
-            CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoRequest inValue = new CrewmanSystem.PersonaContactoWS.actualizarPersonaContactoRequest();
-            inValue.persona = persona;
-            return ((CrewmanSystem.PersonaContactoWS.PersonaContactoWS)(this)).actualizarPersonaContactoAsync(inValue);
         }
     }
 }

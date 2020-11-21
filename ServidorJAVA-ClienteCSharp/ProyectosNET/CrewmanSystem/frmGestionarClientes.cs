@@ -13,27 +13,22 @@ namespace CrewmanSystem
 	public partial class frmGestionarClientes : Form
 	{
 		public static ClienteWS.ClienteWSClient daoCliente;
+		public static PersonaContactoWS.PersonaContactoWSClient daoPersonaContacto;
 		public static ClienteWS.cliente clienteSeleccionado;
 		public static DataGridView dgv;
 
 		public frmGestionarClientes()
 		{
 			daoCliente = new ClienteWS.ClienteWSClient();
-
+			daoPersonaContacto = new PersonaContactoWS.PersonaContactoWSClient();
 			InitializeComponent();
 			dgv = dgvClientes;
-
 			dgvClientes.AutoGenerateColumns = false;
 			ClienteWS.cliente[] misClientes = daoCliente.listarClientes("","",0);
-            if (misClientes != null)
-            {
+			if (misClientes != null)
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
-            }
-            else
-            {
+			else
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>();
-
-			}
 
 			#region colores de seleccion
 			dgvClientes.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
@@ -86,6 +81,21 @@ namespace CrewmanSystem
         private void dgvClientes_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 			clienteSeleccionado = (ClienteWS.cliente)dgv.CurrentRow.DataBoundItem;
+			PersonaContactoWS.personaContacto perCont = new PersonaContactoWS.personaContacto();
+			perCont.idPersonaContacto = clienteSeleccionado.personaContacto.idPersonaContacto;
+			perCont = daoPersonaContacto.mostrarPersonaContacto(perCont.idPersonaContacto);
+			clienteSeleccionado.personaContacto = new ClienteWS.personaContacto();
+			clienteSeleccionado.personaContacto.idPersonaContacto = perCont.idPersonaContacto;
+			clienteSeleccionado.personaContacto.dni = perCont.dni;
+			clienteSeleccionado.personaContacto.nombre = perCont.nombre;
+			clienteSeleccionado.personaContacto.apellidoPaterno = perCont.apellidoPaterno;
+			clienteSeleccionado.personaContacto.apellidoMaterno = perCont.apellidoMaterno;
+			clienteSeleccionado.personaContacto.telefono1 = perCont.telefono1;
+			clienteSeleccionado.personaContacto.telefono2 = perCont.telefono2;
+			clienteSeleccionado.personaContacto.cargo = perCont.cargo;
+			clienteSeleccionado.personaContacto.correo = perCont.correo;
+			clienteSeleccionado.personaContacto.genero = perCont.genero;
+
 			frmMostrarCliente formMostrarCliente = new frmMostrarCliente(clienteSeleccionado);
 			if(formMostrarCliente.ShowDialog() == DialogResult.OK) { 
             }

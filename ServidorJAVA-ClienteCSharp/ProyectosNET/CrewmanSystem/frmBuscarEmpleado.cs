@@ -91,7 +91,7 @@ namespace CrewmanSystem
 			EmpleadoWS.empleado empleado = dataGridView1.Rows[e.RowIndex].DataBoundItem
 			as EmpleadoWS.empleado;
 
-			dataGridView1.Rows[e.RowIndex].Cells["ZONA"].Value = empleado.zona.idZona;
+			dataGridView1.Rows[e.RowIndex].Cells["ZONA"].Value = empleado.zona.nombre;
 		}
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -103,13 +103,11 @@ namespace CrewmanSystem
 			{
 				EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado, txtNombre.Text, txtApPaterno.Text, txtApMaterno.Text);
 				dataGridView1.DataSource = misEmpleados;
-				dataGridView1.Refresh();
 			}
             else
             {
 				EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentasYZona(Program.empleado.idEmpleado, txtNombre.Text, txtApPaterno.Text, txtApMaterno.Text,zonaSeleccionada.idZona);
 				dataGridView1.DataSource = misEmpleados;
-				dataGridView1.Refresh();
 			}
 		}
     }
