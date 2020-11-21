@@ -79,33 +79,21 @@ public class ClienteWS {
         }
         return misClientes;
     }
-            
-    @WebMethod(operationName = "obtenerClientesSinCartera")
-    public ArrayList<Cliente> obtenerClientesSinCartera() {
-        ArrayList<Cliente> misClientes = new ArrayList<>();
-        try{
-            misClientes = daoCliente.obtenerClientesSinCartera();
-        }catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-        return misClientes;
-    }
     
-    @WebMethod(operationName = "obtenerClientesPorCartera")
-    public ArrayList<Cliente> obtenerClientesPorCartera(
-            @WebParam(name = "idCartera") int idCartera,
+    @WebMethod(operationName = "listarClientesSinCartera")
+    public ArrayList<Cliente> listarClientesSinCartera(
             @WebParam(name = "razonSocial") String razonSocial,
-            @WebParam(name = "grupo") String grupo) {
+            @WebParam(name = "grupo") String grupo,
+            @WebParam(name = "idZona") int idZona) {
         ArrayList<Cliente> misClientes = new ArrayList<>();
         try{
-            misClientes = daoCliente.obtenerClientesPorCartera(idCartera, 
-                    razonSocial, grupo);
+            misClientes = daoCliente.listarSinCartera(razonSocial,grupo,idZona);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
         return misClientes;
     }
-    
+                
     @WebMethod(operationName = "obtenerCliente")
     public Cliente obtenerCliente(@WebParam(name = "idCliente") int idCliente){
         Cliente cliente = new Cliente();
@@ -116,5 +104,4 @@ public class ClienteWS {
         }
         return cliente;
     }
-    
 }

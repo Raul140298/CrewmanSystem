@@ -1,12 +1,10 @@
 package pe.edu.pucp.CrewmanSystem.services;
 
-import java.sql.Connection;
 import java.util.ArrayList;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import pe.edu.pucp.CrewmanSystem.dao.VisitaDAO;
-import pe.edu.pucp.CrewmanSystem.model.Empleado;
 import pe.edu.pucp.CrewmanSystem.model.Visita;
 import pe.edu.pucp.CrewmanSystem.mysql.VisitaMySQL;
 
@@ -28,23 +26,12 @@ public class VisitaWS {
         }
         return resultado;
     }
-    
-    @WebMethod(operationName = "actualizarVisita")
-    public int actualizarVisita(@WebParam(name = "visita") Visita visita){
-        int resultado = 0;
-        try{
-            resultado = daoVisita.actualizar(visita);
-        }catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-        return resultado;
-    }
-    
+        
     @WebMethod(operationName = "listarVisitas")
-    public ArrayList<Visita> listarVisitas(@WebParam(name = "empleado") Empleado empleado) {
+    public ArrayList<Visita> listarVisitas(@WebParam(name = "idCartera") int idCartera) {
         ArrayList<Visita> misVisitas = new ArrayList<>();
         try{
-            misVisitas = daoVisita.listar(empleado);
+            misVisitas = daoVisita.listar(idCartera);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }

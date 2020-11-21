@@ -57,7 +57,7 @@ public class Main{
 //        gestionarSubFamilias();
 //        gestionarMarcas();
 //        gestionarZonas();
-       gestionarClientes();
+//       gestionarClientes();
 //        gestionarEmpleados();
 //        gestionarProductos();
 //        gestionarProductoXZona();
@@ -130,14 +130,18 @@ public class Main{
 //        }catch(Exception e){
 //            System.out.println("MAL");
 //        }
-        Pedido pedido = new Pedido();
-        try{
-            pedido.setFechaEstim(sdf.parse("01-01-2021"));
-        }catch(Exception e){
-            System.out.println("MAL");
-        }
-        pedido.setIdPedido(55);
-        daoPedido.aprobarBorrador(pedido);
+
+        misClientes=daoCliente.listarSinCartera("", "", 125);
+        for(Cliente c : misClientes) System.out.println(c.getIdCliente()+" "+c.getRuc());
+        
+//        Pedido pedido = new Pedido();
+//        try{
+//            pedido.setFechaEstim(sdf.parse("01-01-2021"));
+//        }catch(Exception e){
+//            System.out.println("MAL");
+//        }
+//        pedido.setIdPedido(55);
+//        daoPedido.aprobarBorrador(pedido);
     }
     
     private static void gestionarFamilias(){
@@ -299,23 +303,23 @@ public class Main{
                 System.out.println("==================================================================================");
                 System.out.println(miEmpleado.getZona().getIdZona()+" - "+miEmpleado.getZona().getNombre());
                 
-                misVisitas = daoVisita.listar(miEmpleado);
+                misVisitas = daoVisita.listar(miEmpleado.getCartera().getIdCartera());
                 System.out.println("\nLISTADO DE VISITAS DEL VENDEDOR");
                 System.out.println("==================================================================================");
                 for(Visita v : misVisitas)
                     System.out.println(v.getCliente().getIdCliente()+" - "+v.getCliente().getRazonSocial()+" - "+v.getFechaRegistro()+" - "+v.isEstado());
                                 
-                String razonSocial="";
-                String grupo="";
-                misClientes=daoCliente.obtenerClientesPorCartera(miEmpleado.getCartera().getIdCartera(),razonSocial,grupo);
-                System.out.println("\nLISTADO DE CLIENTES");
-                System.out.println("==================================================================================");
-                System.out.println("RAZON SOCIAL: "+razonSocial);
-                System.out.println("GRUPO: "+grupo);
-                System.out.println("==================================================================================");
-                for(Cliente c:misClientes) 
-                    System.out.println(c.getIdCliente()+" - "+c.getRuc()+" - "+c.getRazonSocial()+" - "+c.getGrupo()+" - "+
-                    c.getTipoEmpresa()+" - "+c.getDireccion()+" - "+sdf.format(c.getFechaRegistro()));
+//                String razonSocial="";
+//                String grupo="";
+//                misClientes=daoCliente.obtenerClientesPorCartera(miEmpleado.getCartera().getIdCartera(),razonSocial,grupo);
+//                System.out.println("\nLISTADO DE CLIENTES");
+//                System.out.println("==================================================================================");
+//                System.out.println("RAZON SOCIAL: "+razonSocial);
+//                System.out.println("GRUPO: "+grupo);
+//                System.out.println("==================================================================================");
+//                for(Cliente c:misClientes) 
+//                    System.out.println(c.getIdCliente()+" - "+c.getRuc()+" - "+c.getRazonSocial()+" - "+c.getGrupo()+" - "+
+//                    c.getTipoEmpresa()+" - "+c.getDireccion()+" - "+sdf.format(c.getFechaRegistro()));
                 
                 Cliente miCliente=misClientes.get(0);
                 daoCliente.mostrar(miCliente);
