@@ -21,6 +21,8 @@ namespace CrewmanSystem
             daoZona = new ZonaWS.ZonaWSClient();
             daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
             cboCargo.DataSource = cargos;
+            cboCargo.SelectedIndex = 0;
+            cboCargo.Enabled = false;
 
             ZonaWS.zona[] auxZonas = daoZona.listarZonas();
             ZonaWS.zona[] miLista = new ZonaWS.zona[auxZonas.Length + 1];
@@ -70,7 +72,7 @@ namespace CrewmanSystem
                 if (c is TextBox)
                 {
                     TextBox textBox = c as TextBox;
-                    if (textBox.Text == string.Empty && textBox.Name != "txtID")
+                    if (textBox.Text == string.Empty && textBox.Name != "txtID" && textBox.Name != "txtTelefono2")
                     {
                         MessageBox.Show("Falta llenar los datos de " + textBox.Name.Substring(3),
                             "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -78,12 +80,21 @@ namespace CrewmanSystem
                     }
                     else
                     {
-                        if (textBox == txtDNI | textBox == txtTelefono1 | textBox == txtTelefono2)
+                        if (textBox == txtDNI | textBox == txtTelefono1)
                         {
                             if (!textBox.Text.All(Char.IsDigit))
                             {
                                 MessageBox.Show("Los datos de " +
                                 textBox.Name.Substring(3) + " solo pueden contener dígitos",
+                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+                        }
+                        if (textBox == txtTelefono2 && txtTelefono2.Text!="")
+                        {
+                            if(!textBox.Text.All(Char.IsDigit))
+                            {
+                                MessageBox.Show("El numero de teléfono solo puede contener dígitos",
                                     "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
@@ -123,6 +134,9 @@ namespace CrewmanSystem
                 empleado.telefono1 = txtTelefono1.Text;
                 empleado.telefono2 = txtTelefono2.Text;
                 empleado.correo = txtCorreo.Text;
+                if (rbMasculino.Checked) empleado.genero = 'M';
+                else empleado.genero = 'F';
+
                 empleado.jefe = new EmpleadoWS.empleado();
                 empleado.jefe.idEmpleado = Program.empleado.idEmpleado;
                 empleado.sumVentas = Convert.ToDouble(txtSumaVentas.Text);
@@ -132,8 +146,10 @@ namespace CrewmanSystem
                 else empleado.cargo.idCargo = 2;
                 empleado.zona = new EmpleadoWS.zona();
                 empleado.zona.idZona = ((ZonaWS.zona)cboZona.SelectedItem).idZona;
-                if (rbMasculino.Checked) empleado.genero = 'M';
-                else empleado.genero = 'F';
+                
+                string usuario_contra = txtNombre.Text + txtApPaterno.Text.Substring(0,3) + txtApMaterno.Text.Substring(0,3);
+                empleado.usuario = usuario_contra;
+                empleado.contraseña = usuario_contra;
 
                 if (frmVentanaPrincipal.nBtn == 0)
                 {

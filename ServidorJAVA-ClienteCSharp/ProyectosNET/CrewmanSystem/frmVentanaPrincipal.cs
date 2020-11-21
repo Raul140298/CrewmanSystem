@@ -516,7 +516,7 @@ namespace CrewmanSystem
 				case "frmGestionarProductos":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoProducto());
 					if (boton == 2) frmGestionarProductos.eliminar();
-					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarProducto());
+					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarProducto(0));
 					break;
 				case "frmBuscarProducto":
 					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoProducto());

@@ -344,6 +344,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
       <xs:element minOccurs="0" name="grupo" type="xs:string" />
+      <xs:element name="idZona" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarClientesResponse">

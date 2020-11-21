@@ -192,7 +192,7 @@ namespace CrewmanSystem
         {
             if(txtNombreProducto.Text == "")
             {
-                MessageBox.Show("Debe escoger un producto", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Debe escoger un producto", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             try{
@@ -200,7 +200,7 @@ namespace CrewmanSystem
             }
             catch (Exception){
                 MessageBox.Show("Los datos de " + txtDescuento.Name.Substring(3) + " solo pueden contener dígitos", 
-                    "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             try{
@@ -209,7 +209,7 @@ namespace CrewmanSystem
             catch (Exception){
                 MessageBox.Show("Los datos de " +
                     txtStock.Name.Substring(3) + " solo pueden contener dígitos", 
-                    "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

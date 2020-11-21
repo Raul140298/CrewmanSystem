@@ -24,7 +24,7 @@ namespace CrewmanSystem
 			dgv = dgvClientes;
 
 			dgvClientes.AutoGenerateColumns = false;
-			ClienteWS.cliente[] misClientes = daoCliente.listarClientes("","");
+			ClienteWS.cliente[] misClientes = daoCliente.listarClientes("","",0);
             if (misClientes != null)
             {
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
@@ -47,11 +47,12 @@ namespace CrewmanSystem
 			#endregion
 		}
 
-        private void dgvClientes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+		private void dgvClientes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
 		{
 			//castear objetos y mostrar valor determinado
 			ClienteWS.cliente cliente = dgvClientes.Rows[e.RowIndex].DataBoundItem
 										as ClienteWS.cliente;
+			dgvClientes.Rows[e.RowIndex].Cells["ZONA"].Value = cliente.zona.nombre;
 		}
 
 		private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)

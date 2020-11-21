@@ -50,9 +50,9 @@
             this.UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRECIO_REAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SUBFAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductoXZona)).BeginInit();
             this.SuspendLayout();
@@ -150,8 +150,7 @@
             this.cboZona.FormattingEnabled = true;
             this.cboZona.Location = new System.Drawing.Point(155, 27);
             this.cboZona.Name = "cboZona";
-            this.cboZona.Size = new System.Drawing.Size(196, 24);
-            this.cboZona.Sorted = true;
+            this.cboZona.Size = new System.Drawing.Size(189, 24);
             this.cboZona.TabIndex = 56;
             // 
             // lblID
@@ -204,9 +203,9 @@
             this.UNIDADES,
             this.ZONA,
             this.PRECIO_REAL,
+            this.MARCA,
             this.SUBFAMILIA,
-            this.FAMILIA,
-            this.MARCA});
+            this.FAMILIA});
             this.dgvProductoXZona.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProductoXZona.EnableHeadersVisualStyles = false;
             this.dgvProductoXZona.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
@@ -284,6 +283,14 @@
             this.PRECIO_REAL.ReadOnly = true;
             this.PRECIO_REAL.Width = 85;
             // 
+            // MARCA
+            // 
+            this.MARCA.HeaderText = "Marca";
+            this.MARCA.MinimumWidth = 6;
+            this.MARCA.Name = "MARCA";
+            this.MARCA.ReadOnly = true;
+            this.MARCA.Width = 84;
+            // 
             // SUBFAMILIA
             // 
             this.SUBFAMILIA.HeaderText = "Subfamilia";
@@ -299,14 +306,6 @@
             this.FAMILIA.Name = "FAMILIA";
             this.FAMILIA.ReadOnly = true;
             this.FAMILIA.Width = 91;
-            // 
-            // MARCA
-            // 
-            this.MARCA.HeaderText = "Marca";
-            this.MARCA.MinimumWidth = 6;
-            this.MARCA.Name = "MARCA";
-            this.MARCA.ReadOnly = true;
-            this.MARCA.Width = 84;
             // 
             // frmBuscarProductoXZona
             // 
@@ -345,8 +344,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn UNIDADES;
         private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO_REAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MARCA;
         private System.Windows.Forms.DataGridViewTextBoxColumn SUBFAMILIA;
         private System.Windows.Forms.DataGridViewTextBoxColumn FAMILIA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MARCA;
     }
 }

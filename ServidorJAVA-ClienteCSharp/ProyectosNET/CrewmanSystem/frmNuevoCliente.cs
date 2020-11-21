@@ -61,6 +61,17 @@ namespace CrewmanSystem
                 txtTelefono1.Text = personaC.telefono1.ToString();
                 txtTelefono2.Text = personaC.telefono2.ToString();
                 txtCorreo.Text = personaC.correo.ToString();
+                txtCargo.Text = personaC.cargo;
+                if (personaC.genero == 'M')
+                {
+                    rbMasculino.Checked = true;
+                    rbFemenino.Checked = false;
+                }
+                else
+                {
+                    rbMasculino.Checked = false;
+                    rbFemenino.Checked = true;
+                }
                 txtRuc.Enabled = false;
                 txtDNI.Enabled = false;
             }
@@ -79,26 +90,13 @@ namespace CrewmanSystem
                             "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-                    else
+                    else if (textBox == txtRuc)
                     {
-                        if (textBox == txtRuc)
+                        if (!textBox.Text.All(Char.IsDigit))
                         {
-                            if (!textBox.Text.All(Char.IsDigit))
-                            {
-                                MessageBox.Show("Los datos de " + textBox.Name.Substring(3) + " solo pueden contener dígitos",
-                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                return;
-                            }
-                        }
-                        if (textBox == txtGrupo)
-                        {
-                            String txtNombreAux = string.Join("", textBox.Text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
-                            if (!txtNombreAux.Trim().All(Char.IsLetter))
-                            {
-                                MessageBox.Show("Los datos de " +textBox.Name.Substring(3) + " solo pueden contener letras",
-                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                return;
-                            }
+                            MessageBox.Show("Los datos de " + textBox.Name.Substring(3) + " solo pueden contener dígitos",
+                                "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
                         }
                     }
                 }
@@ -119,7 +117,7 @@ namespace CrewmanSystem
                 if (c is TextBox)
                 {
                     TextBox textBox = c as TextBox;
-                    if (textBox.Text == string.Empty && textBox.Name != "txtIdPC")
+                    if (textBox.Text == string.Empty && textBox.Name != "txtIdPC" && textBox.Name != "txtTelefono2")
                     {
                         MessageBox.Show("Falta llenar los datos de " +textBox.Name.Substring(3),
                             "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -136,7 +134,7 @@ namespace CrewmanSystem
                                 return;
                             }
                         }
-                        if (textBox == txtNombre | textBox == txtApPaterno | textBox == txtApMaterno)
+                        if (textBox == txtNombre | textBox == txtApPaterno | textBox == txtApMaterno | textBox == txtCargo)
                         {
                             String txtNombreAux = string.Join("", textBox.Text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
                             if (!txtNombreAux.Trim().All(Char.IsLetter))
@@ -155,16 +153,14 @@ namespace CrewmanSystem
             {
                 ClienteWS.cliente cliente = new ClienteWS.cliente();
                 PersonaContactoWS.personaContacto personaContacto = new PersonaContactoWS.personaContacto();
-
                 cliente.ruc = txtRuc.Text;
                 cliente.razonSocial = txtRazonSocial.Text;
                 cliente.fechaRegistro = DateTime.Now;
                 cliente.grupo = txtGrupo.Text;
+                cliente.direccion = txtDireccion.Text;
                 cliente.zona = new ClienteWS.zona();
                 cliente.zona.idZona = ((ZonaWS.zona) cboZona.SelectedItem).idZona;
-                cliente.direccion = txtDireccion.Text;
 
-                personaContacto = new PersonaContactoWS.personaContacto();
                 personaContacto.dni = txtDNI.Text;
                 personaContacto.nombre = txtNombre.Text;
                 personaContacto.apellidoPaterno = txtApPaterno.Text;
@@ -172,19 +168,39 @@ namespace CrewmanSystem
                 personaContacto.telefono1 = txtTelefono1.Text;
                 personaContacto.telefono2 = txtTelefono2.Text;
                 personaContacto.correo = txtCorreo.Text;
-                
+                if (rbMasculino.Checked) personaContacto.genero = 'M';
+                else personaContacto.genero = 'F';
+                personaContacto.cargo = txtCargo.Text;
+
                 if (frmVentanaPrincipal.nBtn == 0)
                 {
                     int resultado = daoCliente.insertarCliente(cliente);
-                    txtIdC.Text = cliente.idCliente.ToString();
-                    txtIdPC.Text = cliente.personaContacto.idPersonaContacto.ToString();
+                    txtIdC.Text = resultado.ToString();
+                    int resultado2 = daoPersonaContacto.insertarPersonaContacto(personaContacto,resultado);
+                    txtIdPC.Text = resultado2.ToString();
+                    if (resultado == 0)
+                    {
+                        MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se insertó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else if (frmVentanaPrincipal.nBtn == 1)
                 {
                     cliente.idCliente = Int32.Parse(txtIdC.Text);
                     cliente.personaContacto.idPersonaContacto = Int32.Parse(txtIdPC.Text);
-                    daoCliente.actualizarCliente(cliente);
-                    daoPersonaContacto.actualizarPersonaContacto(personaContacto);
+                    int resultado = daoCliente.actualizarCliente(cliente);
+                    //int resultado = daoPersonaContacto.actualizarPersonaContacto(personaContacto);
+                    if (resultado == 0)
+                    {
+                        MessageBox.Show("No se actualizó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se actualizó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }

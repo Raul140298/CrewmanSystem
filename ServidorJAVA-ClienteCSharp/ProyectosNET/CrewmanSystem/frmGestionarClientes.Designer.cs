@@ -33,12 +33,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_REGISTRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_ULTIMA_COMPRA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
@@ -64,12 +65,13 @@
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.RAZON_SOCIAL,
             this.RUC,
+            this.RAZON_SOCIAL,
+            this.GRUPO,
             this.FECHA_REGISTRO,
             this.FECHA_ULTIMA_COMPRA,
-            this.GRUPO,
             this.TIPO,
+            this.ZONA,
             this.DIRECCION});
             this.dgvClientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvClientes.EnableHeadersVisualStyles = false;
@@ -110,6 +112,15 @@
             this.ID.ReadOnly = true;
             this.ID.Width = 50;
             // 
+            // RUC
+            // 
+            this.RUC.DataPropertyName = "ruc";
+            this.RUC.HeaderText = "Ruc";
+            this.RUC.MinimumWidth = 6;
+            this.RUC.Name = "RUC";
+            this.RUC.ReadOnly = true;
+            this.RUC.Width = 67;
+            // 
             // RAZON_SOCIAL
             // 
             this.RAZON_SOCIAL.DataPropertyName = "razonSocial";
@@ -119,14 +130,14 @@
             this.RAZON_SOCIAL.ReadOnly = true;
             this.RAZON_SOCIAL.Width = 136;
             // 
-            // RUC
+            // GRUPO
             // 
-            this.RUC.DataPropertyName = "ruc";
-            this.RUC.HeaderText = "Ruc";
-            this.RUC.MinimumWidth = 6;
-            this.RUC.Name = "RUC";
-            this.RUC.ReadOnly = true;
-            this.RUC.Width = 67;
+            this.GRUPO.DataPropertyName = "grupo";
+            this.GRUPO.HeaderText = "Grupo";
+            this.GRUPO.MinimumWidth = 6;
+            this.GRUPO.Name = "GRUPO";
+            this.GRUPO.ReadOnly = true;
+            this.GRUPO.Width = 83;
             // 
             // FECHA_REGISTRO
             // 
@@ -146,15 +157,6 @@
             this.FECHA_ULTIMA_COMPRA.ReadOnly = true;
             this.FECHA_ULTIMA_COMPRA.Width = 200;
             // 
-            // GRUPO
-            // 
-            this.GRUPO.DataPropertyName = "grupo";
-            this.GRUPO.HeaderText = "Grupo";
-            this.GRUPO.MinimumWidth = 6;
-            this.GRUPO.Name = "GRUPO";
-            this.GRUPO.ReadOnly = true;
-            this.GRUPO.Width = 83;
-            // 
             // TIPO
             // 
             this.TIPO.DataPropertyName = "tipoEmpresa";
@@ -163,6 +165,14 @@
             this.TIPO.Name = "TIPO";
             this.TIPO.ReadOnly = true;
             this.TIPO.Width = 126;
+            // 
+            // ZONA
+            // 
+            this.ZONA.HeaderText = "Zona";
+            this.ZONA.MinimumWidth = 6;
+            this.ZONA.Name = "ZONA";
+            this.ZONA.ReadOnly = true;
+            this.ZONA.Width = 73;
             // 
             // DIRECCION
             // 
@@ -189,12 +199,13 @@
 		#endregion
 		private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ULTIMA_COMPRA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
         private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
     }
 }

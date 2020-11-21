@@ -57,7 +57,7 @@ public class Main{
 //        gestionarSubFamilias();
 //        gestionarMarcas();
 //        gestionarZonas();
-//       gestionarClientes();
+       gestionarClientes();
 //        gestionarEmpleados();
 //        gestionarProductos();
 //        gestionarProductoXZona();
@@ -205,62 +205,63 @@ public class Main{
     }
     
     private static void gestionarClientes(){
-//        Cliente cliente1=new Cliente("10604105301","TIENDITAS DUBAI","EXITOSO","Jr 7 Mz X5 Urb. Santo Domingo");
-//        PersonaContacto perCont1 = new PersonaContacto();
-//        perCont1.setDni("73654128");
-//        perCont1.setCargo("GERENTE");
-//        perCont1.setNombre("Larry");
-//        perCont1.setApellidoPaterno("Carhuancho");
-//        perCont1.setApellidoMaterno("Málaga");
-//        perCont1.setGenero('M');
-//        perCont1.setCorreo("larry_malaga@gmail.com");
-//        perCont1.setTelefono1("985654281");
-//        perCont1.setTelefono2("");
-//        perCont1.setCliente(cliente1);
-//        cliente1.setPersonaContacto(perCont1);
-//        daoCliente.insertar(cliente1);
+        Cliente cliente1=new Cliente("16512099640","LOS ANDES","NACIONAL","Tercera Zona Av Miro Quesada");
+        PersonaContacto perCont1 = new PersonaContacto();
+        perCont1.setDni("79521650");
+        perCont1.setCargo("SECRETARIA");
+        perCont1.setNombre("Melanie");
+        perCont1.setApellidoPaterno("Hernandez");
+        perCont1.setApellidoMaterno("Albela");
+        perCont1.setGenero('F');
+        perCont1.setCorreo("gab_mrll@gmail.com");
+        perCont1.setTelefono1("984024139");
+        perCont1.setTelefono2("");
+        cliente1.setPersonaContacto(perCont1);
+        cliente1.getZona().setIdZona(149);
+        int resultado = daoCliente.insertar(cliente1);
+        
         
         String razonSocial = "";
         String grupo = "";
-        misClientes=daoCliente.listar(razonSocial,grupo);
+        misClientes=daoCliente.listar(razonSocial,grupo,0);
         System.out.println("LISTADO DE CLIENTES");
         System.out.println("==================================================================================");
         System.out.println("Razon social: "+razonSocial);
         System.out.println("Grupo: "+grupo);
         System.out.println("==================================================================================");
         for(Cliente c:misClientes) System.out.println(c.getIdCliente()+" - "+c.getRuc()+" - "+c.getRazonSocial()+
-                " - "+c.getGrupo()+" - "+c.getTipoEmpresa()+" - "+c.getDireccion()+" - "+sdf.format(c.getFechaRegistro()));
+                " - "+c.getGrupo()+" - "+c.getTipoEmpresa()+" - "+c.getDireccion()+" - "+sdf.format(c.getFechaRegistro())+" - "+c.getZona().getNombre());
         System.out.println("\n");
         
-        Cliente miCliente=misClientes.get(0);
-        daoCliente.mostrar(miCliente);
-        LineaCredito lineaCredito=miCliente.getLineaCredito();
-        Zona zona=miCliente.getZona();
-        PersonaContacto personaContacto = miCliente.getPersonaContacto();
+//        Cliente miCliente=misClientes.get(0);
+//        daoCliente.mostrar(miCliente);
+//        LineaCredito lineaCredito=miCliente.getLineaCredito();
+//        Zona zona=miCliente.getZona();
+//        PersonaContacto personaContacto = miCliente.getPersonaContacto();
         
 //        personaContacto.setCargo("SECRETARIO");
 //        miCliente.setPersonaContacto(personaContacto);
 //        daoCliente.actualizar(miCliente);
 
-        Cartera cartera=miCliente.getCartera();
-        System.out.println("DETALLE DEL CLIENTE "+miCliente.getRuc());
-        System.out.println("==================================================================================");
-        System.out.println("Informacion: "+miCliente.getIdCliente()+" - "+miCliente.getRazonSocial()+" - "+miCliente.getDireccion()+" - "+sdf.format(miCliente.getFechaRegistro()));
-        System.out.println("Persona Contacto: "+personaContacto.getNombre()+" "+personaContacto.getApellidoPaterno()+" "+personaContacto.getApellidoMaterno()+" "+personaContacto.getCargo());
-        if(lineaCredito.getIdLineaCredito()>0)
-            System.out.println("Linea de Credito: "+lineaCredito.getIdLineaCredito()+" - "+lineaCredito.getMontoLineaCredito()+" - "+lineaCredito.getMotivo()+
-            " - Respomsable: "+lineaCredito.getResponsable().getNombre()+" - "+lineaCredito.getResponsable().getApellidoPaterno());
-        if(zona.getIdZona()>0)
-            System.out.println("Zona: "+zona.getIdZona()+" - "+zona.getNombre());
-        System.out.println("\n");
+//        Cartera cartera=miCliente.getCartera();
+//        System.out.println("DETALLE DEL CLIENTE "+miCliente.getRuc());
+//        System.out.println("==================================================================================");
+//        System.out.println("Informacion: "+miCliente.getIdCliente()+" - "+miCliente.getRazonSocial()+" - "+miCliente.getDireccion()+" - "+sdf.format(miCliente.getFechaRegistro()));
+//        System.out.println("Persona Contacto: "+personaContacto.getNombre()+" "+personaContacto.getApellidoPaterno()+" "+personaContacto.getApellidoMaterno()+" "+personaContacto.getCargo());
+//        if(lineaCredito.getIdLineaCredito()>0)
+//            System.out.println("Linea de Credito: "+lineaCredito.getIdLineaCredito()+" - "+lineaCredito.getMontoLineaCredito()+" - "+lineaCredito.getMotivo()+
+//            " - Respomsable: "+lineaCredito.getResponsable().getNombre()+" - "+lineaCredito.getResponsable().getApellidoPaterno());
+//        if(zona.getIdZona()>0)
+//            System.out.println("Zona: "+zona.getIdZona()+" - "+zona.getNombre());
+//        System.out.println("\n");
         
     }
         
     private static void gestionarEmpleados(){
 //        Cargo cargo=new Cargo("JEFE DE VENTAS");
-//        Cargo cargo2=new Cargo("EMPLEADO");
-
-//        Empleado empleado1= new Empleado(cargo1,"71421991","Keiko","Montez","Monterroso",'F',"985745102","","keipoper@gmail.com");
+//        Cargo cargo=new Cargo(1, "EMPLEADO");
+//
+//        Empleado empleado1= new Empleado(cargo,"71421991","Keiko","Montez","Monterroso",'F',"985745102","","keipoper@gmail.com");
 //        empleado1.setUsuario("keikomontmont");
 //        empleado1.setContraseña("matangalachanga");
 //        int idJefe=daoEmpleado.insertar(empleado1);

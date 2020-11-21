@@ -13,10 +13,6 @@ import pe.edu.pucp.CrewmanSystem.dao.ClienteDAO;
 import pe.edu.pucp.CrewmanSystem.model.Cliente;
 import pe.edu.pucp.CrewmanSystem.mysql.ClienteMySQL;
 
-/**
- *
- * @author User
- */
 @WebService(serviceName = "ClienteWS")
 public class ClienteWS {
 
@@ -73,10 +69,11 @@ public class ClienteWS {
     @WebMethod(operationName = "listarClientes")
     public ArrayList<Cliente> listarClientes(
             @WebParam(name = "razonSocial") String razonSocial,
-            @WebParam(name = "grupo") String grupo) {
+            @WebParam(name = "grupo") String grupo,
+            @WebParam(name = "idZona") int idZona) {
         ArrayList<Cliente> misClientes = new ArrayList<>();
         try{
-            misClientes = daoCliente.listar(razonSocial,grupo);
+            misClientes = daoCliente.listar(razonSocial,grupo,idZona);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }

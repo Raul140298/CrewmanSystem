@@ -8,30 +8,40 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import pe.edu.pucp.CrewmanSystem.dao.PersonaDAO;
 import pe.edu.pucp.CrewmanSystem.model.Persona;
 
 public class PersonaContactoMySQL implements PersonaContactoDAO{
     Connection con;
     CallableStatement cs;
+    PreparedStatement ps;
     ResultSet rs;
     
     @Override
-    public int insertar(PersonaContacto personaContacto){
+    public int insertar(PersonaContacto personaContacto,int idCliente){
         int resultado = 0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            
+            PersonaDAO daoPersona = new PersonaMySQL();
+            int idPersona=daoPersona.insertar(personaContacto.obtenerPersona());
+            personaContacto.setIdPersona(idPersona);
+            
             String sql ="{ call INSERTAR_PERSONACONTACTO(?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_PERSONA_CONTACTO", java.sql.Types.INTEGER);
-            cs.setInt("_ID_PERSONA", personaContacto.getIdPersona());
+            cs.setInt("_ID_PERSONA", idPersona);
             cs.setString("_CARGO", personaContacto.getCargo());
-            cs.setInt("_ID_CLIENTE", personaContacto.getCliente().getIdCliente());
+            cs.setInt("_ID_CLIENTE", idCliente);
             cs.executeUpdate();
             resultado=cs.getInt("_ID_PERSONA_CONTACTO");
             personaContacto.setIdPersonaContacto(resultado);
+            
+            sql = "UPDATE CLIENTE SET ID_PERSONA_CONTACTO = "+resultado+" WHERE ID_CLIENTE = "+idCliente;
+            ps = con.prepareStatement(sql);
+            rs=ps.executeQuery();
+            
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
