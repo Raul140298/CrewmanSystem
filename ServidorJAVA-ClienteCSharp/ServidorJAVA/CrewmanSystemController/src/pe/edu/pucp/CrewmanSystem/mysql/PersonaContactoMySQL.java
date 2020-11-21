@@ -64,11 +64,17 @@ public class PersonaContactoMySQL implements PersonaContactoDAO{
             cs = con.prepareCall(sql);
             cs.setInt("_ID_PERSONA_CONTACTO",personaContacto.getIdPersonaContacto());
             cs.setString("_CARGO",personaContacto.getCargo());
-            cs.executeUpdate();
+            resultado = cs.executeUpdate();
+            if(resultado==0) return 0;
             
+            sql = "SELECT ID_PERSONA FROM PERSONA_CONTACTO WHERE ID_PERSONA_CONTACTO = "+personaContacto.getIdPersonaContacto();
+            ps=con.prepareStatement(sql);
+            rs=ps.executeQuery();
+            rs.next();
+            int idPersona = rs.getInt("ID_PERSONA");
             PersonaDAO personaDAO = new PersonaMySQL();
+            personaContacto.setIdPersona(idPersona);
             resultado=personaDAO.actualizar(personaContacto.obtenerPersona());
-            
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{

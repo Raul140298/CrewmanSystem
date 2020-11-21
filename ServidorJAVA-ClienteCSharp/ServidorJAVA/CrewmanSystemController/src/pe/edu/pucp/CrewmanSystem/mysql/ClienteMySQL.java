@@ -64,18 +64,17 @@ public class ClienteMySQL implements ClienteDAO{
             cs.setString("_RAZON_SOCIAL", cliente.getRazonSocial());
             cs.setString("_GRUPO", cliente.getGrupo());
             cs.setString("_DIRECCION", cliente.getDireccion());
-            cs.executeUpdate();
-            
-            PersonaContactoDAO personaContactoDAO = new PersonaContactoMySQL();
-            resultado=personaContactoDAO.actualizar(cliente.getPersonaContacto());
-            
+            resultado = cs.executeUpdate();
+            if(resultado==0) return 0;
+                        
             ClienteXZonaDAO daoCXZ = new ClienteXZonaMySQL();
             ClienteXZona clixzona = new ClienteXZona(cliente,cliente.getZona());
             daoCXZ.insertar(clixzona);
             
             if(cliente.getLineaCredito().getIdLineaCredito()>0){
                 LineaCreditoDAO daoLineaCredito = new LineaCreditoMySQL();
-                daoLineaCredito.actualizar(cliente.getLineaCredito());
+                resultado = daoLineaCredito.actualizar(cliente.getLineaCredito());
+                return resultado;
             }
         }catch(Exception ex){
             System.out.println(ex.getMessage());

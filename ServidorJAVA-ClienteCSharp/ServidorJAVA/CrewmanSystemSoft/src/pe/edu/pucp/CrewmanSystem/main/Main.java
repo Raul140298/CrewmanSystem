@@ -218,8 +218,10 @@ public class Main{
         perCont1.setTelefono2("");
         cliente1.setPersonaContacto(perCont1);
         cliente1.getZona().setIdZona(149);
-        int resultado = daoCliente.insertar(cliente1);
-        
+//        int resultado = daoCliente.insertar(cliente1);
+        cliente1.setIdCliente(35);
+        cliente1.getPersonaContacto().setIdPersonaContacto(25);
+        int resultado = daoCliente.actualizar(cliente1);
         
         String razonSocial = "";
         String grupo = "";
