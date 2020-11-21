@@ -50,7 +50,7 @@ public class Main{
     private static QuejaDAO daoQueja = new QuejaMySQL();
     private static ArrayList<Queja> misQuejas;
     private static PersonaDAO daoPersona = new PersonaMySQL();
-    
+    private static PersonaContactoDAO daoPersonaContacto = new PersonaContactoMySQL();
     
     public static void main(String[] args) {
 //        gestionarFamilias();
@@ -205,23 +205,24 @@ public class Main{
     }
     
     private static void gestionarClientes(){
-        Cliente cliente1=new Cliente("16512099640","LOS ANDES","NACIONAL","Tercera Zona Av Miro Quesada");
+        Cliente cliente1=new Cliente("10680029640","MARKET ANDINO","NACIONAL","Primera Zona Av Los Rosales");
         PersonaContacto perCont1 = new PersonaContacto();
-        perCont1.setDni("79521650");
-        perCont1.setCargo("SECRETARIA");
-        perCont1.setNombre("Melanie");
-        perCont1.setApellidoPaterno("Hernandez");
-        perCont1.setApellidoMaterno("Albela");
-        perCont1.setGenero('F');
-        perCont1.setCorreo("gab_mrll@gmail.com");
-        perCont1.setTelefono1("984024139");
+        perCont1.setDni("76891429");
+        perCont1.setCargo("GERENTE");
+        perCont1.setNombre("Saúl");
+        perCont1.setApellidoPaterno("Peredo");
+        perCont1.setApellidoMaterno("Quiroga");
+        perCont1.setGenero('M');
+        perCont1.setCorreo("saull_qrg@hotmail.com");
+        perCont1.setTelefono1("986365129");
         perCont1.setTelefono2("");
         cliente1.setPersonaContacto(perCont1);
-        cliente1.getZona().setIdZona(149);
-//        int resultado = daoCliente.insertar(cliente1);
-        cliente1.setIdCliente(35);
-        cliente1.getPersonaContacto().setIdPersonaContacto(25);
-        int resultado = daoCliente.actualizar(cliente1);
+        cliente1.getZona().setIdZona(125);
+        int resultado = daoCliente.insertar(cliente1);
+        int resultado2 = daoPersonaContacto.insertar(perCont1, resultado);
+//        cliente1.setIdCliente(35);
+//        cliente1.getPersonaContacto().setIdPersonaContacto(25);
+//        int resultado = daoCliente.actualizar(cliente1);
         
         String razonSocial = "";
         String grupo = "";

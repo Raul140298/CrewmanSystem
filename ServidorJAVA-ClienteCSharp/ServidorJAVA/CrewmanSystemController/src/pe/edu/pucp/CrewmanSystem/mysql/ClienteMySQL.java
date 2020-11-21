@@ -139,7 +139,7 @@ public class ClienteMySQL implements ClienteDAO{
                 
                 cliente.setRuc(rs.getString("RUC"));
                 cliente.setRazonSocial(rs.getString("RAZON_SOCIAL"));
-                cliente.setFechaUltimaCompra(rs.getDate("FECHA_REGISTRO"));
+                cliente.setFechaRegistro(rs.getDate("FECHA_REGISTRO"));
                 cliente.setFechaUltimaCompra(rs.getDate("FECHA_ULTIMA_COMPRA"));
                 cliente.setGrupo(rs.getString("GRUPO"));
                 cliente.setTipoEmpresa(rs.getString("TIPOCLIENTE"));
