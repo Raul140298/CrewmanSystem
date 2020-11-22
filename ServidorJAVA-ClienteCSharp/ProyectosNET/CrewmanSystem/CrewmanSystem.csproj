@@ -172,6 +172,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="CrewPantalla.cs" />
+    <Compile Include="frmBuscarCartera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarCartera.Designer.cs">
+      <DependentUpon>frmBuscarCartera.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -376,6 +382,12 @@
     <Compile Include="frmMostrarPromocion.Designer.cs">
       <DependentUpon>frmMostrarPromocion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNuevaCartera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevaCartera.Designer.cs">
+      <DependentUpon>frmNuevaCartera.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNuevaFactura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -492,6 +504,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmBuscarCartera.resx">
+      <DependentUpon>frmBuscarCartera.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarCliente.resx">
       <DependentUpon>frmBuscarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -597,6 +612,9 @@
     <EmbeddedResource Include="frmMostrarPromocion.resx">
       <DependentUpon>frmMostrarPromocion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaCartera.resx">
+      <DependentUpon>frmNuevaCartera.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNuevaFactura.resx">
       <DependentUpon>frmNuevaFactura.cs</DependentUpon>
     </EmbeddedResource>
@@ -653,12 +671,6 @@
     <None Include="Connected Services\CarteraWS\CrewmanSystem.CarteraWS.actualizarCarteraResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CarteraWS\CrewmanSystem.CarteraWS.eliminarCarteraResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\CarteraWS\CrewmanSystem.CarteraWS.insertarCarteraResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\ClienteWS\ClienteWS.wsdl" />
     <None Include="Connected Services\ClienteWS\ClienteWS.xsd">
       <SubType>Designer</SubType>
@@ -678,16 +690,13 @@
     <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.listarClientesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.listarClientesSinCarteraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.mostrarClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.obtenerClienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.obtenerClientesPorCarteraResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.obtenerClientesSinCarteraResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ClienteXZonaWS\ClienteXZonaWS.wsdl" />
@@ -1046,9 +1055,6 @@
     <None Include="Connected Services\SubFamiliaWS\SubFamiliaWS.wsdl" />
     <None Include="Connected Services\SubFamiliaWS\SubFamiliaWS.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\VisitaWS\CrewmanSystem.VisitaWS.actualizarVisitaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\VisitaWS\CrewmanSystem.VisitaWS.insertarVisitaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>

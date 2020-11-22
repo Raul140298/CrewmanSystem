@@ -9,7 +9,6 @@ public interface ClienteDAO
     int eliminar(int idCliente);
     void mostrar(Cliente cliente);
     ArrayList<Cliente> listar(String razonSocial, String grupo,int idZona);
-    ArrayList<Cliente> obtenerClientesSinCartera();
-    ArrayList<Cliente> obtenerClientesPorCartera(int idCartera,String razonSocial,String grupo);
+    ArrayList<Cliente> listarSinCartera(String razonSocial, String grupo,int idZona);
     Cliente obtenerCliente(int idCliente);
 }

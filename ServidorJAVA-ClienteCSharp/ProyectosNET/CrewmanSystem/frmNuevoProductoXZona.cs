@@ -136,10 +136,14 @@ namespace CrewmanSystem
             {
                 return;
             }
-            int indice = dgvProducto.CurrentRow.Index;
-            dgvProducto.DataSource = new BindingList<ProductoWS.producto>();
-            misProductoXZona.RemoveAt(indice);
-            dgvProducto.DataSource = misProductoXZona;
+            frmConfirmarEliminar formEliminar = new frmConfirmarEliminar();
+            if (formEliminar.ShowDialog() == DialogResult.OK)
+            {
+                int indice = dgvProducto.CurrentRow.Index;
+                dgvProducto.DataSource = new BindingList<ProductoWS.producto>();
+                misProductoXZona.RemoveAt(indice);
+                dgvProducto.DataSource = misProductoXZona;
+            }
         }
 
         private void cargarTabla()

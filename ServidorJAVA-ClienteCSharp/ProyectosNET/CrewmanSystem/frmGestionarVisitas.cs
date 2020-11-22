@@ -18,7 +18,7 @@ namespace CrewmanSystem
 			daoVisita = new VisitaWS.VisitaWSClient();
 			InitializeComponent();
 			dgvVisitas.AutoGenerateColumns = false;
-			VisitaWS.visita[] misVisitas = daoVisita.listarVisitas(null);
+			VisitaWS.visita[] misVisitas = daoVisita.listarVisitas(0);
 			if (misVisitas != null)
 			{
 				dgvVisitas.DataSource = new BindingList<VisitaWS.visita>(misVisitas.ToArray());

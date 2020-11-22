@@ -33,13 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboZona = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblZona = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.txtGrupo = new System.Windows.Forms.TextBox();
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,13 +52,14 @@
             this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.cboZona);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblZona);
             this.panel1.Controls.Add(this.btnSeleccionar);
             this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Controls.Add(this.label1);
@@ -79,15 +81,15 @@
             this.cboZona.Size = new System.Drawing.Size(241, 24);
             this.cboZona.TabIndex = 55;
             // 
-            // label2
+            // lblZona
             // 
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Location = new System.Drawing.Point(12, 111);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 22);
-            this.label2.TabIndex = 54;
-            this.label2.Text = "Zona :";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblZona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblZona.Location = new System.Drawing.Point(12, 111);
+            this.lblZona.Name = "lblZona";
+            this.lblZona.Size = new System.Drawing.Size(155, 22);
+            this.lblZona.TabIndex = 54;
+            this.lblZona.Text = "Zona :";
+            this.lblZona.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnSeleccionar
             // 
@@ -152,6 +154,15 @@
             this.txtRazonSocial.Size = new System.Drawing.Size(241, 22);
             this.txtRazonSocial.TabIndex = 46;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dgvClientes);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 160);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 470);
+            this.panel2.TabIndex = 49;
+            // 
             // dgvClientes
             // 
             this.dgvClientes.AllowUserToAddRows = false;
@@ -184,7 +195,7 @@
             this.dgvClientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvClientes.EnableHeadersVisualStyles = false;
             this.dgvClientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.dgvClientes.Location = new System.Drawing.Point(0, 160);
+            this.dgvClientes.Location = new System.Drawing.Point(0, 0);
             this.dgvClientes.MultiSelect = false;
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
@@ -204,8 +215,8 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvClientes.RowTemplate.Height = 24;
-            this.dgvClientes.Size = new System.Drawing.Size(800, 290);
-            this.dgvClientes.TabIndex = 48;
+            this.dgvClientes.Size = new System.Drawing.Size(800, 470);
+            this.dgvClientes.TabIndex = 50;
             this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             this.dgvClientes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvClientes_CellFormatting);
             this.dgvClientes.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvClientes_RowStateChanged);
@@ -294,13 +305,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgvClientes);
+            this.ClientSize = new System.Drawing.Size(800, 630);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmBuscarCliente";
-            this.Text = "frmBuscarCliente";
+            this.Text = "Búsqueda de Cliente";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
 
@@ -314,10 +326,11 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label lblID;
 		private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.ComboBox cboZona;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblZona;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
         private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;

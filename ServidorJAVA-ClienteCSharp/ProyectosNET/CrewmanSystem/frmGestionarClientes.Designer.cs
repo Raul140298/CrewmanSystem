@@ -115,11 +115,11 @@
             // RUC
             // 
             this.RUC.DataPropertyName = "ruc";
-            this.RUC.HeaderText = "Ruc";
+            this.RUC.HeaderText = "RUC";
             this.RUC.MinimumWidth = 6;
             this.RUC.Name = "RUC";
             this.RUC.ReadOnly = true;
-            this.RUC.Width = 67;
+            this.RUC.Width = 73;
             // 
             // RAZON_SOCIAL
             // 
@@ -151,11 +151,11 @@
             // FECHA_ULTIMA_COMPRA
             // 
             this.FECHA_ULTIMA_COMPRA.DataPropertyName = "fechaUltimaCompra";
-            this.FECHA_ULTIMA_COMPRA.HeaderText = "Fecha Última Compra";
+            this.FECHA_ULTIMA_COMPRA.HeaderText = "Fecha Ult. Compra";
             this.FECHA_ULTIMA_COMPRA.MinimumWidth = 6;
             this.FECHA_ULTIMA_COMPRA.Name = "FECHA_ULTIMA_COMPRA";
             this.FECHA_ULTIMA_COMPRA.ReadOnly = true;
-            this.FECHA_ULTIMA_COMPRA.Width = 200;
+            this.FECHA_ULTIMA_COMPRA.Width = 177;
             // 
             // TIPO
             // 

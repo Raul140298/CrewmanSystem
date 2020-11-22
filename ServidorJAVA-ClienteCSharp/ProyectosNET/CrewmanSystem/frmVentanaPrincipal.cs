@@ -553,7 +553,15 @@ namespace CrewmanSystem
 					if (boton == 2) frmGestionarEmpleados.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarEmpleado());
 					break;
+				case "frmBuscarEmpleado":
+					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoEmpleado());
+					break;
 				case "frmGestionarCarteras":
+					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaCartera());
+					if(boton==3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarCartera());
+					break;
+				case "frmBuscarCartera":
+					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaCartera());
 					break;
 				case "frmGestionarClientes":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoCliente());
@@ -645,7 +653,7 @@ namespace CrewmanSystem
 
 		private void btnCarteras_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarCarteras(), false, false, false, false, false);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarCarteras(), false, true, false, true, true);
 		}
 
 		private void btnSeguimientoYControl_Click(object sender, EventArgs e)

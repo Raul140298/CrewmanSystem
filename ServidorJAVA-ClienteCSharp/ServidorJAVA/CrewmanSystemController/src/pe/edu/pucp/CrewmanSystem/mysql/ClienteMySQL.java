@@ -22,7 +22,7 @@ public class ClienteMySQL implements ClienteDAO{
     CallableStatement cs;
     ResultSet rs;
     
-     @Override
+    @Override
     public int insertar(Cliente cliente){
         int resultado = 0;
         try{
@@ -64,18 +64,17 @@ public class ClienteMySQL implements ClienteDAO{
             cs.setString("_RAZON_SOCIAL", cliente.getRazonSocial());
             cs.setString("_GRUPO", cliente.getGrupo());
             cs.setString("_DIRECCION", cliente.getDireccion());
-            cs.executeUpdate();
-            
-            PersonaContactoDAO personaContactoDAO = new PersonaContactoMySQL();
-            resultado=personaContactoDAO.actualizar(cliente.getPersonaContacto());
-            
+            resultado = cs.executeUpdate();
+            if(resultado==0) return 0;
+                        
             ClienteXZonaDAO daoCXZ = new ClienteXZonaMySQL();
             ClienteXZona clixzona = new ClienteXZona(cliente,cliente.getZona());
             daoCXZ.insertar(clixzona);
             
             if(cliente.getLineaCredito().getIdLineaCredito()>0){
                 LineaCreditoDAO daoLineaCredito = new LineaCreditoMySQL();
-                daoLineaCredito.actualizar(cliente.getLineaCredito());
+                resultado = daoLineaCredito.actualizar(cliente.getLineaCredito());
+                return resultado;
             }
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -140,7 +139,7 @@ public class ClienteMySQL implements ClienteDAO{
                 
                 cliente.setRuc(rs.getString("RUC"));
                 cliente.setRazonSocial(rs.getString("RAZON_SOCIAL"));
-                cliente.setFechaUltimaCompra(rs.getDate("FECHA_REGISTRO"));
+                cliente.setFechaRegistro(rs.getDate("FECHA_REGISTRO"));
                 cliente.setFechaUltimaCompra(rs.getDate("FECHA_ULTIMA_COMPRA"));
                 cliente.setGrupo(rs.getString("GRUPO"));
                 cliente.setTipoEmpresa(rs.getString("TIPOCLIENTE"));
@@ -163,58 +162,6 @@ public class ClienteMySQL implements ClienteDAO{
         return clientes;
     }
     
-    @Override
-    public ArrayList<Cliente> obtenerClientesSinCartera() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public ArrayList<Cliente> obtenerClientesPorCartera(int idCartera,String razonSocial,String grupo) {
-        ArrayList<Cliente> clientes = new ArrayList<>();
-        Integer entero;
-        try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            String sql ="{ call LISTAR_CLIENTES_POR_CARTERA (?,?,?)}";
-            cs = con.prepareCall(sql);
-            cs.setInt("_ID_CARTERA", idCartera);
-            cs.setString("_RAZON_SOCIAL", razonSocial);
-            cs.setString("_GRUPO", grupo);
-            cs.executeUpdate();
-            rs = cs.getResultSet();
-            while(rs.next()){
-                Cliente cliente = new Cliente();
-                cliente.setIdCliente(rs.getInt("ID_CLIENTE"));
-                entero=rs.getInt("ID_LINEA_DE_CREDITO");
-                if(entero!=null) cliente.getLineaCredito().setIdLineaCredito(entero.intValue());
-                
-                entero=rs.getInt("ID_PERSONA_CONTACTO");
-                if(entero!=null) cliente.getPersonaContacto().setIdPersonaContacto(entero.intValue());
-                
-                entero=rs.getInt("ID_CARTERA");
-                if(entero!=null) cliente.getCartera().setIdCartera(entero.intValue());
-                
-                cliente.setRuc(rs.getString("RUC"));
-                cliente.setRazonSocial(rs.getString("RAZON_SOCIAL"));
-                cliente.setFechaUltimaCompra(rs.getDate("FECHA_REGISTRO"));
-                cliente.setFechaUltimaCompra(rs.getDate("FECHA_ULTIMA_COMPRA"));
-                cliente.setGrupo(rs.getString("GRUPO"));
-                cliente.setTipoEmpresa(rs.getString("TIPOCLIENTE"));
-                cliente.setDireccion(rs.getString("DIRECCION"));
-                clientes.add(cliente);
-            }
-        }catch(Exception ex){
-            System.out.println(ex.getMessage());
-        }finally{
-            try{
-                con.close();
-            }catch(Exception ex){
-                System.out.println(ex.getMessage());
-            }
-        }
-        return clientes;
-    }
-
     @Override
     public void mostrar(Cliente cliente) {
         try{
@@ -286,5 +233,55 @@ public class ClienteMySQL implements ClienteDAO{
             }
         }
         return cliente;
+    }
+
+    @Override
+    public ArrayList<Cliente> listarSinCartera(String razonSocial, String grupo, int idZona) {
+        ArrayList<Cliente> clientes = new ArrayList<>();
+        Integer entero;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            String sql ="{ call LISTAR_CLIENTES_SIN_CARTERA (?,?,?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_ZONA", idZona);
+            cs.setString("_RAZON_SOCIAL", razonSocial);
+            cs.setString("_GRUPO", grupo);
+            cs.executeUpdate();
+            rs = cs.getResultSet();
+            while(rs.next()){
+                Cliente cliente = new Cliente();
+                Zona zona = new Zona();
+                cliente.setIdCliente(rs.getInt("ID_CLIENTE"));
+                entero=rs.getInt("ID_LINEA_DE_CREDITO");
+                if(entero!=null) cliente.getLineaCredito().setIdLineaCredito(entero.intValue());
+                
+                entero=rs.getInt("ID_PERSONA_CONTACTO");
+                if(entero!=null) cliente.getPersonaContacto().setIdPersonaContacto(entero.intValue());
+                
+                entero=rs.getInt("ID_CARTERA");
+                if(entero!=null) cliente.getCartera().setIdCartera(entero.intValue());
+                
+                cliente.setRuc(rs.getString("RUC"));
+                cliente.setRazonSocial(rs.getString("RAZON_SOCIAL"));
+                cliente.setGrupo(rs.getString("GRUPO"));
+                cliente.setTipoEmpresa(rs.getString("TIPOCLIENTE"));
+                cliente.setDireccion(rs.getString("DIRECCION"));
+                
+                zona.setIdZona(rs.getInt("ID_ZONA"));
+                zona.setNombre(rs.getString("ZONA"));
+                cliente.setZona(zona);
+                clientes.add(cliente);
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return clientes;
     }
 }

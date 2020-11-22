@@ -11,53 +11,15 @@
   <message name="actualizarCarteraResponse">
     <part name="parameters" element="tns:actualizarCarteraResponse" />
   </message>
-  <message name="eliminarCartera">
-    <part name="parameters" element="tns:eliminarCartera" />
-  </message>
-  <message name="eliminarCarteraResponse">
-    <part name="parameters" element="tns:eliminarCarteraResponse" />
-  </message>
-  <message name="insertarCartera">
-    <part name="parameters" element="tns:insertarCartera" />
-  </message>
-  <message name="insertarCarteraResponse">
-    <part name="parameters" element="tns:insertarCarteraResponse" />
-  </message>
   <portType name="CarteraWS">
     <operation name="actualizarCartera">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/actualizarCarteraRequest" message="tns:actualizarCartera" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/actualizarCarteraResponse" message="tns:actualizarCarteraResponse" />
     </operation>
-    <operation name="eliminarCartera">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/eliminarCarteraRequest" message="tns:eliminarCartera" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/eliminarCarteraResponse" message="tns:eliminarCarteraResponse" />
-    </operation>
-    <operation name="insertarCartera">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/insertarCarteraRequest" message="tns:insertarCartera" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/insertarCarteraResponse" message="tns:insertarCarteraResponse" />
-    </operation>
   </portType>
   <binding name="CarteraWSPortBinding" type="tns:CarteraWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <operation name="actualizarCartera">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarCartera">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarCartera">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

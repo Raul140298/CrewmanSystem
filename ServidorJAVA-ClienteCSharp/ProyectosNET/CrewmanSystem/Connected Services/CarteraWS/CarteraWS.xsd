@@ -2,21 +2,7 @@
 <xs:schema xmlns:tns="http://services.CrewmanSystem.pucp.edu.pe/" targetNamespace="http://services.CrewmanSystem.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="actualizarCartera" type="tns:actualizarCartera" />
   <xs:element name="actualizarCarteraResponse" type="tns:actualizarCarteraResponse" />
-  <xs:element name="eliminarCartera" type="tns:eliminarCartera" />
-  <xs:element name="eliminarCarteraResponse" type="tns:eliminarCarteraResponse" />
-  <xs:element name="insertarCartera" type="tns:insertarCartera" />
-  <xs:element name="insertarCarteraResponse" type="tns:insertarCarteraResponse" />
-  <xs:complexType name="eliminarCartera">
-    <xs:sequence>
-      <xs:element name="idCartera" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarCarteraResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarCartera">
+  <xs:complexType name="actualizarCartera">
     <xs:sequence>
       <xs:element minOccurs="0" name="cartera" type="tns:cartera" />
     </xs:sequence>
@@ -305,16 +291,6 @@
       <xs:element name="estado" type="xs:boolean" />
       <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
       <xs:element name="idVisita" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarCarteraResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="actualizarCartera">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="cartera" type="tns:cartera" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarCarteraResponse">

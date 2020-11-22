@@ -16,6 +16,28 @@ namespace CrewmanSystem.EmpleadoWS {
     public interface EmpleadoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.EmpleadoWS.listarPorJefeVentasResponse listarPorJefeVentas(CrewmanSystem.EmpleadoWS.listarPorJefeVentasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.listarPorJefeVentasResponse> listarPorJefeVentasAsync(CrewmanSystem.EmpleadoWS.listarPorJefeVentasRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasYZonaRequ" +
+            "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasYZonaResp" +
+            "onse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaResponse listarPorJefeVentasYZona(CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasYZonaRequ" +
+            "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasYZonaResp" +
+            "onse")]
+        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaResponse> listarPorJefeVentasYZonaAsync(CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/actualizarEmpleadoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/actualizarEmpleadoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -38,19 +60,6 @@ namespace CrewmanSystem.EmpleadoWS {
         System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.permitirAccesoEmpleadoResponse> permitirAccesoEmpleadoAsync(CrewmanSystem.EmpleadoWS.permitirAccesoEmpleadoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasYZonaRequ" +
-            "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasYZonaResp" +
-            "onse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaResponse listarPorJefeVentasYZona(CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasYZonaRequ" +
-            "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasYZonaResp" +
-            "onse")]
-        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaResponse> listarPorJefeVentasYZonaAsync(CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/actualizarPersonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/actualizarPersonaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -60,40 +69,13 @@ namespace CrewmanSystem.EmpleadoWS {
         System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.actualizarPersonaResponse> actualizarPersonaAsync(CrewmanSystem.EmpleadoWS.actualizarPersonaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarEmpleadoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarEmpleadoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.EmpleadoWS.listarPorJefeVentasResponse listarPorJefeVentas(CrewmanSystem.EmpleadoWS.listarPorJefeVentasRequest request);
+        CrewmanSystem.EmpleadoWS.insertarEmpleadoResponse insertarEmpleado(CrewmanSystem.EmpleadoWS.insertarEmpleadoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.listarPorJefeVentasResponse> listarPorJefeVentasAsync(CrewmanSystem.EmpleadoWS.listarPorJefeVentasRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarPersonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarPersonaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.EmpleadoWS.insertarPersonaResponse insertarPersona(CrewmanSystem.EmpleadoWS.insertarPersonaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarPersonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarPersonaResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.insertarPersonaResponse> insertarPersonaAsync(CrewmanSystem.EmpleadoWS.insertarPersonaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/mostrarPersonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/mostrarPersonaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.EmpleadoWS.mostrarPersonaResponse mostrarPersona(CrewmanSystem.EmpleadoWS.mostrarPersonaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/mostrarPersonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/mostrarPersonaResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.mostrarPersonaResponse> mostrarPersonaAsync(CrewmanSystem.EmpleadoWS.mostrarPersonaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.EmpleadoWS.obtenerEmpleadoResponse obtenerEmpleado(CrewmanSystem.EmpleadoWS.obtenerEmpleadoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.obtenerEmpleadoResponse> obtenerEmpleadoAsync(CrewmanSystem.EmpleadoWS.obtenerEmpleadoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarEmpleadoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarEmpleadoResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.insertarEmpleadoResponse> insertarEmpleadoAsync(CrewmanSystem.EmpleadoWS.insertarEmpleadoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/eliminarEmpleadoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/eliminarEmpleadoResponse")]
@@ -105,6 +87,24 @@ namespace CrewmanSystem.EmpleadoWS {
         System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.eliminarEmpleadoResponse> eliminarEmpleadoAsync(CrewmanSystem.EmpleadoWS.eliminarEmpleadoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.EmpleadoWS.obtenerEmpleadoResponse obtenerEmpleado(CrewmanSystem.EmpleadoWS.obtenerEmpleadoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.obtenerEmpleadoResponse> obtenerEmpleadoAsync(CrewmanSystem.EmpleadoWS.obtenerEmpleadoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarPersonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarPersonaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.EmpleadoWS.insertarPersonaResponse insertarPersona(CrewmanSystem.EmpleadoWS.insertarPersonaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarPersonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarPersonaResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.insertarPersonaResponse> insertarPersonaAsync(CrewmanSystem.EmpleadoWS.insertarPersonaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/eliminarPersonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/eliminarPersonaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -114,13 +114,13 @@ namespace CrewmanSystem.EmpleadoWS {
         System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.eliminarPersonaResponse> eliminarPersonaAsync(CrewmanSystem.EmpleadoWS.eliminarPersonaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarEmpleadoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarEmpleadoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/mostrarPersonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/mostrarPersonaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.EmpleadoWS.insertarEmpleadoResponse insertarEmpleado(CrewmanSystem.EmpleadoWS.insertarEmpleadoRequest request);
+        CrewmanSystem.EmpleadoWS.mostrarPersonaResponse mostrarPersona(CrewmanSystem.EmpleadoWS.mostrarPersonaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarEmpleadoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarEmpleadoResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.insertarEmpleadoResponse> insertarEmpleadoAsync(CrewmanSystem.EmpleadoWS.insertarEmpleadoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/mostrarPersonaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/mostrarPersonaResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.mostrarPersonaResponse> mostrarPersonaAsync(CrewmanSystem.EmpleadoWS.mostrarPersonaRequest request);
     }
     
     /// <remarks/>
@@ -3448,6 +3448,113 @@ namespace CrewmanSystem.EmpleadoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorJefeVentas", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPorJefeVentasRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idEmpleado;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string apellidoPaterno;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string apellidoMaterno;
+        
+        public listarPorJefeVentasRequest() {
+        }
+        
+        public listarPorJefeVentasRequest(int idEmpleado, string nombre, string apellidoPaterno, string apellidoMaterno) {
+            this.idEmpleado = idEmpleado;
+            this.nombre = nombre;
+            this.apellidoPaterno = apellidoPaterno;
+            this.apellidoMaterno = apellidoMaterno;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorJefeVentasResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPorJefeVentasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.EmpleadoWS.empleado[] @return;
+        
+        public listarPorJefeVentasResponse() {
+        }
+        
+        public listarPorJefeVentasResponse(CrewmanSystem.EmpleadoWS.empleado[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorJefeVentasYZona", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPorJefeVentasYZonaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idEmpleado;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string apellidoPaterno;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string apellidoMaterno;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idZona;
+        
+        public listarPorJefeVentasYZonaRequest() {
+        }
+        
+        public listarPorJefeVentasYZonaRequest(int idEmpleado, string nombre, string apellidoPaterno, string apellidoMaterno, int idZona) {
+            this.idEmpleado = idEmpleado;
+            this.nombre = nombre;
+            this.apellidoPaterno = apellidoPaterno;
+            this.apellidoMaterno = apellidoMaterno;
+            this.idZona = idZona;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorJefeVentasYZonaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPorJefeVentasYZonaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.EmpleadoWS.empleado[] @return;
+        
+        public listarPorJefeVentasYZonaResponse() {
+        }
+        
+        public listarPorJefeVentasYZonaResponse(CrewmanSystem.EmpleadoWS.empleado[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEmpleado", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
     public partial class actualizarEmpleadoRequest {
         
@@ -3525,62 +3632,6 @@ namespace CrewmanSystem.EmpleadoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorJefeVentasYZona", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarPorJefeVentasYZonaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idEmpleado;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string apellidoPaterno;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string apellidoMaterno;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idZona;
-        
-        public listarPorJefeVentasYZonaRequest() {
-        }
-        
-        public listarPorJefeVentasYZonaRequest(int idEmpleado, string nombre, string apellidoPaterno, string apellidoMaterno, int idZona) {
-            this.idEmpleado = idEmpleado;
-            this.nombre = nombre;
-            this.apellidoPaterno = apellidoPaterno;
-            this.apellidoMaterno = apellidoMaterno;
-            this.idZona = idZona;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorJefeVentasYZonaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarPorJefeVentasYZonaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.EmpleadoWS.empleado[] @return;
-        
-        public listarPorJefeVentasYZonaResponse() {
-        }
-        
-        public listarPorJefeVentasYZonaResponse(CrewmanSystem.EmpleadoWS.empleado[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPersona", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
     public partial class actualizarPersonaRequest {
         
@@ -3617,140 +3668,17 @@ namespace CrewmanSystem.EmpleadoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorJefeVentas", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarPorJefeVentasRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idEmpleado;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string apellidoPaterno;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string apellidoMaterno;
-        
-        public listarPorJefeVentasRequest() {
-        }
-        
-        public listarPorJefeVentasRequest(int idEmpleado, string nombre, string apellidoPaterno, string apellidoMaterno) {
-            this.idEmpleado = idEmpleado;
-            this.nombre = nombre;
-            this.apellidoPaterno = apellidoPaterno;
-            this.apellidoMaterno = apellidoMaterno;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPorJefeVentasResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarPorJefeVentasResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.EmpleadoWS.empleado[] @return;
-        
-        public listarPorJefeVentasResponse() {
-        }
-        
-        public listarPorJefeVentasResponse(CrewmanSystem.EmpleadoWS.empleado[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPersona", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarPersonaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.EmpleadoWS.persona persona;
-        
-        public insertarPersonaRequest() {
-        }
-        
-        public insertarPersonaRequest(CrewmanSystem.EmpleadoWS.persona persona) {
-            this.persona = persona;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPersonaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarPersonaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarPersonaResponse() {
-        }
-        
-        public insertarPersonaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarPersona", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class mostrarPersonaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPersona;
-        
-        public mostrarPersonaRequest() {
-        }
-        
-        public mostrarPersonaRequest(int idPersona) {
-            this.idPersona = idPersona;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarPersonaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class mostrarPersonaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.EmpleadoWS.persona @return;
-        
-        public mostrarPersonaResponse() {
-        }
-        
-        public mostrarPersonaResponse(CrewmanSystem.EmpleadoWS.persona @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerEmpleado", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerEmpleadoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEmpleado", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarEmpleadoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public CrewmanSystem.EmpleadoWS.empleado empleado;
         
-        public obtenerEmpleadoRequest() {
+        public insertarEmpleadoRequest() {
         }
         
-        public obtenerEmpleadoRequest(CrewmanSystem.EmpleadoWS.empleado empleado) {
+        public insertarEmpleadoRequest(CrewmanSystem.EmpleadoWS.empleado empleado) {
             this.empleado = empleado;
         }
     }
@@ -3758,17 +3686,17 @@ namespace CrewmanSystem.EmpleadoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerEmpleadoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerEmpleadoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEmpleadoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarEmpleadoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public obtenerEmpleadoResponse() {
+        public insertarEmpleadoResponse() {
         }
         
-        public obtenerEmpleadoResponse(int @return) {
+        public insertarEmpleadoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -3812,6 +3740,78 @@ namespace CrewmanSystem.EmpleadoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerEmpleado", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerEmpleadoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.EmpleadoWS.empleado empleado;
+        
+        public obtenerEmpleadoRequest() {
+        }
+        
+        public obtenerEmpleadoRequest(CrewmanSystem.EmpleadoWS.empleado empleado) {
+            this.empleado = empleado;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerEmpleadoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerEmpleadoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public obtenerEmpleadoResponse() {
+        }
+        
+        public obtenerEmpleadoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPersona", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarPersonaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.EmpleadoWS.persona persona;
+        
+        public insertarPersonaRequest() {
+        }
+        
+        public insertarPersonaRequest(CrewmanSystem.EmpleadoWS.persona persona) {
+            this.persona = persona;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPersonaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarPersonaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarPersonaResponse() {
+        }
+        
+        public insertarPersonaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPersona", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
     public partial class eliminarPersonaRequest {
         
@@ -3848,35 +3848,35 @@ namespace CrewmanSystem.EmpleadoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEmpleado", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarEmpleadoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarPersona", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class mostrarPersonaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.EmpleadoWS.empleado empleado;
+        public int idPersona;
         
-        public insertarEmpleadoRequest() {
+        public mostrarPersonaRequest() {
         }
         
-        public insertarEmpleadoRequest(CrewmanSystem.EmpleadoWS.empleado empleado) {
-            this.empleado = empleado;
+        public mostrarPersonaRequest(int idPersona) {
+            this.idPersona = idPersona;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEmpleadoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarEmpleadoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarPersonaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class mostrarPersonaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        public CrewmanSystem.EmpleadoWS.persona @return;
         
-        public insertarEmpleadoResponse() {
+        public mostrarPersonaResponse() {
         }
         
-        public insertarEmpleadoResponse(int @return) {
+        public mostrarPersonaResponse(CrewmanSystem.EmpleadoWS.persona @return) {
             this.@return = @return;
         }
     }
@@ -3906,6 +3906,66 @@ namespace CrewmanSystem.EmpleadoWS {
         
         public EmpleadoWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.EmpleadoWS.listarPorJefeVentasResponse CrewmanSystem.EmpleadoWS.EmpleadoWS.listarPorJefeVentas(CrewmanSystem.EmpleadoWS.listarPorJefeVentasRequest request) {
+            return base.Channel.listarPorJefeVentas(request);
+        }
+        
+        public CrewmanSystem.EmpleadoWS.empleado[] listarPorJefeVentas(int idEmpleado, string nombre, string apellidoPaterno, string apellidoMaterno) {
+            CrewmanSystem.EmpleadoWS.listarPorJefeVentasRequest inValue = new CrewmanSystem.EmpleadoWS.listarPorJefeVentasRequest();
+            inValue.idEmpleado = idEmpleado;
+            inValue.nombre = nombre;
+            inValue.apellidoPaterno = apellidoPaterno;
+            inValue.apellidoMaterno = apellidoMaterno;
+            CrewmanSystem.EmpleadoWS.listarPorJefeVentasResponse retVal = ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).listarPorJefeVentas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.listarPorJefeVentasResponse> CrewmanSystem.EmpleadoWS.EmpleadoWS.listarPorJefeVentasAsync(CrewmanSystem.EmpleadoWS.listarPorJefeVentasRequest request) {
+            return base.Channel.listarPorJefeVentasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.listarPorJefeVentasResponse> listarPorJefeVentasAsync(int idEmpleado, string nombre, string apellidoPaterno, string apellidoMaterno) {
+            CrewmanSystem.EmpleadoWS.listarPorJefeVentasRequest inValue = new CrewmanSystem.EmpleadoWS.listarPorJefeVentasRequest();
+            inValue.idEmpleado = idEmpleado;
+            inValue.nombre = nombre;
+            inValue.apellidoPaterno = apellidoPaterno;
+            inValue.apellidoMaterno = apellidoMaterno;
+            return ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).listarPorJefeVentasAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaResponse CrewmanSystem.EmpleadoWS.EmpleadoWS.listarPorJefeVentasYZona(CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaRequest request) {
+            return base.Channel.listarPorJefeVentasYZona(request);
+        }
+        
+        public CrewmanSystem.EmpleadoWS.empleado[] listarPorJefeVentasYZona(int idEmpleado, string nombre, string apellidoPaterno, string apellidoMaterno, int idZona) {
+            CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaRequest inValue = new CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaRequest();
+            inValue.idEmpleado = idEmpleado;
+            inValue.nombre = nombre;
+            inValue.apellidoPaterno = apellidoPaterno;
+            inValue.apellidoMaterno = apellidoMaterno;
+            inValue.idZona = idZona;
+            CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaResponse retVal = ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).listarPorJefeVentasYZona(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaResponse> CrewmanSystem.EmpleadoWS.EmpleadoWS.listarPorJefeVentasYZonaAsync(CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaRequest request) {
+            return base.Channel.listarPorJefeVentasYZonaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaResponse> listarPorJefeVentasYZonaAsync(int idEmpleado, string nombre, string apellidoPaterno, string apellidoMaterno, int idZona) {
+            CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaRequest inValue = new CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaRequest();
+            inValue.idEmpleado = idEmpleado;
+            inValue.nombre = nombre;
+            inValue.apellidoPaterno = apellidoPaterno;
+            inValue.apellidoMaterno = apellidoMaterno;
+            inValue.idZona = idZona;
+            return ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).listarPorJefeVentasYZonaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3957,37 +4017,6 @@ namespace CrewmanSystem.EmpleadoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaResponse CrewmanSystem.EmpleadoWS.EmpleadoWS.listarPorJefeVentasYZona(CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaRequest request) {
-            return base.Channel.listarPorJefeVentasYZona(request);
-        }
-        
-        public CrewmanSystem.EmpleadoWS.empleado[] listarPorJefeVentasYZona(int idEmpleado, string nombre, string apellidoPaterno, string apellidoMaterno, int idZona) {
-            CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaRequest inValue = new CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaRequest();
-            inValue.idEmpleado = idEmpleado;
-            inValue.nombre = nombre;
-            inValue.apellidoPaterno = apellidoPaterno;
-            inValue.apellidoMaterno = apellidoMaterno;
-            inValue.idZona = idZona;
-            CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaResponse retVal = ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).listarPorJefeVentasYZona(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaResponse> CrewmanSystem.EmpleadoWS.EmpleadoWS.listarPorJefeVentasYZonaAsync(CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaRequest request) {
-            return base.Channel.listarPorJefeVentasYZonaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaResponse> listarPorJefeVentasYZonaAsync(int idEmpleado, string nombre, string apellidoPaterno, string apellidoMaterno, int idZona) {
-            CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaRequest inValue = new CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaRequest();
-            inValue.idEmpleado = idEmpleado;
-            inValue.nombre = nombre;
-            inValue.apellidoPaterno = apellidoPaterno;
-            inValue.apellidoMaterno = apellidoMaterno;
-            inValue.idZona = idZona;
-            return ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).listarPorJefeVentasYZonaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CrewmanSystem.EmpleadoWS.actualizarPersonaResponse CrewmanSystem.EmpleadoWS.EmpleadoWS.actualizarPersona(CrewmanSystem.EmpleadoWS.actualizarPersonaRequest request) {
             return base.Channel.actualizarPersona(request);
         }
@@ -4011,101 +4040,26 @@ namespace CrewmanSystem.EmpleadoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.EmpleadoWS.listarPorJefeVentasResponse CrewmanSystem.EmpleadoWS.EmpleadoWS.listarPorJefeVentas(CrewmanSystem.EmpleadoWS.listarPorJefeVentasRequest request) {
-            return base.Channel.listarPorJefeVentas(request);
+        CrewmanSystem.EmpleadoWS.insertarEmpleadoResponse CrewmanSystem.EmpleadoWS.EmpleadoWS.insertarEmpleado(CrewmanSystem.EmpleadoWS.insertarEmpleadoRequest request) {
+            return base.Channel.insertarEmpleado(request);
         }
         
-        public CrewmanSystem.EmpleadoWS.empleado[] listarPorJefeVentas(int idEmpleado, string nombre, string apellidoPaterno, string apellidoMaterno) {
-            CrewmanSystem.EmpleadoWS.listarPorJefeVentasRequest inValue = new CrewmanSystem.EmpleadoWS.listarPorJefeVentasRequest();
-            inValue.idEmpleado = idEmpleado;
-            inValue.nombre = nombre;
-            inValue.apellidoPaterno = apellidoPaterno;
-            inValue.apellidoMaterno = apellidoMaterno;
-            CrewmanSystem.EmpleadoWS.listarPorJefeVentasResponse retVal = ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).listarPorJefeVentas(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.listarPorJefeVentasResponse> CrewmanSystem.EmpleadoWS.EmpleadoWS.listarPorJefeVentasAsync(CrewmanSystem.EmpleadoWS.listarPorJefeVentasRequest request) {
-            return base.Channel.listarPorJefeVentasAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.listarPorJefeVentasResponse> listarPorJefeVentasAsync(int idEmpleado, string nombre, string apellidoPaterno, string apellidoMaterno) {
-            CrewmanSystem.EmpleadoWS.listarPorJefeVentasRequest inValue = new CrewmanSystem.EmpleadoWS.listarPorJefeVentasRequest();
-            inValue.idEmpleado = idEmpleado;
-            inValue.nombre = nombre;
-            inValue.apellidoPaterno = apellidoPaterno;
-            inValue.apellidoMaterno = apellidoMaterno;
-            return ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).listarPorJefeVentasAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.EmpleadoWS.insertarPersonaResponse CrewmanSystem.EmpleadoWS.EmpleadoWS.insertarPersona(CrewmanSystem.EmpleadoWS.insertarPersonaRequest request) {
-            return base.Channel.insertarPersona(request);
-        }
-        
-        public int insertarPersona(CrewmanSystem.EmpleadoWS.persona persona) {
-            CrewmanSystem.EmpleadoWS.insertarPersonaRequest inValue = new CrewmanSystem.EmpleadoWS.insertarPersonaRequest();
-            inValue.persona = persona;
-            CrewmanSystem.EmpleadoWS.insertarPersonaResponse retVal = ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).insertarPersona(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.insertarPersonaResponse> CrewmanSystem.EmpleadoWS.EmpleadoWS.insertarPersonaAsync(CrewmanSystem.EmpleadoWS.insertarPersonaRequest request) {
-            return base.Channel.insertarPersonaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.insertarPersonaResponse> insertarPersonaAsync(CrewmanSystem.EmpleadoWS.persona persona) {
-            CrewmanSystem.EmpleadoWS.insertarPersonaRequest inValue = new CrewmanSystem.EmpleadoWS.insertarPersonaRequest();
-            inValue.persona = persona;
-            return ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).insertarPersonaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.EmpleadoWS.mostrarPersonaResponse CrewmanSystem.EmpleadoWS.EmpleadoWS.mostrarPersona(CrewmanSystem.EmpleadoWS.mostrarPersonaRequest request) {
-            return base.Channel.mostrarPersona(request);
-        }
-        
-        public CrewmanSystem.EmpleadoWS.persona mostrarPersona(int idPersona) {
-            CrewmanSystem.EmpleadoWS.mostrarPersonaRequest inValue = new CrewmanSystem.EmpleadoWS.mostrarPersonaRequest();
-            inValue.idPersona = idPersona;
-            CrewmanSystem.EmpleadoWS.mostrarPersonaResponse retVal = ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).mostrarPersona(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.mostrarPersonaResponse> CrewmanSystem.EmpleadoWS.EmpleadoWS.mostrarPersonaAsync(CrewmanSystem.EmpleadoWS.mostrarPersonaRequest request) {
-            return base.Channel.mostrarPersonaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.mostrarPersonaResponse> mostrarPersonaAsync(int idPersona) {
-            CrewmanSystem.EmpleadoWS.mostrarPersonaRequest inValue = new CrewmanSystem.EmpleadoWS.mostrarPersonaRequest();
-            inValue.idPersona = idPersona;
-            return ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).mostrarPersonaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.EmpleadoWS.obtenerEmpleadoResponse CrewmanSystem.EmpleadoWS.EmpleadoWS.obtenerEmpleado(CrewmanSystem.EmpleadoWS.obtenerEmpleadoRequest request) {
-            return base.Channel.obtenerEmpleado(request);
-        }
-        
-        public int obtenerEmpleado(CrewmanSystem.EmpleadoWS.empleado empleado) {
-            CrewmanSystem.EmpleadoWS.obtenerEmpleadoRequest inValue = new CrewmanSystem.EmpleadoWS.obtenerEmpleadoRequest();
+        public int insertarEmpleado(CrewmanSystem.EmpleadoWS.empleado empleado) {
+            CrewmanSystem.EmpleadoWS.insertarEmpleadoRequest inValue = new CrewmanSystem.EmpleadoWS.insertarEmpleadoRequest();
             inValue.empleado = empleado;
-            CrewmanSystem.EmpleadoWS.obtenerEmpleadoResponse retVal = ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).obtenerEmpleado(inValue);
+            CrewmanSystem.EmpleadoWS.insertarEmpleadoResponse retVal = ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).insertarEmpleado(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.obtenerEmpleadoResponse> CrewmanSystem.EmpleadoWS.EmpleadoWS.obtenerEmpleadoAsync(CrewmanSystem.EmpleadoWS.obtenerEmpleadoRequest request) {
-            return base.Channel.obtenerEmpleadoAsync(request);
+        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.insertarEmpleadoResponse> CrewmanSystem.EmpleadoWS.EmpleadoWS.insertarEmpleadoAsync(CrewmanSystem.EmpleadoWS.insertarEmpleadoRequest request) {
+            return base.Channel.insertarEmpleadoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.obtenerEmpleadoResponse> obtenerEmpleadoAsync(CrewmanSystem.EmpleadoWS.empleado empleado) {
-            CrewmanSystem.EmpleadoWS.obtenerEmpleadoRequest inValue = new CrewmanSystem.EmpleadoWS.obtenerEmpleadoRequest();
+        public System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.insertarEmpleadoResponse> insertarEmpleadoAsync(CrewmanSystem.EmpleadoWS.empleado empleado) {
+            CrewmanSystem.EmpleadoWS.insertarEmpleadoRequest inValue = new CrewmanSystem.EmpleadoWS.insertarEmpleadoRequest();
             inValue.empleado = empleado;
-            return ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).obtenerEmpleadoAsync(inValue);
+            return ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).insertarEmpleadoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4132,6 +4086,52 @@ namespace CrewmanSystem.EmpleadoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.EmpleadoWS.obtenerEmpleadoResponse CrewmanSystem.EmpleadoWS.EmpleadoWS.obtenerEmpleado(CrewmanSystem.EmpleadoWS.obtenerEmpleadoRequest request) {
+            return base.Channel.obtenerEmpleado(request);
+        }
+        
+        public int obtenerEmpleado(CrewmanSystem.EmpleadoWS.empleado empleado) {
+            CrewmanSystem.EmpleadoWS.obtenerEmpleadoRequest inValue = new CrewmanSystem.EmpleadoWS.obtenerEmpleadoRequest();
+            inValue.empleado = empleado;
+            CrewmanSystem.EmpleadoWS.obtenerEmpleadoResponse retVal = ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).obtenerEmpleado(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.obtenerEmpleadoResponse> CrewmanSystem.EmpleadoWS.EmpleadoWS.obtenerEmpleadoAsync(CrewmanSystem.EmpleadoWS.obtenerEmpleadoRequest request) {
+            return base.Channel.obtenerEmpleadoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.obtenerEmpleadoResponse> obtenerEmpleadoAsync(CrewmanSystem.EmpleadoWS.empleado empleado) {
+            CrewmanSystem.EmpleadoWS.obtenerEmpleadoRequest inValue = new CrewmanSystem.EmpleadoWS.obtenerEmpleadoRequest();
+            inValue.empleado = empleado;
+            return ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).obtenerEmpleadoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.EmpleadoWS.insertarPersonaResponse CrewmanSystem.EmpleadoWS.EmpleadoWS.insertarPersona(CrewmanSystem.EmpleadoWS.insertarPersonaRequest request) {
+            return base.Channel.insertarPersona(request);
+        }
+        
+        public int insertarPersona(CrewmanSystem.EmpleadoWS.persona persona) {
+            CrewmanSystem.EmpleadoWS.insertarPersonaRequest inValue = new CrewmanSystem.EmpleadoWS.insertarPersonaRequest();
+            inValue.persona = persona;
+            CrewmanSystem.EmpleadoWS.insertarPersonaResponse retVal = ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).insertarPersona(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.insertarPersonaResponse> CrewmanSystem.EmpleadoWS.EmpleadoWS.insertarPersonaAsync(CrewmanSystem.EmpleadoWS.insertarPersonaRequest request) {
+            return base.Channel.insertarPersonaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.insertarPersonaResponse> insertarPersonaAsync(CrewmanSystem.EmpleadoWS.persona persona) {
+            CrewmanSystem.EmpleadoWS.insertarPersonaRequest inValue = new CrewmanSystem.EmpleadoWS.insertarPersonaRequest();
+            inValue.persona = persona;
+            return ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).insertarPersonaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CrewmanSystem.EmpleadoWS.eliminarPersonaResponse CrewmanSystem.EmpleadoWS.EmpleadoWS.eliminarPersona(CrewmanSystem.EmpleadoWS.eliminarPersonaRequest request) {
             return base.Channel.eliminarPersona(request);
         }
@@ -4155,26 +4155,26 @@ namespace CrewmanSystem.EmpleadoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.EmpleadoWS.insertarEmpleadoResponse CrewmanSystem.EmpleadoWS.EmpleadoWS.insertarEmpleado(CrewmanSystem.EmpleadoWS.insertarEmpleadoRequest request) {
-            return base.Channel.insertarEmpleado(request);
+        CrewmanSystem.EmpleadoWS.mostrarPersonaResponse CrewmanSystem.EmpleadoWS.EmpleadoWS.mostrarPersona(CrewmanSystem.EmpleadoWS.mostrarPersonaRequest request) {
+            return base.Channel.mostrarPersona(request);
         }
         
-        public int insertarEmpleado(CrewmanSystem.EmpleadoWS.empleado empleado) {
-            CrewmanSystem.EmpleadoWS.insertarEmpleadoRequest inValue = new CrewmanSystem.EmpleadoWS.insertarEmpleadoRequest();
-            inValue.empleado = empleado;
-            CrewmanSystem.EmpleadoWS.insertarEmpleadoResponse retVal = ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).insertarEmpleado(inValue);
+        public CrewmanSystem.EmpleadoWS.persona mostrarPersona(int idPersona) {
+            CrewmanSystem.EmpleadoWS.mostrarPersonaRequest inValue = new CrewmanSystem.EmpleadoWS.mostrarPersonaRequest();
+            inValue.idPersona = idPersona;
+            CrewmanSystem.EmpleadoWS.mostrarPersonaResponse retVal = ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).mostrarPersona(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.insertarEmpleadoResponse> CrewmanSystem.EmpleadoWS.EmpleadoWS.insertarEmpleadoAsync(CrewmanSystem.EmpleadoWS.insertarEmpleadoRequest request) {
-            return base.Channel.insertarEmpleadoAsync(request);
+        System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.mostrarPersonaResponse> CrewmanSystem.EmpleadoWS.EmpleadoWS.mostrarPersonaAsync(CrewmanSystem.EmpleadoWS.mostrarPersonaRequest request) {
+            return base.Channel.mostrarPersonaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.insertarEmpleadoResponse> insertarEmpleadoAsync(CrewmanSystem.EmpleadoWS.empleado empleado) {
-            CrewmanSystem.EmpleadoWS.insertarEmpleadoRequest inValue = new CrewmanSystem.EmpleadoWS.insertarEmpleadoRequest();
-            inValue.empleado = empleado;
-            return ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).insertarEmpleadoAsync(inValue);
+        public System.Threading.Tasks.Task<CrewmanSystem.EmpleadoWS.mostrarPersonaResponse> mostrarPersonaAsync(int idPersona) {
+            CrewmanSystem.EmpleadoWS.mostrarPersonaRequest inValue = new CrewmanSystem.EmpleadoWS.mostrarPersonaRequest();
+            inValue.idPersona = idPersona;
+            return ((CrewmanSystem.EmpleadoWS.EmpleadoWS)(this)).mostrarPersonaAsync(inValue);
         }
     }
 }

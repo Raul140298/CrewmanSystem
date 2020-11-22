@@ -10,21 +10,20 @@ using System.Windows.Forms;
 
 namespace CrewmanSystem
 {
-	public partial class frmBuscarEmpleado : Form
-	{
-		private EmpleadoWS.EmpleadoWSClient daoEmpleado;
-		ZonaWS.ZonaWSClient daoZona;
-		public static EmpleadoWS.empleado empleadoSeleccionado;
-		public static DataGridView dgv;
+    public partial class frmBuscarCartera : Form
+    {
+        private EmpleadoWS.EmpleadoWSClient daoEmpleado;
+        ZonaWS.ZonaWSClient daoZona;
+        private BindingList<ZonaWS.zona> misZonas;
+        ZonaWS.zona zonaAux = new ZonaWS.zona();
 
-		public frmBuscarEmpleado()
-		{
+        public frmBuscarCartera()
+        {
 			InitializeComponent();
-			dgv = dataGridView1;
-			BindingList<ZonaWS.zona> misZonas;
+
 			daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
 			daoZona = new ZonaWS.ZonaWSClient();
-			ZonaWS.zona[] listaZonas=daoZona.listarZonas();
+			ZonaWS.zona[] listaZonas = daoZona.listarZonas();
 			ZonaWS.zona zonaDefault = new ZonaWS.zona();
 			zonaDefault.idZona = 0;
 			zonaDefault.nombre = "Cualquiera";
@@ -37,7 +36,7 @@ namespace CrewmanSystem
 			}
 			else
 			{
-	
+
 				ZonaWS.zona[] listaZonas2 = new ZonaWS.zona[listaZonas.Length + 1];
 				listaZonas2[0] = zonaDefault;
 				for (int i = 0; i < listaZonas.Length; i++)
@@ -47,7 +46,7 @@ namespace CrewmanSystem
 				misZonas = new BindingList<ZonaWS.zona>(listaZonas2);
 
 				cboZona.DataSource = misZonas;
-				
+
 			}
 			cboZona.ValueMember = "idZona";
 			cboZona.DisplayMember = "nombre";
@@ -66,9 +65,9 @@ namespace CrewmanSystem
 		}
 
 		private void completarTabla()
-		{ 
+		{
 			dataGridView1.AutoGenerateColumns = false;
-			EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado,txtNombre.Text,txtApPaterno.Text,txtApMaterno.Text);
+			EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado, txtNombre.Text, txtApPaterno.Text, txtApMaterno.Text);
 			if (misEmpleados != null)
 			{
 				dataGridView1.DataSource = new BindingList<EmpleadoWS.empleado>(misEmpleados.ToArray());
@@ -79,8 +78,8 @@ namespace CrewmanSystem
 			}
 		}
 
-        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
+		private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+		{
 			//castear objetos y mostrar valor determinado
 			EmpleadoWS.empleado empleado = dataGridView1.Rows[e.RowIndex].DataBoundItem
 			as EmpleadoWS.empleado;
@@ -88,8 +87,8 @@ namespace CrewmanSystem
 			dataGridView1.Rows[e.RowIndex].Cells["ZONA"].Value = empleado.zona.nombre;
 		}
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
+		private void btnBuscar_Click(object sender, EventArgs e)
+		{
 			ZonaWS.zona zonaSeleccionada = new ZonaWS.zona();
 			zonaSeleccionada = (ZonaWS.zona)cboZona.SelectedItem;
 
@@ -98,21 +97,16 @@ namespace CrewmanSystem
 				EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado, txtNombre.Text, txtApPaterno.Text, txtApMaterno.Text);
 				dataGridView1.DataSource = misEmpleados;
 			}
-            else
-            {
-				EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentasYZona(Program.empleado.idEmpleado, txtNombre.Text, txtApPaterno.Text, txtApMaterno.Text,zonaSeleccionada.idZona);
+			else
+			{
+				EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentasYZona(Program.empleado.idEmpleado, txtNombre.Text, txtApPaterno.Text, txtApMaterno.Text, zonaSeleccionada.idZona);
 				dataGridView1.DataSource = misEmpleados;
 			}
 		}
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-			frmVentanaPrincipal.act.Enabled = false;
-			frmVentanaPrincipal.elim.Enabled = false;
-		}
-
         private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
         {
+			//Preguntar al profe
 			if (e.StateChanged != DataGridViewElementStates.Selected)
 			{
 				//frmVentanaPrincipal.act.Enabled = false;

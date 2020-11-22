@@ -481,7 +481,7 @@
             this.btnClientesXZona.Name = "btnClientesXZona";
             this.btnClientesXZona.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnClientesXZona.Rotation = 0D;
-            this.btnClientesXZona.Size = new System.Drawing.Size(264, 45);
+            this.btnClientesXZona.Size = new System.Drawing.Size(264, 51);
             this.btnClientesXZona.TabIndex = 2;
             this.btnClientesXZona.Text = "Clientes x Zona";
             this.btnClientesXZona.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

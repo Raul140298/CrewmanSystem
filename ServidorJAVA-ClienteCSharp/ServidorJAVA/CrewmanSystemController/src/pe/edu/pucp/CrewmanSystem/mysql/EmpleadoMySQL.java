@@ -230,19 +230,14 @@ public class EmpleadoMySQL implements EmpleadoDAO{
             rs.next();
             
             if(resultado==0) return null;
-                 
             empleado.setIdEmpleado(rs.getInt("ID_EMPLEADO"));
-            empleado.setFechaCreacion(rs.getDate("FECHA_CREACION"));
-            
-//            System.out.println(empleado.getIdEmpleado());
-//            System.out.println(empleado.getFechaCreacion());
+            empleado.setFechaCreacion(rs.getDate("FECHA_CREACION")); 
             
             Persona persona = daoPersona.mostrar(rs.getInt("ID_PERSONA"));
             empleado.asignarPersona(persona);
 
             Cargo cargo=new Cargo();
             cargo.setIdCargo(rs.getInt("ID_CARGO"));
-//            System.out.println(empleado.getCargo().getIdCargo());
 
             if(cargo.getIdCargo()==1){
                 cargo.setNombre("VENDEDOR");
@@ -332,6 +327,27 @@ public class EmpleadoMySQL implements EmpleadoDAO{
                 empleado.setUsuario("USUARIO"); 
 
                 empleados.add(empleado);
+            }
+            rs.close();
+            for(Empleado e : empleados){
+                Zona zona = new Zona();
+                st=con.createStatement();
+                sql = "SELECT Z.ID_ZONA, Z.NOMBRE "
+                        + "FROM EMPLEADOXZONA EXZ, ZONA Z "
+                        + "WHERE EXZ.ID_EMPLEADO = "+e.getIdEmpleado()+" AND EXZ.ID_ZONA=Z.ID_ZONA AND EXZ.ACTIVO=1";
+                rs = st.executeQuery(sql);
+                if(rs.next()){
+                    entero = rs.getInt("ID_ZONA");
+                    if(entero!=null){
+                        zona.setIdZona(entero.intValue());
+                        zona.setNombre(rs.getString("NOMBRE"));
+                    } 
+                    else{
+                        zona.setIdZona(0);
+                        zona.setNombre("");
+                    }
+                }
+                e.setZona(zona);
             }
         }catch(Exception ex){
             System.out.println(ex.getMessage());

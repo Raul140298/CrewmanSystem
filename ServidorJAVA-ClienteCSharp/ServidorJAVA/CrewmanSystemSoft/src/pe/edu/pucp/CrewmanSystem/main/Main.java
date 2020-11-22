@@ -50,14 +50,14 @@ public class Main{
     private static QuejaDAO daoQueja = new QuejaMySQL();
     private static ArrayList<Queja> misQuejas;
     private static PersonaDAO daoPersona = new PersonaMySQL();
-    
+    private static PersonaContactoDAO daoPersonaContacto = new PersonaContactoMySQL();
     
     public static void main(String[] args) {
 //        gestionarFamilias();
 //        gestionarSubFamilias();
 //        gestionarMarcas();
 //        gestionarZonas();
-       gestionarClientes();
+//       gestionarClientes();
 //        gestionarEmpleados();
 //        gestionarProductos();
 //        gestionarProductoXZona();
@@ -130,14 +130,40 @@ public class Main{
 //        }catch(Exception e){
 //            System.out.println("MAL");
 //        }
-        Pedido pedido = new Pedido();
-        try{
-            pedido.setFechaEstim(sdf.parse("01-01-2021"));
-        }catch(Exception e){
-            System.out.println("MAL");
-        }
-        pedido.setIdPedido(55);
-        daoPedido.aprobarBorrador(pedido);
+
+//        misClientes=daoCliente.listarSinCartera("", "", 125);
+//        for(Cliente c : misClientes) System.out.println(c.getIdCliente()+" "+c.getRuc());
+//        
+        misVisitas=daoVisita.listar(6);
+        for(Visita v : misVisitas) System.out.println(v.getCliente().getRazonSocial()+" "+v.getFechaRegistro()+""+v.isEstado());
+
+//        Cartera cartera = new Cartera();
+//        cartera.setIdCartera(8);
+//        Empleado empleado = new Empleado();
+//        empleado.setIdEmpleado(22);
+//        cartera.setEmpleado(empleado);
+//        
+//        Visita v1 = new Visita();
+//        Cliente c1 = new Cliente();
+//        c1.setIdCliente(24);
+//        v1.setCliente(c1);
+//        cartera.getListaVisita().add(v1);
+//        
+//        Visita v2 = new Visita();
+//        Cliente c2 = new Cliente();
+//        c2.setIdCliente(28);
+//        v2.setCliente(c2);
+//        cartera.getListaVisita().add(v2);
+//        daoCartera.actualizar(cartera);
+        
+//        Pedido pedido = new Pedido();
+//        try{
+//            pedido.setFechaEstim(sdf.parse("01-01-2021"));
+//        }catch(Exception e){
+//            System.out.println("MAL");
+//        }
+//        pedido.setIdPedido(55);
+//        daoPedido.aprobarBorrador(pedido);
     }
     
     private static void gestionarFamilias(){
@@ -205,21 +231,24 @@ public class Main{
     }
     
     private static void gestionarClientes(){
-        Cliente cliente1=new Cliente("16512099640","LOS ANDES","NACIONAL","Tercera Zona Av Miro Quesada");
+        Cliente cliente1=new Cliente("10680029640","MARKET ANDINO","NACIONAL","Primera Zona Av Los Rosales");
         PersonaContacto perCont1 = new PersonaContacto();
-        perCont1.setDni("79521650");
-        perCont1.setCargo("SECRETARIA");
-        perCont1.setNombre("Melanie");
-        perCont1.setApellidoPaterno("Hernandez");
-        perCont1.setApellidoMaterno("Albela");
-        perCont1.setGenero('F');
-        perCont1.setCorreo("gab_mrll@gmail.com");
-        perCont1.setTelefono1("984024139");
+        perCont1.setDni("76891429");
+        perCont1.setCargo("GERENTE");
+        perCont1.setNombre("Saúl");
+        perCont1.setApellidoPaterno("Peredo");
+        perCont1.setApellidoMaterno("Quiroga");
+        perCont1.setGenero('M');
+        perCont1.setCorreo("saull_qrg@hotmail.com");
+        perCont1.setTelefono1("986365129");
         perCont1.setTelefono2("");
         cliente1.setPersonaContacto(perCont1);
-        cliente1.getZona().setIdZona(149);
+        cliente1.getZona().setIdZona(125);
         int resultado = daoCliente.insertar(cliente1);
-        
+        int resultado2 = daoPersonaContacto.insertar(perCont1, resultado);
+//        cliente1.setIdCliente(35);
+//        cliente1.getPersonaContacto().setIdPersonaContacto(25);
+//        int resultado = daoCliente.actualizar(cliente1);
         
         String razonSocial = "";
         String grupo = "";
@@ -296,23 +325,23 @@ public class Main{
                 System.out.println("==================================================================================");
                 System.out.println(miEmpleado.getZona().getIdZona()+" - "+miEmpleado.getZona().getNombre());
                 
-                misVisitas = daoVisita.listar(miEmpleado);
+                misVisitas = daoVisita.listar(miEmpleado.getCartera().getIdCartera());
                 System.out.println("\nLISTADO DE VISITAS DEL VENDEDOR");
                 System.out.println("==================================================================================");
                 for(Visita v : misVisitas)
                     System.out.println(v.getCliente().getIdCliente()+" - "+v.getCliente().getRazonSocial()+" - "+v.getFechaRegistro()+" - "+v.isEstado());
                                 
-                String razonSocial="";
-                String grupo="";
-                misClientes=daoCliente.obtenerClientesPorCartera(miEmpleado.getCartera().getIdCartera(),razonSocial,grupo);
-                System.out.println("\nLISTADO DE CLIENTES");
-                System.out.println("==================================================================================");
-                System.out.println("RAZON SOCIAL: "+razonSocial);
-                System.out.println("GRUPO: "+grupo);
-                System.out.println("==================================================================================");
-                for(Cliente c:misClientes) 
-                    System.out.println(c.getIdCliente()+" - "+c.getRuc()+" - "+c.getRazonSocial()+" - "+c.getGrupo()+" - "+
-                    c.getTipoEmpresa()+" - "+c.getDireccion()+" - "+sdf.format(c.getFechaRegistro()));
+//                String razonSocial="";
+//                String grupo="";
+//                misClientes=daoCliente.obtenerClientesPorCartera(miEmpleado.getCartera().getIdCartera(),razonSocial,grupo);
+//                System.out.println("\nLISTADO DE CLIENTES");
+//                System.out.println("==================================================================================");
+//                System.out.println("RAZON SOCIAL: "+razonSocial);
+//                System.out.println("GRUPO: "+grupo);
+//                System.out.println("==================================================================================");
+//                for(Cliente c:misClientes) 
+//                    System.out.println(c.getIdCliente()+" - "+c.getRuc()+" - "+c.getRazonSocial()+" - "+c.getGrupo()+" - "+
+//                    c.getTipoEmpresa()+" - "+c.getDireccion()+" - "+sdf.format(c.getFechaRegistro()));
                 
                 Cliente miCliente=misClientes.get(0);
                 daoCliente.mostrar(miCliente);
