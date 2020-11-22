@@ -284,4 +284,54 @@ public class ClienteMySQL implements ClienteDAO{
         }
         return clientes;
     }
+    
+    @Override
+    public ArrayList<Cliente> listarConCartera(String razonSocial, String grupo, int idCartera) {
+        ArrayList<Cliente> clientes = new ArrayList<>();
+        Integer entero;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            String sql ="{ call LISTAR_CLIENTES_SIN_CARTERA (?,?,?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_CARTERA", idCartera);
+            cs.setString("_RAZON_SOCIAL", razonSocial);
+            cs.setString("_GRUPO", grupo);
+            cs.executeUpdate();
+            rs = cs.getResultSet();
+            while(rs.next()){
+                Cliente cliente = new Cliente();
+                Zona zona = new Zona();
+                cliente.setIdCliente(rs.getInt("ID_CLIENTE"));
+                entero=rs.getInt("ID_LINEA_DE_CREDITO");
+                if(entero!=null) cliente.getLineaCredito().setIdLineaCredito(entero.intValue());
+                
+                entero=rs.getInt("ID_PERSONA_CONTACTO");
+                if(entero!=null) cliente.getPersonaContacto().setIdPersonaContacto(entero.intValue());
+                
+                entero=rs.getInt("ID_CARTERA");
+                if(entero!=null) cliente.getCartera().setIdCartera(entero.intValue());
+                
+                cliente.setRuc(rs.getString("RUC"));
+                cliente.setRazonSocial(rs.getString("RAZON_SOCIAL"));
+                cliente.setGrupo(rs.getString("GRUPO"));
+                cliente.setTipoEmpresa(rs.getString("TIPOCLIENTE"));
+                cliente.setDireccion(rs.getString("DIRECCION"));
+                
+                zona.setIdZona(rs.getInt("ID_ZONA"));
+                zona.setNombre(rs.getString("ZONA"));
+                cliente.setZona(zona);
+                clientes.add(cliente);
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return clientes;
+    }
 }

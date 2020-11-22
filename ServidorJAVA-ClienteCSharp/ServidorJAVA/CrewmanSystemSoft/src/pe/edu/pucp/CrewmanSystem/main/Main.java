@@ -134,8 +134,8 @@ public class Main{
 //        misClientes=daoCliente.listarSinCartera("", "", 125);
 //        for(Cliente c : misClientes) System.out.println(c.getIdCliente()+" "+c.getRuc());
 //        
-        misVisitas=daoVisita.listar(6);
-        for(Visita v : misVisitas) System.out.println(v.getCliente().getRazonSocial()+" "+v.getFechaRegistro()+""+v.isEstado());
+//        misVisitas=daoVisita.listar(6);
+//        for(Visita v : misVisitas) System.out.println(v.getCliente().getRazonSocial()+" "+v.getFechaRegistro()+""+v.isEstado());
 
 //        Cartera cartera = new Cartera();
 //        cartera.setIdCartera(8);
@@ -157,12 +157,14 @@ public class Main{
 //        daoCartera.actualizar(cartera);
         
 //        Pedido pedido = new Pedido();
+//        pedido.setIdPedido(55);
+//        misLineasDePedido = daoLineaPedido.listar(pedido.getIdPedido());
+//        pedido.setLineasPedidos(misLineasDePedido);
 //        try{
 //            pedido.setFechaEstim(sdf.parse("01-01-2021"));
 //        }catch(Exception e){
 //            System.out.println("MAL");
 //        }
-//        pedido.setIdPedido(55);
 //        daoPedido.aprobarBorrador(pedido);
     }
     

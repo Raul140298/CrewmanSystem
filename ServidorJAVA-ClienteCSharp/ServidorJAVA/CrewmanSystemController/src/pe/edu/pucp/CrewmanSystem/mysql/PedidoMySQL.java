@@ -250,8 +250,9 @@ public class PedidoMySQL implements PedidoDAO{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             con.setAutoCommit(false);
+            String sql;
             for(LineaPedido lp : pedido.getLineasPedidos()){
-                String sql ="{ call APROBAR_LINEA(?,?,?,?,?)}";
+                sql ="{ call APROBAR_LINEA(?,?,?,?,?)}";
                 cs = con.prepareCall(sql);
                 cs.registerOutParameter("_SUBTOTAL", java.sql.Types.DOUBLE);
                 cs.setInt("_ID_LINEA_PEDIDO", lp.getIdLineaPedido());
@@ -261,7 +262,7 @@ public class PedidoMySQL implements PedidoDAO{
                 resultado = cs.executeUpdate();
                 total += cs.getDouble("_SUBTOTAL");
             }
-            String sql ="{ call APROBAR_PEDIDO(?,?,?,?)}";
+            sql ="{ call APROBAR_PEDIDO(?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_PEDIDO", pedido.getIdPedido());
             cs.setDate("_FECHA_ESTIMADA", new java.sql.Date(pedido.getFechaEstim().getTime()));

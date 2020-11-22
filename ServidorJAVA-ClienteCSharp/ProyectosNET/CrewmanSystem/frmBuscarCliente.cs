@@ -15,6 +15,7 @@ namespace CrewmanSystem
 		private static ClienteWS.ClienteWSClient daoCliente;
 		private static ZonaWS.ZonaWSClient daoZona;
 		public static ClienteWS.cliente clienteSeleccionado;
+		public static VisitaWS.VisitaWSClient daoVisita = new VisitaWS.VisitaWSClient();
 		public static DataGridView dgv;
 		public static int evitarAct = 0;
 		private int tipoFrmVendedor;
@@ -70,7 +71,10 @@ namespace CrewmanSystem
 
 			ClienteWS.cliente[] misClientes;
 			if (tipoFrm == 1) misClientes = daoCliente.listarClientes("", "", idZona);
-			else misClientes = daoCliente.listarClientesSinCartera("","",idZona);
+			else
+			{
+				misClientes = daoCliente.listarClientesConCartera("", "", Program.empleado.cartera.idCartera);
+			}
 
 			if (misClientes != null)
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
@@ -118,7 +122,7 @@ namespace CrewmanSystem
 				int idZona = ((ZonaWS.zona)cboZona.SelectedItem).idZona;
 				misClientes = daoCliente.listarClientes(txtRazonSocial.Text, txtGrupo.Text, idZona);
 			}
-			else misClientes = daoCliente.listarClientesSinCartera(txtRazonSocial.Text, txtGrupo.Text, idZonaVendedor);
+			else misClientes = daoCliente.listarClientesConCartera(txtRazonSocial.Text, txtGrupo.Text, Program.empleado.cartera.idCartera);
             
 			if (misClientes != null)
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
