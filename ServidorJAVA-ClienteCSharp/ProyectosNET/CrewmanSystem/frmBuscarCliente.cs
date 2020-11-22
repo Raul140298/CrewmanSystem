@@ -158,9 +158,12 @@ namespace CrewmanSystem
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-			clienteSeleccionado = (ClienteWS.cliente)dgv.CurrentRow.DataBoundItem;
-			this.DialogResult = DialogResult.OK;
-			this.Close();
+            if (dgv.CurrentRow.Index>=0)
+            {
+				clienteSeleccionado = (ClienteWS.cliente)dgv.CurrentRow.DataBoundItem;
+				this.DialogResult = DialogResult.OK;
+				this.Close();
+			}
 		}
     }
 }
