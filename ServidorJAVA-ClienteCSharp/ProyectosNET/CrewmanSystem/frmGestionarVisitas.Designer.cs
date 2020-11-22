@@ -1,33 +1,33 @@
 ﻿namespace CrewmanSystem
 {
-	partial class frmGestionarVisitas
-	{
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+    partial class frmGestionarVisitas
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing && (components != null))
-			{
-				components.Dispose();
-			}
-			base.Dispose(disposing);
-		}
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-		#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -83,6 +83,7 @@
             this.dgvVisitas.EnableHeadersVisualStyles = false;
             this.dgvVisitas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.dgvVisitas.Location = new System.Drawing.Point(0, 0);
+            this.dgvVisitas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvVisitas.MultiSelect = false;
             this.dgvVisitas.Name = "dgvVisitas";
             this.dgvVisitas.ReadOnly = true;
@@ -103,13 +104,12 @@
             this.dgvVisitas.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvVisitas.RowTemplate.Height = 24;
             this.dgvVisitas.Size = new System.Drawing.Size(800, 450);
-            this.dgvVisitas.TabIndex = 1;
-            this.dgvVisitas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dgvVisitas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
+            this.dgvVisitas.TabIndex = 2;
             this.dgvVisitas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvVisitas_CellFormatting);
             // 
             // ID
             // 
+            this.ID.DataPropertyName = "idVisita";
             this.ID.HeaderText = "Id";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
@@ -126,7 +126,7 @@
             // 
             // RAZON_SOCIAL
             // 
-            this.RAZON_SOCIAL.HeaderText = "Razón Social";
+            this.RAZON_SOCIAL.HeaderText = "Razon Social";
             this.RAZON_SOCIAL.MinimumWidth = 6;
             this.RAZON_SOCIAL.Name = "RAZON_SOCIAL";
             this.RAZON_SOCIAL.ReadOnly = true;
@@ -202,9 +202,7 @@
             this.CHECK.MinimumWidth = 6;
             this.CHECK.Name = "CHECK";
             this.CHECK.ReadOnly = true;
-            this.CHECK.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.CHECK.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.CHECK.Width = 47;
+            this.CHECK.Width = 24;
             // 
             // frmGestionarVisitas
             // 
@@ -217,11 +215,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisitas)).EndInit();
             this.ResumeLayout(false);
 
-		}
+        }
 
-		#endregion
+        #endregion
 
-		private System.Windows.Forms.DataGridView dgvVisitas;
+        private System.Windows.Forms.DataGridView dgvVisitas;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
         private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
