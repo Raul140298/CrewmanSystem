@@ -260,6 +260,7 @@ public class PedidoMySQL implements PedidoDAO{
                 cs.setInt("_CANTIDAD", lp.getCantidad());
                 cs.setDouble("_PRECIO_REAL", lp.getProductoXZona().getPrecioReal());
                 resultado = cs.executeUpdate();
+                if(resultado==0)return 0;
                 total += cs.getDouble("_SUBTOTAL");
             }
             sql ="{ call APROBAR_PEDIDO(?,?,?,?)}";

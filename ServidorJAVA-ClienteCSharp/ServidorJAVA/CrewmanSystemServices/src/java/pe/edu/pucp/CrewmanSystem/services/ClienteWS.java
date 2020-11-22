@@ -101,7 +101,7 @@ public class ClienteWS {
             @WebParam(name = "idCartera") int idCartera) {
         ArrayList<Cliente> misClientes = new ArrayList<>();
         try{
-            misClientes = daoCliente.listarSinCartera(razonSocial,grupo,idCartera);
+            misClientes = daoCliente.listarConCartera(razonSocial,grupo,idCartera);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }

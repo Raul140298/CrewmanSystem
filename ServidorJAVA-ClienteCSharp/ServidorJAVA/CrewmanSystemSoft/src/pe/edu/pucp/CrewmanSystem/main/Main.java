@@ -156,21 +156,18 @@ public class Main{
 //        cartera.getListaVisita().add(v2);
 //        daoCartera.actualizar(cartera);
         
-        misVisitas = daoVisita.listar(8);
-        for(Visita v : misVisitas) System.out.println(v.getIdVisita()+" "+v.getCliente().getRuc());
-
-//        Pedido pedido = new Pedido();
-//        pedido.setIdPedido(55);
-//        misLineasDePedido = daoLineaPedido.listar(pedido.getIdPedido());
-//        pedido.setLineasPedidos(misLineasDePedido);
-//        try{
-//            pedido.setFechaEstim(sdf.parse("01-01-2021"));
-//        }catch(Exception e){
-//            System.out.println("MAL");
-//        }
-//        daoPedido.aprobarBorrador(pedido);
-//        Empleado empleado = daoEmpleado.permitirAccesoEmpleado("sofi1", "sofi1");
-//        misClientes=daoCliente.listarConCartera("", "", empleado.getCartera().getIdCartera());
+        Pedido pedido = new Pedido();
+        pedido.setIdPedido(56);
+        misLineasDePedido = daoLineaPedido.listar(pedido.getIdPedido());
+        pedido.setLineasPedidos(misLineasDePedido);
+        try{
+            pedido.setFechaEstim(sdf.parse("01-01-2021"));
+        }catch(Exception e){
+            System.out.println("MAL");
+        }
+        daoPedido.aprobarBorrador(pedido);
+        //Empleado empleado = daoEmpleado.permitirAccesoEmpleado("sofi1", "sofi1");
+        //misClientes=daoCliente.listarConCartera("", "", empleado.getCartera().getIdCartera());
     }
     
     private static void gestionarFamilias(){
