@@ -204,10 +204,12 @@ namespace CrewmanSystem
                 foreach (LineaPedidoWS.lineaPedido lp in lineas)
                 {
                     pedido.lineasPedidos[cont] = new PedidoWS.lineaPedido();
+                    pedido.lineasPedidos[cont].idLineaPedido = lp.idLineaPedido;
                     pedido.lineasPedidos[cont].montoSubTotal = lp.montoSubTotal;
                     pedido.lineasPedidos[cont].cantidad = lp.cantidad;
                     pedido.lineasPedidos[cont].productoXZona = new PedidoWS.productoXZona();
                     pedido.lineasPedidos[cont].productoXZona.idProductoXZona = lp.productoXZona.idProductoXZona;
+                    pedido.lineasPedidos[cont].productoXZona.precioReal = lp.productoXZona.precioReal;
                     cont++;
                 }
                 if (frmVentanaPrincipal.nBtn == 1)
@@ -220,11 +222,11 @@ namespace CrewmanSystem
                             case "ESPERANDO":
                                 break;
                             case "EN_PROCESO":
-                                MessageBox.Show("ENTRA");
                                 pedido.fechaEstim = dtpFechaEstimada.Value;
                                 int resultado= 0;
                                 resultado = daoPedido.aprobarBorrador(pedido);
                                 if(resultado != 0)MessageBox.Show("Aprobado con exito", "Mensaje de resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                else MessageBox.Show("Error en la aprobación del pedido", "Mensaje de resultado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 break;
                         }
                         return;
