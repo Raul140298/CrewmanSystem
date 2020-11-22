@@ -84,15 +84,6 @@ namespace CrewmanSystem
 			else
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>();
 
-			//ZonaWS.zona vacio = new ZonaWS.zona();
-			//vacio.idZona = 0;
-			//vacio.nombre = "Cualquiera";
-			//ZonaWS.zona[] vacioA = { vacio };
-			//ZonaWS.zona[] misZonas = daoZona.listarZonas();
-			//if (misZonas == null || misZonas.Length < 1) cboZona.DataSource = new BindingList<ZonaWS.zona>(vacioA);
-			//else cboZona.DataSource = new BindingList<ZonaWS.zona>(vacioA.Concat(misZonas).ToArray());
-			//cboZona.ValueMember = "idZona";
-			//cboZona.DisplayMember = "nombre";
 			btnSeleccionar.Visible = true;
 			evitarAct = 1;
 			lblZona.Visible = false;
