@@ -32,11 +32,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvVisitas = new System.Windows.Forms.DataGridView();
-            this.Nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FECHA_VISITA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FECHA_REGISTRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FECHA_ULTIMA_COMPRA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIPO_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FECHA_VISITA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CHECK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisitas)).BeginInit();
             this.SuspendLayout();
@@ -61,11 +67,17 @@
             this.dgvVisitas.ColumnHeadersHeight = 30;
             this.dgvVisitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvVisitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nro,
+            this.ID,
             this.RUC,
             this.RAZON_SOCIAL,
-            this.FECHA_VISITA,
+            this.GRUPO,
+            this.FECHA_REGISTRO,
+            this.FECHA_ULTIMA_COMPRA,
+            this.TIPO_CLIENTE,
+            this.ZONA,
+            this.DIRECCION,
             this.ESTADO,
+            this.FECHA_VISITA,
             this.CHECK});
             this.dgvVisitas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvVisitas.EnableHeadersVisualStyles = false;
@@ -94,14 +106,15 @@
             this.dgvVisitas.TabIndex = 1;
             this.dgvVisitas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dgvVisitas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
+            this.dgvVisitas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvVisitas_CellFormatting);
             // 
-            // Nro
+            // ID
             // 
-            this.Nro.HeaderText = "Nro";
-            this.Nro.MinimumWidth = 6;
-            this.Nro.Name = "Nro";
-            this.Nro.ReadOnly = true;
-            this.Nro.Width = 64;
+            this.ID.HeaderText = "Id";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 50;
             // 
             // RUC
             // 
@@ -119,13 +132,53 @@
             this.RAZON_SOCIAL.ReadOnly = true;
             this.RAZON_SOCIAL.Width = 136;
             // 
-            // FECHA_VISITA
+            // GRUPO
             // 
-            this.FECHA_VISITA.HeaderText = "Fecha Visita";
-            this.FECHA_VISITA.MinimumWidth = 6;
-            this.FECHA_VISITA.Name = "FECHA_VISITA";
-            this.FECHA_VISITA.ReadOnly = true;
-            this.FECHA_VISITA.Width = 130;
+            this.GRUPO.HeaderText = "Grupo";
+            this.GRUPO.MinimumWidth = 6;
+            this.GRUPO.Name = "GRUPO";
+            this.GRUPO.ReadOnly = true;
+            this.GRUPO.Width = 83;
+            // 
+            // FECHA_REGISTRO
+            // 
+            this.FECHA_REGISTRO.HeaderText = "Fecha Registro";
+            this.FECHA_REGISTRO.MinimumWidth = 6;
+            this.FECHA_REGISTRO.Name = "FECHA_REGISTRO";
+            this.FECHA_REGISTRO.ReadOnly = true;
+            this.FECHA_REGISTRO.Width = 151;
+            // 
+            // FECHA_ULTIMA_COMPRA
+            // 
+            this.FECHA_ULTIMA_COMPRA.HeaderText = "Fecha Ult. Compra";
+            this.FECHA_ULTIMA_COMPRA.MinimumWidth = 6;
+            this.FECHA_ULTIMA_COMPRA.Name = "FECHA_ULTIMA_COMPRA";
+            this.FECHA_ULTIMA_COMPRA.ReadOnly = true;
+            this.FECHA_ULTIMA_COMPRA.Width = 177;
+            // 
+            // TIPO_CLIENTE
+            // 
+            this.TIPO_CLIENTE.HeaderText = "Tipo Cliente";
+            this.TIPO_CLIENTE.MinimumWidth = 6;
+            this.TIPO_CLIENTE.Name = "TIPO_CLIENTE";
+            this.TIPO_CLIENTE.ReadOnly = true;
+            this.TIPO_CLIENTE.Width = 126;
+            // 
+            // ZONA
+            // 
+            this.ZONA.HeaderText = "Zona";
+            this.ZONA.MinimumWidth = 6;
+            this.ZONA.Name = "ZONA";
+            this.ZONA.ReadOnly = true;
+            this.ZONA.Width = 73;
+            // 
+            // DIRECCION
+            // 
+            this.DIRECCION.HeaderText = "Dirección";
+            this.DIRECCION.MinimumWidth = 6;
+            this.DIRECCION.Name = "DIRECCION";
+            this.DIRECCION.ReadOnly = true;
+            this.DIRECCION.Width = 109;
             // 
             // ESTADO
             // 
@@ -135,9 +188,16 @@
             this.ESTADO.ReadOnly = true;
             this.ESTADO.Width = 89;
             // 
+            // FECHA_VISITA
+            // 
+            this.FECHA_VISITA.HeaderText = "Fecha Visita";
+            this.FECHA_VISITA.MinimumWidth = 6;
+            this.FECHA_VISITA.Name = "FECHA_VISITA";
+            this.FECHA_VISITA.ReadOnly = true;
+            this.FECHA_VISITA.Width = 130;
+            // 
             // CHECK
             // 
-            this.CHECK.DataPropertyName = "Estado";
             this.CHECK.HeaderText = "✓";
             this.CHECK.MinimumWidth = 6;
             this.CHECK.Name = "CHECK";
@@ -162,11 +222,17 @@
 		#endregion
 
 		private System.Windows.Forms.DataGridView dgvVisitas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
         private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_VISITA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ULTIMA_COMPRA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_CLIENTE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
         private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_VISITA;
         private System.Windows.Forms.DataGridViewCheckBoxColumn CHECK;
     }
 }
