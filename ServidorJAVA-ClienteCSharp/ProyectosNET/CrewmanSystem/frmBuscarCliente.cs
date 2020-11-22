@@ -17,6 +17,8 @@ namespace CrewmanSystem
 		public static ClienteWS.cliente clienteSeleccionado;
 		public static DataGridView dgv;
 		public static int evitarAct = 0;
+		private int tipoFrmVendedor;
+		private int idZonaVendedor;
 
 		public frmBuscarCliente()
 		{
@@ -41,7 +43,7 @@ namespace CrewmanSystem
 			cboZona.DisplayMember = "nombre";
 			btnSeleccionar.Visible = false;
 			evitarAct = 0;
-
+			tipoFrmVendedor = 1;
 			#region colores de seleccion
 			dgvClientes.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dgvClientes.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
@@ -57,6 +59,8 @@ namespace CrewmanSystem
 		public frmBuscarCliente(int tipoFrm,int idZona)
 		{
 			//tipoFrm 1 para cboZona habilitado / 0 para cboZona deshabilitado
+			tipoFrmVendedor = tipoFrm;
+			idZonaVendedor = idZona;
 
 			daoCliente = new ClienteWS.ClienteWSClient();
 			daoZona = new ZonaWS.ZonaWSClient();
@@ -66,7 +70,7 @@ namespace CrewmanSystem
 
 			ClienteWS.cliente[] misClientes;
 			if (tipoFrm == 1) misClientes = daoCliente.listarClientes("", "", idZona);
-			else misClientes = daoCliente.obtenerClientesSinCartera(idZona);
+			else misClientes = daoCliente.listarClientesSinCartera("","",idZona);
 
 			if (misClientes != null)
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
@@ -108,8 +112,14 @@ namespace CrewmanSystem
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-			int idZona = ((ZonaWS.zona)cboZona.SelectedItem).idZona;
-			ClienteWS.cliente[] misClientes = daoCliente.listarClientes(txtRazonSocial.Text, txtGrupo.Text, idZona);
+			ClienteWS.cliente[] misClientes;
+			if (tipoFrmVendedor == 1)
+			{
+				int idZona = ((ZonaWS.zona)cboZona.SelectedItem).idZona;
+				misClientes = daoCliente.listarClientes(txtRazonSocial.Text, txtGrupo.Text, idZona);
+			}
+			else misClientes = daoCliente.listarClientesSinCartera(txtRazonSocial.Text, txtGrupo.Text, idZonaVendedor);
+            
 			if (misClientes != null)
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
 			else

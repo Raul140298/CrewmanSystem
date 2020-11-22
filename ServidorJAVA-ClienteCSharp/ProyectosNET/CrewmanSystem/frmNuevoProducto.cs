@@ -79,8 +79,8 @@ namespace CrewmanSystem
                     TextBox textBox = c as TextBox;
                     if (textBox.Text == string.Empty && textBox.Name != "txtId")
                     {
-                        MessageBox.Show("Falta llenar los datos de " + 
-                            textBox.Name.Substring(3));
+                        MessageBox.Show("Falta llenar los datos de " + textBox.Name.Substring(3), 
+                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     else
@@ -90,8 +90,8 @@ namespace CrewmanSystem
                             String txtNombreAux = string.Join("", textBox.Text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
                             if (!txtNombreAux.All(Char.IsLetter))
                             {
-                                MessageBox.Show("Los datos de " +
-                                    textBox.Name.Substring(3) + " solo pueden contener letras");
+                                MessageBox.Show("Los datos de " + textBox.Name.Substring(3) + " solo pueden contener letras",
+                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
                         }
@@ -102,8 +102,8 @@ namespace CrewmanSystem
                             }
                             catch (Exception)
                             {
-                                MessageBox.Show("Los datos de " +
-                                    textBox.Name.Substring(3) + " solo pueden contener dígitos");
+                                MessageBox.Show("Los datos de " + textBox.Name.Substring(3) + " solo pueden contener dígitos",
+                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
                         }
@@ -111,8 +111,8 @@ namespace CrewmanSystem
                         {
                             if (!textBox.Text.All(Char.IsDigit))
                             {
-                                MessageBox.Show("Los datos de " +
-                                    textBox.Name.Substring(3) + " solo pueden contener dígitos");
+                                MessageBox.Show("Los datos de " + textBox.Name.Substring(3) + " solo pueden contener dígitos",
+                                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 return;
                             }
                         }
@@ -123,8 +123,8 @@ namespace CrewmanSystem
                     ComboBox cmbBox = c as ComboBox;
                     if (cmbBox.SelectedIndex == -1)
                     {
-                        MessageBox.Show("Falta llenar los datos de " +
-                            cmbBox.Name.Substring(3));
+                        MessageBox.Show("Falta llenar los datos de " + cmbBox.Name.Substring(3),
+                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                 }

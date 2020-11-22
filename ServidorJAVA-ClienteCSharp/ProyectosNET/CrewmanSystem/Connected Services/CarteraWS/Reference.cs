@@ -24,26 +24,6 @@ namespace CrewmanSystem.CarteraWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/actualizarCarteraRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/actualizarCarteraResponse")]
         System.Threading.Tasks.Task<CrewmanSystem.CarteraWS.actualizarCarteraResponse> actualizarCarteraAsync(CrewmanSystem.CarteraWS.actualizarCarteraRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/eliminarCarteraRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/eliminarCarteraResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.CarteraWS.eliminarCarteraResponse eliminarCartera(CrewmanSystem.CarteraWS.eliminarCarteraRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/eliminarCarteraRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/eliminarCarteraResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.CarteraWS.eliminarCarteraResponse> eliminarCarteraAsync(CrewmanSystem.CarteraWS.eliminarCarteraRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/insertarCarteraRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/insertarCarteraResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.CarteraWS.insertarCarteraResponse insertarCartera(CrewmanSystem.CarteraWS.insertarCarteraRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/insertarCarteraRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/CarteraWS/insertarCarteraResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.CarteraWS.insertarCarteraResponse> insertarCarteraAsync(CrewmanSystem.CarteraWS.insertarCarteraRequest request);
     }
     
     /// <remarks/>
@@ -3404,78 +3384,6 @@ namespace CrewmanSystem.CarteraWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCartera", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarCarteraRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idCartera;
-        
-        public eliminarCarteraRequest() {
-        }
-        
-        public eliminarCarteraRequest(int idCartera) {
-            this.idCartera = idCartera;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCarteraResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarCarteraResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarCarteraResponse() {
-        }
-        
-        public eliminarCarteraResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCartera", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarCarteraRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.CarteraWS.cartera cartera;
-        
-        public insertarCarteraRequest() {
-        }
-        
-        public insertarCarteraRequest(CrewmanSystem.CarteraWS.cartera cartera) {
-            this.cartera = cartera;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCarteraResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarCarteraResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarCarteraResponse() {
-        }
-        
-        public insertarCarteraResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface CarteraWSChannel : CrewmanSystem.CarteraWS.CarteraWS, System.ServiceModel.IClientChannel {
     }
@@ -3524,52 +3432,6 @@ namespace CrewmanSystem.CarteraWS {
             CrewmanSystem.CarteraWS.actualizarCarteraRequest inValue = new CrewmanSystem.CarteraWS.actualizarCarteraRequest();
             inValue.cartera = cartera;
             return ((CrewmanSystem.CarteraWS.CarteraWS)(this)).actualizarCarteraAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.CarteraWS.eliminarCarteraResponse CrewmanSystem.CarteraWS.CarteraWS.eliminarCartera(CrewmanSystem.CarteraWS.eliminarCarteraRequest request) {
-            return base.Channel.eliminarCartera(request);
-        }
-        
-        public int eliminarCartera(int idCartera) {
-            CrewmanSystem.CarteraWS.eliminarCarteraRequest inValue = new CrewmanSystem.CarteraWS.eliminarCarteraRequest();
-            inValue.idCartera = idCartera;
-            CrewmanSystem.CarteraWS.eliminarCarteraResponse retVal = ((CrewmanSystem.CarteraWS.CarteraWS)(this)).eliminarCartera(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.CarteraWS.eliminarCarteraResponse> CrewmanSystem.CarteraWS.CarteraWS.eliminarCarteraAsync(CrewmanSystem.CarteraWS.eliminarCarteraRequest request) {
-            return base.Channel.eliminarCarteraAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.CarteraWS.eliminarCarteraResponse> eliminarCarteraAsync(int idCartera) {
-            CrewmanSystem.CarteraWS.eliminarCarteraRequest inValue = new CrewmanSystem.CarteraWS.eliminarCarteraRequest();
-            inValue.idCartera = idCartera;
-            return ((CrewmanSystem.CarteraWS.CarteraWS)(this)).eliminarCarteraAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.CarteraWS.insertarCarteraResponse CrewmanSystem.CarteraWS.CarteraWS.insertarCartera(CrewmanSystem.CarteraWS.insertarCarteraRequest request) {
-            return base.Channel.insertarCartera(request);
-        }
-        
-        public int insertarCartera(CrewmanSystem.CarteraWS.cartera cartera) {
-            CrewmanSystem.CarteraWS.insertarCarteraRequest inValue = new CrewmanSystem.CarteraWS.insertarCarteraRequest();
-            inValue.cartera = cartera;
-            CrewmanSystem.CarteraWS.insertarCarteraResponse retVal = ((CrewmanSystem.CarteraWS.CarteraWS)(this)).insertarCartera(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.CarteraWS.insertarCarteraResponse> CrewmanSystem.CarteraWS.CarteraWS.insertarCarteraAsync(CrewmanSystem.CarteraWS.insertarCarteraRequest request) {
-            return base.Channel.insertarCarteraAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.CarteraWS.insertarCarteraResponse> insertarCarteraAsync(CrewmanSystem.CarteraWS.cartera cartera) {
-            CrewmanSystem.CarteraWS.insertarCarteraRequest inValue = new CrewmanSystem.CarteraWS.insertarCarteraRequest();
-            inValue.cartera = cartera;
-            return ((CrewmanSystem.CarteraWS.CarteraWS)(this)).insertarCarteraAsync(inValue);
         }
     }
 }

@@ -8,14 +8,12 @@
   <xs:element name="insertarClienteResponse" type="tns:insertarClienteResponse" />
   <xs:element name="listarClientes" type="tns:listarClientes" />
   <xs:element name="listarClientesResponse" type="tns:listarClientesResponse" />
+  <xs:element name="listarClientesSinCartera" type="tns:listarClientesSinCartera" />
+  <xs:element name="listarClientesSinCarteraResponse" type="tns:listarClientesSinCarteraResponse" />
   <xs:element name="mostrarCliente" type="tns:mostrarCliente" />
   <xs:element name="mostrarClienteResponse" type="tns:mostrarClienteResponse" />
   <xs:element name="obtenerCliente" type="tns:obtenerCliente" />
   <xs:element name="obtenerClienteResponse" type="tns:obtenerClienteResponse" />
-  <xs:element name="obtenerClientesPorCartera" type="tns:obtenerClientesPorCartera" />
-  <xs:element name="obtenerClientesPorCarteraResponse" type="tns:obtenerClientesPorCarteraResponse" />
-  <xs:element name="obtenerClientesSinCartera" type="tns:obtenerClientesSinCartera" />
-  <xs:element name="obtenerClientesSinCarteraResponse" type="tns:obtenerClientesSinCarteraResponse" />
   <xs:complexType name="insertarCliente">
     <xs:sequence>
       <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
@@ -312,14 +310,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="obtenerClientesSinCartera">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="obtenerClientesSinCarteraResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="obtenerCliente">
     <xs:sequence>
       <xs:element name="idCliente" type="xs:int" />
@@ -338,6 +328,18 @@
   <xs:complexType name="actualizarClienteResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarClientesSinCartera">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
+      <xs:element minOccurs="0" name="grupo" type="xs:string" />
+      <xs:element name="idZona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarClientesSinCarteraResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarClientes">
@@ -360,18 +362,6 @@
   <xs:complexType name="mostrarClienteResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerClientesPorCartera">
-    <xs:sequence>
-      <xs:element name="idCartera" type="xs:int" />
-      <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
-      <xs:element minOccurs="0" name="grupo" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerClientesPorCarteraResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarCliente">

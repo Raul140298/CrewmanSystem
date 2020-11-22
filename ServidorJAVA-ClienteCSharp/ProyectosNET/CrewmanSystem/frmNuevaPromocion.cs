@@ -243,10 +243,14 @@ namespace CrewmanSystem
             {
                 return;
             }
-            int indice = dgvPromocionXProducto.CurrentRow.Index;
-            dgvPromocionXProducto.DataSource = new BindingList<PromocionXProductoWS.promocionXProducto>();
-            misPromocionXProducto.RemoveAt(indice);
-            dgvPromocionXProducto.DataSource = misPromocionXProducto;
+            frmConfirmarEliminar formEliminar = new frmConfirmarEliminar();
+            if (formEliminar.ShowDialog() == DialogResult.OK)
+            {
+                int indice = dgvPromocionXProducto.CurrentRow.Index;
+                dgvPromocionXProducto.DataSource = new BindingList<PromocionXProductoWS.promocionXProducto>();
+                misPromocionXProducto.RemoveAt(indice);
+                dgvPromocionXProducto.DataSource = misPromocionXProducto;
+            }
         }
 
         private void cargarTabla()

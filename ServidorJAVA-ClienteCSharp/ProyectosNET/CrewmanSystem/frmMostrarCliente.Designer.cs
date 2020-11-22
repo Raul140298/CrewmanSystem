@@ -51,6 +51,11 @@
             this.txtGrupo = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtCargo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.rbFemenino = new System.Windows.Forms.RadioButton();
+            this.rbMasculino = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -67,11 +72,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtIdContacto = new System.Windows.Forms.TextBox();
-            this.txtCargo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.rbFemenino = new System.Windows.Forms.RadioButton();
-            this.rbMasculino = new System.Windows.Forms.RadioButton();
             this.contextMenuStrip2.SuspendLayout();
             this.tbcCliente.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -316,6 +316,61 @@
             this.panel3.Size = new System.Drawing.Size(553, 321);
             this.panel3.TabIndex = 3;
             // 
+            // txtCargo
+            // 
+            this.txtCargo.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtCargo.Enabled = false;
+            this.txtCargo.Location = new System.Drawing.Point(167, 203);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(347, 22);
+            this.txtCargo.TabIndex = 142;
+            // 
+            // label1
+            // 
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Location = new System.Drawing.Point(66, 203);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 22);
+            this.label1.TabIndex = 141;
+            this.label1.Text = "Cargo :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Location = new System.Drawing.Point(52, 274);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 22);
+            this.label2.TabIndex = 140;
+            this.label2.Text = "Género :";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // rbFemenino
+            // 
+            this.rbFemenino.AutoSize = true;
+            this.rbFemenino.Enabled = false;
+            this.rbFemenino.Location = new System.Drawing.Point(165, 275);
+            this.rbFemenino.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbFemenino.Name = "rbFemenino";
+            this.rbFemenino.Size = new System.Drawing.Size(37, 21);
+            this.rbFemenino.TabIndex = 139;
+            this.rbFemenino.TabStop = true;
+            this.rbFemenino.Text = "F";
+            this.rbFemenino.UseVisualStyleBackColor = true;
+            // 
+            // rbMasculino
+            // 
+            this.rbMasculino.AutoSize = true;
+            this.rbMasculino.Enabled = false;
+            this.rbMasculino.Location = new System.Drawing.Point(220, 275);
+            this.rbMasculino.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbMasculino.Name = "rbMasculino";
+            this.rbMasculino.Size = new System.Drawing.Size(40, 21);
+            this.rbMasculino.TabIndex = 138;
+            this.rbMasculino.TabStop = true;
+            this.rbMasculino.Text = "M";
+            this.rbMasculino.UseVisualStyleBackColor = true;
+            // 
             // label9
             // 
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -467,61 +522,6 @@
             this.txtIdContacto.Name = "txtIdContacto";
             this.txtIdContacto.Size = new System.Drawing.Size(129, 22);
             this.txtIdContacto.TabIndex = 84;
-            // 
-            // txtCargo
-            // 
-            this.txtCargo.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtCargo.Enabled = false;
-            this.txtCargo.Location = new System.Drawing.Point(167, 203);
-            this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(347, 22);
-            this.txtCargo.TabIndex = 142;
-            // 
-            // label1
-            // 
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Location = new System.Drawing.Point(66, 203);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 22);
-            this.label1.TabIndex = 141;
-            this.label1.Text = "Cargo :";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label2
-            // 
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Location = new System.Drawing.Point(52, 274);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 22);
-            this.label2.TabIndex = 140;
-            this.label2.Text = "Género :";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // rbFemenino
-            // 
-            this.rbFemenino.AutoSize = true;
-            this.rbFemenino.Enabled = false;
-            this.rbFemenino.Location = new System.Drawing.Point(165, 275);
-            this.rbFemenino.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbFemenino.Name = "rbFemenino";
-            this.rbFemenino.Size = new System.Drawing.Size(37, 21);
-            this.rbFemenino.TabIndex = 139;
-            this.rbFemenino.TabStop = true;
-            this.rbFemenino.Text = "F";
-            this.rbFemenino.UseVisualStyleBackColor = true;
-            // 
-            // rbMasculino
-            // 
-            this.rbMasculino.AutoSize = true;
-            this.rbMasculino.Enabled = false;
-            this.rbMasculino.Location = new System.Drawing.Point(220, 275);
-            this.rbMasculino.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rbMasculino.Name = "rbMasculino";
-            this.rbMasculino.Size = new System.Drawing.Size(40, 21);
-            this.rbMasculino.TabIndex = 138;
-            this.rbMasculino.TabStop = true;
-            this.rbMasculino.Text = "M";
-            this.rbMasculino.UseVisualStyleBackColor = true;
             // 
             // frmMostrarCliente
             // 

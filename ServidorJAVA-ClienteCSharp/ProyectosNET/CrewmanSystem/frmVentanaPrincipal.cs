@@ -560,6 +560,9 @@ namespace CrewmanSystem
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaCartera());
 					if(boton==3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarCartera());
 					break;
+				case "frmBuscarCartera":
+					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaCartera());
+					break;
 				case "frmGestionarClientes":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoCliente());
 					if (boton == 2) frmGestionarClientes.eliminar();

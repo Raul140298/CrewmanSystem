@@ -103,5 +103,21 @@ namespace CrewmanSystem
 				dataGridView1.DataSource = misEmpleados;
 			}
 		}
-	}
+
+        private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+			//Preguntar al profe
+			if (e.StateChanged != DataGridViewElementStates.Selected)
+			{
+				//frmVentanaPrincipal.act.Enabled = false;
+				//frmVentanaPrincipal.elim.Enabled = false;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+			}
+		}
+    }
 }
