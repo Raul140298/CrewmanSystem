@@ -74,9 +74,9 @@ namespace CrewmanSystem
 
 			ClienteWS.cliente[] misClientes = null;
 			//NUEVO SP DE JOSEPH - borrar 78 Y descomnetar 77 128
-			if (tipoFrm == 1) misClientes = daoCliente.listarClientesSinCartera("", "", 0);
-			else if (tipoFrm == 0) misClientes = daoCliente.listarClientesConCartera("", "", Program.empleado.cartera.idCartera);
-			
+			if (tipoFrm == 1) misClientes = daoCliente.listarClientesConCartera("", "", Program.empleado.cartera.idCartera); 
+			else if (tipoFrm == 0) misClientes = daoCliente.listarClientesSinCartera("", "", 0);
+
 
 			if (misClientes != null)
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
