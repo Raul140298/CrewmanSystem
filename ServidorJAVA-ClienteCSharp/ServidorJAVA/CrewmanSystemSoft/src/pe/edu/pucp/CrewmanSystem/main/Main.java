@@ -166,8 +166,8 @@ public class Main{
 //            System.out.println("MAL");
 //        }
 //        daoPedido.aprobarBorrador(pedido);
-        //Empleado empleado = daoEmpleado.permitirAccesoEmpleado("sofi1", "sofi1");
-        //misClientes=daoCliente.listarConCartera("", "", empleado.getCartera().getIdCartera());
+        Empleado empleado = daoEmpleado.permitirAccesoEmpleado("sofi1", "sofi1");
+        misClientes=daoCliente.listarConCartera("", "", empleado.getCartera().getIdCartera());
     }
     
     private static void gestionarFamilias(){
