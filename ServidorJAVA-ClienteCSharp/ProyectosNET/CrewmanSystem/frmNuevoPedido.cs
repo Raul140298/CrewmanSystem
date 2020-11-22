@@ -200,7 +200,6 @@ namespace CrewmanSystem
                 pedido.empleado.idEmpleado = Program.empleado.idEmpleado;
                 pedido.direccionEntrega = txtDireccion.Text;
                 pedido.montoTotal = montoTotal;
-                pedido.tipoPedido = pedidoSeleccionado.tipoPedido;
                 //agregar lineas
                 int numLineas = lineas.Count;
                 pedido.lineasPedidos = new PedidoWS.lineaPedido[numLineas];
@@ -218,6 +217,7 @@ namespace CrewmanSystem
                 }
                 if (frmVentanaPrincipal.nBtn == 1)
                 {
+                    pedido.tipoPedido = pedidoSeleccionado.tipoPedido;
                     pedido.idPedido = pedidoSeleccionado.idPedido;
                     if (Program.empleado.cargo.idCargo == 2)
                     {
@@ -227,6 +227,18 @@ namespace CrewmanSystem
                                 break;
                             case "EN_PROCESO":
                                 pedido.fechaEstim = dtpFechaEstimada.Value;
+                                LineaPedidoWS.lineaPedido[] aux = daoLinea.listarLineaPedidos(pedido.idPedido);
+                                int con = 0;
+                                foreach (LineaPedidoWS.lineaPedido lp in aux)
+                                {
+                                    pedido.lineasPedidos[con] = new PedidoWS.lineaPedido();
+                                    pedido.lineasPedidos[con].idLineaPedido = lp.idLineaPedido;
+                                    pedido.lineasPedidos[con].productoXZona = new PedidoWS.productoXZona();
+                                    pedido.lineasPedidos[con].productoXZona.idProductoXZona = lp.productoXZona.idProductoXZona;
+                                    pedido.lineasPedidos[con].cantidad = lp.cantidad;
+                                    pedido.lineasPedidos[con].productoXZona.precioReal = lp.productoXZona.precioReal;
+                                    con++;
+                                }
                                 int resultado= 0;
                                 resultado = daoPedido.aprobarBorrador(pedido);
                                 if(resultado != 0)MessageBox.Show("Aprobado con exito", "Mensaje de resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
