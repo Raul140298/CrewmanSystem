@@ -9,6 +9,7 @@ import pe.edu.pucp.CrewmanSystem.config.DBManager;
 import pe.edu.pucp.CrewmanSystem.dao.VisitaDAO;
 import pe.edu.pucp.CrewmanSystem.model.Cliente;
 import pe.edu.pucp.CrewmanSystem.model.Visita;
+import pe.edu.pucp.CrewmanSystem.model.Zona;
 
 public class VisitaMySQL implements VisitaDAO{
     Connection con;
@@ -58,6 +59,7 @@ public class VisitaMySQL implements VisitaDAO{
             while(rs.next()){
                 Visita visita = new Visita();
                 Cliente cliente = new Cliente();
+                Zona zona = new Zona();
                 
                 visita.setIdVisita(rs.getInt("ID_VISITA"));
                 
@@ -71,11 +73,17 @@ public class VisitaMySQL implements VisitaDAO{
                 cliente.setRuc(rs.getString("RUC"));
                 cliente.setRazonSocial(rs.getString("RAZON_SOCIAL"));
                 cliente.setGrupo(rs.getString("GRUPO"));
+                cliente.setFechaRegistro(rs.getDate("FECHA_REGISTRO"));
+                cliente.setFechaUltimaCompra(rs.getDate("FECHA_ULTIMA_COMPRA"));
                 cliente.setTipoEmpresa(rs.getString("TIPOCLIENTE"));
                 cliente.setDireccion(rs.getString("DIRECCION"));
+                
+                zona.setIdZona(rs.getInt("ID_ZONA"));
+                zona.setNombre(rs.getString("ZONA"));
+                cliente.setZona(zona);
                 visita.setCliente(cliente);
                 
-                visita.setFechaRegistro(rs.getDate("FECHA_REGISTRO"));
+                visita.setFechaRegistro(rs.getDate("FECHA_VISITA"));
                 visita.setEstado(rs.getBoolean("ESTADO"));
                 visitas.add(visita);
             }

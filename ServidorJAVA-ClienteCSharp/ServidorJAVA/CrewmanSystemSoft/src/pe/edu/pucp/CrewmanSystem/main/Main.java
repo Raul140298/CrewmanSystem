@@ -131,8 +131,30 @@ public class Main{
 //            System.out.println("MAL");
 //        }
 
-        misClientes=daoCliente.listarSinCartera("", "", 125);
-        for(Cliente c : misClientes) System.out.println(c.getIdCliente()+" "+c.getRuc());
+//        misClientes=daoCliente.listarSinCartera("", "", 125);
+//        for(Cliente c : misClientes) System.out.println(c.getIdCliente()+" "+c.getRuc());
+//        
+//        misVisitas=daoVisita.listar(6);
+//        for(Visita v : misVisitas) System.out.println(v.getCliente().getRazonSocial()+" "+v.getFechaRegistro()+""+v.isEstado());
+
+        Cartera cartera = new Cartera();
+        cartera.setIdCartera(8);
+        Empleado empleado = new Empleado();
+        empleado.setIdEmpleado(22);
+        cartera.setEmpleado(empleado);
+        
+        Visita v1 = new Visita();
+        Cliente c1 = new Cliente();
+        c1.setIdCliente(24);
+        v1.setCliente(c1);
+        cartera.getListaVisita().add(v1);
+        
+        Visita v2 = new Visita();
+        Cliente c2 = new Cliente();
+        c2.setIdCliente(28);
+        v2.setCliente(c2);
+        cartera.getListaVisita().add(v2);
+        daoCartera.actualizar(cartera);
         
 //        Pedido pedido = new Pedido();
 //        try{

@@ -26,8 +26,7 @@ public class CarteraMySQL implements CarteraDAO{
             String sql = "{ call ELIMINAR_CARTERA (?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_CARTERA", cartera.getIdCartera());
-            resultado = cs.executeUpdate();
-            if(resultado==0) return 0;
+            cs.executeUpdate();
                         
             for(Visita v : cartera.getListaVisita()){
                 sql ="{ call INSERTAR_CLIENTECARTERA(?,?,?)}";
@@ -37,6 +36,7 @@ public class CarteraMySQL implements CarteraDAO{
                 cs.setInt("_ID_EMPLEADO", cartera.getEmpleado().getIdEmpleado());
                 cs.executeUpdate();
             }
+            resultado = 1;
             con.commit();
         }catch(Exception ex){
             try{
