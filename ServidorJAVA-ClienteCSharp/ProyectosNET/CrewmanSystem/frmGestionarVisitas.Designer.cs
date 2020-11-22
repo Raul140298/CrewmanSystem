@@ -105,11 +105,11 @@
             this.dgvVisitas.RowTemplate.Height = 24;
             this.dgvVisitas.Size = new System.Drawing.Size(800, 450);
             this.dgvVisitas.TabIndex = 2;
+            this.dgvVisitas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVisitas_CellDoubleClick);
             this.dgvVisitas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvVisitas_CellFormatting);
             // 
             // ID
             // 
-            this.ID.DataPropertyName = "idVisita";
             this.ID.HeaderText = "Id";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";

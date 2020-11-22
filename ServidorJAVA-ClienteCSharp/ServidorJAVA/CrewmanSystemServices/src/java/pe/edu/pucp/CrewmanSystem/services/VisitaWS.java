@@ -37,4 +37,15 @@ public class VisitaWS {
         }
         return misVisitas;
     }  
+    
+    @WebMethod(operationName = "registrarVisita")
+    public int registrarVisita(@WebParam(name = "idVisita") int idVisita){
+        int resultado = 0;
+        try{
+            resultado = daoVisita.registrar(idVisita);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+    }
 }
