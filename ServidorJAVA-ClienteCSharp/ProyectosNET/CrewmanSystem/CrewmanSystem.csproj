@@ -687,6 +687,9 @@
     <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.insertarClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.listarClientesConCarteraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.listarClientesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

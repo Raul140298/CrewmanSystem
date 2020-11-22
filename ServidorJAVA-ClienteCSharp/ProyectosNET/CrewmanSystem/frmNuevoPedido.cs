@@ -75,7 +75,7 @@ namespace CrewmanSystem
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
-            frmBuscarCliente formBusquedaCliente = new frmBuscarCliente(1,0);
+            frmBuscarCliente formBusquedaCliente = new frmBuscarCliente(0,0);
             if (formBusquedaCliente.ShowDialog() == DialogResult.OK)
             {
                 clienteSeleccionado = frmBuscarCliente.clienteSeleccionado;
@@ -126,6 +126,10 @@ namespace CrewmanSystem
             catch (Exception)
             {
                 MessageBox.Show("La cantidad ingresada no es valida", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (Convert.ToInt32(txtCantidad.Text)<=0)
+            {
                 return;
             }
             foreach (LineaPedidoWS.lineaPedido lp in lineas)
