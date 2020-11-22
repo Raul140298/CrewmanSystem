@@ -14,16 +14,18 @@ namespace CrewmanSystem
 	{
 		private static ClienteWS.ClienteWSClient daoCliente;
 		private static ZonaWS.ZonaWSClient daoZona;
+		private static VisitaWS.VisitaWSClient daoVisita;
 		public static ClienteWS.cliente clienteSeleccionado;
 		public static DataGridView dgv;
 		public static int evitarAct = 0;
 		private int tipoFrmVendedor;
-		private int idZonaVendedor;
+		private int idBusquedaVendedor;
 
 		public frmBuscarCliente()
 		{
 			daoCliente = new ClienteWS.ClienteWSClient();
 			daoZona = new ZonaWS.ZonaWSClient();
+			daoVisita = new VisitaWS.VisitaWSClient();
 			InitializeComponent();
 			dgv = dgvClientes;
 			dgvClientes.AutoGenerateColumns = false;
@@ -43,7 +45,8 @@ namespace CrewmanSystem
 			cboZona.DisplayMember = "nombre";
 			btnSeleccionar.Visible = false;
 			evitarAct = 0;
-			tipoFrmVendedor = 1;
+			//tipoFrm 2 para cboZona habilitado idBusqueda = idZona	listarClientes
+			tipoFrmVendedor = 2;
 			#region colores de seleccion
 			dgvClientes.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dgvClientes.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
@@ -56,11 +59,12 @@ namespace CrewmanSystem
 			#endregion
 		}
 
-		public frmBuscarCliente(int tipoFrm,int idZona)
+		public frmBuscarCliente(int tipoFrm,int idBusqueda)
 		{
-			//tipoFrm 1 para cboZona habilitado / 0 para cboZona deshabilitado
+			//tipoFrm 1 para cboZona deshabilitado idBusqueda = idCartera	listarVisitas
+			//tipoFrm 0 para cboZona deshabilitado idBusqueda = idZona	listarClientesSinCartera
 			tipoFrmVendedor = tipoFrm;
-			idZonaVendedor = idZona;
+			idBusquedaVendedor = idBusqueda;
 
 			daoCliente = new ClienteWS.ClienteWSClient();
 			daoZona = new ZonaWS.ZonaWSClient();
@@ -68,30 +72,31 @@ namespace CrewmanSystem
 			dgv = dgvClientes;
 			dgvClientes.AutoGenerateColumns = false;
 
-			ClienteWS.cliente[] misClientes;
-			if (tipoFrm == 1) misClientes = daoCliente.listarClientes("", "", idZona);
-			else misClientes = daoCliente.listarClientesSinCartera("","",idZona);
+			ClienteWS.cliente[] misClientes = null;
+			//NUEVO SP DE JOSEPH - borrar 78 Y descomnetar 77 128
+			//if (tipoFrm == 1) misClientes = daoVisita.listarVisitas("", "", idBusquedaVendedor);
+			if (tipoFrm == 1) misClientes = daoCliente.listarClientes("", "", idBusquedaVendedor);
+			else if (tipoFrm == 0) misClientes = daoCliente.listarClientesSinCartera("", "", idBusquedaVendedor);
+			
 
 			if (misClientes != null)
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
 			else
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>();
-			ZonaWS.zona vacio = new ZonaWS.zona();
-			vacio.idZona = 0;
-			vacio.nombre = "Cualquiera";
-			ZonaWS.zona[] vacioA = { vacio };
-			ZonaWS.zona[] misZonas = daoZona.listarZonas();
-			if (misZonas == null || misZonas.Length < 1) cboZona.DataSource = new BindingList<ZonaWS.zona>(vacioA);
-			else cboZona.DataSource = new BindingList<ZonaWS.zona>(vacioA.Concat(misZonas).ToArray());
-			cboZona.ValueMember = "idZona";
-			cboZona.DisplayMember = "nombre";
+
+			//ZonaWS.zona vacio = new ZonaWS.zona();
+			//vacio.idZona = 0;
+			//vacio.nombre = "Cualquiera";
+			//ZonaWS.zona[] vacioA = { vacio };
+			//ZonaWS.zona[] misZonas = daoZona.listarZonas();
+			//if (misZonas == null || misZonas.Length < 1) cboZona.DataSource = new BindingList<ZonaWS.zona>(vacioA);
+			//else cboZona.DataSource = new BindingList<ZonaWS.zona>(vacioA.Concat(misZonas).ToArray());
+			//cboZona.ValueMember = "idZona";
+			//cboZona.DisplayMember = "nombre";
 			btnSeleccionar.Visible = true;
 			evitarAct = 1;
-            if (tipoFrm == 0)
-            {
-				lblZona.Visible = false;
-				cboZona.Visible = false;
-            }
+			lblZona.Visible = false;
+			cboZona.Visible = false;
 			#region colores de seleccion
 			dgvClientes.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dgvClientes.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
@@ -112,14 +117,16 @@ namespace CrewmanSystem
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-			ClienteWS.cliente[] misClientes;
-			if (tipoFrmVendedor == 1)
+			ClienteWS.cliente[] misClientes = null;
+			if (tipoFrmVendedor == 2)
 			{
 				int idZona = ((ZonaWS.zona)cboZona.SelectedItem).idZona;
 				misClientes = daoCliente.listarClientes(txtRazonSocial.Text, txtGrupo.Text, idZona);
 			}
-			else misClientes = daoCliente.listarClientesSinCartera(txtRazonSocial.Text, txtGrupo.Text, idZonaVendedor);
-            
+			else if (tipoFrmVendedor == 0) misClientes = daoCliente.listarClientesSinCartera(txtRazonSocial.Text, txtGrupo.Text, idBusquedaVendedor);
+			//DESCOMENTAR
+			//else if (tipoFrmVendedor == 1) misClientes = daoVisita.listarVisitas(txtRazonSocial.Text, txtGrupo.Text,idBusquedaVendedor);
+
 			if (misClientes != null)
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
 			else
