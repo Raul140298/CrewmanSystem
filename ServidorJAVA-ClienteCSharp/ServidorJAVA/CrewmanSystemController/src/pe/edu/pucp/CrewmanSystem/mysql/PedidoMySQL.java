@@ -245,21 +245,30 @@ public class PedidoMySQL implements PedidoDAO{
     @Override
     public int aprobarBorrador(Pedido pedido) {
         int resultado = 0;
-        boolean reserva = false;
+        double total = 0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            String sql ="{ call APROBAR_BORRADOR(?,?,?,?)}";
+            con.setAutoCommit(false);
+            for(LineaPedido lp : pedido.getLineasPedidos()){
+                String sql ="{ call APROBAR_LINEA(?,?,?,?,?)}";
+                cs = con.prepareCall(sql);
+                cs.registerOutParameter("_SUBTOTAL", java.sql.Types.DOUBLE);
+                cs.setInt("_ID_LINEA_PEDIDO", lp.getIdLineaPedido());
+                cs.setInt("_ID_PRODUCTOXZONA", lp.getProductoXZona().getIdProductoXZona());
+                cs.setInt("_CANTIDAD", lp.getCantidad());
+                cs.setDouble("_PRECIO_REAL", lp.getProductoXZona().getPrecioReal());
+                resultado = cs.executeUpdate();
+                total += cs.getDouble("_SUBTOTAL");
+            }
+            String sql ="{ call APROBAR_PEDIDO(?,?,?,?)}";
             cs = con.prepareCall(sql);
-            cs.registerOutParameter("_ERROR", java.sql.Types.BOOLEAN);
             cs.setInt("_ID_PEDIDO", pedido.getIdPedido());
             cs.setDate("_FECHA_ESTIMADA", new java.sql.Date(pedido.getFechaEstim().getTime()));
             cs.setDate("_FECHA_APROBADO", new java.sql.Date(new Date().getTime()));
+            cs.setDouble("_TOTAL", total);
             resultado = cs.executeUpdate();
-            reserva = cs.getBoolean("_ERROR");
-            if(reserva){
-                return 0;
-            }
+            con.commit();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{

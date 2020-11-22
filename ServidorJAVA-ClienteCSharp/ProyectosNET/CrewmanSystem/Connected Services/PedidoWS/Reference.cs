@@ -26,34 +26,14 @@ namespace CrewmanSystem.PedidoWS {
         System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.culminarPedidoResponse> culminarPedidoAsync(CrewmanSystem.PedidoWS.culminarPedidoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/eliminarPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/eliminarPedidoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/aprobarBorradorRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/aprobarBorradorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.PedidoWS.eliminarPedidoResponse eliminarPedido(CrewmanSystem.PedidoWS.eliminarPedidoRequest request);
+        CrewmanSystem.PedidoWS.aprobarBorradorResponse aprobarBorrador(CrewmanSystem.PedidoWS.aprobarBorradorRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/eliminarPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/eliminarPedidoResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.eliminarPedidoResponse> eliminarPedidoAsync(CrewmanSystem.PedidoWS.eliminarPedidoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarPedidoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.PedidoWS.insertarPedidoResponse insertarPedido(CrewmanSystem.PedidoWS.insertarPedidoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarPedidoResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.insertarPedidoResponse> insertarPedidoAsync(CrewmanSystem.PedidoWS.insertarPedidoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/obtenerPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/obtenerPedidoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.PedidoWS.obtenerPedidoResponse obtenerPedido(CrewmanSystem.PedidoWS.obtenerPedidoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/obtenerPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/obtenerPedidoResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.obtenerPedidoResponse> obtenerPedidoAsync(CrewmanSystem.PedidoWS.obtenerPedidoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/aprobarBorradorRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/aprobarBorradorResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.aprobarBorradorResponse> aprobarBorradorAsync(CrewmanSystem.PedidoWS.aprobarBorradorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/generarReporteRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/generarReporteResponse")]
@@ -74,34 +54,25 @@ namespace CrewmanSystem.PedidoWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/anularRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/anularResponse")]
         System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.anularResponse> anularAsync(CrewmanSystem.PedidoWS.anularRequest request);
         
-        // CODEGEN: El parámetro 'pedido' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/mostrarPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/mostrarPedidoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        CrewmanSystem.PedidoWS.mostrarPedidoResponse mostrarPedido(CrewmanSystem.PedidoWS.mostrarPedidoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/mostrarPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/mostrarPedidoResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.mostrarPedidoResponse> mostrarPedidoAsync(CrewmanSystem.PedidoWS.mostrarPedidoRequest request);
-        
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarTotalRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarTotalResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/liberarStockRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/liberarStockResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.PedidoWS.insertarTotalResponse insertarTotal(CrewmanSystem.PedidoWS.insertarTotalRequest request);
+        CrewmanSystem.PedidoWS.liberarStockResponse liberarStock(CrewmanSystem.PedidoWS.liberarStockRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarTotalRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarTotalResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.insertarTotalResponse> insertarTotalAsync(CrewmanSystem.PedidoWS.insertarTotalRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/liberarStockRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/liberarStockResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.liberarStockResponse> liberarStockAsync(CrewmanSystem.PedidoWS.liberarStockRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/actualizarPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/actualizarPedidoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/obtenerPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/obtenerPedidoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.PedidoWS.actualizarPedidoResponse actualizarPedido(CrewmanSystem.PedidoWS.actualizarPedidoRequest request);
+        CrewmanSystem.PedidoWS.obtenerPedidoResponse obtenerPedido(CrewmanSystem.PedidoWS.obtenerPedidoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/actualizarPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/actualizarPedidoResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.actualizarPedidoResponse> actualizarPedidoAsync(CrewmanSystem.PedidoWS.actualizarPedidoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/obtenerPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/obtenerPedidoResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.obtenerPedidoResponse> obtenerPedidoAsync(CrewmanSystem.PedidoWS.obtenerPedidoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/listarPedidosRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/listarPedidosResponse")]
@@ -114,24 +85,53 @@ namespace CrewmanSystem.PedidoWS {
         System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.listarPedidosResponse> listarPedidosAsync(CrewmanSystem.PedidoWS.listarPedidosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/liberarStockRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/liberarStockResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarPedidoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.PedidoWS.liberarStockResponse liberarStock(CrewmanSystem.PedidoWS.liberarStockRequest request);
+        CrewmanSystem.PedidoWS.insertarPedidoResponse insertarPedido(CrewmanSystem.PedidoWS.insertarPedidoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/liberarStockRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/liberarStockResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.liberarStockResponse> liberarStockAsync(CrewmanSystem.PedidoWS.liberarStockRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarPedidoResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.insertarPedidoResponse> insertarPedidoAsync(CrewmanSystem.PedidoWS.insertarPedidoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/aprobarBorradorRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/aprobarBorradorResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/actualizarPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/actualizarPedidoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.PedidoWS.aprobarBorradorResponse aprobarBorrador(CrewmanSystem.PedidoWS.aprobarBorradorRequest request);
+        CrewmanSystem.PedidoWS.actualizarPedidoResponse actualizarPedido(CrewmanSystem.PedidoWS.actualizarPedidoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/aprobarBorradorRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/aprobarBorradorResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.aprobarBorradorResponse> aprobarBorradorAsync(CrewmanSystem.PedidoWS.aprobarBorradorRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/actualizarPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/actualizarPedidoResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.actualizarPedidoResponse> actualizarPedidoAsync(CrewmanSystem.PedidoWS.actualizarPedidoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarTotalRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarTotalResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.PedidoWS.insertarTotalResponse insertarTotal(CrewmanSystem.PedidoWS.insertarTotalRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarTotalRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/insertarTotalResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.insertarTotalResponse> insertarTotalAsync(CrewmanSystem.PedidoWS.insertarTotalRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/eliminarPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/eliminarPedidoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.PedidoWS.eliminarPedidoResponse eliminarPedido(CrewmanSystem.PedidoWS.eliminarPedidoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/eliminarPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/eliminarPedidoResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.eliminarPedidoResponse> eliminarPedidoAsync(CrewmanSystem.PedidoWS.eliminarPedidoRequest request);
+        
+        // CODEGEN: El parámetro 'pedido' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/mostrarPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/mostrarPedidoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        CrewmanSystem.PedidoWS.mostrarPedidoResponse mostrarPedido(CrewmanSystem.PedidoWS.mostrarPedidoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/mostrarPedidoRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/PedidoWS/mostrarPedidoResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.mostrarPedidoResponse> mostrarPedidoAsync(CrewmanSystem.PedidoWS.mostrarPedidoRequest request);
     }
     
     /// <remarks/>
@@ -3495,89 +3495,17 @@ namespace CrewmanSystem.PedidoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPedido", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarPedidoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPedido;
-        
-        public eliminarPedidoRequest() {
-        }
-        
-        public eliminarPedidoRequest(int idPedido) {
-            this.idPedido = idPedido;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPedidoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarPedidoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarPedidoResponse() {
-        }
-        
-        public eliminarPedidoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPedido", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarPedidoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.PedidoWS.pedido lineaPedido;
-        
-        public insertarPedidoRequest() {
-        }
-        
-        public insertarPedidoRequest(CrewmanSystem.PedidoWS.pedido lineaPedido) {
-            this.lineaPedido = lineaPedido;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPedidoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarPedidoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarPedidoResponse() {
-        }
-        
-        public insertarPedidoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPedido", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerPedidoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="aprobarBorrador", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class aprobarBorradorRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public CrewmanSystem.PedidoWS.pedido pedido;
         
-        public obtenerPedidoRequest() {
+        public aprobarBorradorRequest() {
         }
         
-        public obtenerPedidoRequest(CrewmanSystem.PedidoWS.pedido pedido) {
+        public aprobarBorradorRequest(CrewmanSystem.PedidoWS.pedido pedido) {
             this.pedido = pedido;
         }
     }
@@ -3585,17 +3513,17 @@ namespace CrewmanSystem.PedidoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPedidoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerPedidoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="aprobarBorradorResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class aprobarBorradorResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public obtenerPedidoResponse() {
+        public aprobarBorradorResponse() {
         }
         
-        public obtenerPedidoResponse(int @return) {
+        public aprobarBorradorResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -3667,17 +3595,17 @@ namespace CrewmanSystem.PedidoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarPedido", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class mostrarPedidoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="liberarStock", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class liberarStockRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public CrewmanSystem.PedidoWS.pedido pedido;
         
-        public mostrarPedidoRequest() {
+        public liberarStockRequest() {
         }
         
-        public mostrarPedidoRequest(CrewmanSystem.PedidoWS.pedido pedido) {
+        public liberarStockRequest(CrewmanSystem.PedidoWS.pedido pedido) {
             this.pedido = pedido;
         }
     }
@@ -3685,45 +3613,17 @@ namespace CrewmanSystem.PedidoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarPedidoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class mostrarPedidoResponse {
-        
-        public mostrarPedidoResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarTotal", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarTotalRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.PedidoWS.pedido pedido;
-        
-        public insertarTotalRequest() {
-        }
-        
-        public insertarTotalRequest(CrewmanSystem.PedidoWS.pedido pedido) {
-            this.pedido = pedido;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarTotalResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarTotalResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="liberarStockResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class liberarStockResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertarTotalResponse() {
+        public liberarStockResponse() {
         }
         
-        public insertarTotalResponse(int @return) {
+        public liberarStockResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -3731,35 +3631,35 @@ namespace CrewmanSystem.PedidoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPedido", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarPedidoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPedido", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerPedidoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.PedidoWS.pedido lineaPedido;
+        public CrewmanSystem.PedidoWS.pedido pedido;
         
-        public actualizarPedidoRequest() {
+        public obtenerPedidoRequest() {
         }
         
-        public actualizarPedidoRequest(CrewmanSystem.PedidoWS.pedido lineaPedido) {
-            this.lineaPedido = lineaPedido;
+        public obtenerPedidoRequest(CrewmanSystem.PedidoWS.pedido pedido) {
+            this.pedido = pedido;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPedidoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarPedidoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPedidoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerPedidoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public actualizarPedidoResponse() {
+        public obtenerPedidoResponse() {
         }
         
-        public actualizarPedidoResponse(int @return) {
+        public obtenerPedidoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -3823,35 +3723,35 @@ namespace CrewmanSystem.PedidoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="liberarStock", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class liberarStockRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPedido", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarPedidoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.PedidoWS.pedido pedido;
+        public CrewmanSystem.PedidoWS.pedido lineaPedido;
         
-        public liberarStockRequest() {
+        public insertarPedidoRequest() {
         }
         
-        public liberarStockRequest(CrewmanSystem.PedidoWS.pedido pedido) {
-            this.pedido = pedido;
+        public insertarPedidoRequest(CrewmanSystem.PedidoWS.pedido lineaPedido) {
+            this.lineaPedido = lineaPedido;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="liberarStockResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class liberarStockResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPedidoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarPedidoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public liberarStockResponse() {
+        public insertarPedidoResponse() {
         }
         
-        public liberarStockResponse(int @return) {
+        public insertarPedidoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -3859,17 +3759,53 @@ namespace CrewmanSystem.PedidoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="aprobarBorrador", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class aprobarBorradorRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPedido", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarPedidoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.PedidoWS.pedido lineaPedido;
+        
+        public actualizarPedidoRequest() {
+        }
+        
+        public actualizarPedidoRequest(CrewmanSystem.PedidoWS.pedido lineaPedido) {
+            this.lineaPedido = lineaPedido;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPedidoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarPedidoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarPedidoResponse() {
+        }
+        
+        public actualizarPedidoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarTotal", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarTotalRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public CrewmanSystem.PedidoWS.pedido pedido;
         
-        public aprobarBorradorRequest() {
+        public insertarTotalRequest() {
         }
         
-        public aprobarBorradorRequest(CrewmanSystem.PedidoWS.pedido pedido) {
+        public insertarTotalRequest(CrewmanSystem.PedidoWS.pedido pedido) {
             this.pedido = pedido;
         }
     }
@@ -3877,18 +3813,82 @@ namespace CrewmanSystem.PedidoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="aprobarBorradorResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class aprobarBorradorResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarTotalResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarTotalResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public aprobarBorradorResponse() {
+        public insertarTotalResponse() {
         }
         
-        public aprobarBorradorResponse(int @return) {
+        public insertarTotalResponse(int @return) {
             this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPedido", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarPedidoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idPedido;
+        
+        public eliminarPedidoRequest() {
+        }
+        
+        public eliminarPedidoRequest(int idPedido) {
+            this.idPedido = idPedido;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPedidoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarPedidoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarPedidoResponse() {
+        }
+        
+        public eliminarPedidoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarPedido", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class mostrarPedidoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.PedidoWS.pedido pedido;
+        
+        public mostrarPedidoRequest() {
+        }
+        
+        public mostrarPedidoRequest(CrewmanSystem.PedidoWS.pedido pedido) {
+            this.pedido = pedido;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarPedidoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class mostrarPedidoResponse {
+        
+        public mostrarPedidoResponse() {
         }
     }
     
@@ -3943,72 +3943,26 @@ namespace CrewmanSystem.PedidoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.PedidoWS.eliminarPedidoResponse CrewmanSystem.PedidoWS.PedidoWS.eliminarPedido(CrewmanSystem.PedidoWS.eliminarPedidoRequest request) {
-            return base.Channel.eliminarPedido(request);
+        CrewmanSystem.PedidoWS.aprobarBorradorResponse CrewmanSystem.PedidoWS.PedidoWS.aprobarBorrador(CrewmanSystem.PedidoWS.aprobarBorradorRequest request) {
+            return base.Channel.aprobarBorrador(request);
         }
         
-        public int eliminarPedido(int idPedido) {
-            CrewmanSystem.PedidoWS.eliminarPedidoRequest inValue = new CrewmanSystem.PedidoWS.eliminarPedidoRequest();
-            inValue.idPedido = idPedido;
-            CrewmanSystem.PedidoWS.eliminarPedidoResponse retVal = ((CrewmanSystem.PedidoWS.PedidoWS)(this)).eliminarPedido(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.eliminarPedidoResponse> CrewmanSystem.PedidoWS.PedidoWS.eliminarPedidoAsync(CrewmanSystem.PedidoWS.eliminarPedidoRequest request) {
-            return base.Channel.eliminarPedidoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.eliminarPedidoResponse> eliminarPedidoAsync(int idPedido) {
-            CrewmanSystem.PedidoWS.eliminarPedidoRequest inValue = new CrewmanSystem.PedidoWS.eliminarPedidoRequest();
-            inValue.idPedido = idPedido;
-            return ((CrewmanSystem.PedidoWS.PedidoWS)(this)).eliminarPedidoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.PedidoWS.insertarPedidoResponse CrewmanSystem.PedidoWS.PedidoWS.insertarPedido(CrewmanSystem.PedidoWS.insertarPedidoRequest request) {
-            return base.Channel.insertarPedido(request);
-        }
-        
-        public int insertarPedido(CrewmanSystem.PedidoWS.pedido lineaPedido) {
-            CrewmanSystem.PedidoWS.insertarPedidoRequest inValue = new CrewmanSystem.PedidoWS.insertarPedidoRequest();
-            inValue.lineaPedido = lineaPedido;
-            CrewmanSystem.PedidoWS.insertarPedidoResponse retVal = ((CrewmanSystem.PedidoWS.PedidoWS)(this)).insertarPedido(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.insertarPedidoResponse> CrewmanSystem.PedidoWS.PedidoWS.insertarPedidoAsync(CrewmanSystem.PedidoWS.insertarPedidoRequest request) {
-            return base.Channel.insertarPedidoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.insertarPedidoResponse> insertarPedidoAsync(CrewmanSystem.PedidoWS.pedido lineaPedido) {
-            CrewmanSystem.PedidoWS.insertarPedidoRequest inValue = new CrewmanSystem.PedidoWS.insertarPedidoRequest();
-            inValue.lineaPedido = lineaPedido;
-            return ((CrewmanSystem.PedidoWS.PedidoWS)(this)).insertarPedidoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.PedidoWS.obtenerPedidoResponse CrewmanSystem.PedidoWS.PedidoWS.obtenerPedido(CrewmanSystem.PedidoWS.obtenerPedidoRequest request) {
-            return base.Channel.obtenerPedido(request);
-        }
-        
-        public int obtenerPedido(CrewmanSystem.PedidoWS.pedido pedido) {
-            CrewmanSystem.PedidoWS.obtenerPedidoRequest inValue = new CrewmanSystem.PedidoWS.obtenerPedidoRequest();
+        public int aprobarBorrador(CrewmanSystem.PedidoWS.pedido pedido) {
+            CrewmanSystem.PedidoWS.aprobarBorradorRequest inValue = new CrewmanSystem.PedidoWS.aprobarBorradorRequest();
             inValue.pedido = pedido;
-            CrewmanSystem.PedidoWS.obtenerPedidoResponse retVal = ((CrewmanSystem.PedidoWS.PedidoWS)(this)).obtenerPedido(inValue);
+            CrewmanSystem.PedidoWS.aprobarBorradorResponse retVal = ((CrewmanSystem.PedidoWS.PedidoWS)(this)).aprobarBorrador(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.obtenerPedidoResponse> CrewmanSystem.PedidoWS.PedidoWS.obtenerPedidoAsync(CrewmanSystem.PedidoWS.obtenerPedidoRequest request) {
-            return base.Channel.obtenerPedidoAsync(request);
+        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.aprobarBorradorResponse> CrewmanSystem.PedidoWS.PedidoWS.aprobarBorradorAsync(CrewmanSystem.PedidoWS.aprobarBorradorRequest request) {
+            return base.Channel.aprobarBorradorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.obtenerPedidoResponse> obtenerPedidoAsync(CrewmanSystem.PedidoWS.pedido pedido) {
-            CrewmanSystem.PedidoWS.obtenerPedidoRequest inValue = new CrewmanSystem.PedidoWS.obtenerPedidoRequest();
+        public System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.aprobarBorradorResponse> aprobarBorradorAsync(CrewmanSystem.PedidoWS.pedido pedido) {
+            CrewmanSystem.PedidoWS.aprobarBorradorRequest inValue = new CrewmanSystem.PedidoWS.aprobarBorradorRequest();
             inValue.pedido = pedido;
-            return ((CrewmanSystem.PedidoWS.PedidoWS)(this)).obtenerPedidoAsync(inValue);
+            return ((CrewmanSystem.PedidoWS.PedidoWS)(this)).aprobarBorradorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4057,71 +4011,49 @@ namespace CrewmanSystem.PedidoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.PedidoWS.mostrarPedidoResponse CrewmanSystem.PedidoWS.PedidoWS.mostrarPedido(CrewmanSystem.PedidoWS.mostrarPedidoRequest request) {
-            return base.Channel.mostrarPedido(request);
+        CrewmanSystem.PedidoWS.liberarStockResponse CrewmanSystem.PedidoWS.PedidoWS.liberarStock(CrewmanSystem.PedidoWS.liberarStockRequest request) {
+            return base.Channel.liberarStock(request);
         }
         
-        public void mostrarPedido(CrewmanSystem.PedidoWS.pedido pedido) {
-            CrewmanSystem.PedidoWS.mostrarPedidoRequest inValue = new CrewmanSystem.PedidoWS.mostrarPedidoRequest();
+        public int liberarStock(CrewmanSystem.PedidoWS.pedido pedido) {
+            CrewmanSystem.PedidoWS.liberarStockRequest inValue = new CrewmanSystem.PedidoWS.liberarStockRequest();
             inValue.pedido = pedido;
-            CrewmanSystem.PedidoWS.mostrarPedidoResponse retVal = ((CrewmanSystem.PedidoWS.PedidoWS)(this)).mostrarPedido(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.mostrarPedidoResponse> CrewmanSystem.PedidoWS.PedidoWS.mostrarPedidoAsync(CrewmanSystem.PedidoWS.mostrarPedidoRequest request) {
-            return base.Channel.mostrarPedidoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.mostrarPedidoResponse> mostrarPedidoAsync(CrewmanSystem.PedidoWS.pedido pedido) {
-            CrewmanSystem.PedidoWS.mostrarPedidoRequest inValue = new CrewmanSystem.PedidoWS.mostrarPedidoRequest();
-            inValue.pedido = pedido;
-            return ((CrewmanSystem.PedidoWS.PedidoWS)(this)).mostrarPedidoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.PedidoWS.insertarTotalResponse CrewmanSystem.PedidoWS.PedidoWS.insertarTotal(CrewmanSystem.PedidoWS.insertarTotalRequest request) {
-            return base.Channel.insertarTotal(request);
-        }
-        
-        public int insertarTotal(CrewmanSystem.PedidoWS.pedido pedido) {
-            CrewmanSystem.PedidoWS.insertarTotalRequest inValue = new CrewmanSystem.PedidoWS.insertarTotalRequest();
-            inValue.pedido = pedido;
-            CrewmanSystem.PedidoWS.insertarTotalResponse retVal = ((CrewmanSystem.PedidoWS.PedidoWS)(this)).insertarTotal(inValue);
+            CrewmanSystem.PedidoWS.liberarStockResponse retVal = ((CrewmanSystem.PedidoWS.PedidoWS)(this)).liberarStock(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.insertarTotalResponse> CrewmanSystem.PedidoWS.PedidoWS.insertarTotalAsync(CrewmanSystem.PedidoWS.insertarTotalRequest request) {
-            return base.Channel.insertarTotalAsync(request);
+        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.liberarStockResponse> CrewmanSystem.PedidoWS.PedidoWS.liberarStockAsync(CrewmanSystem.PedidoWS.liberarStockRequest request) {
+            return base.Channel.liberarStockAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.insertarTotalResponse> insertarTotalAsync(CrewmanSystem.PedidoWS.pedido pedido) {
-            CrewmanSystem.PedidoWS.insertarTotalRequest inValue = new CrewmanSystem.PedidoWS.insertarTotalRequest();
+        public System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.liberarStockResponse> liberarStockAsync(CrewmanSystem.PedidoWS.pedido pedido) {
+            CrewmanSystem.PedidoWS.liberarStockRequest inValue = new CrewmanSystem.PedidoWS.liberarStockRequest();
             inValue.pedido = pedido;
-            return ((CrewmanSystem.PedidoWS.PedidoWS)(this)).insertarTotalAsync(inValue);
+            return ((CrewmanSystem.PedidoWS.PedidoWS)(this)).liberarStockAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.PedidoWS.actualizarPedidoResponse CrewmanSystem.PedidoWS.PedidoWS.actualizarPedido(CrewmanSystem.PedidoWS.actualizarPedidoRequest request) {
-            return base.Channel.actualizarPedido(request);
+        CrewmanSystem.PedidoWS.obtenerPedidoResponse CrewmanSystem.PedidoWS.PedidoWS.obtenerPedido(CrewmanSystem.PedidoWS.obtenerPedidoRequest request) {
+            return base.Channel.obtenerPedido(request);
         }
         
-        public int actualizarPedido(CrewmanSystem.PedidoWS.pedido lineaPedido) {
-            CrewmanSystem.PedidoWS.actualizarPedidoRequest inValue = new CrewmanSystem.PedidoWS.actualizarPedidoRequest();
-            inValue.lineaPedido = lineaPedido;
-            CrewmanSystem.PedidoWS.actualizarPedidoResponse retVal = ((CrewmanSystem.PedidoWS.PedidoWS)(this)).actualizarPedido(inValue);
+        public int obtenerPedido(CrewmanSystem.PedidoWS.pedido pedido) {
+            CrewmanSystem.PedidoWS.obtenerPedidoRequest inValue = new CrewmanSystem.PedidoWS.obtenerPedidoRequest();
+            inValue.pedido = pedido;
+            CrewmanSystem.PedidoWS.obtenerPedidoResponse retVal = ((CrewmanSystem.PedidoWS.PedidoWS)(this)).obtenerPedido(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.actualizarPedidoResponse> CrewmanSystem.PedidoWS.PedidoWS.actualizarPedidoAsync(CrewmanSystem.PedidoWS.actualizarPedidoRequest request) {
-            return base.Channel.actualizarPedidoAsync(request);
+        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.obtenerPedidoResponse> CrewmanSystem.PedidoWS.PedidoWS.obtenerPedidoAsync(CrewmanSystem.PedidoWS.obtenerPedidoRequest request) {
+            return base.Channel.obtenerPedidoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.actualizarPedidoResponse> actualizarPedidoAsync(CrewmanSystem.PedidoWS.pedido lineaPedido) {
-            CrewmanSystem.PedidoWS.actualizarPedidoRequest inValue = new CrewmanSystem.PedidoWS.actualizarPedidoRequest();
-            inValue.lineaPedido = lineaPedido;
-            return ((CrewmanSystem.PedidoWS.PedidoWS)(this)).actualizarPedidoAsync(inValue);
+        public System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.obtenerPedidoResponse> obtenerPedidoAsync(CrewmanSystem.PedidoWS.pedido pedido) {
+            CrewmanSystem.PedidoWS.obtenerPedidoRequest inValue = new CrewmanSystem.PedidoWS.obtenerPedidoRequest();
+            inValue.pedido = pedido;
+            return ((CrewmanSystem.PedidoWS.PedidoWS)(this)).obtenerPedidoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4156,49 +4088,117 @@ namespace CrewmanSystem.PedidoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.PedidoWS.liberarStockResponse CrewmanSystem.PedidoWS.PedidoWS.liberarStock(CrewmanSystem.PedidoWS.liberarStockRequest request) {
-            return base.Channel.liberarStock(request);
+        CrewmanSystem.PedidoWS.insertarPedidoResponse CrewmanSystem.PedidoWS.PedidoWS.insertarPedido(CrewmanSystem.PedidoWS.insertarPedidoRequest request) {
+            return base.Channel.insertarPedido(request);
         }
         
-        public int liberarStock(CrewmanSystem.PedidoWS.pedido pedido) {
-            CrewmanSystem.PedidoWS.liberarStockRequest inValue = new CrewmanSystem.PedidoWS.liberarStockRequest();
-            inValue.pedido = pedido;
-            CrewmanSystem.PedidoWS.liberarStockResponse retVal = ((CrewmanSystem.PedidoWS.PedidoWS)(this)).liberarStock(inValue);
+        public int insertarPedido(CrewmanSystem.PedidoWS.pedido lineaPedido) {
+            CrewmanSystem.PedidoWS.insertarPedidoRequest inValue = new CrewmanSystem.PedidoWS.insertarPedidoRequest();
+            inValue.lineaPedido = lineaPedido;
+            CrewmanSystem.PedidoWS.insertarPedidoResponse retVal = ((CrewmanSystem.PedidoWS.PedidoWS)(this)).insertarPedido(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.liberarStockResponse> CrewmanSystem.PedidoWS.PedidoWS.liberarStockAsync(CrewmanSystem.PedidoWS.liberarStockRequest request) {
-            return base.Channel.liberarStockAsync(request);
+        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.insertarPedidoResponse> CrewmanSystem.PedidoWS.PedidoWS.insertarPedidoAsync(CrewmanSystem.PedidoWS.insertarPedidoRequest request) {
+            return base.Channel.insertarPedidoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.liberarStockResponse> liberarStockAsync(CrewmanSystem.PedidoWS.pedido pedido) {
-            CrewmanSystem.PedidoWS.liberarStockRequest inValue = new CrewmanSystem.PedidoWS.liberarStockRequest();
-            inValue.pedido = pedido;
-            return ((CrewmanSystem.PedidoWS.PedidoWS)(this)).liberarStockAsync(inValue);
+        public System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.insertarPedidoResponse> insertarPedidoAsync(CrewmanSystem.PedidoWS.pedido lineaPedido) {
+            CrewmanSystem.PedidoWS.insertarPedidoRequest inValue = new CrewmanSystem.PedidoWS.insertarPedidoRequest();
+            inValue.lineaPedido = lineaPedido;
+            return ((CrewmanSystem.PedidoWS.PedidoWS)(this)).insertarPedidoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.PedidoWS.aprobarBorradorResponse CrewmanSystem.PedidoWS.PedidoWS.aprobarBorrador(CrewmanSystem.PedidoWS.aprobarBorradorRequest request) {
-            return base.Channel.aprobarBorrador(request);
+        CrewmanSystem.PedidoWS.actualizarPedidoResponse CrewmanSystem.PedidoWS.PedidoWS.actualizarPedido(CrewmanSystem.PedidoWS.actualizarPedidoRequest request) {
+            return base.Channel.actualizarPedido(request);
         }
         
-        public int aprobarBorrador(CrewmanSystem.PedidoWS.pedido pedido) {
-            CrewmanSystem.PedidoWS.aprobarBorradorRequest inValue = new CrewmanSystem.PedidoWS.aprobarBorradorRequest();
-            inValue.pedido = pedido;
-            CrewmanSystem.PedidoWS.aprobarBorradorResponse retVal = ((CrewmanSystem.PedidoWS.PedidoWS)(this)).aprobarBorrador(inValue);
+        public int actualizarPedido(CrewmanSystem.PedidoWS.pedido lineaPedido) {
+            CrewmanSystem.PedidoWS.actualizarPedidoRequest inValue = new CrewmanSystem.PedidoWS.actualizarPedidoRequest();
+            inValue.lineaPedido = lineaPedido;
+            CrewmanSystem.PedidoWS.actualizarPedidoResponse retVal = ((CrewmanSystem.PedidoWS.PedidoWS)(this)).actualizarPedido(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.aprobarBorradorResponse> CrewmanSystem.PedidoWS.PedidoWS.aprobarBorradorAsync(CrewmanSystem.PedidoWS.aprobarBorradorRequest request) {
-            return base.Channel.aprobarBorradorAsync(request);
+        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.actualizarPedidoResponse> CrewmanSystem.PedidoWS.PedidoWS.actualizarPedidoAsync(CrewmanSystem.PedidoWS.actualizarPedidoRequest request) {
+            return base.Channel.actualizarPedidoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.aprobarBorradorResponse> aprobarBorradorAsync(CrewmanSystem.PedidoWS.pedido pedido) {
-            CrewmanSystem.PedidoWS.aprobarBorradorRequest inValue = new CrewmanSystem.PedidoWS.aprobarBorradorRequest();
+        public System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.actualizarPedidoResponse> actualizarPedidoAsync(CrewmanSystem.PedidoWS.pedido lineaPedido) {
+            CrewmanSystem.PedidoWS.actualizarPedidoRequest inValue = new CrewmanSystem.PedidoWS.actualizarPedidoRequest();
+            inValue.lineaPedido = lineaPedido;
+            return ((CrewmanSystem.PedidoWS.PedidoWS)(this)).actualizarPedidoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.PedidoWS.insertarTotalResponse CrewmanSystem.PedidoWS.PedidoWS.insertarTotal(CrewmanSystem.PedidoWS.insertarTotalRequest request) {
+            return base.Channel.insertarTotal(request);
+        }
+        
+        public int insertarTotal(CrewmanSystem.PedidoWS.pedido pedido) {
+            CrewmanSystem.PedidoWS.insertarTotalRequest inValue = new CrewmanSystem.PedidoWS.insertarTotalRequest();
             inValue.pedido = pedido;
-            return ((CrewmanSystem.PedidoWS.PedidoWS)(this)).aprobarBorradorAsync(inValue);
+            CrewmanSystem.PedidoWS.insertarTotalResponse retVal = ((CrewmanSystem.PedidoWS.PedidoWS)(this)).insertarTotal(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.insertarTotalResponse> CrewmanSystem.PedidoWS.PedidoWS.insertarTotalAsync(CrewmanSystem.PedidoWS.insertarTotalRequest request) {
+            return base.Channel.insertarTotalAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.insertarTotalResponse> insertarTotalAsync(CrewmanSystem.PedidoWS.pedido pedido) {
+            CrewmanSystem.PedidoWS.insertarTotalRequest inValue = new CrewmanSystem.PedidoWS.insertarTotalRequest();
+            inValue.pedido = pedido;
+            return ((CrewmanSystem.PedidoWS.PedidoWS)(this)).insertarTotalAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.PedidoWS.eliminarPedidoResponse CrewmanSystem.PedidoWS.PedidoWS.eliminarPedido(CrewmanSystem.PedidoWS.eliminarPedidoRequest request) {
+            return base.Channel.eliminarPedido(request);
+        }
+        
+        public int eliminarPedido(int idPedido) {
+            CrewmanSystem.PedidoWS.eliminarPedidoRequest inValue = new CrewmanSystem.PedidoWS.eliminarPedidoRequest();
+            inValue.idPedido = idPedido;
+            CrewmanSystem.PedidoWS.eliminarPedidoResponse retVal = ((CrewmanSystem.PedidoWS.PedidoWS)(this)).eliminarPedido(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.eliminarPedidoResponse> CrewmanSystem.PedidoWS.PedidoWS.eliminarPedidoAsync(CrewmanSystem.PedidoWS.eliminarPedidoRequest request) {
+            return base.Channel.eliminarPedidoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.eliminarPedidoResponse> eliminarPedidoAsync(int idPedido) {
+            CrewmanSystem.PedidoWS.eliminarPedidoRequest inValue = new CrewmanSystem.PedidoWS.eliminarPedidoRequest();
+            inValue.idPedido = idPedido;
+            return ((CrewmanSystem.PedidoWS.PedidoWS)(this)).eliminarPedidoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.PedidoWS.mostrarPedidoResponse CrewmanSystem.PedidoWS.PedidoWS.mostrarPedido(CrewmanSystem.PedidoWS.mostrarPedidoRequest request) {
+            return base.Channel.mostrarPedido(request);
+        }
+        
+        public void mostrarPedido(CrewmanSystem.PedidoWS.pedido pedido) {
+            CrewmanSystem.PedidoWS.mostrarPedidoRequest inValue = new CrewmanSystem.PedidoWS.mostrarPedidoRequest();
+            inValue.pedido = pedido;
+            CrewmanSystem.PedidoWS.mostrarPedidoResponse retVal = ((CrewmanSystem.PedidoWS.PedidoWS)(this)).mostrarPedido(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.mostrarPedidoResponse> CrewmanSystem.PedidoWS.PedidoWS.mostrarPedidoAsync(CrewmanSystem.PedidoWS.mostrarPedidoRequest request) {
+            return base.Channel.mostrarPedidoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.PedidoWS.mostrarPedidoResponse> mostrarPedidoAsync(CrewmanSystem.PedidoWS.pedido pedido) {
+            CrewmanSystem.PedidoWS.mostrarPedidoRequest inValue = new CrewmanSystem.PedidoWS.mostrarPedidoRequest();
+            inValue.pedido = pedido;
+            return ((CrewmanSystem.PedidoWS.PedidoWS)(this)).mostrarPedidoAsync(inValue);
         }
     }
 }
