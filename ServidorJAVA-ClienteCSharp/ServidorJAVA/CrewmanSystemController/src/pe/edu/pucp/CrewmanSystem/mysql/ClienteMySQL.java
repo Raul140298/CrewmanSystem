@@ -292,7 +292,7 @@ public class ClienteMySQL implements ClienteDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            String sql ="{ call LISTAR_CLIENTES_SIN_CARTERA (?,?,?)}";
+            String sql ="{ call LISTAR_CLIENTES_CON_CARTERA (?,?,?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_CARTERA", idCartera);
             cs.setString("_RAZON_SOCIAL", razonSocial);

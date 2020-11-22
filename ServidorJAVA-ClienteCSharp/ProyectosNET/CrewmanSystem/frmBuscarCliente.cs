@@ -76,7 +76,7 @@ namespace CrewmanSystem
 			//NUEVO SP DE JOSEPH - borrar 78 Y descomnetar 77 128
 			//if (tipoFrm == 1) misClientes = daoVisita.listarVisitas("", "", idBusquedaVendedor);
 			if (tipoFrm == 1) misClientes = daoCliente.listarClientes("", "", idBusquedaVendedor);
-			else if (tipoFrm == 0) misClientes = daoCliente.listarClientesSinCartera("", "", idBusquedaVendedor);
+			else if (tipoFrm == 0) misClientes = daoCliente.listarClientesConCartera("", "", Program.empleado.cartera.idCartera);
 			
 
 			if (misClientes != null)
@@ -123,7 +123,7 @@ namespace CrewmanSystem
 				int idZona = ((ZonaWS.zona)cboZona.SelectedItem).idZona;
 				misClientes = daoCliente.listarClientes(txtRazonSocial.Text, txtGrupo.Text, idZona);
 			}
-			else if (tipoFrmVendedor == 0) misClientes = daoCliente.listarClientesSinCartera(txtRazonSocial.Text, txtGrupo.Text, idBusquedaVendedor);
+			else if (tipoFrmVendedor == 0) misClientes = daoCliente.listarClientesConCartera(txtRazonSocial.Text, txtGrupo.Text, Program.empleado.cartera.idCartera);
 			//DESCOMENTAR
 			//else if (tipoFrmVendedor == 1) misClientes = daoVisita.listarVisitas(txtRazonSocial.Text, txtGrupo.Text,idBusquedaVendedor);
 
