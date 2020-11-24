@@ -30,8 +30,46 @@ namespace CrewmanSystem
         {
             VisitaWS.visita v = dgvVisitas.Rows[e.RowIndex].DataBoundItem as VisitaWS.visita;
 
+            dgvVisitas.Rows[e.RowIndex].Cells["ID"].Value = v.idVisita;
             dgvVisitas.Rows[e.RowIndex].Cells["RUC"].Value = v.cliente.ruc;
             dgvVisitas.Rows[e.RowIndex].Cells["RAZON_SOCIAL"].Value = v.cliente.razonSocial;
+            dgvVisitas.Rows[e.RowIndex].Cells["GRUPO"].Value = v.cliente.grupo;
+            dgvVisitas.Rows[e.RowIndex].Cells["FECHA_REGISTRO"].Value = v.cliente.fechaRegistro.ToString("dd/MM/yyyy");
+
+            DateTime ultCompra = v.cliente.fechaUltimaCompra;
+            string fechaUltCompra;
+            if (ultCompra.Year < 2000) fechaUltCompra = "";
+            else fechaUltCompra = ultCompra.ToString("dd/MM/yyyy");
+            dgvVisitas.Rows[e.RowIndex].Cells["FECHA_ULTIMA_COMPRA"].Value = fechaUltCompra;
+            dgvVisitas.Rows[e.RowIndex].Cells["TIPO_CLIENTE"].Value = v.cliente.tipoEmpresa;
+            dgvVisitas.Rows[e.RowIndex].Cells["ZONA"].Value = v.cliente.zona.nombre;
+            dgvVisitas.Rows[e.RowIndex].Cells["DIRECCION"].Value = v.cliente.direccion;
+            string estado;
+            if (v.estado) estado = "VISITADO";
+            else estado = "NO VISITADO";
+            dgvVisitas.Rows[e.RowIndex].Cells["ESTADO"].Value = estado;
+            dgvVisitas.Rows[e.RowIndex].Cells["CHECK"].Value = v.estado;
+            DateTime visita = v.fechaRegistro;
+            string fechaVisita;
+            if (visita.Year < 2000) fechaVisita = "";
+            else fechaVisita = visita.ToString("dd/MM/yyyy");
+            dgvVisitas.Rows[e.RowIndex].Cells["FECHA_VISITA"].Value = fechaVisita;
+        }
+
+        private void dgvVisitas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 11)
+            {
+                bool estadoPrevio = (bool)dgvVisitas.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+                if (estadoPrevio)
+                {
+                    MessageBox.Show("NO ACTUALIZAR VISITA");
+                }
+                else
+                {
+                    MessageBox.Show("ACTUALIZAR VISITA");
+                }
+            }
         }
     }
 }

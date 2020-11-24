@@ -98,4 +98,26 @@ public class VisitaMySQL implements VisitaDAO{
         }
         return visitas;
     }
+
+    @Override
+    public int registrar(int idVisita) {
+        int resultado = 0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            String sql ="{ call REGISTRAR_VISITA(?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_VISITA", idVisita);
+            resultado = cs.executeUpdate();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return resultado;
+    }
 }
