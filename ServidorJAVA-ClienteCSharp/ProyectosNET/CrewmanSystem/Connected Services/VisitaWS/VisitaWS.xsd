@@ -4,6 +4,18 @@
   <xs:element name="insertarVisitaResponse" type="tns:insertarVisitaResponse" />
   <xs:element name="listarVisitas" type="tns:listarVisitas" />
   <xs:element name="listarVisitasResponse" type="tns:listarVisitasResponse" />
+  <xs:element name="registrarVisita" type="tns:registrarVisita" />
+  <xs:element name="registrarVisitaResponse" type="tns:registrarVisitaResponse" />
+  <xs:complexType name="registrarVisita">
+    <xs:sequence>
+      <xs:element name="idVisita" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarVisitaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="insertarVisita">
     <xs:sequence>
       <xs:element minOccurs="0" name="visita" type="tns:visita" />

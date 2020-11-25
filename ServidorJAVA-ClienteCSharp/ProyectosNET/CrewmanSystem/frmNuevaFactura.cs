@@ -28,7 +28,7 @@ namespace CrewmanSystem
                 if (c is TextBox)
                 {
                     TextBox textBox = c as TextBox;
-                    if (textBox.Text == string.Empty && textBox.Name != "txtIdPedido" && textBox.Name != "txtMontoPendiente")
+                    if (textBox.Text == string.Empty && textBox.Name != "txtIdPedido" && textBox.Name != "txtMontoPendiente" && textBox.Name != "txtIdFactura" && textBox.Name != "txtImpuestos")
                     {
                         MessageBox.Show("Falta llenar los datos de " + textBox.Name.Substring(3), 
                             "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -44,16 +44,6 @@ namespace CrewmanSystem
                         {
                             MessageBox.Show("Los datos de " + txtMonto.Name.Substring(3) + " solo pueden contener dígitos",
                                 "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return;
-                        }
-                        try
-                        {
-                            double impuestos = Convert.ToDouble(txtImpuestos.Text);
-                        }
-                        catch (Exception)
-                        {
-                            MessageBox.Show("Los datos de " +
-                                txtImpuestos.Name.Substring(3) + " solo pueden contener dígitos");
                             return;
                         }
                     }
@@ -80,21 +70,26 @@ namespace CrewmanSystem
                 factura.pedido.idPedido = pedidoSeleccionado.idPedido;
                 factura.monto = Convert.ToDouble(txtMonto.Text);
                 factura.observacion = txtObservacion.Text;
-                factura.fechaEmision = DateTime.Now;
                 factura.fechaVencimiento = dtpVencimiento.Value;
-                factura.impuestos = factura.monto * 0.18;
+                factura.fechaVencimientoSpecified = true;
+                factura.impuestos = Math.Round(factura.monto * 0.18, 2);
                 txtImpuestos.Text = factura.impuestos.ToString();
                 if (cboEstadoPagar.Text == "PAGADO")
-                {
                     factura.estadoPagar = true;
+                else
+                    factura.estadoPagar = false;
+                
+                int resultado = daoFactura.insertarFactura(factura);
+                if(resultado == 0)
+                {
+                    MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    factura.estadoPagar = false;
+                    MessageBox.Show("Se insertó correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIdFactura.Text = resultado.ToString();
+                    txtMontoPendiente.Text = (Convert.ToDouble(txtMontoPendiente.Text) - Convert.ToDouble(txtMonto.Text)).ToString();
                 }
-                int idFactura = daoFactura.insertarFactura(factura);
-                txtIdFactura.Text = idFactura.ToString();
-                txtMontoPendiente.Text = (Convert.ToDouble(txtMontoPendiente.Text) - Convert.ToDouble(txtMonto.Text)).ToString();
             }
         }
 

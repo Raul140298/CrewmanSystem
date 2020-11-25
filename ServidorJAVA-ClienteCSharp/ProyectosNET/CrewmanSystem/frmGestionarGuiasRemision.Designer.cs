@@ -29,8 +29,11 @@
 		private void InitializeComponent()
 		{
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvGuiasDeRemision = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_PEDIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,20 +78,20 @@
             this.dgvGuiasDeRemision.Name = "dgvGuiasDeRemision";
             this.dgvGuiasDeRemision.ReadOnly = true;
             this.dgvGuiasDeRemision.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGuiasDeRemision.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGuiasDeRemision.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvGuiasDeRemision.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvGuiasDeRemision.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvGuiasDeRemision.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvGuiasDeRemision.RowTemplate.Height = 24;
             this.dgvGuiasDeRemision.Size = new System.Drawing.Size(998, 450);
             this.dgvGuiasDeRemision.TabIndex = 3;
@@ -114,6 +117,8 @@
             // FECHA_EMISION
             // 
             this.FECHA_EMISION.DataPropertyName = "fechaRegistro";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_EMISION.DefaultCellStyle = dataGridViewCellStyle2;
             this.FECHA_EMISION.HeaderText = "Fecha Emisión";
             this.FECHA_EMISION.MinimumWidth = 6;
             this.FECHA_EMISION.Name = "FECHA_EMISION";
@@ -132,6 +137,8 @@
             // FECHA_REGISTRO
             // 
             this.FECHA_REGISTRO.DataPropertyName = "fechaRegistro";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_REGISTRO.DefaultCellStyle = dataGridViewCellStyle3;
             this.FECHA_REGISTRO.HeaderText = "Fecha Registro";
             this.FECHA_REGISTRO.MinimumWidth = 6;
             this.FECHA_REGISTRO.Name = "FECHA_REGISTRO";
@@ -141,6 +148,8 @@
             // FECHA_TRASLADO
             // 
             this.FECHA_TRASLADO.DataPropertyName = "fechaTraslado";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_TRASLADO.DefaultCellStyle = dataGridViewCellStyle4;
             this.FECHA_TRASLADO.HeaderText = "Fecha Traslado";
             this.FECHA_TRASLADO.MinimumWidth = 6;
             this.FECHA_TRASLADO.Name = "FECHA_TRASLADO";
@@ -163,11 +172,11 @@
 		#endregion
 
 		private System.Windows.Forms.DataGridView dgvGuiasDeRemision;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ID_PEDIDO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_EMISION;
-		private System.Windows.Forms.DataGridViewTextBoxColumn MOTIVO_TRASLADO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_TRASLADO;
-	}
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_PEDIDO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_EMISION;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MOTIVO_TRASLADO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_TRASLADO;
+    }
 }

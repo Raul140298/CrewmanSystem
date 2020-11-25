@@ -5,6 +5,12 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/ZonaWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
+  <message name="listarZonas">
+    <part name="parameters" element="tns:listarZonas" />
+  </message>
+  <message name="listarZonasResponse">
+    <part name="parameters" element="tns:listarZonasResponse" />
+  </message>
   <message name="mostrarZona">
     <part name="parameters" element="tns:mostrarZona" />
   </message>
@@ -29,12 +35,6 @@
   <message name="insertarZonaResponse">
     <part name="parameters" element="tns:insertarZonaResponse" />
   </message>
-  <message name="listarZonas">
-    <part name="parameters" element="tns:listarZonas" />
-  </message>
-  <message name="listarZonasResponse">
-    <part name="parameters" element="tns:listarZonasResponse" />
-  </message>
   <message name="mostrarZonaCliente">
     <part name="parameters" element="tns:mostrarZonaCliente" />
   </message>
@@ -42,6 +42,10 @@
     <part name="parameters" element="tns:mostrarZonaClienteResponse" />
   </message>
   <portType name="ZonaWS">
+    <operation name="listarZonas">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/listarZonasRequest" message="tns:listarZonas" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/listarZonasResponse" message="tns:listarZonasResponse" />
+    </operation>
     <operation name="mostrarZona">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaRequest" message="tns:mostrarZona" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaResponse" message="tns:mostrarZonaResponse" />
@@ -58,10 +62,6 @@
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/insertarZonaRequest" message="tns:insertarZona" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/insertarZonaResponse" message="tns:insertarZonaResponse" />
     </operation>
-    <operation name="listarZonas">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/listarZonasRequest" message="tns:listarZonas" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/listarZonasResponse" message="tns:listarZonasResponse" />
-    </operation>
     <operation name="mostrarZonaCliente">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaClienteRequest" message="tns:mostrarZonaCliente" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ZonaWS/mostrarZonaClienteResponse" message="tns:mostrarZonaClienteResponse" />
@@ -69,6 +69,15 @@
   </portType>
   <binding name="ZonaWSPortBinding" type="tns:ZonaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarZonas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="mostrarZona">
       <soap:operation soapAction="" />
       <input>
@@ -97,15 +106,6 @@
       </output>
     </operation>
     <operation name="insertarZona">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarZonas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

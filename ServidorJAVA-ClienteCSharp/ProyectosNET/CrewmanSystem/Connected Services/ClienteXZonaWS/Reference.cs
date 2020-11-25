@@ -16,6 +16,19 @@ namespace CrewmanSystem.ClienteXZonaWS {
     public interface ClienteXZonaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteXZonaWS/eliminarClienteXZonaRequ" +
+            "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteXZonaWS/eliminarClienteXZonaResp" +
+            "onse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaResponse eliminarClienteXZona(CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteXZonaWS/eliminarClienteXZonaRequ" +
+            "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteXZonaWS/eliminarClienteXZonaResp" +
+            "onse")]
+        System.Threading.Tasks.Task<CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaResponse> eliminarClienteXZonaAsync(CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteXZonaWS/obtenerClientePorZonaReq" +
             "uest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteXZonaWS/obtenerClientePorZonaRes" +
             "ponse")]
@@ -42,24 +55,46 @@ namespace CrewmanSystem.ClienteXZonaWS {
             "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteXZonaWS/insertarClienteXZonaResp" +
             "onse")]
         System.Threading.Tasks.Task<CrewmanSystem.ClienteXZonaWS.insertarClienteXZonaResponse> insertarClienteXZonaAsync(CrewmanSystem.ClienteXZonaWS.insertarClienteXZonaRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarClienteXZona", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarClienteXZonaRequest {
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteXZonaWS/eliminarClienteXZonaRequ" +
-            "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteXZonaWS/eliminarClienteXZonaResp" +
-            "onse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaResponse eliminarClienteXZona(CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idClienteXZona;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteXZonaWS/eliminarClienteXZonaRequ" +
-            "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ClienteXZonaWS/eliminarClienteXZonaResp" +
-            "onse")]
-        System.Threading.Tasks.Task<CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaResponse> eliminarClienteXZonaAsync(CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaRequest request);
+        public eliminarClienteXZonaRequest() {
+        }
+        
+        public eliminarClienteXZonaRequest(int idClienteXZona) {
+            this.idClienteXZona = idClienteXZona;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarClienteXZonaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarClienteXZonaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarClienteXZonaResponse() {
+        }
+        
+        public eliminarClienteXZonaResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -189,7 +224,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -431,7 +466,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -561,7 +596,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -766,7 +801,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -812,7 +847,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -956,7 +991,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1086,7 +1121,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1174,7 +1209,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1472,7 +1507,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/")]
     public enum estadoPedido {
@@ -1491,7 +1526,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1691,7 +1726,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1793,7 +1828,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1909,7 +1944,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2025,7 +2060,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2169,7 +2204,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2355,7 +2390,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2485,7 +2520,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2643,7 +2678,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2759,7 +2794,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2889,7 +2924,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2963,7 +2998,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3023,7 +3058,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3097,7 +3132,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3157,7 +3192,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/")]
     public enum tipoPedido {
@@ -3172,7 +3207,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personaContacto))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(empleado))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3330,7 +3365,7 @@ namespace CrewmanSystem.ClienteXZonaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3452,42 +3487,6 @@ namespace CrewmanSystem.ClienteXZonaWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarClienteXZona", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarClienteXZonaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idClienteXZona;
-        
-        public eliminarClienteXZonaRequest() {
-        }
-        
-        public eliminarClienteXZonaRequest(int idClienteXZona) {
-            this.idClienteXZona = idClienteXZona;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarClienteXZonaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarClienteXZonaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarClienteXZonaResponse() {
-        }
-        
-        public eliminarClienteXZonaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ClienteXZonaWSChannel : CrewmanSystem.ClienteXZonaWS.ClienteXZonaWS, System.ServiceModel.IClientChannel {
     }
@@ -3513,6 +3512,29 @@ namespace CrewmanSystem.ClienteXZonaWS {
         
         public ClienteXZonaWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaResponse CrewmanSystem.ClienteXZonaWS.ClienteXZonaWS.eliminarClienteXZona(CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaRequest request) {
+            return base.Channel.eliminarClienteXZona(request);
+        }
+        
+        public int eliminarClienteXZona(int idClienteXZona) {
+            CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaRequest inValue = new CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaRequest();
+            inValue.idClienteXZona = idClienteXZona;
+            CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaResponse retVal = ((CrewmanSystem.ClienteXZonaWS.ClienteXZonaWS)(this)).eliminarClienteXZona(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaResponse> CrewmanSystem.ClienteXZonaWS.ClienteXZonaWS.eliminarClienteXZonaAsync(CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaRequest request) {
+            return base.Channel.eliminarClienteXZonaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaResponse> eliminarClienteXZonaAsync(int idClienteXZona) {
+            CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaRequest inValue = new CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaRequest();
+            inValue.idClienteXZona = idClienteXZona;
+            return ((CrewmanSystem.ClienteXZonaWS.ClienteXZonaWS)(this)).eliminarClienteXZonaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3559,29 +3581,6 @@ namespace CrewmanSystem.ClienteXZonaWS {
             CrewmanSystem.ClienteXZonaWS.insertarClienteXZonaRequest inValue = new CrewmanSystem.ClienteXZonaWS.insertarClienteXZonaRequest();
             inValue.clienteXZona = clienteXZona;
             return ((CrewmanSystem.ClienteXZonaWS.ClienteXZonaWS)(this)).insertarClienteXZonaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaResponse CrewmanSystem.ClienteXZonaWS.ClienteXZonaWS.eliminarClienteXZona(CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaRequest request) {
-            return base.Channel.eliminarClienteXZona(request);
-        }
-        
-        public int eliminarClienteXZona(int idClienteXZona) {
-            CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaRequest inValue = new CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaRequest();
-            inValue.idClienteXZona = idClienteXZona;
-            CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaResponse retVal = ((CrewmanSystem.ClienteXZonaWS.ClienteXZonaWS)(this)).eliminarClienteXZona(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaResponse> CrewmanSystem.ClienteXZonaWS.ClienteXZonaWS.eliminarClienteXZonaAsync(CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaRequest request) {
-            return base.Channel.eliminarClienteXZonaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaResponse> eliminarClienteXZonaAsync(int idClienteXZona) {
-            CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaRequest inValue = new CrewmanSystem.ClienteXZonaWS.eliminarClienteXZonaRequest();
-            inValue.idClienteXZona = idClienteXZona;
-            return ((CrewmanSystem.ClienteXZonaWS.ClienteXZonaWS)(this)).eliminarClienteXZonaAsync(inValue);
         }
     }
 }

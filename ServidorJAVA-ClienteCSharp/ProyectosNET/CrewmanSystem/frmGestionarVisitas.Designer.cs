@@ -29,8 +29,12 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvVisitas = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,20 +92,20 @@
             this.dgvVisitas.Name = "dgvVisitas";
             this.dgvVisitas.ReadOnly = true;
             this.dgvVisitas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVisitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVisitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvVisitas.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvVisitas.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvVisitas.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvVisitas.RowTemplate.Height = 24;
             this.dgvVisitas.Size = new System.Drawing.Size(800, 450);
             this.dgvVisitas.TabIndex = 2;
@@ -110,6 +114,7 @@
             // 
             // ID
             // 
+            this.ID.DataPropertyName = "idVisita";
             this.ID.HeaderText = "Id";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
@@ -142,6 +147,8 @@
             // 
             // FECHA_REGISTRO
             // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_REGISTRO.DefaultCellStyle = dataGridViewCellStyle2;
             this.FECHA_REGISTRO.HeaderText = "Fecha Registro";
             this.FECHA_REGISTRO.MinimumWidth = 6;
             this.FECHA_REGISTRO.Name = "FECHA_REGISTRO";
@@ -150,6 +157,8 @@
             // 
             // FECHA_ULTIMA_COMPRA
             // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_ULTIMA_COMPRA.DefaultCellStyle = dataGridViewCellStyle3;
             this.FECHA_ULTIMA_COMPRA.HeaderText = "Fecha Ult. Compra";
             this.FECHA_ULTIMA_COMPRA.MinimumWidth = 6;
             this.FECHA_ULTIMA_COMPRA.Name = "FECHA_ULTIMA_COMPRA";
@@ -190,6 +199,8 @@
             // 
             // FECHA_VISITA
             // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_VISITA.DefaultCellStyle = dataGridViewCellStyle4;
             this.FECHA_VISITA.HeaderText = "Fecha Visita";
             this.FECHA_VISITA.MinimumWidth = 6;
             this.FECHA_VISITA.Name = "FECHA_VISITA";
@@ -198,6 +209,8 @@
             // 
             // CHECK
             // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.CHECK.DefaultCellStyle = dataGridViewCellStyle5;
             this.CHECK.HeaderText = "✓";
             this.CHECK.MinimumWidth = 6;
             this.CHECK.Name = "CHECK";

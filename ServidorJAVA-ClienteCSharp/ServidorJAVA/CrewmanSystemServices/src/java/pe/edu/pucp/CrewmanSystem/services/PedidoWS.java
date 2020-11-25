@@ -190,4 +190,15 @@ public class PedidoWS
         }
     }
 
+    @WebMethod(operationName = "eliminarPedidoEnProceso")
+    public int eliminarPedidoEnProceso(@WebParam(name = "idPedido") int idPedido){
+        int resultado = 0;
+        try{
+            resultado = daoPedido.eliminarPedidoEnProceso(idPedido);
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+    }
 }
