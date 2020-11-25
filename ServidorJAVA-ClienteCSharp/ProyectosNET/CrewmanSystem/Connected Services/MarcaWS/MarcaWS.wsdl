@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/MarcaWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="insertarMarca">
-    <part name="parameters" element="tns:insertarMarca" />
+  <message name="listarMarcas">
+    <part name="parameters" element="tns:listarMarcas" />
   </message>
-  <message name="insertarMarcaResponse">
-    <part name="parameters" element="tns:insertarMarcaResponse" />
+  <message name="listarMarcasResponse">
+    <part name="parameters" element="tns:listarMarcasResponse" />
   </message>
   <message name="eliminarMarca">
     <part name="parameters" element="tns:eliminarMarca" />
@@ -17,39 +17,39 @@
   <message name="eliminarMarcaResponse">
     <part name="parameters" element="tns:eliminarMarcaResponse" />
   </message>
-  <message name="listarMarcas">
-    <part name="parameters" element="tns:listarMarcas" />
-  </message>
-  <message name="listarMarcasResponse">
-    <part name="parameters" element="tns:listarMarcasResponse" />
-  </message>
   <message name="actualizarMarca">
     <part name="parameters" element="tns:actualizarMarca" />
   </message>
   <message name="actualizarMarcaResponse">
     <part name="parameters" element="tns:actualizarMarcaResponse" />
   </message>
+  <message name="insertarMarca">
+    <part name="parameters" element="tns:insertarMarca" />
+  </message>
+  <message name="insertarMarcaResponse">
+    <part name="parameters" element="tns:insertarMarcaResponse" />
+  </message>
   <portType name="MarcaWS">
-    <operation name="insertarMarca">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/insertarMarcaRequest" message="tns:insertarMarca" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/insertarMarcaResponse" message="tns:insertarMarcaResponse" />
+    <operation name="listarMarcas">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/listarMarcasRequest" message="tns:listarMarcas" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/listarMarcasResponse" message="tns:listarMarcasResponse" />
     </operation>
     <operation name="eliminarMarca">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/eliminarMarcaRequest" message="tns:eliminarMarca" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/eliminarMarcaResponse" message="tns:eliminarMarcaResponse" />
     </operation>
-    <operation name="listarMarcas">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/listarMarcasRequest" message="tns:listarMarcas" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/listarMarcasResponse" message="tns:listarMarcasResponse" />
-    </operation>
     <operation name="actualizarMarca">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/actualizarMarcaRequest" message="tns:actualizarMarca" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/actualizarMarcaResponse" message="tns:actualizarMarcaResponse" />
     </operation>
+    <operation name="insertarMarca">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/insertarMarcaRequest" message="tns:insertarMarca" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/MarcaWS/insertarMarcaResponse" message="tns:insertarMarcaResponse" />
+    </operation>
   </portType>
   <binding name="MarcaWSPortBinding" type="tns:MarcaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarMarca">
+    <operation name="listarMarcas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -67,7 +67,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarMarcas">
+    <operation name="actualizarMarca">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +76,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarMarca">
+    <operation name="insertarMarca">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

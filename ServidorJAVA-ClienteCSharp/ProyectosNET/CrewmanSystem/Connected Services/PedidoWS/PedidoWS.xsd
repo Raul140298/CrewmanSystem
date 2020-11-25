@@ -9,6 +9,8 @@
   <xs:element name="culminarPedido" type="tns:culminarPedido" />
   <xs:element name="culminarPedidoResponse" type="tns:culminarPedidoResponse" />
   <xs:element name="eliminarPedido" type="tns:eliminarPedido" />
+  <xs:element name="eliminarPedidoEnProceso" type="tns:eliminarPedidoEnProceso" />
+  <xs:element name="eliminarPedidoEnProcesoResponse" type="tns:eliminarPedidoEnProcesoResponse" />
   <xs:element name="eliminarPedidoResponse" type="tns:eliminarPedidoResponse" />
   <xs:element name="generarReporte" type="tns:generarReporte" />
   <xs:element name="generarReporteResponse" type="tns:generarReporteResponse" />
@@ -338,16 +340,6 @@
   <xs:complexType name="anularResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="obtenerPedido">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerPedidoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarTotal">
     <xs:sequence>
       <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
@@ -378,12 +370,42 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="eliminarPedidoEnProceso">
+    <xs:sequence>
+      <xs:element name="idPedido" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPedidoEnProcesoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="actualizarPedido">
     <xs:sequence>
       <xs:element minOccurs="0" name="lineaPedido" type="tns:pedido" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarPedidoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lineaPedido" type="tns:pedido" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPedidoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPedidoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -419,16 +441,6 @@
   </xs:complexType>
   <xs:complexType name="mostrarPedidoResponse">
     <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="insertarPedido">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="lineaPedido" type="tns:pedido" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarPedidoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="estadoPedido">
     <xs:restriction base="xs:string">

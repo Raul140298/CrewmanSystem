@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Date;
 import pe.edu.pucp.CrewmanSystem.dao.NotaDeCreditoDAO;
 import pe.edu.pucp.CrewmanSystem.model.NotaDeCredito;
 import pe.edu.pucp.CrewmanSystem.model.Pedido;
@@ -24,13 +25,13 @@ public class FacturaMySQL implements FacturaDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            String sql ="{ call INSERTAR_FACTURA(?,?,?,?,?,?,?)}";
+            String sql ="{ call INSERTAR_FACTURA(?,?,?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_FACTURA", java.sql.Types.INTEGER);
-            cs.setInt("_ID_PEDIDO", factura.getIdFactura());
+            cs.setInt("_ID_PEDIDO", factura.getPedido().getIdPedido());
             cs.setDouble("_MONTO", factura.getMonto());
             cs.setString("_OBSERVACION", factura.getObservacion());
-            cs.setDate("_FECHA_EMISION", new java.sql.Date(factura.getFechaEmision().getTime()));
+            cs.setDate("_FECHA_EMISION", new java.sql.Date(new Date().getTime()));
             cs.setDate("_FECHA_VENCIMIENTO", new java.sql.Date(factura.getFechaVencimiento().getTime()));
             cs.setDouble("_IMPUESTOS", factura.getImpuestos());
             cs.setBoolean("_ESTADO_PAGAR", factura.getEstadoPagar());

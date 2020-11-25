@@ -99,7 +99,7 @@
             this.dtpEmision.Name = "dtpEmision";
             this.dtpEmision.Size = new System.Drawing.Size(434, 22);
             this.dtpEmision.TabIndex = 90;
-            this.dtpEmision.Value = new System.DateTime(2020, 11, 4, 9, 52, 39, 0);
+            this.dtpEmision.Value = new System.DateTime(2020, 11, 24, 0, 0, 0, 0);
             // 
             // txtMonto
             // 
@@ -128,6 +128,8 @@
             // 
             // txtImpuestos
             // 
+            this.txtImpuestos.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtImpuestos.Enabled = false;
             this.txtImpuestos.Location = new System.Drawing.Point(244, 337);
             this.txtImpuestos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtImpuestos.Name = "txtImpuestos";

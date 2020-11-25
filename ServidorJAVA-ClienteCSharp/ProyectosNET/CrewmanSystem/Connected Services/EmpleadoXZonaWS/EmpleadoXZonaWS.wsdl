@@ -5,31 +5,31 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/EmpleadoXZonaWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="eliminarEmpleadoXZona">
-    <part name="parameters" element="tns:eliminarEmpleadoXZona" />
-  </message>
-  <message name="eliminarEmpleadoXZonaResponse">
-    <part name="parameters" element="tns:eliminarEmpleadoXZonaResponse" />
-  </message>
   <message name="insertarEmpleadoXZona">
     <part name="parameters" element="tns:insertarEmpleadoXZona" />
   </message>
   <message name="insertarEmpleadoXZonaResponse">
     <part name="parameters" element="tns:insertarEmpleadoXZonaResponse" />
   </message>
+  <message name="eliminarEmpleadoXZona">
+    <part name="parameters" element="tns:eliminarEmpleadoXZona" />
+  </message>
+  <message name="eliminarEmpleadoXZonaResponse">
+    <part name="parameters" element="tns:eliminarEmpleadoXZonaResponse" />
+  </message>
   <portType name="EmpleadoXZonaWS">
-    <operation name="eliminarEmpleadoXZona">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoXZonaWS/eliminarEmpleadoXZonaRequest" message="tns:eliminarEmpleadoXZona" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoXZonaWS/eliminarEmpleadoXZonaResponse" message="tns:eliminarEmpleadoXZonaResponse" />
-    </operation>
     <operation name="insertarEmpleadoXZona">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoXZonaWS/insertarEmpleadoXZonaRequest" message="tns:insertarEmpleadoXZona" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoXZonaWS/insertarEmpleadoXZonaResponse" message="tns:insertarEmpleadoXZonaResponse" />
     </operation>
+    <operation name="eliminarEmpleadoXZona">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoXZonaWS/eliminarEmpleadoXZonaRequest" message="tns:eliminarEmpleadoXZona" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoXZonaWS/eliminarEmpleadoXZonaResponse" message="tns:eliminarEmpleadoXZonaResponse" />
+    </operation>
   </portType>
   <binding name="EmpleadoXZonaWSPortBinding" type="tns:EmpleadoXZonaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="eliminarEmpleadoXZona">
+    <operation name="insertarEmpleadoXZona">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -38,7 +38,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarEmpleadoXZona">
+    <operation name="eliminarEmpleadoXZona">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
