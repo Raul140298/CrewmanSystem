@@ -16,7 +16,7 @@ namespace CrewmanSystem
 		ZonaWS.ZonaWSClient daoZona;
 		public static EmpleadoWS.empleado empleadoSeleccionado;
 		public static DataGridView dgv;
-
+		private BindingList<ZonaWS.zona> misZonas;
 		public frmBuscarEmpleado()
 		{
 			InitializeComponent();
@@ -24,28 +24,22 @@ namespace CrewmanSystem
 			BindingList<ZonaWS.zona> misZonas;
 			daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
 			daoZona = new ZonaWS.ZonaWSClient();
-			ZonaWS.zona[] listaZonas=daoZona.listarZonas();
+			
+			misZonas = new BindingList<ZonaWS.zona>(daoZona.listarZonas().ToList());
+			
 			ZonaWS.zona zonaDefault = new ZonaWS.zona();
 			zonaDefault.idZona = 0;
 			zonaDefault.nombre = "Cualquiera";
-
-			if (listaZonas == null)
+			
+			if (misZonas == null)
 			{
-				ZonaWS.zona[] listaZonas2 = new ZonaWS.zona[1];
-				listaZonas2[0] = zonaDefault;
-				cboZona.DataSource = new BindingList<ZonaWS.zona>(listaZonas2);
+				misZonas = new BindingList<ZonaWS.zona>();
+				misZonas.Add(zonaDefault);
+				cboZona.DataSource = new BindingList<ZonaWS.zona>(misZonas);
 			}
 			else
 			{
-	
-				ZonaWS.zona[] listaZonas2 = new ZonaWS.zona[listaZonas.Length + 1];
-				listaZonas2[0] = zonaDefault;
-				for (int i = 0; i < listaZonas.Length; i++)
-				{
-					listaZonas2[i + 1] = listaZonas[i];
-				}
-				misZonas = new BindingList<ZonaWS.zona>(listaZonas2);
-
+				misZonas.Insert(0, zonaDefault);
 				cboZona.DataSource = misZonas;
 				
 			}
