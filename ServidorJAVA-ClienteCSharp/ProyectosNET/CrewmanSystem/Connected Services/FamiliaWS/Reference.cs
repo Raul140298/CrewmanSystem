@@ -16,15 +16,6 @@ namespace CrewmanSystem.FamiliaWS {
     public interface FamiliaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/actualizarFamiliaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/actualizarFamiliaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.FamiliaWS.actualizarFamiliaResponse actualizarFamilia(CrewmanSystem.FamiliaWS.actualizarFamiliaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/actualizarFamiliaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/actualizarFamiliaResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.FamiliaWS.actualizarFamiliaResponse> actualizarFamiliaAsync(CrewmanSystem.FamiliaWS.actualizarFamiliaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/eliminarFamiliaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/eliminarFamiliaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -32,6 +23,15 @@ namespace CrewmanSystem.FamiliaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/eliminarFamiliaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/eliminarFamiliaResponse")]
         System.Threading.Tasks.Task<CrewmanSystem.FamiliaWS.eliminarFamiliaResponse> eliminarFamiliaAsync(CrewmanSystem.FamiliaWS.eliminarFamiliaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/listarFamiliasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/listarFamiliasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.FamiliaWS.listarFamiliasResponse listarFamilias(CrewmanSystem.FamiliaWS.listarFamiliasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/listarFamiliasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/listarFamiliasResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.FamiliaWS.listarFamiliasResponse> listarFamiliasAsync(CrewmanSystem.FamiliaWS.listarFamiliasRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/insertarFamiliaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/insertarFamiliaResponse")]
@@ -43,17 +43,53 @@ namespace CrewmanSystem.FamiliaWS {
         System.Threading.Tasks.Task<CrewmanSystem.FamiliaWS.insertarFamiliaResponse> insertarFamiliaAsync(CrewmanSystem.FamiliaWS.insertarFamiliaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/listarFamiliasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/listarFamiliasResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/actualizarFamiliaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/actualizarFamiliaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.FamiliaWS.listarFamiliasResponse listarFamilias(CrewmanSystem.FamiliaWS.listarFamiliasRequest request);
+        CrewmanSystem.FamiliaWS.actualizarFamiliaResponse actualizarFamilia(CrewmanSystem.FamiliaWS.actualizarFamiliaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/listarFamiliasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/listarFamiliasResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.FamiliaWS.listarFamiliasResponse> listarFamiliasAsync(CrewmanSystem.FamiliaWS.listarFamiliasRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/actualizarFamiliaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FamiliaWS/actualizarFamiliaResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.FamiliaWS.actualizarFamiliaResponse> actualizarFamiliaAsync(CrewmanSystem.FamiliaWS.actualizarFamiliaRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarFamilia", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarFamiliaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idFamilia;
+        
+        public eliminarFamiliaRequest() {
+        }
+        
+        public eliminarFamiliaRequest(int idFamilia) {
+            this.idFamilia = idFamilia;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarFamiliaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarFamiliaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarFamiliaResponse() {
+        }
+        
+        public eliminarFamiliaResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -115,71 +151,27 @@ namespace CrewmanSystem.FamiliaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarFamilia", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarFamiliaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFamilias", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarFamiliasRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.FamiliaWS.familia familia;
-        
-        public actualizarFamiliaRequest() {
-        }
-        
-        public actualizarFamiliaRequest(CrewmanSystem.FamiliaWS.familia familia) {
-            this.familia = familia;
+        public listarFamiliasRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarFamiliaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarFamiliaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFamiliasResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarFamiliasResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.FamiliaWS.familia[] @return;
         
-        public actualizarFamiliaResponse() {
+        public listarFamiliasResponse() {
         }
         
-        public actualizarFamiliaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarFamilia", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarFamiliaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idFamilia;
-        
-        public eliminarFamiliaRequest() {
-        }
-        
-        public eliminarFamiliaRequest(int idFamilia) {
-            this.idFamilia = idFamilia;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarFamiliaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarFamiliaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarFamiliaResponse() {
-        }
-        
-        public eliminarFamiliaResponse(int @return) {
+        public listarFamiliasResponse(CrewmanSystem.FamiliaWS.familia[] @return) {
             this.@return = @return;
         }
     }
@@ -223,27 +215,35 @@ namespace CrewmanSystem.FamiliaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFamilias", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarFamiliasRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarFamilia", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarFamiliaRequest {
         
-        public listarFamiliasRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.FamiliaWS.familia familia;
+        
+        public actualizarFamiliaRequest() {
+        }
+        
+        public actualizarFamiliaRequest(CrewmanSystem.FamiliaWS.familia familia) {
+            this.familia = familia;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFamiliasResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarFamiliasResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarFamiliaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarFamiliaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.FamiliaWS.familia[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarFamiliasResponse() {
+        public actualizarFamiliaResponse() {
         }
         
-        public listarFamiliasResponse(CrewmanSystem.FamiliaWS.familia[] @return) {
+        public actualizarFamiliaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -276,29 +276,6 @@ namespace CrewmanSystem.FamiliaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.FamiliaWS.actualizarFamiliaResponse CrewmanSystem.FamiliaWS.FamiliaWS.actualizarFamilia(CrewmanSystem.FamiliaWS.actualizarFamiliaRequest request) {
-            return base.Channel.actualizarFamilia(request);
-        }
-        
-        public int actualizarFamilia(CrewmanSystem.FamiliaWS.familia familia) {
-            CrewmanSystem.FamiliaWS.actualizarFamiliaRequest inValue = new CrewmanSystem.FamiliaWS.actualizarFamiliaRequest();
-            inValue.familia = familia;
-            CrewmanSystem.FamiliaWS.actualizarFamiliaResponse retVal = ((CrewmanSystem.FamiliaWS.FamiliaWS)(this)).actualizarFamilia(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.FamiliaWS.actualizarFamiliaResponse> CrewmanSystem.FamiliaWS.FamiliaWS.actualizarFamiliaAsync(CrewmanSystem.FamiliaWS.actualizarFamiliaRequest request) {
-            return base.Channel.actualizarFamiliaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.FamiliaWS.actualizarFamiliaResponse> actualizarFamiliaAsync(CrewmanSystem.FamiliaWS.familia familia) {
-            CrewmanSystem.FamiliaWS.actualizarFamiliaRequest inValue = new CrewmanSystem.FamiliaWS.actualizarFamiliaRequest();
-            inValue.familia = familia;
-            return ((CrewmanSystem.FamiliaWS.FamiliaWS)(this)).actualizarFamiliaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CrewmanSystem.FamiliaWS.eliminarFamiliaResponse CrewmanSystem.FamiliaWS.FamiliaWS.eliminarFamilia(CrewmanSystem.FamiliaWS.eliminarFamiliaRequest request) {
             return base.Channel.eliminarFamilia(request);
         }
@@ -319,6 +296,27 @@ namespace CrewmanSystem.FamiliaWS {
             CrewmanSystem.FamiliaWS.eliminarFamiliaRequest inValue = new CrewmanSystem.FamiliaWS.eliminarFamiliaRequest();
             inValue.idFamilia = idFamilia;
             return ((CrewmanSystem.FamiliaWS.FamiliaWS)(this)).eliminarFamiliaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.FamiliaWS.listarFamiliasResponse CrewmanSystem.FamiliaWS.FamiliaWS.listarFamilias(CrewmanSystem.FamiliaWS.listarFamiliasRequest request) {
+            return base.Channel.listarFamilias(request);
+        }
+        
+        public CrewmanSystem.FamiliaWS.familia[] listarFamilias() {
+            CrewmanSystem.FamiliaWS.listarFamiliasRequest inValue = new CrewmanSystem.FamiliaWS.listarFamiliasRequest();
+            CrewmanSystem.FamiliaWS.listarFamiliasResponse retVal = ((CrewmanSystem.FamiliaWS.FamiliaWS)(this)).listarFamilias(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.FamiliaWS.listarFamiliasResponse> CrewmanSystem.FamiliaWS.FamiliaWS.listarFamiliasAsync(CrewmanSystem.FamiliaWS.listarFamiliasRequest request) {
+            return base.Channel.listarFamiliasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.FamiliaWS.listarFamiliasResponse> listarFamiliasAsync() {
+            CrewmanSystem.FamiliaWS.listarFamiliasRequest inValue = new CrewmanSystem.FamiliaWS.listarFamiliasRequest();
+            return ((CrewmanSystem.FamiliaWS.FamiliaWS)(this)).listarFamiliasAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -345,24 +343,26 @@ namespace CrewmanSystem.FamiliaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.FamiliaWS.listarFamiliasResponse CrewmanSystem.FamiliaWS.FamiliaWS.listarFamilias(CrewmanSystem.FamiliaWS.listarFamiliasRequest request) {
-            return base.Channel.listarFamilias(request);
+        CrewmanSystem.FamiliaWS.actualizarFamiliaResponse CrewmanSystem.FamiliaWS.FamiliaWS.actualizarFamilia(CrewmanSystem.FamiliaWS.actualizarFamiliaRequest request) {
+            return base.Channel.actualizarFamilia(request);
         }
         
-        public CrewmanSystem.FamiliaWS.familia[] listarFamilias() {
-            CrewmanSystem.FamiliaWS.listarFamiliasRequest inValue = new CrewmanSystem.FamiliaWS.listarFamiliasRequest();
-            CrewmanSystem.FamiliaWS.listarFamiliasResponse retVal = ((CrewmanSystem.FamiliaWS.FamiliaWS)(this)).listarFamilias(inValue);
+        public int actualizarFamilia(CrewmanSystem.FamiliaWS.familia familia) {
+            CrewmanSystem.FamiliaWS.actualizarFamiliaRequest inValue = new CrewmanSystem.FamiliaWS.actualizarFamiliaRequest();
+            inValue.familia = familia;
+            CrewmanSystem.FamiliaWS.actualizarFamiliaResponse retVal = ((CrewmanSystem.FamiliaWS.FamiliaWS)(this)).actualizarFamilia(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.FamiliaWS.listarFamiliasResponse> CrewmanSystem.FamiliaWS.FamiliaWS.listarFamiliasAsync(CrewmanSystem.FamiliaWS.listarFamiliasRequest request) {
-            return base.Channel.listarFamiliasAsync(request);
+        System.Threading.Tasks.Task<CrewmanSystem.FamiliaWS.actualizarFamiliaResponse> CrewmanSystem.FamiliaWS.FamiliaWS.actualizarFamiliaAsync(CrewmanSystem.FamiliaWS.actualizarFamiliaRequest request) {
+            return base.Channel.actualizarFamiliaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CrewmanSystem.FamiliaWS.listarFamiliasResponse> listarFamiliasAsync() {
-            CrewmanSystem.FamiliaWS.listarFamiliasRequest inValue = new CrewmanSystem.FamiliaWS.listarFamiliasRequest();
-            return ((CrewmanSystem.FamiliaWS.FamiliaWS)(this)).listarFamiliasAsync(inValue);
+        public System.Threading.Tasks.Task<CrewmanSystem.FamiliaWS.actualizarFamiliaResponse> actualizarFamiliaAsync(CrewmanSystem.FamiliaWS.familia familia) {
+            CrewmanSystem.FamiliaWS.actualizarFamiliaRequest inValue = new CrewmanSystem.FamiliaWS.actualizarFamiliaRequest();
+            inValue.familia = familia;
+            return ((CrewmanSystem.FamiliaWS.FamiliaWS)(this)).actualizarFamiliaAsync(inValue);
         }
     }
 }

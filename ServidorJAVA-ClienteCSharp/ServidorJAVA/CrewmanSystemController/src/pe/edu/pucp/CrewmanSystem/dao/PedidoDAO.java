@@ -18,4 +18,5 @@ public interface PedidoDAO
     int culminarPedido(Pedido pedido);
     void anular(Pedido pedido);
     void mostrar(Pedido pedido);
+    int eliminarPedidoEnProceso(int idPedido);
 }

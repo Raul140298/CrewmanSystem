@@ -247,11 +247,13 @@ public class PedidoMySQL implements PedidoDAO{
         int resultado = 0;
         double total = 0;
         try{
+            LineaPedidoDAO daoLinea = new LineaPedidoMySQL();
+            ArrayList<LineaPedido> lineas = daoLinea.listar(pedido.getIdPedido());
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             con.setAutoCommit(false);
             String sql;
-            for(LineaPedido lp : pedido.getLineasPedidos()){
+            for(LineaPedido lp : lineas){
                 sql ="{ call APROBAR_LINEA(?,?,?,?,?)}";
                 cs = con.prepareCall(sql);
                 cs.registerOutParameter("_SUBTOTAL", java.sql.Types.DOUBLE);
@@ -366,6 +368,62 @@ public class PedidoMySQL implements PedidoDAO{
             cs = con.prepareCall(sql);
             cs.setInt("_ID_PEDIDO", pedido.getIdPedido());
             resultado = cs.executeUpdate();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return resultado;
+    }
+    
+    @Override
+    public int eliminarPedidoEnProceso(int idPedido){
+        int resultado = 0;
+        try{
+            LineaPedidoDAO daoLinea = new LineaPedidoMySQL();
+            ArrayList<LineaPedido> lineas = daoLinea.listar(idPedido);
+            FacturaDAO daoFactura = new FacturaMySQL();
+            ArrayList<Factura> facturas = daoFactura.listar(idPedido);
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            con.setAutoCommit(false);
+            String sql;
+            for(LineaPedido lp : lineas){
+                sql ="{ call LIBERAR_LINEA(?,?,?,?)}";
+                cs = con.prepareCall(sql);
+                cs.setInt("_ID_PRODUCTOXZONA", lp.getProductoXZona().getIdProductoXZona());
+                cs.setInt("_CANTIDAD", lp.getCantidad());
+                cs.setInt("_ID_PROMOCIONXPRODUCTO", lp.getPromocionXProducto().getIdPromocionXProducto());
+                cs.setInt("_CANTIDAD_PROMO", lp.getCantidadPromo());
+                resultado = cs.executeUpdate();
+                if(resultado == 0)return 0;
+            }
+            for(Factura f : facturas){
+                sql ="{ call ELIMINAR_FACTURA (?)}";
+                cs = con.prepareCall(sql);
+                cs.setInt("_ID_FACTURA", f.getIdFactura());
+                resultado=cs.executeUpdate();
+                if(resultado == 0)return 0;
+                
+                sql ="{ call INSERTAR_NOTADECREDITO(?,?,?,?)}";
+                cs = con.prepareCall(sql);
+                cs.registerOutParameter("_ID_NOTA_DE_CREDITO", java.sql.Types.INTEGER);
+                cs.setInt("_ID_FACTURA", f.getIdFactura());
+                cs.setDate("_FECHA_CREACION", new java.sql.Date(new Date().getTime()));
+                cs.setDouble("_MONTO", f.getMonto());
+                cs.executeUpdate();
+                resultado = cs.getInt("_ID_NOTA_DE_CREDITO");
+                if(resultado == 0)return 0;
+            }
+            sql ="{ call ELIMINAR_PEDIDO (?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_PEDIDO", idPedido);
+            resultado=cs.executeUpdate();
+            con.commit();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{

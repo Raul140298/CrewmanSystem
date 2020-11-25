@@ -5,31 +5,31 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/PromocionXProductoWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="insertarPromocionXProducto">
-    <part name="parameters" element="tns:insertarPromocionXProducto" />
-  </message>
-  <message name="insertarPromocionXProductoResponse">
-    <part name="parameters" element="tns:insertarPromocionXProductoResponse" />
-  </message>
   <message name="listarPromocionXProducto">
     <part name="parameters" element="tns:listarPromocionXProducto" />
   </message>
   <message name="listarPromocionXProductoResponse">
     <part name="parameters" element="tns:listarPromocionXProductoResponse" />
   </message>
+  <message name="insertarPromocionXProducto">
+    <part name="parameters" element="tns:insertarPromocionXProducto" />
+  </message>
+  <message name="insertarPromocionXProductoResponse">
+    <part name="parameters" element="tns:insertarPromocionXProductoResponse" />
+  </message>
   <portType name="PromocionXProductoWS">
-    <operation name="insertarPromocionXProducto">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionXProductoWS/insertarPromocionXProductoRequest" message="tns:insertarPromocionXProducto" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionXProductoWS/insertarPromocionXProductoResponse" message="tns:insertarPromocionXProductoResponse" />
-    </operation>
     <operation name="listarPromocionXProducto">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionXProductoWS/listarPromocionXProductoRequest" message="tns:listarPromocionXProducto" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionXProductoWS/listarPromocionXProductoResponse" message="tns:listarPromocionXProductoResponse" />
     </operation>
+    <operation name="insertarPromocionXProducto">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionXProductoWS/insertarPromocionXProductoRequest" message="tns:insertarPromocionXProducto" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PromocionXProductoWS/insertarPromocionXProductoResponse" message="tns:insertarPromocionXProductoResponse" />
+    </operation>
   </portType>
   <binding name="PromocionXProductoWSPortBinding" type="tns:PromocionXProductoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarPromocionXProducto">
+    <operation name="listarPromocionXProducto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -38,7 +38,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarPromocionXProducto">
+    <operation name="insertarPromocionXProducto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

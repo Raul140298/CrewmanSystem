@@ -913,6 +913,9 @@
     <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.culminarPedidoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.eliminarPedidoEnProcesoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.eliminarPedidoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
