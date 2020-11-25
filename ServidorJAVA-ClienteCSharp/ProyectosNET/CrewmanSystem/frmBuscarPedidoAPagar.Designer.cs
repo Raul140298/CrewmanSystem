@@ -29,9 +29,23 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.dtpRangoFin = new System.Windows.Forms.DateTimePicker();
+            this.dtpRangoIni = new System.Windows.Forms.DateTimePicker();
+            this.txtCliente = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,16 +55,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIPO_PEDIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnBuscarCliente = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.dtpRangoFin = new System.Windows.Forms.DateTimePicker();
-            this.dtpRangoIni = new System.Windows.Forms.DateTimePicker();
-            this.txtCliente = new System.Windows.Forms.TextBox();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -92,104 +96,24 @@
             this.dgvPedidos.Name = "dgvPedidos";
             this.dgvPedidos.ReadOnly = true;
             this.dgvPedidos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedidos.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPedidos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPedidos.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvPedidos.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvPedidos.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvPedidos.RowTemplate.Height = 24;
             this.dgvPedidos.Size = new System.Drawing.Size(800, 274);
             this.dgvPedidos.TabIndex = 51;
             this.dgvPedidos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPedidos_CellFormatting);
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "idPedido";
-            this.ID.HeaderText = "Id";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 50;
-            // 
-            // CLIENTE
-            // 
-            this.CLIENTE.HeaderText = "Cliente";
-            this.CLIENTE.MinimumWidth = 6;
-            this.CLIENTE.Name = "CLIENTE";
-            this.CLIENTE.ReadOnly = true;
-            this.CLIENTE.Width = 89;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "fechaAprobado";
-            this.Column1.HeaderText = "Fecha Aprobado";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 159;
-            // 
-            // FECHA_ESTIMADA
-            // 
-            this.FECHA_ESTIMADA.DataPropertyName = "fechaEstim";
-            this.FECHA_ESTIMADA.HeaderText = "Fecha Estimada";
-            this.FECHA_ESTIMADA.MinimumWidth = 6;
-            this.FECHA_ESTIMADA.Name = "FECHA_ESTIMADA";
-            this.FECHA_ESTIMADA.ReadOnly = true;
-            this.FECHA_ESTIMADA.Width = 158;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "montoTotal";
-            this.Column2.HeaderText = "Monto Total";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 125;
-            // 
-            // MONTO_PAGAR
-            // 
-            this.MONTO_PAGAR.DataPropertyName = "montoPagar";
-            this.MONTO_PAGAR.HeaderText = "Monto a Pagar";
-            this.MONTO_PAGAR.MinimumWidth = 6;
-            this.MONTO_PAGAR.Name = "MONTO_PAGAR";
-            this.MONTO_PAGAR.ReadOnly = true;
-            this.MONTO_PAGAR.Width = 146;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "direccionEntrega";
-            this.Column3.HeaderText = "Dir. de Entrega";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
-            // 
-            // TIPO_PEDIDO
-            // 
-            this.TIPO_PEDIDO.DataPropertyName = "tipoPedido";
-            this.TIPO_PEDIDO.HeaderText = "Tipo ";
-            this.TIPO_PEDIDO.MinimumWidth = 6;
-            this.TIPO_PEDIDO.Name = "TIPO_PEDIDO";
-            this.TIPO_PEDIDO.ReadOnly = true;
-            this.TIPO_PEDIDO.Width = 69;
-            // 
-            // ESTADO
-            // 
-            this.ESTADO.DataPropertyName = "estadoPedido";
-            this.ESTADO.HeaderText = "Estado";
-            this.ESTADO.MinimumWidth = 6;
-            this.ESTADO.Name = "ESTADO";
-            this.ESTADO.ReadOnly = true;
-            this.ESTADO.Width = 89;
             // 
             // panel1
             // 
@@ -207,6 +131,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 176);
             this.panel1.TabIndex = 50;
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnSeleccionar.FlatAppearance.BorderSize = 0;
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
+            this.btnSeleccionar.Location = new System.Drawing.Point(499, 76);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(160, 30);
+            this.btnSeleccionar.TabIndex = 89;
+            this.btnSeleccionar.Text = "SELECCIONAR";
+            this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // label4
             // 
@@ -291,19 +229,95 @@
             this.txtCliente.Size = new System.Drawing.Size(199, 22);
             this.txtCliente.TabIndex = 46;
             // 
-            // btnSeleccionar
+            // ID
             // 
-            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnSeleccionar.FlatAppearance.BorderSize = 0;
-            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.Location = new System.Drawing.Point(499, 76);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(160, 30);
-            this.btnSeleccionar.TabIndex = 89;
-            this.btnSeleccionar.Text = "SELECCIONAR";
-            this.btnSeleccionar.UseVisualStyleBackColor = false;
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            this.ID.DataPropertyName = "idPedido";
+            this.ID.HeaderText = "Id";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 50;
+            // 
+            // CLIENTE
+            // 
+            this.CLIENTE.HeaderText = "Cliente";
+            this.CLIENTE.MinimumWidth = 6;
+            this.CLIENTE.Name = "CLIENTE";
+            this.CLIENTE.ReadOnly = true;
+            this.CLIENTE.Width = 89;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "fechaAprobado";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column1.HeaderText = "Fecha Aprobado";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 159;
+            // 
+            // FECHA_ESTIMADA
+            // 
+            this.FECHA_ESTIMADA.DataPropertyName = "fechaEstim";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_ESTIMADA.DefaultCellStyle = dataGridViewCellStyle3;
+            this.FECHA_ESTIMADA.HeaderText = "Fecha Estimada";
+            this.FECHA_ESTIMADA.MinimumWidth = 6;
+            this.FECHA_ESTIMADA.Name = "FECHA_ESTIMADA";
+            this.FECHA_ESTIMADA.ReadOnly = true;
+            this.FECHA_ESTIMADA.Width = 158;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "montoTotal";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Format = "N2";
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column2.HeaderText = "Monto Total";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
+            // 
+            // MONTO_PAGAR
+            // 
+            this.MONTO_PAGAR.DataPropertyName = "montoPagar";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "N2";
+            this.MONTO_PAGAR.DefaultCellStyle = dataGridViewCellStyle5;
+            this.MONTO_PAGAR.HeaderText = "Monto a Pagar";
+            this.MONTO_PAGAR.MinimumWidth = 6;
+            this.MONTO_PAGAR.Name = "MONTO_PAGAR";
+            this.MONTO_PAGAR.ReadOnly = true;
+            this.MONTO_PAGAR.Width = 146;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "direccionEntrega";
+            this.Column3.HeaderText = "Dir. de Entrega";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // TIPO_PEDIDO
+            // 
+            this.TIPO_PEDIDO.DataPropertyName = "tipoPedido";
+            this.TIPO_PEDIDO.HeaderText = "Tipo ";
+            this.TIPO_PEDIDO.MinimumWidth = 6;
+            this.TIPO_PEDIDO.Name = "TIPO_PEDIDO";
+            this.TIPO_PEDIDO.ReadOnly = true;
+            this.TIPO_PEDIDO.Width = 69;
+            // 
+            // ESTADO
+            // 
+            this.ESTADO.DataPropertyName = "estadoPedido";
+            this.ESTADO.HeaderText = "Estado";
+            this.ESTADO.MinimumWidth = 6;
+            this.ESTADO.Name = "ESTADO";
+            this.ESTADO.ReadOnly = true;
+            this.ESTADO.Width = 89;
             // 
             // frmBuscarPedidoAPagar
             // 
@@ -324,15 +338,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvPedidos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CLIENTE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ESTIMADA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MONTO_PAGAR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_PEDIDO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnBuscarCliente;
@@ -343,5 +348,14 @@
         private System.Windows.Forms.DateTimePicker dtpRangoIni;
         private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Button btnSeleccionar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CLIENTE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ESTIMADA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MONTO_PAGAR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_PEDIDO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
     }
 }

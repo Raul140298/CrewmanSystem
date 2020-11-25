@@ -44,6 +44,16 @@ namespace CrewmanSystem.VisitaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/insertarVisitaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/insertarVisitaResponse")]
         System.Threading.Tasks.Task<CrewmanSystem.VisitaWS.insertarVisitaResponse> insertarVisitaAsync(CrewmanSystem.VisitaWS.insertarVisitaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/registrarVisitaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/registrarVisitaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.VisitaWS.registrarVisitaResponse registrarVisita(CrewmanSystem.VisitaWS.registrarVisitaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/registrarVisitaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/registrarVisitaResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.VisitaWS.registrarVisitaResponse> registrarVisitaAsync(CrewmanSystem.VisitaWS.registrarVisitaRequest request);
     }
     
     /// <remarks/>
@@ -3476,6 +3486,42 @@ namespace CrewmanSystem.VisitaWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarVisita", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class registrarVisitaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idVisita;
+        
+        public registrarVisitaRequest() {
+        }
+        
+        public registrarVisitaRequest(int idVisita) {
+            this.idVisita = idVisita;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarVisitaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class registrarVisitaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public registrarVisitaResponse() {
+        }
+        
+        public registrarVisitaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface VisitaWSChannel : CrewmanSystem.VisitaWS.VisitaWS, System.ServiceModel.IClientChannel {
     }
@@ -3570,6 +3616,29 @@ namespace CrewmanSystem.VisitaWS {
             CrewmanSystem.VisitaWS.insertarVisitaRequest inValue = new CrewmanSystem.VisitaWS.insertarVisitaRequest();
             inValue.visita = visita;
             return ((CrewmanSystem.VisitaWS.VisitaWS)(this)).insertarVisitaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.VisitaWS.registrarVisitaResponse CrewmanSystem.VisitaWS.VisitaWS.registrarVisita(CrewmanSystem.VisitaWS.registrarVisitaRequest request) {
+            return base.Channel.registrarVisita(request);
+        }
+        
+        public int registrarVisita(int idVisita) {
+            CrewmanSystem.VisitaWS.registrarVisitaRequest inValue = new CrewmanSystem.VisitaWS.registrarVisitaRequest();
+            inValue.idVisita = idVisita;
+            CrewmanSystem.VisitaWS.registrarVisitaResponse retVal = ((CrewmanSystem.VisitaWS.VisitaWS)(this)).registrarVisita(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.VisitaWS.registrarVisitaResponse> CrewmanSystem.VisitaWS.VisitaWS.registrarVisitaAsync(CrewmanSystem.VisitaWS.registrarVisitaRequest request) {
+            return base.Channel.registrarVisitaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.VisitaWS.registrarVisitaResponse> registrarVisitaAsync(int idVisita) {
+            CrewmanSystem.VisitaWS.registrarVisitaRequest inValue = new CrewmanSystem.VisitaWS.registrarVisitaRequest();
+            inValue.idVisita = idVisita;
+            return ((CrewmanSystem.VisitaWS.VisitaWS)(this)).registrarVisitaAsync(inValue);
         }
     }
 }
