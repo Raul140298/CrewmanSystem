@@ -16,5 +16,18 @@ namespace CrewmanSystem
         {
             InitializeComponent();
         }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Close();
+            this.DialogResult = DialogResult.OK;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Close();
+        }
     }
 }

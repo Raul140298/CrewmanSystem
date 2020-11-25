@@ -156,7 +156,7 @@ public class Main{
 //        cartera.getListaVisita().add(v2);
 //        daoCartera.actualizar(cartera);
         
-//        int resultado = daoVisita.registrar();
+        int resultado = daoVisita.registrar(22);
 
 //        Pedido pedido = new Pedido();
 //        pedido.setIdPedido(56);

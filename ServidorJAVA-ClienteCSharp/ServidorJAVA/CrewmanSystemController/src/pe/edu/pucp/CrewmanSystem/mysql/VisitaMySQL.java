@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Date;
 import pe.edu.pucp.CrewmanSystem.config.DBManager;
 import pe.edu.pucp.CrewmanSystem.dao.VisitaDAO;
 import pe.edu.pucp.CrewmanSystem.model.Cliente;
@@ -105,9 +106,10 @@ public class VisitaMySQL implements VisitaDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            String sql ="{ call REGISTRAR_VISITA(?)}";
+            String sql ="{ call REGISTRAR_VISITA(?,?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_VISITA", idVisita);
+            cs.setDate("_FECHA_VISITA", new java.sql.Date(new Date().getTime()));
             resultado = cs.executeUpdate();
         }catch(Exception ex){
             System.out.println(ex.getMessage());

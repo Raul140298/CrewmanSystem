@@ -19,6 +19,11 @@ namespace CrewmanSystem
         {
             InitializeComponent();
             daoVisita = new VisitaWS.VisitaWSClient();
+            completarVisita();
+        }
+
+        private void completarVisita()
+        {
             VisitaWS.visita[] visitas = daoVisita.listarVisitas(Program.empleado.cartera.idCartera);
             if (visitas == null || visitas.Length < 1) misVisitas = new BindingList<VisitaWS.visita>();
             else misVisitas = new BindingList<VisitaWS.visita>(visitas);
@@ -30,7 +35,6 @@ namespace CrewmanSystem
         {
             VisitaWS.visita v = dgvVisitas.Rows[e.RowIndex].DataBoundItem as VisitaWS.visita;
 
-            dgvVisitas.Rows[e.RowIndex].Cells["ID"].Value = v.idVisita;
             dgvVisitas.Rows[e.RowIndex].Cells["RUC"].Value = v.cliente.ruc;
             dgvVisitas.Rows[e.RowIndex].Cells["RAZON_SOCIAL"].Value = v.cliente.razonSocial;
             dgvVisitas.Rows[e.RowIndex].Cells["GRUPO"].Value = v.cliente.grupo;
@@ -61,12 +65,7 @@ namespace CrewmanSystem
             if (e.ColumnIndex == 11)
             {
                 bool estadoPrevio = (bool)dgvVisitas.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
-                if (estadoPrevio)
-                {
-                    //Evita desmarcar un checkbox -> no contemplamos borrar una visita
-                    MessageBox.Show("NO ACTUALIZAR VISITA");
-                }
-                else
+                if (!estadoPrevio)
                 {
                     frmConfirmarVisita formConfirmarVisita = new frmConfirmarVisita();
                     if (formConfirmarVisita.ShowDialog() == DialogResult.OK)
@@ -79,6 +78,7 @@ namespace CrewmanSystem
                         else
                         {
                             MessageBox.Show("Se registró la visita correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            completarVisita();
                         }
                     }
                 }
