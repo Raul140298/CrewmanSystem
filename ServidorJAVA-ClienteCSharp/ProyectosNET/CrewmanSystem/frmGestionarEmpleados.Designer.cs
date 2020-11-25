@@ -39,8 +39,8 @@
             this.APELLIDO_PATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.APELLIDO_MATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OBJETIVO_VENTAS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SUMA_VENTAS_MENSUAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OBJETIVO_VENTAS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,8 +69,8 @@
             this.APELLIDO_PATERNO,
             this.APELLIDO_MATERNO,
             this.ZONA,
-            this.OBJETIVO_VENTAS,
-            this.SUMA_VENTAS_MENSUAL});
+            this.SUMA_VENTAS_MENSUAL,
+            this.OBJETIVO_VENTAS});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
@@ -145,29 +145,29 @@
             this.ZONA.ReadOnly = true;
             this.ZONA.Width = 73;
             // 
-            // OBJETIVO_VENTAS
-            // 
-            this.OBJETIVO_VENTAS.DataPropertyName = "objetivoVentas";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Format = "N2";
-            this.OBJETIVO_VENTAS.DefaultCellStyle = dataGridViewCellStyle2;
-            this.OBJETIVO_VENTAS.HeaderText = "Objetivo Ventas";
-            this.OBJETIVO_VENTAS.MinimumWidth = 6;
-            this.OBJETIVO_VENTAS.Name = "OBJETIVO_VENTAS";
-            this.OBJETIVO_VENTAS.ReadOnly = true;
-            this.OBJETIVO_VENTAS.Width = 155;
-            // 
             // SUMA_VENTAS_MENSUAL
             // 
             this.SUMA_VENTAS_MENSUAL.DataPropertyName = "sumVentas";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "N2";
-            this.SUMA_VENTAS_MENSUAL.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Format = "N2";
+            this.SUMA_VENTAS_MENSUAL.DefaultCellStyle = dataGridViewCellStyle2;
             this.SUMA_VENTAS_MENSUAL.HeaderText = "Suma Ventas";
             this.SUMA_VENTAS_MENSUAL.MinimumWidth = 6;
             this.SUMA_VENTAS_MENSUAL.Name = "SUMA_VENTAS_MENSUAL";
             this.SUMA_VENTAS_MENSUAL.ReadOnly = true;
             this.SUMA_VENTAS_MENSUAL.Width = 137;
+            // 
+            // OBJETIVO_VENTAS
+            // 
+            this.OBJETIVO_VENTAS.DataPropertyName = "objetivoVentas";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Format = "N2";
+            this.OBJETIVO_VENTAS.DefaultCellStyle = dataGridViewCellStyle3;
+            this.OBJETIVO_VENTAS.HeaderText = "Objetivo Ventas";
+            this.OBJETIVO_VENTAS.MinimumWidth = 6;
+            this.OBJETIVO_VENTAS.Name = "OBJETIVO_VENTAS";
+            this.OBJETIVO_VENTAS.ReadOnly = true;
+            this.OBJETIVO_VENTAS.Width = 155;
             // 
             // frmGestionarEmpleados
             // 
@@ -191,7 +191,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_PATERNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_MATERNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OBJETIVO_VENTAS;
         private System.Windows.Forms.DataGridViewTextBoxColumn SUMA_VENTAS_MENSUAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OBJETIVO_VENTAS;
     }
 }

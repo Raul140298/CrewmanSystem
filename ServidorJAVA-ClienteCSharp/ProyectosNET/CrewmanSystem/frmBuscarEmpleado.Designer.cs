@@ -49,6 +49,7 @@
             this.apellidoMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SUMA_VENTAS_MENSUAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OBJETIVO_VENTAS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -185,7 +186,8 @@
             this.apellidoPaterno,
             this.apellidoMaterno,
             this.ZONA,
-            this.SUMA_VENTAS_MENSUAL});
+            this.SUMA_VENTAS_MENSUAL,
+            this.OBJETIVO_VENTAS});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
@@ -272,6 +274,15 @@
             this.SUMA_VENTAS_MENSUAL.ReadOnly = true;
             this.SUMA_VENTAS_MENSUAL.Width = 137;
             // 
+            // OBJETIVO_VENTAS
+            // 
+            this.OBJETIVO_VENTAS.DataPropertyName = "objetivoVentas";
+            this.OBJETIVO_VENTAS.HeaderText = "Objetivo Ventas";
+            this.OBJETIVO_VENTAS.MinimumWidth = 6;
+            this.OBJETIVO_VENTAS.Name = "OBJETIVO_VENTAS";
+            this.OBJETIVO_VENTAS.ReadOnly = true;
+            this.OBJETIVO_VENTAS.Width = 155;
+            // 
             // frmBuscarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -308,5 +319,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoMaterno;
         private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
         private System.Windows.Forms.DataGridViewTextBoxColumn SUMA_VENTAS_MENSUAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OBJETIVO_VENTAS;
     }
 }
