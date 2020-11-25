@@ -665,7 +665,7 @@ public class Main{
         for(Factura f:misFacturas){
             System.out.print(f.getIdFactura()+" - "+f.getPedido().getIdPedido()+" - "+f.getObservacion()+" - "+f.getMonto()+" - "+
             f.getFechaEmision()+" - "+f.getFechaVencimiento()+" - ");
-            if(f.getEstadoPagar()) System.out.println("PAGADO");
+            if(f.isEstadoPagar()) System.out.println("PAGADO");
             else System.out.println("FALTA PAGAR");
         } 
             

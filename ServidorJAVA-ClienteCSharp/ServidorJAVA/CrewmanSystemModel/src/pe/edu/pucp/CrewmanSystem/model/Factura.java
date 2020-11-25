@@ -102,14 +102,6 @@ public class Factura{
         this.anulado = anulado;
     }
 
-    public boolean getEstadoPagar() {
-        return estadoPagar;
-    }
-
-    public void setEstadoPagar(boolean estadoPagar) {
-        this.estadoPagar = estadoPagar;
-    }
-
     public Pedido getPedido() {
         return pedido;
     }
@@ -132,6 +124,14 @@ public class Factura{
 
     public void setListaNotaDeCredito(ArrayList<NotaDeCredito> listaNotaDeCredito) {
         this.listaNotaDeCredito = listaNotaDeCredito;
+    }
+
+    public boolean isEstadoPagar() {
+        return estadoPagar;
+    }
+
+    public void setEstadoPagar(boolean estadoPagar) {
+        this.estadoPagar = estadoPagar;
     }
     
     

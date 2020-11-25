@@ -71,19 +71,25 @@ namespace CrewmanSystem
                 factura.monto = Convert.ToDouble(txtMonto.Text);
                 factura.observacion = txtObservacion.Text;
                 factura.fechaVencimiento = dtpVencimiento.Value;
-                factura.impuestos = Math.Round(factura.monto * 0.18,2);
+                factura.fechaVencimientoSpecified = true;
+                factura.impuestos = Math.Round(factura.monto * 0.18, 2);
                 txtImpuestos.Text = factura.impuestos.ToString();
                 if (cboEstadoPagar.Text == "PAGADO")
-                {
                     factura.estadoPagar = true;
+                else
+                    factura.estadoPagar = false;
+                
+                int resultado = daoFactura.insertarFactura(factura);
+                if(resultado == 0)
+                {
+                    MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    factura.estadoPagar = false;
+                    MessageBox.Show("Se insertó correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIdFactura.Text = resultado.ToString();
+                    txtMontoPendiente.Text = (Convert.ToDouble(txtMontoPendiente.Text) - Convert.ToDouble(txtMonto.Text)).ToString();
                 }
-                int idFactura = daoFactura.insertarFactura(factura);
-                txtIdFactura.Text = idFactura.ToString();
-                txtMontoPendiente.Text = (Convert.ToDouble(txtMontoPendiente.Text) - Convert.ToDouble(txtMonto.Text)).ToString();
             }
         }
 
