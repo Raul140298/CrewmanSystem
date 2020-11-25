@@ -63,11 +63,24 @@ namespace CrewmanSystem
                 bool estadoPrevio = (bool)dgvVisitas.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
                 if (estadoPrevio)
                 {
+                    //Evita desmarcar un checkbox -> no contemplamos borrar una visita
                     MessageBox.Show("NO ACTUALIZAR VISITA");
                 }
                 else
                 {
-                    MessageBox.Show("ACTUALIZAR VISITA");
+                    frmConfirmarVisita formConfirmarVisita = new frmConfirmarVisita();
+                    if (formConfirmarVisita.ShowDialog() == DialogResult.OK)
+                    {
+                        int resultado = daoVisita.registrarVisita((int)dgvVisitas.Rows[e.RowIndex].Cells["ID"].Value);
+                        if (resultado == 0)
+                        {
+                            MessageBox.Show("No se registró la visita correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Se registró la visita correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
                 }
             }
         }

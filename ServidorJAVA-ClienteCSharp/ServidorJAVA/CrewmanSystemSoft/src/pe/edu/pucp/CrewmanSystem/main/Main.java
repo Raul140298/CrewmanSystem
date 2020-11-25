@@ -156,16 +156,18 @@ public class Main{
 //        cartera.getListaVisita().add(v2);
 //        daoCartera.actualizar(cartera);
         
-        Pedido pedido = new Pedido();
-        pedido.setIdPedido(56);
-        misLineasDePedido = daoLineaPedido.listar(pedido.getIdPedido());
-        pedido.setLineasPedidos(misLineasDePedido);
-        try{
-            pedido.setFechaEstim(sdf.parse("01-01-2021"));
-        }catch(Exception e){
-            System.out.println("MAL");
-        }
-        daoPedido.aprobarBorrador(pedido);
+//        int resultado = daoVisita.registrar();
+
+//        Pedido pedido = new Pedido();
+//        pedido.setIdPedido(56);
+//        misLineasDePedido = daoLineaPedido.listar(pedido.getIdPedido());
+//        pedido.setLineasPedidos(misLineasDePedido);
+//        try{
+//            pedido.setFechaEstim(sdf.parse("01-01-2021"));
+//        }catch(Exception e){
+//            System.out.println("MAL");
+//        }
+//        daoPedido.aprobarBorrador(pedido);
         //Empleado empleado = daoEmpleado.permitirAccesoEmpleado("sofi1", "sofi1");
         //misClientes=daoCliente.listarConCartera("", "", empleado.getCartera().getIdCartera());
     }

@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/VisitaWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="listarVisitas">
-    <part name="parameters" element="tns:listarVisitas" />
+  <message name="registrarVisita">
+    <part name="parameters" element="tns:registrarVisita" />
   </message>
-  <message name="listarVisitasResponse">
-    <part name="parameters" element="tns:listarVisitasResponse" />
+  <message name="registrarVisitaResponse">
+    <part name="parameters" element="tns:registrarVisitaResponse" />
   </message>
   <message name="insertarVisita">
     <part name="parameters" element="tns:insertarVisita" />
@@ -17,19 +17,29 @@
   <message name="insertarVisitaResponse">
     <part name="parameters" element="tns:insertarVisitaResponse" />
   </message>
+  <message name="listarVisitas">
+    <part name="parameters" element="tns:listarVisitas" />
+  </message>
+  <message name="listarVisitasResponse">
+    <part name="parameters" element="tns:listarVisitasResponse" />
+  </message>
   <portType name="VisitaWS">
-    <operation name="listarVisitas">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/listarVisitasRequest" message="tns:listarVisitas" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/listarVisitasResponse" message="tns:listarVisitasResponse" />
+    <operation name="registrarVisita">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/registrarVisitaRequest" message="tns:registrarVisita" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/registrarVisitaResponse" message="tns:registrarVisitaResponse" />
     </operation>
     <operation name="insertarVisita">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/insertarVisitaRequest" message="tns:insertarVisita" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/insertarVisitaResponse" message="tns:insertarVisitaResponse" />
     </operation>
+    <operation name="listarVisitas">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/listarVisitasRequest" message="tns:listarVisitas" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/listarVisitasResponse" message="tns:listarVisitasResponse" />
+    </operation>
   </portType>
   <binding name="VisitaWSPortBinding" type="tns:VisitaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarVisitas">
+    <operation name="registrarVisita">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -39,6 +49,15 @@
       </output>
     </operation>
     <operation name="insertarVisita">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarVisitas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
