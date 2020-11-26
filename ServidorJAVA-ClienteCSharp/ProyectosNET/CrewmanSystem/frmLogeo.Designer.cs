@@ -282,11 +282,11 @@
 			// 
 			this.lblVersion.AutoSize = true;
 			this.lblVersion.ForeColor = System.Drawing.SystemColors.GrayText;
-			this.lblVersion.Location = new System.Drawing.Point(339, 273);
+			this.lblVersion.Location = new System.Drawing.Point(325, 273);
 			this.lblVersion.Name = "lblVersion";
-			this.lblVersion.Size = new System.Drawing.Size(47, 17);
+			this.lblVersion.Size = new System.Drawing.Size(63, 17);
 			this.lblVersion.TabIndex = 27;
-			this.lblVersion.Text = "v4.0.0";
+			this.lblVersion.Text = "v7.11.26";
 			// 
 			// btnIngresar
 			// 
