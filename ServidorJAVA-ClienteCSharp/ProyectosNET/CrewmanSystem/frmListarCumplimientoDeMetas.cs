@@ -27,6 +27,17 @@ namespace CrewmanSystem
 			else misEmpleados = new BindingList<EmpleadoWS.empleado>(empleados);
 			dgvEmpleados.AutoGenerateColumns = false;
 			dgvEmpleados.DataSource = misEmpleados;
+
+			#region colores de seleccion
+			dgvEmpleados.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvEmpleados.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+			dgvEmpleados.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvEmpleados.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+			dgvEmpleados.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvEmpleados.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			#endregion
 		}
 
 		private void circularProgressBar1_Click(object sender, EventArgs e)
