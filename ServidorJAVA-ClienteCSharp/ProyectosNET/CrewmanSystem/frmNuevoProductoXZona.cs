@@ -140,9 +140,7 @@ namespace CrewmanSystem
             if (formEliminar.ShowDialog() == DialogResult.OK)
             {
                 int indice = dgvProducto.CurrentRow.Index;
-                dgvProducto.DataSource = new BindingList<ProductoWS.producto>();
                 misProductoXZona.RemoveAt(indice);
-                dgvProducto.DataSource = misProductoXZona;
             }
         }
 
@@ -154,13 +152,20 @@ namespace CrewmanSystem
 
         private void dgvProductoXZona_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            ProductoXZonaWS.productoXZona pxz = dgvProducto.Rows[e.RowIndex].DataBoundItem
+            try
+            {
+                ProductoXZonaWS.productoXZona pxz = dgvProducto.Rows[e.RowIndex].DataBoundItem
                 as ProductoXZonaWS.productoXZona;
 
-            dgvProducto.Rows[e.RowIndex].Cells["NRO"].Value = e.RowIndex + 1;
-            dgvProducto.Rows[e.RowIndex].Cells["PRODUCTO"].Value = pxz.producto.nombre;
-            dgvProducto.Rows[e.RowIndex].Cells["CANT_UNIDADES"].Value = pxz.producto.cantUnidad;
-            dgvProducto.Rows[e.RowIndex].Cells["UNIDADES"].Value = pxz.producto.unidades;
+                dgvProducto.Rows[e.RowIndex].Cells["NRO"].Value = e.RowIndex + 1;
+                dgvProducto.Rows[e.RowIndex].Cells["PRODUCTO"].Value = pxz.producto.nombre;
+                dgvProducto.Rows[e.RowIndex].Cells["CANT_UNIDADES"].Value = pxz.producto.cantUnidad;
+                dgvProducto.Rows[e.RowIndex].Cells["UNIDADES"].Value = pxz.producto.unidades;
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }
