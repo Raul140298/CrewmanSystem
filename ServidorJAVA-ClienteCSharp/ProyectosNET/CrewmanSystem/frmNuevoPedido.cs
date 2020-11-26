@@ -40,6 +40,8 @@ namespace CrewmanSystem
                 {
                     gboPedido.Enabled = true;
                     gboLineaPedido.Enabled = false;
+                    txtDireccion.BackColor = SystemColors.InactiveCaption;
+                    txtCantidad.BackColor = SystemColors.InactiveCaption;
                     gboCliente.Enabled = false;
                 }
                 //OBTENER DATOS DE FILA SELECCIONADA
