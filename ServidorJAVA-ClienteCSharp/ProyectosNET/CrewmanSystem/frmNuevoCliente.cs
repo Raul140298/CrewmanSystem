@@ -155,12 +155,11 @@ namespace CrewmanSystem
                 PersonaContactoWS.personaContacto personaContacto = new PersonaContactoWS.personaContacto();
                 cliente.ruc = txtRuc.Text;
                 cliente.razonSocial = txtRazonSocial.Text;
-                cliente.fechaRegistro = DateTime.Now;
                 cliente.grupo = txtGrupo.Text;
                 cliente.direccion = txtDireccion.Text;
                 cliente.zona = new ClienteWS.zona();
                 cliente.zona.idZona = ((ZonaWS.zona) cboZona.SelectedItem).idZona;
-                //PENDIENTE REVISIOM -> VOTO PARA SACARLO
+                //PENDIENTE REVISION -> VOTO PARA SACARLO
                 cliente.lineaCredito = new ClienteWS.lineaCredito();
                 cliente.lineaCredito.idLineaCredito = 0;
 
