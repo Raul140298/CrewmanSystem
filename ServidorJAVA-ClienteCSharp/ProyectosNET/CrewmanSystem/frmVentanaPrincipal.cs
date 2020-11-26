@@ -576,6 +576,14 @@ namespace CrewmanSystem
 					MessageBox.Show("Error: El formulario aún no existe");
 					break;
 			}
+			if (boton == 3)
+			{
+				Program.pantallas.Last().N = Program.pantallas[Program.pantallas.Count - 2].N;
+				Program.pantallas.Last().A = Program.pantallas[Program.pantallas.Count - 2].A;
+				Program.pantallas.Last().E = Program.pantallas[Program.pantallas.Count - 2].E;
+				Program.pantallas.Last().B = Program.pantallas[Program.pantallas.Count - 2].B;
+				Program.pantallas.Last().F = Program.pantallas[Program.pantallas.Count - 2].F;
+			}
 			ActivaBoton(Program.pantallas.Last());
 		}
 		#endregion

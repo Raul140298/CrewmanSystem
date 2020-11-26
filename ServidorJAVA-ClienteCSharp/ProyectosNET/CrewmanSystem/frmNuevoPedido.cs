@@ -71,6 +71,17 @@ namespace CrewmanSystem
                 }
                 completarTabla();
             }
+
+            #region colores de seleccion
+            dgvLineas.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvLineas.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+            dgvLineas.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvLineas.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+            dgvLineas.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvLineas.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+            #endregion
         }
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)

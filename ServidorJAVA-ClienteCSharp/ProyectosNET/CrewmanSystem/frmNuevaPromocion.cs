@@ -77,6 +77,17 @@ namespace CrewmanSystem
                 misPromocionXProducto = new BindingList<PromocionXProductoWS.promocionXProducto>();
                 cargarTabla();
             }
+
+            #region colores de seleccion
+            dgvPromocionXProducto.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvPromocionXProducto.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+            dgvPromocionXProducto.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvPromocionXProducto.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+            dgvPromocionXProducto.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvPromocionXProducto.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+            #endregion
         }
 
         private void btnBuscarProducto_Click(object sender, EventArgs e)
