@@ -50,7 +50,7 @@
             this.CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_ESTIMADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MONTO_TOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MONTO_PAGAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIPO_PEDIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,7 +83,7 @@
             this.CLIENTE,
             this.Column1,
             this.FECHA_ESTIMADA,
-            this.Column2,
+            this.MONTO_TOTAL,
             this.MONTO_PAGAR,
             this.Column3,
             this.TIPO_PEDIDO,
@@ -268,17 +268,17 @@
             this.FECHA_ESTIMADA.ReadOnly = true;
             this.FECHA_ESTIMADA.Width = 158;
             // 
-            // Column2
+            // MONTO_TOTAL
             // 
-            this.Column2.DataPropertyName = "montoTotal";
+            this.MONTO_TOTAL.DataPropertyName = "montoTotal";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.Format = "N2";
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column2.HeaderText = "Monto Total";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 125;
+            this.MONTO_TOTAL.DefaultCellStyle = dataGridViewCellStyle4;
+            this.MONTO_TOTAL.HeaderText = "Monto Total";
+            this.MONTO_TOTAL.MinimumWidth = 6;
+            this.MONTO_TOTAL.Name = "MONTO_TOTAL";
+            this.MONTO_TOTAL.ReadOnly = true;
+            this.MONTO_TOTAL.Width = 125;
             // 
             // MONTO_PAGAR
             // 
@@ -352,7 +352,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CLIENTE;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ESTIMADA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MONTO_TOTAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn MONTO_PAGAR;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_PEDIDO;
