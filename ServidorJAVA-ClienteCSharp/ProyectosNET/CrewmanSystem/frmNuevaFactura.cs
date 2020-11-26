@@ -100,7 +100,7 @@ namespace CrewmanSystem
             {
                 pedidoSeleccionado = frmBuscarPedidoAPagar.pedidoSeleccionado;
                 txtIdPedido.Text = pedidoSeleccionado.idPedido.ToString();
-                txtMontoPendiente.Text = pedidoSeleccionado.montoPagar.ToString();
+                txtMontoPendiente.Text = pedidoSeleccionado.montoPagar.ToString("###,###.00");
             }
         }
 
