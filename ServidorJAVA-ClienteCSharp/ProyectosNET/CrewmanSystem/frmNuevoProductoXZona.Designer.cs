@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbZona = new System.Windows.Forms.GroupBox();
             this.cboZona = new System.Windows.Forms.ComboBox();
             this.lblNombreZona = new System.Windows.Forms.Label();
@@ -107,6 +109,7 @@
             // 
             // txtNombreProducto
             // 
+            this.txtNombreProducto.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtNombreProducto.Location = new System.Drawing.Point(167, 41);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(231, 22);
@@ -151,6 +154,7 @@
             // 
             // txtUnidades
             // 
+            this.txtUnidades.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtUnidades.Enabled = false;
             this.txtUnidades.Location = new System.Drawing.Point(378, 78);
             this.txtUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -180,6 +184,7 @@
             // 
             // txtCantUnidades
             // 
+            this.txtCantUnidades.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtCantUnidades.Enabled = false;
             this.txtCantUnidades.Location = new System.Drawing.Point(167, 78);
             this.txtCantUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -199,6 +204,7 @@
             // 
             // txtPrecioSugerido
             // 
+            this.txtPrecioSugerido.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtPrecioSugerido.Enabled = false;
             this.txtPrecioSugerido.Location = new System.Drawing.Point(167, 116);
             this.txtPrecioSugerido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -303,14 +309,14 @@
             this.dgvProducto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dgvProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProducto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(4)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(4)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProducto.ColumnHeadersHeight = 30;
             this.dgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvProducto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -367,6 +373,9 @@
             // 
             // CANT_UNIDADES
             // 
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.CANT_UNIDADES.DefaultCellStyle = dataGridViewCellStyle2;
             this.CANT_UNIDADES.HeaderText = "Cant. Unidades";
             this.CANT_UNIDADES.MinimumWidth = 6;
             this.CANT_UNIDADES.Name = "CANT_UNIDADES";
@@ -384,6 +393,9 @@
             // PRECIO_REAL
             // 
             this.PRECIO_REAL.DataPropertyName = "precioReal";
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.PRECIO_REAL.DefaultCellStyle = dataGridViewCellStyle3;
             this.PRECIO_REAL.HeaderText = "Precio Real";
             this.PRECIO_REAL.MinimumWidth = 6;
             this.PRECIO_REAL.Name = "PRECIO_REAL";

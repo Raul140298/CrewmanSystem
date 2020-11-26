@@ -123,6 +123,8 @@
             // CANT_UNIDADES
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
             this.CANT_UNIDADES.DefaultCellStyle = dataGridViewCellStyle2;
             this.CANT_UNIDADES.HeaderText = "Cant. Unidades";
             this.CANT_UNIDADES.MinimumWidth = 6;

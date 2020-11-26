@@ -110,7 +110,7 @@ namespace CrewmanSystem
             dgvLineas.DataSource = null;
             dgvLineas.AutoGenerateColumns = false;
             dgvLineas.DataSource = lineas;
-            txtMontoTotal.Text = montoTotal.ToString();
+            txtMontoTotal.Text = montoTotal.ToString("n2");
         }
 
         private void btnBuscarProductoXZona_Click(object sender, EventArgs e)
@@ -126,7 +126,7 @@ namespace CrewmanSystem
                 productoXZonaSeleccionado = frmBuscarProductoPorZona.productoXZonaSeleccionado;
                 txtIdProducto.Text = productoXZonaSeleccionado.idProductoXZona.ToString();
                 txtNombreProducto.Text = productoXZonaSeleccionado.producto.nombre;
-                txtPrecioUnitario.Text = productoXZonaSeleccionado.precioReal.ToString();
+                txtPrecioUnitario.Text = productoXZonaSeleccionado.precioReal.ToString("n2");
             }
         }
 
