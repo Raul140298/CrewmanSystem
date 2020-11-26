@@ -576,6 +576,14 @@ namespace CrewmanSystem
 					MessageBox.Show("Error: El formulario aún no existe");
 					break;
 			}
+			if (boton == 3)
+			{
+				Program.pantallas.Last().N = Program.pantallas[Program.pantallas.Count - 2].N;
+				Program.pantallas.Last().A = Program.pantallas[Program.pantallas.Count - 2].A;
+				Program.pantallas.Last().E = Program.pantallas[Program.pantallas.Count - 2].E;
+				Program.pantallas.Last().B = Program.pantallas[Program.pantallas.Count - 2].B;
+				Program.pantallas.Last().F = Program.pantallas[Program.pantallas.Count - 2].F;
+			}
 			ActivaBoton(Program.pantallas.Last());
 		}
 		#endregion
@@ -594,7 +602,7 @@ namespace CrewmanSystem
 
 		private void btnSubfamilia_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarSubfamilias(),true, true, true, false, false);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarSubfamilias(),true, true, true, true, false);
 		}
 
 		private void btnProducto_Click(object sender, EventArgs e)
@@ -644,11 +652,6 @@ namespace CrewmanSystem
 		private void btnEmpleados_Click(object sender, EventArgs e)
 		{
 			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarEmpleados(), true, true, true, true, true);
-		}
-
-		private void btnRutas_Click(object sender, EventArgs e)
-		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarRutas(), false, false, false, false, false);
 		}
 
 		private void btnCarteras_Click(object sender, EventArgs e)
