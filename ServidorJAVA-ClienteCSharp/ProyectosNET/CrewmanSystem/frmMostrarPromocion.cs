@@ -39,6 +39,17 @@ namespace CrewmanSystem
                 dgvPromocionXProducto.DataSource = new BindingList<PromocionXProductoWS.promocionXProducto>();
             else
                 dgvPromocionXProducto.DataSource = new BindingList<PromocionXProductoWS.promocionXProducto>(listaPromocionXProducto);
+            
+            #region colores de seleccion
+            dgvPromocionXProducto.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvPromocionXProducto.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+            dgvPromocionXProducto.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvPromocionXProducto.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+            dgvPromocionXProducto.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvPromocionXProducto.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+            #endregion
         }
 
         private void dgvPromocionXProducto_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

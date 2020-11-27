@@ -20,6 +20,17 @@ namespace CrewmanSystem
             InitializeComponent();
             daoVisita = new VisitaWS.VisitaWSClient();
             completarVisita();
+
+            #region colores de seleccion
+            dgvVisitas.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvVisitas.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+            dgvVisitas.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvVisitas.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+            dgvVisitas.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvVisitas.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+            #endregion
         }
 
         private void completarVisita()

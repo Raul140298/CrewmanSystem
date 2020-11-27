@@ -73,7 +73,7 @@ namespace CrewmanSystem
                 factura.fechaVencimiento = dtpVencimiento.Value;
                 factura.fechaVencimientoSpecified = true;
                 factura.impuestos = Math.Round(factura.monto * 0.18, 2);
-                txtImpuestos.Text = factura.impuestos.ToString();
+                txtImpuestos.Text = factura.impuestos.ToString("n2");
                 if (cboEstadoPagar.Text == "PAGADO")
                     factura.estadoPagar = true;
                 else
@@ -100,7 +100,7 @@ namespace CrewmanSystem
             {
                 pedidoSeleccionado = frmBuscarPedidoAPagar.pedidoSeleccionado;
                 txtIdPedido.Text = pedidoSeleccionado.idPedido.ToString();
-                txtMontoPendiente.Text = pedidoSeleccionado.montoPagar.ToString();
+                txtMontoPendiente.Text = pedidoSeleccionado.montoPagar.ToString("n2");
             }
         }
 

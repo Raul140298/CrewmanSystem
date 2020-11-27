@@ -28,17 +28,14 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvLineas = new System.Windows.Forms.DataGridView();
-            this.IDPRODUCTOXZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -48,6 +45,8 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.gboPedido = new System.Windows.Forms.GroupBox();
+            this.dtpFechaEstimada = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.txtIDOrdenVenta = new System.Windows.Forms.TextBox();
@@ -74,8 +73,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtpFechaEstimada = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
+            this.IDPRODUCTOXZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLineas)).BeginInit();
@@ -118,14 +120,14 @@
             this.dgvLineas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dgvLineas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvLineas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLineas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLineas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLineas.ColumnHeadersHeight = 30;
             this.dgvLineas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvLineas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -141,66 +143,24 @@
             this.dgvLineas.Name = "dgvLineas";
             this.dgvLineas.ReadOnly = true;
             this.dgvLineas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLineas.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvLineas.RowHeadersWidth = 51;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLineas.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvLineas.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvLineas.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvLineas.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvLineas.RowTemplate.Height = 24;
             this.dgvLineas.Size = new System.Drawing.Size(778, 242);
             this.dgvLineas.TabIndex = 98;
             this.dgvLineas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvLineas_CellFormatting);
-            // 
-            // IDPRODUCTOXZONA
-            // 
-            this.IDPRODUCTOXZONA.HeaderText = "Id";
-            this.IDPRODUCTOXZONA.MinimumWidth = 6;
-            this.IDPRODUCTOXZONA.Name = "IDPRODUCTOXZONA";
-            this.IDPRODUCTOXZONA.ReadOnly = true;
-            this.IDPRODUCTOXZONA.Width = 50;
-            // 
-            // NOMBRE
-            // 
-            this.NOMBRE.HeaderText = "Nombre Producto";
-            this.NOMBRE.MinimumWidth = 6;
-            this.NOMBRE.Name = "NOMBRE";
-            this.NOMBRE.ReadOnly = true;
-            this.NOMBRE.Width = 168;
-            // 
-            // PRECIO
-            // 
-            this.PRECIO.HeaderText = "Precio Unit.";
-            this.PRECIO.MinimumWidth = 6;
-            this.PRECIO.Name = "PRECIO";
-            this.PRECIO.ReadOnly = true;
-            this.PRECIO.Width = 124;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "cantidad";
-            this.Column3.HeaderText = "Cant.";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 76;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "montoSubTotal";
-            this.Column4.HeaderText = "Subtotal";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 98;
             // 
             // panel5
             // 
@@ -302,6 +262,24 @@
             this.gboPedido.TabIndex = 97;
             this.gboPedido.TabStop = false;
             this.gboPedido.Text = "Datos de la Orden de Venta";
+            // 
+            // dtpFechaEstimada
+            // 
+            this.dtpFechaEstimada.Location = new System.Drawing.Point(185, 115);
+            this.dtpFechaEstimada.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpFechaEstimada.Name = "dtpFechaEstimada";
+            this.dtpFechaEstimada.Size = new System.Drawing.Size(434, 22);
+            this.dtpFechaEstimada.TabIndex = 93;
+            // 
+            // label12
+            // 
+            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label12.Location = new System.Drawing.Point(5, 115);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(174, 22);
+            this.label12.TabIndex = 92;
+            this.label12.Text = "Fecha estimada :";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label11
             // 
@@ -415,6 +393,7 @@
             // 
             // txtRazonSocial
             // 
+            this.txtRazonSocial.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtRazonSocial.Enabled = false;
             this.txtRazonSocial.Location = new System.Drawing.Point(183, 73);
             this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -424,6 +403,7 @@
             // 
             // txtRucCliente
             // 
+            this.txtRucCliente.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtRucCliente.Enabled = false;
             this.txtRucCliente.Location = new System.Drawing.Point(183, 28);
             this.txtRucCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -534,6 +514,7 @@
             // 
             // txtPrecioUnitario
             // 
+            this.txtPrecioUnitario.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtPrecioUnitario.Enabled = false;
             this.txtPrecioUnitario.Location = new System.Drawing.Point(184, 126);
             this.txtPrecioUnitario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -543,6 +524,7 @@
             // 
             // txtNombreProducto
             // 
+            this.txtNombreProducto.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtNombreProducto.Enabled = false;
             this.txtNombreProducto.Location = new System.Drawing.Point(184, 73);
             this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -552,6 +534,7 @@
             // 
             // txtIdProducto
             // 
+            this.txtIdProducto.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtIdProducto.Enabled = false;
             this.txtIdProducto.Location = new System.Drawing.Point(184, 30);
             this.txtIdProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -599,23 +582,53 @@
             this.label1.Text = "Código del Producto :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // dtpFechaEstimada
+            // IDPRODUCTOXZONA
             // 
-            this.dtpFechaEstimada.Location = new System.Drawing.Point(185, 115);
-            this.dtpFechaEstimada.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpFechaEstimada.Name = "dtpFechaEstimada";
-            this.dtpFechaEstimada.Size = new System.Drawing.Size(434, 22);
-            this.dtpFechaEstimada.TabIndex = 93;
+            this.IDPRODUCTOXZONA.HeaderText = "Id";
+            this.IDPRODUCTOXZONA.MinimumWidth = 6;
+            this.IDPRODUCTOXZONA.Name = "IDPRODUCTOXZONA";
+            this.IDPRODUCTOXZONA.ReadOnly = true;
+            this.IDPRODUCTOXZONA.Width = 50;
             // 
-            // label12
+            // NOMBRE
             // 
-            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label12.Location = new System.Drawing.Point(5, 115);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(174, 22);
-            this.label12.TabIndex = 92;
-            this.label12.Text = "Fecha estimada :";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.NOMBRE.HeaderText = "Nombre Producto";
+            this.NOMBRE.MinimumWidth = 6;
+            this.NOMBRE.Name = "NOMBRE";
+            this.NOMBRE.ReadOnly = true;
+            this.NOMBRE.Width = 168;
+            // 
+            // PRECIO
+            // 
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.PRECIO.DefaultCellStyle = dataGridViewCellStyle2;
+            this.PRECIO.HeaderText = "Precio Unit.";
+            this.PRECIO.MinimumWidth = 6;
+            this.PRECIO.Name = "PRECIO";
+            this.PRECIO.ReadOnly = true;
+            this.PRECIO.Width = 124;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "cantidad";
+            this.Column3.HeaderText = "Cant.";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 76;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "montoSubTotal";
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column4.HeaderText = "Subtotal";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 98;
             // 
             // frmNuevoPedido
             // 
@@ -679,16 +692,16 @@
         private System.Windows.Forms.TextBox txtIdProducto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDPRODUCTOXZONA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cboEstado;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dtpFechaEstimada;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDPRODUCTOXZONA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

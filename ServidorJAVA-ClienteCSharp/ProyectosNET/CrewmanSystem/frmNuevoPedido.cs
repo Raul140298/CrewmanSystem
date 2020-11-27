@@ -40,6 +40,8 @@ namespace CrewmanSystem
                 {
                     gboPedido.Enabled = true;
                     gboLineaPedido.Enabled = false;
+                    txtDireccion.BackColor = SystemColors.InactiveCaption;
+                    txtCantidad.BackColor = SystemColors.InactiveCaption;
                     gboCliente.Enabled = false;
                 }
                 //OBTENER DATOS DE FILA SELECCIONADA
@@ -71,6 +73,17 @@ namespace CrewmanSystem
                 }
                 completarTabla();
             }
+
+            #region colores de seleccion
+            dgvLineas.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvLineas.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+            dgvLineas.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvLineas.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+            dgvLineas.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvLineas.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+            #endregion
         }
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
@@ -97,7 +110,7 @@ namespace CrewmanSystem
             dgvLineas.DataSource = null;
             dgvLineas.AutoGenerateColumns = false;
             dgvLineas.DataSource = lineas;
-            txtMontoTotal.Text = montoTotal.ToString();
+            txtMontoTotal.Text = montoTotal.ToString("n2");
         }
 
         private void btnBuscarProductoXZona_Click(object sender, EventArgs e)
@@ -113,7 +126,7 @@ namespace CrewmanSystem
                 productoXZonaSeleccionado = frmBuscarProductoPorZona.productoXZonaSeleccionado;
                 txtIdProducto.Text = productoXZonaSeleccionado.idProductoXZona.ToString();
                 txtNombreProducto.Text = productoXZonaSeleccionado.producto.nombre;
-                txtPrecioUnitario.Text = productoXZonaSeleccionado.precioReal.ToString();
+                txtPrecioUnitario.Text = productoXZonaSeleccionado.precioReal.ToString("n2");
             }
         }
 

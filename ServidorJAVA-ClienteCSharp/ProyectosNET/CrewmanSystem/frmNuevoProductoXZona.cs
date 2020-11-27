@@ -35,6 +35,17 @@ namespace CrewmanSystem
             txtUnidades.Enabled = false;
             misProductoXZona = new BindingList<ProductoXZonaWS.productoXZona>();
             cargarTabla();
+
+            #region colores de seleccion
+            dgvProducto.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvProducto.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+            dgvProducto.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvProducto.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+
+            dgvProducto.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvProducto.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+            #endregion
         }
 
         private void btnBuscarProducto_Click_1(object sender, EventArgs e)
