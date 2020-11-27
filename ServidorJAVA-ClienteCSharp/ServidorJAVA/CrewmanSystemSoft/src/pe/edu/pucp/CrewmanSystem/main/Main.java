@@ -156,8 +156,8 @@ public class Main{
 //        cartera.getListaVisita().add(v2);
 //        daoCartera.actualizar(cartera);
         
-        Pedido pedido = new Pedido();
-        pedido.setIdPedido(58);
+//        Pedido pedido = new Pedido();
+//        pedido.setIdPedido(58);
 //        misLineasDePedido = daoLineaPedido.listar(pedido.getIdPedido());
 //        pedido.setLineasPedidos(misLineasDePedido);
 //        try{
@@ -167,21 +167,27 @@ public class Main{
 //        }
 //        daoPedido.aprobarBorrador(pedido);
         
-        Factura factura = new Factura();
-        factura.setPedido(pedido);
-        factura.setMonto(10);
-        factura.setObservacion("Se pagó en el momento.");
-        try{
-            factura.setFechaVencimiento(sdf.parse("24-11-2020"));
-        }catch(Exception e){
-            System.out.println("MAL");
-        }
-        factura.setImpuestos(1.8);
-        factura.setEstadoPagar(true);
-        daoFactura.insertar(factura);
+//        Factura factura = new Factura();
+//        factura.setPedido(pedido);
+//        factura.setMonto(10);
+//        factura.setObservacion("Se pagó en el momento.");
+//        try{
+//            factura.setFechaVencimiento(sdf.parse("24-11-2020"));
+//        }catch(Exception e){
+//            System.out.println("MAL");
+//        }
+//        factura.setImpuestos(1.8);
+//        factura.setEstadoPagar(true);
+//        daoFactura.insertar(factura);
 //        daoPedido.eliminarPedidoEnProceso(56);
         //Empleado empleado = daoEmpleado.permitirAccesoEmpleado("sofi1", "sofi1");
         //misClientes=daoCliente.listarConCartera("", "", empleado.getCartera().getIdCartera());
+        
+        ArrayList<Integer> numClientes = daoEmpleado.obtenerNumClientes(21);
+        ArrayList<Integer> numVisitados = daoEmpleado.obtenerNumVisitados(21);
+        for(Integer in : numClientes) System.out.print(in.intValue());
+        System.out.println("");
+        for(Integer in : numVisitados) System.out.print(in.intValue());
     }
     
     private static void gestionarFamilias(){

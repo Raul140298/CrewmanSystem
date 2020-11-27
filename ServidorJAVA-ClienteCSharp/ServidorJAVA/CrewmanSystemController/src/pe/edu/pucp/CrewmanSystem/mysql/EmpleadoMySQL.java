@@ -13,9 +13,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import pe.edu.pucp.CrewmanSystem.dao.EmpleadoXZonaDAO;
 import pe.edu.pucp.CrewmanSystem.dao.PersonaDAO;
+import pe.edu.pucp.CrewmanSystem.dao.VisitaDAO;
 import pe.edu.pucp.CrewmanSystem.model.Cargo;
 import pe.edu.pucp.CrewmanSystem.model.EmpleadoXZona;
 import pe.edu.pucp.CrewmanSystem.model.Persona;
+import pe.edu.pucp.CrewmanSystem.model.Visita;
 import pe.edu.pucp.CrewmanSystem.model.Zona;
 
 public class EmpleadoMySQL implements EmpleadoDAO{
@@ -141,7 +143,7 @@ public class EmpleadoMySQL implements EmpleadoDAO{
     }
     
     @Override
-    public ArrayList<Empleado>listarPorJefeVentas(int idJefeVentas,String nombre,String apellidoPaterno,String apellidoMaterno){
+    public ArrayList<Empleado> listarPorJefeVentas(int idJefeVentas,String nombre,String apellidoPaterno,String apellidoMaterno){
         ArrayList<Empleado> empleados = new ArrayList<>();
         Integer entero;
         try{
@@ -359,5 +361,63 @@ public class EmpleadoMySQL implements EmpleadoDAO{
             }
         }
         return empleados;
+    }
+    
+    @Override
+    public ArrayList<Integer> obtenerNumClientes(int idEmpleado) {
+        ArrayList<Integer> resultado = new ArrayList<>();
+        try{
+            ArrayList<Empleado> vendedores = listarPorJefeVentas(idEmpleado, "", "", "");
+            
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            for(Empleado v : vendedores){
+                String sql ="{ call LISTAR_NUM_CLIENTES_VENDEDOR(?)}";
+                cs = con.prepareCall(sql);
+                cs.setInt("_ID_EMPLEADO", v.getIdEmpleado());
+                rs = cs.executeQuery();
+                rs.next();
+                resultado.add(rs.getInt("COUNT"));        
+                rs.close();
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }catch(Exception e){
+                System.out.println(e.getMessage());
+            }
+        }
+        return resultado;
+    }
+
+    @Override
+    public ArrayList<Integer> obtenerNumVisitados(int idEmpleado) {
+        ArrayList<Integer> resultado = new ArrayList<>();
+        try{
+            ArrayList<Empleado> vendedores = listarPorJefeVentas(idEmpleado, "", "", "");
+            
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            for(Empleado v : vendedores){
+                String sql ="{ call LISTAR_NUM_VISITAS_VENDEDOR(?)}";
+                cs = con.prepareCall(sql);
+                cs.setInt("_ID_EMPLEADO", v.getIdEmpleado());
+                rs = cs.executeQuery();
+                rs.next();
+                resultado.add(rs.getInt("COUNT"));        
+                rs.close();
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }catch(Exception e){
+                System.out.println(e.getMessage());
+            }
+        }
+        return resultado;
     }
 }
