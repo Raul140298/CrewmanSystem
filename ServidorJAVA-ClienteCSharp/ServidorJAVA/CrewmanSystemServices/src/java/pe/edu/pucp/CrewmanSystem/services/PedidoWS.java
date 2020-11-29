@@ -61,7 +61,9 @@ public class PedidoWS
     }
     
     @WebMethod(operationName = "listarPedidos")
-    public ArrayList<Pedido> listarPedidos(@WebParam(name = "idCliente") int idCliente, 
+    public ArrayList<Pedido> listarPedidos(@WebParam(name = "idVendedor") int idVendedor, 
+            @WebParam(name = "razonSocial") String razonSocial, 
+            @WebParam(name = "grupo") String grupo, 
             @WebParam(name = "fechaIni") Date fechaIni, 
             @WebParam(name = "fechaFin") Date fechaFin, 
             @WebParam(name = "tipoPedido") String tipoPedido, 
@@ -70,7 +72,7 @@ public class PedidoWS
         ArrayList<Pedido> misPedidos = new ArrayList<>();
         try
         {
-            misPedidos = daoPedido.listar(idCliente, fechaIni, fechaFin, tipoPedido, estadoPedido);
+            misPedidos = daoPedido.listar(idVendedor,razonSocial, grupo,fechaIni, fechaFin, tipoPedido, estadoPedido);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }

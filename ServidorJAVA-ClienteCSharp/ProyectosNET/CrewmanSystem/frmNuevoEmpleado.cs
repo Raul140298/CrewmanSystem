@@ -36,6 +36,7 @@ namespace CrewmanSystem
             cboZona.DataSource= listaZonas;
             cboZona.ValueMember = "idZona";
             cboZona.DisplayMember = "nombre";
+            cboZona.Enabled = false;
             txtSumaVentas.Text = "0.00";
             txtSumaVentas.Enabled = false;
 
@@ -69,6 +70,7 @@ namespace CrewmanSystem
                 cboCargo.Enabled = false;
 
                 cboZona.SelectedValue = miEmpleado.zona.idZona;
+                cboZona.Enabled = true;
 
                 if (miEmpleado.genero == 'M') rbMasculino.Checked = true;
                 else rbFemenino.Checked = true;

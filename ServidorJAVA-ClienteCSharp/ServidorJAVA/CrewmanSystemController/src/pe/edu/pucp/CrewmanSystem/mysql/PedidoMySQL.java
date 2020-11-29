@@ -149,15 +149,17 @@ public class PedidoMySQL implements PedidoDAO{
     }
     
     @Override
-    public ArrayList<Pedido>listar(int idCliente, Date fechaIni, Date fechaFin, String tipoPedido, String estadoPedido)
+    public ArrayList<Pedido>listar(int idVendedor,String razonSocial,String grupo, Date fechaIni, Date fechaFin, String tipoPedido, String estadoPedido)
     {
         ArrayList<Pedido> pedidos = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            String sql ="{ call LISTAR_PEDIDO (?,?,?,?,?)}";
+            String sql ="{ call LISTAR_PEDIDO (?,?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
-            cs.setInt("_ID_CLIENTE", idCliente);
+            cs.setInt("_ID_VENDEDOR", idVendedor);
+            cs.setString("_RAZON_SOCIAL", razonSocial);
+            cs.setString("_GRUPO", grupo);
             cs.setDate("_FECHA_INI", new java.sql.Date(fechaIni.getTime()));
             cs.setDate("_FECHA_FIN", new java.sql.Date(fechaFin.getTime()));
             cs.setString("_TIPO_PEDIDO", tipoPedido);
@@ -172,6 +174,10 @@ public class PedidoMySQL implements PedidoDAO{
                 pedido.setIdPedido(rs.getInt("ID_PEDIDO"));
                 
                 cliente.setIdCliente(rs.getInt("ID_CLIENTE"));
+                cliente.setRazonSocial(rs.getString("RAZON_SOCIAL"));
+                cliente.setGrupo(rs.getString("GRUPO"));
+                cliente.setTipoEmpresa(rs.getString("TIPOCLIENTE"));
+                cliente.setDireccion(rs.getString("DIRECCION"));
                 pedido.setCliente(cliente);
                 
                 vendedor.setIdEmpleado(rs.getInt("ID_EMPLEADO"));

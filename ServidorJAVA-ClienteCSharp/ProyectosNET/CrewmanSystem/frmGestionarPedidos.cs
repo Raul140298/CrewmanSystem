@@ -25,18 +25,20 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgv = dgvPedidos;
 			dgvPedidos.AutoGenerateColumns = false;
-			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos(0, DateTime.MinValue, DateTime.MaxValue, "BORRADOR","ESPERANDO");
+			int idBusqueda = 0;
+			if (Program.empleado.cargo.nombre == "VENDEDOR") idBusqueda = Program.empleado.idEmpleado;
+			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos(idBusqueda,"","", DateTime.MinValue, DateTime.MaxValue, "AMBOS","AMBOS");
 
 			if (misPedidos != null)
 			{		
-				foreach (PedidoWS.pedido p in misPedidos)
-				{
-					ClienteWS.cliente c = new ClienteWS.cliente();
+				//foreach (PedidoWS.pedido p in misPedidos)
+				//{
+				//	ClienteWS.cliente c = new ClienteWS.cliente();
 
-					c = daoCliente.obtenerCliente(p.cliente.idCliente);
+				//	c = daoCliente.obtenerCliente(p.cliente.idCliente);
 
-					p.cliente.razonSocial = c.razonSocial;
-				}
+				//	p.cliente.razonSocial = c.razonSocial;
+				//}
 				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
 			}
 			else

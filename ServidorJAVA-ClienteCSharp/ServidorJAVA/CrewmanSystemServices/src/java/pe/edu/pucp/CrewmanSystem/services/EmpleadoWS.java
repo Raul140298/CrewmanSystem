@@ -150,4 +150,26 @@ public class EmpleadoWS
         }
         return resultado;
     }
+    
+    @WebMethod(operationName = "obtenerNumClientes")
+    public ArrayList<Integer> obtenerNumClientes(@WebParam(name = "idPersona") int idPersona) {
+        ArrayList<Integer> resultado = new ArrayList<>();
+        try{
+            resultado = daoEmpleado.obtenerNumClientes(idPersona);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    @WebMethod(operationName = "obtenerNumVisitas")
+    public ArrayList<Integer> obtenerNumVisitas(@WebParam(name = "idPersona") int idPersona) {
+        ArrayList<Integer> resultado = new ArrayList<>();
+        try{
+            resultado = daoEmpleado.obtenerNumVisitados(idPersona);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
 }

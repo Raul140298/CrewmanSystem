@@ -760,6 +760,12 @@
     <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.obtenerEmpleadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.obtenerNumClientesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.obtenerNumVisitasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.permitirAccesoEmpleadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

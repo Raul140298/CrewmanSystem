@@ -20,6 +20,10 @@
   <xs:element name="mostrarPersonaResponse" type="tns:mostrarPersonaResponse" />
   <xs:element name="obtenerEmpleado" type="tns:obtenerEmpleado" />
   <xs:element name="obtenerEmpleadoResponse" type="tns:obtenerEmpleadoResponse" />
+  <xs:element name="obtenerNumClientes" type="tns:obtenerNumClientes" />
+  <xs:element name="obtenerNumClientesResponse" type="tns:obtenerNumClientesResponse" />
+  <xs:element name="obtenerNumVisitas" type="tns:obtenerNumVisitas" />
+  <xs:element name="obtenerNumVisitasResponse" type="tns:obtenerNumVisitasResponse" />
   <xs:element name="permitirAccesoEmpleado" type="tns:permitirAccesoEmpleado" />
   <xs:element name="permitirAccesoEmpleadoResponse" type="tns:permitirAccesoEmpleadoResponse" />
   <xs:complexType name="actualizarEmpleado">
@@ -318,24 +322,14 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarPersona">
+  <xs:complexType name="obtenerNumVisitas">
     <xs:sequence>
-      <xs:element minOccurs="0" name="persona" type="tns:persona" />
+      <xs:element name="idPersona" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarPersonaResponse">
+  <xs:complexType name="obtenerNumVisitasResponse">
     <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerEmpleado">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="empleado" type="tns:empleado" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerEmpleadoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarPersona">
@@ -344,16 +338,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarPersonaResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarEmpleado">
-    <xs:sequence>
-      <xs:element name="idEmpleado" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarEmpleadoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -368,29 +352,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarPorJefeVentasYZonaResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:empleado" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarEmpleado">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="empleado" type="tns:empleado" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarEmpleadoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarPorJefeVentas">
-    <xs:sequence>
-      <xs:element name="idEmpleado" type="xs:int" />
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
-      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarPorJefeVentasResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:empleado" />
     </xs:sequence>
@@ -424,6 +385,69 @@
   <xs:complexType name="mostrarPersonaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="persona" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarPersonaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerEmpleado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="empleado" type="tns:empleado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerEmpleadoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEmpleado">
+    <xs:sequence>
+      <xs:element name="idEmpleado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEmpleadoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEmpleado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="empleado" type="tns:empleado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEmpleadoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorJefeVentas">
+    <xs:sequence>
+      <xs:element name="idEmpleado" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorJefeVentasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:empleado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerNumClientes">
+    <xs:sequence>
+      <xs:element name="idPersona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerNumClientesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="estadoPedido">

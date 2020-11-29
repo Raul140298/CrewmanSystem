@@ -13,6 +13,8 @@ namespace CrewmanSystem
 	public partial class frmListarCumplimientoDeMetas : Form
 	{
 		private EmpleadoWS.EmpleadoWSClient daoEmpleado;
+		private BindingList<int> numVisitados;
+		private BindingList<int> numAsignados;
 
 		public frmListarCumplimientoDeMetas()
 		{
@@ -25,6 +27,15 @@ namespace CrewmanSystem
 			BindingList<EmpleadoWS.empleado> misEmpleados;
 			if (empleados == null || empleados.Length < 1) misEmpleados = new BindingList<EmpleadoWS.empleado>();
 			else misEmpleados = new BindingList<EmpleadoWS.empleado>(empleados);
+
+			int[] visitados = daoEmpleado.obtenerNumVisitas(Program.empleado.idEmpleado);
+			if (visitados == null || visitados.Length < 1) numVisitados = new BindingList<int>();
+			else numVisitados = new BindingList<int>(visitados.ToArray());
+			
+			int[] asignados = daoEmpleado.obtenerNumClientes(Program.empleado.idEmpleado);
+			if (asignados == null || asignados.Length < 1) numAsignados = new BindingList<int>();
+			else numAsignados = new BindingList<int>(asignados.ToArray());
+
 			dgvEmpleados.AutoGenerateColumns = false;
 			dgvEmpleados.DataSource = misEmpleados;
 
@@ -44,5 +55,15 @@ namespace CrewmanSystem
 		{
 
 		}
-    }
+
+        private void dgvEmpleados_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+			EmpleadoWS.empleado empleado = dgvEmpleados.Rows[e.RowIndex].DataBoundItem
+				as EmpleadoWS.empleado;
+
+			dgvEmpleados.Rows[e.RowIndex].Cells["ZONA"].Value = empleado.zona.nombre;
+			dgvEmpleados.Rows[e.RowIndex].Cells["CLIENTES_VISITADOS"].Value = numVisitados.ElementAt(e.RowIndex);
+			dgvEmpleados.Rows[e.RowIndex].Cells["CLIENTES_ASIGNADOS"].Value = numAsignados.ElementAt(e.RowIndex);
+		}
+	}
 }

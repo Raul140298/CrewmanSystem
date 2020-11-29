@@ -831,6 +831,7 @@ namespace CrewmanSystem
 			if(confirma.ShowDialog() == DialogResult.OK)
             {
 				llamarMetodosDAO((IconButton)sender, 2);
+				MessageBox.Show("Se eliminó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
 		}
 
