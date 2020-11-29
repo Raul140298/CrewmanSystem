@@ -42,7 +42,7 @@ namespace CrewmanSystem
 		private void completarTabla()
 		{
 			dgvPedidos.AutoGenerateColumns = false;
-			misPedidos = daoPedido.listarPedidos(clienteSeleccionado.idCliente, dtpRangoIni.Value, dtpRangoFin.Value, "PEDIDO", "EN_PROCESO");
+			misPedidos = daoPedido.listarPedidos(Program.empleado.idEmpleado,"","",dtpRangoIni.Value, dtpRangoFin.Value, "PEDIDO", "EN_PROCESO");
 			if (misPedidos != null)
 			{
 				foreach (PedidoWS.pedido p in misPedidos)
