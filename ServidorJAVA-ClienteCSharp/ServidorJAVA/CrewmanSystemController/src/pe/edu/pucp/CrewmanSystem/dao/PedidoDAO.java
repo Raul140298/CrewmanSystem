@@ -8,7 +8,7 @@ public interface PedidoDAO
     int insertar(Pedido pedido);
     int actualizar(Pedido pedido);
     int eliminar(int idPedido);
-    ArrayList<Pedido> listar(int idCliente, Date fechaIni, Date fechaFin, String tipoPedido, String estadoPedido);
+    ArrayList<Pedido> listar(int idVendedor,String razonSocial,String grupo, Date fechaIni, Date fechaFin, String tipoPedido, String estadoPedido);
     ArrayList<Pedido> generarReporte(String idPedido);
     
     int insertarTotal(Pedido pedido);
