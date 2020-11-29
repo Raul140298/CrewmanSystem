@@ -69,8 +69,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dgvPromocionXProducto = new System.Windows.Forms.DataGridView();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.NRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE_PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CANT_UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,6 +76,8 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCUENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.STOCK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -525,22 +525,6 @@
             this.dgvPromocionXProducto.TabIndex = 110;
             this.dgvPromocionXProducto.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPromocionXProducto_CellFormatting);
             // 
-            // panel8
-            // 
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(751, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(20, 137);
-            this.panel8.TabIndex = 109;
-            // 
-            // panel9
-            // 
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(20, 137);
-            this.panel9.TabIndex = 108;
-            // 
             // NRO
             // 
             this.NRO.HeaderText = "Nro";
@@ -605,6 +589,22 @@
             this.STOCK.Name = "STOCK";
             this.STOCK.ReadOnly = true;
             this.STOCK.Width = 79;
+            // 
+            // panel8
+            // 
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel8.Location = new System.Drawing.Point(751, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(20, 137);
+            this.panel8.TabIndex = 109;
+            // 
+            // panel9
+            // 
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(20, 137);
+            this.panel9.TabIndex = 108;
             // 
             // frmNuevaPromocion
             // 

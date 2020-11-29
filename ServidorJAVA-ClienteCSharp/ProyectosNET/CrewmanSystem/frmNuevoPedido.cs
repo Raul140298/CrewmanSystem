@@ -240,6 +240,7 @@ namespace CrewmanSystem
                                 break;
                             case "EN_PROCESO":
                                 pedido.fechaEstim = dtpFechaEstimada.Value;
+                                pedido.fechaEstimSpecified = true;
                                 int resultado= 0;
                                 resultado = daoPedido.aprobarBorrador(pedido);
                                 if(resultado != 0)MessageBox.Show("Aprobado con exito", "Mensaje de resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
