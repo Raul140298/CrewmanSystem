@@ -6,6 +6,7 @@
 package pe.edu.pucp.CrewmanSystem.services;
 
 import java.util.ArrayList;
+import java.util.Date;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -13,10 +14,6 @@ import pe.edu.pucp.CrewmanSystem.dao.FacturaDAO;
 import pe.edu.pucp.CrewmanSystem.model.Factura;
 import pe.edu.pucp.CrewmanSystem.mysql.FacturaMySQL;
 
-/**
- *
- * @author User
- */
 @WebService(serviceName = "FacturaWS")
 public class FacturaWS {
 
@@ -60,10 +57,29 @@ public class FacturaWS {
     }
     
     @WebMethod(operationName = "listarFacturas")
-    public ArrayList<Factura> listarFacturas(@WebParam(name = "idPedido") int idPedido) {
+    public ArrayList<Factura> listarFacturas(@WebParam(name = "idVendedor") int idVendedor,
+            @WebParam(name = "razonSocial") String razonSocial,
+            @WebParam(name = "grupo") String grupo,
+            @WebParam(name = "fechaInicialEmision") Date fechaInicialEmision,
+            @WebParam(name = "fechaFinEmision") Date fechaFinEmision,
+            @WebParam(name = "fechaInicialVencimiento") Date fechaInicialVencimiento,
+            @WebParam(name = "fechaFinVencimiento") Date fechaFinVencimiento,
+            @WebParam(name = "anulado") int anulado,
+            @WebParam(name = "estadoPagar") int estadoPagar) {
         ArrayList<Factura> misFacturas = new ArrayList<>();
         try{
-            misFacturas = daoFactura.listar(idPedido);
+            misFacturas = daoFactura.listar(idVendedor, razonSocial, grupo, fechaInicialEmision, fechaFinEmision, fechaInicialVencimiento, fechaFinVencimiento, anulado, estadoPagar);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return misFacturas;
+    }
+    
+    @WebMethod(operationName = "listarFacturasPorPedido")
+    public ArrayList<Factura> listarFacturasPorPedido(@WebParam(name = "idPedido") int idPedido) {
+        ArrayList<Factura> misFacturas = new ArrayList<>();
+        try{
+            misFacturas = daoFactura.listarPorPedido(idPedido);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }

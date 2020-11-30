@@ -126,12 +126,19 @@ public class Main{
 //        daoPedido.actualizar(pedido);
 //        System.out.println("EL MODELADO HA CONCLUIDO");
         try{
-            misPedidos = daoPedido.listar(25,"","",sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), "AMBOS", "AMBOS");
+            misPedidos = daoPedido.listar(21,"","",sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), "AMBOS", "AMBOS");
         }catch(Exception e){
             System.out.println("MAL");
         }
-        for(Pedido p : misPedidos) System.out.println(p.getIdPedido()+" "+p.getMontoTotal()+" "+p.getEmpleado().getNombre());
+        //for(Pedido p : misPedidos) System.out.println(p.getIdPedido()+" "+p.getMontoTotal()+" "+p.getEmpleado().getNombre());
 
+        try{
+            misFacturas = daoFactura.listar(25, "", "", sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), 2, 2);
+        }catch(Exception e){
+            System.out.println("MALISIMO");
+        }
+        for(Factura f : misFacturas) System.out.println(f.getIdFactura()+" "+f.getMonto()+" "+f.getPedido().getEmpleado().getNombre()+" "+f.getPedido().getCliente().getRazonSocial());
+        
 //        misClientes=daoCliente.listarSinCartera("", "", 125);
 //        for(Cliente c : misClientes) System.out.println(c.getIdCliente()+" "+c.getRuc());
 //        
@@ -661,22 +668,22 @@ public class Main{
 //            System.out.println("Error al insertar la fecha en gestionar facturas");
 //        }
 
-        misFacturas=daoFactura.listar(misPedidos.get(0).getIdPedido());
+//        misFacturas=daoFactura.listar(misPedidos.get(0).getIdPedido());
         
 //        Factura factura=misFacturas.get(0);
 //        double monto=daoFactura.eliminar(factura);
 //        misPedidos.get(0).setMontoPagar(misPedidos.get(0).getMontoPagar()+monto);
 //        daoPedido.actualizarSubtotal(misPedidos.get(0));
-        System.out.println("LISTADO DE FACTURAS DEL PEDIDO "+misPedidos.get(0).getIdPedido());
-        System.out.println("==================================================================================");
-        for(Factura f:misFacturas){
-            System.out.print(f.getIdFactura()+" - "+f.getPedido().getIdPedido()+" - "+f.getObservacion()+" - "+f.getMonto()+" - "+
-            f.getFechaEmision()+" - "+f.getFechaVencimiento()+" - ");
-            if(f.isEstadoPagar()) System.out.println("PAGADO");
-            else System.out.println("FALTA PAGAR");
-        } 
-            
-        System.out.println("\n");
+//        System.out.println("LISTADO DE FACTURAS DEL PEDIDO "+misPedidos.get(0).getIdPedido());
+//        System.out.println("==================================================================================");
+//        for(Factura f:misFacturas){
+//            System.out.print(f.getIdFactura()+" - "+f.getPedido().getIdPedido()+" - "+f.getObservacion()+" - "+f.getMonto()+" - "+
+//            f.getFechaEmision()+" - "+f.getFechaVencimiento()+" - ");
+//            if(f.isEstadoPagar()) System.out.println("PAGADO");
+//            else System.out.println("FALTA PAGAR");
+//        } 
+//            
+//        System.out.println("\n");
     }
     
     private static void gestionarNotasDeCredito(){

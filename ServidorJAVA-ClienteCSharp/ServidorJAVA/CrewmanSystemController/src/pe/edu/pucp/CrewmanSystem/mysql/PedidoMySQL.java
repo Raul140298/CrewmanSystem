@@ -13,7 +13,6 @@ import pe.edu.pucp.CrewmanSystem.dao.ClienteDAO;
 import pe.edu.pucp.CrewmanSystem.dao.EmpleadoDAO;
 import pe.edu.pucp.CrewmanSystem.dao.FacturaDAO;
 import pe.edu.pucp.CrewmanSystem.dao.LineaPedidoDAO;
-import pe.edu.pucp.CrewmanSystem.dao.PersonaDAO;
 import pe.edu.pucp.CrewmanSystem.model.Cliente;
 import pe.edu.pucp.CrewmanSystem.model.EstadoPedido;
 import pe.edu.pucp.CrewmanSystem.model.LineaPedido;
@@ -30,8 +29,6 @@ public class PedidoMySQL implements PedidoDAO{
     @Override
     public int insertar(Pedido pedido){
         int resultado = 0;
-        PedidoDAO daoPedido = new PedidoMySQL();
-        LineaPedidoDAO daoLinea = new LineaPedidoMySQL();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
@@ -342,7 +339,7 @@ public class PedidoMySQL implements PedidoDAO{
         daoPedido.liberarStock(pedido);
         daoPedido.eliminar(pedido.getIdPedido());
         FacturaDAO daoFactura = new FacturaMySQL();
-        ArrayList<Factura> facturas = daoFactura.listar(pedido.getIdPedido());
+        ArrayList<Factura> facturas = daoFactura.listarPorPedido(pedido.getIdPedido());
         for(Factura f : facturas){
             daoFactura.eliminar(f);
         }
@@ -399,7 +396,7 @@ public class PedidoMySQL implements PedidoDAO{
             LineaPedidoDAO daoLinea = new LineaPedidoMySQL();
             ArrayList<LineaPedido> lineas = daoLinea.listar(idPedido);
             FacturaDAO daoFactura = new FacturaMySQL();
-            ArrayList<Factura> facturas = daoFactura.listar(idPedido);
+            ArrayList<Factura> facturas = daoFactura.listarPorPedido(idPedido);
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             con.setAutoCommit(false);
