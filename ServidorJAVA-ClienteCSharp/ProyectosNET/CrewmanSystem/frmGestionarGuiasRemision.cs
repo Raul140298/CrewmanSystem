@@ -18,10 +18,10 @@ namespace CrewmanSystem
 			daoGuiaRemision = new GuiaRemisionWS.GuiaRemisionWSClient();
 			InitializeComponent();
 			dgvGuiasDeRemision.AutoGenerateColumns = false;
-			GuiaRemisionWS.guiaRemision[] misGuias = daoGuiaRemision.listarGuiaRemisions(0);
+			GuiaRemisionWS.guiaRemision[] misGuias = daoGuiaRemision.listarGuiaRemisionsXVendedor(Program.empleado.idEmpleado);
 			if (misGuias != null)
 			{
-				dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>(daoGuiaRemision.listarGuiaRemisions(0).ToArray());
+				dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>(daoGuiaRemision.listarGuiaRemisionsXVendedor(Program.empleado.idEmpleado).ToArray());
 			}
 			else
 			{

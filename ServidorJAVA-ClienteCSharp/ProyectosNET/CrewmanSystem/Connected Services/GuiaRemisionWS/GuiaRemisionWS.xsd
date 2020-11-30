@@ -6,6 +6,8 @@
   <xs:element name="insertarGuiaRemisionResponse" type="tns:insertarGuiaRemisionResponse" />
   <xs:element name="listarGuiaRemisions" type="tns:listarGuiaRemisions" />
   <xs:element name="listarGuiaRemisionsResponse" type="tns:listarGuiaRemisionsResponse" />
+  <xs:element name="listarGuiaRemisionsXVendedor" type="tns:listarGuiaRemisionsXVendedor" />
+  <xs:element name="listarGuiaRemisionsXVendedorResponse" type="tns:listarGuiaRemisionsXVendedorResponse" />
   <xs:complexType name="insertarGuiaRemision">
     <xs:sequence>
       <xs:element minOccurs="0" name="guiaRemision" type="tns:guiaRemision" />
@@ -308,6 +310,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarGuiaRemisionsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:guiaRemision" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarGuiaRemisionsXVendedor">
+    <xs:sequence>
+      <xs:element name="idVendedor" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarGuiaRemisionsXVendedorResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:guiaRemision" />
     </xs:sequence>

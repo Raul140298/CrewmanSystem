@@ -74,6 +74,7 @@
             this.dgvGuiasDeRemision.EnableHeadersVisualStyles = false;
             this.dgvGuiasDeRemision.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.dgvGuiasDeRemision.Location = new System.Drawing.Point(0, 0);
+            this.dgvGuiasDeRemision.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvGuiasDeRemision.MultiSelect = false;
             this.dgvGuiasDeRemision.Name = "dgvGuiasDeRemision";
             this.dgvGuiasDeRemision.ReadOnly = true;
@@ -93,17 +94,17 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvGuiasDeRemision.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvGuiasDeRemision.RowTemplate.Height = 24;
-            this.dgvGuiasDeRemision.Size = new System.Drawing.Size(998, 450);
+            this.dgvGuiasDeRemision.Size = new System.Drawing.Size(748, 366);
             this.dgvGuiasDeRemision.TabIndex = 3;
             // 
             // ID
             // 
-            this.ID.DataPropertyName = "id";
+            this.ID.DataPropertyName = "idGuiaRemision";
             this.ID.HeaderText = "Id";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
-            this.ID.Width = 50;
+            this.ID.Width = 43;
             // 
             // ID_PEDIDO
             // 
@@ -112,7 +113,7 @@
             this.ID_PEDIDO.MinimumWidth = 6;
             this.ID_PEDIDO.Name = "ID_PEDIDO";
             this.ID_PEDIDO.ReadOnly = true;
-            this.ID_PEDIDO.Width = 106;
+            this.ID_PEDIDO.Width = 91;
             // 
             // FECHA_EMISION
             // 
@@ -123,7 +124,7 @@
             this.FECHA_EMISION.MinimumWidth = 6;
             this.FECHA_EMISION.Name = "FECHA_EMISION";
             this.FECHA_EMISION.ReadOnly = true;
-            this.FECHA_EMISION.Width = 148;
+            this.FECHA_EMISION.Width = 124;
             // 
             // MOTIVO_TRASLADO
             // 
@@ -132,7 +133,7 @@
             this.MOTIVO_TRASLADO.MinimumWidth = 6;
             this.MOTIVO_TRASLADO.Name = "MOTIVO_TRASLADO";
             this.MOTIVO_TRASLADO.ReadOnly = true;
-            this.MOTIVO_TRASLADO.Width = 156;
+            this.MOTIVO_TRASLADO.Width = 133;
             // 
             // FECHA_REGISTRO
             // 
@@ -143,7 +144,7 @@
             this.FECHA_REGISTRO.MinimumWidth = 6;
             this.FECHA_REGISTRO.Name = "FECHA_REGISTRO";
             this.FECHA_REGISTRO.ReadOnly = true;
-            this.FECHA_REGISTRO.Width = 151;
+            this.FECHA_REGISTRO.Width = 128;
             // 
             // FECHA_TRASLADO
             // 
@@ -154,14 +155,15 @@
             this.FECHA_TRASLADO.MinimumWidth = 6;
             this.FECHA_TRASLADO.Name = "FECHA_TRASLADO";
             this.FECHA_TRASLADO.ReadOnly = true;
-            this.FECHA_TRASLADO.Width = 153;
+            this.FECHA_TRASLADO.Width = 131;
             // 
             // frmGestionarGuiasRemision
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 450);
+            this.ClientSize = new System.Drawing.Size(748, 366);
             this.Controls.Add(this.dgvGuiasDeRemision);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmGestionarGuiasRemision";
             this.Text = "frmGestionarGuiasRemision";
             ((System.ComponentModel.ISupportInitialize)(this.dgvGuiasDeRemision)).EndInit();
