@@ -497,6 +497,7 @@ namespace CrewmanSystem
 				case "frmGestionarRutas":
 					break;
 				case "frmGestionarQuejas":
+					if(boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaQueja());
 					break;
 				case "frmGestionarPromocionesXZona":
 					break;

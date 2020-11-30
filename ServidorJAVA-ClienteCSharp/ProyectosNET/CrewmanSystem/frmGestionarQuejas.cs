@@ -18,7 +18,7 @@ namespace CrewmanSystem
 			daoQueja = new QuejaWS.QuejaWSClient();
 			InitializeComponent();
 			dgvQuejas.AutoGenerateColumns = false;
-			QuejaWS.queja[] misQuejas = daoQueja.listarQuejas(0);
+			QuejaWS.queja[] misQuejas = daoQueja.listarQuejas(0); //Aqui debe ir un id
 			if (misQuejas != null)
 			{
 				dgvQuejas.DataSource = new BindingList<QuejaWS.queja>(misQuejas.ToArray());
