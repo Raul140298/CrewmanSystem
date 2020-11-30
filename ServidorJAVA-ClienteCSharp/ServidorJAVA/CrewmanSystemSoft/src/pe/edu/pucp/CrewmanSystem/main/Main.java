@@ -133,7 +133,7 @@ public class Main{
         //for(Pedido p : misPedidos) System.out.println(p.getIdPedido()+" "+p.getMontoTotal()+" "+p.getEmpleado().getNombre());
 
         try{
-            misFacturas = daoFactura.listar(25, "", "", sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), 2, 2);
+            misFacturas = daoFactura.listar(25, "", "", sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), 0, 1);
         }catch(Exception e){
             System.out.println("MALISIMO");
         }
