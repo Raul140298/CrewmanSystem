@@ -174,6 +174,7 @@ public class PedidoMySQL implements PedidoDAO{
                 pedido.setIdPedido(rs.getInt("ID_PEDIDO"));
                 
                 cliente.setIdCliente(rs.getInt("ID_CLIENTE"));
+                cliente.setRuc(rs.getString("RUC"));
                 cliente.setRazonSocial(rs.getString("RAZON_SOCIAL"));
                 cliente.setGrupo(rs.getString("GRUPO"));
                 cliente.setTipoEmpresa(rs.getString("TIPOCLIENTE"));
