@@ -23,17 +23,20 @@ namespace CrewmanSystem
 			daoCliente = new ClienteWS.ClienteWSClient();
 
 			InitializeComponent();
+			
 			dgv = dgvPedidos;
+			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos(Program.empleado.idEmpleado, "", "", DateTime.MinValue, DateTime.MaxValue, "AMBOS", "AMBOS");
 			dgvPedidos.AutoGenerateColumns = false;
-			int idBusqueda = 0;
-			if (Program.empleado.cargo.nombre == "VENDEDOR") idBusqueda = Program.empleado.idEmpleado;
-			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos(idBusqueda,"","", DateTime.MinValue, DateTime.MaxValue, "AMBOS","AMBOS");
-
 			if (misPedidos != null)
 				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
-			
 			else
 				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>();
+			if(Program.empleado.cargo.nombre == "VENDEDOR")
+            {
+				dgvPedidos.Columns["NOMBRE"].Visible = false;
+				dgvPedidos.Columns["APELLIDO_PATERNO"].Visible = false;
+				dgvPedidos.Columns["APELLIDO_MATERNO"].Visible = false;
+			}
 
 			#region colores de seleccion
 			dgvPedidos.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
@@ -49,12 +52,22 @@ namespace CrewmanSystem
 
 		private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
 		{
-			//castear objetos y mostrar valor determinado
-			PedidoWS.pedido pedido = dgvPedidos.Rows[e.RowIndex].DataBoundItem
-			as PedidoWS.pedido;
-
-			dgvPedidos.Rows[e.RowIndex].Cells["CLIENTE"].Value = pedido.cliente.razonSocial;
-		}
+            //castear objetos y mostrar valor determinado
+            try
+            {
+				PedidoWS.pedido pedido = dgvPedidos.Rows[e.RowIndex].DataBoundItem
+				as PedidoWS.pedido;
+				dgvPedidos.Rows[e.RowIndex].Cells["RUC"].Value = pedido.cliente.ruc;
+				dgvPedidos.Rows[e.RowIndex].Cells["RAZON_SOCIAL"].Value = pedido.cliente.razonSocial;
+				dgvPedidos.Rows[e.RowIndex].Cells["GRUPO"].Value = pedido.cliente.grupo;
+				dgvPedidos.Rows[e.RowIndex].Cells["TIPO_CLIENTE"].Value = pedido.cliente.tipoEmpresa;
+				dgvPedidos.Rows[e.RowIndex].Cells["NOMBRE"].Value = pedido.empleado.nombre;
+				dgvPedidos.Rows[e.RowIndex].Cells["APELLIDO_PATERNO"].Value = pedido.empleado.apellidoPaterno;
+				dgvPedidos.Rows[e.RowIndex].Cells["APELLIDO_MATERNO"].Value = pedido.empleado.apellidoMaterno;
+            
+			}
+            catch (Exception){ }
+}
 
 		private void dgvPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
@@ -83,5 +96,5 @@ namespace CrewmanSystem
 			pedidoSeleccionado = (PedidoWS.pedido)dgv.CurrentRow.DataBoundItem;
 			daoPedido.eliminarPedido(pedidoSeleccionado.idPedido);
 		}
-	}
+    }
 }

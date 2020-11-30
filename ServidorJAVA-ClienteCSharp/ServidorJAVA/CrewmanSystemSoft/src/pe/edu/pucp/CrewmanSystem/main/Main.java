@@ -126,11 +126,11 @@ public class Main{
 //        daoPedido.actualizar(pedido);
 //        System.out.println("EL MODELADO HA CONCLUIDO");
         try{
-            misPedidos = daoPedido.listar(21,"","",sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), "AMBOS", "AMBOS");
+            misPedidos = daoPedido.listar(25,"","",sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), "AMBOS", "AMBOS");
         }catch(Exception e){
             System.out.println("MAL");
         }
-        for(Pedido p : misPedidos) System.out.println(p.getIdPedido()+" "+p.getMontoTotal());
+        for(Pedido p : misPedidos) System.out.println(p.getIdPedido()+" "+p.getMontoTotal()+" "+p.getEmpleado().getNombre());
 
 //        misClientes=daoCliente.listarSinCartera("", "", 125);
 //        for(Cliente c : misClientes) System.out.println(c.getIdCliente()+" "+c.getRuc());

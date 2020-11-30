@@ -35,6 +35,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarPedido));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cboTipo = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtGrupo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
@@ -43,16 +50,14 @@
             this.dtpRangoIni = new System.Windows.Forms.DateTimePicker();
             this.txtRuc = new System.Windows.Forms.TextBox();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
-            this.txtGrupo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cboTipo = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cboEstado = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIPO_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.APELLIDO_PATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.APELLIDO_MATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MONTO_TOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MONTO_PAGAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,6 +69,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnSeleccionar);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.cboEstado);
             this.panel1.Controls.Add(this.label2);
@@ -82,6 +88,75 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 272);
             this.panel1.TabIndex = 48;
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnSeleccionar.FlatAppearance.BorderSize = 0;
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
+            this.btnSeleccionar.Location = new System.Drawing.Point(493, 62);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(160, 30);
+            this.btnSeleccionar.TabIndex = 95;
+            this.btnSeleccionar.Text = "SELECCIONAR";
+            this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
+            // label5
+            // 
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Location = new System.Drawing.Point(3, 145);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(179, 22);
+            this.label5.TabIndex = 94;
+            this.label5.Text = "Estado :";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cboEstado
+            // 
+            this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Location = new System.Drawing.Point(195, 143);
+            this.cboEstado.Name = "cboEstado";
+            this.cboEstado.Size = new System.Drawing.Size(263, 24);
+            this.cboEstado.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Location = new System.Drawing.Point(3, 106);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(179, 22);
+            this.label2.TabIndex = 92;
+            this.label2.Text = "Tipo :";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cboTipo
+            // 
+            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipo.FormattingEnabled = true;
+            this.cboTipo.Location = new System.Drawing.Point(195, 104);
+            this.cboTipo.Name = "cboTipo";
+            this.cboTipo.Size = new System.Drawing.Size(263, 24);
+            this.cboTipo.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Location = new System.Drawing.Point(3, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(179, 22);
+            this.label1.TabIndex = 90;
+            this.label1.Text = "Grupo :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtGrupo
+            // 
+            this.txtGrupo.Location = new System.Drawing.Point(195, 66);
+            this.txtGrupo.Name = "txtGrupo";
+            this.txtGrupo.Size = new System.Drawing.Size(263, 22);
+            this.txtGrupo.TabIndex = 2;
             // 
             // label4
             // 
@@ -122,7 +197,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(493, 24);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(160, 30);
-            this.btnBuscar.TabIndex = 55;
+            this.btnBuscar.TabIndex = 7;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -132,21 +207,21 @@
             this.dtpRangoFin.Location = new System.Drawing.Point(195, 221);
             this.dtpRangoFin.Name = "dtpRangoFin";
             this.dtpRangoFin.Size = new System.Drawing.Size(263, 22);
-            this.dtpRangoFin.TabIndex = 53;
+            this.dtpRangoFin.TabIndex = 6;
             // 
             // dtpRangoIni
             // 
             this.dtpRangoIni.Location = new System.Drawing.Point(195, 184);
             this.dtpRangoIni.Name = "dtpRangoIni";
             this.dtpRangoIni.Size = new System.Drawing.Size(263, 22);
-            this.dtpRangoIni.TabIndex = 52;
+            this.dtpRangoIni.TabIndex = 5;
             // 
             // txtRuc
             // 
             this.txtRuc.Location = new System.Drawing.Point(195, 28);
             this.txtRuc.Name = "txtRuc";
             this.txtRuc.Size = new System.Drawing.Size(263, 22);
-            this.txtRuc.TabIndex = 46;
+            this.txtRuc.TabIndex = 1;
             // 
             // dgvPedidos
             // 
@@ -170,8 +245,12 @@
             this.dgvPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.RUC,
-            this.GRUPO,
             this.RAZON_SOCIAL,
+            this.GRUPO,
+            this.TIPO_CLIENTE,
+            this.NOMBRE,
+            this.APELLIDO_PATERNO,
+            this.APELLIDO_MATERNO,
             this.MONTO_TOTAL,
             this.MONTO_PAGAR,
             this.DIRECCION,
@@ -206,61 +285,6 @@
             this.dgvPedidos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPedidos_CellFormatting);
             this.dgvPedidos.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvPedidos_RowStateChanged);
             // 
-            // txtGrupo
-            // 
-            this.txtGrupo.Location = new System.Drawing.Point(195, 66);
-            this.txtGrupo.Name = "txtGrupo";
-            this.txtGrupo.Size = new System.Drawing.Size(263, 22);
-            this.txtGrupo.TabIndex = 89;
-            // 
-            // label1
-            // 
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Location = new System.Drawing.Point(3, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 22);
-            this.label1.TabIndex = 90;
-            this.label1.Text = "Grupo :";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cboTipo
-            // 
-            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Location = new System.Drawing.Point(195, 104);
-            this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(263, 24);
-            this.cboTipo.TabIndex = 91;
-            // 
-            // label2
-            // 
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Location = new System.Drawing.Point(3, 106);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 22);
-            this.label2.TabIndex = 92;
-            this.label2.Text = "Tipo :";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cboEstado
-            // 
-            this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(195, 143);
-            this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(263, 24);
-            this.cboEstado.TabIndex = 93;
-            // 
-            // label5
-            // 
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Location = new System.Drawing.Point(3, 145);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(179, 22);
-            this.label5.TabIndex = 94;
-            this.label5.Text = "Estado :";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // ID
             // 
             this.ID.DataPropertyName = "idPedido";
@@ -278,6 +302,14 @@
             this.RUC.ReadOnly = true;
             this.RUC.Width = 73;
             // 
+            // RAZON_SOCIAL
+            // 
+            this.RAZON_SOCIAL.HeaderText = "Razón Social";
+            this.RAZON_SOCIAL.MinimumWidth = 6;
+            this.RAZON_SOCIAL.Name = "RAZON_SOCIAL";
+            this.RAZON_SOCIAL.ReadOnly = true;
+            this.RAZON_SOCIAL.Width = 136;
+            // 
             // GRUPO
             // 
             this.GRUPO.HeaderText = "Grupo";
@@ -286,13 +318,37 @@
             this.GRUPO.ReadOnly = true;
             this.GRUPO.Width = 83;
             // 
-            // RAZON_SOCIAL
+            // TIPO_CLIENTE
             // 
-            this.RAZON_SOCIAL.HeaderText = "Razón Social";
-            this.RAZON_SOCIAL.MinimumWidth = 6;
-            this.RAZON_SOCIAL.Name = "RAZON_SOCIAL";
-            this.RAZON_SOCIAL.ReadOnly = true;
-            this.RAZON_SOCIAL.Width = 136;
+            this.TIPO_CLIENTE.HeaderText = "Tipo Cliente";
+            this.TIPO_CLIENTE.MinimumWidth = 6;
+            this.TIPO_CLIENTE.Name = "TIPO_CLIENTE";
+            this.TIPO_CLIENTE.ReadOnly = true;
+            this.TIPO_CLIENTE.Width = 126;
+            // 
+            // NOMBRE
+            // 
+            this.NOMBRE.HeaderText = "Nombre";
+            this.NOMBRE.MinimumWidth = 6;
+            this.NOMBRE.Name = "NOMBRE";
+            this.NOMBRE.ReadOnly = true;
+            this.NOMBRE.Width = 96;
+            // 
+            // APELLIDO_PATERNO
+            // 
+            this.APELLIDO_PATERNO.HeaderText = "Apellido Paterno";
+            this.APELLIDO_PATERNO.MinimumWidth = 6;
+            this.APELLIDO_PATERNO.Name = "APELLIDO_PATERNO";
+            this.APELLIDO_PATERNO.ReadOnly = true;
+            this.APELLIDO_PATERNO.Width = 159;
+            // 
+            // APELLIDO_MATERNO
+            // 
+            this.APELLIDO_MATERNO.HeaderText = "Apellido Materno";
+            this.APELLIDO_MATERNO.MinimumWidth = 6;
+            this.APELLIDO_MATERNO.Name = "APELLIDO_MATERNO";
+            this.APELLIDO_MATERNO.ReadOnly = true;
+            this.APELLIDO_MATERNO.Width = 162;
             // 
             // MONTO_TOTAL
             // 
@@ -379,10 +435,15 @@
         private System.Windows.Forms.ComboBox cboEstado;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboTipo;
+        private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
         private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_CLIENTE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_PATERNO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_MATERNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn MONTO_TOTAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn MONTO_PAGAR;
         private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;

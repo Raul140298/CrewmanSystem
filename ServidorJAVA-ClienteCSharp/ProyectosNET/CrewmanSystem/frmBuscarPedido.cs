@@ -20,9 +20,13 @@ namespace CrewmanSystem
 		private ClienteWS.ClienteWSClient daoCliente = new ClienteWS.ClienteWSClient();
 		private string[] tipos = { "AMBOS", "BORRADOR", "PEDIDO"};
 		private string[] estados = { "AMBOS", "EN_PROCESO", "ESPERANDO"};
+		private int idTipo;
 
-		public frmBuscarPedido()
+		public frmBuscarPedido(int idTipo)
 		{
+			//idTipo 0 = BUSCAR PEDIDO NORMAL
+			//idTipo 1 = BUSCAR PEDIDO A PAGAR (SE USA EN NUEVA FACTURA)
+			this.idTipo = idTipo;
 			InitializeComponent();
 			dtpRangoIni.Value = dtpRangoIni.MinDate;
 			dtpRangoFin.Value = dtpRangoFin.MaxDate;
@@ -32,9 +36,20 @@ namespace CrewmanSystem
 			txtRuc.Text = "";
 			txtGrupo.Text = "";
 			cboTipo.DataSource = tipos;
-			cboTipo.SelectedIndex = 0;
 			cboEstado.DataSource = estados;
-			cboEstado.SelectedIndex = 0;
+			if (idTipo == 0)
+            {
+				cboTipo.SelectedIndex = 0;
+				cboEstado.SelectedIndex = 0;
+				btnSeleccionar.Visible = false;
+            }
+            else
+            {
+				cboTipo.SelectedIndex = 2;
+				cboEstado.SelectedIndex = 1;
+				cboEstado.Enabled = false;
+				cboTipo.Enabled = false;
+            }
 
 			completarTabla();
 			#region colores de seleccion
@@ -51,9 +66,8 @@ namespace CrewmanSystem
 
         private void completarTabla()
         {
-			String miEstado = cboEstado.SelectedItem.ToString();
-			String miTipo = cboTipo.SelectedItem.ToString();
-
+			string miEstado = cboEstado.SelectedItem.ToString();
+			string miTipo = cboTipo.SelectedItem.ToString();
 			misPedidos = 
 				daoPedido.listarPedidos(Program.empleado.idEmpleado,txtRuc.Text,txtGrupo.Text,dtpRangoIni.Value, dtpRangoFin.Value, miTipo, miEstado);
 			dgvPedidos.AutoGenerateColumns = false;
@@ -61,17 +75,31 @@ namespace CrewmanSystem
 				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
 			else
 				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>();
+			if (Program.empleado.cargo.nombre == "VENDEDOR")
+			{
+				dgvPedidos.Columns["NOMBRE"].Visible = false;
+				dgvPedidos.Columns["APELLIDO_PATERNO"].Visible = false;
+				dgvPedidos.Columns["APELLIDO_MATERNO"].Visible = false;
+			}
 		}
 
 		private void dgvPedidos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
 		{
 			//castear objetos y mostrar valor determinado
-			PedidoWS.pedido pedido = dgvPedidos.Rows[e.RowIndex].DataBoundItem
-			as PedidoWS.pedido;
+			try
+			{
+				PedidoWS.pedido pedido = dgvPedidos.Rows[e.RowIndex].DataBoundItem
+				as PedidoWS.pedido;
+				dgvPedidos.Rows[e.RowIndex].Cells["RUC"].Value = pedido.cliente.ruc;
+				dgvPedidos.Rows[e.RowIndex].Cells["RAZON_SOCIAL"].Value = pedido.cliente.razonSocial;
+				dgvPedidos.Rows[e.RowIndex].Cells["GRUPO"].Value = pedido.cliente.grupo;
+				dgvPedidos.Rows[e.RowIndex].Cells["TIPO_CLIENTE"].Value = pedido.cliente.tipoEmpresa;
+				dgvPedidos.Rows[e.RowIndex].Cells["NOMBRE"].Value = pedido.empleado.nombre;
+				dgvPedidos.Rows[e.RowIndex].Cells["APELLIDO_PATERNO"].Value = pedido.empleado.apellidoPaterno;
+				dgvPedidos.Rows[e.RowIndex].Cells["APELLIDO_MATERNO"].Value = pedido.empleado.apellidoMaterno;
 
-			dgvPedidos.Rows[e.RowIndex].Cells["RUC"].Value = pedido.cliente.ruc;
-			dgvPedidos.Rows[e.RowIndex].Cells["RAZON_SOCIAL"].Value = pedido.cliente.razonSocial;
-			dgvPedidos.Rows[e.RowIndex].Cells["GRUPO"].Value = pedido.cliente.grupo;
+			}
+			catch (Exception) { }
 		}
 		
 		private void dgvPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -105,6 +133,16 @@ namespace CrewmanSystem
         private void btnBuscar_Click(object sender, EventArgs e)
         {
 			completarTabla();
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+			if(dgvPedidos.DataSource !=null && dgvPedidos.CurrentRow.Index >= 0)
+            {
+				pedidoSeleccionado = (PedidoWS.pedido)dgv.CurrentRow.DataBoundItem;
+				this.DialogResult = DialogResult.OK;
+			}
+
         }
     }
 }

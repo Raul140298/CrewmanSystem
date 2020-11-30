@@ -31,7 +31,7 @@ namespace CrewmanSystem
         private void btnBuscarPedido_Click(object sender, EventArgs e)
         {
 
-            frmBuscarPedido formBusquedaPedido = new frmBuscarPedido();
+            frmBuscarPedido formBusquedaPedido = new frmBuscarPedido(1);
             if(formBusquedaPedido.ShowDialog() == DialogResult.OK)
             {
 

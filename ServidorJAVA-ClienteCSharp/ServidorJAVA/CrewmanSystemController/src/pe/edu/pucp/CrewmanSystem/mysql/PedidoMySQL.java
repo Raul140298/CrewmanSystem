@@ -13,12 +13,14 @@ import pe.edu.pucp.CrewmanSystem.dao.ClienteDAO;
 import pe.edu.pucp.CrewmanSystem.dao.EmpleadoDAO;
 import pe.edu.pucp.CrewmanSystem.dao.FacturaDAO;
 import pe.edu.pucp.CrewmanSystem.dao.LineaPedidoDAO;
+import pe.edu.pucp.CrewmanSystem.dao.PersonaDAO;
 import pe.edu.pucp.CrewmanSystem.model.Cliente;
 import pe.edu.pucp.CrewmanSystem.model.EstadoPedido;
 import pe.edu.pucp.CrewmanSystem.model.LineaPedido;
 import pe.edu.pucp.CrewmanSystem.model.TipoPedido;
 import pe.edu.pucp.CrewmanSystem.model.Empleado;
 import pe.edu.pucp.CrewmanSystem.model.Factura;
+import pe.edu.pucp.CrewmanSystem.model.Persona;
 
 public class PedidoMySQL implements PedidoDAO{
     Connection con;
@@ -151,6 +153,7 @@ public class PedidoMySQL implements PedidoDAO{
     @Override
     public ArrayList<Pedido>listar(int idVendedor,String razonSocial,String grupo, Date fechaIni, Date fechaFin, String tipoPedido, String estadoPedido)
     {
+        EmpleadoDAO daoEmpleado = new EmpleadoMySQL();
         ArrayList<Pedido> pedidos = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -167,9 +170,10 @@ public class PedidoMySQL implements PedidoDAO{
             cs.executeUpdate();
             rs = cs.getResultSet();
             while(rs.next()){
-                Pedido pedido=new Pedido();
-                Cliente cliente=new Cliente();
-                Empleado vendedor=new Empleado();
+                Pedido pedido = new Pedido();
+                Cliente cliente = new Cliente();
+                Empleado vendedor = new Empleado();
+                Persona persona = new Persona();
                 
                 pedido.setIdPedido(rs.getInt("ID_PEDIDO"));
                 
@@ -182,6 +186,7 @@ public class PedidoMySQL implements PedidoDAO{
                 pedido.setCliente(cliente);
                 
                 vendedor.setIdEmpleado(rs.getInt("ID_EMPLEADO"));
+                daoEmpleado.obtenerEmpleado(vendedor);
                 pedido.setEmpleado(vendedor);
                 
                 pedido.setFechaEstim(rs.getDate("FECHA_ESTIMADA"));

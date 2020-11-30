@@ -34,14 +34,22 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
+            this.pnlVendedor = new System.Windows.Forms.Panel();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIPO_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.APELLIDO_PATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.APELLIDO_MATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MONTO_PAGAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIPO_PEDIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
+            this.pnlVendedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvPedidos
@@ -65,7 +73,13 @@
             this.dgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.CLIENTE,
+            this.RUC,
+            this.RAZON_SOCIAL,
+            this.GRUPO,
+            this.TIPO_CLIENTE,
+            this.NOMBRE,
+            this.APELLIDO_PATERNO,
+            this.APELLIDO_MATERNO,
             this.Column2,
             this.MONTO_PAGAR,
             this.Column3,
@@ -94,11 +108,20 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvPedidos.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPedidos.RowTemplate.Height = 24;
-            this.dgvPedidos.Size = new System.Drawing.Size(800, 450);
+            this.dgvPedidos.Size = new System.Drawing.Size(1143, 600);
             this.dgvPedidos.TabIndex = 2;
             this.dgvPedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPedidos_CellContentClick);
             this.dgvPedidos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             this.dgvPedidos.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvPedidos_RowStateChanged);
+            // 
+            // pnlVendedor
+            // 
+            this.pnlVendedor.Controls.Add(this.dgvPedidos);
+            this.pnlVendedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlVendedor.Location = new System.Drawing.Point(0, 0);
+            this.pnlVendedor.Name = "pnlVendedor";
+            this.pnlVendedor.Size = new System.Drawing.Size(1143, 600);
+            this.pnlVendedor.TabIndex = 5;
             // 
             // ID
             // 
@@ -109,13 +132,61 @@
             this.ID.ReadOnly = true;
             this.ID.Width = 50;
             // 
-            // CLIENTE
+            // RUC
             // 
-            this.CLIENTE.HeaderText = "Cliente";
-            this.CLIENTE.MinimumWidth = 6;
-            this.CLIENTE.Name = "CLIENTE";
-            this.CLIENTE.ReadOnly = true;
-            this.CLIENTE.Width = 89;
+            this.RUC.HeaderText = "RUC";
+            this.RUC.MinimumWidth = 6;
+            this.RUC.Name = "RUC";
+            this.RUC.ReadOnly = true;
+            this.RUC.Width = 73;
+            // 
+            // RAZON_SOCIAL
+            // 
+            this.RAZON_SOCIAL.HeaderText = "Razón Social";
+            this.RAZON_SOCIAL.MinimumWidth = 6;
+            this.RAZON_SOCIAL.Name = "RAZON_SOCIAL";
+            this.RAZON_SOCIAL.ReadOnly = true;
+            this.RAZON_SOCIAL.Width = 136;
+            // 
+            // GRUPO
+            // 
+            this.GRUPO.HeaderText = "Grupo";
+            this.GRUPO.MinimumWidth = 6;
+            this.GRUPO.Name = "GRUPO";
+            this.GRUPO.ReadOnly = true;
+            this.GRUPO.Width = 83;
+            // 
+            // TIPO_CLIENTE
+            // 
+            this.TIPO_CLIENTE.HeaderText = "Tipo Cliente";
+            this.TIPO_CLIENTE.MinimumWidth = 6;
+            this.TIPO_CLIENTE.Name = "TIPO_CLIENTE";
+            this.TIPO_CLIENTE.ReadOnly = true;
+            this.TIPO_CLIENTE.Width = 126;
+            // 
+            // NOMBRE
+            // 
+            this.NOMBRE.HeaderText = "Nombre";
+            this.NOMBRE.MinimumWidth = 6;
+            this.NOMBRE.Name = "NOMBRE";
+            this.NOMBRE.ReadOnly = true;
+            this.NOMBRE.Width = 96;
+            // 
+            // APELLIDO_PATERNO
+            // 
+            this.APELLIDO_PATERNO.HeaderText = "Apellido Paterno";
+            this.APELLIDO_PATERNO.MinimumWidth = 6;
+            this.APELLIDO_PATERNO.Name = "APELLIDO_PATERNO";
+            this.APELLIDO_PATERNO.ReadOnly = true;
+            this.APELLIDO_PATERNO.Width = 159;
+            // 
+            // APELLIDO_MATERNO
+            // 
+            this.APELLIDO_MATERNO.HeaderText = "Apellido Materno";
+            this.APELLIDO_MATERNO.MinimumWidth = 6;
+            this.APELLIDO_MATERNO.Name = "APELLIDO_MATERNO";
+            this.APELLIDO_MATERNO.ReadOnly = true;
+            this.APELLIDO_MATERNO.Width = 162;
             // 
             // Column2
             // 
@@ -172,20 +243,27 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgvPedidos);
+            this.ClientSize = new System.Drawing.Size(1143, 600);
+            this.Controls.Add(this.pnlVendedor);
             this.Name = "frmGestionarPedidos";
             this.Text = "frmGestionarPedidos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).EndInit();
+            this.pnlVendedor.ResumeLayout(false);
             this.ResumeLayout(false);
 
 		}
 
-		#endregion
-
-		private System.Windows.Forms.DataGridView dgvPedidos;
+        #endregion
+        private System.Windows.Forms.DataGridView dgvPedidos;
+        private System.Windows.Forms.Panel pnlVendedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CLIENTE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_CLIENTE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_PATERNO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_MATERNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn MONTO_PAGAR;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
