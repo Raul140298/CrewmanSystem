@@ -18,6 +18,9 @@ namespace CrewmanSystem
 		public static ClienteWS.cliente clienteSeleccionado;
 		public static DataGridView dgv;
 		private ClienteWS.ClienteWSClient daoCliente = new ClienteWS.ClienteWSClient();
+		private string[] tipos = { "AMBOS", "BORRADOR", "PEDIDO"};
+		private string[] estados = { "AMBOS", "EN_PROCESO", "ESPERANDO"};
+
 		public frmBuscarPedido()
 		{
 			InitializeComponent();
@@ -26,6 +29,13 @@ namespace CrewmanSystem
 			dgv = dgvPedidos;
 			clienteSeleccionado = new ClienteWS.cliente();
 			clienteSeleccionado.idCliente = 0;
+			txtRuc.Text = "";
+			txtGrupo.Text = "";
+			cboTipo.DataSource = tipos;
+			cboTipo.SelectedIndex = 0;
+			cboEstado.DataSource = estados;
+			cboEstado.SelectedIndex = 0;
+
 			completarTabla();
 			#region colores de seleccion
 			dgvPedidos.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
@@ -41,25 +51,16 @@ namespace CrewmanSystem
 
         private void completarTabla()
         {
+			String miEstado = cboEstado.SelectedItem.ToString();
+			String miTipo = cboTipo.SelectedItem.ToString();
+
+			misPedidos = 
+				daoPedido.listarPedidos(Program.empleado.idEmpleado,txtRuc.Text,txtGrupo.Text,dtpRangoIni.Value, dtpRangoFin.Value, miTipo, miEstado);
 			dgvPedidos.AutoGenerateColumns = false;
-			misPedidos = daoPedido.listarPedidos(Program.empleado.idEmpleado,"","",dtpRangoIni.Value, dtpRangoFin.Value, "BORRADOR", "ESPERANDO");
 			if (misPedidos != null)
-			{
-				foreach (PedidoWS.pedido p in misPedidos)
-				{
-					ClienteWS.cliente c = new ClienteWS.cliente();
-
-					c = daoCliente.obtenerCliente(p.cliente.idCliente);
-
-					p.cliente.razonSocial = c.razonSocial;
-				}
 				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
-			}
 			else
-			{
 				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>();
-
-			}
 		}
 
 		private void dgvPedidos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -68,8 +69,11 @@ namespace CrewmanSystem
 			PedidoWS.pedido pedido = dgvPedidos.Rows[e.RowIndex].DataBoundItem
 			as PedidoWS.pedido;
 
-			dgvPedidos.Rows[e.RowIndex].Cells["CLIENTE"].Value = pedido.cliente.razonSocial;
+			dgvPedidos.Rows[e.RowIndex].Cells["RUC"].Value = pedido.cliente.ruc;
+			dgvPedidos.Rows[e.RowIndex].Cells["RAZON_SOCIAL"].Value = pedido.cliente.razonSocial;
+			dgvPedidos.Rows[e.RowIndex].Cells["GRUPO"].Value = pedido.cliente.grupo;
 		}
+		
 		private void dgvPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
 			frmVentanaPrincipal.act.Enabled = false;
@@ -91,15 +95,7 @@ namespace CrewmanSystem
 				frmVentanaPrincipal.elim.Enabled = true;
 			}
 		}
-		private void btnBuscarCliente_Click(object sender, EventArgs e)
-        {
-			frmBuscarCliente formBusquedaCliente = new frmBuscarCliente(1,0);
-			if(formBusquedaCliente.ShowDialog() == DialogResult.OK)
-            {
-				clienteSeleccionado = frmBuscarCliente.clienteSeleccionado;
-				txtCliente.Text = clienteSeleccionado.razonSocial;
-			}
-        }
+		
 		public static void eliminar()
 		{
 			pedidoSeleccionado = (PedidoWS.pedido)dgv.CurrentRow.DataBoundItem;
