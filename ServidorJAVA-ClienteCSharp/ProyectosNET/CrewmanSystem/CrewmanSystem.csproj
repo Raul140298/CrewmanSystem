@@ -789,6 +789,9 @@
     <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.insertarFacturaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.listarFacturasPorPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.listarFacturasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

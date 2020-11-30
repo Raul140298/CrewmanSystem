@@ -7,10 +7,20 @@
   <xs:element name="insertarFactura" type="tns:insertarFactura" />
   <xs:element name="insertarFacturaResponse" type="tns:insertarFacturaResponse" />
   <xs:element name="listarFacturas" type="tns:listarFacturas" />
+  <xs:element name="listarFacturasPorPedido" type="tns:listarFacturasPorPedido" />
+  <xs:element name="listarFacturasPorPedidoResponse" type="tns:listarFacturasPorPedidoResponse" />
   <xs:element name="listarFacturasResponse" type="tns:listarFacturasResponse" />
   <xs:complexType name="listarFacturas">
     <xs:sequence>
-      <xs:element name="idPedido" type="xs:int" />
+      <xs:element name="idVendedor" type="xs:int" />
+      <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
+      <xs:element minOccurs="0" name="grupo" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaInicialEmision" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaFinEmision" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaInicialVencimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaFinVencimiento" type="xs:dateTime" />
+      <xs:element name="anulado" type="xs:int" />
+      <xs:element name="estadoPagar" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarFacturasResponse">
@@ -312,6 +322,16 @@
   <xs:complexType name="insertarFacturaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarFacturasPorPedido">
+    <xs:sequence>
+      <xs:element name="idPedido" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarFacturasPorPedidoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:factura" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarFactura">
