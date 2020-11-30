@@ -49,7 +49,6 @@
 			this.btnEmpGestionProductos = new FontAwesome.Sharp.IconButton();
 			this.pnlJefeDeVentas = new System.Windows.Forms.Panel();
 			this.pnlGestionClientes = new System.Windows.Forms.Panel();
-			this.btnClientesXZona = new FontAwesome.Sharp.IconButton();
 			this.btnClientes = new FontAwesome.Sharp.IconButton();
 			this.btnGestionClientes = new FontAwesome.Sharp.IconButton();
 			this.btnCumplimientoDeMetas = new FontAwesome.Sharp.IconButton();
@@ -58,7 +57,6 @@
 			this.btnPedido = new FontAwesome.Sharp.IconButton();
 			this.btnReportePedidos = new FontAwesome.Sharp.IconButton();
 			this.pnlGestionEmpleados = new System.Windows.Forms.Panel();
-			this.btnSeguimientoYControl = new FontAwesome.Sharp.IconButton();
 			this.btnCarteras = new FontAwesome.Sharp.IconButton();
 			this.btnEmpleados = new FontAwesome.Sharp.IconButton();
 			this.btnGestionEmpleados = new FontAwesome.Sharp.IconButton();
@@ -164,7 +162,7 @@
 			this.pnlEmpleado.Controls.Add(this.pnlEmpGestionProductos);
 			this.pnlEmpleado.Controls.Add(this.btnEmpGestionProductos);
 			this.pnlEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlEmpleado.Location = new System.Drawing.Point(0, 968);
+			this.pnlEmpleado.Location = new System.Drawing.Point(0, 871);
 			this.pnlEmpleado.Name = "pnlEmpleado";
 			this.pnlEmpleado.Size = new System.Drawing.Size(264, 838);
 			this.pnlEmpleado.TabIndex = 1;
@@ -450,42 +448,18 @@
 			this.pnlJefeDeVentas.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlJefeDeVentas.Location = new System.Drawing.Point(0, 0);
 			this.pnlJefeDeVentas.Name = "pnlJefeDeVentas";
-			this.pnlJefeDeVentas.Size = new System.Drawing.Size(264, 968);
+			this.pnlJefeDeVentas.Size = new System.Drawing.Size(264, 871);
 			this.pnlJefeDeVentas.TabIndex = 0;
 			this.pnlJefeDeVentas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlJefeDeVentas_MouseDown);
 			// 
 			// pnlGestionClientes
 			// 
-			this.pnlGestionClientes.Controls.Add(this.btnClientesXZona);
 			this.pnlGestionClientes.Controls.Add(this.btnClientes);
 			this.pnlGestionClientes.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlGestionClientes.Location = new System.Drawing.Point(0, 849);
+			this.pnlGestionClientes.Location = new System.Drawing.Point(0, 804);
 			this.pnlGestionClientes.Name = "pnlGestionClientes";
-			this.pnlGestionClientes.Size = new System.Drawing.Size(264, 108);
+			this.pnlGestionClientes.Size = new System.Drawing.Size(264, 57);
 			this.pnlGestionClientes.TabIndex = 30;
-			// 
-			// btnClientesXZona
-			// 
-			this.btnClientesXZona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-			this.btnClientesXZona.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnClientesXZona.FlatAppearance.BorderSize = 0;
-			this.btnClientesXZona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnClientesXZona.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-			this.btnClientesXZona.ForeColor = System.Drawing.Color.Gainsboro;
-			this.btnClientesXZona.IconChar = FontAwesome.Sharp.IconChar.None;
-			this.btnClientesXZona.IconColor = System.Drawing.Color.Black;
-			this.btnClientesXZona.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.btnClientesXZona.IconSize = 16;
-			this.btnClientesXZona.Location = new System.Drawing.Point(0, 49);
-			this.btnClientesXZona.Name = "btnClientesXZona";
-			this.btnClientesXZona.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-			this.btnClientesXZona.Rotation = 0D;
-			this.btnClientesXZona.Size = new System.Drawing.Size(264, 51);
-			this.btnClientesXZona.TabIndex = 2;
-			this.btnClientesXZona.Text = "Clientes x Zona";
-			this.btnClientesXZona.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnClientesXZona.UseVisualStyleBackColor = false;
-			this.btnClientesXZona.Click += new System.EventHandler(this.btnClientesXZona_Click);
 			// 
 			// btnClientes
 			// 
@@ -523,7 +497,7 @@
 			this.btnGestionClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnGestionClientes.IconSize = 20;
 			this.btnGestionClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnGestionClientes.Location = new System.Drawing.Point(0, 810);
+			this.btnGestionClientes.Location = new System.Drawing.Point(0, 765);
 			this.btnGestionClientes.Name = "btnGestionClientes";
 			this.btnGestionClientes.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
 			this.btnGestionClientes.Rotation = 0D;
@@ -549,7 +523,7 @@
 			this.btnCumplimientoDeMetas.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnCumplimientoDeMetas.IconSize = 20;
 			this.btnCumplimientoDeMetas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnCumplimientoDeMetas.Location = new System.Drawing.Point(0, 765);
+			this.btnCumplimientoDeMetas.Location = new System.Drawing.Point(0, 720);
 			this.btnCumplimientoDeMetas.Name = "btnCumplimientoDeMetas";
 			this.btnCumplimientoDeMetas.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
 			this.btnCumplimientoDeMetas.Rotation = 0D;
@@ -567,7 +541,7 @@
 			this.pnlGestionPedidos.Controls.Add(this.btnPedReporte);
 			this.pnlGestionPedidos.Controls.Add(this.btnPedido);
 			this.pnlGestionPedidos.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlGestionPedidos.Location = new System.Drawing.Point(0, 660);
+			this.pnlGestionPedidos.Location = new System.Drawing.Point(0, 615);
 			this.pnlGestionPedidos.Name = "pnlGestionPedidos";
 			this.pnlGestionPedidos.Size = new System.Drawing.Size(264, 105);
 			this.pnlGestionPedidos.TabIndex = 26;
@@ -632,7 +606,7 @@
 			this.btnReportePedidos.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnReportePedidos.IconSize = 20;
 			this.btnReportePedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnReportePedidos.Location = new System.Drawing.Point(0, 615);
+			this.btnReportePedidos.Location = new System.Drawing.Point(0, 570);
 			this.btnReportePedidos.Name = "btnReportePedidos";
 			this.btnReportePedidos.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
 			this.btnReportePedidos.Rotation = 0D;
@@ -647,37 +621,13 @@
 			// 
 			// pnlGestionEmpleados
 			// 
-			this.pnlGestionEmpleados.Controls.Add(this.btnSeguimientoYControl);
 			this.pnlGestionEmpleados.Controls.Add(this.btnCarteras);
 			this.pnlGestionEmpleados.Controls.Add(this.btnEmpleados);
 			this.pnlGestionEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlGestionEmpleados.Location = new System.Drawing.Point(0, 472);
 			this.pnlGestionEmpleados.Name = "pnlGestionEmpleados";
-			this.pnlGestionEmpleados.Size = new System.Drawing.Size(264, 143);
+			this.pnlGestionEmpleados.Size = new System.Drawing.Size(264, 98);
 			this.pnlGestionEmpleados.TabIndex = 5;
-			// 
-			// btnSeguimientoYControl
-			// 
-			this.btnSeguimientoYControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-			this.btnSeguimientoYControl.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnSeguimientoYControl.FlatAppearance.BorderSize = 0;
-			this.btnSeguimientoYControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnSeguimientoYControl.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-			this.btnSeguimientoYControl.ForeColor = System.Drawing.Color.Gainsboro;
-			this.btnSeguimientoYControl.IconChar = FontAwesome.Sharp.IconChar.None;
-			this.btnSeguimientoYControl.IconColor = System.Drawing.Color.Black;
-			this.btnSeguimientoYControl.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.btnSeguimientoYControl.IconSize = 16;
-			this.btnSeguimientoYControl.Location = new System.Drawing.Point(0, 90);
-			this.btnSeguimientoYControl.Name = "btnSeguimientoYControl";
-			this.btnSeguimientoYControl.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-			this.btnSeguimientoYControl.Rotation = 0D;
-			this.btnSeguimientoYControl.Size = new System.Drawing.Size(264, 45);
-			this.btnSeguimientoYControl.TabIndex = 4;
-			this.btnSeguimientoYControl.Text = "Seguimiento y Control";
-			this.btnSeguimientoYControl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnSeguimientoYControl.UseVisualStyleBackColor = false;
-			this.btnSeguimientoYControl.Click += new System.EventHandler(this.btnSeguimientoYControl_Click);
 			// 
 			// btnCarteras
 			// 
@@ -1382,7 +1332,6 @@
 		private System.Windows.Forms.Panel pnlJefeDeVentas;
 		private FontAwesome.Sharp.IconButton btnReportePedidos;
 		private System.Windows.Forms.Panel pnlGestionEmpleados;
-		private FontAwesome.Sharp.IconButton btnSeguimientoYControl;
 		private FontAwesome.Sharp.IconButton btnCarteras;
 		private FontAwesome.Sharp.IconButton btnEmpleados;
 		private FontAwesome.Sharp.IconButton btnGestionEmpleados;
@@ -1407,7 +1356,6 @@
 		private System.Windows.Forms.Label lblControlName;
         private FontAwesome.Sharp.IconButton btnMarca;
         private System.Windows.Forms.Panel pnlGestionClientes;
-        private FontAwesome.Sharp.IconButton btnClientesXZona;
         private FontAwesome.Sharp.IconButton btnClientes;
         private FontAwesome.Sharp.IconButton btnGestionClientes;
         private FontAwesome.Sharp.IconButton btnCumplimientoDeMetas;

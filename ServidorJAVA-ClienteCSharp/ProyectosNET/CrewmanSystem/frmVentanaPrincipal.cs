@@ -658,11 +658,6 @@ namespace CrewmanSystem
 		{
 			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarCarteras(), false, true, false, true, true);
 		}
-
-		private void btnSeguimientoYControl_Click(object sender, EventArgs e)
-		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmSeguimientoYControl(), false, false, false, false, true);
-		}
 		#endregion
 
 		#region GESTIONPEDIDOS
@@ -690,16 +685,6 @@ namespace CrewmanSystem
 		{
 			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarClientes(),true, true, true, true, true);
 		}
-
-		private void btnClientesXZona_Click(object sender, EventArgs e)
-		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarClientesXZona(),false, false, false, true, true);
-		}
-
-		//private void btnPersonaDeContacto_Click(object sender, EventArgs e)
-		//{
-		//	ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarPersonaContacto(),true, true, false, true, true);
-		//}
 		#endregion
 
 		#region BOTONESSINDESPEGABLES
