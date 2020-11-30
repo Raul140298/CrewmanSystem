@@ -126,7 +126,7 @@ public class Main{
 //        daoPedido.actualizar(pedido);
 //        System.out.println("EL MODELADO HA CONCLUIDO");
         try{
-            misPedidos = daoPedido.listar(0,"","",sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), "PEDIDO", "ESPERANDO");
+            misPedidos = daoPedido.listar(21,"","",sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), "AMBOS", "AMBOS");
         }catch(Exception e){
             System.out.println("MAL");
         }

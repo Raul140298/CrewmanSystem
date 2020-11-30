@@ -27,7 +27,7 @@ namespace CrewmanSystem
 			dgvPedidos.AutoGenerateColumns = false;
 			int idBusqueda = 0;
 			if (Program.empleado.cargo.nombre == "VENDEDOR") idBusqueda = Program.empleado.idEmpleado;
-			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos(idBusqueda,"","", DateTime.MinValue, DateTime.MaxValue, "BORRADOR","ESPERANDO");
+			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos(idBusqueda,"","", DateTime.MinValue, DateTime.MaxValue, "AMBOS","AMBOS");
 
 			if (misPedidos != null)
 				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
