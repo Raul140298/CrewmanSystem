@@ -30,22 +30,10 @@ namespace CrewmanSystem
 			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos(idBusqueda,"","", DateTime.MinValue, DateTime.MaxValue, "AMBOS","AMBOS");
 
 			if (misPedidos != null)
-			{		
-				//foreach (PedidoWS.pedido p in misPedidos)
-				//{
-				//	ClienteWS.cliente c = new ClienteWS.cliente();
-
-				//	c = daoCliente.obtenerCliente(p.cliente.idCliente);
-
-				//	p.cliente.razonSocial = c.razonSocial;
-				//}
 				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
-			}
+			
 			else
-			{
 				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>();
-
-			}
 
 			#region colores de seleccion
 			dgvPedidos.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
