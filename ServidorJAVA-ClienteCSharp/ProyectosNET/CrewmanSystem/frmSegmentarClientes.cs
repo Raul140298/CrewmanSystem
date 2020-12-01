@@ -12,9 +12,17 @@ namespace CrewmanSystem
 {
     public partial class frmSegmentarClientes : Form
     {
+        ClienteWS.ClienteWSClient daoCliente = new ClienteWS.ClienteWSClient();
         public frmSegmentarClientes()
         {
+            DateTime fecha = daoCliente.obtenerInfoSeg();
+            dtpFecha.Value = fecha;
             InitializeComponent();
+        }
+
+        private void btnSegmentar_Click(object sender, EventArgs e)
+        {
+            daoCliente.segmentarClientes();
         }
     }
 }

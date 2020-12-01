@@ -666,6 +666,9 @@
     <EmbeddedResource Include="frmNuevoProductoXZona.resx">
       <DependentUpon>frmNuevoProductoXZona.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSegmentarClientes.resx">
+      <DependentUpon>frmSegmentarClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmVentanaPrincipal.resx">
       <DependentUpon>frmVentanaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -715,6 +718,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.obtenerClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.obtenerInfoSegResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.segmentarClientesResponse.datasource">
