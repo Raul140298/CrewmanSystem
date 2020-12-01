@@ -15,11 +15,27 @@ namespace CrewmanSystem
         PedidoWS.pedido pedidoSeleccionado = new PedidoWS.pedido();
         FacturaWS.FacturaWSClient daoFactura = new FacturaWS.FacturaWSClient();
         string[] estado = { "PAGADO", "POR PAGAR" };
-		public frmNuevaFactura()
-		{
-			InitializeComponent();
+
+        public frmNuevaFactura()
+        {
+            InitializeComponent();
             cboEstadoPagar.DataSource = estado;
-		}
+            if (frmVentanaPrincipal.nBtn == 1)
+            {
+                frmGestionarFacturas.facturaSeleccionada = (FacturaWS.factura)frmGestionarFacturas.dgv.CurrentRow.DataBoundItem;
+                FacturaWS.factura miFactura = frmGestionarFacturas.facturaSeleccionada;
+                txtIdFactura.Text = miFactura.idFactura.ToString();
+                txtIdPedido.Text = miFactura.pedido.idPedido.ToString();
+                txtMontoPendiente.Text = miFactura.pedido.montoPagar.ToString();
+                txtMonto.Text = miFactura.monto.ToString();
+                cboEstadoPagar.SelectedItem = miFactura.estadoPagar;
+                txtObservacion.Text = miFactura.observacion;
+                dtpEmision.Value = miFactura.fechaEmision;
+                dtpVencimiento.Value = miFactura.fechaVencimiento;
+                txtImpuestos.Text = miFactura.impuestos.ToString();
+                btnBuscarPedido.Enabled = false;
+            }
+        }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -84,21 +100,37 @@ namespace CrewmanSystem
                 factura.fechaVencimientoSpecified = true;
                 factura.impuestos = Math.Round(factura.monto * 0.18, 2);
                 txtImpuestos.Text = factura.impuestos.ToString("n2");
-                if (cboEstadoPagar.Text == "PAGADO")
-                    factura.estadoPagar = true;
-                else
-                    factura.estadoPagar = false;
-                
-                int resultado = daoFactura.insertarFactura(factura);
-                if(resultado == 0)
+                if (cboEstadoPagar.Text == "PAGADO") factura.estadoPagar = true;
+                else factura.estadoPagar = false;
+
+                if (frmVentanaPrincipal.nBtn == 0)
                 {
-                    MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    int resultado = daoFactura.insertarFactura(factura);
+                    if (resultado == 0)
+                    {
+                        MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se insertó correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtIdFactura.Text = resultado.ToString();
+                        txtMontoPendiente.Text = (Convert.ToDouble(txtMontoPendiente.Text) - Convert.ToDouble(txtMonto.Text)).ToString();
+                    }
                 }
-                else
+                else if (frmVentanaPrincipal.nBtn == 1)
                 {
-                    MessageBox.Show("Se insertó correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtIdFactura.Text = resultado.ToString();
-                    txtMontoPendiente.Text = (Convert.ToDouble(txtMontoPendiente.Text) - Convert.ToDouble(txtMonto.Text)).ToString();
+                    factura.idFactura = Convert.ToInt32(txtIdFactura.Text);
+                    int resultado = daoFactura.actualizarFactura(factura);
+                    if (resultado == 0)
+                    {
+                        MessageBox.Show("No se actualizó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se actualizó correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtIdFactura.Text = resultado.ToString();
+                        txtMontoPendiente.Text = (frmGestionarFacturas.facturaSeleccionada.pedido.montoPagar - Convert.ToDouble(txtMonto.Text)).ToString();
+                    }
                 }
             }
         }

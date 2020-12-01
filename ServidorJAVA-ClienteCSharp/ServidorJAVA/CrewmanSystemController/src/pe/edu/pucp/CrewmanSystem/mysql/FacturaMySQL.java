@@ -14,9 +14,11 @@ import pe.edu.pucp.CrewmanSystem.dao.EmpleadoDAO;
 import pe.edu.pucp.CrewmanSystem.dao.NotaDeCreditoDAO;
 import pe.edu.pucp.CrewmanSystem.model.Cliente;
 import pe.edu.pucp.CrewmanSystem.model.Empleado;
+import pe.edu.pucp.CrewmanSystem.model.EstadoPedido;
 import pe.edu.pucp.CrewmanSystem.model.NotaDeCredito;
 import pe.edu.pucp.CrewmanSystem.model.Pedido;
 import pe.edu.pucp.CrewmanSystem.model.Persona;
+import pe.edu.pucp.CrewmanSystem.model.TipoPedido;
 
 public class FacturaMySQL implements FacturaDAO{
     Connection con;
@@ -143,6 +145,11 @@ public class FacturaMySQL implements FacturaDAO{
                 factura.setIdFactura(rs.getInt("ID_FACTURA"));
                 
                 pedido.setIdPedido(rs.getInt("ID_PEDIDO"));
+                pedido.setMontoTotal(rs.getDouble("MONTO_TOTAL"));
+                pedido.setMontoPagar(rs.getDouble("MONTO_PAGAR"));
+
+                pedido.setTipoPedido(TipoPedido.valueOf(rs.getString("TIPO_PEDIDO")));
+                pedido.setEstadoPedido(EstadoPedido.valueOf(rs.getString("ESTADO_PEDIDO")));
                 
                 cliente.setIdCliente(rs.getInt("ID_CLIENTE"));
                 cliente.setRuc(rs.getString("RUC"));

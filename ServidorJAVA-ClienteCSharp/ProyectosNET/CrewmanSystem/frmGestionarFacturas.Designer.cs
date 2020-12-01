@@ -29,21 +29,27 @@
 		private void InitializeComponent()
 		{
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvFacturas = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_PEDIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIPO_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.APELLIDO_PATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.APELLIDO_MATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MONTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_EMISION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_VENCIMIENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IMPUESTOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DESCUENTOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ANULADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ESTADO_PAGAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
             this.SuspendLayout();
@@ -70,11 +76,18 @@
             this.dgvFacturas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.ID_PEDIDO,
+            this.RUC,
+            this.RAZON_SOCIAL,
+            this.GRUPO,
+            this.TIPO_CLIENTE,
+            this.NOMBRE,
+            this.APELLIDO_PATERNO,
+            this.APELLIDO_MATERNO,
             this.MONTO,
             this.FECHA_EMISION,
             this.FECHA_VENCIMIENTO,
             this.IMPUESTOS,
-            this.DESCUENTOS,
+            this.ANULADO,
             this.ESTADO_PAGAR});
             this.dgvFacturas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvFacturas.EnableHeadersVisualStyles = false;
@@ -84,24 +97,25 @@
             this.dgvFacturas.Name = "dgvFacturas";
             this.dgvFacturas.ReadOnly = true;
             this.dgvFacturas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFacturas.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvFacturas.RowHeadersWidth = 51;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFacturas.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvFacturas.RowHeadersWidth = 51;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvFacturas.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvFacturas.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvFacturas.RowTemplate.Height = 24;
             this.dgvFacturas.Size = new System.Drawing.Size(800, 450);
             this.dgvFacturas.TabIndex = 2;
             this.dgvFacturas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFacturas_CellContentClick);
+            this.dgvFacturas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFacturas_CellFormatting);
             this.dgvFacturas.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvFacturas_RowStateChanged);
             // 
             // ID
@@ -115,12 +129,67 @@
             // 
             // ID_PEDIDO
             // 
-            this.ID_PEDIDO.DataPropertyName = "pedido";
             this.ID_PEDIDO.HeaderText = "Id Pedido";
             this.ID_PEDIDO.MinimumWidth = 6;
             this.ID_PEDIDO.Name = "ID_PEDIDO";
             this.ID_PEDIDO.ReadOnly = true;
             this.ID_PEDIDO.Width = 106;
+            // 
+            // RUC
+            // 
+            this.RUC.HeaderText = "RUC";
+            this.RUC.MinimumWidth = 6;
+            this.RUC.Name = "RUC";
+            this.RUC.ReadOnly = true;
+            this.RUC.Width = 73;
+            // 
+            // RAZON_SOCIAL
+            // 
+            this.RAZON_SOCIAL.HeaderText = "Razon Social";
+            this.RAZON_SOCIAL.MinimumWidth = 6;
+            this.RAZON_SOCIAL.Name = "RAZON_SOCIAL";
+            this.RAZON_SOCIAL.ReadOnly = true;
+            this.RAZON_SOCIAL.Width = 136;
+            // 
+            // GRUPO
+            // 
+            this.GRUPO.HeaderText = "Grupo";
+            this.GRUPO.MinimumWidth = 6;
+            this.GRUPO.Name = "GRUPO";
+            this.GRUPO.ReadOnly = true;
+            this.GRUPO.Width = 83;
+            // 
+            // TIPO_CLIENTE
+            // 
+            this.TIPO_CLIENTE.HeaderText = "Tipo Cliente";
+            this.TIPO_CLIENTE.MinimumWidth = 6;
+            this.TIPO_CLIENTE.Name = "TIPO_CLIENTE";
+            this.TIPO_CLIENTE.ReadOnly = true;
+            this.TIPO_CLIENTE.Width = 126;
+            // 
+            // NOMBRE
+            // 
+            this.NOMBRE.HeaderText = "Nombre";
+            this.NOMBRE.MinimumWidth = 6;
+            this.NOMBRE.Name = "NOMBRE";
+            this.NOMBRE.ReadOnly = true;
+            this.NOMBRE.Width = 96;
+            // 
+            // APELLIDO_PATERNO
+            // 
+            this.APELLIDO_PATERNO.HeaderText = "Apellido Paterno";
+            this.APELLIDO_PATERNO.MinimumWidth = 6;
+            this.APELLIDO_PATERNO.Name = "APELLIDO_PATERNO";
+            this.APELLIDO_PATERNO.ReadOnly = true;
+            this.APELLIDO_PATERNO.Width = 159;
+            // 
+            // APELLIDO_MATERNO
+            // 
+            this.APELLIDO_MATERNO.HeaderText = "Apellido Materno";
+            this.APELLIDO_MATERNO.MinimumWidth = 6;
+            this.APELLIDO_MATERNO.Name = "APELLIDO_MATERNO";
+            this.APELLIDO_MATERNO.ReadOnly = true;
+            this.APELLIDO_MATERNO.Width = 162;
             // 
             // MONTO
             // 
@@ -168,16 +237,14 @@
             this.IMPUESTOS.ReadOnly = true;
             this.IMPUESTOS.Width = 114;
             // 
-            // DESCUENTOS
+            // ANULADO
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Format = "N2";
-            this.DESCUENTOS.DefaultCellStyle = dataGridViewCellStyle6;
-            this.DESCUENTOS.HeaderText = "Descuentos";
-            this.DESCUENTOS.MinimumWidth = 6;
-            this.DESCUENTOS.Name = "DESCUENTOS";
-            this.DESCUENTOS.ReadOnly = true;
-            this.DESCUENTOS.Width = 127;
+            this.ANULADO.DataPropertyName = "anulado";
+            this.ANULADO.HeaderText = "Anulado";
+            this.ANULADO.MinimumWidth = 6;
+            this.ANULADO.Name = "ANULADO";
+            this.ANULADO.ReadOnly = true;
+            this.ANULADO.Width = 97;
             // 
             // ESTADO_PAGAR
             // 
@@ -206,11 +273,18 @@
 		private System.Windows.Forms.DataGridView dgvFacturas;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_PEDIDO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_CLIENTE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_PATERNO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_MATERNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn MONTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_EMISION;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_VENCIMIENTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn IMPUESTOS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DESCUENTOS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ANULADO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO_PAGAR;
     }
 }
