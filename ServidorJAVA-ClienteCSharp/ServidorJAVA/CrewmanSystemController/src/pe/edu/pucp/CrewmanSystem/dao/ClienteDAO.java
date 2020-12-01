@@ -12,4 +12,5 @@ public interface ClienteDAO
     ArrayList<Cliente> listarSinCartera(String razonSocial, String grupo,int idZona);
     ArrayList<Cliente> listarConCartera(String razonSocial, String grupo, int idCartera);
     Cliente obtenerCliente(int idCliente);
+    int segmentarClientes();
 }

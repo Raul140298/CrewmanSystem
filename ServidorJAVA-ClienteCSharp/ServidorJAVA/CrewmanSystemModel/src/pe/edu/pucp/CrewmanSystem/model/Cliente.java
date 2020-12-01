@@ -18,6 +18,7 @@ public class Cliente {
     private String direccion;
     private boolean activo;
     private int[]cords = new int[2];
+    private double montoSeg;
 
     public Cliente(){
         SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
@@ -50,6 +51,14 @@ public class Cliente {
         zona=new Zona();
         this.grupo = grupo;
         this.direccion = direccion;
+    }
+
+    public double getMontoSeg() {
+        return montoSeg;
+    }
+
+    public void setMontoSeg(double montoSeg) {
+        this.montoSeg = montoSeg;
     }
 
     public int getIdCliente() {
