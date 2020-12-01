@@ -130,7 +130,7 @@ public class Main{
         }catch(Exception e){
             System.out.println("MAL");
         }
-        //for(Pedido p : misPedidos) System.out.println(p.getIdPedido()+" "+p.getMontoTotal()+" "+p.getEmpleado().getNombre());
+        for(Pedido p : misPedidos) System.out.println(p.getIdPedido()+" "+p.getMontoTotal()+" "+p.getEmpleado().getNombre()+" "+p.getCliente().getRuc());
 
         try{
             misFacturas = daoFactura.listar(25, "", "", sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), 0, 1);

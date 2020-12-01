@@ -711,6 +711,9 @@
     <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.obtenerClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.segmentarClientesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ClienteXZonaWS\ClienteXZonaWS.wsdl" />
     <None Include="Connected Services\ClienteXZonaWS\ClienteXZonaWS.xsd">
       <SubType>Designer</SubType>
