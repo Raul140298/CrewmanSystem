@@ -16,16 +16,6 @@ namespace CrewmanSystem.VisitaWS {
     public interface VisitaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/listarVisitasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/listarVisitasResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.VisitaWS.listarVisitasResponse listarVisitas(CrewmanSystem.VisitaWS.listarVisitasRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/listarVisitasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/listarVisitasResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.VisitaWS.listarVisitasResponse> listarVisitasAsync(CrewmanSystem.VisitaWS.listarVisitasRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/insertarVisitaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/insertarVisitaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -44,6 +34,16 @@ namespace CrewmanSystem.VisitaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/registrarVisitaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/registrarVisitaResponse")]
         System.Threading.Tasks.Task<CrewmanSystem.VisitaWS.registrarVisitaResponse> registrarVisitaAsync(CrewmanSystem.VisitaWS.registrarVisitaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/listarVisitasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/listarVisitasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.VisitaWS.listarVisitasResponse listarVisitas(CrewmanSystem.VisitaWS.listarVisitasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/listarVisitasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/VisitaWS/listarVisitasResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.VisitaWS.listarVisitasResponse> listarVisitasAsync(CrewmanSystem.VisitaWS.listarVisitasRequest request);
     }
     
     /// <remarks/>
@@ -973,6 +973,8 @@ namespace CrewmanSystem.VisitaWS {
         
         private lineaCredito lineaCreditoField;
         
+        private double montoSegField;
+        
         private personaContacto personaContactoField;
         
         private string razonSocialField;
@@ -1117,6 +1119,18 @@ namespace CrewmanSystem.VisitaWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public double montoSeg {
+            get {
+                return this.montoSegField;
+            }
+            set {
+                this.montoSegField = value;
+                this.RaisePropertyChanged("montoSeg");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
         public personaContacto personaContacto {
             get {
                 return this.personaContactoField;
@@ -1128,7 +1142,7 @@ namespace CrewmanSystem.VisitaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
         public string razonSocial {
             get {
                 return this.razonSocialField;
@@ -1140,7 +1154,7 @@ namespace CrewmanSystem.VisitaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
         public string ruc {
             get {
                 return this.rucField;
@@ -1152,7 +1166,7 @@ namespace CrewmanSystem.VisitaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
         public string tipoEmpresa {
             get {
                 return this.tipoEmpresaField;
@@ -1164,7 +1178,7 @@ namespace CrewmanSystem.VisitaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
         public zona zona {
             get {
                 return this.zonaField;
@@ -3371,42 +3385,6 @@ namespace CrewmanSystem.VisitaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarVisitas", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarVisitasRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idCartera;
-        
-        public listarVisitasRequest() {
-        }
-        
-        public listarVisitasRequest(int idCartera) {
-            this.idCartera = idCartera;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarVisitasResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarVisitasResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.VisitaWS.visita[] @return;
-        
-        public listarVisitasResponse() {
-        }
-        
-        public listarVisitasResponse(CrewmanSystem.VisitaWS.visita[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarVisita", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertarVisitaRequest {
         
@@ -3476,6 +3454,42 @@ namespace CrewmanSystem.VisitaWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarVisitas", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarVisitasRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idCartera;
+        
+        public listarVisitasRequest() {
+        }
+        
+        public listarVisitasRequest(int idCartera) {
+            this.idCartera = idCartera;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarVisitasResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarVisitasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.VisitaWS.visita[] @return;
+        
+        public listarVisitasResponse() {
+        }
+        
+        public listarVisitasResponse(CrewmanSystem.VisitaWS.visita[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface VisitaWSChannel : CrewmanSystem.VisitaWS.VisitaWS, System.ServiceModel.IClientChannel {
     }
@@ -3501,29 +3515,6 @@ namespace CrewmanSystem.VisitaWS {
         
         public VisitaWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.VisitaWS.listarVisitasResponse CrewmanSystem.VisitaWS.VisitaWS.listarVisitas(CrewmanSystem.VisitaWS.listarVisitasRequest request) {
-            return base.Channel.listarVisitas(request);
-        }
-        
-        public CrewmanSystem.VisitaWS.visita[] listarVisitas(int idCartera) {
-            CrewmanSystem.VisitaWS.listarVisitasRequest inValue = new CrewmanSystem.VisitaWS.listarVisitasRequest();
-            inValue.idCartera = idCartera;
-            CrewmanSystem.VisitaWS.listarVisitasResponse retVal = ((CrewmanSystem.VisitaWS.VisitaWS)(this)).listarVisitas(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.VisitaWS.listarVisitasResponse> CrewmanSystem.VisitaWS.VisitaWS.listarVisitasAsync(CrewmanSystem.VisitaWS.listarVisitasRequest request) {
-            return base.Channel.listarVisitasAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.VisitaWS.listarVisitasResponse> listarVisitasAsync(int idCartera) {
-            CrewmanSystem.VisitaWS.listarVisitasRequest inValue = new CrewmanSystem.VisitaWS.listarVisitasRequest();
-            inValue.idCartera = idCartera;
-            return ((CrewmanSystem.VisitaWS.VisitaWS)(this)).listarVisitasAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3570,6 +3561,29 @@ namespace CrewmanSystem.VisitaWS {
             CrewmanSystem.VisitaWS.registrarVisitaRequest inValue = new CrewmanSystem.VisitaWS.registrarVisitaRequest();
             inValue.idVisita = idVisita;
             return ((CrewmanSystem.VisitaWS.VisitaWS)(this)).registrarVisitaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.VisitaWS.listarVisitasResponse CrewmanSystem.VisitaWS.VisitaWS.listarVisitas(CrewmanSystem.VisitaWS.listarVisitasRequest request) {
+            return base.Channel.listarVisitas(request);
+        }
+        
+        public CrewmanSystem.VisitaWS.visita[] listarVisitas(int idCartera) {
+            CrewmanSystem.VisitaWS.listarVisitasRequest inValue = new CrewmanSystem.VisitaWS.listarVisitasRequest();
+            inValue.idCartera = idCartera;
+            CrewmanSystem.VisitaWS.listarVisitasResponse retVal = ((CrewmanSystem.VisitaWS.VisitaWS)(this)).listarVisitas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.VisitaWS.listarVisitasResponse> CrewmanSystem.VisitaWS.VisitaWS.listarVisitasAsync(CrewmanSystem.VisitaWS.listarVisitasRequest request) {
+            return base.Channel.listarVisitasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.VisitaWS.listarVisitasResponse> listarVisitasAsync(int idCartera) {
+            CrewmanSystem.VisitaWS.listarVisitasRequest inValue = new CrewmanSystem.VisitaWS.listarVisitasRequest();
+            inValue.idCartera = idCartera;
+            return ((CrewmanSystem.VisitaWS.VisitaWS)(this)).listarVisitasAsync(inValue);
         }
     }
 }

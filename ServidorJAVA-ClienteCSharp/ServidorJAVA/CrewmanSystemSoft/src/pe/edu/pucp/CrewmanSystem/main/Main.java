@@ -3,9 +3,7 @@ package pe.edu.pucp.CrewmanSystem.main;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import pe.edu.pucp.CrewmanSystem.dao.*;
@@ -127,19 +125,19 @@ public class Main{
 //        pedido.setLineasPedidos(misLineasDePedido);
 //        daoPedido.actualizar(pedido);
 //        System.out.println("EL MODELADO HA CONCLUIDO");
-//        try{
-//            misPedidos = daoPedido.listar(21,"","",sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), "AMBOS", "AMBOS");
-//        }catch(Exception e){
-//            System.out.println("MAL");
-//        }
-//        //for(Pedido p : misPedidos) System.out.println(p.getIdPedido()+" "+p.getMontoTotal()+" "+p.getEmpleado().getNombre());
-//
-//        try{
-//            misFacturas = daoFactura.listar(25, "", "", sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), 0, 1);
-//        }catch(Exception e){
-//            System.out.println("MALISIMO");
-//        }
-//        for(Factura f : misFacturas) System.out.println(f.getIdFactura()+" "+f.getMonto()+" "+f.getPedido().getEmpleado().getNombre()+" "+f.getPedido().getCliente().getRazonSocial());
+        try{
+            misPedidos = daoPedido.listar(21,"","",sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), "AMBOS", "AMBOS");
+        }catch(Exception e){
+            System.out.println("MAL");
+        }
+        for(Pedido p : misPedidos) System.out.println(p.getIdPedido()+" "+p.getMontoTotal()+" "+p.getEmpleado().getNombre()+" "+p.getCliente().getRuc());
+
+        try{
+            misFacturas = daoFactura.listar(25, "", "", sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), 0, 1);
+        }catch(Exception e){
+            System.out.println("MALISIMO");
+        }
+        for(Factura f : misFacturas) System.out.println(f.getIdFactura()+" "+f.getMonto()+" "+f.getPedido().getEmpleado().getNombre()+" "+f.getPedido().getCliente().getRazonSocial());
         
 //        misClientes=daoCliente.listarSinCartera("", "", 125);
 //        for(Cliente c : misClientes) System.out.println(c.getIdCliente()+" "+c.getRuc());
@@ -198,17 +196,6 @@ public class Main{
 //        for(Integer in : numClientes) System.out.print(in.intValue());
 //        System.out.println("");
 //        for(Integer in : numVisitados) System.out.print(in.intValue());
-
-//        Date fechaIni;
-//        Date fechaFin;
-//        Calendar cal = new GregorianCalendar();
-//        cal.setTime(new Date());
-//        cal.add(Calendar.MONTH, -1);
-//        cal.set(Calendar.DAY_OF_MONTH, 1);
-//        fechaIni = cal.getTime();
-//        cal.set(Calendar.DAY_OF_MONTH, cal.getActualMaximum(Calendar.DATE));
-//        fechaFin = cal.getTime();
-//        System.out.println(daoCliente.segmentarClientes());
     }
     
     private static void gestionarFamilias(){
