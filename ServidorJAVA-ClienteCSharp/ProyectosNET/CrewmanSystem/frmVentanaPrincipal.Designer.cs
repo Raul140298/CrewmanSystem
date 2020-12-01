@@ -87,9 +87,9 @@
 			this.btnMinimizar = new FontAwesome.Sharp.IconButton();
 			this.btnMaximizar = new FontAwesome.Sharp.IconButton();
 			this.btnSalir = new FontAwesome.Sharp.IconButton();
-			this.iconButton1 = new FontAwesome.Sharp.IconButton();
 			this.iconButton2 = new FontAwesome.Sharp.IconButton();
 			this.iconButton3 = new FontAwesome.Sharp.IconButton();
+			this.iconButton1 = new FontAwesome.Sharp.IconButton();
 			this.pnlContenedor.SuspendLayout();
 			this.pnlChildForm.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -459,7 +459,7 @@
 			// 
 			this.pnlGestionClientes.Controls.Add(this.btnClientes);
 			this.pnlGestionClientes.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlGestionClientes.Location = new System.Drawing.Point(0, 896);
+			this.pnlGestionClientes.Location = new System.Drawing.Point(0, 939);
 			this.pnlGestionClientes.Name = "pnlGestionClientes";
 			this.pnlGestionClientes.Size = new System.Drawing.Size(264, 57);
 			this.pnlGestionClientes.TabIndex = 30;
@@ -500,7 +500,7 @@
 			this.btnGestionClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnGestionClientes.IconSize = 20;
 			this.btnGestionClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnGestionClientes.Location = new System.Drawing.Point(0, 857);
+			this.btnGestionClientes.Location = new System.Drawing.Point(0, 900);
 			this.btnGestionClientes.Name = "btnGestionClientes";
 			this.btnGestionClientes.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
 			this.btnGestionClientes.Rotation = 0D;
@@ -526,7 +526,7 @@
 			this.btnCumplimientoDeMetas.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnCumplimientoDeMetas.IconSize = 20;
 			this.btnCumplimientoDeMetas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnCumplimientoDeMetas.Location = new System.Drawing.Point(0, 812);
+			this.btnCumplimientoDeMetas.Location = new System.Drawing.Point(0, 855);
 			this.btnCumplimientoDeMetas.Name = "btnCumplimientoDeMetas";
 			this.btnCumplimientoDeMetas.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
 			this.btnCumplimientoDeMetas.Rotation = 0D;
@@ -549,7 +549,7 @@
 			this.pnlGestionPedidos.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlGestionPedidos.Location = new System.Drawing.Point(0, 615);
 			this.pnlGestionPedidos.Name = "pnlGestionPedidos";
-			this.pnlGestionPedidos.Size = new System.Drawing.Size(264, 197);
+			this.pnlGestionPedidos.Size = new System.Drawing.Size(264, 240);
 			this.pnlGestionPedidos.TabIndex = 26;
 			this.pnlGestionPedidos.Visible = false;
 			// 
@@ -1271,28 +1271,6 @@
 			this.btnSalir.UseVisualStyleBackColor = false;
 			this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
 			// 
-			// iconButton1
-			// 
-			this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-			this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-			this.iconButton1.FlatAppearance.BorderSize = 0;
-			this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-			this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
-			this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-			this.iconButton1.IconColor = System.Drawing.Color.Black;
-			this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.iconButton1.IconSize = 16;
-			this.iconButton1.Location = new System.Drawing.Point(0, 156);
-			this.iconButton1.Name = "iconButton1";
-			this.iconButton1.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-			this.iconButton1.Rotation = 0D;
-			this.iconButton1.Size = new System.Drawing.Size(264, 31);
-			this.iconButton1.TabIndex = 7;
-			this.iconButton1.Text = "Quejas";
-			this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.iconButton1.UseVisualStyleBackColor = false;
-			// 
 			// iconButton2
 			// 
 			this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
@@ -1305,11 +1283,11 @@
 			this.iconButton2.IconColor = System.Drawing.Color.Black;
 			this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.iconButton2.IconSize = 16;
-			this.iconButton2.Location = new System.Drawing.Point(0, 125);
+			this.iconButton2.Location = new System.Drawing.Point(0, 139);
 			this.iconButton2.Name = "iconButton2";
 			this.iconButton2.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
 			this.iconButton2.Rotation = 0D;
-			this.iconButton2.Size = new System.Drawing.Size(264, 31);
+			this.iconButton2.Size = new System.Drawing.Size(264, 45);
 			this.iconButton2.TabIndex = 6;
 			this.iconButton2.Text = "Guías de Remisión";
 			this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1331,11 +1309,33 @@
 			this.iconButton3.Name = "iconButton3";
 			this.iconButton3.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
 			this.iconButton3.Rotation = 0D;
-			this.iconButton3.Size = new System.Drawing.Size(264, 31);
+			this.iconButton3.Size = new System.Drawing.Size(264, 45);
 			this.iconButton3.TabIndex = 5;
 			this.iconButton3.Text = "Facturas";
 			this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.iconButton3.UseVisualStyleBackColor = false;
+			// 
+			// iconButton1
+			// 
+			this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+			this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
+			this.iconButton1.FlatAppearance.BorderSize = 0;
+			this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+			this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
+			this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+			this.iconButton1.IconColor = System.Drawing.Color.Black;
+			this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.iconButton1.IconSize = 16;
+			this.iconButton1.Location = new System.Drawing.Point(0, 184);
+			this.iconButton1.Name = "iconButton1";
+			this.iconButton1.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+			this.iconButton1.Rotation = 0D;
+			this.iconButton1.Size = new System.Drawing.Size(264, 45);
+			this.iconButton1.TabIndex = 8;
+			this.iconButton1.Text = "Quejas";
+			this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.iconButton1.UseVisualStyleBackColor = false;
 			// 
 			// frmVentanaPrincipal
 			// 
@@ -1434,8 +1434,8 @@
         private System.Windows.Forms.Panel pnlGestionPedidos;
         private FontAwesome.Sharp.IconButton btnPedReporte;
         private FontAwesome.Sharp.IconButton btnPedido;
-		private FontAwesome.Sharp.IconButton iconButton1;
 		private FontAwesome.Sharp.IconButton iconButton2;
 		private FontAwesome.Sharp.IconButton iconButton3;
+		private FontAwesome.Sharp.IconButton iconButton1;
 	}
 }
