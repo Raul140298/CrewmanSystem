@@ -47,4 +47,16 @@ public class ProductoXZonaWS
         }
         return misProductoXZonas;
     }
+    
+    @WebMethod(operationName = "listarProductosXZonasSinPromocion")
+    public ArrayList<ProductoXZona> listarProductosXZonasSinPromocion(@WebParam(name = "nombre") String nombre, @WebParam(name = "familiaStr") String familiaStr, 
+            @WebParam(name = "subFamiliaStr") String subFamiliaStr, @WebParam(name = "marcaStr") String marcaStr, @WebParam(name = "idZona") int idZona) {
+        ArrayList<ProductoXZona> misProductoXZonas = new ArrayList<>();
+        try{
+            misProductoXZonas = daoProductoXZona.listarSinPromocion(nombre,familiaStr,subFamiliaStr,marcaStr,idZona);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return misProductoXZonas;
+    }
 }

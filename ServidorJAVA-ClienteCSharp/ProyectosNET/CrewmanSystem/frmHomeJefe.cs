@@ -15,7 +15,10 @@ namespace CrewmanSystem
 		public frmHomeJefe()
 		{
 			InitializeComponent();
-			lblNombre.Text = Program.empleado.nombre + " " +
+			string saludo = "";
+			if (Program.empleado.genero == 'M') saludo = "Bienvenido, ";
+			else saludo = "Bienvenida, ";
+			lblNombre.Text = saludo + Program.empleado.nombre + " " +
 				Program.empleado.apellidoPaterno + " " +
 				Program.empleado.apellidoMaterno;
 

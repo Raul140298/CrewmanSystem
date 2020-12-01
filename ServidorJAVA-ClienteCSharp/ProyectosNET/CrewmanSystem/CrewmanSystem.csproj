@@ -1027,6 +1027,9 @@
     <None Include="Connected Services\ProductoXZonaWS\CrewmanSystem.ProductoXZonaWS.listarProductosXZonasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ProductoXZonaWS\CrewmanSystem.ProductoXZonaWS.listarProductosXZonasSinPromocionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ProductoXZonaWS\CrewmanSystem.ProductoXZonaWS.productoXZona.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

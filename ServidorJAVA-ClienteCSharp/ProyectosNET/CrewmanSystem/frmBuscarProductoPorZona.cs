@@ -16,11 +16,16 @@ namespace CrewmanSystem
         private ProductoXZonaWS.productoXZona[] misProductoXZona;
         public static ProductoXZonaWS.productoXZona productoXZonaSeleccionado;
         private int idZona;
+        private int idTipo;
 
-        public frmBuscarProductoPorZona(int idZonaParam)
+        public frmBuscarProductoPorZona(int idTipoParam,int idZonaParam)
         {
+            //idTipoParam 0 = buscar productos
+            //idTipoParam 1 = buscar productos sin una promocion (solo es usa en nueva promocion)
+
             InitializeComponent();
-            idZona = idZonaParam;
+            this.idZona = idZonaParam;
+            this.idTipo = idTipoParam;
             daoProductoXZona = new ProductoXZonaWS.ProductoXZonaWSClient();
             dgvProductos.AutoGenerateColumns = false;
             cargarTabla();
@@ -38,15 +43,17 @@ namespace CrewmanSystem
 
         private void cargarTabla()
         {
-            misProductoXZona = daoProductoXZona.listarProductosXZonas(txtNombre.Text, txtFamilia.Text, txtSubfamilia.Text, txtMarca.Text, idZona);
-            if (misProductoXZona != null)
-            {
-                dgvProductos.DataSource = new BindingList<ProductoXZonaWS.productoXZona>(misProductoXZona.ToArray());
-            }
+            if (idTipo == 0)
+                misProductoXZona = daoProductoXZona.listarProductosXZonas(txtNombre.Text, txtFamilia.Text, txtSubfamilia.Text, txtMarca.Text, idZona);
             else
-            {
+                misProductoXZona = daoProductoXZona.listarProductosXZonasSinPromocion(txtNombre.Text, txtFamilia.Text, txtSubfamilia.Text, txtMarca.Text, idZona);
+
+
+            if (misProductoXZona != null)
+                dgvProductos.DataSource = new BindingList<ProductoXZonaWS.productoXZona>(misProductoXZona.ToArray());
+            else
                 dgvProductos.DataSource = new BindingList<ProductoXZonaWS.productoXZona>();
-            }
+            
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
