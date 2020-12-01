@@ -15,14 +15,23 @@ namespace CrewmanSystem
         ClienteWS.ClienteWSClient daoCliente = new ClienteWS.ClienteWSClient();
         public frmSegmentarClientes()
         {
-            DateTime fecha = daoCliente.obtenerInfoSeg();
-            dtpFecha.Value = fecha;
             InitializeComponent();
+            DateTime fecha = daoCliente.obtenerInfoSeg();
+            txtFecha.Text = fecha.ToString("d");
         }
 
         private void btnSegmentar_Click(object sender, EventArgs e)
         {
-            daoCliente.segmentarClientes();
+            frmConfirmarSegmentar formSegmentar = new frmConfirmarSegmentar();
+            if (formSegmentar.ShowDialog() == DialogResult.OK)
+            {
+                if (daoCliente.segmentarClientes() != 0)
+                {
+                    MessageBox.Show("Clientes segmentados exitosamente", "Mensaje de resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtFecha.Text = DateTime.Now.ToString("d");
+                }
+                else MessageBox.Show("Error en la segmentación de clientes", "Mensaje de resultado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

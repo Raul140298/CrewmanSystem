@@ -238,6 +238,12 @@
     <Compile Include="frmConfirmarEliminar.Designer.cs">
       <DependentUpon>frmConfirmarEliminar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConfirmarSegmentar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfirmarSegmentar.Designer.cs">
+      <DependentUpon>frmConfirmarSegmentar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmConfirmarVisita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -551,6 +557,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConfirmarEliminar.resx">
       <DependentUpon>frmConfirmarEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfirmarSegmentar.resx">
+      <DependentUpon>frmConfirmarSegmentar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConfirmarVisita.resx">
       <DependentUpon>frmConfirmarVisita.cs</DependentUpon>
