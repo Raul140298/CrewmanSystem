@@ -16,6 +16,8 @@
   <xs:element name="mostrarClienteResponse" type="tns:mostrarClienteResponse" />
   <xs:element name="obtenerCliente" type="tns:obtenerCliente" />
   <xs:element name="obtenerClienteResponse" type="tns:obtenerClienteResponse" />
+  <xs:element name="segmentarClientes" type="tns:segmentarClientes" />
+  <xs:element name="segmentarClientesResponse" type="tns:segmentarClientesResponse" />
   <xs:complexType name="insertarCliente">
     <xs:sequence>
       <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
@@ -32,6 +34,7 @@
       <xs:element minOccurs="0" name="grupo" type="xs:string" />
       <xs:element name="idCliente" type="xs:int" />
       <xs:element minOccurs="0" name="lineaCredito" type="tns:lineaCredito" />
+      <xs:element name="montoSeg" type="xs:double" />
       <xs:element minOccurs="0" name="personaContacto" type="tns:personaContacto" />
       <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
       <xs:element minOccurs="0" name="ruc" type="xs:string" />
@@ -322,16 +325,14 @@
       <xs:element minOccurs="0" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarClientes">
+  <xs:complexType name="actualizarCliente">
     <xs:sequence>
-      <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
-      <xs:element minOccurs="0" name="grupo" type="xs:string" />
-      <xs:element name="idZona" type="xs:int" />
+      <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarClientesResponse">
+  <xs:complexType name="actualizarClienteResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarClientesSinCartera">
@@ -346,24 +347,16 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarCliente">
+  <xs:complexType name="listarClientes">
     <xs:sequence>
-      <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
+      <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
+      <xs:element minOccurs="0" name="grupo" type="xs:string" />
+      <xs:element name="idZona" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="actualizarClienteResponse">
+  <xs:complexType name="listarClientesResponse">
     <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="mostrarCliente">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="mostrarClienteResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarClientesConCartera">
@@ -378,12 +371,30 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="mostrarCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mostrarClienteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="eliminarCliente">
     <xs:sequence>
       <xs:element name="idCliente" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarClienteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="segmentarClientes">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="segmentarClientesResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

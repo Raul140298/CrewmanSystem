@@ -756,6 +756,11 @@ namespace CrewmanSystem
 		{
 			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmGestionarVisitas(),false, false, false, false, true);
 		}
+
+		private void btnSegmentacion_Click(object sender, EventArgs e)
+        {
+			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmSegmentarClientes(), false, false, false, false, false);
+		}
 		#endregion
 
 		#endregion

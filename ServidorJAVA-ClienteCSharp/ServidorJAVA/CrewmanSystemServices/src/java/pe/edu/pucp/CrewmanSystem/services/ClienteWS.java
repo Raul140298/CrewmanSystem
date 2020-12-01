@@ -118,4 +118,15 @@ public class ClienteWS {
         }
         return cliente;
     }
+    
+    @WebMethod(operationName = "segmentarClientes")
+    public int segmentarClientes(){
+        int resultado = 0;
+        try{
+            resultado = daoCliente.segmentarClientes();
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+    }
 }

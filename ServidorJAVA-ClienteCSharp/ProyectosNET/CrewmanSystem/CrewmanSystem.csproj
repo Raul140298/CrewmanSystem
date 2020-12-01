@@ -472,6 +472,12 @@
     <Compile Include="frmNuevoProductoXZona.Designer.cs">
       <DependentUpon>frmNuevoProductoXZona.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSegmentarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSegmentarClientes.Designer.cs">
+      <DependentUpon>frmSegmentarClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVentanaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -709,6 +715,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.obtenerClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ClienteWS\CrewmanSystem.ClienteWS.segmentarClientesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ClienteXZonaWS\ClienteXZonaWS.wsdl" />
