@@ -497,6 +497,7 @@ namespace CrewmanSystem
 				case "frmGestionarRutas":
 					break;
 				case "frmGestionarQuejas":
+					if(boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaQueja());
 					break;
 				case "frmGestionarPromocionesXZona":
 					break;
@@ -737,7 +738,7 @@ namespace CrewmanSystem
 
 		private void btnEmpQuejas_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarQuejas(),false, true, false, true, true);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarQuejas(),true, true, false, true, true);
 		}
 		#endregion
 
