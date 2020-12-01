@@ -334,4 +334,62 @@ public class ClienteMySQL implements ClienteDAO{
         }
         return clientes;
     }
+    
+    @Override
+    public int segmentarClientes(){
+        double menor=999999;
+        double mayor=0;
+        double monto;
+        double rango;
+        int resultado = 0;
+        String tipo = "";
+        try{
+            ClienteDAO daoCliente = new ClienteMySQL();
+            ArrayList<Cliente> clientes = daoCliente.listar("", "", 0);
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            con.setAutoCommit(false);
+            String sql;
+            for(Cliente c : clientes){
+                sql ="{ call OBTENER_MONTO_SEG (?,?)}";
+                cs = con.prepareCall(sql);
+                cs.registerOutParameter("_MONTO_SEG", java.sql.Types.DOUBLE);
+                cs.setInt("_ID_CLIENTE", c.getIdCliente());
+                cs.executeUpdate();
+                monto = cs.getDouble("_MONTO_SEG");
+                c.setMontoSeg(monto);
+                if(monto<menor)menor = monto;
+                if(monto>mayor)mayor = monto;
+            }
+            rango = (mayor - menor) / 3;
+            for(Cliente c : clientes){
+                monto = c.getMontoSeg();
+                if(monto >= menor && monto < (menor + rango)){
+                    tipo = "BAJO";
+                }
+                else if(monto >= (menor + rango) && monto <= (mayor - rango)){
+                    tipo = "MEDIO";
+                }
+                else{
+                    tipo = "ALTO";
+                }
+                sql ="{ call ASIGNAR_TIPO (?,?)}";
+                cs = con.prepareCall(sql);
+                cs.setInt("_ID_CLIENTE", c.getIdCliente());
+                cs.setString("_ID_CLIENTE", tipo);
+                resultado = cs.executeUpdate();
+                if(resultado == 0)return 0;
+            }
+            con.commit();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return resultado;
+    }
 }
