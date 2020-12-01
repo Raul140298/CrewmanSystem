@@ -6,4 +6,5 @@ public interface GuiaRemisionDAO{
     int insertar(GuiaRemision guiaRemision);
     int actualizar(GuiaRemision guiaRemision);
     ArrayList<GuiaRemision> listar(int idPedido);
+    ArrayList<GuiaRemision> listarPorVendedor(int idVendedor);
 }

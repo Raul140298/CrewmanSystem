@@ -104,5 +104,40 @@ public class GuiaRemisionMySQL implements GuiaRemisionDAO{
         }
         return guiaRemisions;
     }
+
+    @Override
+    public ArrayList<GuiaRemision> listarPorVendedor(int idVendedor) {
+        ArrayList<GuiaRemision> guiaRemisions = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            String sql = "{ call LISTAR_GUIADEREMISION_X_VENDEDOR (?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_VENDEDOR",idVendedor);
+            cs.executeUpdate();
+            rs = cs.getResultSet();
+            while(rs.next()){
+                GuiaRemision guiaRemision=new GuiaRemision();
+                guiaRemision.setIdGuiaRemision(rs.getInt("ID_GUIA_DE_REMISION"));
+                Pedido p=new Pedido();
+                p.setIdPedido(rs.getInt("ID_PEDIDO"));
+                guiaRemision.setPedido(p);
+                guiaRemision.setMotivoTraslado(rs.getString("MOTIVO_TRASLADO"));
+                guiaRemision.setFechaRegistro(rs.getDate("FECHA_REGISTRO"));
+                guiaRemision.setFechaTraslado(rs.getDate("FECHA_TRASLADO"));
+                guiaRemisions.add(guiaRemision);
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                rs.close();
+                con.close();
+            }catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return guiaRemisions;
+    }
     
 }

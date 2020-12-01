@@ -53,4 +53,15 @@ public class GuiaRemisionWS {
         }
         return misGuiaRemisions;
     }
+    
+    @WebMethod(operationName = "listarGuiaRemisionsXVendedor")
+    public ArrayList<GuiaRemision> listarGuiaRemisionsXVendedor(@WebParam(name = "idVendedor") int idVendedor) {
+        ArrayList<GuiaRemision> misGuiaRemisions = new ArrayList<>();
+        try{
+            misGuiaRemisions = daoGuiaRemision.listarPorVendedor(idVendedor);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return misGuiaRemisions;
+    }
 }
