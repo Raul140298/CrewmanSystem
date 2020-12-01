@@ -393,6 +393,10 @@ public class ClienteMySQL implements ClienteDAO{
                 resultado = cs.executeUpdate();
                 if(resultado == 0)return 0;
             }
+            sql ="{ call ACTUALIZAR_FECHA_SEG (?)}";
+            cs = con.prepareCall(sql);
+            cs.setDate("_FECHA_ULTIMA_SEG", new java.sql.Date(new Date().getTime()));
+            resultado = cs.executeUpdate();
             con.commit();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -404,5 +408,31 @@ public class ClienteMySQL implements ClienteDAO{
             }
         }
         return resultado;
+    }
+    
+    @Override
+    public Date obtenerInfoSeg()
+    {
+        Date fecha = null;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            String sql ="{ call OBTENER_INFO_SEG ()}";
+            cs = con.prepareCall(sql);
+            cs.executeUpdate();
+            rs = cs.getResultSet();
+            rs.next();
+            fecha = rs.getDate("FECHA_ULTIMA_SEG");
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                rs.close();
+                con.close();
+            }catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return fecha;
     }
 }

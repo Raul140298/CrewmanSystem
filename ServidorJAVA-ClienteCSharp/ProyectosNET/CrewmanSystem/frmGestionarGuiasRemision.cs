@@ -18,16 +18,16 @@ namespace CrewmanSystem
 			daoGuiaRemision = new GuiaRemisionWS.GuiaRemisionWSClient();
 			InitializeComponent();
 			dgvGuiasDeRemision.AutoGenerateColumns = false;
-			GuiaRemisionWS.guiaRemision[] misGuias = daoGuiaRemision.listarGuiaRemisionsXVendedor(Program.empleado.idEmpleado);
-			if (misGuias != null)
-			{
-				dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>(daoGuiaRemision.listarGuiaRemisionsXVendedor(Program.empleado.idEmpleado).ToArray());
-			}
-			else
-			{
-				dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>();
+			//GuiaRemisionWS.guiaRemision[] misGuias = daoGuiaRemision.listarGuiaRemisionsXVendedor(Program.empleado.idEmpleado);
+			//if (misGuias != null)
+			//{
+			//	dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>(daoGuiaRemision.listarGuiaRemisionsXVendedor(Program.empleado.idEmpleado).ToArray());
+			//}
+			//else
+			//{
+			//	dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>();
 
-			}
+			//}
 			#region colores de seleccion
 			dgvGuiasDeRemision.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dgvGuiasDeRemision.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
