@@ -93,7 +93,7 @@ namespace CrewmanSystem
         private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
             int idZona = ((ZonaWS.zona)cboZona.SelectedItem).idZona;
-            frmBuscarProductoPorZona formBusquedaProductoPorZona = new frmBuscarProductoPorZona(idZona);
+            frmBuscarProductoPorZona formBusquedaProductoPorZona = new frmBuscarProductoPorZona(1,idZona);
             if(formBusquedaProductoPorZona.ShowDialog() == DialogResult.OK)
             {
                 miProductoXZona = formBusquedaProductoPorZona.ProductoXZonaSeleccionado;
