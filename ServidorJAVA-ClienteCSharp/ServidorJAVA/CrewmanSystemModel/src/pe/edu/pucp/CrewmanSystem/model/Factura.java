@@ -94,7 +94,7 @@ public class Factura{
         this.impuestos = impuestos;
     }
 
-    public boolean getAnulado() {
+    public boolean isAnulado() {
         return anulado;
     }
 

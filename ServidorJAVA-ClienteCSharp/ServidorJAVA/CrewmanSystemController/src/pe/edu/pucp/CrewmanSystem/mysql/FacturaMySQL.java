@@ -62,14 +62,14 @@ public class FacturaMySQL implements FacturaDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            String sql ="{ call ACTUALIZAR_FACTURA(?,?,?,?,?,?,?)}";
+            String sql ="{ call ACTUALIZAR_FACTURA(?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_FACTURA", factura.getIdFactura());
             cs.setDouble("_MONTO", factura.getMonto());
             cs.setString("_OBSERVACION", factura.getObservacion());
             cs.setDate("_FECHA_VENCIMIENTO", new java.sql.Date(factura.getFechaVencimiento().getTime()));
             cs.setDouble("_IMPUESTOS", factura.getImpuestos());
-            cs.setBoolean("_ESTADO_PAGAR", factura.getAnulado());
+            cs.setBoolean("_ESTADO_PAGAR", factura.isEstadoPagar());
             
             resultado = cs.executeUpdate();
         }catch(Exception ex){
