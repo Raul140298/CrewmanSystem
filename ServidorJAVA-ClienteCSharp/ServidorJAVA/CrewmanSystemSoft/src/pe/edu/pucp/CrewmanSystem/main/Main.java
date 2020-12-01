@@ -125,21 +125,21 @@ public class Main{
 //        pedido.setLineasPedidos(misLineasDePedido);
 //        daoPedido.actualizar(pedido);
 //        System.out.println("EL MODELADO HA CONCLUIDO");
-        try{
-            misPedidos = daoPedido.listar(21,"","",sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), "AMBOS", "AMBOS");
-        }catch(Exception e){
-            System.out.println("MAL");
-        }
-        for(Pedido p : misPedidos) System.out.println(p.getIdPedido()+" "+p.getMontoTotal()+" "+p.getEmpleado().getNombre()+" "+p.getCliente().getRuc());
-
-        try{
-            misFacturas = daoFactura.listar(25, "", "", sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), 0, 1);
-        }catch(Exception e){
-            System.out.println("MALISIMO");
-        }
-        for(Factura f : misFacturas) System.out.println(f.getIdFactura()+" "+f.getMonto()+" "+f.getPedido().getEmpleado().getNombre()+" "+f.getPedido().getCliente().getRazonSocial());
-        Date fecha = daoCliente.obtenerInfoSeg();
-        System.out.println(fecha);
+//        try{
+//            misPedidos = daoPedido.listar(21,"","",sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), "AMBOS", "AMBOS");
+//        }catch(Exception e){
+//            System.out.println("MAL");
+//        }
+//        for(Pedido p : misPedidos) System.out.println(p.getIdPedido()+" "+p.getMontoTotal()+" "+p.getEmpleado().getNombre()+" "+p.getCliente().getRuc());
+//
+//        try{
+//            misFacturas = daoFactura.listar(25, "", "", sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), sdf.parse("01-01-2019"), sdf.parse("01-01-2021"), 0, 1);
+//        }catch(Exception e){
+//            System.out.println("MALISIMO");
+//        }
+//        for(Factura f : misFacturas) System.out.println(f.getIdFactura()+" "+f.getMonto()+" "+f.getPedido().getEmpleado().getNombre()+" "+f.getPedido().getCliente().getRazonSocial());
+//        Date fecha = daoCliente.obtenerInfoSeg();
+//        System.out.println(fecha);
 //        misClientes=daoCliente.listarSinCartera("", "", 125);
 //        for(Cliente c : misClientes) System.out.println(c.getIdCliente()+" "+c.getRuc());
 //        
@@ -197,6 +197,9 @@ public class Main{
 //        for(Integer in : numClientes) System.out.print(in.intValue());
 //        System.out.println("");
 //        for(Integer in : numVisitados) System.out.print(in.intValue());
+
+        misProductosXZonas=daoProductoXZona.listarSinPromocion("", "", "", "", 149);
+        for(ProductoXZona pxz : misProductosXZonas) System.out.println(pxz.getIdProductoXZona());
     }
     
     private static void gestionarFamilias(){
