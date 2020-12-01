@@ -5,23 +5,29 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/ClienteWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="mostrarCliente">
-    <part name="parameters" element="tns:mostrarCliente" />
+  <message name="actualizarCliente">
+    <part name="parameters" element="tns:actualizarCliente" />
   </message>
-  <message name="mostrarClienteResponse">
-    <part name="parameters" element="tns:mostrarClienteResponse" />
+  <message name="actualizarClienteResponse">
+    <part name="parameters" element="tns:actualizarClienteResponse" />
   </message>
-  <message name="obtenerCliente">
-    <part name="parameters" element="tns:obtenerCliente" />
+  <message name="listarClientesSinCartera">
+    <part name="parameters" element="tns:listarClientesSinCartera" />
   </message>
-  <message name="obtenerClienteResponse">
-    <part name="parameters" element="tns:obtenerClienteResponse" />
+  <message name="listarClientesSinCarteraResponse">
+    <part name="parameters" element="tns:listarClientesSinCarteraResponse" />
   </message>
-  <message name="listarClientes">
-    <part name="parameters" element="tns:listarClientes" />
+  <message name="segmentarClientes">
+    <part name="parameters" element="tns:segmentarClientes" />
   </message>
-  <message name="listarClientesResponse">
-    <part name="parameters" element="tns:listarClientesResponse" />
+  <message name="segmentarClientesResponse">
+    <part name="parameters" element="tns:segmentarClientesResponse" />
+  </message>
+  <message name="listarClientesConCartera">
+    <part name="parameters" element="tns:listarClientesConCartera" />
+  </message>
+  <message name="listarClientesConCarteraResponse">
+    <part name="parameters" element="tns:listarClientesConCarteraResponse" />
   </message>
   <message name="insertarCliente">
     <part name="parameters" element="tns:insertarCliente" />
@@ -35,48 +41,46 @@
   <message name="eliminarClienteResponse">
     <part name="parameters" element="tns:eliminarClienteResponse" />
   </message>
+  <message name="mostrarCliente">
+    <part name="parameters" element="tns:mostrarCliente" />
+  </message>
+  <message name="mostrarClienteResponse">
+    <part name="parameters" element="tns:mostrarClienteResponse" />
+  </message>
+  <message name="listarClientes">
+    <part name="parameters" element="tns:listarClientes" />
+  </message>
+  <message name="listarClientesResponse">
+    <part name="parameters" element="tns:listarClientesResponse" />
+  </message>
   <message name="obtenerInfoSeg">
     <part name="parameters" element="tns:obtenerInfoSeg" />
   </message>
   <message name="obtenerInfoSegResponse">
     <part name="parameters" element="tns:obtenerInfoSegResponse" />
   </message>
-  <message name="listarClientesConCartera">
-    <part name="parameters" element="tns:listarClientesConCartera" />
+  <message name="obtenerCliente">
+    <part name="parameters" element="tns:obtenerCliente" />
   </message>
-  <message name="listarClientesConCarteraResponse">
-    <part name="parameters" element="tns:listarClientesConCarteraResponse" />
-  </message>
-  <message name="segmentarClientes">
-    <part name="parameters" element="tns:segmentarClientes" />
-  </message>
-  <message name="segmentarClientesResponse">
-    <part name="parameters" element="tns:segmentarClientesResponse" />
-  </message>
-  <message name="listarClientesSinCartera">
-    <part name="parameters" element="tns:listarClientesSinCartera" />
-  </message>
-  <message name="listarClientesSinCarteraResponse">
-    <part name="parameters" element="tns:listarClientesSinCarteraResponse" />
-  </message>
-  <message name="actualizarCliente">
-    <part name="parameters" element="tns:actualizarCliente" />
-  </message>
-  <message name="actualizarClienteResponse">
-    <part name="parameters" element="tns:actualizarClienteResponse" />
+  <message name="obtenerClienteResponse">
+    <part name="parameters" element="tns:obtenerClienteResponse" />
   </message>
   <portType name="ClienteWS">
-    <operation name="mostrarCliente">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/mostrarClienteRequest" message="tns:mostrarCliente" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/mostrarClienteResponse" message="tns:mostrarClienteResponse" />
+    <operation name="actualizarCliente">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/actualizarClienteRequest" message="tns:actualizarCliente" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/actualizarClienteResponse" message="tns:actualizarClienteResponse" />
     </operation>
-    <operation name="obtenerCliente">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerClienteRequest" message="tns:obtenerCliente" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerClienteResponse" message="tns:obtenerClienteResponse" />
+    <operation name="listarClientesSinCartera">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesSinCarteraRequest" message="tns:listarClientesSinCartera" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesSinCarteraResponse" message="tns:listarClientesSinCarteraResponse" />
     </operation>
-    <operation name="listarClientes">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesRequest" message="tns:listarClientes" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesResponse" message="tns:listarClientesResponse" />
+    <operation name="segmentarClientes">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/segmentarClientesRequest" message="tns:segmentarClientes" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/segmentarClientesResponse" message="tns:segmentarClientesResponse" />
+    </operation>
+    <operation name="listarClientesConCartera">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesConCarteraRequest" message="tns:listarClientesConCartera" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesConCarteraResponse" message="tns:listarClientesConCarteraResponse" />
     </operation>
     <operation name="insertarCliente">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/insertarClienteRequest" message="tns:insertarCliente" />
@@ -86,30 +90,26 @@
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/eliminarClienteRequest" message="tns:eliminarCliente" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/eliminarClienteResponse" message="tns:eliminarClienteResponse" />
     </operation>
+    <operation name="mostrarCliente">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/mostrarClienteRequest" message="tns:mostrarCliente" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/mostrarClienteResponse" message="tns:mostrarClienteResponse" />
+    </operation>
+    <operation name="listarClientes">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesRequest" message="tns:listarClientes" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesResponse" message="tns:listarClientesResponse" />
+    </operation>
     <operation name="obtenerInfoSeg">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerInfoSegRequest" message="tns:obtenerInfoSeg" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerInfoSegResponse" message="tns:obtenerInfoSegResponse" />
     </operation>
-    <operation name="listarClientesConCartera">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesConCarteraRequest" message="tns:listarClientesConCartera" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesConCarteraResponse" message="tns:listarClientesConCarteraResponse" />
-    </operation>
-    <operation name="segmentarClientes">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/segmentarClientesRequest" message="tns:segmentarClientes" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/segmentarClientesResponse" message="tns:segmentarClientesResponse" />
-    </operation>
-    <operation name="listarClientesSinCartera">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesSinCarteraRequest" message="tns:listarClientesSinCartera" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesSinCarteraResponse" message="tns:listarClientesSinCarteraResponse" />
-    </operation>
-    <operation name="actualizarCliente">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/actualizarClienteRequest" message="tns:actualizarCliente" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/actualizarClienteResponse" message="tns:actualizarClienteResponse" />
+    <operation name="obtenerCliente">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerClienteRequest" message="tns:obtenerCliente" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerClienteResponse" message="tns:obtenerClienteResponse" />
     </operation>
   </portType>
   <binding name="ClienteWSPortBinding" type="tns:ClienteWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="mostrarCliente">
+    <operation name="actualizarCliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -118,7 +118,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="obtenerCliente">
+    <operation name="listarClientesSinCartera">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -127,7 +127,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarClientes">
+    <operation name="segmentarClientes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarClientesConCartera">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -154,6 +163,24 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="mostrarCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarClientes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="obtenerInfoSeg">
       <soap:operation soapAction="" />
       <input>
@@ -163,34 +190,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarClientesConCartera">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="segmentarClientes">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarClientesSinCartera">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarCliente">
+    <operation name="obtenerCliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

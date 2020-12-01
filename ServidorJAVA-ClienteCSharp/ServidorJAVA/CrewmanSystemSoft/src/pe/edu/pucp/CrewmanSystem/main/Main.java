@@ -138,7 +138,8 @@ public class Main{
             System.out.println("MALISIMO");
         }
         for(Factura f : misFacturas) System.out.println(f.getIdFactura()+" "+f.getMonto()+" "+f.getPedido().getEmpleado().getNombre()+" "+f.getPedido().getCliente().getRazonSocial());
-        
+        Date fecha = daoCliente.obtenerInfoSeg();
+        System.out.println(fecha);
 //        misClientes=daoCliente.listarSinCartera("", "", 125);
 //        for(Cliente c : misClientes) System.out.println(c.getIdCliente()+" "+c.getRuc());
 //        
