@@ -16,7 +16,7 @@ namespace CrewmanSystem
 		ZonaWS.ZonaWSClient daoZona;
 		public static EmpleadoWS.empleado empleadoSeleccionado;
 		public static DataGridView dgv;
-		private BindingList<ZonaWS.zona> misZonas;
+
 		public frmBuscarEmpleado()
 		{
 			InitializeComponent();

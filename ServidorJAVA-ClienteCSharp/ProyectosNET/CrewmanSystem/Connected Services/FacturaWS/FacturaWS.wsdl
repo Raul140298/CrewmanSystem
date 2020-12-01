@@ -5,17 +5,11 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/FacturaWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="listarFacturasPorPedido">
-    <part name="parameters" element="tns:listarFacturasPorPedido" />
+  <message name="eliminarFactura">
+    <part name="parameters" element="tns:eliminarFactura" />
   </message>
-  <message name="listarFacturasPorPedidoResponse">
-    <part name="parameters" element="tns:listarFacturasPorPedidoResponse" />
-  </message>
-  <message name="actualizarFactura">
-    <part name="parameters" element="tns:actualizarFactura" />
-  </message>
-  <message name="actualizarFacturaResponse">
-    <part name="parameters" element="tns:actualizarFacturaResponse" />
+  <message name="eliminarFacturaResponse">
+    <part name="parameters" element="tns:eliminarFacturaResponse" />
   </message>
   <message name="insertarFactura">
     <part name="parameters" element="tns:insertarFactura" />
@@ -23,52 +17,49 @@
   <message name="insertarFacturaResponse">
     <part name="parameters" element="tns:insertarFacturaResponse" />
   </message>
-  <message name="eliminarFactura">
-    <part name="parameters" element="tns:eliminarFactura" />
-  </message>
-  <message name="eliminarFacturaResponse">
-    <part name="parameters" element="tns:eliminarFacturaResponse" />
-  </message>
   <message name="listarFacturas">
     <part name="parameters" element="tns:listarFacturas" />
   </message>
   <message name="listarFacturasResponse">
     <part name="parameters" element="tns:listarFacturasResponse" />
   </message>
+  <message name="actualizarFactura">
+    <part name="parameters" element="tns:actualizarFactura" />
+  </message>
+  <message name="actualizarFacturaResponse">
+    <part name="parameters" element="tns:actualizarFacturaResponse" />
+  </message>
+  <message name="listarFacturasPorPedido">
+    <part name="parameters" element="tns:listarFacturasPorPedido" />
+  </message>
+  <message name="listarFacturasPorPedidoResponse">
+    <part name="parameters" element="tns:listarFacturasPorPedidoResponse" />
+  </message>
   <portType name="FacturaWS">
-    <operation name="listarFacturasPorPedido">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/listarFacturasPorPedidoRequest" message="tns:listarFacturasPorPedido" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/listarFacturasPorPedidoResponse" message="tns:listarFacturasPorPedidoResponse" />
-    </operation>
-    <operation name="actualizarFactura">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/actualizarFacturaRequest" message="tns:actualizarFactura" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/actualizarFacturaResponse" message="tns:actualizarFacturaResponse" />
+    <operation name="eliminarFactura">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/eliminarFacturaRequest" message="tns:eliminarFactura" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/eliminarFacturaResponse" message="tns:eliminarFacturaResponse" />
     </operation>
     <operation name="insertarFactura">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/insertarFacturaRequest" message="tns:insertarFactura" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/insertarFacturaResponse" message="tns:insertarFacturaResponse" />
     </operation>
-    <operation name="eliminarFactura">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/eliminarFacturaRequest" message="tns:eliminarFactura" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/eliminarFacturaResponse" message="tns:eliminarFacturaResponse" />
-    </operation>
     <operation name="listarFacturas">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/listarFacturasRequest" message="tns:listarFacturas" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/listarFacturasResponse" message="tns:listarFacturasResponse" />
     </operation>
+    <operation name="actualizarFactura">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/actualizarFacturaRequest" message="tns:actualizarFactura" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/actualizarFacturaResponse" message="tns:actualizarFacturaResponse" />
+    </operation>
+    <operation name="listarFacturasPorPedido">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/listarFacturasPorPedidoRequest" message="tns:listarFacturasPorPedido" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/listarFacturasPorPedidoResponse" message="tns:listarFacturasPorPedidoResponse" />
+    </operation>
   </portType>
   <binding name="FacturaWSPortBinding" type="tns:FacturaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarFacturasPorPedido">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarFactura">
+    <operation name="eliminarFactura">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -86,7 +77,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarFactura">
+    <operation name="listarFacturas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -95,7 +86,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarFacturas">
+    <operation name="actualizarFactura">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarFacturasPorPedido">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

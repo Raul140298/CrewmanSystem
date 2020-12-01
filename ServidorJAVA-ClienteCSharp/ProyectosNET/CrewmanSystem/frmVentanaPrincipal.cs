@@ -545,7 +545,7 @@ namespace CrewmanSystem
 				case "frmGestionarFacturas":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaFactura());
 					if (boton == 2) frmGestionarFacturas.eliminar();
-					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarFactura());
+					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarFactura(0));
 					break;
 				case "frmGestionarEmpleadosXZona":
 					break;
@@ -673,6 +673,10 @@ namespace CrewmanSystem
 		private void btnPedReporte_Click(object sender, EventArgs e)
 		{
 			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmReportePedidos(), false, false, false, false, false);
+		}
+		private void btnFactura_Click(object sender, EventArgs e)
+		{
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarFacturas(), false, true, true, true, true);
 		}
 		#endregion
 
@@ -844,5 +848,7 @@ namespace CrewmanSystem
 			modificaPagina();
 		}
         #endregion
+
+
     }
 }

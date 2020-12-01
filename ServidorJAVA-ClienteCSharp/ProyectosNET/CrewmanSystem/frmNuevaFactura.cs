@@ -28,7 +28,13 @@ namespace CrewmanSystem
                 txtIdPedido.Text = miFactura.pedido.idPedido.ToString();
                 txtMontoPendiente.Text = miFactura.pedido.montoPagar.ToString();
                 txtMonto.Text = miFactura.monto.ToString();
-                cboEstadoPagar.SelectedItem = miFactura.estadoPagar;
+                if (miFactura.estadoPagar)
+                {
+                    cboEstadoPagar.SelectedIndex = 0;
+                    cboEstadoPagar.Enabled = false;
+                }
+
+                else cboEstadoPagar.SelectedIndex = 1;
                 txtObservacion.Text = miFactura.observacion;
                 dtpEmision.Value = miFactura.fechaEmision;
                 dtpVencimiento.Value = miFactura.fechaVencimiento;

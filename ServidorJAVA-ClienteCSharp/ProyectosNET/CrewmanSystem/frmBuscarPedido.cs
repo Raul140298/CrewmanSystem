@@ -28,8 +28,8 @@ namespace CrewmanSystem
 			//idTipo 1 = BUSCAR PEDIDO A PAGAR (SE USA EN NUEVA FACTURA)
 			this.idTipo = idTipo;
 			InitializeComponent();
-			dtpRangoIni.Value = dtpRangoIni.MinDate;
-			dtpRangoFin.Value = dtpRangoFin.MaxDate;
+			dtpRangoIni.Value = DateTime.Today.AddMonths(-1);
+			dtpRangoFin.Value = DateTime.Today.AddMonths(1);
 			dgv = dgvPedidos;
 			clienteSeleccionado = new ClienteWS.cliente();
 			clienteSeleccionado.idCliente = 0;
@@ -97,7 +97,15 @@ namespace CrewmanSystem
 				dgvPedidos.Rows[e.RowIndex].Cells["NOMBRE"].Value = pedido.empleado.nombre;
 				dgvPedidos.Rows[e.RowIndex].Cells["APELLIDO_PATERNO"].Value = pedido.empleado.apellidoPaterno;
 				dgvPedidos.Rows[e.RowIndex].Cells["APELLIDO_MATERNO"].Value = pedido.empleado.apellidoMaterno;
-
+				dgvPedidos.Rows[e.RowIndex].Cells["FECHA_REGISTRO"].Value = pedido.fechaRegistro.ToString("dd/MM/yyyy");
+				DateTime fechaAprobado = pedido.fechaAprobado;
+				string fechaAprobadoStr = "";
+				if (fechaAprobado.Year > 2000) fechaAprobadoStr = fechaAprobado.ToString("dd/MM/yyyy");
+				dgvPedidos.Rows[e.RowIndex].Cells["FECHA_APROBADO"].Value = fechaAprobadoStr;
+				DateTime fechaEstimada = pedido.fechaEstim;
+				string fechaEstimadaStr = "";
+				if (fechaEstimada.Year > 2000) fechaEstimadaStr = fechaEstimada.ToString("dd/MM/yyyy");
+				dgvPedidos.Rows[e.RowIndex].Cells["FECHA_ESTIMADA"].Value = fechaEstimadaStr;
 			}
 			catch (Exception) { }
 		}

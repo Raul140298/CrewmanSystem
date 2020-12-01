@@ -29,10 +29,14 @@
 		private void InitializeComponent()
 		{
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarPedido));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSeleccionar = new System.Windows.Forms.Button();
@@ -61,6 +65,9 @@
             this.MONTO_TOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MONTO_PAGAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FECHA_REGISTRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FECHA_APROBADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FECHA_ESTIMADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIPO_PEDIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
@@ -95,7 +102,7 @@
             this.btnSeleccionar.FlatAppearance.BorderSize = 0;
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.Location = new System.Drawing.Point(493, 62);
+            this.btnSeleccionar.Location = new System.Drawing.Point(504, 62);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(160, 30);
             this.btnSeleccionar.TabIndex = 95;
@@ -106,7 +113,7 @@
             // label5
             // 
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Location = new System.Drawing.Point(3, 145);
+            this.label5.Location = new System.Drawing.Point(14, 145);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(179, 22);
             this.label5.TabIndex = 94;
@@ -117,7 +124,7 @@
             // 
             this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(195, 143);
+            this.cboEstado.Location = new System.Drawing.Point(206, 143);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(263, 24);
             this.cboEstado.TabIndex = 4;
@@ -125,7 +132,7 @@
             // label2
             // 
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Location = new System.Drawing.Point(3, 106);
+            this.label2.Location = new System.Drawing.Point(14, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(179, 22);
             this.label2.TabIndex = 92;
@@ -136,7 +143,7 @@
             // 
             this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Location = new System.Drawing.Point(195, 104);
+            this.cboTipo.Location = new System.Drawing.Point(206, 104);
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(263, 24);
             this.cboTipo.TabIndex = 3;
@@ -144,7 +151,7 @@
             // label1
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Location = new System.Drawing.Point(3, 66);
+            this.label1.Location = new System.Drawing.Point(14, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(179, 22);
             this.label1.TabIndex = 90;
@@ -153,7 +160,7 @@
             // 
             // txtGrupo
             // 
-            this.txtGrupo.Location = new System.Drawing.Point(195, 66);
+            this.txtGrupo.Location = new System.Drawing.Point(206, 66);
             this.txtGrupo.Name = "txtGrupo";
             this.txtGrupo.Size = new System.Drawing.Size(263, 22);
             this.txtGrupo.TabIndex = 2;
@@ -161,17 +168,17 @@
             // label4
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Location = new System.Drawing.Point(3, 223);
+            this.label4.Location = new System.Drawing.Point(14, 223);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(179, 22);
             this.label4.TabIndex = 88;
-            this.label4.Text = "Fecha Final :";
+            this.label4.Text = "Fecha Registro Final :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(3, 28);
+            this.label3.Location = new System.Drawing.Point(14, 28);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(179, 22);
             this.label3.TabIndex = 60;
@@ -181,11 +188,11 @@
             // lblID
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Location = new System.Drawing.Point(3, 184);
+            this.lblID.Location = new System.Drawing.Point(14, 184);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(179, 22);
             this.lblID.TabIndex = 57;
-            this.lblID.Text = "Fecha Inicial :";
+            this.lblID.Text = "Fecha Registro Inicial :";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnBuscar
@@ -194,7 +201,7 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(493, 24);
+            this.btnBuscar.Location = new System.Drawing.Point(504, 24);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(160, 30);
             this.btnBuscar.TabIndex = 7;
@@ -204,21 +211,21 @@
             // 
             // dtpRangoFin
             // 
-            this.dtpRangoFin.Location = new System.Drawing.Point(195, 221);
+            this.dtpRangoFin.Location = new System.Drawing.Point(206, 221);
             this.dtpRangoFin.Name = "dtpRangoFin";
             this.dtpRangoFin.Size = new System.Drawing.Size(263, 22);
             this.dtpRangoFin.TabIndex = 6;
             // 
             // dtpRangoIni
             // 
-            this.dtpRangoIni.Location = new System.Drawing.Point(195, 184);
+            this.dtpRangoIni.Location = new System.Drawing.Point(206, 184);
             this.dtpRangoIni.Name = "dtpRangoIni";
             this.dtpRangoIni.Size = new System.Drawing.Size(263, 22);
             this.dtpRangoIni.TabIndex = 5;
             // 
             // txtRuc
             // 
-            this.txtRuc.Location = new System.Drawing.Point(195, 28);
+            this.txtRuc.Location = new System.Drawing.Point(206, 28);
             this.txtRuc.Name = "txtRuc";
             this.txtRuc.Size = new System.Drawing.Size(263, 22);
             this.txtRuc.TabIndex = 1;
@@ -254,6 +261,9 @@
             this.MONTO_TOTAL,
             this.MONTO_PAGAR,
             this.DIRECCION,
+            this.FECHA_REGISTRO,
+            this.FECHA_APROBADO,
+            this.FECHA_ESTIMADA,
             this.TIPO_PEDIDO,
             this.ESTADO});
             this.dgvPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -264,20 +274,20 @@
             this.dgvPedidos.Name = "dgvPedidos";
             this.dgvPedidos.ReadOnly = true;
             this.dgvPedidos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedidos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPedidos.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvPedidos.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvPedidos.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvPedidos.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvPedidos.RowTemplate.Height = 24;
             this.dgvPedidos.Size = new System.Drawing.Size(800, 178);
             this.dgvPedidos.TabIndex = 49;
@@ -320,6 +330,8 @@
             // 
             // TIPO_CLIENTE
             // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.TIPO_CLIENTE.DefaultCellStyle = dataGridViewCellStyle2;
             this.TIPO_CLIENTE.HeaderText = "Tipo Cliente";
             this.TIPO_CLIENTE.MinimumWidth = 6;
             this.TIPO_CLIENTE.Name = "TIPO_CLIENTE";
@@ -353,9 +365,9 @@
             // MONTO_TOTAL
             // 
             this.MONTO_TOTAL.DataPropertyName = "montoTotal";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Format = "N2";
-            this.MONTO_TOTAL.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Format = "N2";
+            this.MONTO_TOTAL.DefaultCellStyle = dataGridViewCellStyle3;
             this.MONTO_TOTAL.HeaderText = "Monto Total";
             this.MONTO_TOTAL.MinimumWidth = 6;
             this.MONTO_TOTAL.Name = "MONTO_TOTAL";
@@ -365,9 +377,9 @@
             // MONTO_PAGAR
             // 
             this.MONTO_PAGAR.DataPropertyName = "montoPagar";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "N2";
-            this.MONTO_PAGAR.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Format = "N2";
+            this.MONTO_PAGAR.DefaultCellStyle = dataGridViewCellStyle4;
             this.MONTO_PAGAR.HeaderText = "Monto a Pagar";
             this.MONTO_PAGAR.MinimumWidth = 6;
             this.MONTO_PAGAR.Name = "MONTO_PAGAR";
@@ -382,6 +394,36 @@
             this.DIRECCION.Name = "DIRECCION";
             this.DIRECCION.ReadOnly = true;
             this.DIRECCION.Width = 150;
+            // 
+            // FECHA_REGISTRO
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_REGISTRO.DefaultCellStyle = dataGridViewCellStyle5;
+            this.FECHA_REGISTRO.HeaderText = "Fecha Registro";
+            this.FECHA_REGISTRO.MinimumWidth = 6;
+            this.FECHA_REGISTRO.Name = "FECHA_REGISTRO";
+            this.FECHA_REGISTRO.ReadOnly = true;
+            this.FECHA_REGISTRO.Width = 151;
+            // 
+            // FECHA_APROBADO
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_APROBADO.DefaultCellStyle = dataGridViewCellStyle6;
+            this.FECHA_APROBADO.HeaderText = "Fecha Aprobado";
+            this.FECHA_APROBADO.MinimumWidth = 6;
+            this.FECHA_APROBADO.Name = "FECHA_APROBADO";
+            this.FECHA_APROBADO.ReadOnly = true;
+            this.FECHA_APROBADO.Width = 159;
+            // 
+            // FECHA_ESTIMADA
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_ESTIMADA.DefaultCellStyle = dataGridViewCellStyle7;
+            this.FECHA_ESTIMADA.HeaderText = "Fecha Estimada";
+            this.FECHA_ESTIMADA.MinimumWidth = 6;
+            this.FECHA_ESTIMADA.Name = "FECHA_ESTIMADA";
+            this.FECHA_ESTIMADA.ReadOnly = true;
+            this.FECHA_ESTIMADA.Width = 158;
             // 
             // TIPO_PEDIDO
             // 
@@ -447,6 +489,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MONTO_TOTAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn MONTO_PAGAR;
         private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_APROBADO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ESTIMADA;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_PEDIDO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
     }

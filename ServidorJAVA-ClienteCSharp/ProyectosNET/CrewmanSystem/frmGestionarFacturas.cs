@@ -92,6 +92,18 @@ namespace CrewmanSystem
 				dgvFacturas.Rows[e.RowIndex].Cells["NOMBRE"].Value = factura.pedido.empleado.nombre;
 				dgvFacturas.Rows[e.RowIndex].Cells["APELLIDO_PATERNO"].Value = factura.pedido.empleado.apellidoPaterno;
 				dgvFacturas.Rows[e.RowIndex].Cells["APELLIDO_MATERNO"].Value = factura.pedido.empleado.apellidoMaterno;
+
+				String anulado = "";
+				if (factura.anulado) anulado = "SI";
+				else anulado = "NO";
+
+				String estadoPagar = "";
+				if (factura.estadoPagar) estadoPagar = "SI";
+				else estadoPagar = "NO";
+
+				dgvFacturas.Rows[e.RowIndex].Cells["ANULADO"].Value = anulado;
+				dgvFacturas.Rows[e.RowIndex].Cells["ESTADO_PAGAR"].Value = estadoPagar;
+				
 			}
             catch (Exception){}
 		}

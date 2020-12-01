@@ -29,10 +29,11 @@
 		private void InitializeComponent()
 		{
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
             this.pnlVendedor = new System.Windows.Forms.Panel();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +47,9 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MONTO_PAGAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FECHA_REGISTRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FECHA_APROBADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FECHA_ESTIMADA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIPO_PEDIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
@@ -83,6 +87,9 @@
             this.Column2,
             this.MONTO_PAGAR,
             this.Column3,
+            this.FECHA_REGISTRO,
+            this.FECHA_APROBADO,
+            this.FECHA_ESTIMADA,
             this.TIPO_PEDIDO,
             this.ESTADO});
             this.dgvPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -93,20 +100,20 @@
             this.dgvPedidos.Name = "dgvPedidos";
             this.dgvPedidos.ReadOnly = true;
             this.dgvPedidos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPedidos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvPedidos.RowHeadersWidth = 51;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvPedidos.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPedidos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvPedidos.RowHeadersWidth = 51;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvPedidos.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPedidos.RowTemplate.Height = 24;
             this.dgvPedidos.Size = new System.Drawing.Size(1143, 600);
             this.dgvPedidos.TabIndex = 2;
@@ -158,6 +165,8 @@
             // 
             // TIPO_CLIENTE
             // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.TIPO_CLIENTE.DefaultCellStyle = dataGridViewCellStyle2;
             this.TIPO_CLIENTE.HeaderText = "Tipo Cliente";
             this.TIPO_CLIENTE.MinimumWidth = 6;
             this.TIPO_CLIENTE.Name = "TIPO_CLIENTE";
@@ -191,9 +200,9 @@
             // Column2
             // 
             this.Column2.DataPropertyName = "montoTotal";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Format = "N2";
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Format = "N2";
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column2.HeaderText = "Monto Total";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
@@ -203,9 +212,9 @@
             // MONTO_PAGAR
             // 
             this.MONTO_PAGAR.DataPropertyName = "montoPagar";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "N2";
-            this.MONTO_PAGAR.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Format = "N2";
+            this.MONTO_PAGAR.DefaultCellStyle = dataGridViewCellStyle4;
             this.MONTO_PAGAR.HeaderText = "Monto a Pagar";
             this.MONTO_PAGAR.MinimumWidth = 6;
             this.MONTO_PAGAR.Name = "MONTO_PAGAR";
@@ -220,6 +229,30 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Width = 150;
+            // 
+            // FECHA_REGISTRO
+            // 
+            this.FECHA_REGISTRO.HeaderText = "Fecha Registro";
+            this.FECHA_REGISTRO.MinimumWidth = 6;
+            this.FECHA_REGISTRO.Name = "FECHA_REGISTRO";
+            this.FECHA_REGISTRO.ReadOnly = true;
+            this.FECHA_REGISTRO.Width = 151;
+            // 
+            // FECHA_APROBADO
+            // 
+            this.FECHA_APROBADO.HeaderText = "Fecha Aprobado";
+            this.FECHA_APROBADO.MinimumWidth = 6;
+            this.FECHA_APROBADO.Name = "FECHA_APROBADO";
+            this.FECHA_APROBADO.ReadOnly = true;
+            this.FECHA_APROBADO.Width = 159;
+            // 
+            // FECHA_ESTIMADA
+            // 
+            this.FECHA_ESTIMADA.HeaderText = "Fecha Estimada";
+            this.FECHA_ESTIMADA.MinimumWidth = 6;
+            this.FECHA_ESTIMADA.Name = "FECHA_ESTIMADA";
+            this.FECHA_ESTIMADA.ReadOnly = true;
+            this.FECHA_ESTIMADA.Width = 158;
             // 
             // TIPO_PEDIDO
             // 
@@ -267,6 +300,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn MONTO_PAGAR;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_APROBADO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ESTIMADA;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_PEDIDO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
     }
