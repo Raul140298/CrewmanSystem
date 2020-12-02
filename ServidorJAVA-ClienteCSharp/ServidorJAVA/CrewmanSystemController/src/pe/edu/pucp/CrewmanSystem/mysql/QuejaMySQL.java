@@ -88,7 +88,7 @@ public class QuejaMySQL implements QuejaDAO{
     }
     
     @Override
-    public ArrayList<Queja>listar(int idPedido)
+    public ArrayList<Queja>listar(int idVendedor)
     {
         ArrayList<Queja> quejas = new ArrayList<>();
         try{    
@@ -96,7 +96,7 @@ public class QuejaMySQL implements QuejaDAO{
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             String sql ="{ call LISTAR_QUEJA (?)}";
             cs = con.prepareCall(sql);
-            cs.setInt("_ID_PEDIDO", idPedido);
+            cs.setInt("_ID_VENDEDOR", idVendedor);
             cs.executeUpdate();
             rs = cs.getResultSet();
             while(rs.next()){

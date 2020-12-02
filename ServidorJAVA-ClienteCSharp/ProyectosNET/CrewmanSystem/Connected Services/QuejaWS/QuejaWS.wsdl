@@ -5,23 +5,11 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/QuejaWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="actualizarQueja">
-    <part name="parameters" element="tns:actualizarQueja" />
-  </message>
-  <message name="actualizarQuejaResponse">
-    <part name="parameters" element="tns:actualizarQuejaResponse" />
-  </message>
   <message name="listarQuejas">
     <part name="parameters" element="tns:listarQuejas" />
   </message>
   <message name="listarQuejasResponse">
     <part name="parameters" element="tns:listarQuejasResponse" />
-  </message>
-  <message name="insertarQueja">
-    <part name="parameters" element="tns:insertarQueja" />
-  </message>
-  <message name="insertarQuejaResponse">
-    <part name="parameters" element="tns:insertarQuejaResponse" />
   </message>
   <message name="eliminarQueja">
     <part name="parameters" element="tns:eliminarQueja" />
@@ -29,35 +17,38 @@
   <message name="eliminarQuejaResponse">
     <part name="parameters" element="tns:eliminarQuejaResponse" />
   </message>
+  <message name="actualizarQueja">
+    <part name="parameters" element="tns:actualizarQueja" />
+  </message>
+  <message name="actualizarQuejaResponse">
+    <part name="parameters" element="tns:actualizarQuejaResponse" />
+  </message>
+  <message name="insertarQueja">
+    <part name="parameters" element="tns:insertarQueja" />
+  </message>
+  <message name="insertarQuejaResponse">
+    <part name="parameters" element="tns:insertarQuejaResponse" />
+  </message>
   <portType name="QuejaWS">
-    <operation name="actualizarQueja">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/actualizarQuejaRequest" message="tns:actualizarQueja" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/actualizarQuejaResponse" message="tns:actualizarQuejaResponse" />
-    </operation>
     <operation name="listarQuejas">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/listarQuejasRequest" message="tns:listarQuejas" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/listarQuejasResponse" message="tns:listarQuejasResponse" />
-    </operation>
-    <operation name="insertarQueja">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/insertarQuejaRequest" message="tns:insertarQueja" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/insertarQuejaResponse" message="tns:insertarQuejaResponse" />
     </operation>
     <operation name="eliminarQueja">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/eliminarQuejaRequest" message="tns:eliminarQueja" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/eliminarQuejaResponse" message="tns:eliminarQuejaResponse" />
     </operation>
+    <operation name="actualizarQueja">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/actualizarQuejaRequest" message="tns:actualizarQueja" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/actualizarQuejaResponse" message="tns:actualizarQuejaResponse" />
+    </operation>
+    <operation name="insertarQueja">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/insertarQuejaRequest" message="tns:insertarQueja" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/insertarQuejaResponse" message="tns:insertarQuejaResponse" />
+    </operation>
   </portType>
   <binding name="QuejaWSPortBinding" type="tns:QuejaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="actualizarQueja">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="listarQuejas">
       <soap:operation soapAction="" />
       <input>
@@ -67,7 +58,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarQueja">
+    <operation name="eliminarQueja">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +67,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarQueja">
+    <operation name="actualizarQueja">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarQueja">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
