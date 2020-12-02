@@ -197,9 +197,10 @@ public class Main{
 //        for(Integer in : numClientes) System.out.print(in.intValue());
 //        System.out.println("");
 //        for(Integer in : numVisitados) System.out.print(in.intValue());
-
-        misProductosXZonas=daoProductoXZona.listarSinPromocion("", "", "", "", 149);
-        for(ProductoXZona pxz : misProductosXZonas) System.out.println(pxz.getIdProductoXZona());
+//
+//        misProductosXZonas=daoProductoXZona.listarSinPromocion("", "", "", "", 149);
+//        for(ProductoXZona pxz : misProductosXZonas) System.out.println(pxz.getIdProductoXZona());
+//        System.out.println(daoPedido.entregarPedido(59));
     }
     
     private static void gestionarFamilias(){

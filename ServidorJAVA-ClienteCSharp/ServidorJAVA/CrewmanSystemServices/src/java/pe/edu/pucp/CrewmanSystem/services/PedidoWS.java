@@ -203,4 +203,16 @@ public class PedidoWS
         }
         return resultado;
     }
+    
+    @WebMethod(operationName = "entregarPedido")
+    public int entregarPedido(@WebParam(name = "idPedido") int idPedido){
+        int resultado = 0;
+        try{
+            resultado = daoPedido.entregarPedido(idPedido);
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+    }
 }
