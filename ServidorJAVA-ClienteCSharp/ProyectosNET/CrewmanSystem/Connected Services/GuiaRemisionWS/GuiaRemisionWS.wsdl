@@ -11,17 +11,17 @@
   <message name="listarGuiaRemisionsResponse">
     <part name="parameters" element="tns:listarGuiaRemisionsResponse" />
   </message>
-  <message name="insertarGuiaRemision">
-    <part name="parameters" element="tns:insertarGuiaRemision" />
-  </message>
-  <message name="insertarGuiaRemisionResponse">
-    <part name="parameters" element="tns:insertarGuiaRemisionResponse" />
-  </message>
   <message name="listarGuiaRemisionsXVendedor">
     <part name="parameters" element="tns:listarGuiaRemisionsXVendedor" />
   </message>
   <message name="listarGuiaRemisionsXVendedorResponse">
     <part name="parameters" element="tns:listarGuiaRemisionsXVendedorResponse" />
+  </message>
+  <message name="insertarGuiaRemision">
+    <part name="parameters" element="tns:insertarGuiaRemision" />
+  </message>
+  <message name="insertarGuiaRemisionResponse">
+    <part name="parameters" element="tns:insertarGuiaRemisionResponse" />
   </message>
   <message name="actualizarGuiaRemision">
     <part name="parameters" element="tns:actualizarGuiaRemision" />
@@ -34,13 +34,13 @@
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/listarGuiaRemisionsRequest" message="tns:listarGuiaRemisions" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/listarGuiaRemisionsResponse" message="tns:listarGuiaRemisionsResponse" />
     </operation>
-    <operation name="insertarGuiaRemision">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/insertarGuiaRemisionRequest" message="tns:insertarGuiaRemision" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/insertarGuiaRemisionResponse" message="tns:insertarGuiaRemisionResponse" />
-    </operation>
     <operation name="listarGuiaRemisionsXVendedor">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/listarGuiaRemisionsXVendedorRequest" message="tns:listarGuiaRemisionsXVendedor" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/listarGuiaRemisionsXVendedorResponse" message="tns:listarGuiaRemisionsXVendedorResponse" />
+    </operation>
+    <operation name="insertarGuiaRemision">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/insertarGuiaRemisionRequest" message="tns:insertarGuiaRemision" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/insertarGuiaRemisionResponse" message="tns:insertarGuiaRemisionResponse" />
     </operation>
     <operation name="actualizarGuiaRemision">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/actualizarGuiaRemisionRequest" message="tns:actualizarGuiaRemision" />
@@ -58,7 +58,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarGuiaRemision">
+    <operation name="listarGuiaRemisionsXVendedor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -67,7 +67,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarGuiaRemisionsXVendedor">
+    <operation name="insertarGuiaRemision">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
