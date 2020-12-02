@@ -499,8 +499,6 @@ namespace CrewmanSystem
 				case "frmGestionarQuejas":
 					if(boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaQueja());
 					break;
-				case "frmGestionarPromocionesXZona":
-					break;
 				case "frmGestionarPromociones":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaPromocion());
 					if (boton == 2) frmGestionarPromociones.eliminar();
@@ -546,8 +544,6 @@ namespace CrewmanSystem
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaFactura());
 					if (boton == 2) frmGestionarFacturas.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarFactura(0));
-					break;
-				case "frmGestionarEmpleadosXZona":
 					break;
 				case "frmGestionarEmpleados":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoEmpleado());
