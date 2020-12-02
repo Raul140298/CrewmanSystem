@@ -537,6 +537,7 @@ namespace CrewmanSystem
 					if (boton == 2) frmGestionarMarcas.eliminar();
 					break;
 				case "frmGestionarGuiasRemision":
+					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarGuiaRemision());
 					break;
 				case "frmGestionarFamilias":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaFamilia());

@@ -74,7 +74,7 @@
             this.dgvGuiasDeRemision.EnableHeadersVisualStyles = false;
             this.dgvGuiasDeRemision.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.dgvGuiasDeRemision.Location = new System.Drawing.Point(0, 0);
-            this.dgvGuiasDeRemision.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvGuiasDeRemision.Margin = new System.Windows.Forms.Padding(2);
             this.dgvGuiasDeRemision.MultiSelect = false;
             this.dgvGuiasDeRemision.Name = "dgvGuiasDeRemision";
             this.dgvGuiasDeRemision.ReadOnly = true;
@@ -96,6 +96,7 @@
             this.dgvGuiasDeRemision.RowTemplate.Height = 24;
             this.dgvGuiasDeRemision.Size = new System.Drawing.Size(748, 366);
             this.dgvGuiasDeRemision.TabIndex = 3;
+            this.dgvGuiasDeRemision.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvGuiasDeRemision_CellFormatting);
             // 
             // ID
             // 
@@ -108,7 +109,6 @@
             // 
             // ID_PEDIDO
             // 
-            this.ID_PEDIDO.DataPropertyName = "pedido";
             this.ID_PEDIDO.HeaderText = "Id Pedido";
             this.ID_PEDIDO.MinimumWidth = 6;
             this.ID_PEDIDO.Name = "ID_PEDIDO";
@@ -163,7 +163,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 366);
             this.Controls.Add(this.dgvGuiasDeRemision);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmGestionarGuiasRemision";
             this.Text = "frmGestionarGuiasRemision";
             ((System.ComponentModel.ISupportInitialize)(this.dgvGuiasDeRemision)).EndInit();

@@ -19,6 +19,7 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgvGuiasDeRemision.AutoGenerateColumns = false;
 			GuiaRemisionWS.guiaRemision[] misGuias = daoGuiaRemision.listarGuiaRemisionsXVendedor(Program.empleado.idEmpleado);
+			
 			if (misGuias != null)
 			{
 				dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>(daoGuiaRemision.listarGuiaRemisionsXVendedor(Program.empleado.idEmpleado).ToArray());
@@ -39,5 +40,15 @@ namespace CrewmanSystem
 			dgvGuiasDeRemision.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
-	}
+
+        private void dgvGuiasDeRemision_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+			//Castear objetos y mostrar valor determinado
+			GuiaRemisionWS.guiaRemision guiaRemision = dgvGuiasDeRemision.Rows[e.RowIndex].DataBoundItem
+											as GuiaRemisionWS.guiaRemision;
+
+			dgvGuiasDeRemision.Rows[e.RowIndex].Cells["ID_PEDIDO"].Value = guiaRemision.pedido.idPedido;
+
+		}
+    }
 }

@@ -5,17 +5,17 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/LineaCreditoWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="mostrarLineaCreditos">
-    <part name="parameters" element="tns:mostrarLineaCreditos" />
-  </message>
-  <message name="mostrarLineaCreditosResponse">
-    <part name="parameters" element="tns:mostrarLineaCreditosResponse" />
-  </message>
   <message name="insertarLineaCredito">
     <part name="parameters" element="tns:insertarLineaCredito" />
   </message>
   <message name="insertarLineaCreditoResponse">
     <part name="parameters" element="tns:insertarLineaCreditoResponse" />
+  </message>
+  <message name="mostrarLineaCreditos">
+    <part name="parameters" element="tns:mostrarLineaCreditos" />
+  </message>
+  <message name="mostrarLineaCreditosResponse">
+    <part name="parameters" element="tns:mostrarLineaCreditosResponse" />
   </message>
   <message name="actualizarLineaCredito">
     <part name="parameters" element="tns:actualizarLineaCredito" />
@@ -24,13 +24,13 @@
     <part name="parameters" element="tns:actualizarLineaCreditoResponse" />
   </message>
   <portType name="LineaCreditoWS">
-    <operation name="mostrarLineaCreditos">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/mostrarLineaCreditosRequest" message="tns:mostrarLineaCreditos" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/mostrarLineaCreditosResponse" message="tns:mostrarLineaCreditosResponse" />
-    </operation>
     <operation name="insertarLineaCredito">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/insertarLineaCreditoRequest" message="tns:insertarLineaCredito" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/insertarLineaCreditoResponse" message="tns:insertarLineaCreditoResponse" />
+    </operation>
+    <operation name="mostrarLineaCreditos">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/mostrarLineaCreditosRequest" message="tns:mostrarLineaCreditos" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/mostrarLineaCreditosResponse" message="tns:mostrarLineaCreditosResponse" />
     </operation>
     <operation name="actualizarLineaCredito">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/actualizarLineaCreditoRequest" message="tns:actualizarLineaCredito" />
@@ -39,7 +39,7 @@
   </portType>
   <binding name="LineaCreditoWSPortBinding" type="tns:LineaCreditoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="mostrarLineaCreditos">
+    <operation name="insertarLineaCredito">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -48,7 +48,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarLineaCredito">
+    <operation name="mostrarLineaCreditos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
