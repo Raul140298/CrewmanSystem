@@ -53,6 +53,12 @@
   <message name="listarClientesResponse">
     <part name="parameters" element="tns:listarClientesResponse" />
   </message>
+  <message name="obtenerInfoSeg">
+    <part name="parameters" element="tns:obtenerInfoSeg" />
+  </message>
+  <message name="obtenerInfoSegResponse">
+    <part name="parameters" element="tns:obtenerInfoSegResponse" />
+  </message>
   <message name="obtenerCliente">
     <part name="parameters" element="tns:obtenerCliente" />
   </message>
@@ -91,6 +97,10 @@
     <operation name="listarClientes">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesRequest" message="tns:listarClientes" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/listarClientesResponse" message="tns:listarClientesResponse" />
+    </operation>
+    <operation name="obtenerInfoSeg">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerInfoSegRequest" message="tns:obtenerInfoSeg" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerInfoSegResponse" message="tns:obtenerInfoSegResponse" />
     </operation>
     <operation name="obtenerCliente">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ClienteWS/obtenerClienteRequest" message="tns:obtenerCliente" />
@@ -163,6 +173,15 @@
       </output>
     </operation>
     <operation name="listarClientes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerInfoSeg">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

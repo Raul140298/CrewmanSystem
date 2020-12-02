@@ -5,7 +5,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import pe.edu.pucp.CrewmanSystem.config.DBManager;
 import pe.edu.pucp.CrewmanSystem.dao.ClienteDAO;
 import pe.edu.pucp.CrewmanSystem.dao.ClienteXZonaDAO;
@@ -343,6 +345,15 @@ public class ClienteMySQL implements ClienteDAO{
         double rango;
         int resultado = 0;
         String tipo = "";
+        Date fechaIni;
+        Date fechaFin;
+        Calendar cal = new GregorianCalendar();
+        cal.setTime(new Date());
+        cal.add(Calendar.MONTH, -1);
+        cal.set(Calendar.DAY_OF_MONTH, 1);
+        fechaIni = cal.getTime();
+        cal.set(Calendar.DAY_OF_MONTH, cal.getActualMaximum(Calendar.DATE));
+        fechaFin = cal.getTime();
         try{
             ClienteDAO daoCliente = new ClienteMySQL();
             ArrayList<Cliente> clientes = daoCliente.listar("", "", 0);
@@ -351,10 +362,12 @@ public class ClienteMySQL implements ClienteDAO{
             con.setAutoCommit(false);
             String sql;
             for(Cliente c : clientes){
-                sql ="{ call OBTENER_MONTO_SEG (?,?)}";
+                sql ="{ call OBTENER_MONTO_SEG (?,?,?,?)}";
                 cs = con.prepareCall(sql);
                 cs.registerOutParameter("_MONTO_SEG", java.sql.Types.DOUBLE);
                 cs.setInt("_ID_CLIENTE", c.getIdCliente());
+                cs.setDate("_FECHA_INI",new java.sql.Date(fechaIni.getTime()));
+                cs.setDate("_FECHA_FIN",new java.sql.Date(fechaFin.getTime()));
                 cs.executeUpdate();
                 monto = cs.getDouble("_MONTO_SEG");
                 c.setMontoSeg(monto);
@@ -376,10 +389,14 @@ public class ClienteMySQL implements ClienteDAO{
                 sql ="{ call ASIGNAR_TIPO (?,?)}";
                 cs = con.prepareCall(sql);
                 cs.setInt("_ID_CLIENTE", c.getIdCliente());
-                cs.setString("_ID_CLIENTE", tipo);
+                cs.setString("_TIPO_CLIENTE", tipo);
                 resultado = cs.executeUpdate();
                 if(resultado == 0)return 0;
             }
+            sql ="{ call ACTUALIZAR_FECHA_SEG (?)}";
+            cs = con.prepareCall(sql);
+            cs.setDate("_FECHA_ULTIMA_SEG", new java.sql.Date(new Date().getTime()));
+            resultado = cs.executeUpdate();
             con.commit();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -391,5 +408,31 @@ public class ClienteMySQL implements ClienteDAO{
             }
         }
         return resultado;
+    }
+    
+    @Override
+    public Date obtenerInfoSeg()
+    {
+        Date fecha = null;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            String sql ="{ call OBTENER_INFO_SEG ()}";
+            cs = con.prepareCall(sql);
+            cs.executeUpdate();
+            rs = cs.getResultSet();
+            rs.next();
+            fecha = rs.getDate("FECHA_ULTIMA_SEG");
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                rs.close();
+                con.close();
+            }catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return fecha;
     }
 }

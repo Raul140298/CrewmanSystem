@@ -17,6 +17,12 @@
   <message name="listarProductosXZonasResponse">
     <part name="parameters" element="tns:listarProductosXZonasResponse" />
   </message>
+  <message name="listarProductosXZonasSinPromocion">
+    <part name="parameters" element="tns:listarProductosXZonasSinPromocion" />
+  </message>
+  <message name="listarProductosXZonasSinPromocionResponse">
+    <part name="parameters" element="tns:listarProductosXZonasSinPromocionResponse" />
+  </message>
   <portType name="ProductoXZonaWS">
     <operation name="insertarProductoXZona">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoXZonaWS/insertarProductoXZonaRequest" message="tns:insertarProductoXZona" />
@@ -25,6 +31,10 @@
     <operation name="listarProductosXZonas">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoXZonaWS/listarProductosXZonasRequest" message="tns:listarProductosXZonas" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoXZonaWS/listarProductosXZonasResponse" message="tns:listarProductosXZonasResponse" />
+    </operation>
+    <operation name="listarProductosXZonasSinPromocion">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoXZonaWS/listarProductosXZonasSinPromocionRequest" message="tns:listarProductosXZonasSinPromocion" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ProductoXZonaWS/listarProductosXZonasSinPromocionResponse" message="tns:listarProductosXZonasSinPromocionResponse" />
     </operation>
   </portType>
   <binding name="ProductoXZonaWSPortBinding" type="tns:ProductoXZonaWS">
@@ -39,6 +49,15 @@
       </output>
     </operation>
     <operation name="listarProductosXZonas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarProductosXZonasSinPromocion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -499,8 +499,6 @@ namespace CrewmanSystem
 				case "frmGestionarQuejas":
 					if(boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaQueja());
 					break;
-				case "frmGestionarPromocionesXZona":
-					break;
 				case "frmGestionarPromociones":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaPromocion());
 					if (boton == 2) frmGestionarPromociones.eliminar();
@@ -547,8 +545,6 @@ namespace CrewmanSystem
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaFactura());
 					if (boton == 2) frmGestionarFacturas.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarFactura(0));
-					break;
-				case "frmGestionarEmpleadosXZona":
 					break;
 				case "frmGestionarEmpleados":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoEmpleado());
@@ -757,6 +753,15 @@ namespace CrewmanSystem
 		{
 			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmGestionarVisitas(),false, false, false, false, true);
 		}
+
+		private void btnSegmentacion_Click(object sender, EventArgs e)
+        {
+			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmSegmentarClientes(), false, false, false, false, false);
+		}
+		private void btnPerfil_Click(object sender, EventArgs e)
+		{
+			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmPerfil(), false, false, false, false, false);
+		}
 		#endregion
 
 		#endregion
@@ -848,8 +853,7 @@ namespace CrewmanSystem
 			}
 			modificaPagina();
 		}
+
         #endregion
-
-
     }
 }

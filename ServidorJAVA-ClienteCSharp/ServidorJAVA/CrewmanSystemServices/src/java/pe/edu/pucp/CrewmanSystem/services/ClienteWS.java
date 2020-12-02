@@ -6,6 +6,7 @@
 package pe.edu.pucp.CrewmanSystem.services;
 
 import java.util.ArrayList;
+import java.util.Date;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -117,5 +118,27 @@ public class ClienteWS {
             System.out.println(e.getMessage());
         }
         return cliente;
+    }
+    
+    @WebMethod(operationName = "segmentarClientes")
+    public int segmentarClientes(){
+        int resultado = 0;
+        try{
+            resultado = daoCliente.segmentarClientes();
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+    }
+    
+    @WebMethod(operationName = "obtenerInfoSeg")
+    public Date obtenerInfoSeg(){
+        Date fecha = null;
+        try{
+            fecha = daoCliente.obtenerInfoSeg();
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return fecha;
     }
 }

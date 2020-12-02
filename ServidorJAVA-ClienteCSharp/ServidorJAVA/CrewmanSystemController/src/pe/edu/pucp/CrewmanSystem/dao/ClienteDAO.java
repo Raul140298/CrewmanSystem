@@ -1,5 +1,6 @@
 package pe.edu.pucp.CrewmanSystem.dao;
 import java.util.ArrayList;
+import java.util.Date;
 import pe.edu.pucp.CrewmanSystem.model.Cliente;
 
 public interface ClienteDAO
@@ -13,4 +14,5 @@ public interface ClienteDAO
     ArrayList<Cliente> listarConCartera(String razonSocial, String grupo, int idCartera);
     Cliente obtenerCliente(int idCliente);
     int segmentarClientes();
+    Date obtenerInfoSeg();
 }

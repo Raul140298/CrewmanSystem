@@ -4,6 +4,8 @@
   <xs:element name="insertarProductoXZonaResponse" type="tns:insertarProductoXZonaResponse" />
   <xs:element name="listarProductosXZonas" type="tns:listarProductosXZonas" />
   <xs:element name="listarProductosXZonasResponse" type="tns:listarProductosXZonasResponse" />
+  <xs:element name="listarProductosXZonasSinPromocion" type="tns:listarProductosXZonasSinPromocion" />
+  <xs:element name="listarProductosXZonasSinPromocionResponse" type="tns:listarProductosXZonasSinPromocionResponse" />
   <xs:complexType name="insertarProductoXZona">
     <xs:sequence>
       <xs:element minOccurs="0" name="productoXZona" type="tns:productoXZona" />
@@ -92,6 +94,7 @@
       <xs:element minOccurs="0" name="grupo" type="xs:string" />
       <xs:element name="idCliente" type="xs:int" />
       <xs:element minOccurs="0" name="lineaCredito" type="tns:lineaCredito" />
+      <xs:element name="montoSeg" type="xs:double" />
       <xs:element minOccurs="0" name="personaContacto" type="tns:personaContacto" />
       <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
       <xs:element minOccurs="0" name="ruc" type="xs:string" />
@@ -298,6 +301,20 @@
   <xs:complexType name="insertarProductoXZonaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarProductosXZonasSinPromocion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="familiaStr" type="xs:string" />
+      <xs:element minOccurs="0" name="subFamiliaStr" type="xs:string" />
+      <xs:element minOccurs="0" name="marcaStr" type="xs:string" />
+      <xs:element name="idZona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarProductosXZonasSinPromocionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:productoXZona" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarProductosXZonas">

@@ -50,10 +50,10 @@ public class QuejaWS {
     }
     
     @WebMethod(operationName = "listarQuejas")
-    public ArrayList<Queja> listarQuejas(@WebParam(name = "idPedido") int idPedido) {
+    public ArrayList<Queja> listarQuejas(@WebParam(name = "idVendedor") int idVendedor) {
         ArrayList<Queja> misQuejas = new ArrayList<>();
         try{
-            misQuejas = daoQueja.listar(idPedido);
+            misQuejas = daoQueja.listar(idVendedor);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }

@@ -29,16 +29,41 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarFactura));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dtpFechaVencimientoFinal = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaVencimientoIni = new System.Windows.Forms.DateTimePicker();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.rbPagadoAmbos = new System.Windows.Forms.RadioButton();
+            this.rbPagadoNo = new System.Windows.Forms.RadioButton();
+            this.rbPagadoSi = new System.Windows.Forms.RadioButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.rbEmisionAmbos = new System.Windows.Forms.RadioButton();
+            this.rbAnuladoNo = new System.Windows.Forms.RadioButton();
+            this.rbAnuladoSi = new System.Windows.Forms.RadioButton();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtGrupo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.dtpFechaEmisionFinal = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaEmisionIni = new System.Windows.Forms.DateTimePicker();
+            this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.dgvFacturas = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_PEDIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,34 +80,10 @@
             this.IMPUESTOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ANULADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ESTADO_PAGAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtGrupo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.dtpFechaEmisionFinal = new System.Windows.Forms.DateTimePicker();
-            this.dtpFechaEmisionIni = new System.Windows.Forms.DateTimePicker();
-            this.txtRazonSocial = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.rbAnuladoSi = new System.Windows.Forms.RadioButton();
-            this.rbAnuladoNo = new System.Windows.Forms.RadioButton();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.rbPagadoNo = new System.Windows.Forms.RadioButton();
-            this.rbPagadoSi = new System.Windows.Forms.RadioButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dtpFechaVencimientoFinal = new System.Windows.Forms.DateTimePicker();
-            this.dtpFechaVencimientoIni = new System.Windows.Forms.DateTimePicker();
-            this.rbEmisionAmbos = new System.Windows.Forms.RadioButton();
-            this.rbPagadoAmbos = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -111,206 +112,125 @@
             this.panel1.Size = new System.Drawing.Size(1127, 238);
             this.panel1.TabIndex = 93;
             // 
-            // dgvFacturas
+            // label6
             // 
-            this.dgvFacturas.AllowUserToAddRows = false;
-            this.dgvFacturas.AllowUserToDeleteRows = false;
-            this.dgvFacturas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvFacturas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvFacturas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.dgvFacturas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvFacturas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFacturas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvFacturas.ColumnHeadersHeight = 30;
-            this.dgvFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvFacturas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.ID_PEDIDO,
-            this.RUC,
-            this.RAZON_SOCIAL,
-            this.GRUPO,
-            this.TIPO_CLIENTE,
-            this.NOMBRE,
-            this.APELLIDO_PATERNO,
-            this.APELLIDO_MATERNO,
-            this.MONTO,
-            this.FECHA_EMISION,
-            this.FECHA_VENCIMIENTO,
-            this.IMPUESTOS,
-            this.ANULADO,
-            this.ESTADO_PAGAR});
-            this.dgvFacturas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvFacturas.EnableHeadersVisualStyles = false;
-            this.dgvFacturas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.dgvFacturas.Location = new System.Drawing.Point(0, 238);
-            this.dgvFacturas.MultiSelect = false;
-            this.dgvFacturas.Name = "dgvFacturas";
-            this.dgvFacturas.ReadOnly = true;
-            this.dgvFacturas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFacturas.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvFacturas.RowHeadersWidth = 51;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvFacturas.RowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.dgvFacturas.RowTemplate.Height = 24;
-            this.dgvFacturas.Size = new System.Drawing.Size(1127, 212);
-            this.dgvFacturas.TabIndex = 94;
-            this.dgvFacturas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFacturas_CellFormatting);
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Location = new System.Drawing.Point(535, 186);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(176, 22);
+            this.label6.TabIndex = 115;
+            this.label6.Text = "Fecha Vencimiento Final :";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // ID
+            // label7
             // 
-            this.ID.DataPropertyName = "idFactura";
-            this.ID.HeaderText = "Id";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 50;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label7.Location = new System.Drawing.Point(48, 186);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(179, 22);
+            this.label7.TabIndex = 114;
+            this.label7.Text = "Fecha Vencimiento Inicial :";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // ID_PEDIDO
+            // dtpFechaVencimientoFinal
             // 
-            this.ID_PEDIDO.HeaderText = "Id Pedido";
-            this.ID_PEDIDO.MinimumWidth = 6;
-            this.ID_PEDIDO.Name = "ID_PEDIDO";
-            this.ID_PEDIDO.ReadOnly = true;
-            this.ID_PEDIDO.Width = 106;
+            this.dtpFechaVencimientoFinal.Location = new System.Drawing.Point(727, 186);
+            this.dtpFechaVencimientoFinal.Name = "dtpFechaVencimientoFinal";
+            this.dtpFechaVencimientoFinal.Size = new System.Drawing.Size(263, 22);
+            this.dtpFechaVencimientoFinal.TabIndex = 113;
             // 
-            // RUC
+            // dtpFechaVencimientoIni
             // 
-            this.RUC.HeaderText = "RUC";
-            this.RUC.MinimumWidth = 6;
-            this.RUC.Name = "RUC";
-            this.RUC.ReadOnly = true;
-            this.RUC.Width = 73;
+            this.dtpFechaVencimientoIni.Location = new System.Drawing.Point(240, 186);
+            this.dtpFechaVencimientoIni.Name = "dtpFechaVencimientoIni";
+            this.dtpFechaVencimientoIni.Size = new System.Drawing.Size(263, 22);
+            this.dtpFechaVencimientoIni.TabIndex = 112;
             // 
-            // RAZON_SOCIAL
+            // panel3
             // 
-            this.RAZON_SOCIAL.HeaderText = "Razon Social";
-            this.RAZON_SOCIAL.MinimumWidth = 6;
-            this.RAZON_SOCIAL.Name = "RAZON_SOCIAL";
-            this.RAZON_SOCIAL.ReadOnly = true;
-            this.RAZON_SOCIAL.Width = 136;
+            this.panel3.Controls.Add(this.rbPagadoAmbos);
+            this.panel3.Controls.Add(this.rbPagadoNo);
+            this.panel3.Controls.Add(this.rbPagadoSi);
+            this.panel3.Location = new System.Drawing.Point(617, 93);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(263, 34);
+            this.panel3.TabIndex = 111;
             // 
-            // GRUPO
+            // rbPagadoAmbos
             // 
-            this.GRUPO.HeaderText = "Grupo";
-            this.GRUPO.MinimumWidth = 6;
-            this.GRUPO.Name = "GRUPO";
-            this.GRUPO.ReadOnly = true;
-            this.GRUPO.Width = 83;
+            this.rbPagadoAmbos.AutoSize = true;
+            this.rbPagadoAmbos.Location = new System.Drawing.Point(100, 13);
+            this.rbPagadoAmbos.Name = "rbPagadoAmbos";
+            this.rbPagadoAmbos.Size = new System.Drawing.Size(72, 21);
+            this.rbPagadoAmbos.TabIndex = 3;
+            this.rbPagadoAmbos.TabStop = true;
+            this.rbPagadoAmbos.Text = "Ambos";
+            this.rbPagadoAmbos.UseVisualStyleBackColor = true;
             // 
-            // TIPO_CLIENTE
+            // rbPagadoNo
             // 
-            this.TIPO_CLIENTE.HeaderText = "Tipo Cliente";
-            this.TIPO_CLIENTE.MinimumWidth = 6;
-            this.TIPO_CLIENTE.Name = "TIPO_CLIENTE";
-            this.TIPO_CLIENTE.ReadOnly = true;
-            this.TIPO_CLIENTE.Width = 126;
+            this.rbPagadoNo.AutoSize = true;
+            this.rbPagadoNo.Location = new System.Drawing.Point(47, 13);
+            this.rbPagadoNo.Name = "rbPagadoNo";
+            this.rbPagadoNo.Size = new System.Drawing.Size(47, 21);
+            this.rbPagadoNo.TabIndex = 1;
+            this.rbPagadoNo.TabStop = true;
+            this.rbPagadoNo.Text = "No";
+            this.rbPagadoNo.UseVisualStyleBackColor = true;
             // 
-            // NOMBRE
+            // rbPagadoSi
             // 
-            this.NOMBRE.HeaderText = "Nombre";
-            this.NOMBRE.MinimumWidth = 6;
-            this.NOMBRE.Name = "NOMBRE";
-            this.NOMBRE.ReadOnly = true;
-            this.NOMBRE.Width = 96;
+            this.rbPagadoSi.AutoSize = true;
+            this.rbPagadoSi.Location = new System.Drawing.Point(0, 13);
+            this.rbPagadoSi.Name = "rbPagadoSi";
+            this.rbPagadoSi.Size = new System.Drawing.Size(41, 21);
+            this.rbPagadoSi.TabIndex = 0;
+            this.rbPagadoSi.TabStop = true;
+            this.rbPagadoSi.Text = "Sí";
+            this.rbPagadoSi.UseVisualStyleBackColor = true;
             // 
-            // APELLIDO_PATERNO
+            // panel2
             // 
-            this.APELLIDO_PATERNO.HeaderText = "Apellido Paterno";
-            this.APELLIDO_PATERNO.MinimumWidth = 6;
-            this.APELLIDO_PATERNO.Name = "APELLIDO_PATERNO";
-            this.APELLIDO_PATERNO.ReadOnly = true;
-            this.APELLIDO_PATERNO.Width = 159;
+            this.panel2.Controls.Add(this.rbEmisionAmbos);
+            this.panel2.Controls.Add(this.rbAnuladoNo);
+            this.panel2.Controls.Add(this.rbAnuladoSi);
+            this.panel2.Location = new System.Drawing.Point(240, 93);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(263, 34);
+            this.panel2.TabIndex = 110;
             // 
-            // APELLIDO_MATERNO
+            // rbEmisionAmbos
             // 
-            this.APELLIDO_MATERNO.HeaderText = "Apellido Materno";
-            this.APELLIDO_MATERNO.MinimumWidth = 6;
-            this.APELLIDO_MATERNO.Name = "APELLIDO_MATERNO";
-            this.APELLIDO_MATERNO.ReadOnly = true;
-            this.APELLIDO_MATERNO.Width = 162;
+            this.rbEmisionAmbos.AutoSize = true;
+            this.rbEmisionAmbos.Location = new System.Drawing.Point(100, 13);
+            this.rbEmisionAmbos.Name = "rbEmisionAmbos";
+            this.rbEmisionAmbos.Size = new System.Drawing.Size(72, 21);
+            this.rbEmisionAmbos.TabIndex = 2;
+            this.rbEmisionAmbos.TabStop = true;
+            this.rbEmisionAmbos.Text = "Ambos";
+            this.rbEmisionAmbos.UseVisualStyleBackColor = true;
             // 
-            // MONTO
+            // rbAnuladoNo
             // 
-            this.MONTO.DataPropertyName = "monto";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Format = "N2";
-            this.MONTO.DefaultCellStyle = dataGridViewCellStyle2;
-            this.MONTO.HeaderText = "Monto";
-            this.MONTO.MinimumWidth = 6;
-            this.MONTO.Name = "MONTO";
-            this.MONTO.ReadOnly = true;
-            this.MONTO.Width = 83;
+            this.rbAnuladoNo.AutoSize = true;
+            this.rbAnuladoNo.Location = new System.Drawing.Point(47, 13);
+            this.rbAnuladoNo.Name = "rbAnuladoNo";
+            this.rbAnuladoNo.Size = new System.Drawing.Size(47, 21);
+            this.rbAnuladoNo.TabIndex = 1;
+            this.rbAnuladoNo.TabStop = true;
+            this.rbAnuladoNo.Text = "No";
+            this.rbAnuladoNo.UseVisualStyleBackColor = true;
             // 
-            // FECHA_EMISION
+            // rbAnuladoSi
             // 
-            this.FECHA_EMISION.DataPropertyName = "fechaEmision";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FECHA_EMISION.DefaultCellStyle = dataGridViewCellStyle3;
-            this.FECHA_EMISION.HeaderText = "Fecha Emisión";
-            this.FECHA_EMISION.MinimumWidth = 6;
-            this.FECHA_EMISION.Name = "FECHA_EMISION";
-            this.FECHA_EMISION.ReadOnly = true;
-            this.FECHA_EMISION.Width = 148;
-            // 
-            // FECHA_VENCIMIENTO
-            // 
-            this.FECHA_VENCIMIENTO.DataPropertyName = "fechaVencimiento";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FECHA_VENCIMIENTO.DefaultCellStyle = dataGridViewCellStyle4;
-            this.FECHA_VENCIMIENTO.HeaderText = "Fecha Vencimiento";
-            this.FECHA_VENCIMIENTO.MinimumWidth = 6;
-            this.FECHA_VENCIMIENTO.Name = "FECHA_VENCIMIENTO";
-            this.FECHA_VENCIMIENTO.ReadOnly = true;
-            this.FECHA_VENCIMIENTO.Width = 180;
-            // 
-            // IMPUESTOS
-            // 
-            this.IMPUESTOS.DataPropertyName = "impuestos";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "N2";
-            this.IMPUESTOS.DefaultCellStyle = dataGridViewCellStyle5;
-            this.IMPUESTOS.HeaderText = "Impuestos";
-            this.IMPUESTOS.MinimumWidth = 6;
-            this.IMPUESTOS.Name = "IMPUESTOS";
-            this.IMPUESTOS.ReadOnly = true;
-            this.IMPUESTOS.Width = 114;
-            // 
-            // ANULADO
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ANULADO.DefaultCellStyle = dataGridViewCellStyle6;
-            this.ANULADO.HeaderText = "Anulado";
-            this.ANULADO.MinimumWidth = 6;
-            this.ANULADO.Name = "ANULADO";
-            this.ANULADO.ReadOnly = true;
-            this.ANULADO.Width = 97;
-            // 
-            // ESTADO_PAGAR
-            // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ESTADO_PAGAR.DefaultCellStyle = dataGridViewCellStyle7;
-            this.ESTADO_PAGAR.HeaderText = "Pagado";
-            this.ESTADO_PAGAR.MinimumWidth = 6;
-            this.ESTADO_PAGAR.Name = "ESTADO_PAGAR";
-            this.ESTADO_PAGAR.ReadOnly = true;
-            this.ESTADO_PAGAR.Width = 93;
+            this.rbAnuladoSi.AutoSize = true;
+            this.rbAnuladoSi.Location = new System.Drawing.Point(0, 13);
+            this.rbAnuladoSi.Name = "rbAnuladoSi";
+            this.rbAnuladoSi.Size = new System.Drawing.Size(41, 21);
+            this.rbAnuladoSi.TabIndex = 0;
+            this.rbAnuladoSi.TabStop = true;
+            this.rbAnuladoSi.Text = "Sí";
+            this.rbAnuladoSi.UseVisualStyleBackColor = true;
             // 
             // btnSeleccionar
             // 
@@ -427,125 +347,208 @@
             this.txtRazonSocial.Size = new System.Drawing.Size(263, 22);
             this.txtRazonSocial.TabIndex = 96;
             // 
-            // panel2
+            // dgvFacturas
             // 
-            this.panel2.Controls.Add(this.rbEmisionAmbos);
-            this.panel2.Controls.Add(this.rbAnuladoNo);
-            this.panel2.Controls.Add(this.rbAnuladoSi);
-            this.panel2.Location = new System.Drawing.Point(240, 93);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(263, 34);
-            this.panel2.TabIndex = 110;
+            this.dgvFacturas.AllowUserToAddRows = false;
+            this.dgvFacturas.AllowUserToDeleteRows = false;
+            this.dgvFacturas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvFacturas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvFacturas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dgvFacturas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvFacturas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFacturas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvFacturas.ColumnHeadersHeight = 30;
+            this.dgvFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvFacturas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.ID_PEDIDO,
+            this.RUC,
+            this.RAZON_SOCIAL,
+            this.GRUPO,
+            this.TIPO_CLIENTE,
+            this.NOMBRE,
+            this.APELLIDO_PATERNO,
+            this.APELLIDO_MATERNO,
+            this.MONTO,
+            this.FECHA_EMISION,
+            this.FECHA_VENCIMIENTO,
+            this.IMPUESTOS,
+            this.ANULADO,
+            this.ESTADO_PAGAR});
+            this.dgvFacturas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvFacturas.EnableHeadersVisualStyles = false;
+            this.dgvFacturas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.dgvFacturas.Location = new System.Drawing.Point(0, 238);
+            this.dgvFacturas.MultiSelect = false;
+            this.dgvFacturas.Name = "dgvFacturas";
+            this.dgvFacturas.ReadOnly = true;
+            this.dgvFacturas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFacturas.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvFacturas.RowHeadersWidth = 51;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvFacturas.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvFacturas.RowTemplate.Height = 24;
+            this.dgvFacturas.Size = new System.Drawing.Size(1127, 212);
+            this.dgvFacturas.TabIndex = 94;
+            this.dgvFacturas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFacturas_CellFormatting);
             // 
-            // rbAnuladoSi
+            // ID
             // 
-            this.rbAnuladoSi.AutoSize = true;
-            this.rbAnuladoSi.Location = new System.Drawing.Point(0, 13);
-            this.rbAnuladoSi.Name = "rbAnuladoSi";
-            this.rbAnuladoSi.Size = new System.Drawing.Size(41, 21);
-            this.rbAnuladoSi.TabIndex = 0;
-            this.rbAnuladoSi.TabStop = true;
-            this.rbAnuladoSi.Text = "Sí";
-            this.rbAnuladoSi.UseVisualStyleBackColor = true;
+            this.ID.DataPropertyName = "idFactura";
+            this.ID.HeaderText = "Id";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 50;
             // 
-            // rbAnuladoNo
+            // ID_PEDIDO
             // 
-            this.rbAnuladoNo.AutoSize = true;
-            this.rbAnuladoNo.Location = new System.Drawing.Point(47, 13);
-            this.rbAnuladoNo.Name = "rbAnuladoNo";
-            this.rbAnuladoNo.Size = new System.Drawing.Size(47, 21);
-            this.rbAnuladoNo.TabIndex = 1;
-            this.rbAnuladoNo.TabStop = true;
-            this.rbAnuladoNo.Text = "No";
-            this.rbAnuladoNo.UseVisualStyleBackColor = true;
+            this.ID_PEDIDO.HeaderText = "Id Pedido";
+            this.ID_PEDIDO.MinimumWidth = 6;
+            this.ID_PEDIDO.Name = "ID_PEDIDO";
+            this.ID_PEDIDO.ReadOnly = true;
+            this.ID_PEDIDO.Width = 106;
             // 
-            // panel3
+            // RUC
             // 
-            this.panel3.Controls.Add(this.rbPagadoAmbos);
-            this.panel3.Controls.Add(this.rbPagadoNo);
-            this.panel3.Controls.Add(this.rbPagadoSi);
-            this.panel3.Location = new System.Drawing.Point(617, 93);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(263, 34);
-            this.panel3.TabIndex = 111;
+            this.RUC.HeaderText = "RUC";
+            this.RUC.MinimumWidth = 6;
+            this.RUC.Name = "RUC";
+            this.RUC.ReadOnly = true;
+            this.RUC.Width = 73;
             // 
-            // rbPagadoNo
+            // RAZON_SOCIAL
             // 
-            this.rbPagadoNo.AutoSize = true;
-            this.rbPagadoNo.Location = new System.Drawing.Point(47, 13);
-            this.rbPagadoNo.Name = "rbPagadoNo";
-            this.rbPagadoNo.Size = new System.Drawing.Size(47, 21);
-            this.rbPagadoNo.TabIndex = 1;
-            this.rbPagadoNo.TabStop = true;
-            this.rbPagadoNo.Text = "No";
-            this.rbPagadoNo.UseVisualStyleBackColor = true;
+            this.RAZON_SOCIAL.HeaderText = "Razon Social";
+            this.RAZON_SOCIAL.MinimumWidth = 6;
+            this.RAZON_SOCIAL.Name = "RAZON_SOCIAL";
+            this.RAZON_SOCIAL.ReadOnly = true;
+            this.RAZON_SOCIAL.Width = 136;
             // 
-            // rbPagadoSi
+            // GRUPO
             // 
-            this.rbPagadoSi.AutoSize = true;
-            this.rbPagadoSi.Location = new System.Drawing.Point(0, 13);
-            this.rbPagadoSi.Name = "rbPagadoSi";
-            this.rbPagadoSi.Size = new System.Drawing.Size(41, 21);
-            this.rbPagadoSi.TabIndex = 0;
-            this.rbPagadoSi.TabStop = true;
-            this.rbPagadoSi.Text = "Sí";
-            this.rbPagadoSi.UseVisualStyleBackColor = true;
+            this.GRUPO.HeaderText = "Grupo";
+            this.GRUPO.MinimumWidth = 6;
+            this.GRUPO.Name = "GRUPO";
+            this.GRUPO.ReadOnly = true;
+            this.GRUPO.Width = 83;
             // 
-            // label6
+            // TIPO_CLIENTE
             // 
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Location = new System.Drawing.Point(535, 186);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(176, 22);
-            this.label6.TabIndex = 115;
-            this.label6.Text = "Fecha Vencimiento Final :";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.TIPO_CLIENTE.DefaultCellStyle = dataGridViewCellStyle2;
+            this.TIPO_CLIENTE.HeaderText = "Tipo Cliente";
+            this.TIPO_CLIENTE.MinimumWidth = 6;
+            this.TIPO_CLIENTE.Name = "TIPO_CLIENTE";
+            this.TIPO_CLIENTE.ReadOnly = true;
+            this.TIPO_CLIENTE.Width = 126;
             // 
-            // label7
+            // NOMBRE
             // 
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Location = new System.Drawing.Point(48, 186);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(179, 22);
-            this.label7.TabIndex = 114;
-            this.label7.Text = "Fecha Vencimiento Inicial :";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.NOMBRE.HeaderText = "Nombre";
+            this.NOMBRE.MinimumWidth = 6;
+            this.NOMBRE.Name = "NOMBRE";
+            this.NOMBRE.ReadOnly = true;
+            this.NOMBRE.Width = 96;
             // 
-            // dtpFechaVencimientoFinal
+            // APELLIDO_PATERNO
             // 
-            this.dtpFechaVencimientoFinal.Location = new System.Drawing.Point(727, 186);
-            this.dtpFechaVencimientoFinal.Name = "dtpFechaVencimientoFinal";
-            this.dtpFechaVencimientoFinal.Size = new System.Drawing.Size(263, 22);
-            this.dtpFechaVencimientoFinal.TabIndex = 113;
+            this.APELLIDO_PATERNO.HeaderText = "Apellido Paterno";
+            this.APELLIDO_PATERNO.MinimumWidth = 6;
+            this.APELLIDO_PATERNO.Name = "APELLIDO_PATERNO";
+            this.APELLIDO_PATERNO.ReadOnly = true;
+            this.APELLIDO_PATERNO.Width = 159;
             // 
-            // dtpFechaVencimientoIni
+            // APELLIDO_MATERNO
             // 
-            this.dtpFechaVencimientoIni.Location = new System.Drawing.Point(240, 186);
-            this.dtpFechaVencimientoIni.Name = "dtpFechaVencimientoIni";
-            this.dtpFechaVencimientoIni.Size = new System.Drawing.Size(263, 22);
-            this.dtpFechaVencimientoIni.TabIndex = 112;
+            this.APELLIDO_MATERNO.HeaderText = "Apellido Materno";
+            this.APELLIDO_MATERNO.MinimumWidth = 6;
+            this.APELLIDO_MATERNO.Name = "APELLIDO_MATERNO";
+            this.APELLIDO_MATERNO.ReadOnly = true;
+            this.APELLIDO_MATERNO.Width = 162;
             // 
-            // rbEmisionAmbos
+            // MONTO
             // 
-            this.rbEmisionAmbos.AutoSize = true;
-            this.rbEmisionAmbos.Location = new System.Drawing.Point(100, 13);
-            this.rbEmisionAmbos.Name = "rbEmisionAmbos";
-            this.rbEmisionAmbos.Size = new System.Drawing.Size(72, 21);
-            this.rbEmisionAmbos.TabIndex = 2;
-            this.rbEmisionAmbos.TabStop = true;
-            this.rbEmisionAmbos.Text = "Ambos";
-            this.rbEmisionAmbos.UseVisualStyleBackColor = true;
+            this.MONTO.DataPropertyName = "monto";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Format = "N2";
+            this.MONTO.DefaultCellStyle = dataGridViewCellStyle3;
+            this.MONTO.HeaderText = "Monto";
+            this.MONTO.MinimumWidth = 6;
+            this.MONTO.Name = "MONTO";
+            this.MONTO.ReadOnly = true;
+            this.MONTO.Width = 83;
             // 
-            // rbPagadoAmbos
+            // FECHA_EMISION
             // 
-            this.rbPagadoAmbos.AutoSize = true;
-            this.rbPagadoAmbos.Location = new System.Drawing.Point(100, 13);
-            this.rbPagadoAmbos.Name = "rbPagadoAmbos";
-            this.rbPagadoAmbos.Size = new System.Drawing.Size(72, 21);
-            this.rbPagadoAmbos.TabIndex = 3;
-            this.rbPagadoAmbos.TabStop = true;
-            this.rbPagadoAmbos.Text = "Ambos";
-            this.rbPagadoAmbos.UseVisualStyleBackColor = true;
+            this.FECHA_EMISION.DataPropertyName = "fechaEmision";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_EMISION.DefaultCellStyle = dataGridViewCellStyle4;
+            this.FECHA_EMISION.HeaderText = "Fecha Emisión";
+            this.FECHA_EMISION.MinimumWidth = 6;
+            this.FECHA_EMISION.Name = "FECHA_EMISION";
+            this.FECHA_EMISION.ReadOnly = true;
+            this.FECHA_EMISION.Width = 148;
+            // 
+            // FECHA_VENCIMIENTO
+            // 
+            this.FECHA_VENCIMIENTO.DataPropertyName = "fechaVencimiento";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_VENCIMIENTO.DefaultCellStyle = dataGridViewCellStyle5;
+            this.FECHA_VENCIMIENTO.HeaderText = "Fecha Vencimiento";
+            this.FECHA_VENCIMIENTO.MinimumWidth = 6;
+            this.FECHA_VENCIMIENTO.Name = "FECHA_VENCIMIENTO";
+            this.FECHA_VENCIMIENTO.ReadOnly = true;
+            this.FECHA_VENCIMIENTO.Width = 180;
+            // 
+            // IMPUESTOS
+            // 
+            this.IMPUESTOS.DataPropertyName = "impuestos";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Format = "N2";
+            this.IMPUESTOS.DefaultCellStyle = dataGridViewCellStyle6;
+            this.IMPUESTOS.HeaderText = "Impuestos";
+            this.IMPUESTOS.MinimumWidth = 6;
+            this.IMPUESTOS.Name = "IMPUESTOS";
+            this.IMPUESTOS.ReadOnly = true;
+            this.IMPUESTOS.Width = 114;
+            // 
+            // ANULADO
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ANULADO.DefaultCellStyle = dataGridViewCellStyle7;
+            this.ANULADO.HeaderText = "Anulado";
+            this.ANULADO.MinimumWidth = 6;
+            this.ANULADO.Name = "ANULADO";
+            this.ANULADO.ReadOnly = true;
+            this.ANULADO.Width = 97;
+            // 
+            // ESTADO_PAGAR
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ESTADO_PAGAR.DefaultCellStyle = dataGridViewCellStyle8;
+            this.ESTADO_PAGAR.HeaderText = "Pagado";
+            this.ESTADO_PAGAR.MinimumWidth = 6;
+            this.ESTADO_PAGAR.Name = "ESTADO_PAGAR";
+            this.ESTADO_PAGAR.ReadOnly = true;
+            this.ESTADO_PAGAR.Width = 93;
             // 
             // frmBuscarFactura
             // 
@@ -559,11 +562,11 @@
             this.Text = "Búsqueda de Facturas";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -572,21 +575,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvFacturas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_PEDIDO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_CLIENTE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_PATERNO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_MATERNO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MONTO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_EMISION;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_VENCIMIENTO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IMPUESTOS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ANULADO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO_PAGAR;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dtpFechaVencimientoFinal;
@@ -611,5 +599,20 @@
         private System.Windows.Forms.TextBox txtRazonSocial;
         private System.Windows.Forms.RadioButton rbPagadoAmbos;
         private System.Windows.Forms.RadioButton rbEmisionAmbos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_PEDIDO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_CLIENTE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_PATERNO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_MATERNO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MONTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_EMISION;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_VENCIMIENTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IMPUESTOS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ANULADO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO_PAGAR;
     }
 }

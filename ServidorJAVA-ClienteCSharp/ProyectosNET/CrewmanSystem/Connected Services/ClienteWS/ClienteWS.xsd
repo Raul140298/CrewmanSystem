@@ -16,6 +16,8 @@
   <xs:element name="mostrarClienteResponse" type="tns:mostrarClienteResponse" />
   <xs:element name="obtenerCliente" type="tns:obtenerCliente" />
   <xs:element name="obtenerClienteResponse" type="tns:obtenerClienteResponse" />
+  <xs:element name="obtenerInfoSeg" type="tns:obtenerInfoSeg" />
+  <xs:element name="obtenerInfoSegResponse" type="tns:obtenerInfoSegResponse" />
   <xs:element name="segmentarClientes" type="tns:segmentarClientes" />
   <xs:element name="segmentarClientesResponse" type="tns:segmentarClientesResponse" />
   <xs:complexType name="insertarCliente">
@@ -379,6 +381,14 @@
   <xs:complexType name="mostrarClienteResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerInfoSeg">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="obtenerInfoSegResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:dateTime" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarCliente">

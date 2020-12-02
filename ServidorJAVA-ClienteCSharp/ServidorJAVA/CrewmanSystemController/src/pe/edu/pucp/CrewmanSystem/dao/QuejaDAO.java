@@ -7,5 +7,5 @@ public interface QuejaDAO
     int insertar(Queja queja);
     int actualizar(Queja queja);
     int eliminar(int idQueja);
-    ArrayList<Queja> listar(int idPedido);
+    ArrayList<Queja> listar(int idVendedor);
 }

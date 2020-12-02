@@ -444,4 +444,37 @@ public class PedidoMySQL implements PedidoDAO{
         }
         return resultado;
     }
+    
+    @Override
+    public int entregarPedido(int idPedido){
+        int resultado = 0;
+        try{
+            LineaPedidoDAO daoLinea = new LineaPedidoMySQL();
+            ArrayList<LineaPedido> lineas = daoLinea.listar(idPedido);
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            con.setAutoCommit(false);
+            String sql;
+            for(LineaPedido lp : lineas){
+                sql ="{ call ENTREGAR_LINEA(?,?,?,?)}";
+                cs = con.prepareCall(sql);
+                cs.setInt("_ID_PRODUCTOXZONA", lp.getProductoXZona().getIdProductoXZona());
+                cs.setInt("_CANTIDAD", lp.getCantidad());
+                cs.setInt("_ID_PROMOCIONXPRODUCTO", lp.getPromocionXProducto().getIdPromocionXProducto());
+                cs.setInt("_CANTIDAD_PROMO", lp.getCantidadPromo());
+                resultado = cs.executeUpdate();
+                if(resultado == 0)return 0;
+            }
+            con.commit();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return resultado;
+    }
 }

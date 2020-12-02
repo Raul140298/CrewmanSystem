@@ -120,7 +120,7 @@ namespace CrewmanSystem
                 MessageBox.Show("Debe escoger un cliente","Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            frmBuscarProductoPorZona formBusquedaProductoPorZona = new frmBuscarProductoPorZona(clienteSeleccionado.zona.idZona);
+            frmBuscarProductoPorZona formBusquedaProductoPorZona = new frmBuscarProductoPorZona(0,clienteSeleccionado.zona.idZona);
             if (formBusquedaProductoPorZona.ShowDialog() == DialogResult.OK)
             {
                 productoXZonaSeleccionado = frmBuscarProductoPorZona.productoXZonaSeleccionado;
