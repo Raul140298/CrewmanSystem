@@ -693,6 +693,10 @@ namespace CrewmanSystem
 		{
 			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmListarCumplimientoDeMetas(), false, false, false, false, false);
 		}
+		private void btnPerfil_Click_1(object sender, EventArgs e)
+		{
+			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmPerfil(), false, false, false, false, false);
+		}
 		#endregion
 
 		#endregion

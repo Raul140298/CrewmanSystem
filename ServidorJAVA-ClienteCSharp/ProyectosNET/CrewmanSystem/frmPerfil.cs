@@ -22,10 +22,13 @@ namespace CrewmanSystem
 
         private void llenarDatos()
         {
-            lblNombre.Text = "Perfil de " + empleado.nombre;
             txtNombre.Text = empleado.nombre;
             txtApellidoPaterno.Text = empleado.apellidoPaterno;
             txtApellidoMaterno.Text = empleado.apellidoMaterno;
+            txtTelefono1.Text = empleado.telefono1.ToString();
+            txtTelefono2.Text = empleado.telefono2.ToString();
+            txtCorreo.Text = empleado.correo;
+            txtUsuario.Text = empleado.usuario;
         }
     }
 }
