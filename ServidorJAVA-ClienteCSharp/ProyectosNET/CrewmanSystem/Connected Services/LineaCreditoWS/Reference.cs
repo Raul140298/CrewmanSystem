@@ -16,20 +16,6 @@ namespace CrewmanSystem.LineaCreditoWS {
     public interface LineaCreditoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/mostrarLineaCreditosRequ" +
-            "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/mostrarLineaCreditosResp" +
-            "onse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosResponse mostrarLineaCreditos(CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/mostrarLineaCreditosRequ" +
-            "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/mostrarLineaCreditosResp" +
-            "onse")]
-        System.Threading.Tasks.Task<CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosResponse> mostrarLineaCreditosAsync(CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/insertarLineaCreditoRequ" +
             "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/insertarLineaCreditoResp" +
             "onse")]
@@ -42,6 +28,20 @@ namespace CrewmanSystem.LineaCreditoWS {
             "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/insertarLineaCreditoResp" +
             "onse")]
         System.Threading.Tasks.Task<CrewmanSystem.LineaCreditoWS.insertarLineaCreditoResponse> insertarLineaCreditoAsync(CrewmanSystem.LineaCreditoWS.insertarLineaCreditoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/mostrarLineaCreditosRequ" +
+            "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/mostrarLineaCreditosResp" +
+            "onse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosResponse mostrarLineaCreditos(CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/mostrarLineaCreditosRequ" +
+            "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/mostrarLineaCreditosResp" +
+            "onse")]
+        System.Threading.Tasks.Task<CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosResponse> mostrarLineaCreditosAsync(CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/LineaCreditoWS/actualizarLineaCreditoRe" +
@@ -232,6 +232,8 @@ namespace CrewmanSystem.LineaCreditoWS {
         
         private lineaCredito lineaCreditoField;
         
+        private double montoSegField;
+        
         private personaContacto personaContactoField;
         
         private string razonSocialField;
@@ -376,6 +378,18 @@ namespace CrewmanSystem.LineaCreditoWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public double montoSeg {
+            get {
+                return this.montoSegField;
+            }
+            set {
+                this.montoSegField = value;
+                this.RaisePropertyChanged("montoSeg");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
         public personaContacto personaContacto {
             get {
                 return this.personaContactoField;
@@ -387,7 +401,7 @@ namespace CrewmanSystem.LineaCreditoWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
         public string razonSocial {
             get {
                 return this.razonSocialField;
@@ -399,7 +413,7 @@ namespace CrewmanSystem.LineaCreditoWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
         public string ruc {
             get {
                 return this.rucField;
@@ -411,7 +425,7 @@ namespace CrewmanSystem.LineaCreditoWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
         public string tipoEmpresa {
             get {
                 return this.tipoEmpresaField;
@@ -423,7 +437,7 @@ namespace CrewmanSystem.LineaCreditoWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
         public zona zona {
             get {
                 return this.zonaField;
@@ -3383,42 +3397,6 @@ namespace CrewmanSystem.LineaCreditoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarLineaCreditos", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class mostrarLineaCreditosRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idLineaCredito;
-        
-        public mostrarLineaCreditosRequest() {
-        }
-        
-        public mostrarLineaCreditosRequest(int idLineaCredito) {
-            this.idLineaCredito = idLineaCredito;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarLineaCreditosResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class mostrarLineaCreditosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.LineaCreditoWS.lineaCredito @return;
-        
-        public mostrarLineaCreditosResponse() {
-        }
-        
-        public mostrarLineaCreditosResponse(CrewmanSystem.LineaCreditoWS.lineaCredito @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarLineaCredito", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertarLineaCreditoRequest {
         
@@ -3448,6 +3426,42 @@ namespace CrewmanSystem.LineaCreditoWS {
         }
         
         public insertarLineaCreditoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarLineaCreditos", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class mostrarLineaCreditosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idLineaCredito;
+        
+        public mostrarLineaCreditosRequest() {
+        }
+        
+        public mostrarLineaCreditosRequest(int idLineaCredito) {
+            this.idLineaCredito = idLineaCredito;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mostrarLineaCreditosResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class mostrarLineaCreditosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.LineaCreditoWS.lineaCredito @return;
+        
+        public mostrarLineaCreditosResponse() {
+        }
+        
+        public mostrarLineaCreditosResponse(CrewmanSystem.LineaCreditoWS.lineaCredito @return) {
             this.@return = @return;
         }
     }
@@ -3516,29 +3530,6 @@ namespace CrewmanSystem.LineaCreditoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosResponse CrewmanSystem.LineaCreditoWS.LineaCreditoWS.mostrarLineaCreditos(CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosRequest request) {
-            return base.Channel.mostrarLineaCreditos(request);
-        }
-        
-        public CrewmanSystem.LineaCreditoWS.lineaCredito mostrarLineaCreditos(int idLineaCredito) {
-            CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosRequest inValue = new CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosRequest();
-            inValue.idLineaCredito = idLineaCredito;
-            CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosResponse retVal = ((CrewmanSystem.LineaCreditoWS.LineaCreditoWS)(this)).mostrarLineaCreditos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosResponse> CrewmanSystem.LineaCreditoWS.LineaCreditoWS.mostrarLineaCreditosAsync(CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosRequest request) {
-            return base.Channel.mostrarLineaCreditosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosResponse> mostrarLineaCreditosAsync(int idLineaCredito) {
-            CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosRequest inValue = new CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosRequest();
-            inValue.idLineaCredito = idLineaCredito;
-            return ((CrewmanSystem.LineaCreditoWS.LineaCreditoWS)(this)).mostrarLineaCreditosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CrewmanSystem.LineaCreditoWS.insertarLineaCreditoResponse CrewmanSystem.LineaCreditoWS.LineaCreditoWS.insertarLineaCredito(CrewmanSystem.LineaCreditoWS.insertarLineaCreditoRequest request) {
             return base.Channel.insertarLineaCredito(request);
         }
@@ -3559,6 +3550,29 @@ namespace CrewmanSystem.LineaCreditoWS {
             CrewmanSystem.LineaCreditoWS.insertarLineaCreditoRequest inValue = new CrewmanSystem.LineaCreditoWS.insertarLineaCreditoRequest();
             inValue.lineaCredito = lineaCredito;
             return ((CrewmanSystem.LineaCreditoWS.LineaCreditoWS)(this)).insertarLineaCreditoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosResponse CrewmanSystem.LineaCreditoWS.LineaCreditoWS.mostrarLineaCreditos(CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosRequest request) {
+            return base.Channel.mostrarLineaCreditos(request);
+        }
+        
+        public CrewmanSystem.LineaCreditoWS.lineaCredito mostrarLineaCreditos(int idLineaCredito) {
+            CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosRequest inValue = new CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosRequest();
+            inValue.idLineaCredito = idLineaCredito;
+            CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosResponse retVal = ((CrewmanSystem.LineaCreditoWS.LineaCreditoWS)(this)).mostrarLineaCreditos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosResponse> CrewmanSystem.LineaCreditoWS.LineaCreditoWS.mostrarLineaCreditosAsync(CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosRequest request) {
+            return base.Channel.mostrarLineaCreditosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosResponse> mostrarLineaCreditosAsync(int idLineaCredito) {
+            CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosRequest inValue = new CrewmanSystem.LineaCreditoWS.mostrarLineaCreditosRequest();
+            inValue.idLineaCredito = idLineaCredito;
+            return ((CrewmanSystem.LineaCreditoWS.LineaCreditoWS)(this)).mostrarLineaCreditosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
