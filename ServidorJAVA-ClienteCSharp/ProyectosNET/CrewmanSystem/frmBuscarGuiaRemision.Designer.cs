@@ -35,16 +35,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtGrupo = new System.Windows.Forms.TextBox();
+            this.dtpRangoFinTraslado = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtpRangoFinRegistro = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dtpRangoFin = new System.Windows.Forms.DateTimePicker();
-            this.dtpRangoIni = new System.Windows.Forms.DateTimePicker();
-            this.txtRuc = new System.Windows.Forms.TextBox();
+            this.dtpRangoIniTraslado = new System.Windows.Forms.DateTimePicker();
+            this.dtpRangoIniRegistro = new System.Windows.Forms.DateTimePicker();
+            this.txtMotivoTraslado = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvGuiasDeRemision = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,70 +61,76 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnSeleccionar);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtGrupo);
+            this.panel1.Controls.Add(this.dtpRangoFinTraslado);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.dtpRangoFinRegistro);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.lblID);
             this.panel1.Controls.Add(this.btnBuscar);
-            this.panel1.Controls.Add(this.dtpRangoFin);
-            this.panel1.Controls.Add(this.dtpRangoIni);
-            this.panel1.Controls.Add(this.txtRuc);
+            this.panel1.Controls.Add(this.dtpRangoIniTraslado);
+            this.panel1.Controls.Add(this.dtpRangoIniRegistro);
+            this.panel1.Controls.Add(this.txtMotivoTraslado);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(540, 194);
             this.panel1.TabIndex = 110;
             // 
-            // btnSeleccionar
+            // dtpRangoFinTraslado
             // 
-            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnSeleccionar.FlatAppearance.BorderSize = 0;
-            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.Location = new System.Drawing.Point(394, 66);
-            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(120, 24);
-            this.btnSeleccionar.TabIndex = 119;
-            this.btnSeleccionar.Text = "SELECCIONAR";
-            this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.dtpRangoFinTraslado.Location = new System.Drawing.Point(180, 148);
+            this.dtpRangoFinTraslado.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpRangoFinTraslado.Name = "dtpRangoFinTraslado";
+            this.dtpRangoFinTraslado.Size = new System.Drawing.Size(198, 20);
+            this.dtpRangoFinTraslado.TabIndex = 123;
             // 
-            // label1
+            // label5
             // 
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Location = new System.Drawing.Point(26, 70);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 18);
-            this.label1.TabIndex = 118;
-            this.label1.Text = "Cliente :";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Location = new System.Drawing.Point(36, 148);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(134, 18);
+            this.label5.TabIndex = 122;
+            this.label5.Text = "Fecha Traslado Final :";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtGrupo
+            // label2
             // 
-            this.txtGrupo.Location = new System.Drawing.Point(170, 70);
-            this.txtGrupo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtGrupo.Name = "txtGrupo";
-            this.txtGrupo.Size = new System.Drawing.Size(198, 20);
-            this.txtGrupo.TabIndex = 111;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Location = new System.Drawing.Point(36, 82);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(134, 18);
+            this.label2.TabIndex = 121;
+            this.label2.Text = "Fecha Registro Final :";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // dtpRangoFinRegistro
+            // 
+            this.dtpRangoFinRegistro.Location = new System.Drawing.Point(180, 82);
+            this.dtpRangoFinRegistro.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpRangoFinRegistro.Name = "dtpRangoFinRegistro";
+            this.dtpRangoFinRegistro.Size = new System.Drawing.Size(198, 20);
+            this.dtpRangoFinRegistro.TabIndex = 120;
             // 
             // label4
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Location = new System.Drawing.Point(26, 139);
+            this.label4.Location = new System.Drawing.Point(36, 113);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(134, 18);
             this.label4.TabIndex = 117;
-            this.label4.Text = "Fecha Traslado :";
+            this.label4.Text = "Fecha Traslado Inicial :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(26, 39);
+            this.label3.Location = new System.Drawing.Point(36, 15);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(134, 18);
@@ -134,12 +141,12 @@
             // lblID
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Location = new System.Drawing.Point(26, 108);
+            this.lblID.Location = new System.Drawing.Point(36, 49);
             this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(134, 18);
             this.lblID.TabIndex = 115;
-            this.lblID.Text = "Fecha Registro :";
+            this.lblID.Text = "Fecha Registro Inicial:";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnBuscar
@@ -148,37 +155,38 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(394, 36);
+            this.btnBuscar.Location = new System.Drawing.Point(404, 12);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(120, 24);
             this.btnBuscar.TabIndex = 114;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // dtpRangoFin
+            // dtpRangoIniTraslado
             // 
-            this.dtpRangoFin.Location = new System.Drawing.Point(170, 138);
-            this.dtpRangoFin.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpRangoFin.Name = "dtpRangoFin";
-            this.dtpRangoFin.Size = new System.Drawing.Size(198, 20);
-            this.dtpRangoFin.TabIndex = 113;
+            this.dtpRangoIniTraslado.Location = new System.Drawing.Point(180, 113);
+            this.dtpRangoIniTraslado.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpRangoIniTraslado.Name = "dtpRangoIniTraslado";
+            this.dtpRangoIniTraslado.Size = new System.Drawing.Size(198, 20);
+            this.dtpRangoIniTraslado.TabIndex = 113;
             // 
-            // dtpRangoIni
+            // dtpRangoIniRegistro
             // 
-            this.dtpRangoIni.Location = new System.Drawing.Point(170, 108);
-            this.dtpRangoIni.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpRangoIni.Name = "dtpRangoIni";
-            this.dtpRangoIni.Size = new System.Drawing.Size(198, 20);
-            this.dtpRangoIni.TabIndex = 112;
+            this.dtpRangoIniRegistro.Location = new System.Drawing.Point(180, 49);
+            this.dtpRangoIniRegistro.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpRangoIniRegistro.Name = "dtpRangoIniRegistro";
+            this.dtpRangoIniRegistro.Size = new System.Drawing.Size(198, 20);
+            this.dtpRangoIniRegistro.TabIndex = 112;
             // 
-            // txtRuc
+            // txtMotivoTraslado
             // 
-            this.txtRuc.Location = new System.Drawing.Point(170, 39);
-            this.txtRuc.Margin = new System.Windows.Forms.Padding(2);
-            this.txtRuc.Name = "txtRuc";
-            this.txtRuc.Size = new System.Drawing.Size(198, 20);
-            this.txtRuc.TabIndex = 110;
+            this.txtMotivoTraslado.Location = new System.Drawing.Point(180, 15);
+            this.txtMotivoTraslado.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMotivoTraslado.Name = "txtMotivoTraslado";
+            this.txtMotivoTraslado.Size = new System.Drawing.Size(198, 20);
+            this.txtMotivoTraslado.TabIndex = 110;
             // 
             // panel2
             // 
@@ -242,6 +250,7 @@
             this.dgvGuiasDeRemision.Size = new System.Drawing.Size(540, 203);
             this.dgvGuiasDeRemision.TabIndex = 4;
             this.dgvGuiasDeRemision.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGuiasDeRemision_CellContentClick);
+            this.dgvGuiasDeRemision.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvGuiasDeRemision_CellFormatting);
             // 
             // ID
             // 
@@ -322,16 +331,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnSeleccionar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtGrupo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DateTimePicker dtpRangoFin;
-        private System.Windows.Forms.DateTimePicker dtpRangoIni;
-        private System.Windows.Forms.TextBox txtRuc;
+        private System.Windows.Forms.DateTimePicker dtpRangoIniTraslado;
+        private System.Windows.Forms.DateTimePicker dtpRangoIniRegistro;
+        private System.Windows.Forms.TextBox txtMotivoTraslado;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvGuiasDeRemision;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
@@ -340,5 +346,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MOTIVO_TRASLADO;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_TRASLADO;
+        private System.Windows.Forms.DateTimePicker dtpRangoFinTraslado;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtpRangoFinRegistro;
     }
 }
