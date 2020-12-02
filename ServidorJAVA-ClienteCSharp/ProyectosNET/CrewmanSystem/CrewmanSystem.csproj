@@ -478,6 +478,12 @@
     <Compile Include="frmNuevoProductoXZona.Designer.cs">
       <DependentUpon>frmNuevoProductoXZona.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPerfil.Designer.cs">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSegmentarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -674,6 +680,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNuevoProductoXZona.resx">
       <DependentUpon>frmNuevoProductoXZona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPerfil.resx">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSegmentarClientes.resx">
       <DependentUpon>frmSegmentarClientes.cs</DependentUpon>
