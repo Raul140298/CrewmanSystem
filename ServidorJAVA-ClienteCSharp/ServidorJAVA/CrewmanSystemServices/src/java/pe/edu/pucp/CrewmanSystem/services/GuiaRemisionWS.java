@@ -6,6 +6,7 @@
 package pe.edu.pucp.CrewmanSystem.services;
 
 import java.util.ArrayList;
+import java.util.Date;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -55,10 +56,16 @@ public class GuiaRemisionWS {
     }
     
     @WebMethod(operationName = "listarGuiaRemisionsXVendedor")
-    public ArrayList<GuiaRemision> listarGuiaRemisionsXVendedor(@WebParam(name = "idVendedor") int idVendedor) {
+    public ArrayList<GuiaRemision> listarGuiaRemisionsXVendedor(@WebParam(name = "idVendedor") int idVendedor,
+    @WebParam(name = "motivoTraslado") String motivoTraslado,
+    @WebParam(name = "fechaIniRegistro") Date fechaIniRegistro,
+    @WebParam(name = "fechaFinRegistro") Date fechaFinRegistro, 
+    @WebParam(name = "fechaIniTraslado")Date fechaIniTraslado, 
+    @WebParam(name = "fechaFinTraslado")Date fechaFinTraslado) {
         ArrayList<GuiaRemision> misGuiaRemisions = new ArrayList<>();
         try{
-            misGuiaRemisions = daoGuiaRemision.listarPorVendedor(idVendedor);
+            misGuiaRemisions = daoGuiaRemision.listarPorVendedor(idVendedor,motivoTraslado,
+                    fechaIniRegistro,fechaFinRegistro,fechaIniTraslado,fechaFinTraslado);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
