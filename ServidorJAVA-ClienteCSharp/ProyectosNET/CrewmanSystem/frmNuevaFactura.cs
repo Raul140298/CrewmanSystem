@@ -12,14 +12,16 @@ namespace CrewmanSystem
 {
 	public partial class frmNuevaFactura : Form
 	{
-        PedidoWS.pedido pedidoSeleccionado = new PedidoWS.pedido();
-        FacturaWS.FacturaWSClient daoFactura = new FacturaWS.FacturaWSClient();
+        PedidoWS.pedido pedidoSeleccionado;
+        FacturaWS.FacturaWSClient daoFactura;
         string[] estado = { "PAGADO", "POR PAGAR" };
 
         public frmNuevaFactura()
         {
             InitializeComponent();
             cboEstadoPagar.DataSource = estado;
+            pedidoSeleccionado = new PedidoWS.pedido();
+            daoFactura = new FacturaWS.FacturaWSClient();
             if (frmVentanaPrincipal.nBtn == 1)
             {
                 frmGestionarFacturas.facturaSeleccionada = (FacturaWS.factura)frmGestionarFacturas.dgv.CurrentRow.DataBoundItem;
