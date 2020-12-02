@@ -129,6 +129,7 @@
             // txtImpuestos
             // 
             this.txtImpuestos.BackColor = System.Drawing.SystemColors.Window;
+            this.txtImpuestos.Enabled = false;
             this.txtImpuestos.Location = new System.Drawing.Point(244, 372);
             this.txtImpuestos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtImpuestos.Name = "txtImpuestos";

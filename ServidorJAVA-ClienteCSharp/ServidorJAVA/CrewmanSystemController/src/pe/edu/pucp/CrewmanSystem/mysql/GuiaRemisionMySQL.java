@@ -106,14 +106,20 @@ public class GuiaRemisionMySQL implements GuiaRemisionDAO{
     }
 
     @Override
-    public ArrayList<GuiaRemision> listarPorVendedor(int idVendedor) {
+    public ArrayList<GuiaRemision> listarPorVendedor(int idVendedor,String motivoTraslado,
+    Date fechaIniRegistro,Date fechaFinRegistro, Date fechaIniTraslado, Date fechaFinTraslado) {
         ArrayList<GuiaRemision> guiaRemisions = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            String sql = "{ call LISTAR_GUIADEREMISION_X_VENDEDOR (?)}";
+            String sql = "{ call LISTAR_GUIADEREMISION_X_VENDEDOR (?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_VENDEDOR",idVendedor);
+            cs.setString("_MOTIVO_TRASLADO", motivoTraslado);
+            cs.setDate("_FECHA_INI_REGISTRO", new java.sql.Date(fechaIniRegistro.getTime()));
+            cs.setDate("_FECHA_FIN_REGISTRO", new java.sql.Date(fechaFinRegistro.getTime()));
+            cs.setDate("_FECHA_INI_TRASLADO", new java.sql.Date(fechaIniTraslado.getTime()));
+            cs.setDate("_FECHA_FIN_TRASLADO", new java.sql.Date(fechaFinTraslado.getTime()));
             cs.executeUpdate();
             rs = cs.getResultSet();
             while(rs.next()){
