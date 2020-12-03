@@ -103,7 +103,7 @@
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Enabled = false;
+            this.txtContraseña.BackColor = System.Drawing.SystemColors.Window;
             this.txtContraseña.Location = new System.Drawing.Point(214, 53);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContraseña.Name = "txtContraseña";
