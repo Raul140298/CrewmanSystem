@@ -526,6 +526,13 @@ namespace CrewmanSystem
 					if (boton == 2) frmGestionarPedidos.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarPedido(0));
 					break;
+				case "frmGestionarAprobados":
+					if (boton == 2) frmGestionarAprobados.eliminar();
+					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarAprobado());
+					break;
+				case "frmBuscarAprobado":
+					if (boton == 2) frmGestionarAprobados.eliminar();
+					break;
 				case "frmBuscarPedido":
 					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoPedido());
 					if (boton == 2) frmBuscarPedido.eliminar();
@@ -671,7 +678,7 @@ namespace CrewmanSystem
 
 		private void btnAprobados_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarAprobados(), false, false, false, false, true);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarAprobados(), false, false, true, true, true);
 		}
 
 		private void btnPedReporte_Click(object sender, EventArgs e)

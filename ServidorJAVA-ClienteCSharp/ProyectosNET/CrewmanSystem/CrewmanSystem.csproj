@@ -172,6 +172,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="CrewPantalla.cs" />
+    <Compile Include="frmBuscarAprobado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarAprobado.Designer.cs">
+      <DependentUpon>frmBuscarAprobado.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscarCartera.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -546,6 +552,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmBuscarAprobado.resx">
+      <DependentUpon>frmBuscarAprobado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarCartera.resx">
       <DependentUpon>frmBuscarCartera.cs</DependentUpon>
     </EmbeddedResource>
