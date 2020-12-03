@@ -10,7 +10,7 @@ public interface PedidoDAO
     int eliminar(int idPedido);
     ArrayList<Pedido> listar(int idVendedor,String razonSocial,String grupo, Date fechaIni, Date fechaFin, String tipoPedido, String estadoPedido);
     ArrayList<Pedido> generarReporte(String idPedido);
-    
+    ArrayList<Pedido> listarPedidosSinGuia(int idVendedor,String razonSocial,String grupo, Date fechaIni, Date fechaFin, String tipoPedido, String estadoPedido);
     int insertarTotal(Pedido pedido);
     int aprobarBorrador(Pedido pedido);
     int obtenerPedido(Pedido pedido);
@@ -20,4 +20,5 @@ public interface PedidoDAO
     void mostrar(Pedido pedido);
     int eliminarPedidoEnProceso(int idPedido);
     int entregarPedido(int idPedido);
+    
 }

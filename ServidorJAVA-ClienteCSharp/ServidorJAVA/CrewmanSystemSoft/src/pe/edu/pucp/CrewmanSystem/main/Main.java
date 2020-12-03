@@ -714,7 +714,6 @@ public class Main{
 //        } catch(Exception e){
 //            System.out.println("Error en el insertar Guia de remision");
 //        }
-
         ArrayList<GuiaRemision> misGuias = daoGuiaRemision.listar(misPedidos.get(0).getIdPedido());    
         System.out.println("LISTADO DE GUIAS DE REMISION DEL PEDIDO "+misPedidos.get(0).getIdPedido());
         System.out.println("==================================================================================");
