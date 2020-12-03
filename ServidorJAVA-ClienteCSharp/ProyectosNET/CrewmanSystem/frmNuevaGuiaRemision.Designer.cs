@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtIdFactura = new System.Windows.Forms.TextBox();
+            this.txtIdGuiaRemision = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtIdPedido = new System.Windows.Forms.TextBox();
             this.btnBuscarPedido = new System.Windows.Forms.Button();
@@ -39,17 +39,18 @@
             this.lblID = new System.Windows.Forms.Label();
             this.dtpRangoIniTraslado = new System.Windows.Forms.DateTimePicker();
             this.dtpRangoIniRegistro = new System.Windows.Forms.DateTimePicker();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txtIdFactura
+            // txtIdGuiaRemision
             // 
-            this.txtIdFactura.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtIdFactura.Enabled = false;
-            this.txtIdFactura.Location = new System.Drawing.Point(188, 27);
-            this.txtIdFactura.Margin = new System.Windows.Forms.Padding(2);
-            this.txtIdFactura.Name = "txtIdFactura";
-            this.txtIdFactura.Size = new System.Drawing.Size(74, 20);
-            this.txtIdFactura.TabIndex = 112;
+            this.txtIdGuiaRemision.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtIdGuiaRemision.Enabled = false;
+            this.txtIdGuiaRemision.Location = new System.Drawing.Point(188, 27);
+            this.txtIdGuiaRemision.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIdGuiaRemision.Name = "txtIdGuiaRemision";
+            this.txtIdGuiaRemision.Size = new System.Drawing.Size(74, 20);
+            this.txtIdGuiaRemision.TabIndex = 112;
             // 
             // label9
             // 
@@ -156,18 +157,34 @@
             this.dtpRangoIniRegistro.Size = new System.Drawing.Size(198, 20);
             this.dtpRangoIniRegistro.TabIndex = 118;
             // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(172, 274);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(116, 24);
+            this.btnGuardar.TabIndex = 122;
+            this.btnGuardar.Text = "GUARDAR";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // frmNuevaGuiaRemision
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(471, 345);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.dtpRangoIniTraslado);
             this.Controls.Add(this.dtpRangoIniRegistro);
             this.Controls.Add(this.txtMotivoTraslado);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtIdFactura);
+            this.Controls.Add(this.txtIdGuiaRemision);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtIdPedido);
             this.Controls.Add(this.btnBuscarPedido);
@@ -181,7 +198,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtIdFactura;
+        private System.Windows.Forms.TextBox txtIdGuiaRemision;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtIdPedido;
         private System.Windows.Forms.Button btnBuscarPedido;
@@ -192,5 +209,6 @@
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.DateTimePicker dtpRangoIniTraslado;
         private System.Windows.Forms.DateTimePicker dtpRangoIniRegistro;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

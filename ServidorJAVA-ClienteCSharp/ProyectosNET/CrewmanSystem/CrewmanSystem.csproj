@@ -982,6 +982,9 @@
     <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.eliminarPedidoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.entregarPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.generarReporteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -995,6 +998,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.listarPedidosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.listarPedidosSinGuiaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.mostrarPedidoResponse.datasource">
