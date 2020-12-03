@@ -83,14 +83,17 @@ namespace CrewmanSystem
 
         private void dgvPedidos_SelectionChanged(object sender, EventArgs e)
         {
-			if (((PedidoWS.pedido)dgvPedidos.CurrentRow.DataBoundItem).estadoPedido == PedidoWS.estadoPedido.FINALIZADO)
-				{
-					frmVentanaPrincipal.act.Enabled = false;
-					frmVentanaPrincipal.elim.Enabled = false;
-					return;
-				}
+			if (((PedidoWS.pedido)dgvPedidos.CurrentRow.DataBoundItem).estadoPedido == PedidoWS.estadoPedido.EN_PROCESO && dgvPedidos.SelectedCells.Count != 1)
+			{
 				frmVentanaPrincipal.act.Enabled = true;
 				frmVentanaPrincipal.elim.Enabled = true;
+				return;
+			}
+            else
+            {
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
 			}
 		}
+	}
 }

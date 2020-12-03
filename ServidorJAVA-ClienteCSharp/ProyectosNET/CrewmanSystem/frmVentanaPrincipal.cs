@@ -762,7 +762,7 @@ namespace CrewmanSystem
 
 		private void btnEmpQuejas_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarQuejas(),true, true, false, true, true);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarQuejas(),true, true, false, false, true);
 		}
 		#endregion
 
