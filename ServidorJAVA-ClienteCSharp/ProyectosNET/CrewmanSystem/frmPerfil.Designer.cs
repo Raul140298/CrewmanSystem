@@ -103,7 +103,7 @@
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Enabled = false;
+            this.txtContraseña.BackColor = System.Drawing.SystemColors.Window;
             this.txtContraseña.Location = new System.Drawing.Point(214, 53);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContraseña.Name = "txtContraseña";
@@ -167,6 +167,7 @@
             // 
             // txtCorreo
             // 
+            this.txtCorreo.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtCorreo.Enabled = false;
             this.txtCorreo.Location = new System.Drawing.Point(214, 124);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -176,6 +177,7 @@
             // 
             // txtTelefono2
             // 
+            this.txtTelefono2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtTelefono2.Enabled = false;
             this.txtTelefono2.Location = new System.Drawing.Point(214, 82);
             this.txtTelefono2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -185,6 +187,7 @@
             // 
             // txtTelefono1
             // 
+            this.txtTelefono1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtTelefono1.Enabled = false;
             this.txtTelefono1.Location = new System.Drawing.Point(214, 40);
             this.txtTelefono1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -249,6 +252,7 @@
             // 
             // txtApellidoMaterno
             // 
+            this.txtApellidoMaterno.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtApellidoMaterno.Enabled = false;
             this.txtApellidoMaterno.Location = new System.Drawing.Point(214, 136);
             this.txtApellidoMaterno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -258,6 +262,7 @@
             // 
             // txtApellidoPaterno
             // 
+            this.txtApellidoPaterno.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtApellidoPaterno.Enabled = false;
             this.txtApellidoPaterno.Location = new System.Drawing.Point(214, 94);
             this.txtApellidoPaterno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -267,6 +272,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtNombre.Enabled = false;
             this.txtNombre.Location = new System.Drawing.Point(214, 48);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
