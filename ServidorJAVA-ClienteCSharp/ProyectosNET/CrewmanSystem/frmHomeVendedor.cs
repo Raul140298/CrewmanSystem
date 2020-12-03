@@ -12,9 +12,11 @@ namespace CrewmanSystem
 {
 	public partial class frmHomeVendedor : Form
 	{
+		EmpleadoWS.EmpleadoWSClient daoEmpleado;
 		public frmHomeVendedor()
 		{
 			InitializeComponent();
+			daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
 			string saludo = "";
 			if (Program.empleado.genero == 'M') saludo = "Bienvenido, ";
 			else saludo = "Bienvenida, ";
@@ -23,12 +25,21 @@ namespace CrewmanSystem
 				Program.empleado.apellidoMaterno;
 
 			lblZona.Text = Program.empleado.zona.nombre;
+			int[] numClientes = daoEmpleado.obtenerNumClientes(Program.empleado.idEmpleado);
+			int[] numVisitados = daoEmpleado.obtenerNumVisitas(Program.empleado.idEmpleado);
 
-			this.circularProgressBar1.ProgressColor = Program.colorR;
-			this.circularProgressBar1.Minimum = 0;
-			this.circularProgressBar1.Maximum = Convert.ToInt32(Program.empleado.objetivoVentas);
-			this.circularProgressBar1.Value   = Convert.ToInt32(Program.empleado.sumVentas);
-			this.circularProgressBar1.Text = this.circularProgressBar1.Value.ToString() + "%";
+
+			this.cpbSumaVentas.ProgressColor = Program.colorR;
+			this.cpbSumaVentas.Minimum = 0;
+			this.cpbSumaVentas.Maximum = Convert.ToInt32(Program.empleado.objetivoVentas);
+			this.cpbSumaVentas.Value   = Convert.ToInt32(Program.empleado.sumVentas);
+			this.cpbSumaVentas.Text = Convert.ToDouble(this.cpbSumaVentas.Value/this.cpbSumaVentas.Maximum).ToString() + "%";
+
+			this.cpbVisitados.ProgressColor = Program.colorR;
+			this.cpbVisitados.Minimum = 0;
+			this.cpbVisitados.Maximum = 0;
+			this.cpbVisitados.Value = 0;
+			this.cpbVisitados.Text = 0 + "%";
 		}
 	}
 }
