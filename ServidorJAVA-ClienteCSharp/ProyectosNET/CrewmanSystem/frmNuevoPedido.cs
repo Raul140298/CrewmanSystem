@@ -12,19 +12,20 @@ namespace CrewmanSystem
 {
 	public partial class frmNuevoPedido : Form
 	{
-        public static ClienteWS.cliente clienteSeleccionado = null;
+        public static ClienteWS.cliente clienteSeleccionado;
         public static ZonaWS.ZonaWSClient daoZona;
         public static ClienteWS.ClienteWSClient daoCliente;
         public static PedidoWS.PedidoWSClient daoPedido;
         public static LineaPedidoWS.LineaPedidoWSClient daoLinea;
-        public static ProductoXZonaWS.productoXZona productoXZonaSeleccionado = null;
+        public static ProductoXZonaWS.productoXZona productoXZonaSeleccionado;
         public static BindingList<LineaPedidoWS.lineaPedido> lineas;
-        public static double montoTotal = 0;
+        public static double montoTotal;
         string[] estadoBorrador = { "ESPERANDO", "EN_PROCESO" };
         string[] estadoPedido = { "EN_PROCESO", "FINALIZADO" };
         public static PedidoWS.pedido pedidoSeleccionado;
         public frmNuevoPedido()
         {
+            montoTotal = 0;
             daoZona = new ZonaWS.ZonaWSClient();
             daoPedido = new PedidoWS.PedidoWSClient();
             InitializeComponent();
@@ -60,6 +61,10 @@ namespace CrewmanSystem
                 clienteSeleccionado.idCliente = pedidoSeleccionado.cliente.idCliente;
                 pedidoSeleccionado.cliente = new PedidoWS.cliente();
                 pedidoSeleccionado.cliente.idCliente = clienteSeleccionado.idCliente;
+                pedidoSeleccionado.cliente.ruc = clienteSeleccionado.ruc;
+                pedidoSeleccionado.cliente.razonSocial = clienteSeleccionado.razonSocial;
+                pedidoSeleccionado.cliente.grupo = clienteSeleccionado.grupo;
+                pedidoSeleccionado.cliente.tipoEmpresa = clienteSeleccionado.tipoEmpresa;
                 ZonaWS.zona zona = daoZona.mostrarZonaCliente(clienteSeleccionado.idCliente);
                 clienteSeleccionado.zona = new ClienteWS.zona();
                 clienteSeleccionado.zona.idZona = zona.idZona;
