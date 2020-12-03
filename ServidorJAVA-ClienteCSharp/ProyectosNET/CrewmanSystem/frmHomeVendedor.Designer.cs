@@ -29,22 +29,26 @@
 		private void InitializeComponent()
 		{
             this.pnlChildForm = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cpbVisitados = new CircularProgressBar.CircularProgressBar();
+            this.label1 = new System.Windows.Forms.Label();
             this.cpbSumaVentas = new CircularProgressBar.CircularProgressBar();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblZona = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cpbVisitados = new CircularProgressBar.CircularProgressBar();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pnlChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlChildForm
             // 
-            this.pnlChildForm.Controls.Add(this.label2);
+            this.pnlChildForm.Controls.Add(this.panel2);
+            this.pnlChildForm.Controls.Add(this.panel1);
             this.pnlChildForm.Controls.Add(this.cpbVisitados);
-            this.pnlChildForm.Controls.Add(this.label1);
             this.pnlChildForm.Controls.Add(this.cpbSumaVentas);
             this.pnlChildForm.Controls.Add(this.lblNombre);
             this.pnlChildForm.Controls.Add(this.lblZona);
@@ -52,8 +56,60 @@
             this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlChildForm.Location = new System.Drawing.Point(0, 0);
             this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(800, 689);
+            this.pnlChildForm.Size = new System.Drawing.Size(847, 689);
             this.pnlChildForm.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(281, 24);
+            this.label2.TabIndex = 61;
+            this.label2.Text = "Progreso de visitas a los clientes";
+            // 
+            // cpbVisitados
+            // 
+            this.cpbVisitados.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.cpbVisitados.AnimationSpeed = 500;
+            this.cpbVisitados.BackColor = System.Drawing.Color.Transparent;
+            this.cpbVisitados.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold);
+            this.cpbVisitados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.cpbVisitados.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cpbVisitados.InnerMargin = 2;
+            this.cpbVisitados.InnerWidth = -1;
+            this.cpbVisitados.Location = new System.Drawing.Point(515, 165);
+            this.cpbVisitados.MarqueeAnimationSpeed = 2000;
+            this.cpbVisitados.Name = "cpbVisitados";
+            this.cpbVisitados.OuterColor = System.Drawing.Color.Gray;
+            this.cpbVisitados.OuterMargin = -25;
+            this.cpbVisitados.OuterWidth = 26;
+            this.cpbVisitados.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(39)))), ((int)(((byte)(176)))));
+            this.cpbVisitados.ProgressWidth = 25;
+            this.cpbVisitados.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.cpbVisitados.Size = new System.Drawing.Size(300, 300);
+            this.cpbVisitados.StartAngle = 270;
+            this.cpbVisitados.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+            this.cpbVisitados.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.cpbVisitados.SubscriptText = "";
+            this.cpbVisitados.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+            this.cpbVisitados.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.cpbVisitados.SuperscriptText = "";
+            this.cpbVisitados.TabIndex = 60;
+            this.cpbVisitados.Text = "84%";
+            this.cpbVisitados.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.cpbVisitados.Value = 68;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(251, 24);
+            this.label1.TabIndex = 59;
+            this.label1.Text = "Progreso de suma de ventas";
             // 
             // cpbSumaVentas
             // 
@@ -65,7 +121,7 @@
             this.cpbSumaVentas.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.cpbSumaVentas.InnerMargin = 2;
             this.cpbSumaVentas.InnerWidth = -1;
-            this.cpbSumaVentas.Location = new System.Drawing.Point(25, 153);
+            this.cpbSumaVentas.Location = new System.Drawing.Point(66, 165);
             this.cpbSumaVentas.MarqueeAnimationSpeed = 2000;
             this.cpbSumaVentas.Name = "cpbSumaVentas";
             this.cpbSumaVentas.OuterColor = System.Drawing.Color.Gray;
@@ -95,7 +151,7 @@
             this.lblNombre.Location = new System.Drawing.Point(0, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.lblNombre.Size = new System.Drawing.Size(800, 105);
+            this.lblNombre.Size = new System.Drawing.Size(847, 105);
             this.lblNombre.TabIndex = 48;
             this.lblNombre.Text = "NOMBRE";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -118,76 +174,47 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::CrewmanSystem.Properties.Resources.MARCADEAGUA;
-            this.pictureBox1.Location = new System.Drawing.Point(659, 549);
+            this.pictureBox1.Location = new System.Drawing.Point(706, 549);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(117, 124);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // panel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 105);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(251, 24);
-            this.label1.TabIndex = 59;
-            this.label1.Text = "Progreso de suma de ventas";
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(57, 100);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(322, 47);
+            this.panel1.TabIndex = 62;
             // 
-            // cpbVisitados
+            // panel2
             // 
-            this.cpbVisitados.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
-            this.cpbVisitados.AnimationSpeed = 500;
-            this.cpbVisitados.BackColor = System.Drawing.Color.Transparent;
-            this.cpbVisitados.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold);
-            this.cpbVisitados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.cpbVisitados.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.cpbVisitados.InnerMargin = 2;
-            this.cpbVisitados.InnerWidth = -1;
-            this.cpbVisitados.Location = new System.Drawing.Point(429, 153);
-            this.cpbVisitados.MarqueeAnimationSpeed = 2000;
-            this.cpbVisitados.Name = "cpbVisitados";
-            this.cpbVisitados.OuterColor = System.Drawing.Color.Gray;
-            this.cpbVisitados.OuterMargin = -25;
-            this.cpbVisitados.OuterWidth = 26;
-            this.cpbVisitados.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(39)))), ((int)(((byte)(176)))));
-            this.cpbVisitados.ProgressWidth = 25;
-            this.cpbVisitados.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.cpbVisitados.Size = new System.Drawing.Size(300, 300);
-            this.cpbVisitados.StartAngle = 270;
-            this.cpbVisitados.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-            this.cpbVisitados.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
-            this.cpbVisitados.SubscriptText = "";
-            this.cpbVisitados.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-            this.cpbVisitados.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-            this.cpbVisitados.SuperscriptText = "";
-            this.cpbVisitados.TabIndex = 60;
-            this.cpbVisitados.Text = "84%";
-            this.cpbVisitados.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
-            this.cpbVisitados.Value = 68;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(425, 105);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(281, 24);
-            this.label2.TabIndex = 61;
-            this.label2.Text = "Progreso de visitas a los clientes";
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(506, 100);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(317, 47);
+            this.panel2.TabIndex = 63;
             // 
             // frmHomeVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 689);
+            this.ClientSize = new System.Drawing.Size(847, 689);
             this.Controls.Add(this.pnlChildForm);
             this.Name = "frmHomeVendedor";
             this.Text = "frmHomeVendedor";
             this.pnlChildForm.ResumeLayout(false);
-            this.pnlChildForm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
 		}
@@ -202,5 +229,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private CircularProgressBar.CircularProgressBar cpbVisitados;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

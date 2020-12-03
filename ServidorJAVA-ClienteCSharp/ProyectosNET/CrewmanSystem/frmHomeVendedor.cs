@@ -12,11 +12,14 @@ namespace CrewmanSystem
 {
 	public partial class frmHomeVendedor : Form
 	{
-		EmpleadoWS.EmpleadoWSClient daoEmpleado;
+		private EmpleadoWS.EmpleadoWSClient daoEmpleado;
+		private VisitaWS.VisitaWSClient daoVisita;
+		
 		public frmHomeVendedor()
 		{
 			InitializeComponent();
 			daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
+			daoVisita = new VisitaWS.VisitaWSClient();
 			string saludo = "";
 			if (Program.empleado.genero == 'M') saludo = "Bienvenido, ";
 			else saludo = "Bienvenida, ";
@@ -25,9 +28,6 @@ namespace CrewmanSystem
 				Program.empleado.apellidoMaterno;
 
 			lblZona.Text = Program.empleado.zona.nombre;
-			int[] numClientes = daoEmpleado.obtenerNumClientes(Program.empleado.idEmpleado);
-			int[] numVisitados = daoEmpleado.obtenerNumVisitas(Program.empleado.idEmpleado);
-
 
 			this.cpbSumaVentas.ProgressColor = Program.colorR;
 			this.cpbSumaVentas.Minimum = 0;
@@ -36,11 +36,28 @@ namespace CrewmanSystem
 			double porcentajeVentas = (double)this.cpbSumaVentas.Value*100 / this.cpbSumaVentas.Maximum;
 			this.cpbSumaVentas.Text = Convert.ToDouble(porcentajeVentas).ToString("N2") + "%";
 
+			VisitaWS.visita[] visitas = daoVisita.listarVisitas(Program.empleado.cartera.idCartera);
+			int numClientes = 0;
+			int numVisitas = 0;
+			if(visitas == null)
+            {
+				numVisitas = 1;
+				numClientes = 0;
+            }
+            else
+            {
+				numVisitas = visitas.Length;
+				foreach(VisitaWS.visita v in visitas)
+                {
+					if (v.estado) numClientes++;
+                }
+            }
 			this.cpbVisitados.ProgressColor = Program.colorR;
 			this.cpbVisitados.Minimum = 0;
-			this.cpbVisitados.Maximum = 0;
-			this.cpbVisitados.Value = 0;
-			this.cpbVisitados.Text = 0 + "%";
+			this.cpbVisitados.Maximum = numVisitas;
+			this.cpbVisitados.Value = numClientes;
+			double porcentajeVisitas = (double)this.cpbVisitados.Value * 100 / this.cpbVisitados.Maximum;
+			this.cpbVisitados.Text = porcentajeVisitas + "%";
 		}
 	}
 }
