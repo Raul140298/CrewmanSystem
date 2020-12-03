@@ -40,10 +40,6 @@
             this.btnVisitas = new FontAwesome.Sharp.IconButton();
             this.btnPromociones = new FontAwesome.Sharp.IconButton();
             this.pnlEmpGestionPedidos = new System.Windows.Forms.Panel();
-            this.btnEmpQuejas = new FontAwesome.Sharp.IconButton();
-            this.btnEmpGestionGuiasRemision = new FontAwesome.Sharp.IconButton();
-            this.btnEmpGestionFacturas = new FontAwesome.Sharp.IconButton();
-            this.btnEmpPedidos = new FontAwesome.Sharp.IconButton();
             this.btnEmpGestionPedidos = new FontAwesome.Sharp.IconButton();
             this.pnlEmpGestionProductos = new System.Windows.Forms.Panel();
             this.btnEmpProductoXZona = new FontAwesome.Sharp.IconButton();
@@ -56,6 +52,11 @@
             this.btnGestionClientes = new FontAwesome.Sharp.IconButton();
             this.btnCumplimientoDeMetas = new FontAwesome.Sharp.IconButton();
             this.pnlGestionPedidos = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btnFactura = new FontAwesome.Sharp.IconButton();
+            this.btnPedReporte = new FontAwesome.Sharp.IconButton();
+            this.btnAprobados = new FontAwesome.Sharp.IconButton();
             this.btnPedido = new FontAwesome.Sharp.IconButton();
             this.btnReportePedidos = new FontAwesome.Sharp.IconButton();
             this.pnlGestionEmpleados = new System.Windows.Forms.Panel();
@@ -89,11 +90,11 @@
             this.btnMinimizar = new FontAwesome.Sharp.IconButton();
             this.btnMaximizar = new FontAwesome.Sharp.IconButton();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.btnAprobados = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.btnFactura = new FontAwesome.Sharp.IconButton();
-            this.btnPedReporte = new FontAwesome.Sharp.IconButton();
+            this.btnEmpQuejas = new FontAwesome.Sharp.IconButton();
+            this.btnEmpGestionGuiasRemision = new FontAwesome.Sharp.IconButton();
+            this.btnEmpGestionFacturas = new FontAwesome.Sharp.IconButton();
+            this.btnEmpPedidos = new FontAwesome.Sharp.IconButton();
+            this.btnEmpBorradores = new FontAwesome.Sharp.IconButton();
             this.pnlContenedor.SuspendLayout();
             this.pnlChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -190,7 +191,7 @@
             this.btnEmpPerfil.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEmpPerfil.IconSize = 20;
             this.btnEmpPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpPerfil.Location = new System.Drawing.Point(0, 539);
+            this.btnEmpPerfil.Location = new System.Drawing.Point(0, 591);
             this.btnEmpPerfil.Name = "btnEmpPerfil";
             this.btnEmpPerfil.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnEmpPerfil.Rotation = 0D;
@@ -216,7 +217,7 @@
             this.btnSegmentacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSegmentacion.IconSize = 20;
             this.btnSegmentacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSegmentacion.Location = new System.Drawing.Point(0, 494);
+            this.btnSegmentacion.Location = new System.Drawing.Point(0, 546);
             this.btnSegmentacion.Name = "btnSegmentacion";
             this.btnSegmentacion.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnSegmentacion.Rotation = 0D;
@@ -242,7 +243,7 @@
             this.btnVisitas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVisitas.IconSize = 20;
             this.btnVisitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVisitas.Location = new System.Drawing.Point(0, 449);
+            this.btnVisitas.Location = new System.Drawing.Point(0, 501);
             this.btnVisitas.Name = "btnVisitas";
             this.btnVisitas.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnVisitas.Rotation = 0D;
@@ -268,7 +269,7 @@
             this.btnPromociones.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPromociones.IconSize = 20;
             this.btnPromociones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPromociones.Location = new System.Drawing.Point(0, 404);
+            this.btnPromociones.Location = new System.Drawing.Point(0, 456);
             this.btnPromociones.Name = "btnPromociones";
             this.btnPromociones.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnPromociones.Rotation = 0D;
@@ -287,103 +288,12 @@
             this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpGestionGuiasRemision);
             this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpGestionFacturas);
             this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpPedidos);
+            this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpBorradores);
             this.pnlEmpGestionPedidos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEmpGestionPedidos.Location = new System.Drawing.Point(0, 209);
             this.pnlEmpGestionPedidos.Name = "pnlEmpGestionPedidos";
-            this.pnlEmpGestionPedidos.Size = new System.Drawing.Size(264, 195);
+            this.pnlEmpGestionPedidos.Size = new System.Drawing.Size(264, 247);
             this.pnlEmpGestionPedidos.TabIndex = 3;
-            // 
-            // btnEmpQuejas
-            // 
-            this.btnEmpQuejas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-            this.btnEmpQuejas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEmpQuejas.FlatAppearance.BorderSize = 0;
-            this.btnEmpQuejas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpQuejas.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnEmpQuejas.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnEmpQuejas.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnEmpQuejas.IconColor = System.Drawing.Color.Black;
-            this.btnEmpQuejas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEmpQuejas.IconSize = 16;
-            this.btnEmpQuejas.Location = new System.Drawing.Point(0, 135);
-            this.btnEmpQuejas.Name = "btnEmpQuejas";
-            this.btnEmpQuejas.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-            this.btnEmpQuejas.Rotation = 0D;
-            this.btnEmpQuejas.Size = new System.Drawing.Size(264, 45);
-            this.btnEmpQuejas.TabIndex = 4;
-            this.btnEmpQuejas.Text = "Quejas";
-            this.btnEmpQuejas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpQuejas.UseVisualStyleBackColor = false;
-            this.btnEmpQuejas.Click += new System.EventHandler(this.btnEmpQuejas_Click);
-            // 
-            // btnEmpGestionGuiasRemision
-            // 
-            this.btnEmpGestionGuiasRemision.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-            this.btnEmpGestionGuiasRemision.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEmpGestionGuiasRemision.FlatAppearance.BorderSize = 0;
-            this.btnEmpGestionGuiasRemision.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpGestionGuiasRemision.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnEmpGestionGuiasRemision.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnEmpGestionGuiasRemision.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnEmpGestionGuiasRemision.IconColor = System.Drawing.Color.Black;
-            this.btnEmpGestionGuiasRemision.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEmpGestionGuiasRemision.IconSize = 16;
-            this.btnEmpGestionGuiasRemision.Location = new System.Drawing.Point(0, 90);
-            this.btnEmpGestionGuiasRemision.Name = "btnEmpGestionGuiasRemision";
-            this.btnEmpGestionGuiasRemision.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-            this.btnEmpGestionGuiasRemision.Rotation = 0D;
-            this.btnEmpGestionGuiasRemision.Size = new System.Drawing.Size(264, 45);
-            this.btnEmpGestionGuiasRemision.TabIndex = 3;
-            this.btnEmpGestionGuiasRemision.Text = "Guías de Remisión";
-            this.btnEmpGestionGuiasRemision.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpGestionGuiasRemision.UseVisualStyleBackColor = false;
-            this.btnEmpGestionGuiasRemision.Click += new System.EventHandler(this.btnEmpGestionGuiasRemision_Click);
-            // 
-            // btnEmpGestionFacturas
-            // 
-            this.btnEmpGestionFacturas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-            this.btnEmpGestionFacturas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEmpGestionFacturas.FlatAppearance.BorderSize = 0;
-            this.btnEmpGestionFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpGestionFacturas.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnEmpGestionFacturas.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnEmpGestionFacturas.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnEmpGestionFacturas.IconColor = System.Drawing.Color.Black;
-            this.btnEmpGestionFacturas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEmpGestionFacturas.IconSize = 16;
-            this.btnEmpGestionFacturas.Location = new System.Drawing.Point(0, 45);
-            this.btnEmpGestionFacturas.Name = "btnEmpGestionFacturas";
-            this.btnEmpGestionFacturas.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-            this.btnEmpGestionFacturas.Rotation = 0D;
-            this.btnEmpGestionFacturas.Size = new System.Drawing.Size(264, 45);
-            this.btnEmpGestionFacturas.TabIndex = 2;
-            this.btnEmpGestionFacturas.Text = "Facturas";
-            this.btnEmpGestionFacturas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpGestionFacturas.UseVisualStyleBackColor = false;
-            this.btnEmpGestionFacturas.Click += new System.EventHandler(this.btnEmpGestionFacturas_Click);
-            // 
-            // btnEmpPedidos
-            // 
-            this.btnEmpPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-            this.btnEmpPedidos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEmpPedidos.FlatAppearance.BorderSize = 0;
-            this.btnEmpPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpPedidos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnEmpPedidos.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnEmpPedidos.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnEmpPedidos.IconColor = System.Drawing.Color.Black;
-            this.btnEmpPedidos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEmpPedidos.IconSize = 16;
-            this.btnEmpPedidos.Location = new System.Drawing.Point(0, 0);
-            this.btnEmpPedidos.Name = "btnEmpPedidos";
-            this.btnEmpPedidos.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-            this.btnEmpPedidos.Rotation = 0D;
-            this.btnEmpPedidos.Size = new System.Drawing.Size(264, 45);
-            this.btnEmpPedidos.TabIndex = 1;
-            this.btnEmpPedidos.Text = "Pedidos";
-            this.btnEmpPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpPedidos.UseVisualStyleBackColor = false;
-            this.btnEmpPedidos.Click += new System.EventHandler(this.btnEmpPedidos_Click);
             // 
             // btnEmpGestionPedidos
             // 
@@ -638,6 +548,120 @@
             this.pnlGestionPedidos.Size = new System.Drawing.Size(264, 293);
             this.pnlGestionPedidos.TabIndex = 26;
             this.pnlGestionPedidos.Visible = false;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 16;
+            this.iconButton1.Location = new System.Drawing.Point(0, 233);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+            this.iconButton1.Rotation = 0D;
+            this.iconButton1.Size = new System.Drawing.Size(264, 45);
+            this.iconButton1.TabIndex = 13;
+            this.iconButton1.Text = "Quejas";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.btnEmpQuejas_Click);
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton2.IconColor = System.Drawing.Color.Black;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 16;
+            this.iconButton2.Location = new System.Drawing.Point(0, 188);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+            this.iconButton2.Rotation = 0D;
+            this.iconButton2.Size = new System.Drawing.Size(264, 45);
+            this.iconButton2.TabIndex = 12;
+            this.iconButton2.Text = "Guías de Remisión";
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.UseVisualStyleBackColor = false;
+            // 
+            // btnFactura
+            // 
+            this.btnFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+            this.btnFactura.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFactura.FlatAppearance.BorderSize = 0;
+            this.btnFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFactura.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnFactura.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnFactura.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnFactura.IconColor = System.Drawing.Color.Black;
+            this.btnFactura.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFactura.IconSize = 16;
+            this.btnFactura.Location = new System.Drawing.Point(0, 143);
+            this.btnFactura.Name = "btnFactura";
+            this.btnFactura.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+            this.btnFactura.Rotation = 0D;
+            this.btnFactura.Size = new System.Drawing.Size(264, 45);
+            this.btnFactura.TabIndex = 11;
+            this.btnFactura.Text = "Facturas";
+            this.btnFactura.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFactura.UseVisualStyleBackColor = false;
+            this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
+            // 
+            // btnPedReporte
+            // 
+            this.btnPedReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+            this.btnPedReporte.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPedReporte.FlatAppearance.BorderSize = 0;
+            this.btnPedReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPedReporte.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnPedReporte.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPedReporte.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnPedReporte.IconColor = System.Drawing.Color.Black;
+            this.btnPedReporte.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPedReporte.IconSize = 16;
+            this.btnPedReporte.Location = new System.Drawing.Point(0, 98);
+            this.btnPedReporte.Name = "btnPedReporte";
+            this.btnPedReporte.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+            this.btnPedReporte.Rotation = 0D;
+            this.btnPedReporte.Size = new System.Drawing.Size(264, 45);
+            this.btnPedReporte.TabIndex = 10;
+            this.btnPedReporte.Text = "Reporte";
+            this.btnPedReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPedReporte.UseVisualStyleBackColor = false;
+            this.btnPedReporte.Click += new System.EventHandler(this.btnPedReporte_Click);
+            // 
+            // btnAprobados
+            // 
+            this.btnAprobados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+            this.btnAprobados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAprobados.FlatAppearance.BorderSize = 0;
+            this.btnAprobados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAprobados.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnAprobados.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAprobados.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAprobados.IconColor = System.Drawing.Color.Black;
+            this.btnAprobados.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAprobados.IconSize = 16;
+            this.btnAprobados.Location = new System.Drawing.Point(0, 49);
+            this.btnAprobados.Name = "btnAprobados";
+            this.btnAprobados.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+            this.btnAprobados.Rotation = 0D;
+            this.btnAprobados.Size = new System.Drawing.Size(264, 49);
+            this.btnAprobados.TabIndex = 9;
+            this.btnAprobados.Text = "Pedidos";
+            this.btnAprobados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAprobados.UseVisualStyleBackColor = false;
+            this.btnAprobados.Click += new System.EventHandler(this.btnAprobados_Click);
             // 
             // btnPedido
             // 
@@ -1334,119 +1358,120 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnAprobados
+            // btnEmpQuejas
             // 
-            this.btnAprobados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-            this.btnAprobados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAprobados.FlatAppearance.BorderSize = 0;
-            this.btnAprobados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAprobados.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnAprobados.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAprobados.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnAprobados.IconColor = System.Drawing.Color.Black;
-            this.btnAprobados.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAprobados.IconSize = 16;
-            this.btnAprobados.Location = new System.Drawing.Point(0, 49);
-            this.btnAprobados.Name = "btnAprobados";
-            this.btnAprobados.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-            this.btnAprobados.Rotation = 0D;
-            this.btnAprobados.Size = new System.Drawing.Size(264, 49);
-            this.btnAprobados.TabIndex = 9;
-            this.btnAprobados.Text = "Pedidos";
-            this.btnAprobados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAprobados.UseVisualStyleBackColor = false;
-            this.btnAprobados.Click += new System.EventHandler(this.btnAprobados_Click);
+            this.btnEmpQuejas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+            this.btnEmpQuejas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmpQuejas.FlatAppearance.BorderSize = 0;
+            this.btnEmpQuejas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpQuejas.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnEmpQuejas.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnEmpQuejas.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnEmpQuejas.IconColor = System.Drawing.Color.Black;
+            this.btnEmpQuejas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEmpQuejas.IconSize = 16;
+            this.btnEmpQuejas.Location = new System.Drawing.Point(0, 184);
+            this.btnEmpQuejas.Name = "btnEmpQuejas";
+            this.btnEmpQuejas.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+            this.btnEmpQuejas.Rotation = 0D;
+            this.btnEmpQuejas.Size = new System.Drawing.Size(264, 45);
+            this.btnEmpQuejas.TabIndex = 34;
+            this.btnEmpQuejas.Text = "Quejas";
+            this.btnEmpQuejas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmpQuejas.UseVisualStyleBackColor = false;
+            this.btnEmpQuejas.Click += new System.EventHandler(this.btnEmpQuejas_Click);
             // 
-            // iconButton1
+            // btnEmpGestionGuiasRemision
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 16;
-            this.iconButton1.Location = new System.Drawing.Point(0, 233);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-            this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(264, 45);
-            this.iconButton1.TabIndex = 13;
-            this.iconButton1.Text = "Quejas";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.btnEmpQuejas_Click);
+            this.btnEmpGestionGuiasRemision.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+            this.btnEmpGestionGuiasRemision.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmpGestionGuiasRemision.FlatAppearance.BorderSize = 0;
+            this.btnEmpGestionGuiasRemision.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpGestionGuiasRemision.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnEmpGestionGuiasRemision.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnEmpGestionGuiasRemision.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnEmpGestionGuiasRemision.IconColor = System.Drawing.Color.Black;
+            this.btnEmpGestionGuiasRemision.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEmpGestionGuiasRemision.IconSize = 16;
+            this.btnEmpGestionGuiasRemision.Location = new System.Drawing.Point(0, 139);
+            this.btnEmpGestionGuiasRemision.Name = "btnEmpGestionGuiasRemision";
+            this.btnEmpGestionGuiasRemision.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+            this.btnEmpGestionGuiasRemision.Rotation = 0D;
+            this.btnEmpGestionGuiasRemision.Size = new System.Drawing.Size(264, 45);
+            this.btnEmpGestionGuiasRemision.TabIndex = 33;
+            this.btnEmpGestionGuiasRemision.Text = "Guías de Remisión";
+            this.btnEmpGestionGuiasRemision.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmpGestionGuiasRemision.UseVisualStyleBackColor = false;
+            this.btnEmpGestionGuiasRemision.Click += new System.EventHandler(this.btnEmpGestionGuiasRemision_Click);
             // 
-            // iconButton2
+            // btnEmpGestionFacturas
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 16;
-            this.iconButton2.Location = new System.Drawing.Point(0, 188);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-            this.iconButton2.Rotation = 0D;
-            this.iconButton2.Size = new System.Drawing.Size(264, 45);
-            this.iconButton2.TabIndex = 12;
-            this.iconButton2.Text = "Guías de Remisión";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.btnEmpGestionFacturas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+            this.btnEmpGestionFacturas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmpGestionFacturas.FlatAppearance.BorderSize = 0;
+            this.btnEmpGestionFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpGestionFacturas.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnEmpGestionFacturas.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnEmpGestionFacturas.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnEmpGestionFacturas.IconColor = System.Drawing.Color.Black;
+            this.btnEmpGestionFacturas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEmpGestionFacturas.IconSize = 16;
+            this.btnEmpGestionFacturas.Location = new System.Drawing.Point(0, 94);
+            this.btnEmpGestionFacturas.Name = "btnEmpGestionFacturas";
+            this.btnEmpGestionFacturas.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+            this.btnEmpGestionFacturas.Rotation = 0D;
+            this.btnEmpGestionFacturas.Size = new System.Drawing.Size(264, 45);
+            this.btnEmpGestionFacturas.TabIndex = 32;
+            this.btnEmpGestionFacturas.Text = "Facturas";
+            this.btnEmpGestionFacturas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmpGestionFacturas.UseVisualStyleBackColor = false;
+            this.btnEmpGestionFacturas.Click += new System.EventHandler(this.btnEmpGestionFacturas_Click);
             // 
-            // btnFactura
+            // btnEmpPedidos
             // 
-            this.btnFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-            this.btnFactura.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFactura.FlatAppearance.BorderSize = 0;
-            this.btnFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFactura.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnFactura.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnFactura.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnFactura.IconColor = System.Drawing.Color.Black;
-            this.btnFactura.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFactura.IconSize = 16;
-            this.btnFactura.Location = new System.Drawing.Point(0, 143);
-            this.btnFactura.Name = "btnFactura";
-            this.btnFactura.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-            this.btnFactura.Rotation = 0D;
-            this.btnFactura.Size = new System.Drawing.Size(264, 45);
-            this.btnFactura.TabIndex = 11;
-            this.btnFactura.Text = "Facturas";
-            this.btnFactura.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFactura.UseVisualStyleBackColor = false;
-            this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
+            this.btnEmpPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+            this.btnEmpPedidos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmpPedidos.FlatAppearance.BorderSize = 0;
+            this.btnEmpPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpPedidos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnEmpPedidos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnEmpPedidos.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnEmpPedidos.IconColor = System.Drawing.Color.Black;
+            this.btnEmpPedidos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEmpPedidos.IconSize = 16;
+            this.btnEmpPedidos.Location = new System.Drawing.Point(0, 49);
+            this.btnEmpPedidos.Name = "btnEmpPedidos";
+            this.btnEmpPedidos.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+            this.btnEmpPedidos.Rotation = 0D;
+            this.btnEmpPedidos.Size = new System.Drawing.Size(264, 45);
+            this.btnEmpPedidos.TabIndex = 31;
+            this.btnEmpPedidos.Text = "Pedidos";
+            this.btnEmpPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmpPedidos.UseVisualStyleBackColor = false;
+            this.btnEmpPedidos.Click += new System.EventHandler(this.btnEmpPedidos_Click);
             // 
-            // btnPedReporte
+            // btnEmpBorradores
             // 
-            this.btnPedReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-            this.btnPedReporte.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPedReporte.FlatAppearance.BorderSize = 0;
-            this.btnPedReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedReporte.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnPedReporte.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPedReporte.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnPedReporte.IconColor = System.Drawing.Color.Black;
-            this.btnPedReporte.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPedReporte.IconSize = 16;
-            this.btnPedReporte.Location = new System.Drawing.Point(0, 98);
-            this.btnPedReporte.Name = "btnPedReporte";
-            this.btnPedReporte.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-            this.btnPedReporte.Rotation = 0D;
-            this.btnPedReporte.Size = new System.Drawing.Size(264, 45);
-            this.btnPedReporte.TabIndex = 10;
-            this.btnPedReporte.Text = "Reporte";
-            this.btnPedReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPedReporte.UseVisualStyleBackColor = false;
-            this.btnPedReporte.Click += new System.EventHandler(this.btnPedReporte_Click);
+            this.btnEmpBorradores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+            this.btnEmpBorradores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmpBorradores.FlatAppearance.BorderSize = 0;
+            this.btnEmpBorradores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpBorradores.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnEmpBorradores.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnEmpBorradores.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnEmpBorradores.IconColor = System.Drawing.Color.Black;
+            this.btnEmpBorradores.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEmpBorradores.IconSize = 16;
+            this.btnEmpBorradores.Location = new System.Drawing.Point(0, 0);
+            this.btnEmpBorradores.Name = "btnEmpBorradores";
+            this.btnEmpBorradores.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+            this.btnEmpBorradores.Rotation = 0D;
+            this.btnEmpBorradores.Size = new System.Drawing.Size(264, 49);
+            this.btnEmpBorradores.TabIndex = 30;
+            this.btnEmpBorradores.Text = "Borradores";
+            this.btnEmpBorradores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmpBorradores.UseVisualStyleBackColor = false;
+            this.btnEmpBorradores.Click += new System.EventHandler(this.btnEmpBorradores_Click);
             // 
             // frmVentanaPrincipal
             // 
@@ -1497,10 +1522,6 @@
 		private FontAwesome.Sharp.IconButton btnVisitas;
 		private FontAwesome.Sharp.IconButton btnPromociones;
 		private System.Windows.Forms.Panel pnlEmpGestionPedidos;
-		private FontAwesome.Sharp.IconButton btnEmpQuejas;
-		private FontAwesome.Sharp.IconButton btnEmpGestionGuiasRemision;
-		private FontAwesome.Sharp.IconButton btnEmpGestionFacturas;
-		private FontAwesome.Sharp.IconButton btnEmpPedidos;
 		private FontAwesome.Sharp.IconButton btnEmpGestionPedidos;
 		private System.Windows.Forms.Panel pnlEmpGestionProductos;
 		private FontAwesome.Sharp.IconButton btnEmpProductoXZona;
@@ -1552,5 +1573,10 @@
         private FontAwesome.Sharp.IconButton btnFactura;
         private FontAwesome.Sharp.IconButton btnPedReporte;
         private FontAwesome.Sharp.IconButton btnAprobados;
+        private FontAwesome.Sharp.IconButton btnEmpQuejas;
+        private FontAwesome.Sharp.IconButton btnEmpGestionGuiasRemision;
+        private FontAwesome.Sharp.IconButton btnEmpGestionFacturas;
+        private FontAwesome.Sharp.IconButton btnEmpPedidos;
+        private FontAwesome.Sharp.IconButton btnEmpBorradores;
     }
 }

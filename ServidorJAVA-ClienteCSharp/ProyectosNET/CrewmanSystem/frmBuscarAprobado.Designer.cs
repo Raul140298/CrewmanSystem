@@ -55,7 +55,6 @@
             this.TIPO_PEDIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -287,7 +286,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnSeleccionar);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.cboEstado);
             this.panel1.Controls.Add(this.label2);
@@ -306,19 +304,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 272);
             this.panel1.TabIndex = 50;
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnSeleccionar.FlatAppearance.BorderSize = 0;
-            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.Location = new System.Drawing.Point(504, 62);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(160, 30);
-            this.btnSeleccionar.TabIndex = 95;
-            this.btnSeleccionar.Text = "SELECCIONAR";
-            this.btnSeleccionar.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -476,7 +461,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_PEDIDO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cboEstado;
         private System.Windows.Forms.Label label2;
