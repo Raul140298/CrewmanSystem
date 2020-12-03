@@ -24,7 +24,7 @@ namespace CrewmanSystem
 
 		public frmBuscarPedido(int idTipo)
 		{
-			//idTipo 0 = BUSCAR PEDIDO NORMAL
+			//idTipo 0 = BUSCAR PEDIDO NORMAL SOLO LISTA BORRADORES
 			//idTipo 1 = BUSCAR PEDIDO A PAGAR (SE USA EN NUEVA FACTURA)
 			//idTipo 2 = BUSCAR PEDIDO A PAGAR (SE USA EN NUEVA GUIA)
 			this.idTipo = idTipo;
@@ -40,8 +40,9 @@ namespace CrewmanSystem
 			cboEstado.DataSource = estados;
 			if (idTipo == 0)
             {
-				cboTipo.SelectedIndex = 0;
+				cboTipo.SelectedIndex = 1;
 				cboEstado.SelectedIndex = 0;
+				cboTipo.Enabled = Enabled = false;
 				btnSeleccionar.Visible = false;
             }
             else if(idTipo == 1)
