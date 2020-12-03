@@ -16,16 +16,6 @@ namespace CrewmanSystem.QuejaWS {
     public interface QuejaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/actualizarQuejaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/actualizarQuejaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.QuejaWS.actualizarQuejaResponse actualizarQueja(CrewmanSystem.QuejaWS.actualizarQuejaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/actualizarQuejaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/actualizarQuejaResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.QuejaWS.actualizarQuejaResponse> actualizarQuejaAsync(CrewmanSystem.QuejaWS.actualizarQuejaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/listarQuejasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/listarQuejasResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -36,16 +26,6 @@ namespace CrewmanSystem.QuejaWS {
         System.Threading.Tasks.Task<CrewmanSystem.QuejaWS.listarQuejasResponse> listarQuejasAsync(CrewmanSystem.QuejaWS.listarQuejasRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/insertarQuejaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/insertarQuejaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.QuejaWS.insertarQuejaResponse insertarQueja(CrewmanSystem.QuejaWS.insertarQuejaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/insertarQuejaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/insertarQuejaResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.QuejaWS.insertarQuejaResponse> insertarQuejaAsync(CrewmanSystem.QuejaWS.insertarQuejaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/eliminarQuejaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/eliminarQuejaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -54,6 +34,26 @@ namespace CrewmanSystem.QuejaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/eliminarQuejaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/eliminarQuejaResponse")]
         System.Threading.Tasks.Task<CrewmanSystem.QuejaWS.eliminarQuejaResponse> eliminarQuejaAsync(CrewmanSystem.QuejaWS.eliminarQuejaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/actualizarQuejaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/actualizarQuejaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.QuejaWS.actualizarQuejaResponse actualizarQueja(CrewmanSystem.QuejaWS.actualizarQuejaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/actualizarQuejaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/actualizarQuejaResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.QuejaWS.actualizarQuejaResponse> actualizarQuejaAsync(CrewmanSystem.QuejaWS.actualizarQuejaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/insertarQuejaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/insertarQuejaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.QuejaWS.insertarQuejaResponse insertarQueja(CrewmanSystem.QuejaWS.insertarQuejaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/insertarQuejaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/QuejaWS/insertarQuejaResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.QuejaWS.insertarQuejaResponse> insertarQuejaAsync(CrewmanSystem.QuejaWS.insertarQuejaRequest request);
     }
     
     /// <remarks/>
@@ -472,6 +472,8 @@ namespace CrewmanSystem.QuejaWS {
         
         private lineaCredito lineaCreditoField;
         
+        private double montoSegField;
+        
         private personaContacto personaContactoField;
         
         private string razonSocialField;
@@ -616,6 +618,18 @@ namespace CrewmanSystem.QuejaWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public double montoSeg {
+            get {
+                return this.montoSegField;
+            }
+            set {
+                this.montoSegField = value;
+                this.RaisePropertyChanged("montoSeg");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
         public personaContacto personaContacto {
             get {
                 return this.personaContactoField;
@@ -627,7 +641,7 @@ namespace CrewmanSystem.QuejaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
         public string razonSocial {
             get {
                 return this.razonSocialField;
@@ -639,7 +653,7 @@ namespace CrewmanSystem.QuejaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
         public string ruc {
             get {
                 return this.rucField;
@@ -651,7 +665,7 @@ namespace CrewmanSystem.QuejaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
         public string tipoEmpresa {
             get {
                 return this.tipoEmpresaField;
@@ -663,7 +677,7 @@ namespace CrewmanSystem.QuejaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
         public zona zona {
             get {
                 return this.zonaField;
@@ -3381,54 +3395,18 @@ namespace CrewmanSystem.QuejaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarQueja", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarQuejaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.QuejaWS.queja queja;
-        
-        public actualizarQuejaRequest() {
-        }
-        
-        public actualizarQuejaRequest(CrewmanSystem.QuejaWS.queja queja) {
-            this.queja = queja;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarQuejaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarQuejaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarQuejaResponse() {
-        }
-        
-        public actualizarQuejaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarQuejas", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
     public partial class listarQuejasRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPedido;
+        public int idVendedor;
         
         public listarQuejasRequest() {
         }
         
-        public listarQuejasRequest(int idPedido) {
-            this.idPedido = idPedido;
+        public listarQuejasRequest(int idVendedor) {
+            this.idVendedor = idVendedor;
         }
     }
     
@@ -3446,42 +3424,6 @@ namespace CrewmanSystem.QuejaWS {
         }
         
         public listarQuejasResponse(CrewmanSystem.QuejaWS.queja[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarQueja", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarQuejaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.QuejaWS.queja queja;
-        
-        public insertarQuejaRequest() {
-        }
-        
-        public insertarQuejaRequest(CrewmanSystem.QuejaWS.queja queja) {
-            this.queja = queja;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarQuejaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarQuejaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarQuejaResponse() {
-        }
-        
-        public insertarQuejaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -3522,6 +3464,78 @@ namespace CrewmanSystem.QuejaWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarQueja", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarQuejaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.QuejaWS.queja queja;
+        
+        public actualizarQuejaRequest() {
+        }
+        
+        public actualizarQuejaRequest(CrewmanSystem.QuejaWS.queja queja) {
+            this.queja = queja;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarQuejaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarQuejaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarQuejaResponse() {
+        }
+        
+        public actualizarQuejaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarQueja", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarQuejaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.QuejaWS.queja queja;
+        
+        public insertarQuejaRequest() {
+        }
+        
+        public insertarQuejaRequest(CrewmanSystem.QuejaWS.queja queja) {
+            this.queja = queja;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarQuejaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarQuejaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarQuejaResponse() {
+        }
+        
+        public insertarQuejaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface QuejaWSChannel : CrewmanSystem.QuejaWS.QuejaWS, System.ServiceModel.IClientChannel {
     }
@@ -3550,36 +3564,13 @@ namespace CrewmanSystem.QuejaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.QuejaWS.actualizarQuejaResponse CrewmanSystem.QuejaWS.QuejaWS.actualizarQueja(CrewmanSystem.QuejaWS.actualizarQuejaRequest request) {
-            return base.Channel.actualizarQueja(request);
-        }
-        
-        public int actualizarQueja(CrewmanSystem.QuejaWS.queja queja) {
-            CrewmanSystem.QuejaWS.actualizarQuejaRequest inValue = new CrewmanSystem.QuejaWS.actualizarQuejaRequest();
-            inValue.queja = queja;
-            CrewmanSystem.QuejaWS.actualizarQuejaResponse retVal = ((CrewmanSystem.QuejaWS.QuejaWS)(this)).actualizarQueja(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.QuejaWS.actualizarQuejaResponse> CrewmanSystem.QuejaWS.QuejaWS.actualizarQuejaAsync(CrewmanSystem.QuejaWS.actualizarQuejaRequest request) {
-            return base.Channel.actualizarQuejaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.QuejaWS.actualizarQuejaResponse> actualizarQuejaAsync(CrewmanSystem.QuejaWS.queja queja) {
-            CrewmanSystem.QuejaWS.actualizarQuejaRequest inValue = new CrewmanSystem.QuejaWS.actualizarQuejaRequest();
-            inValue.queja = queja;
-            return ((CrewmanSystem.QuejaWS.QuejaWS)(this)).actualizarQuejaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CrewmanSystem.QuejaWS.listarQuejasResponse CrewmanSystem.QuejaWS.QuejaWS.listarQuejas(CrewmanSystem.QuejaWS.listarQuejasRequest request) {
             return base.Channel.listarQuejas(request);
         }
         
-        public CrewmanSystem.QuejaWS.queja[] listarQuejas(int idPedido) {
+        public CrewmanSystem.QuejaWS.queja[] listarQuejas(int idVendedor) {
             CrewmanSystem.QuejaWS.listarQuejasRequest inValue = new CrewmanSystem.QuejaWS.listarQuejasRequest();
-            inValue.idPedido = idPedido;
+            inValue.idVendedor = idVendedor;
             CrewmanSystem.QuejaWS.listarQuejasResponse retVal = ((CrewmanSystem.QuejaWS.QuejaWS)(this)).listarQuejas(inValue);
             return retVal.@return;
         }
@@ -3589,33 +3580,10 @@ namespace CrewmanSystem.QuejaWS {
             return base.Channel.listarQuejasAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CrewmanSystem.QuejaWS.listarQuejasResponse> listarQuejasAsync(int idPedido) {
+        public System.Threading.Tasks.Task<CrewmanSystem.QuejaWS.listarQuejasResponse> listarQuejasAsync(int idVendedor) {
             CrewmanSystem.QuejaWS.listarQuejasRequest inValue = new CrewmanSystem.QuejaWS.listarQuejasRequest();
-            inValue.idPedido = idPedido;
+            inValue.idVendedor = idVendedor;
             return ((CrewmanSystem.QuejaWS.QuejaWS)(this)).listarQuejasAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.QuejaWS.insertarQuejaResponse CrewmanSystem.QuejaWS.QuejaWS.insertarQueja(CrewmanSystem.QuejaWS.insertarQuejaRequest request) {
-            return base.Channel.insertarQueja(request);
-        }
-        
-        public int insertarQueja(CrewmanSystem.QuejaWS.queja queja) {
-            CrewmanSystem.QuejaWS.insertarQuejaRequest inValue = new CrewmanSystem.QuejaWS.insertarQuejaRequest();
-            inValue.queja = queja;
-            CrewmanSystem.QuejaWS.insertarQuejaResponse retVal = ((CrewmanSystem.QuejaWS.QuejaWS)(this)).insertarQueja(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.QuejaWS.insertarQuejaResponse> CrewmanSystem.QuejaWS.QuejaWS.insertarQuejaAsync(CrewmanSystem.QuejaWS.insertarQuejaRequest request) {
-            return base.Channel.insertarQuejaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.QuejaWS.insertarQuejaResponse> insertarQuejaAsync(CrewmanSystem.QuejaWS.queja queja) {
-            CrewmanSystem.QuejaWS.insertarQuejaRequest inValue = new CrewmanSystem.QuejaWS.insertarQuejaRequest();
-            inValue.queja = queja;
-            return ((CrewmanSystem.QuejaWS.QuejaWS)(this)).insertarQuejaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3639,6 +3607,52 @@ namespace CrewmanSystem.QuejaWS {
             CrewmanSystem.QuejaWS.eliminarQuejaRequest inValue = new CrewmanSystem.QuejaWS.eliminarQuejaRequest();
             inValue.idQueja = idQueja;
             return ((CrewmanSystem.QuejaWS.QuejaWS)(this)).eliminarQuejaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.QuejaWS.actualizarQuejaResponse CrewmanSystem.QuejaWS.QuejaWS.actualizarQueja(CrewmanSystem.QuejaWS.actualizarQuejaRequest request) {
+            return base.Channel.actualizarQueja(request);
+        }
+        
+        public int actualizarQueja(CrewmanSystem.QuejaWS.queja queja) {
+            CrewmanSystem.QuejaWS.actualizarQuejaRequest inValue = new CrewmanSystem.QuejaWS.actualizarQuejaRequest();
+            inValue.queja = queja;
+            CrewmanSystem.QuejaWS.actualizarQuejaResponse retVal = ((CrewmanSystem.QuejaWS.QuejaWS)(this)).actualizarQueja(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.QuejaWS.actualizarQuejaResponse> CrewmanSystem.QuejaWS.QuejaWS.actualizarQuejaAsync(CrewmanSystem.QuejaWS.actualizarQuejaRequest request) {
+            return base.Channel.actualizarQuejaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.QuejaWS.actualizarQuejaResponse> actualizarQuejaAsync(CrewmanSystem.QuejaWS.queja queja) {
+            CrewmanSystem.QuejaWS.actualizarQuejaRequest inValue = new CrewmanSystem.QuejaWS.actualizarQuejaRequest();
+            inValue.queja = queja;
+            return ((CrewmanSystem.QuejaWS.QuejaWS)(this)).actualizarQuejaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.QuejaWS.insertarQuejaResponse CrewmanSystem.QuejaWS.QuejaWS.insertarQueja(CrewmanSystem.QuejaWS.insertarQuejaRequest request) {
+            return base.Channel.insertarQueja(request);
+        }
+        
+        public int insertarQueja(CrewmanSystem.QuejaWS.queja queja) {
+            CrewmanSystem.QuejaWS.insertarQuejaRequest inValue = new CrewmanSystem.QuejaWS.insertarQuejaRequest();
+            inValue.queja = queja;
+            CrewmanSystem.QuejaWS.insertarQuejaResponse retVal = ((CrewmanSystem.QuejaWS.QuejaWS)(this)).insertarQueja(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.QuejaWS.insertarQuejaResponse> CrewmanSystem.QuejaWS.QuejaWS.insertarQuejaAsync(CrewmanSystem.QuejaWS.insertarQuejaRequest request) {
+            return base.Channel.insertarQuejaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.QuejaWS.insertarQuejaResponse> insertarQuejaAsync(CrewmanSystem.QuejaWS.queja queja) {
+            CrewmanSystem.QuejaWS.insertarQuejaRequest inValue = new CrewmanSystem.QuejaWS.insertarQuejaRequest();
+            inValue.queja = queja;
+            return ((CrewmanSystem.QuejaWS.QuejaWS)(this)).insertarQuejaAsync(inValue);
         }
     }
 }

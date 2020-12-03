@@ -535,6 +535,8 @@ namespace CrewmanSystem
 					if (boton == 2) frmGestionarMarcas.eliminar();
 					break;
 				case "frmGestionarGuiasRemision":
+					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaGuiaRemision());
+					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarGuiaRemision());
 					break;
 				case "frmGestionarFamilias":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaFamilia());
@@ -693,6 +695,10 @@ namespace CrewmanSystem
 		{
 			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmListarCumplimientoDeMetas(), false, false, false, false, false);
 		}
+		private void btnPerfil_Click_1(object sender, EventArgs e)
+		{
+			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmPerfil(), false, false, false, false, false);
+		}
 		#endregion
 
 		#endregion
@@ -733,7 +739,7 @@ namespace CrewmanSystem
 
 		private void btnEmpGestionGuiasRemision_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarGuiasRemision(),false, false, false, true, true);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarGuiasRemision(),true, false, false, true, true);
 		}
 
 		private void btnEmpQuejas_Click(object sender, EventArgs e)
@@ -756,6 +762,10 @@ namespace CrewmanSystem
 		private void btnSegmentacion_Click(object sender, EventArgs e)
         {
 			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmSegmentarClientes(), false, false, false, false, false);
+		}
+		private void btnPerfil_Click(object sender, EventArgs e)
+		{
+			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmPerfil(), false, false, false, false, false);
 		}
 		#endregion
 
@@ -848,8 +858,10 @@ namespace CrewmanSystem
 			}
 			modificaPagina();
 		}
+
         #endregion
 
+        
 
     }
 }

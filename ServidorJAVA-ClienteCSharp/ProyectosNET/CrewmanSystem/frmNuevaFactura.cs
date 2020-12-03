@@ -12,14 +12,16 @@ namespace CrewmanSystem
 {
 	public partial class frmNuevaFactura : Form
 	{
-        PedidoWS.pedido pedidoSeleccionado = new PedidoWS.pedido();
-        FacturaWS.FacturaWSClient daoFactura = new FacturaWS.FacturaWSClient();
+        PedidoWS.pedido pedidoSeleccionado;
+        FacturaWS.FacturaWSClient daoFactura;
         string[] estado = { "PAGADO", "POR PAGAR" };
 
         public frmNuevaFactura()
         {
             InitializeComponent();
             cboEstadoPagar.DataSource = estado;
+            pedidoSeleccionado = new PedidoWS.pedido();
+            daoFactura = new FacturaWS.FacturaWSClient();
             if (frmVentanaPrincipal.nBtn == 1)
             {
                 frmGestionarFacturas.facturaSeleccionada = (FacturaWS.factura)frmGestionarFacturas.dgv.CurrentRow.DataBoundItem;
@@ -50,7 +52,7 @@ namespace CrewmanSystem
                 if (c is TextBox)
                 {
                     TextBox textBox = c as TextBox;
-                    if (textBox.Text == string.Empty && textBox.Name != "txtIdPedido" && textBox.Name != "txtMontoPendiente" && textBox.Name != "txtIdFactura")
+                    if (textBox.Text == string.Empty && textBox.Name != "txtIdPedido" && textBox.Name != "txtMontoPendiente" && textBox.Name != "txtIdFactura" && textBox.Name != "txtImpuestos")
                     {
                         MessageBox.Show("Falta llenar los datos de " + textBox.Name.Substring(3), 
                             "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -58,16 +60,6 @@ namespace CrewmanSystem
                     }
                     else
                     {
-                        try
-                        {
-                            double impuestos = Convert.ToDouble(txtImpuestos.Text);
-                        }
-                        catch (Exception)
-                        {
-                            MessageBox.Show("Los datos del impuesta de la factura solo pueden contener dígitos",
-                                "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return;
-                        }
                         try
                         {
                             double monto = Convert.ToDouble(txtMonto.Text);

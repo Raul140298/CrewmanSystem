@@ -196,6 +196,12 @@
     <Compile Include="frmBuscarFactura.Designer.cs">
       <DependentUpon>frmBuscarFactura.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscarGuiaRemision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarGuiaRemision.Designer.cs">
+      <DependentUpon>frmBuscarGuiaRemision.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscarPedido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -406,6 +412,12 @@
     <Compile Include="frmNuevaFamilia.Designer.cs">
       <DependentUpon>frmNuevaFamilia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNuevaGuiaRemision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevaGuiaRemision.Designer.cs">
+      <DependentUpon>frmNuevaGuiaRemision.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNuevaMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -478,6 +490,12 @@
     <Compile Include="frmNuevoProductoXZona.Designer.cs">
       <DependentUpon>frmNuevoProductoXZona.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPerfil.Designer.cs">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSegmentarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -533,6 +551,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarFactura.resx">
       <DependentUpon>frmBuscarFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarGuiaRemision.resx">
+      <DependentUpon>frmBuscarGuiaRemision.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarPedido.resx">
       <DependentUpon>frmBuscarPedido.cs</DependentUpon>
@@ -642,6 +663,9 @@
     <EmbeddedResource Include="frmNuevaFamilia.resx">
       <DependentUpon>frmNuevaFamilia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaGuiaRemision.resx">
+      <DependentUpon>frmNuevaGuiaRemision.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNuevaMarca.resx">
       <DependentUpon>frmNuevaMarca.cs</DependentUpon>
     </EmbeddedResource>
@@ -674,6 +698,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNuevoProductoXZona.resx">
       <DependentUpon>frmNuevoProductoXZona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPerfil.resx">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSegmentarClientes.resx">
       <DependentUpon>frmSegmentarClientes.cs</DependentUpon>
@@ -863,6 +890,9 @@
     <None Include="Connected Services\GuiaRemisionWS\CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GuiaRemisionWS\CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsXVendedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GuiaRemisionWS\GuiaRemisionWS.wsdl" />
     <None Include="Connected Services\GuiaRemisionWS\GuiaRemisionWS.xsd">
       <SubType>Designer</SubType>
@@ -952,6 +982,9 @@
     <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.eliminarPedidoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.entregarPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.generarReporteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -965,6 +998,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.listarPedidosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.listarPedidosSinGuiaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.mostrarPedidoResponse.datasource">

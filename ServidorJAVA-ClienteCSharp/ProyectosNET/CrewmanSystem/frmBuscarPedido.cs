@@ -19,13 +19,14 @@ namespace CrewmanSystem
 		public static DataGridView dgv;
 		private ClienteWS.ClienteWSClient daoCliente = new ClienteWS.ClienteWSClient();
 		private string[] tipos = { "AMBOS", "BORRADOR", "PEDIDO"};
-		private string[] estados = { "AMBOS", "EN_PROCESO", "ESPERANDO"};
+		private string[] estados = { "AMBOS", "EN_PROCESO", "ESPERANDO", "FINALIZADO"};
 		private int idTipo;
 
 		public frmBuscarPedido(int idTipo)
 		{
 			//idTipo 0 = BUSCAR PEDIDO NORMAL
 			//idTipo 1 = BUSCAR PEDIDO A PAGAR (SE USA EN NUEVA FACTURA)
+			//idTipo 2 = BUSCAR PEDIDO A PAGAR (SE USA EN NUEVA GUIA)
 			this.idTipo = idTipo;
 			InitializeComponent();
 			dtpRangoIni.Value = DateTime.Today.AddMonths(-1);
@@ -43,13 +44,19 @@ namespace CrewmanSystem
 				cboEstado.SelectedIndex = 0;
 				btnSeleccionar.Visible = false;
             }
-            else
+            else if(idTipo == 1)
             {
 				cboTipo.SelectedIndex = 2;
 				cboEstado.SelectedIndex = 1;
 				cboEstado.Enabled = false;
 				cboTipo.Enabled = false;
             }
+            else{
+				cboEstado.SelectedIndex = 3;
+				cboTipo.SelectedIndex = 2;
+				cboEstado.Enabled = false;
+				cboTipo.Enabled = false;
+			}
 
 			completarTabla();
 			#region colores de seleccion
@@ -68,8 +75,16 @@ namespace CrewmanSystem
         {
 			string miEstado = cboEstado.SelectedItem.ToString();
 			string miTipo = cboTipo.SelectedItem.ToString();
-			misPedidos = 
-				daoPedido.listarPedidos(Program.empleado.idEmpleado,txtRuc.Text,txtGrupo.Text,dtpRangoIni.Value, dtpRangoFin.Value, miTipo, miEstado);
+			if(idTipo == 2)
+            {
+				misPedidos = daoPedido.listarPedidosSinGuia(Program.empleado.idEmpleado, txtRuc.Text, txtGrupo.Text, dtpRangoIni.Value, dtpRangoFin.Value, miTipo, miEstado);
+            }
+			else
+			{
+				misPedidos =
+				daoPedido.listarPedidos(Program.empleado.idEmpleado, txtRuc.Text, txtGrupo.Text, dtpRangoIni.Value, dtpRangoFin.Value, miTipo, miEstado);
+			}
+
 			dgvPedidos.AutoGenerateColumns = false;
 			if (misPedidos != null)
 				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());

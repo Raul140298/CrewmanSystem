@@ -35,6 +35,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlLateralIzquierdo = new System.Windows.Forms.Panel();
             this.pnlEmpleado = new System.Windows.Forms.Panel();
+            this.btnEmpPerfil = new FontAwesome.Sharp.IconButton();
+            this.btnSegmentacion = new FontAwesome.Sharp.IconButton();
             this.btnVisitas = new FontAwesome.Sharp.IconButton();
             this.btnPromociones = new FontAwesome.Sharp.IconButton();
             this.pnlEmpGestionPedidos = new System.Windows.Forms.Panel();
@@ -48,6 +50,7 @@
             this.btnEmpProducto = new FontAwesome.Sharp.IconButton();
             this.btnEmpGestionProductos = new FontAwesome.Sharp.IconButton();
             this.pnlJefeDeVentas = new System.Windows.Forms.Panel();
+            this.btnPerfil = new FontAwesome.Sharp.IconButton();
             this.pnlGestionClientes = new System.Windows.Forms.Panel();
             this.btnClientes = new FontAwesome.Sharp.IconButton();
             this.btnGestionClientes = new FontAwesome.Sharp.IconButton();
@@ -90,7 +93,6 @@
             this.btnMinimizar = new FontAwesome.Sharp.IconButton();
             this.btnMaximizar = new FontAwesome.Sharp.IconButton();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.btnSegmentacion = new FontAwesome.Sharp.IconButton();
             this.pnlContenedor.SuspendLayout();
             this.pnlChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -159,6 +161,7 @@
             // pnlEmpleado
             // 
             this.pnlEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.pnlEmpleado.Controls.Add(this.btnEmpPerfil);
             this.pnlEmpleado.Controls.Add(this.btnSegmentacion);
             this.pnlEmpleado.Controls.Add(this.btnVisitas);
             this.pnlEmpleado.Controls.Add(this.btnPromociones);
@@ -167,11 +170,63 @@
             this.pnlEmpleado.Controls.Add(this.pnlEmpGestionProductos);
             this.pnlEmpleado.Controls.Add(this.btnEmpGestionProductos);
             this.pnlEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEmpleado.Location = new System.Drawing.Point(0, 1016);
+            this.pnlEmpleado.Location = new System.Drawing.Point(0, 1050);
             this.pnlEmpleado.Name = "pnlEmpleado";
-            this.pnlEmpleado.Size = new System.Drawing.Size(264, 838);
+            this.pnlEmpleado.Size = new System.Drawing.Size(268, 838);
             this.pnlEmpleado.TabIndex = 1;
             this.pnlEmpleado.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlEmpleado_MouseDown);
+            // 
+            // btnEmpPerfil
+            // 
+            this.btnEmpPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnEmpPerfil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmpPerfil.FlatAppearance.BorderSize = 0;
+            this.btnEmpPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpPerfil.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnEmpPerfil.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnEmpPerfil.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
+            this.btnEmpPerfil.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnEmpPerfil.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEmpPerfil.IconSize = 20;
+            this.btnEmpPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmpPerfil.Location = new System.Drawing.Point(0, 539);
+            this.btnEmpPerfil.Name = "btnEmpPerfil";
+            this.btnEmpPerfil.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnEmpPerfil.Rotation = 0D;
+            this.btnEmpPerfil.Size = new System.Drawing.Size(268, 45);
+            this.btnEmpPerfil.TabIndex = 31;
+            this.btnEmpPerfil.Text = "  Mi Perfil";
+            this.btnEmpPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmpPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEmpPerfil.UseCompatibleTextRendering = true;
+            this.btnEmpPerfil.UseVisualStyleBackColor = false;
+            this.btnEmpPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
+            // 
+            // btnSegmentacion
+            // 
+            this.btnSegmentacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnSegmentacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSegmentacion.FlatAppearance.BorderSize = 0;
+            this.btnSegmentacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSegmentacion.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnSegmentacion.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSegmentacion.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
+            this.btnSegmentacion.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnSegmentacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSegmentacion.IconSize = 20;
+            this.btnSegmentacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSegmentacion.Location = new System.Drawing.Point(0, 494);
+            this.btnSegmentacion.Name = "btnSegmentacion";
+            this.btnSegmentacion.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnSegmentacion.Rotation = 0D;
+            this.btnSegmentacion.Size = new System.Drawing.Size(268, 45);
+            this.btnSegmentacion.TabIndex = 30;
+            this.btnSegmentacion.Text = "Segmentación de Clientes";
+            this.btnSegmentacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSegmentacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSegmentacion.UseCompatibleTextRendering = true;
+            this.btnSegmentacion.UseVisualStyleBackColor = false;
+            this.btnSegmentacion.Click += new System.EventHandler(this.btnSegmentacion_Click);
             // 
             // btnVisitas
             // 
@@ -190,7 +245,7 @@
             this.btnVisitas.Name = "btnVisitas";
             this.btnVisitas.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnVisitas.Rotation = 0D;
-            this.btnVisitas.Size = new System.Drawing.Size(264, 45);
+            this.btnVisitas.Size = new System.Drawing.Size(268, 45);
             this.btnVisitas.TabIndex = 7;
             this.btnVisitas.Text = "  Visitas";
             this.btnVisitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -216,7 +271,7 @@
             this.btnPromociones.Name = "btnPromociones";
             this.btnPromociones.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnPromociones.Rotation = 0D;
-            this.btnPromociones.Size = new System.Drawing.Size(264, 45);
+            this.btnPromociones.Size = new System.Drawing.Size(268, 45);
             this.btnPromociones.TabIndex = 6;
             this.btnPromociones.Text = "  Promociones";
             this.btnPromociones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -234,7 +289,7 @@
             this.pnlEmpGestionPedidos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEmpGestionPedidos.Location = new System.Drawing.Point(0, 209);
             this.pnlEmpGestionPedidos.Name = "pnlEmpGestionPedidos";
-            this.pnlEmpGestionPedidos.Size = new System.Drawing.Size(264, 195);
+            this.pnlEmpGestionPedidos.Size = new System.Drawing.Size(268, 195);
             this.pnlEmpGestionPedidos.TabIndex = 3;
             // 
             // btnEmpQuejas
@@ -253,7 +308,7 @@
             this.btnEmpQuejas.Name = "btnEmpQuejas";
             this.btnEmpQuejas.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnEmpQuejas.Rotation = 0D;
-            this.btnEmpQuejas.Size = new System.Drawing.Size(264, 45);
+            this.btnEmpQuejas.Size = new System.Drawing.Size(268, 45);
             this.btnEmpQuejas.TabIndex = 4;
             this.btnEmpQuejas.Text = "Quejas";
             this.btnEmpQuejas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -276,7 +331,7 @@
             this.btnEmpGestionGuiasRemision.Name = "btnEmpGestionGuiasRemision";
             this.btnEmpGestionGuiasRemision.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnEmpGestionGuiasRemision.Rotation = 0D;
-            this.btnEmpGestionGuiasRemision.Size = new System.Drawing.Size(264, 45);
+            this.btnEmpGestionGuiasRemision.Size = new System.Drawing.Size(268, 45);
             this.btnEmpGestionGuiasRemision.TabIndex = 3;
             this.btnEmpGestionGuiasRemision.Text = "Guías de Remisión";
             this.btnEmpGestionGuiasRemision.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -299,7 +354,7 @@
             this.btnEmpGestionFacturas.Name = "btnEmpGestionFacturas";
             this.btnEmpGestionFacturas.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnEmpGestionFacturas.Rotation = 0D;
-            this.btnEmpGestionFacturas.Size = new System.Drawing.Size(264, 45);
+            this.btnEmpGestionFacturas.Size = new System.Drawing.Size(268, 45);
             this.btnEmpGestionFacturas.TabIndex = 2;
             this.btnEmpGestionFacturas.Text = "Facturas";
             this.btnEmpGestionFacturas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -322,7 +377,7 @@
             this.btnEmpPedidos.Name = "btnEmpPedidos";
             this.btnEmpPedidos.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnEmpPedidos.Rotation = 0D;
-            this.btnEmpPedidos.Size = new System.Drawing.Size(264, 45);
+            this.btnEmpPedidos.Size = new System.Drawing.Size(268, 45);
             this.btnEmpPedidos.TabIndex = 1;
             this.btnEmpPedidos.Text = "Pedidos";
             this.btnEmpPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -346,7 +401,7 @@
             this.btnEmpGestionPedidos.Name = "btnEmpGestionPedidos";
             this.btnEmpGestionPedidos.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnEmpGestionPedidos.Rotation = 0D;
-            this.btnEmpGestionPedidos.Size = new System.Drawing.Size(264, 45);
+            this.btnEmpGestionPedidos.Size = new System.Drawing.Size(268, 45);
             this.btnEmpGestionPedidos.TabIndex = 2;
             this.btnEmpGestionPedidos.Text = "  Gestión de Pedidos";
             this.btnEmpGestionPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -362,7 +417,7 @@
             this.pnlEmpGestionProductos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEmpGestionProductos.Location = new System.Drawing.Point(0, 58);
             this.pnlEmpGestionProductos.Name = "pnlEmpGestionProductos";
-            this.pnlEmpGestionProductos.Size = new System.Drawing.Size(264, 106);
+            this.pnlEmpGestionProductos.Size = new System.Drawing.Size(268, 106);
             this.pnlEmpGestionProductos.TabIndex = 1;
             // 
             // btnEmpProductoXZona
@@ -381,7 +436,7 @@
             this.btnEmpProductoXZona.Name = "btnEmpProductoXZona";
             this.btnEmpProductoXZona.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnEmpProductoXZona.Rotation = 0D;
-            this.btnEmpProductoXZona.Size = new System.Drawing.Size(264, 45);
+            this.btnEmpProductoXZona.Size = new System.Drawing.Size(268, 45);
             this.btnEmpProductoXZona.TabIndex = 4;
             this.btnEmpProductoXZona.Text = "Producto x Zona";
             this.btnEmpProductoXZona.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -404,7 +459,7 @@
             this.btnEmpProducto.Name = "btnEmpProducto";
             this.btnEmpProducto.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnEmpProducto.Rotation = 0D;
-            this.btnEmpProducto.Size = new System.Drawing.Size(264, 45);
+            this.btnEmpProducto.Size = new System.Drawing.Size(268, 45);
             this.btnEmpProducto.TabIndex = 3;
             this.btnEmpProducto.Text = "Producto";
             this.btnEmpProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -428,7 +483,7 @@
             this.btnEmpGestionProductos.Name = "btnEmpGestionProductos";
             this.btnEmpGestionProductos.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnEmpGestionProductos.Rotation = 0D;
-            this.btnEmpGestionProductos.Size = new System.Drawing.Size(264, 58);
+            this.btnEmpGestionProductos.Size = new System.Drawing.Size(268, 58);
             this.btnEmpGestionProductos.TabIndex = 0;
             this.btnEmpGestionProductos.Text = "  Gestión de Productos";
             this.btnEmpGestionProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -439,6 +494,7 @@
             // 
             // pnlJefeDeVentas
             // 
+            this.pnlJefeDeVentas.Controls.Add(this.btnPerfil);
             this.pnlJefeDeVentas.Controls.Add(this.pnlGestionClientes);
             this.pnlJefeDeVentas.Controls.Add(this.btnGestionClientes);
             this.pnlJefeDeVentas.Controls.Add(this.btnCumplimientoDeMetas);
@@ -453,9 +509,35 @@
             this.pnlJefeDeVentas.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlJefeDeVentas.Location = new System.Drawing.Point(0, 0);
             this.pnlJefeDeVentas.Name = "pnlJefeDeVentas";
-            this.pnlJefeDeVentas.Size = new System.Drawing.Size(264, 1016);
+            this.pnlJefeDeVentas.Size = new System.Drawing.Size(268, 1050);
             this.pnlJefeDeVentas.TabIndex = 0;
             this.pnlJefeDeVentas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlJefeDeVentas_MouseDown);
+            // 
+            // btnPerfil
+            // 
+            this.btnPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnPerfil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPerfil.FlatAppearance.BorderSize = 0;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnPerfil.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPerfil.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
+            this.btnPerfil.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnPerfil.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPerfil.IconSize = 20;
+            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfil.Location = new System.Drawing.Point(0, 1002);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnPerfil.Rotation = 0D;
+            this.btnPerfil.Size = new System.Drawing.Size(268, 45);
+            this.btnPerfil.TabIndex = 32;
+            this.btnPerfil.Text = "  Mi Perfil";
+            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPerfil.UseCompatibleTextRendering = true;
+            this.btnPerfil.UseVisualStyleBackColor = false;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click_1);
             // 
             // pnlGestionClientes
             // 
@@ -463,7 +545,7 @@
             this.pnlGestionClientes.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlGestionClientes.Location = new System.Drawing.Point(0, 945);
             this.pnlGestionClientes.Name = "pnlGestionClientes";
-            this.pnlGestionClientes.Size = new System.Drawing.Size(264, 57);
+            this.pnlGestionClientes.Size = new System.Drawing.Size(268, 57);
             this.pnlGestionClientes.TabIndex = 30;
             // 
             // btnClientes
@@ -482,7 +564,7 @@
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnClientes.Rotation = 0D;
-            this.btnClientes.Size = new System.Drawing.Size(264, 49);
+            this.btnClientes.Size = new System.Drawing.Size(268, 49);
             this.btnClientes.TabIndex = 1;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -506,7 +588,7 @@
             this.btnGestionClientes.Name = "btnGestionClientes";
             this.btnGestionClientes.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnGestionClientes.Rotation = 0D;
-            this.btnGestionClientes.Size = new System.Drawing.Size(264, 45);
+            this.btnGestionClientes.Size = new System.Drawing.Size(268, 45);
             this.btnGestionClientes.TabIndex = 29;
             this.btnGestionClientes.Text = "  Gestión de Clientes";
             this.btnGestionClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -532,7 +614,7 @@
             this.btnCumplimientoDeMetas.Name = "btnCumplimientoDeMetas";
             this.btnCumplimientoDeMetas.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnCumplimientoDeMetas.Rotation = 0D;
-            this.btnCumplimientoDeMetas.Size = new System.Drawing.Size(264, 45);
+            this.btnCumplimientoDeMetas.Size = new System.Drawing.Size(268, 45);
             this.btnCumplimientoDeMetas.TabIndex = 28;
             this.btnCumplimientoDeMetas.Text = "  Cumplimiento de Metas";
             this.btnCumplimientoDeMetas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -551,7 +633,7 @@
             this.pnlGestionPedidos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlGestionPedidos.Location = new System.Drawing.Point(0, 615);
             this.pnlGestionPedidos.Name = "pnlGestionPedidos";
-            this.pnlGestionPedidos.Size = new System.Drawing.Size(264, 240);
+            this.pnlGestionPedidos.Size = new System.Drawing.Size(268, 240);
             this.pnlGestionPedidos.TabIndex = 26;
             this.pnlGestionPedidos.Visible = false;
             // 
@@ -571,7 +653,7 @@
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(264, 45);
+            this.iconButton1.Size = new System.Drawing.Size(268, 45);
             this.iconButton1.TabIndex = 8;
             this.iconButton1.Text = "Quejas";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -593,11 +675,12 @@
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.iconButton2.Rotation = 0D;
-            this.iconButton2.Size = new System.Drawing.Size(264, 45);
+            this.iconButton2.Size = new System.Drawing.Size(268, 45);
             this.iconButton2.TabIndex = 6;
             this.iconButton2.Text = "Guías de Remisión";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton2.UseVisualStyleBackColor = false;
+     
             // 
             // btnFactura
             // 
@@ -615,7 +698,7 @@
             this.btnFactura.Name = "btnFactura";
             this.btnFactura.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnFactura.Rotation = 0D;
-            this.btnFactura.Size = new System.Drawing.Size(264, 45);
+            this.btnFactura.Size = new System.Drawing.Size(268, 45);
             this.btnFactura.TabIndex = 5;
             this.btnFactura.Text = "Facturas";
             this.btnFactura.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -638,7 +721,7 @@
             this.btnPedReporte.Name = "btnPedReporte";
             this.btnPedReporte.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnPedReporte.Rotation = 0D;
-            this.btnPedReporte.Size = new System.Drawing.Size(264, 45);
+            this.btnPedReporte.Size = new System.Drawing.Size(268, 45);
             this.btnPedReporte.TabIndex = 2;
             this.btnPedReporte.Text = "Reporte";
             this.btnPedReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -661,7 +744,7 @@
             this.btnPedido.Name = "btnPedido";
             this.btnPedido.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnPedido.Rotation = 0D;
-            this.btnPedido.Size = new System.Drawing.Size(264, 49);
+            this.btnPedido.Size = new System.Drawing.Size(268, 49);
             this.btnPedido.TabIndex = 1;
             this.btnPedido.Text = "Pedidos";
             this.btnPedido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -685,7 +768,7 @@
             this.btnReportePedidos.Name = "btnReportePedidos";
             this.btnReportePedidos.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnReportePedidos.Rotation = 0D;
-            this.btnReportePedidos.Size = new System.Drawing.Size(264, 45);
+            this.btnReportePedidos.Size = new System.Drawing.Size(268, 45);
             this.btnReportePedidos.TabIndex = 6;
             this.btnReportePedidos.Text = "  Gestión de Pedidos";
             this.btnReportePedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -701,7 +784,7 @@
             this.pnlGestionEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlGestionEmpleados.Location = new System.Drawing.Point(0, 472);
             this.pnlGestionEmpleados.Name = "pnlGestionEmpleados";
-            this.pnlGestionEmpleados.Size = new System.Drawing.Size(264, 98);
+            this.pnlGestionEmpleados.Size = new System.Drawing.Size(268, 98);
             this.pnlGestionEmpleados.TabIndex = 5;
             // 
             // btnCarteras
@@ -720,7 +803,7 @@
             this.btnCarteras.Name = "btnCarteras";
             this.btnCarteras.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnCarteras.Rotation = 0D;
-            this.btnCarteras.Size = new System.Drawing.Size(264, 45);
+            this.btnCarteras.Size = new System.Drawing.Size(268, 45);
             this.btnCarteras.TabIndex = 3;
             this.btnCarteras.Text = "Carteras";
             this.btnCarteras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -743,7 +826,7 @@
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnEmpleados.Rotation = 0D;
-            this.btnEmpleados.Size = new System.Drawing.Size(264, 45);
+            this.btnEmpleados.Size = new System.Drawing.Size(268, 45);
             this.btnEmpleados.TabIndex = 1;
             this.btnEmpleados.Text = "Empleados";
             this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -767,7 +850,7 @@
             this.btnGestionEmpleados.Name = "btnGestionEmpleados";
             this.btnGestionEmpleados.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnGestionEmpleados.Rotation = 0D;
-            this.btnGestionEmpleados.Size = new System.Drawing.Size(264, 45);
+            this.btnGestionEmpleados.Size = new System.Drawing.Size(268, 45);
             this.btnGestionEmpleados.TabIndex = 4;
             this.btnGestionEmpleados.Text = "  Gestión de Empleados";
             this.btnGestionEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -783,7 +866,7 @@
             this.pnlGestionZonas.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlGestionZonas.Location = new System.Drawing.Point(0, 326);
             this.pnlGestionZonas.Name = "pnlGestionZonas";
-            this.pnlGestionZonas.Size = new System.Drawing.Size(264, 101);
+            this.pnlGestionZonas.Size = new System.Drawing.Size(268, 101);
             this.pnlGestionZonas.TabIndex = 3;
             // 
             // btnProductoXZona
@@ -802,7 +885,7 @@
             this.btnProductoXZona.Name = "btnProductoXZona";
             this.btnProductoXZona.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnProductoXZona.Rotation = 0D;
-            this.btnProductoXZona.Size = new System.Drawing.Size(264, 45);
+            this.btnProductoXZona.Size = new System.Drawing.Size(268, 45);
             this.btnProductoXZona.TabIndex = 2;
             this.btnProductoXZona.Text = "Producto x Zona";
             this.btnProductoXZona.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -825,7 +908,7 @@
             this.btnZona.Name = "btnZona";
             this.btnZona.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnZona.Rotation = 0D;
-            this.btnZona.Size = new System.Drawing.Size(264, 45);
+            this.btnZona.Size = new System.Drawing.Size(268, 45);
             this.btnZona.TabIndex = 1;
             this.btnZona.Text = "Zona";
             this.btnZona.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -849,7 +932,7 @@
             this.btnGestionarZonas.Name = "btnGestionarZonas";
             this.btnGestionarZonas.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnGestionarZonas.Rotation = 0D;
-            this.btnGestionarZonas.Size = new System.Drawing.Size(264, 45);
+            this.btnGestionarZonas.Size = new System.Drawing.Size(268, 45);
             this.btnGestionarZonas.TabIndex = 2;
             this.btnGestionarZonas.Text = "  Gestión de Zonas";
             this.btnGestionarZonas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -868,7 +951,7 @@
             this.pnlGestionProducto.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlGestionProducto.Location = new System.Drawing.Point(0, 45);
             this.pnlGestionProducto.Name = "pnlGestionProducto";
-            this.pnlGestionProducto.Size = new System.Drawing.Size(264, 236);
+            this.pnlGestionProducto.Size = new System.Drawing.Size(268, 236);
             this.pnlGestionProducto.TabIndex = 1;
             // 
             // btnMarca
@@ -887,7 +970,7 @@
             this.btnMarca.Name = "btnMarca";
             this.btnMarca.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnMarca.Rotation = 0D;
-            this.btnMarca.Size = new System.Drawing.Size(264, 45);
+            this.btnMarca.Size = new System.Drawing.Size(268, 45);
             this.btnMarca.TabIndex = 5;
             this.btnMarca.Text = "Marca";
             this.btnMarca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -910,7 +993,7 @@
             this.btnPromocion.Name = "btnPromocion";
             this.btnPromocion.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnPromocion.Rotation = 0D;
-            this.btnPromocion.Size = new System.Drawing.Size(264, 45);
+            this.btnPromocion.Size = new System.Drawing.Size(268, 45);
             this.btnPromocion.TabIndex = 4;
             this.btnPromocion.Text = "Promoción";
             this.btnPromocion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -933,7 +1016,7 @@
             this.btnProducto.Name = "btnProducto";
             this.btnProducto.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnProducto.Rotation = 0D;
-            this.btnProducto.Size = new System.Drawing.Size(264, 45);
+            this.btnProducto.Size = new System.Drawing.Size(268, 45);
             this.btnProducto.TabIndex = 3;
             this.btnProducto.Text = "Producto";
             this.btnProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -956,7 +1039,7 @@
             this.btnSubfamilia.Name = "btnSubfamilia";
             this.btnSubfamilia.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnSubfamilia.Rotation = 0D;
-            this.btnSubfamilia.Size = new System.Drawing.Size(264, 45);
+            this.btnSubfamilia.Size = new System.Drawing.Size(268, 45);
             this.btnSubfamilia.TabIndex = 2;
             this.btnSubfamilia.Text = "Subfamilia";
             this.btnSubfamilia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -979,7 +1062,7 @@
             this.btnFamilia.Name = "btnFamilia";
             this.btnFamilia.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
             this.btnFamilia.Rotation = 0D;
-            this.btnFamilia.Size = new System.Drawing.Size(264, 45);
+            this.btnFamilia.Size = new System.Drawing.Size(268, 45);
             this.btnFamilia.TabIndex = 1;
             this.btnFamilia.Text = "Familia";
             this.btnFamilia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1003,7 +1086,7 @@
             this.btnGestionProducto.Name = "btnGestionProducto";
             this.btnGestionProducto.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnGestionProducto.Rotation = 0D;
-            this.btnGestionProducto.Size = new System.Drawing.Size(264, 45);
+            this.btnGestionProducto.Size = new System.Drawing.Size(268, 45);
             this.btnGestionProducto.TabIndex = 0;
             this.btnGestionProducto.Text = "  Gestión de Productos";
             this.btnGestionProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1065,7 +1148,7 @@
             this.lblCountRows.ForeColor = System.Drawing.Color.Gainsboro;
             this.lblCountRows.Location = new System.Drawing.Point(1073, 40);
             this.lblCountRows.Name = "lblCountRows";
-            this.lblCountRows.Size = new System.Drawing.Size(45, 20);
+            this.lblCountRows.Size = new System.Drawing.Size(37, 17);
             this.lblCountRows.TabIndex = 19;
             this.lblCountRows.Text = "rows";
             this.lblCountRows.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1340,32 +1423,6 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnSegmentacion
-            // 
-            this.btnSegmentacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnSegmentacion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSegmentacion.FlatAppearance.BorderSize = 0;
-            this.btnSegmentacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSegmentacion.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnSegmentacion.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSegmentacion.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
-            this.btnSegmentacion.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnSegmentacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSegmentacion.IconSize = 20;
-            this.btnSegmentacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSegmentacion.Location = new System.Drawing.Point(0, 494);
-            this.btnSegmentacion.Name = "btnSegmentacion";
-            this.btnSegmentacion.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btnSegmentacion.Rotation = 0D;
-            this.btnSegmentacion.Size = new System.Drawing.Size(264, 45);
-            this.btnSegmentacion.TabIndex = 30;
-            this.btnSegmentacion.Text = "Segmentación de Clientes";
-            this.btnSegmentacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSegmentacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSegmentacion.UseCompatibleTextRendering = true;
-            this.btnSegmentacion.UseVisualStyleBackColor = false;
-            this.btnSegmentacion.Click += new System.EventHandler(this.btnSegmentacion_Click);
-            // 
             // frmVentanaPrincipal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1467,5 +1524,7 @@
 		private FontAwesome.Sharp.IconButton btnFactura;
 		private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton btnSegmentacion;
+        private FontAwesome.Sharp.IconButton btnEmpPerfil;
+        private FontAwesome.Sharp.IconButton btnPerfil;
     }
 }

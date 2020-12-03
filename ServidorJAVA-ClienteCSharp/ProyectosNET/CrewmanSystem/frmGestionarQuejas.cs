@@ -18,7 +18,7 @@ namespace CrewmanSystem
 			daoQueja = new QuejaWS.QuejaWSClient();
 			InitializeComponent();
 			dgvQuejas.AutoGenerateColumns = false;
-			QuejaWS.queja[] misQuejas = daoQueja.listarQuejas(0); //Aqui debe ir un id
+			QuejaWS.queja[] misQuejas = daoQueja.listarQuejas(Program.empleado.idEmpleado); //Aqui debe ir un id
 			if (misQuejas != null)
 			{
 				dgvQuejas.DataSource = new BindingList<QuejaWS.queja>(misQuejas.ToArray());
@@ -39,6 +39,14 @@ namespace CrewmanSystem
 			dgvQuejas.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dgvQuejas.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
+		}
+
+		private void dgvQuejas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+		{
+			QuejaWS.queja queja = dgvQuejas.Rows[e.RowIndex].DataBoundItem
+											as QuejaWS.queja;
+
+			dgvQuejas.Rows[e.RowIndex].Cells["ID_PEDIDO"].Value = queja.pedido.idPedido;
 		}
 	}
 }
