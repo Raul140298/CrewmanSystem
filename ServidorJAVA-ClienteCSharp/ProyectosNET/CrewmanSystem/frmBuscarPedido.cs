@@ -52,8 +52,8 @@ namespace CrewmanSystem
 				cboTipo.Enabled = false;
             }
             else{
-				cboEstado.SelectedIndex = 3;
 				cboTipo.SelectedIndex = 2;
+				cboEstado.SelectedIndex = 3;
 				cboEstado.Enabled = false;
 				cboTipo.Enabled = false;
 			}
