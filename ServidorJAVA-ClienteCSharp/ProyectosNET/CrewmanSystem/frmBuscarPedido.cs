@@ -42,7 +42,7 @@ namespace CrewmanSystem
             {
 				cboTipo.SelectedIndex = 1;
 				cboEstado.SelectedIndex = 0;
-				cboTipo.Enabled = Enabled = false;
+				cboTipo.Enabled = false;
 				btnSeleccionar.Visible = false;
             }
             else if(idTipo == 1)

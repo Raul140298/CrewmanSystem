@@ -33,7 +33,7 @@ namespace CrewmanSystem
             cboTipo.DataSource = tipos;
             cboEstado.DataSource = estados;
             cboTipo.SelectedIndex = 2;
-            cboEstado.SelectedIndex = 1;
+            cboEstado.SelectedIndex = 3;
             cboEstado.Enabled = false;
             cboTipo.Enabled = false;
             completarTabla();
@@ -117,5 +117,4 @@ namespace CrewmanSystem
 			frmVentanaPrincipal.elim.Enabled = true;
 		}
 	}
-}
 }

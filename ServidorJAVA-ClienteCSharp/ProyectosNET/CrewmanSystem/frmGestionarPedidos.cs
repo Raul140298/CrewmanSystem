@@ -38,6 +38,9 @@ namespace CrewmanSystem
 				dgvPedidos.Columns["APELLIDO_MATERNO"].Visible = false;
 			}
 
+			dgvPedidos.Columns["FECHA_APROBADO"].Visible = false; 
+			dgvPedidos.Columns["FECHA_ESTIMADA"].Visible = false;
+
 			#region colores de seleccion
 			dgvPedidos.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dgvPedidos.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);

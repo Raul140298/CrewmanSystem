@@ -740,9 +740,14 @@ namespace CrewmanSystem
 			ClickBoton((IconButton)sender, null, pnlEmpGestionPedidos, Program.colorR, BTNtipo.btnConPanel, null,false, false, false, false, false);
 		}
 
+		private void btnEmpBorradores_Click(object sender, EventArgs e)
+		{
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarPedidos(), true, true, true, true, true);
+		}
+
 		private void btnEmpPedidos_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarPedidos(),true, true, true, true, true);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarAprobados(), false, false, true, true, true);
 		}
 
 		private void btnEmpGestionFacturas_Click(object sender, EventArgs e)
