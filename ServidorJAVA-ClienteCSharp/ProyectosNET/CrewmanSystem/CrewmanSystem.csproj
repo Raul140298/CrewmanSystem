@@ -412,6 +412,12 @@
     <Compile Include="frmNuevaFamilia.Designer.cs">
       <DependentUpon>frmNuevaFamilia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNuevaGuiaRemision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNuevaGuiaRemision.Designer.cs">
+      <DependentUpon>frmNuevaGuiaRemision.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNuevaMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -656,6 +662,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNuevaFamilia.resx">
       <DependentUpon>frmNuevaFamilia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNuevaGuiaRemision.resx">
+      <DependentUpon>frmNuevaGuiaRemision.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNuevaMarca.resx">
       <DependentUpon>frmNuevaMarca.cs</DependentUpon>
@@ -973,6 +982,9 @@
     <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.eliminarPedidoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.entregarPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.generarReporteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -986,6 +998,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.listarPedidosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.listarPedidosSinGuiaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.mostrarPedidoResponse.datasource">
