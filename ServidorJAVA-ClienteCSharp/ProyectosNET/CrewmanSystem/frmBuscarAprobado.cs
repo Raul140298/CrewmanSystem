@@ -101,31 +101,21 @@ namespace CrewmanSystem
 			frmVentanaPrincipal.elim.Enabled = false;
 		}
 
-		private void dgvPedidos_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-		{
-			//Preguntar al profe
-			if (e.StateChanged != DataGridViewElementStates.Selected)
-			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
-				return;
-			}
-			else
-			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
-			}
-		}
-
-		public static void eliminar()
-		{
-			pedidoSeleccionado = (PedidoWS.pedido)dgv.CurrentRow.DataBoundItem;
-			daoPedido.eliminarPedidoEnProceso(pedidoSeleccionado.idPedido);
-		}
-
 		private void btnBuscar_Click(object sender, EventArgs e)
 		{
 			completarTabla();
 		}
+		private void dgvPedidos_SelectionChanged(object sender, EventArgs e)
+		{
+			if (((PedidoWS.pedido)dgvPedidos.CurrentRow.DataBoundItem).estadoPedido == PedidoWS.estadoPedido.FINALIZADO)
+			{
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
+				return;
+			}
+			frmVentanaPrincipal.act.Enabled = true;
+			frmVentanaPrincipal.elim.Enabled = true;
+		}
 	}
+}
 }

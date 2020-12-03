@@ -23,7 +23,7 @@ namespace CrewmanSystem
 
             InitializeComponent();
 			dgv = dgvPedidos;
-			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos(Program.empleado.idEmpleado, "", "", DateTime.MinValue, DateTime.MaxValue, "PEDIDO", "EN_PROCESO");
+			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos(Program.empleado.idEmpleado, "", "", DateTime.MinValue, DateTime.MaxValue, "PEDIDO", "AMBOS");
             dgvPedidos.AutoGenerateColumns = false;
             if (misPedidos != null)
                 dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
@@ -75,32 +75,22 @@ namespace CrewmanSystem
 			catch (Exception) { }
 		}
 
-		private void dgvPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-			frmVentanaPrincipal.act.Enabled = false;
-			frmVentanaPrincipal.elim.Enabled = false;
-		}
-
-		private void dgvPedidos_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-		{
-			//Preguntar al profe
-			if (e.StateChanged != DataGridViewElementStates.Selected)
-			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
-				return;
-			}
-			else
-			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
-			}
-		}
-
 		public static void eliminar()
 		{
 			pedidoSeleccionado = (PedidoWS.pedido)dgv.CurrentRow.DataBoundItem;
 			daoPedido.eliminarPedidoEnProceso(pedidoSeleccionado.idPedido);
 		}
-	}
+
+        private void dgvPedidos_SelectionChanged(object sender, EventArgs e)
+        {
+			if (((PedidoWS.pedido)dgvPedidos.CurrentRow.DataBoundItem).estadoPedido == PedidoWS.estadoPedido.FINALIZADO)
+				{
+					frmVentanaPrincipal.act.Enabled = false;
+					frmVentanaPrincipal.elim.Enabled = false;
+					return;
+				}
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+			}
+		}
 }
