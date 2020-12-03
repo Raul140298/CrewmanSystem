@@ -33,7 +33,7 @@ namespace CrewmanSystem
             cboTipo.DataSource = tipos;
             cboEstado.DataSource = estados;
             cboTipo.SelectedIndex = 2;
-            cboEstado.SelectedIndex = 3;
+            cboEstado.SelectedIndex = 0;
             cboEstado.Enabled = false;
             cboTipo.Enabled = false;
             completarTabla();
@@ -107,14 +107,17 @@ namespace CrewmanSystem
 		}
 		private void dgvPedidos_SelectionChanged(object sender, EventArgs e)
 		{
-			if (((PedidoWS.pedido)dgvPedidos.CurrentRow.DataBoundItem).estadoPedido == PedidoWS.estadoPedido.FINALIZADO)
+			if (((PedidoWS.pedido)dgvPedidos.CurrentRow.DataBoundItem).estadoPedido == PedidoWS.estadoPedido.EN_PROCESO)
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+				return;
+			}
+			else
 			{
 				frmVentanaPrincipal.act.Enabled = false;
 				frmVentanaPrincipal.elim.Enabled = false;
-				return;
 			}
-			frmVentanaPrincipal.act.Enabled = true;
-			frmVentanaPrincipal.elim.Enabled = true;
 		}
 	}
 }
