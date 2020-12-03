@@ -668,6 +668,12 @@ namespace CrewmanSystem
 		{
 			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarPedidos(), false, true, true, true, true);
 		}
+
+		private void btnAprobados_Click(object sender, EventArgs e)
+		{
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarAprobados(), false, false, false, false, true);
+		}
+
 		private void btnPedReporte_Click(object sender, EventArgs e)
 		{
 			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmReportePedidos(), false, false, false, false, false);

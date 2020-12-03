@@ -256,6 +256,12 @@
     <Compile Include="frmConfirmarVisita.Designer.cs">
       <DependentUpon>frmConfirmarVisita.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGestionarAprobados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionarAprobados.Designer.cs">
+      <DependentUpon>frmGestionarAprobados.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGestionarCarteras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -584,6 +590,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConfirmarVisita.resx">
       <DependentUpon>frmConfirmarVisita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionarAprobados.resx">
+      <DependentUpon>frmGestionarAprobados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionarCarteras.resx">
       <DependentUpon>frmGestionarCarteras.cs</DependentUpon>
