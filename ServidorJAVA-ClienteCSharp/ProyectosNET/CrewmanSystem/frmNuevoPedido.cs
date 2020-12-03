@@ -253,9 +253,17 @@ namespace CrewmanSystem
                 }
                 else
                 {
-                    int idPedido = daoPedido.insertarPedido(pedido);
-                    pedido.idPedido = idPedido;
-                    txtIDOrdenVenta.Text = idPedido.ToString();
+                    int resultado = daoPedido.insertarPedido(pedido);
+                    if (resultado == 0)
+                    {
+                        MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se insertó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        pedido.idPedido = resultado;
+                        txtIDOrdenVenta.Text = resultado.ToString();
+                    }
                 }
             }
         }

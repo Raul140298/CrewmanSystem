@@ -23,8 +23,8 @@ namespace CrewmanSystem
         public frmBuscarAprobado()
         {
             InitializeComponent();
-            dtpRangoIni.Value = DateTime.Today.AddMonths(-1);
-            dtpRangoFin.Value = DateTime.Today.AddMonths(1);
+            dtpRangoIni.Value = DateTime.Today.AddMonths(-3);
+            dtpRangoFin.Value = DateTime.Today.AddMonths(3);
             dgv = dgvPedidos;
             clienteSeleccionado = new ClienteWS.cliente();
             clienteSeleccionado.idCliente = 0;

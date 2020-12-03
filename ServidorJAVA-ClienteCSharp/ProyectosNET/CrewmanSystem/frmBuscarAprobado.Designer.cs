@@ -433,7 +433,7 @@
             this.Controls.Add(this.dgvPedidos);
             this.Controls.Add(this.panel1);
             this.Name = "frmBuscarAprobado";
-            this.Text = "frmBuscarAprobado";
+            this.Text = "Búsqueda de Borradores";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
