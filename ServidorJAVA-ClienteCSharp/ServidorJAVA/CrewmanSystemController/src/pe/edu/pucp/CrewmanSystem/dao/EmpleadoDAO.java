@@ -14,4 +14,5 @@ public interface EmpleadoDAO{
     ArrayList<Empleado>listarPorJefeVentasYZona(int idJefeVentas,String nombre,String apellidoPaterno,String apellidoMaterno,int idZona);
     ArrayList<Integer> obtenerNumClientes(int idEmpleado);
     ArrayList<Integer> obtenerNumVisitados(int idEmpleado);
+    int cambiarContraseña(int idEmpleado,String contraseña);
 }

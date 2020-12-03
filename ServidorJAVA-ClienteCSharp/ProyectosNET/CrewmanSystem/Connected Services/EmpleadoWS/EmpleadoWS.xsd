@@ -4,6 +4,8 @@
   <xs:element name="actualizarEmpleadoResponse" type="tns:actualizarEmpleadoResponse" />
   <xs:element name="actualizarPersona" type="tns:actualizarPersona" />
   <xs:element name="actualizarPersonaResponse" type="tns:actualizarPersonaResponse" />
+  <xs:element name="cambiarContraseña" type="tns:cambiarContraseña" />
+  <xs:element name="cambiarContraseñaResponse" type="tns:cambiarContraseñaResponse" />
   <xs:element name="eliminarEmpleado" type="tns:eliminarEmpleado" />
   <xs:element name="eliminarEmpleadoResponse" type="tns:eliminarEmpleadoResponse" />
   <xs:element name="eliminarPersona" type="tns:eliminarPersona" />
@@ -104,6 +106,7 @@
       <xs:element minOccurs="0" name="grupo" type="xs:string" />
       <xs:element name="idCliente" type="xs:int" />
       <xs:element minOccurs="0" name="lineaCredito" type="tns:lineaCredito" />
+      <xs:element name="montoSeg" type="xs:double" />
       <xs:element minOccurs="0" name="personaContacto" type="tns:personaContacto" />
       <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
       <xs:element minOccurs="0" name="ruc" type="xs:string" />
@@ -367,6 +370,17 @@
       <xs:element minOccurs="0" name="return" type="tns:empleado" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="cambiarContraseña">
+    <xs:sequence>
+      <xs:element name="idEmpleado" type="xs:int" />
+      <xs:element minOccurs="0" name="contraseña" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cambiarContraseñaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="eliminarPersona">
     <xs:sequence>
       <xs:element name="idPersona" type="xs:int" />
@@ -417,16 +431,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarEmpleado">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="empleado" type="tns:empleado" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarEmpleadoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarPorJefeVentas">
     <xs:sequence>
       <xs:element name="idEmpleado" type="xs:int" />
@@ -438,6 +442,16 @@
   <xs:complexType name="listarPorJefeVentasResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:empleado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEmpleado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="empleado" type="tns:empleado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEmpleadoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="obtenerNumClientes">

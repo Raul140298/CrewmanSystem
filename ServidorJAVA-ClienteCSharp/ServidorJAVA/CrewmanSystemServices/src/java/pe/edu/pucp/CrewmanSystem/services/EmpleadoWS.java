@@ -172,4 +172,16 @@ public class EmpleadoWS
         }
         return resultado;
     }
+    
+    @WebMethod(operationName = "cambiarContraseña")
+    public int cambiarContraseña(@WebParam(name = "idEmpleado") int idEmpleado,
+            @WebParam(name = "contraseña") String contraseña) {
+        int resultado = 0;
+        try{
+            resultado = daoEmpleado.cambiarContraseña(idEmpleado, contraseña);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
 }

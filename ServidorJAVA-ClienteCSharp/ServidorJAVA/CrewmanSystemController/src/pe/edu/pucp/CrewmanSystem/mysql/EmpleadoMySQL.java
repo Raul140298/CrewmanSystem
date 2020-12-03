@@ -420,4 +420,28 @@ public class EmpleadoMySQL implements EmpleadoDAO{
         }
         return resultado;
     }
+
+    @Override
+    public int cambiarContraseña(int idEmpleado, String contraseña) {
+        int resultado = 0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            String sql ="{ call CAMBIAR_CONTRASEÑA(?,?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_EMPLEADO", idEmpleado);
+            cs.setString("_CONTRASEÑA", contraseña);
+            resultado = cs.executeUpdate();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }catch(Exception e){
+                System.out.println(e.getMessage());
+            }
+        }
+        return resultado;
+    }
+    
 }

@@ -802,6 +802,9 @@
     <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.actualizarPersonaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.cambiarContraseñaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.eliminarEmpleadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
