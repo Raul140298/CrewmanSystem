@@ -23,7 +23,12 @@ namespace CrewmanSystem
 				Program.empleado.apellidoMaterno;
 
 			lblZona.Text = Program.empleado.zona.nombre;
-			lblDni.Text = Program.empleado.dni;
+
+			this.circularProgressBar1.ProgressColor = Program.colorR;
+			this.circularProgressBar1.Minimum = 0;
+			this.circularProgressBar1.Maximum = Convert.ToInt32(Program.empleado.objetivoVentas);
+			this.circularProgressBar1.Value   = Convert.ToInt32(Program.empleado.sumVentas);
+			this.circularProgressBar1.Text = this.circularProgressBar1.Value.ToString() + "%";
 		}
 	}
 }
