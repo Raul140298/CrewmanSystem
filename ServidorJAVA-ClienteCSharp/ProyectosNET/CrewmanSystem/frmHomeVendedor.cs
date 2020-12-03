@@ -33,7 +33,8 @@ namespace CrewmanSystem
 			this.cpbSumaVentas.Minimum = 0;
 			this.cpbSumaVentas.Maximum = Convert.ToInt32(Program.empleado.objetivoVentas);
 			this.cpbSumaVentas.Value   = Convert.ToInt32(Program.empleado.sumVentas);
-			this.cpbSumaVentas.Text = Convert.ToDouble(this.cpbSumaVentas.Value/this.cpbSumaVentas.Maximum).ToString() + "%";
+			double porcentajeVentas = (double)this.cpbSumaVentas.Value*100 / this.cpbSumaVentas.Maximum;
+			this.cpbSumaVentas.Text = Convert.ToDouble(porcentajeVentas).ToString("N2") + "%";
 
 			this.cpbVisitados.ProgressColor = Program.colorR;
 			this.cpbVisitados.Minimum = 0;
