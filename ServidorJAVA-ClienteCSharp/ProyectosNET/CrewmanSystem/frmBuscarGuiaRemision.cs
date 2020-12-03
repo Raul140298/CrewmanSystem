@@ -18,10 +18,10 @@ namespace CrewmanSystem
         {
             InitializeComponent();
 			dgvGuiasDeRemision.AutoGenerateColumns = false;
-			dtpRangoIniRegistro.Value = DateTime.Today.AddMonths(-1);
-            dtpRangoFinRegistro.Value = DateTime.Today.AddMonths(1);
-			dtpRangoIniTraslado.Value = DateTime.Today.AddMonths(-1);
-			dtpRangoFinTraslado.Value = DateTime.Today.AddMonths(1);
+			dtpRangoIniRegistro.Value = DateTime.Today.AddMonths(-3);
+            dtpRangoFinRegistro.Value = DateTime.Today.AddMonths(3);
+			dtpRangoIniTraslado.Value = DateTime.Today.AddMonths(-3);
+			dtpRangoFinTraslado.Value = DateTime.Today.AddMonths(3);
 			txtMotivoTraslado.Text = "";
             completarTabla();
         }

@@ -29,8 +29,8 @@ namespace CrewmanSystem
 			//idTipo 2 = BUSCAR PEDIDO A PAGAR (SE USA EN NUEVA GUIA)
 			this.idTipo = idTipo;
 			InitializeComponent();
-			dtpRangoIni.Value = DateTime.Today.AddMonths(-1);
-			dtpRangoFin.Value = DateTime.Today.AddMonths(1);
+			dtpRangoIni.Value = DateTime.Today.AddMonths(3);
+			dtpRangoFin.Value = DateTime.Today.AddMonths(3);
 			dgv = dgvPedidos;
 			clienteSeleccionado = new ClienteWS.cliente();
 			clienteSeleccionado.idCliente = 0;

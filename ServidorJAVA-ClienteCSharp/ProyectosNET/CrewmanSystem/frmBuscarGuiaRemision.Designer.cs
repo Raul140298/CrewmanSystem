@@ -74,25 +74,25 @@
             this.panel1.Controls.Add(this.txtMotivoTraslado);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(540, 194);
+            this.panel1.Size = new System.Drawing.Size(888, 239);
             this.panel1.TabIndex = 110;
             // 
             // dtpRangoFinTraslado
             // 
-            this.dtpRangoFinTraslado.Location = new System.Drawing.Point(180, 148);
-            this.dtpRangoFinTraslado.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpRangoFinTraslado.Location = new System.Drawing.Point(240, 182);
+            this.dtpRangoFinTraslado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpRangoFinTraslado.Name = "dtpRangoFinTraslado";
-            this.dtpRangoFinTraslado.Size = new System.Drawing.Size(198, 20);
+            this.dtpRangoFinTraslado.Size = new System.Drawing.Size(263, 22);
             this.dtpRangoFinTraslado.TabIndex = 123;
             // 
             // label5
             // 
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Location = new System.Drawing.Point(36, 148);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(48, 182);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 18);
+            this.label5.Size = new System.Drawing.Size(179, 22);
             this.label5.TabIndex = 122;
             this.label5.Text = "Fecha Traslado Final :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -100,29 +100,27 @@
             // label2
             // 
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Location = new System.Drawing.Point(36, 82);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(48, 101);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 18);
+            this.label2.Size = new System.Drawing.Size(179, 22);
             this.label2.TabIndex = 121;
             this.label2.Text = "Fecha Registro Final :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dtpRangoFinRegistro
             // 
-            this.dtpRangoFinRegistro.Location = new System.Drawing.Point(180, 82);
-            this.dtpRangoFinRegistro.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpRangoFinRegistro.Location = new System.Drawing.Point(240, 101);
+            this.dtpRangoFinRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpRangoFinRegistro.Name = "dtpRangoFinRegistro";
-            this.dtpRangoFinRegistro.Size = new System.Drawing.Size(198, 20);
+            this.dtpRangoFinRegistro.Size = new System.Drawing.Size(263, 22);
             this.dtpRangoFinRegistro.TabIndex = 120;
             // 
             // label4
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Location = new System.Drawing.Point(36, 113);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(48, 139);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 18);
+            this.label4.Size = new System.Drawing.Size(179, 22);
             this.label4.TabIndex = 117;
             this.label4.Text = "Fecha Traslado Inicial :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -130,10 +128,9 @@
             // label3
             // 
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(36, 15);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(48, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 18);
+            this.label3.Size = new System.Drawing.Size(179, 22);
             this.label3.TabIndex = 116;
             this.label3.Text = "Motivo Traslado :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -141,10 +138,9 @@
             // lblID
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Location = new System.Drawing.Point(36, 49);
-            this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblID.Location = new System.Drawing.Point(48, 60);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(134, 18);
+            this.lblID.Size = new System.Drawing.Size(179, 22);
             this.lblID.TabIndex = 115;
             this.lblID.Text = "Fecha Registro Inicial:";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -155,10 +151,10 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(404, 12);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscar.Location = new System.Drawing.Point(539, 15);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(120, 24);
+            this.btnBuscar.Size = new System.Drawing.Size(160, 30);
             this.btnBuscar.TabIndex = 114;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -166,35 +162,36 @@
             // 
             // dtpRangoIniTraslado
             // 
-            this.dtpRangoIniTraslado.Location = new System.Drawing.Point(180, 113);
-            this.dtpRangoIniTraslado.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpRangoIniTraslado.Location = new System.Drawing.Point(240, 139);
+            this.dtpRangoIniTraslado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpRangoIniTraslado.Name = "dtpRangoIniTraslado";
-            this.dtpRangoIniTraslado.Size = new System.Drawing.Size(198, 20);
+            this.dtpRangoIniTraslado.Size = new System.Drawing.Size(263, 22);
             this.dtpRangoIniTraslado.TabIndex = 113;
             // 
             // dtpRangoIniRegistro
             // 
-            this.dtpRangoIniRegistro.Location = new System.Drawing.Point(180, 49);
-            this.dtpRangoIniRegistro.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpRangoIniRegistro.Location = new System.Drawing.Point(240, 60);
+            this.dtpRangoIniRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpRangoIniRegistro.Name = "dtpRangoIniRegistro";
-            this.dtpRangoIniRegistro.Size = new System.Drawing.Size(198, 20);
+            this.dtpRangoIniRegistro.Size = new System.Drawing.Size(263, 22);
             this.dtpRangoIniRegistro.TabIndex = 112;
             // 
             // txtMotivoTraslado
             // 
-            this.txtMotivoTraslado.Location = new System.Drawing.Point(180, 15);
-            this.txtMotivoTraslado.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMotivoTraslado.Location = new System.Drawing.Point(240, 18);
+            this.txtMotivoTraslado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMotivoTraslado.Name = "txtMotivoTraslado";
-            this.txtMotivoTraslado.Size = new System.Drawing.Size(198, 20);
+            this.txtMotivoTraslado.Size = new System.Drawing.Size(263, 22);
             this.txtMotivoTraslado.TabIndex = 110;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dgvGuiasDeRemision);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 194);
+            this.panel2.Location = new System.Drawing.Point(0, 239);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(540, 203);
+            this.panel2.Size = new System.Drawing.Size(888, 250);
             this.panel2.TabIndex = 111;
             // 
             // dgvGuiasDeRemision
@@ -227,7 +224,7 @@
             this.dgvGuiasDeRemision.EnableHeadersVisualStyles = false;
             this.dgvGuiasDeRemision.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.dgvGuiasDeRemision.Location = new System.Drawing.Point(0, 0);
-            this.dgvGuiasDeRemision.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvGuiasDeRemision.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvGuiasDeRemision.MultiSelect = false;
             this.dgvGuiasDeRemision.Name = "dgvGuiasDeRemision";
             this.dgvGuiasDeRemision.ReadOnly = true;
@@ -247,7 +244,7 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvGuiasDeRemision.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvGuiasDeRemision.RowTemplate.Height = 24;
-            this.dgvGuiasDeRemision.Size = new System.Drawing.Size(540, 203);
+            this.dgvGuiasDeRemision.Size = new System.Drawing.Size(888, 250);
             this.dgvGuiasDeRemision.TabIndex = 4;
             this.dgvGuiasDeRemision.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGuiasDeRemision_CellContentClick);
             this.dgvGuiasDeRemision.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvGuiasDeRemision_CellFormatting);
@@ -259,7 +256,7 @@
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
-            this.ID.Width = 43;
+            this.ID.Width = 50;
             // 
             // ID_PEDIDO
             // 
@@ -267,7 +264,7 @@
             this.ID_PEDIDO.MinimumWidth = 6;
             this.ID_PEDIDO.Name = "ID_PEDIDO";
             this.ID_PEDIDO.ReadOnly = true;
-            this.ID_PEDIDO.Width = 91;
+            this.ID_PEDIDO.Width = 106;
             // 
             // FECHA_EMISION
             // 
@@ -278,7 +275,7 @@
             this.FECHA_EMISION.MinimumWidth = 6;
             this.FECHA_EMISION.Name = "FECHA_EMISION";
             this.FECHA_EMISION.ReadOnly = true;
-            this.FECHA_EMISION.Width = 124;
+            this.FECHA_EMISION.Width = 148;
             // 
             // MOTIVO_TRASLADO
             // 
@@ -287,7 +284,7 @@
             this.MOTIVO_TRASLADO.MinimumWidth = 6;
             this.MOTIVO_TRASLADO.Name = "MOTIVO_TRASLADO";
             this.MOTIVO_TRASLADO.ReadOnly = true;
-            this.MOTIVO_TRASLADO.Width = 133;
+            this.MOTIVO_TRASLADO.Width = 156;
             // 
             // FECHA_REGISTRO
             // 
@@ -298,7 +295,7 @@
             this.FECHA_REGISTRO.MinimumWidth = 6;
             this.FECHA_REGISTRO.Name = "FECHA_REGISTRO";
             this.FECHA_REGISTRO.ReadOnly = true;
-            this.FECHA_REGISTRO.Width = 128;
+            this.FECHA_REGISTRO.Width = 151;
             // 
             // FECHA_TRASLADO
             // 
@@ -309,17 +306,18 @@
             this.FECHA_TRASLADO.MinimumWidth = 6;
             this.FECHA_TRASLADO.Name = "FECHA_TRASLADO";
             this.FECHA_TRASLADO.ReadOnly = true;
-            this.FECHA_TRASLADO.Width = 131;
+            this.FECHA_TRASLADO.Width = 153;
             // 
             // frmBuscarGuiaRemision
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 397);
+            this.ClientSize = new System.Drawing.Size(888, 489);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmBuscarGuiaRemision";
-            this.Text = "frmBuscarGuiaRemision";
+            this.Text = "Búsqueda de Guías de Remisión";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

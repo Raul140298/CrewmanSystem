@@ -20,8 +20,8 @@ namespace CrewmanSystem
 			daoPromocion = new PromocionWS.PromocionWSClient();
 			InitializeComponent();
 			dgv = dgvPromociones;
-			dtpFechaInicio.Value = dtpFechaInicio.MinDate;
-			dtpFechaFIn.Value = dtpFechaFIn.MaxDate;
+			dtpFechaInicio.Value = DateTime.Today.AddMonths(-3);
+			dtpFechaFIn.Value = DateTime.Today.AddMonths(3);
 			completarTabla();
 			#region colores de seleccion
 			dgvPromociones.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
