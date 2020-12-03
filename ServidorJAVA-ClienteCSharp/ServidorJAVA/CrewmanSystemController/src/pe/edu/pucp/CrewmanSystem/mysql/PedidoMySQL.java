@@ -208,7 +208,84 @@ public class PedidoMySQL implements PedidoDAO{
         }
         return pedidos;
     }
-
+    @Override
+    public ArrayList<Pedido>listarPedidosSinGuia(int idVendedor,String razonSocial,String grupo, Date fechaIni, Date fechaFin, String tipoPedido, String estadoPedido)
+    {
+        EmpleadoDAO daoEmpleado = new EmpleadoMySQL();
+        ArrayList<Pedido> pedidos = new ArrayList<>();
+        ArrayList<Pedido> pedidos2 = new ArrayList<>();
+        int contador;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            String sql ="{ call LISTAR_PEDIDO (?,?,?,?,?,?,?)}";
+            cs = con.prepareCall(sql);
+            cs.setInt("_ID_VENDEDOR", idVendedor);
+            cs.setString("_RAZON_SOCIAL", razonSocial);
+            cs.setString("_GRUPO", grupo);
+            cs.setDate("_FECHA_INI", new java.sql.Date(fechaIni.getTime()));
+            cs.setDate("_FECHA_FIN", new java.sql.Date(fechaFin.getTime()));
+            cs.setString("_TIPO_PEDIDO", tipoPedido);
+            cs.setString("_ESTADO_PEDIDO", estadoPedido);
+            cs.executeUpdate();
+            rs = cs.getResultSet();
+            while(rs.next()){
+                Pedido pedido = new Pedido();
+                Cliente cliente = new Cliente();
+                Empleado vendedor = new Empleado();
+                Persona persona = new Persona();
+                
+                pedido.setIdPedido(rs.getInt("ID_PEDIDO"));
+                
+                cliente.setIdCliente(rs.getInt("ID_CLIENTE"));
+                cliente.setRuc(rs.getString("RUC"));
+                cliente.setRazonSocial(rs.getString("RAZON_SOCIAL"));
+                cliente.setGrupo(rs.getString("GRUPO"));
+                cliente.setTipoEmpresa(rs.getString("TIPOCLIENTE"));
+                cliente.setDireccion(rs.getString("DIRECCION"));
+                pedido.setCliente(cliente);
+                
+                vendedor.setIdEmpleado(rs.getInt("ID_EMPLEADO"));
+                daoEmpleado.obtenerEmpleado(vendedor);
+                pedido.setEmpleado(vendedor);
+                
+                pedido.setFechaEstim(rs.getDate("FECHA_ESTIMADA"));
+                pedido.setFechaAprobado(rs.getDate("FECHA_APROBADO"));
+                pedido.setFechaRegistro(rs.getDate("FECHA_REGISTRO"));
+                pedido.setMontoTotal(rs.getDouble("MONTO_TOTAL"));
+                pedido.setMontoPagar(rs.getDouble("MONTO_PAGAR"));
+                pedido.setDireccionEntrega(rs.getString("DIRECCION_ENTREGA"));
+                pedido.setTipoPedido(TipoPedido.valueOf(rs.getString("TIPO_PEDIDO")));
+                pedido.setEstadoPedido(EstadoPedido.valueOf(rs.getString("ESTADO_PEDIDO")));
+                pedidos.add(pedido);
+            }
+            rs.close();
+            sql = "{call CONTAR_GUIAS_POR_PEDIDO(?)}";
+            for(Pedido p : pedidos){
+                cs = con.prepareCall(sql);
+                cs.setInt("_ID_PEDIDO", p.getIdPedido());
+                cs.executeUpdate();
+                rs = cs.getResultSet();
+                rs.next();
+                contador=rs.getInt("CANT");
+                if(contador==0)
+                    pedidos2.add(p);
+                
+                rs.close();         
+            }
+              
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                rs.close();
+                con.close();
+            }catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return pedidos2;
+    }
     @Override
     public ArrayList<Pedido> generarReporte(String idPedido) {
         ArrayList<Pedido> eae=new ArrayList<>();

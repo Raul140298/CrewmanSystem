@@ -79,6 +79,25 @@ public class PedidoWS
         return misPedidos;
     }
     
+    @WebMethod(operationName = "listarPedidosSinGuia")
+    public ArrayList<Pedido> listarPedidosSinGuia(@WebParam(name = "idVendedor") int idVendedor, 
+            @WebParam(name = "razonSocial") String razonSocial, 
+            @WebParam(name = "grupo") String grupo, 
+            @WebParam(name = "fechaIni") Date fechaIni, 
+            @WebParam(name = "fechaFin") Date fechaFin, 
+            @WebParam(name = "tipoPedido") String tipoPedido, 
+            @WebParam(name = "estadoPedido") String estadoPedido) 
+    {
+        ArrayList<Pedido> misPedidos = new ArrayList<>();
+        try
+        {
+            misPedidos = daoPedido.listarPedidosSinGuia(idVendedor,razonSocial, grupo,fechaIni, fechaFin, tipoPedido, estadoPedido);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return misPedidos;
+    }
+    
     @WebMethod(operationName = "generarReporte")
     public ArrayList<Pedido> generarReporte(@WebParam(name = "idPedido") String idPedido) {
         ArrayList<Pedido> misPedidos = new ArrayList<>();

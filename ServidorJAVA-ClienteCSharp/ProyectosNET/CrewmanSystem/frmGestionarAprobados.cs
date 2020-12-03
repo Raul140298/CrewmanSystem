@@ -10,51 +10,49 @@ using System.Windows.Forms;
 
 namespace CrewmanSystem
 {
-	public partial class frmGestionarPedidos : Form
-	{
-		public static PedidoWS.PedidoWSClient daoPedido;
-		public static PedidoWS.pedido pedidoSeleccionado;
+    public partial class frmGestionarAprobados : Form
+    {
+        public static PedidoWS.PedidoWSClient daoPedido;
+        public static PedidoWS.pedido pedidoSeleccionado;
 		public static DataGridView dgv;
 		private ClienteWS.ClienteWSClient daoCliente;
-		
-		public frmGestionarPedidos()
-		{
-			daoPedido = new PedidoWS.PedidoWSClient();
-			daoCliente = new ClienteWS.ClienteWSClient();
+        public frmGestionarAprobados()
+        {
+            daoPedido = new PedidoWS.PedidoWSClient();
+            daoCliente = new ClienteWS.ClienteWSClient();
 
-			InitializeComponent();
-			
+            InitializeComponent();
 			dgv = dgvPedidos;
-			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos(Program.empleado.idEmpleado, "", "", DateTime.MinValue, DateTime.MaxValue, "AMBOS", "AMBOS");
-			dgvPedidos.AutoGenerateColumns = false;
-			if (misPedidos != null)
-				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
-			else
-				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>();
-			if(Program.empleado.cargo.nombre == "VENDEDOR")
+			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos(Program.empleado.idEmpleado, "", "", DateTime.MinValue, DateTime.MaxValue, "PEDIDO", "EN_PROCESO");
+            dgvPedidos.AutoGenerateColumns = false;
+            if (misPedidos != null)
+                dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
+            else
+                dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>();
+            if (Program.empleado.cargo.nombre == "VENDEDOR")
             {
-				dgvPedidos.Columns["NOMBRE"].Visible = false;
-				dgvPedidos.Columns["APELLIDO_PATERNO"].Visible = false;
-				dgvPedidos.Columns["APELLIDO_MATERNO"].Visible = false;
-			}
+                dgvPedidos.Columns["NOMBRE"].Visible = false;
+                dgvPedidos.Columns["APELLIDO_PATERNO"].Visible = false;
+                dgvPedidos.Columns["APELLIDO_MATERNO"].Visible = false;
+            }
 
-			#region colores de seleccion
-			dgvPedidos.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dgvPedidos.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+            #region colores de seleccion
+            dgvPedidos.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvPedidos.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dgvPedidos.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dgvPedidos.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+            dgvPedidos.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvPedidos.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dgvPedidos.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dgvPedidos.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
-			#endregion
-		}
+            dgvPedidos.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+            dgvPedidos.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+            #endregion
+        }
 
-		private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+		private void dgvPedidos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
 		{
-            //castear objetos y mostrar valor determinado
-            try
-            {
+			//castear objetos y mostrar valor determinado
+			try
+			{
 				PedidoWS.pedido pedido = dgvPedidos.Rows[e.RowIndex].DataBoundItem
 				as PedidoWS.pedido;
 				dgvPedidos.Rows[e.RowIndex].Cells["RUC"].Value = pedido.cliente.ruc;
@@ -74,7 +72,7 @@ namespace CrewmanSystem
 				if (fechaEstimada.Year > 2000) fechaEstimadaStr = fechaEstimada.ToString("dd/MM/yyyy");
 				dgvPedidos.Rows[e.RowIndex].Cells["FECHA_ESTIMADA"].Value = fechaEstimadaStr;
 			}
-            catch (Exception){ }
+			catch (Exception) { }
 		}
 
 		private void dgvPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -102,7 +100,7 @@ namespace CrewmanSystem
 		public static void eliminar()
 		{
 			pedidoSeleccionado = (PedidoWS.pedido)dgv.CurrentRow.DataBoundItem;
-			daoPedido.eliminarPedido(pedidoSeleccionado.idPedido);
+			daoPedido.eliminarPedidoEnProceso(pedidoSeleccionado.idPedido);
 		}
-    }
+	}
 }

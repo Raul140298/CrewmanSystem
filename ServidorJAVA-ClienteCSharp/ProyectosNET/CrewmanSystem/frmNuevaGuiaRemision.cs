@@ -13,9 +13,14 @@ namespace CrewmanSystem
     public partial class frmNuevaGuiaRemision : Form
     {
         PedidoWS.pedido pedidoSeleccionado;
+        PedidoWS.PedidoWSClient daoPedido;
+        GuiaRemisionWS.GuiaRemisionWSClient daoGuiaRemision;
+       
         public frmNuevaGuiaRemision()
         {
             pedidoSeleccionado = new PedidoWS.pedido();
+            daoGuiaRemision = new GuiaRemisionWS.GuiaRemisionWSClient();
+            daoPedido = new PedidoWS.PedidoWSClient();
             InitializeComponent();
         }
 
@@ -26,6 +31,36 @@ namespace CrewmanSystem
             {
                 pedidoSeleccionado = frmBuscarPedido.pedidoSeleccionado;
                 txtIdPedido.Text = pedidoSeleccionado.idPedido.ToString();
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            GuiaRemisionWS.guiaRemision guiaRemision = new GuiaRemisionWS.guiaRemision();
+            int resultado=daoPedido.entregarPedido(pedidoSeleccionado.idPedido);
+            if (resultado == 0)
+            {
+                MessageBox.Show("No se entrego el pedido", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            guiaRemision.motivoTraslado = txtMotivoTraslado.Text;
+            guiaRemision.pedido = new GuiaRemisionWS.pedido();
+            guiaRemision.pedido.idPedido = pedidoSeleccionado.idPedido;
+            guiaRemision.fechaRegistroSpecified = true;
+            guiaRemision.fechaTrasladoSpecified = true;
+            guiaRemision.fechaRegistro = dtpRangoIniRegistro.Value;
+            guiaRemision.fechaTraslado = dtpRangoIniTraslado.Value;
+
+            resultado = daoGuiaRemision.insertarGuiaRemision(guiaRemision);
+            if(resultado == 0)
+            {
+                MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Se insertó correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtIdGuiaRemision.Text = resultado.ToString();
             }
         }
     }

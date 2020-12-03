@@ -50,15 +50,12 @@
             this.btnEmpProducto = new FontAwesome.Sharp.IconButton();
             this.btnEmpGestionProductos = new FontAwesome.Sharp.IconButton();
             this.pnlJefeDeVentas = new System.Windows.Forms.Panel();
+            this.btnPerfil = new FontAwesome.Sharp.IconButton();
             this.pnlGestionClientes = new System.Windows.Forms.Panel();
             this.btnClientes = new FontAwesome.Sharp.IconButton();
             this.btnGestionClientes = new FontAwesome.Sharp.IconButton();
             this.btnCumplimientoDeMetas = new FontAwesome.Sharp.IconButton();
             this.pnlGestionPedidos = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.btnFactura = new FontAwesome.Sharp.IconButton();
-            this.btnPedReporte = new FontAwesome.Sharp.IconButton();
             this.btnPedido = new FontAwesome.Sharp.IconButton();
             this.btnReportePedidos = new FontAwesome.Sharp.IconButton();
             this.pnlGestionEmpleados = new System.Windows.Forms.Panel();
@@ -92,7 +89,11 @@
             this.btnMinimizar = new FontAwesome.Sharp.IconButton();
             this.btnMaximizar = new FontAwesome.Sharp.IconButton();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.btnPerfil = new FontAwesome.Sharp.IconButton();
+            this.btnAprobados = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btnFactura = new FontAwesome.Sharp.IconButton();
+            this.btnPedReporte = new FontAwesome.Sharp.IconButton();
             this.pnlContenedor.SuspendLayout();
             this.pnlChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -513,11 +514,37 @@
             this.pnlJefeDeVentas.TabIndex = 0;
             this.pnlJefeDeVentas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlJefeDeVentas_MouseDown);
             // 
+            // btnPerfil
+            // 
+            this.btnPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnPerfil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPerfil.FlatAppearance.BorderSize = 0;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnPerfil.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPerfil.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
+            this.btnPerfil.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnPerfil.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPerfil.IconSize = 20;
+            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfil.Location = new System.Drawing.Point(0, 1055);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnPerfil.Rotation = 0D;
+            this.btnPerfil.Size = new System.Drawing.Size(264, 45);
+            this.btnPerfil.TabIndex = 32;
+            this.btnPerfil.Text = "  Mi Perfil";
+            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPerfil.UseCompatibleTextRendering = true;
+            this.btnPerfil.UseVisualStyleBackColor = false;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click_1);
+            // 
             // pnlGestionClientes
             // 
             this.pnlGestionClientes.Controls.Add(this.btnClientes);
             this.pnlGestionClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlGestionClientes.Location = new System.Drawing.Point(0, 945);
+            this.pnlGestionClientes.Location = new System.Drawing.Point(0, 998);
             this.pnlGestionClientes.Name = "pnlGestionClientes";
             this.pnlGestionClientes.Size = new System.Drawing.Size(264, 57);
             this.pnlGestionClientes.TabIndex = 30;
@@ -558,7 +585,7 @@
             this.btnGestionClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGestionClientes.IconSize = 20;
             this.btnGestionClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGestionClientes.Location = new System.Drawing.Point(0, 900);
+            this.btnGestionClientes.Location = new System.Drawing.Point(0, 953);
             this.btnGestionClientes.Name = "btnGestionClientes";
             this.btnGestionClientes.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnGestionClientes.Rotation = 0D;
@@ -584,7 +611,7 @@
             this.btnCumplimientoDeMetas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCumplimientoDeMetas.IconSize = 20;
             this.btnCumplimientoDeMetas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCumplimientoDeMetas.Location = new System.Drawing.Point(0, 855);
+            this.btnCumplimientoDeMetas.Location = new System.Drawing.Point(0, 908);
             this.btnCumplimientoDeMetas.Name = "btnCumplimientoDeMetas";
             this.btnCumplimientoDeMetas.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnCumplimientoDeMetas.Rotation = 0D;
@@ -603,103 +630,14 @@
             this.pnlGestionPedidos.Controls.Add(this.iconButton2);
             this.pnlGestionPedidos.Controls.Add(this.btnFactura);
             this.pnlGestionPedidos.Controls.Add(this.btnPedReporte);
+            this.pnlGestionPedidos.Controls.Add(this.btnAprobados);
             this.pnlGestionPedidos.Controls.Add(this.btnPedido);
             this.pnlGestionPedidos.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlGestionPedidos.Location = new System.Drawing.Point(0, 615);
             this.pnlGestionPedidos.Name = "pnlGestionPedidos";
-            this.pnlGestionPedidos.Size = new System.Drawing.Size(264, 240);
+            this.pnlGestionPedidos.Size = new System.Drawing.Size(264, 293);
             this.pnlGestionPedidos.TabIndex = 26;
             this.pnlGestionPedidos.Visible = false;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 16;
-            this.iconButton1.Location = new System.Drawing.Point(0, 184);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-            this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(264, 45);
-            this.iconButton1.TabIndex = 8;
-            this.iconButton1.Text = "Quejas";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 16;
-            this.iconButton2.Location = new System.Drawing.Point(0, 139);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-            this.iconButton2.Rotation = 0D;
-            this.iconButton2.Size = new System.Drawing.Size(264, 45);
-            this.iconButton2.TabIndex = 6;
-            this.iconButton2.Text = "Guías de Remisión";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.UseVisualStyleBackColor = false;
-            // 
-            // btnFactura
-            // 
-            this.btnFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-            this.btnFactura.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFactura.FlatAppearance.BorderSize = 0;
-            this.btnFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFactura.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnFactura.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnFactura.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnFactura.IconColor = System.Drawing.Color.Black;
-            this.btnFactura.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFactura.IconSize = 16;
-            this.btnFactura.Location = new System.Drawing.Point(0, 94);
-            this.btnFactura.Name = "btnFactura";
-            this.btnFactura.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-            this.btnFactura.Rotation = 0D;
-            this.btnFactura.Size = new System.Drawing.Size(264, 45);
-            this.btnFactura.TabIndex = 5;
-            this.btnFactura.Text = "Facturas";
-            this.btnFactura.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFactura.UseVisualStyleBackColor = false;
-            this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
-            // 
-            // btnPedReporte
-            // 
-            this.btnPedReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-            this.btnPedReporte.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPedReporte.FlatAppearance.BorderSize = 0;
-            this.btnPedReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedReporte.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnPedReporte.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPedReporte.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnPedReporte.IconColor = System.Drawing.Color.Black;
-            this.btnPedReporte.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPedReporte.IconSize = 16;
-            this.btnPedReporte.Location = new System.Drawing.Point(0, 49);
-            this.btnPedReporte.Name = "btnPedReporte";
-            this.btnPedReporte.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-            this.btnPedReporte.Rotation = 0D;
-            this.btnPedReporte.Size = new System.Drawing.Size(264, 45);
-            this.btnPedReporte.TabIndex = 2;
-            this.btnPedReporte.Text = "Reporte";
-            this.btnPedReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPedReporte.UseVisualStyleBackColor = false;
-            this.btnPedReporte.Click += new System.EventHandler(this.btnPedReporte_Click);
             // 
             // btnPedido
             // 
@@ -719,7 +657,7 @@
             this.btnPedido.Rotation = 0D;
             this.btnPedido.Size = new System.Drawing.Size(264, 49);
             this.btnPedido.TabIndex = 1;
-            this.btnPedido.Text = "Pedidos";
+            this.btnPedido.Text = "Borradores";
             this.btnPedido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPedido.UseVisualStyleBackColor = false;
             this.btnPedido.Click += new System.EventHandler(this.btnPedidos_Click);
@@ -1396,31 +1334,119 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnPerfil
+            // btnAprobados
             // 
-            this.btnPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnPerfil.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPerfil.FlatAppearance.BorderSize = 0;
-            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfil.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnPerfil.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPerfil.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
-            this.btnPerfil.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnPerfil.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPerfil.IconSize = 20;
-            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPerfil.Location = new System.Drawing.Point(0, 1002);
-            this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btnPerfil.Rotation = 0D;
-            this.btnPerfil.Size = new System.Drawing.Size(264, 45);
-            this.btnPerfil.TabIndex = 32;
-            this.btnPerfil.Text = "  Mi Perfil";
-            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPerfil.UseCompatibleTextRendering = true;
-            this.btnPerfil.UseVisualStyleBackColor = false;
-            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click_1);
+            this.btnAprobados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+            this.btnAprobados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAprobados.FlatAppearance.BorderSize = 0;
+            this.btnAprobados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAprobados.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnAprobados.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAprobados.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAprobados.IconColor = System.Drawing.Color.Black;
+            this.btnAprobados.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAprobados.IconSize = 16;
+            this.btnAprobados.Location = new System.Drawing.Point(0, 49);
+            this.btnAprobados.Name = "btnAprobados";
+            this.btnAprobados.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+            this.btnAprobados.Rotation = 0D;
+            this.btnAprobados.Size = new System.Drawing.Size(264, 49);
+            this.btnAprobados.TabIndex = 9;
+            this.btnAprobados.Text = "Pedidos";
+            this.btnAprobados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAprobados.UseVisualStyleBackColor = false;
+            this.btnAprobados.Click += new System.EventHandler(this.btnAprobados_Click);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 16;
+            this.iconButton1.Location = new System.Drawing.Point(0, 233);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+            this.iconButton1.Rotation = 0D;
+            this.iconButton1.Size = new System.Drawing.Size(264, 45);
+            this.iconButton1.TabIndex = 13;
+            this.iconButton1.Text = "Quejas";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.btnEmpQuejas_Click);
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton2.IconColor = System.Drawing.Color.Black;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 16;
+            this.iconButton2.Location = new System.Drawing.Point(0, 188);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+            this.iconButton2.Rotation = 0D;
+            this.iconButton2.Size = new System.Drawing.Size(264, 45);
+            this.iconButton2.TabIndex = 12;
+            this.iconButton2.Text = "Guías de Remisión";
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.UseVisualStyleBackColor = false;
+            // 
+            // btnFactura
+            // 
+            this.btnFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+            this.btnFactura.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFactura.FlatAppearance.BorderSize = 0;
+            this.btnFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFactura.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnFactura.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnFactura.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnFactura.IconColor = System.Drawing.Color.Black;
+            this.btnFactura.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFactura.IconSize = 16;
+            this.btnFactura.Location = new System.Drawing.Point(0, 143);
+            this.btnFactura.Name = "btnFactura";
+            this.btnFactura.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+            this.btnFactura.Rotation = 0D;
+            this.btnFactura.Size = new System.Drawing.Size(264, 45);
+            this.btnFactura.TabIndex = 11;
+            this.btnFactura.Text = "Facturas";
+            this.btnFactura.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFactura.UseVisualStyleBackColor = false;
+            this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
+            // 
+            // btnPedReporte
+            // 
+            this.btnPedReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+            this.btnPedReporte.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPedReporte.FlatAppearance.BorderSize = 0;
+            this.btnPedReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPedReporte.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnPedReporte.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPedReporte.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnPedReporte.IconColor = System.Drawing.Color.Black;
+            this.btnPedReporte.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPedReporte.IconSize = 16;
+            this.btnPedReporte.Location = new System.Drawing.Point(0, 98);
+            this.btnPedReporte.Name = "btnPedReporte";
+            this.btnPedReporte.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+            this.btnPedReporte.Rotation = 0D;
+            this.btnPedReporte.Size = new System.Drawing.Size(264, 45);
+            this.btnPedReporte.TabIndex = 10;
+            this.btnPedReporte.Text = "Reporte";
+            this.btnPedReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPedReporte.UseVisualStyleBackColor = false;
+            this.btnPedReporte.Click += new System.EventHandler(this.btnPedReporte_Click);
             // 
             // frmVentanaPrincipal
             // 
@@ -1517,13 +1543,14 @@
         private FontAwesome.Sharp.IconButton btnGestionClientes;
         private FontAwesome.Sharp.IconButton btnCumplimientoDeMetas;
         private System.Windows.Forms.Panel pnlGestionPedidos;
-        private FontAwesome.Sharp.IconButton btnPedReporte;
         private FontAwesome.Sharp.IconButton btnPedido;
-		private FontAwesome.Sharp.IconButton iconButton2;
-		private FontAwesome.Sharp.IconButton btnFactura;
-		private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton btnSegmentacion;
         private FontAwesome.Sharp.IconButton btnEmpPerfil;
         private FontAwesome.Sharp.IconButton btnPerfil;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btnFactura;
+        private FontAwesome.Sharp.IconButton btnPedReporte;
+        private FontAwesome.Sharp.IconButton btnAprobados;
     }
 }

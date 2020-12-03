@@ -77,7 +77,7 @@ namespace CrewmanSystem
 			string miTipo = cboTipo.SelectedItem.ToString();
 			if(idTipo == 2)
             {
-				//misPedidos = daoPedido.listarPedidosSinGuia(Program.empleado.idEmpleado, txtRuc.Text, txtGrupo.Text, dtpRangoIni.Value, dtpRangoFin.Value, miTipo, miEstado);
+				misPedidos = daoPedido.listarPedidosSinGuia(Program.empleado.idEmpleado, txtRuc.Text, txtGrupo.Text, dtpRangoIni.Value, dtpRangoFin.Value, miTipo, miEstado);
             }
 			else
 			{
