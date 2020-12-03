@@ -28,7 +28,17 @@ namespace CrewmanSystem
             txtTelefono1.Text = empleado.telefono1.ToString();
             txtTelefono2.Text = empleado.telefono2.ToString();
             txtCorreo.Text = empleado.correo;
-            txtUsuario.Text = empleado.usuario;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txtContraseña.Text == "") {
+                MessageBox.Show("Debe indicar una contraseña",
+                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
+
         }
     }
 }
