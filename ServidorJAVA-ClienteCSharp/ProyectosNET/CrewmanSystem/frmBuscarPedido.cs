@@ -29,7 +29,7 @@ namespace CrewmanSystem
 			//idTipo 2 = BUSCAR PEDIDO A PAGAR (SE USA EN NUEVA GUIA)
 			this.idTipo = idTipo;
 			InitializeComponent();
-			dtpRangoIni.Value = DateTime.Today.AddMonths(3);
+			dtpRangoIni.Value = DateTime.Today.AddMonths(-3);
 			dtpRangoFin.Value = DateTime.Today.AddMonths(3);
 			dgv = dgvPedidos;
 			clienteSeleccionado = new ClienteWS.cliente();
@@ -134,6 +134,7 @@ namespace CrewmanSystem
 
 		private void dgvPedidos_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
 		{
+			if (idTipo == 1 || idTipo == 2) return;
 			//Preguntar al profe
 			if (e.StateChanged != DataGridViewElementStates.Selected)
 			{
