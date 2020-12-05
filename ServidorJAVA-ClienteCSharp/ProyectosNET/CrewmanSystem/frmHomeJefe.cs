@@ -26,22 +26,26 @@ namespace CrewmanSystem
 				Program.empleado.apellidoMaterno;
 
 			lblZona.Text = Program.empleado.zona.nombre;
+			actualizarMapa();
+		}
 
-			//this.circularProgressBar1.ProgressColor = Program.colorR;
-			//this.circularProgressBar1.Minimum = 0;
-			//this.circularProgressBar1.Maximum = Convert.ToInt32(Program.empleado.objetivoVentas);
-			//this.circularProgressBar1.Value = Convert.ToInt32(Program.empleado.sumVentas);
-			//this.circularProgressBar1.Text = this.circularProgressBar1.Value.ToString() + "%";
-
+		private void actualizarMapa()
+        {
+			chartVentas.Series.Clear();
 			BindingList<EmpleadoWS.empleado> misEmpleados;
-			EmpleadoWS.empleado[] empleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado,"","","");
+			EmpleadoWS.empleado[] empleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado, "", "", "");
 			if (empleados == null || empleados.Length < 1) misEmpleados = new BindingList<EmpleadoWS.empleado>();
 			else misEmpleados = new BindingList<EmpleadoWS.empleado>(empleados.ToList());
-			
-			foreach(EmpleadoWS.empleado e in empleados)
-            {
-				chartVentas.Series["Suma Ventas"].Points.AddXY(e.apellidoPaterno + " " + e.apellidoMaterno + ", " + e.nombre, e.sumVentas);
+			chartVentas.Series.Add("Suma Ventas");
+			foreach (EmpleadoWS.empleado emp in empleados)
+			{
+				chartVentas.Series["Suma Ventas"].Points.AddXY(emp.apellidoPaterno + " " + emp.apellidoMaterno + ", " + emp.nombre, emp.sumVentas);
 			}
 		}
-	}
+
+        private void btnRecarga_Click(object sender, EventArgs e)
+		{
+			actualizarMapa();
+		}
+    }
 }

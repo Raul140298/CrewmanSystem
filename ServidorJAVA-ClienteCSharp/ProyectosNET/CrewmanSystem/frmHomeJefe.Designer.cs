@@ -28,12 +28,12 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.pnlChildForm = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnRecarga = new FontAwesome.Sharp.IconButton();
             this.chartVentas = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblZona = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@
             // 
             // pnlChildForm
             // 
-            this.pnlChildForm.Controls.Add(this.iconButton1);
+            this.pnlChildForm.Controls.Add(this.btnRecarga);
             this.pnlChildForm.Controls.Add(this.chartVentas);
             this.pnlChildForm.Controls.Add(this.lblNombre);
             this.pnlChildForm.Controls.Add(this.lblZona);
@@ -56,49 +56,54 @@
             this.pnlChildForm.Size = new System.Drawing.Size(997, 850);
             this.pnlChildForm.TabIndex = 4;
             // 
-            // iconButton1
+            // btnRecarga
             // 
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 48;
-            this.iconButton1.Location = new System.Drawing.Point(874, 108);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(99, 80);
-            this.iconButton1.TabIndex = 59;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.btnRecarga.BackColor = System.Drawing.Color.Transparent;
+            this.btnRecarga.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRecarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecarga.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnRecarga.ForeColor = System.Drawing.Color.Transparent;
+            this.btnRecarga.IconChar = FontAwesome.Sharp.IconChar.Sync;
+            this.btnRecarga.IconColor = System.Drawing.Color.Black;
+            this.btnRecarga.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRecarga.IconSize = 48;
+            this.btnRecarga.Location = new System.Drawing.Point(873, 129);
+            this.btnRecarga.Name = "btnRecarga";
+            this.btnRecarga.Rotation = 0D;
+            this.btnRecarga.Size = new System.Drawing.Size(42, 46);
+            this.btnRecarga.TabIndex = 59;
+            this.btnRecarga.UseVisualStyleBackColor = false;
+            this.btnRecarga.Click += new System.EventHandler(this.btnRecarga_Click);
             // 
             // chartVentas
             // 
             this.chartVentas.BackColor = System.Drawing.SystemColors.Control;
             this.chartVentas.BackSecondaryColor = System.Drawing.SystemColors.Control;
             this.chartVentas.BorderlineColor = System.Drawing.SystemColors.Control;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisX2.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-            chartArea1.BackColor = System.Drawing.SystemColors.Control;
-            chartArea1.Name = "ChartArea1";
-            this.chartVentas.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.SystemColors.Control;
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.chartVentas.Legends.Add(legend1);
+            chartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.AxisX2.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+            chartArea2.BackColor = System.Drawing.SystemColors.Control;
+            chartArea2.Name = "ChartArea1";
+            this.chartVentas.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.SystemColors.Control;
+            legend2.Enabled = false;
+            legend2.Name = "Legend1";
+            this.chartVentas.Legends.Add(legend2);
             this.chartVentas.Location = new System.Drawing.Point(39, 108);
             this.chartVentas.Name = "chartVentas";
-            series1.ChartArea = "ChartArea1";
-            series1.IsValueShownAsLabel = true;
-            series1.Legend = "Legend1";
-            series1.Name = "Suma Ventas";
-            this.chartVentas.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.IsValueShownAsLabel = true;
+            series2.Legend = "Legend1";
+            series2.Name = "Suma Ventas";
+            this.chartVentas.Series.Add(series2);
             this.chartVentas.Size = new System.Drawing.Size(876, 541);
             this.chartVentas.TabIndex = 58;
             this.chartVentas.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            title1.Name = "Title1";
-            title1.Text = "Suma de ventas en el mes";
-            this.chartVentas.Titles.Add(title1);
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            title2.Name = "Title1";
+            title2.Text = "Suma de ventas en el mes";
+            this.chartVentas.Titles.Add(title2);
             // 
             // lblNombre
             // 
@@ -160,6 +165,6 @@
 		private System.Windows.Forms.Label lblZona;
 		private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartVentas;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnRecarga;
     }
 }

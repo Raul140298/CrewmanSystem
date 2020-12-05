@@ -29,29 +29,34 @@ namespace CrewmanSystem
 
 			lblZona.Text = Program.empleado.zona.nombre;
 
+			cargarValores();
+		}
+
+		private void cargarValores()
+        {
 			this.cpbSumaVentas.ProgressColor = Program.colorR;
 			this.cpbSumaVentas.Minimum = 0;
 			this.cpbSumaVentas.Maximum = Convert.ToInt32(Program.empleado.objetivoVentas);
-			this.cpbSumaVentas.Value   = Convert.ToInt32(Program.empleado.sumVentas);
-			double porcentajeVentas = (double)this.cpbSumaVentas.Value*100 / this.cpbSumaVentas.Maximum;
+			this.cpbSumaVentas.Value = Convert.ToInt32(Program.empleado.sumVentas);
+			double porcentajeVentas = (double)this.cpbSumaVentas.Value * 100 / this.cpbSumaVentas.Maximum;
 			this.cpbSumaVentas.Text = Convert.ToDouble(porcentajeVentas).ToString("N2") + "%";
 
 			VisitaWS.visita[] visitas = daoVisita.listarVisitas(Program.empleado.cartera.idCartera);
 			int numClientes = 0;
 			int numVisitas = 0;
-			if(visitas == null)
-            {
+			if (visitas == null)
+			{
 				numVisitas = 1;
 				numClientes = 0;
-            }
-            else
-            {
+			}
+			else
+			{
 				numVisitas = visitas.Length;
-				foreach(VisitaWS.visita v in visitas)
-                {
+				foreach (VisitaWS.visita v in visitas)
+				{
 					if (v.estado) numClientes++;
-                }
-            }
+				}
+			}
 			this.cpbVisitados.ProgressColor = Program.colorR;
 			this.cpbVisitados.Minimum = 0;
 			this.cpbVisitados.Maximum = numVisitas;
@@ -59,5 +64,10 @@ namespace CrewmanSystem
 			double porcentajeVisitas = (double)this.cpbVisitados.Value * 100 / this.cpbVisitados.Maximum;
 			this.cpbVisitados.Text = porcentajeVisitas + "%";
 		}
-	}
+
+		private void btnRecarga_Click(object sender, EventArgs e)
+        {
+			cargarValores();
+		}
+    }
 }

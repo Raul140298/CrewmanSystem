@@ -29,23 +29,25 @@
 		private void InitializeComponent()
 		{
             this.pnlChildForm = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.cpbVisitados = new CircularProgressBar.CircularProgressBar();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.cpbVisitados = new CircularProgressBar.CircularProgressBar();
             this.cpbSumaVentas = new CircularProgressBar.CircularProgressBar();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblZona = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnRecarga = new FontAwesome.Sharp.IconButton();
             this.pnlChildForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlChildForm
             // 
+            this.pnlChildForm.Controls.Add(this.btnRecarga);
             this.pnlChildForm.Controls.Add(this.panel2);
             this.pnlChildForm.Controls.Add(this.panel1);
             this.pnlChildForm.Controls.Add(this.cpbVisitados);
@@ -56,8 +58,18 @@
             this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlChildForm.Location = new System.Drawing.Point(0, 0);
             this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(847, 689);
+            this.pnlChildForm.Size = new System.Drawing.Size(939, 689);
             this.pnlChildForm.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(506, 100);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(317, 47);
+            this.panel2.TabIndex = 63;
             // 
             // label2
             // 
@@ -68,6 +80,26 @@
             this.label2.Size = new System.Drawing.Size(281, 24);
             this.label2.TabIndex = 61;
             this.label2.Text = "Progreso de visitas a los clientes";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(57, 100);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(322, 47);
+            this.panel1.TabIndex = 62;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(251, 24);
+            this.label1.TabIndex = 59;
+            this.label1.Text = "Progreso de suma de ventas";
             // 
             // cpbVisitados
             // 
@@ -100,16 +132,6 @@
             this.cpbVisitados.Text = "84%";
             this.cpbVisitados.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.cpbVisitados.Value = 68;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(251, 24);
-            this.label1.TabIndex = 59;
-            this.label1.Text = "Progreso de suma de ventas";
             // 
             // cpbSumaVentas
             // 
@@ -151,7 +173,7 @@
             this.lblNombre.Location = new System.Drawing.Point(0, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.lblNombre.Size = new System.Drawing.Size(847, 105);
+            this.lblNombre.Size = new System.Drawing.Size(939, 105);
             this.lblNombre.TabIndex = 48;
             this.lblNombre.Text = "NOMBRE";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -174,47 +196,46 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::CrewmanSystem.Properties.Resources.MARCADEAGUA;
-            this.pictureBox1.Location = new System.Drawing.Point(706, 549);
+            this.pictureBox1.Location = new System.Drawing.Point(798, 549);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(117, 124);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
+            // btnRecarga
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(57, 100);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(322, 47);
-            this.panel1.TabIndex = 62;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(506, 100);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(317, 47);
-            this.panel2.TabIndex = 63;
+            this.btnRecarga.BackColor = System.Drawing.Color.Transparent;
+            this.btnRecarga.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRecarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecarga.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnRecarga.ForeColor = System.Drawing.Color.Transparent;
+            this.btnRecarga.IconChar = FontAwesome.Sharp.IconChar.Sync;
+            this.btnRecarga.IconColor = System.Drawing.Color.Black;
+            this.btnRecarga.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRecarga.IconSize = 48;
+            this.btnRecarga.Location = new System.Drawing.Point(873, 100);
+            this.btnRecarga.Name = "btnRecarga";
+            this.btnRecarga.Rotation = 0D;
+            this.btnRecarga.Size = new System.Drawing.Size(42, 46);
+            this.btnRecarga.TabIndex = 60;
+            this.btnRecarga.UseVisualStyleBackColor = false;
+            this.btnRecarga.Click += new System.EventHandler(this.btnRecarga_Click);
             // 
             // frmHomeVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 689);
+            this.ClientSize = new System.Drawing.Size(939, 689);
             this.Controls.Add(this.pnlChildForm);
             this.Name = "frmHomeVendedor";
             this.Text = "frmHomeVendedor";
             this.pnlChildForm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -231,5 +252,6 @@
         private CircularProgressBar.CircularProgressBar cpbVisitados;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton btnRecarga;
     }
 }
