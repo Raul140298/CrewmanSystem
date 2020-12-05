@@ -736,6 +736,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\signo-de-recarga.png" />
     <None Include="Connected Services\CarteraWS\CarteraWS.wsdl" />
     <None Include="Connected Services\CarteraWS\CarteraWS.xsd">
       <SubType>Designer</SubType>

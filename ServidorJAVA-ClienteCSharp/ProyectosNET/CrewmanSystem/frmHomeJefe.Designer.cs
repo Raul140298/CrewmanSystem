@@ -33,11 +33,11 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.pnlChildForm = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.chartVentas = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblZona = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.pnlChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,6 +55,20 @@
             this.pnlChildForm.Name = "pnlChildForm";
             this.pnlChildForm.Size = new System.Drawing.Size(997, 850);
             this.pnlChildForm.TabIndex = 4;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 48;
+            this.iconButton1.Location = new System.Drawing.Point(874, 108);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Rotation = 0D;
+            this.iconButton1.Size = new System.Drawing.Size(99, 80);
+            this.iconButton1.TabIndex = 59;
+            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // chartVentas
             // 
@@ -123,20 +137,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 48;
-            this.iconButton1.Location = new System.Drawing.Point(898, 108);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(99, 80);
-            this.iconButton1.TabIndex = 59;
-            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // frmHomeJefe
             // 
