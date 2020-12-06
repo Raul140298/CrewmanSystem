@@ -21,7 +21,7 @@ public class PersonaMySQL implements PersonaDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            String sql ="{ call INSERTAR_PERSONA(?,?,?,?,?,?,?,?,?)}";
+            String sql ="{ call INSERTAR_PERSONA(?,?,?,?,?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.registerOutParameter("_ID_PERSONA", java.sql.Types.INTEGER);
             cs.setString("_DNI", persona.getDni());
@@ -32,6 +32,7 @@ public class PersonaMySQL implements PersonaDAO{
             cs.setString("_TELEFONO2", persona.getTelefono2());
             cs.setString("_CORREO", persona.getCorreo());
             cs.setString("_GENERO", String.valueOf(persona.getGenero()));
+            cs.setBytes("_FOTO", persona.getFoto());
             cs.executeUpdate();
             resultado=cs.getInt("_ID_PERSONA");
             persona.setIdPersona(resultado);

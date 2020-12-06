@@ -11,6 +11,7 @@ public class Persona {
     private String telefono2;
     private char genero;
     private boolean activo;
+    private byte[] foto;
     
     public Persona(){
         this.activo=true;
@@ -117,7 +118,7 @@ public class Persona {
         this.genero = genero;
     }
 
-    public boolean getActivo()
+    public boolean isActivo()
     {
         return activo;
     }
@@ -125,6 +126,14 @@ public class Persona {
     public void setActivo(boolean activo)
     {
         this.activo = activo;
+    }
+
+    public byte[] getFoto() {
+        return foto;
+    }
+
+    public void setFoto(byte[] foto) {
+        this.foto = foto;
     }
     
     public void asignarPersona(Persona persona){
