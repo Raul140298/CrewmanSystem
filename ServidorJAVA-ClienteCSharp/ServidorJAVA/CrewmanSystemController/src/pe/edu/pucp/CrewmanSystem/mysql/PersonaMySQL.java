@@ -54,7 +54,7 @@ public class PersonaMySQL implements PersonaDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            String sql ="{ call ACTUALIZAR_PERSONA(?,?,?,?,?,?,?,?)}";
+            String sql ="{ call ACTUALIZAR_PERSONA(?,?,?,?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_PERSONA", persona.getIdPersona());
             cs.setString("_NOMBRE", persona.getNombre());
@@ -64,6 +64,7 @@ public class PersonaMySQL implements PersonaDAO{
             cs.setString("_TELEFONO2", persona.getTelefono2());
             cs.setString("_CORREO", persona.getCorreo());
             cs.setString("_GENERO", String.valueOf(persona.getGenero()));
+            cs.setBytes("_FOTO", persona.getFoto());
             resultado=cs.executeUpdate();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
@@ -120,6 +121,7 @@ public class PersonaMySQL implements PersonaDAO{
             persona.setTelefono2(rs.getString("TELEFONO2"));
             persona.setCorreo(rs.getString("CORREO"));
             persona.setGenero(rs.getString("GENERO").charAt(0));
+            persona.setFoto(rs.getBytes("FOTO"));
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
