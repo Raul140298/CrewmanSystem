@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/EmpleadoWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="obtenerNumClientes">
-    <part name="parameters" element="tns:obtenerNumClientes" />
+  <message name="listarPorJefeVentas">
+    <part name="parameters" element="tns:listarPorJefeVentas" />
   </message>
-  <message name="obtenerNumClientesResponse">
-    <part name="parameters" element="tns:obtenerNumClientesResponse" />
+  <message name="listarPorJefeVentasResponse">
+    <part name="parameters" element="tns:listarPorJefeVentasResponse" />
   </message>
   <message name="listarPorJefeVentasYZona">
     <part name="parameters" element="tns:listarPorJefeVentasYZona" />
@@ -17,23 +17,17 @@
   <message name="listarPorJefeVentasYZonaResponse">
     <part name="parameters" element="tns:listarPorJefeVentasYZonaResponse" />
   </message>
+  <message name="actualizarPersona">
+    <part name="parameters" element="tns:actualizarPersona" />
+  </message>
+  <message name="actualizarPersonaResponse">
+    <part name="parameters" element="tns:actualizarPersonaResponse" />
+  </message>
   <message name="actualizarEmpleado">
     <part name="parameters" element="tns:actualizarEmpleado" />
   </message>
   <message name="actualizarEmpleadoResponse">
     <part name="parameters" element="tns:actualizarEmpleadoResponse" />
-  </message>
-  <message name="listarPorJefeVentas">
-    <part name="parameters" element="tns:listarPorJefeVentas" />
-  </message>
-  <message name="listarPorJefeVentasResponse">
-    <part name="parameters" element="tns:listarPorJefeVentasResponse" />
-  </message>
-  <message name="permitirAccesoEmpleado">
-    <part name="parameters" element="tns:permitirAccesoEmpleado" />
-  </message>
-  <message name="permitirAccesoEmpleadoResponse">
-    <part name="parameters" element="tns:permitirAccesoEmpleadoResponse" />
   </message>
   <message name="obtenerNumVisitas">
     <part name="parameters" element="tns:obtenerNumVisitas" />
@@ -41,47 +35,23 @@
   <message name="obtenerNumVisitasResponse">
     <part name="parameters" element="tns:obtenerNumVisitasResponse" />
   </message>
+  <message name="permitirAccesoEmpleado">
+    <part name="parameters" element="tns:permitirAccesoEmpleado" />
+  </message>
+  <message name="permitirAccesoEmpleadoResponse">
+    <part name="parameters" element="tns:permitirAccesoEmpleadoResponse" />
+  </message>
   <message name="cambiarContraseña">
     <part name="parameters" element="tns:cambiarContraseña" />
   </message>
   <message name="cambiarContraseñaResponse">
     <part name="parameters" element="tns:cambiarContraseñaResponse" />
   </message>
-  <message name="actualizarPersona">
-    <part name="parameters" element="tns:actualizarPersona" />
+  <message name="obtenerNumClientes">
+    <part name="parameters" element="tns:obtenerNumClientes" />
   </message>
-  <message name="actualizarPersonaResponse">
-    <part name="parameters" element="tns:actualizarPersonaResponse" />
-  </message>
-  <message name="insertarPersona">
-    <part name="parameters" element="tns:insertarPersona" />
-  </message>
-  <message name="insertarPersonaResponse">
-    <part name="parameters" element="tns:insertarPersonaResponse" />
-  </message>
-  <message name="obtenerEmpleado">
-    <part name="parameters" element="tns:obtenerEmpleado" />
-  </message>
-  <message name="obtenerEmpleadoResponse">
-    <part name="parameters" element="tns:obtenerEmpleadoResponse" />
-  </message>
-  <message name="insertarEmpleado">
-    <part name="parameters" element="tns:insertarEmpleado" />
-  </message>
-  <message name="insertarEmpleadoResponse">
-    <part name="parameters" element="tns:insertarEmpleadoResponse" />
-  </message>
-  <message name="eliminarPersona">
-    <part name="parameters" element="tns:eliminarPersona" />
-  </message>
-  <message name="eliminarPersonaResponse">
-    <part name="parameters" element="tns:eliminarPersonaResponse" />
-  </message>
-  <message name="mostrarPersona">
-    <part name="parameters" element="tns:mostrarPersona" />
-  </message>
-  <message name="mostrarPersonaResponse">
-    <part name="parameters" element="tns:mostrarPersonaResponse" />
+  <message name="obtenerNumClientesResponse">
+    <part name="parameters" element="tns:obtenerNumClientesResponse" />
   </message>
   <message name="eliminarEmpleado">
     <part name="parameters" element="tns:eliminarEmpleado" />
@@ -89,67 +59,97 @@
   <message name="eliminarEmpleadoResponse">
     <part name="parameters" element="tns:eliminarEmpleadoResponse" />
   </message>
+  <message name="mostrarPersona">
+    <part name="parameters" element="tns:mostrarPersona" />
+  </message>
+  <message name="mostrarPersonaResponse">
+    <part name="parameters" element="tns:mostrarPersonaResponse" />
+  </message>
+  <message name="obtenerEmpleado">
+    <part name="parameters" element="tns:obtenerEmpleado" />
+  </message>
+  <message name="obtenerEmpleadoResponse">
+    <part name="parameters" element="tns:obtenerEmpleadoResponse" />
+  </message>
+  <message name="insertarPersona">
+    <part name="parameters" element="tns:insertarPersona" />
+  </message>
+  <message name="insertarPersonaResponse">
+    <part name="parameters" element="tns:insertarPersonaResponse" />
+  </message>
+  <message name="eliminarPersona">
+    <part name="parameters" element="tns:eliminarPersona" />
+  </message>
+  <message name="eliminarPersonaResponse">
+    <part name="parameters" element="tns:eliminarPersonaResponse" />
+  </message>
+  <message name="insertarEmpleado">
+    <part name="parameters" element="tns:insertarEmpleado" />
+  </message>
+  <message name="insertarEmpleadoResponse">
+    <part name="parameters" element="tns:insertarEmpleadoResponse" />
+  </message>
   <portType name="EmpleadoWS">
-    <operation name="obtenerNumClientes">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/obtenerNumClientesRequest" message="tns:obtenerNumClientes" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/obtenerNumClientesResponse" message="tns:obtenerNumClientesResponse" />
+    <operation name="listarPorJefeVentas">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasRequest" message="tns:listarPorJefeVentas" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasResponse" message="tns:listarPorJefeVentasResponse" />
     </operation>
     <operation name="listarPorJefeVentasYZona">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasYZonaRequest" message="tns:listarPorJefeVentasYZona" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasYZonaResponse" message="tns:listarPorJefeVentasYZonaResponse" />
     </operation>
+    <operation name="actualizarPersona">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/actualizarPersonaRequest" message="tns:actualizarPersona" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/actualizarPersonaResponse" message="tns:actualizarPersonaResponse" />
+    </operation>
     <operation name="actualizarEmpleado">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/actualizarEmpleadoRequest" message="tns:actualizarEmpleado" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/actualizarEmpleadoResponse" message="tns:actualizarEmpleadoResponse" />
-    </operation>
-    <operation name="listarPorJefeVentas">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasRequest" message="tns:listarPorJefeVentas" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/listarPorJefeVentasResponse" message="tns:listarPorJefeVentasResponse" />
-    </operation>
-    <operation name="permitirAccesoEmpleado">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/permitirAccesoEmpleadoRequest" message="tns:permitirAccesoEmpleado" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/permitirAccesoEmpleadoResponse" message="tns:permitirAccesoEmpleadoResponse" />
     </operation>
     <operation name="obtenerNumVisitas">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/obtenerNumVisitasRequest" message="tns:obtenerNumVisitas" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/obtenerNumVisitasResponse" message="tns:obtenerNumVisitasResponse" />
     </operation>
+    <operation name="permitirAccesoEmpleado">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/permitirAccesoEmpleadoRequest" message="tns:permitirAccesoEmpleado" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/permitirAccesoEmpleadoResponse" message="tns:permitirAccesoEmpleadoResponse" />
+    </operation>
     <operation name="cambiarContraseña">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/cambiarContraseñaRequest" message="tns:cambiarContraseña" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/cambiarContraseñaResponse" message="tns:cambiarContraseñaResponse" />
     </operation>
-    <operation name="actualizarPersona">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/actualizarPersonaRequest" message="tns:actualizarPersona" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/actualizarPersonaResponse" message="tns:actualizarPersonaResponse" />
-    </operation>
-    <operation name="insertarPersona">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarPersonaRequest" message="tns:insertarPersona" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarPersonaResponse" message="tns:insertarPersonaResponse" />
-    </operation>
-    <operation name="obtenerEmpleado">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoRequest" message="tns:obtenerEmpleado" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoResponse" message="tns:obtenerEmpleadoResponse" />
-    </operation>
-    <operation name="insertarEmpleado">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarEmpleadoRequest" message="tns:insertarEmpleado" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarEmpleadoResponse" message="tns:insertarEmpleadoResponse" />
-    </operation>
-    <operation name="eliminarPersona">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/eliminarPersonaRequest" message="tns:eliminarPersona" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/eliminarPersonaResponse" message="tns:eliminarPersonaResponse" />
-    </operation>
-    <operation name="mostrarPersona">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/mostrarPersonaRequest" message="tns:mostrarPersona" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/mostrarPersonaResponse" message="tns:mostrarPersonaResponse" />
+    <operation name="obtenerNumClientes">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/obtenerNumClientesRequest" message="tns:obtenerNumClientes" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/obtenerNumClientesResponse" message="tns:obtenerNumClientesResponse" />
     </operation>
     <operation name="eliminarEmpleado">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/eliminarEmpleadoRequest" message="tns:eliminarEmpleado" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/eliminarEmpleadoResponse" message="tns:eliminarEmpleadoResponse" />
     </operation>
+    <operation name="mostrarPersona">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/mostrarPersonaRequest" message="tns:mostrarPersona" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/mostrarPersonaResponse" message="tns:mostrarPersonaResponse" />
+    </operation>
+    <operation name="obtenerEmpleado">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoRequest" message="tns:obtenerEmpleado" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoResponse" message="tns:obtenerEmpleadoResponse" />
+    </operation>
+    <operation name="insertarPersona">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarPersonaRequest" message="tns:insertarPersona" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarPersonaResponse" message="tns:insertarPersonaResponse" />
+    </operation>
+    <operation name="eliminarPersona">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/eliminarPersonaRequest" message="tns:eliminarPersona" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/eliminarPersonaResponse" message="tns:eliminarPersonaResponse" />
+    </operation>
+    <operation name="insertarEmpleado">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarEmpleadoRequest" message="tns:insertarEmpleado" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/EmpleadoWS/insertarEmpleadoResponse" message="tns:insertarEmpleadoResponse" />
+    </operation>
   </portType>
   <binding name="EmpleadoWSPortBinding" type="tns:EmpleadoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="obtenerNumClientes">
+    <operation name="listarPorJefeVentas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -167,25 +167,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="actualizarPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="actualizarEmpleado">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarPorJefeVentas">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="permitirAccesoEmpleado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -203,6 +194,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="permitirAccesoEmpleado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="cambiarContraseña">
       <soap:operation soapAction="" />
       <input>
@@ -212,7 +212,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarPersona">
+    <operation name="obtenerNumClientes">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -221,34 +221,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarPersona">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="obtenerEmpleado">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarEmpleado">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarPersona">
+    <operation name="eliminarEmpleado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -266,7 +239,34 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarEmpleado">
+    <operation name="obtenerEmpleado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPersona">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEmpleado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

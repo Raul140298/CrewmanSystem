@@ -720,6 +720,9 @@
     <EmbeddedResource Include="frmPerfil.resx">
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReportePedidos.resx">
+      <DependentUpon>frmReportePedidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSegmentarClientes.resx">
       <DependentUpon>frmSegmentarClientes.cs</DependentUpon>
     </EmbeddedResource>

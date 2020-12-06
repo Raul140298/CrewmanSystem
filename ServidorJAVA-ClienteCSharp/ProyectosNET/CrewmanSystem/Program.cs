@@ -22,7 +22,7 @@ namespace CrewmanSystem
 		public static BindingList<CrewPantalla> pantallas = new BindingList<CrewPantalla>();
 		#endregion
 
-		//[STAThread]
+		[STAThread]
 		static void Main(string[] args)
         {
 			Application.EnableVisualStyles();

@@ -17,7 +17,7 @@ namespace CrewmanSystem
         private EmpleadoWS.EmpleadoWSClient daoEmpleado;
         private string[] cargos = { "VENDEDOR", "JEFE DE VENTAS" };
         private String ruta;
-        private FileStream fs;
+        private byte[] foto = null;
 
         public frmNuevoEmpleado()
         {
@@ -41,7 +41,6 @@ namespace CrewmanSystem
             cboZona.ValueMember = "idZona";
             cboZona.DisplayMember = "nombre";
             cboZona.Enabled = false;
-            txtSumaVentas.Text = "0.00";
             txtSumaVentas.Enabled = false;
 
             if (frmVentanaPrincipal.nBtn == 1)
@@ -65,8 +64,8 @@ namespace CrewmanSystem
                 txtTelefono1.Text = miEmpleado.telefono1;
                 txtTelefono2.Text = miEmpleado.telefono2;
                 txtCorreo.Text = miEmpleado.correo.ToString();
-                txtObjetivoVentas.Text = miEmpleado.objetivoVentas.ToString();
                 txtSumaVentas.Text = miEmpleado.sumVentas.ToString();
+                txtObjetivoVentas.Text = miEmpleado.objetivoVentas.ToString();
                 txtDNI.Enabled = false;
 
                 if(miEmpleado.cargo.idCargo == 1) cboCargo.DisplayMember = "EMPLEADO";
@@ -86,9 +85,8 @@ namespace CrewmanSystem
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("SIN IMAGEN");
+                    MessageBox.Show("NO IMAGEN");
                 }
-                
             }
         }
 
@@ -149,7 +147,13 @@ namespace CrewmanSystem
                     }
                 }
             }
-            //AQUI VA EL INSERTAR
+            if (foto == null)
+            {
+                MessageBox.Show("Falta ingresar una foto de perfil",
+                            "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
             if (formInsertar.ShowDialog() == DialogResult.OK)
             {
@@ -189,8 +193,7 @@ namespace CrewmanSystem
                 string usuario_contra =  parte1New + parte2New + parte3New;
                 empleado.usuario = usuario_contra;
                 empleado.contraseña = usuario_contra;
-                BinaryReader br = new BinaryReader(fs);
-                empleado.foto = br.ReadBytes((int)fs.Length);
+                empleado.foto = foto;
 
                 if (frmVentanaPrincipal.nBtn == 0)
                 {
@@ -230,7 +233,9 @@ namespace CrewmanSystem
                 {
                     ruta = ofdFoto.FileName;
                     pbFoto.Image = Image.FromFile(ruta);
-                    fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                    FileStream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    this.foto = br.ReadBytes((int)fs.Length);
                     fs.Close();
                 }
             }

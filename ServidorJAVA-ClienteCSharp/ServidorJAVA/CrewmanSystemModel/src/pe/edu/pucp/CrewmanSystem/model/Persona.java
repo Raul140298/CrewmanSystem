@@ -146,6 +146,7 @@ public class Persona {
         this.telefono1=persona.getTelefono1();
         this.telefono2=persona.getTelefono2();
         this.genero=persona.getGenero();
+        this.foto=persona.getFoto();
     }
     
     public Persona obtenerPersona(){
@@ -159,6 +160,7 @@ public class Persona {
         persona.setTelefono2(getTelefono2());
         persona.setCorreo(getCorreo());
         persona.setGenero(getGenero());
+        persona.setFoto(getFoto());
         return persona;
     }
 }
