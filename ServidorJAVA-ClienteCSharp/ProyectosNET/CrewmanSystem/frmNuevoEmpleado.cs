@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +13,12 @@ namespace CrewmanSystem
 {
 	public partial class frmNuevoEmpleado : Form
 	{
-        ZonaWS.ZonaWSClient daoZona;
-        EmpleadoWS.EmpleadoWSClient daoEmpleado;
-        string[] cargos = { "VENDEDOR", "JEFE DE VENTAS" };
+        private ZonaWS.ZonaWSClient daoZona;
+        private EmpleadoWS.EmpleadoWSClient daoEmpleado;
+        private string[] cargos = { "VENDEDOR", "JEFE DE VENTAS" };
+        private String ruta;
+        private FileStream fs;
+
         public frmNuevoEmpleado()
         {
             InitializeComponent();
@@ -74,6 +78,17 @@ namespace CrewmanSystem
 
                 if (miEmpleado.genero == 'M') rbMasculino.Checked = true;
                 else rbFemenino.Checked = true;
+
+                try
+                {
+                    MemoryStream ms = new MemoryStream(miEmpleado.foto);
+                    pbFoto.Image = new Bitmap(ms);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("SIN IMAGEN");
+                }
+                
             }
         }
 
@@ -174,6 +189,8 @@ namespace CrewmanSystem
                 string usuario_contra =  parte1New + parte2New + parte3New;
                 empleado.usuario = usuario_contra;
                 empleado.contraseña = usuario_contra;
+                BinaryReader br = new BinaryReader(fs);
+                empleado.foto = br.ReadBytes((int)fs.Length);
 
                 if (frmVentanaPrincipal.nBtn == 0)
                 {
@@ -202,6 +219,24 @@ namespace CrewmanSystem
                         MessageBox.Show("Se actualizó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ofdFoto.ShowDialog() == DialogResult.OK)
+                {
+                    ruta = ofdFoto.FileName;
+                    pbFoto.Image = Image.FromFile(ruta);
+                    fs = new FileStream(ruta, FileMode.Open, FileAccess.Read);
+                    fs.Close();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
             }
         }
     }

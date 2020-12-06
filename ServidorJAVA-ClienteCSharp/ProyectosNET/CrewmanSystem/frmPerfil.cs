@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,8 @@ namespace CrewmanSystem
             txtTelefono1.Text = empleado.telefono1.ToString();
             txtTelefono2.Text = empleado.telefono2.ToString();
             txtCorreo.Text = empleado.correo;
+            MemoryStream ms = new MemoryStream(empleado.foto);
+            pbFoto.Image = new Bitmap(ms);
         }
 
         private void button1_Click(object sender, EventArgs e)
