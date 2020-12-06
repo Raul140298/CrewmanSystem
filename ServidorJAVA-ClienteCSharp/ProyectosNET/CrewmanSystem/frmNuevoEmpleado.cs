@@ -83,10 +83,7 @@ namespace CrewmanSystem
                     MemoryStream ms = new MemoryStream(miEmpleado.foto);
                     pbFoto.Image = new Bitmap(ms);
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("NO IMAGEN");
-                }
+                catch (Exception) { }
             }
         }
 

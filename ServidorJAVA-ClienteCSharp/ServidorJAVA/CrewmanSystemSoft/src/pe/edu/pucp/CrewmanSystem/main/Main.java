@@ -57,12 +57,12 @@ public class Main{
 //        gestionarSubFamilias();
 //        gestionarMarcas();
 //        gestionarZonas();
-//       gestionarClientes();
+//        gestionarClientes();
 //        gestionarEmpleados();
 //        gestionarProductos();
 //        gestionarProductoXZona();
-//      gestionarPromociones();
-//       gestionarPromocionXProducto();
+//        gestionarPromociones();
+//        gestionarPromocionXProducto();
 //        gestionarPedidos();
 //        gestionarLineasDePedido();
 //        gestionarFacturas();
@@ -201,6 +201,11 @@ public class Main{
 //        misProductosXZonas=daoProductoXZona.listarSinPromocion("", "", "", "", 149);
 //        for(ProductoXZona pxz : misProductosXZonas) System.out.println(pxz.getIdProductoXZona());
 //        System.out.println(daoPedido.entregarPedido(59));
+        Empleado miEmpleado = daoEmpleado.permitirAccesoEmpleado("rauljl1", "rauljl1");
+        miEmpleado.getZona().setIdZona(140);
+//        miEmpleado.setFoto(foto);
+        
+        System.out.println("");
     }
     
     private static void gestionarFamilias(){

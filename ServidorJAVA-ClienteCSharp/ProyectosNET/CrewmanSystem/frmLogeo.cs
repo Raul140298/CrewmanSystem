@@ -43,8 +43,9 @@ namespace CrewmanSystem
 
             if (Program.empleado != null)
 			{
-                Program.empleado.zona.idZona = daoZona.mostrarZona(Program.empleado.idEmpleado).idZona;
-                Program.empleado.zona.nombre = daoZona.mostrarZona(Program.empleado.idEmpleado).nombre;
+                ZonaWS.zona zona = daoZona.mostrarZona(Program.empleado.idEmpleado);
+                Program.empleado.zona.idZona = zona.idZona;
+                Program.empleado.zona.nombre = zona.nombre;
 				this.Hide();
 				datosValidos = true;
 				Program.panel = new frmVentanaPrincipal();

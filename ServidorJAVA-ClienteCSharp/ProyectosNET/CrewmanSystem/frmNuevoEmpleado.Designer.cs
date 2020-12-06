@@ -33,9 +33,12 @@
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.txtSumaVentas = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cboCargo = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.txtObjetivoVentas = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.cboZona = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -58,11 +61,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.rbMasculino = new System.Windows.Forms.RadioButton();
             this.rbFemenino = new System.Windows.Forms.RadioButton();
-            this.txtObjetivoVentas = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.ofdFoto = new System.Windows.Forms.OpenFileDialog();
-            this.txtSumaVentas = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -132,6 +132,14 @@
             this.label13.Text = "Suma Ventas :";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // txtSumaVentas
+            // 
+            this.txtSumaVentas.Location = new System.Drawing.Point(159, 36);
+            this.txtSumaVentas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSumaVentas.Name = "txtSumaVentas";
+            this.txtSumaVentas.Size = new System.Drawing.Size(150, 22);
+            this.txtSumaVentas.TabIndex = 129;
+            // 
             // label1
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -161,6 +169,24 @@
             this.label11.TabIndex = 125;
             this.label11.Text = "Zona :";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtObjetivoVentas
+            // 
+            this.txtObjetivoVentas.Location = new System.Drawing.Point(159, 75);
+            this.txtObjetivoVentas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtObjetivoVentas.Name = "txtObjetivoVentas";
+            this.txtObjetivoVentas.Size = new System.Drawing.Size(150, 22);
+            this.txtObjetivoVentas.TabIndex = 127;
+            // 
+            // label12
+            // 
+            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label12.Location = new System.Drawing.Point(12, 75);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(132, 22);
+            this.label12.TabIndex = 126;
+            this.label12.Text = "Objetivo Ventas :";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cboZona
             // 
@@ -328,7 +354,7 @@
             // label10
             // 
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label10.Location = new System.Drawing.Point(51, 215);
+            this.label10.Location = new System.Drawing.Point(50, 214);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(94, 22);
             this.label10.TabIndex = 123;
@@ -389,14 +415,6 @@
             this.rbFemenino.Text = "F";
             this.rbFemenino.UseVisualStyleBackColor = true;
             // 
-            // txtObjetivoVentas
-            // 
-            this.txtObjetivoVentas.Location = new System.Drawing.Point(159, 75);
-            this.txtObjetivoVentas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtObjetivoVentas.Name = "txtObjetivoVentas";
-            this.txtObjetivoVentas.Size = new System.Drawing.Size(150, 22);
-            this.txtObjetivoVentas.TabIndex = 127;
-            // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
@@ -415,24 +433,6 @@
             // ofdFoto
             // 
             this.ofdFoto.FileName = "openFileDialog1";
-            // 
-            // txtSumaVentas
-            // 
-            this.txtSumaVentas.Location = new System.Drawing.Point(159, 36);
-            this.txtSumaVentas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSumaVentas.Name = "txtSumaVentas";
-            this.txtSumaVentas.Size = new System.Drawing.Size(150, 22);
-            this.txtSumaVentas.TabIndex = 129;
-            // 
-            // label12
-            // 
-            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label12.Location = new System.Drawing.Point(12, 75);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(132, 22);
-            this.label12.TabIndex = 126;
-            this.label12.Text = "Objetivo Ventas :";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmNuevoEmpleado
             // 

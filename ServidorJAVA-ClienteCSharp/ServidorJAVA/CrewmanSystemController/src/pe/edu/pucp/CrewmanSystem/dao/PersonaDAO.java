@@ -1,6 +1,5 @@
 package pe.edu.pucp.CrewmanSystem.dao;
 
-import java.sql.Connection;
 import pe.edu.pucp.CrewmanSystem.model.Persona;
 
 public interface PersonaDAO {
