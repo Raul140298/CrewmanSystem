@@ -80,6 +80,7 @@ namespace CrewmanSystem
 
                 try
                 {
+                    foto = miEmpleado.foto;
                     MemoryStream ms = new MemoryStream(miEmpleado.foto);
                     pbFoto.Image = new Bitmap(ms);
                 }
@@ -167,8 +168,13 @@ namespace CrewmanSystem
 
                 empleado.jefe = new EmpleadoWS.empleado();
                 empleado.jefe.idEmpleado = Program.empleado.idEmpleado;
-                empleado.sumVentas = Convert.ToDouble(txtSumaVentas.Text);
-                empleado.objetivoVentas = Convert.ToDouble(txtObjetivoVentas.Text);
+                try
+                {
+                    empleado.objetivoVentas = Convert.ToDouble(txtObjetivoVentas.Text);
+                    empleado.sumVentas = Convert.ToDouble(txtSumaVentas.Text);
+                }
+                catch (Exception) { }
+
                 empleado.cargo = new EmpleadoWS.cargo();
                 if (cboCargo.SelectedItem.ToString() == "VENDEDOR") empleado.cargo.idCargo = 1;
                 else empleado.cargo.idCargo = 2;
