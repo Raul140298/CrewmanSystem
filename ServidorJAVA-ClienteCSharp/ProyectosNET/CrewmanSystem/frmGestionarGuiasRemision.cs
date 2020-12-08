@@ -70,6 +70,7 @@ namespace CrewmanSystem
 				frmVentanaPrincipal.act.Enabled = true;
 				frmVentanaPrincipal.elim.Enabled = true;
 			}
+			
 		}
     }
 }

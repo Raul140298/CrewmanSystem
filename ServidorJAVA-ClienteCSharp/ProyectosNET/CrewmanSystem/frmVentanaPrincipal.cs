@@ -689,6 +689,11 @@ namespace CrewmanSystem
 		{
 			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarFacturas(), false, true, true, true, true);
 		}
+		private void btnGuiaDeRemision_Click(object sender, EventArgs e)
+		{
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarGuiasRemision(), false, true, true, true, true);
+		}
+
 		#endregion
 
 		#region GESTIONCLIENTES
@@ -825,6 +830,7 @@ namespace CrewmanSystem
 									  Program.pantallas.Last().E,
 									  Program.pantallas.Last().B,
 									  Program.pantallas.Last().F);
+				
 			}
 		}
 
@@ -877,9 +883,11 @@ namespace CrewmanSystem
 			modificaPagina();
 		}
 
+
+
+
         #endregion
 
         
-
     }
 }

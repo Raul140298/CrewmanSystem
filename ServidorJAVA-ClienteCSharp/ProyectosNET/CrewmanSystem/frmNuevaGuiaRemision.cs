@@ -100,6 +100,7 @@ namespace CrewmanSystem
                     txtIdGuiaRemision.Text = resultado.ToString();
                 }
             }
+            
         }
     }
 }
