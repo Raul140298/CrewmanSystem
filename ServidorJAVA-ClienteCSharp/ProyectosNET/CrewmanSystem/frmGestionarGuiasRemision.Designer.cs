@@ -97,6 +97,7 @@
             this.dgvGuiasDeRemision.Size = new System.Drawing.Size(748, 366);
             this.dgvGuiasDeRemision.TabIndex = 3;
             this.dgvGuiasDeRemision.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvGuiasDeRemision_CellFormatting);
+            this.dgvGuiasDeRemision.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvGuiasDeRemision_RowStateChanged);
             // 
             // ID
             // 

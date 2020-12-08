@@ -52,7 +52,6 @@ namespace CrewmanSystem
 		private void dgvFacturas_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
 			frmVentanaPrincipal.act.Enabled = false;
-			frmVentanaPrincipal.elim.Enabled = false;
 		}
 
 		private void dgvFacturas_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)

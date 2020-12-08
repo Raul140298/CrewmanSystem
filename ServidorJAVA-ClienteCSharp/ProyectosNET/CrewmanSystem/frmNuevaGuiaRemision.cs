@@ -22,6 +22,27 @@ namespace CrewmanSystem
             daoGuiaRemision = new GuiaRemisionWS.GuiaRemisionWSClient();
             daoPedido = new PedidoWS.PedidoWSClient();
             InitializeComponent();
+            if (frmVentanaPrincipal.nBtn == 1)
+            {   //OBTNER DATOS DE FILA SELECCIONADA
+                GuiaRemisionWS.guiaRemision miGuiaRemision = new GuiaRemisionWS.guiaRemision();
+
+                if (Program.pantallas[Program.pantallas.Count - 1].Formulario.Name == "frmGestionarGuiasRemision")
+                {
+                    frmGestionarGuiasRemision.guiaRemisionSeleccionado = (GuiaRemisionWS.guiaRemision)frmGestionarGuiasRemision.dgv.CurrentRow.DataBoundItem;
+                    miGuiaRemision = frmGestionarGuiasRemision.guiaRemisionSeleccionado;
+                }
+                else
+                {
+                    //frmBuscarGuiaRemision.productoSeleccionado = (ProductoWS.producto)frmBuscarProducto.dgv.CurrentRow.DataBoundItem;
+                    //miProducto = frmBuscarProducto.productoSeleccionado;
+                }
+                txtIdGuiaRemision.Text = miGuiaRemision.idGuiaRemision.ToString();
+                txtIdPedido.Text = miGuiaRemision.pedido.idPedido.ToString();
+                txtMotivoTraslado.Text = miGuiaRemision.motivoTraslado;
+                dtpRangoIniRegistro.Value = miGuiaRemision.fechaRegistro;
+                dtpRangoIniTraslado.Value = miGuiaRemision.fechaTraslado;
+
+            }
         }
 
         private void btnBuscarPedido_Click(object sender, EventArgs e)
@@ -37,12 +58,7 @@ namespace CrewmanSystem
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             GuiaRemisionWS.guiaRemision guiaRemision = new GuiaRemisionWS.guiaRemision();
-            int resultado=daoPedido.entregarPedido(pedidoSeleccionado.idPedido);
-            if (resultado == 0)
-            {
-                MessageBox.Show("No se entrego el pedido", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            int resultado;
             guiaRemision.motivoTraslado = txtMotivoTraslado.Text;
             guiaRemision.pedido = new GuiaRemisionWS.pedido();
             guiaRemision.pedido.idPedido = pedidoSeleccionado.idPedido;
@@ -51,16 +67,38 @@ namespace CrewmanSystem
             guiaRemision.fechaRegistro = dtpRangoIniRegistro.Value;
             guiaRemision.fechaTraslado = dtpRangoIniTraslado.Value;
 
-            resultado = daoGuiaRemision.insertarGuiaRemision(guiaRemision);
-            if(resultado == 0)
+            if (frmVentanaPrincipal.nBtn == 0)
             {
-                MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                resultado = daoPedido.entregarPedido(pedidoSeleccionado.idPedido);
+                if (resultado == 0)
+                {
+                    MessageBox.Show("No se entrego el pedido", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                resultado = daoGuiaRemision.insertarGuiaRemision(guiaRemision);
+                if (resultado == 0)
+                {
+                    MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Se insertó correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIdGuiaRemision.Text = resultado.ToString();
+                }
             }
-            else
+            else if (frmVentanaPrincipal.nBtn == 1) 
             {
-                MessageBox.Show("Se insertó correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtIdGuiaRemision.Text = resultado.ToString();
+                guiaRemision.idGuiaRemision= Convert.ToInt32(txtIdGuiaRemision.Text);
+                resultado = daoGuiaRemision.actualizarGuiaRemision(guiaRemision);
+                if (resultado == 0)
+                {
+                    MessageBox.Show("No se actualizó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Se actualizó correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIdGuiaRemision.Text = resultado.ToString();
+                }
             }
         }
     }

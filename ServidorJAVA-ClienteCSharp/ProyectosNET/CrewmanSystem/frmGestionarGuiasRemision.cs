@@ -13,14 +13,17 @@ namespace CrewmanSystem
 	public partial class frmGestionarGuiasRemision : Form
 	{
 		private GuiaRemisionWS.GuiaRemisionWSClient daoGuiaRemision;
+		public static GuiaRemisionWS.guiaRemision guiaRemisionSeleccionado;
+		public static DataGridView dgv;
 		public frmGestionarGuiasRemision()
 		{
 			daoGuiaRemision = new GuiaRemisionWS.GuiaRemisionWSClient();
 			InitializeComponent();
+			dgv = dgvGuiasDeRemision;
 			dgvGuiasDeRemision.AutoGenerateColumns = false;
 			GuiaRemisionWS.guiaRemision[] misGuias = daoGuiaRemision.listarGuiaRemisionsXVendedor(Program.empleado.idEmpleado,"", DateTime.MinValue, 
 				DateTime.MaxValue, DateTime.MinValue, DateTime.MaxValue);
-			
+			dgv = dgvGuiasDeRemision;
 			if (misGuias != null)
 			{
 				dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>(daoGuiaRemision.listarGuiaRemisionsXVendedor(Program.empleado.idEmpleado, "", DateTime.MinValue,
@@ -51,6 +54,22 @@ namespace CrewmanSystem
 
 			dgvGuiasDeRemision.Rows[e.RowIndex].Cells["ID_PEDIDO"].Value = guiaRemision.pedido.idPedido;
 
+		}
+
+        private void dgvGuiasDeRemision_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+			//Preguntar al profe
+			if (e.StateChanged != DataGridViewElementStates.Selected)
+			{
+				//frmVentanaPrincipal.act.Enabled = false;
+				//frmVentanaPrincipal.elim.Enabled = false;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+			}
 		}
     }
 }
