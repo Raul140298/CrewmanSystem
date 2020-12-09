@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bb64ba49-ae20-41a9-8507-54cb72985768" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="426bc361-e162-4708-b13b-60cb0473c015" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://54.80.91.225:8080/CrewmanSystemServices/GuiaRemisionWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GuiaRemisionWS.xsd" MetadataType="Schema" ID="cf901ebf-5e88-4e77-9e21-aa393352bbaf" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/GuiaRemisionWS?xsd=1" />
-    <MetadataFile FileName="GuiaRemisionWS.wsdl" MetadataType="Wsdl" ID="1cd172e3-b87a-41cc-9b6f-ca6bc5213d99" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/GuiaRemisionWS?WSDL" />
+    <MetadataFile FileName="GuiaRemisionWS.xsd" MetadataType="Schema" ID="b188422d-306a-4153-88f1-fb8db88100f3" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/GuiaRemisionWS?xsd=1" />
+    <MetadataFile FileName="GuiaRemisionWS.wsdl" MetadataType="Wsdl" ID="5360bc35-7a4f-4a1a-8a90-9562d9ff9adf" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/GuiaRemisionWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

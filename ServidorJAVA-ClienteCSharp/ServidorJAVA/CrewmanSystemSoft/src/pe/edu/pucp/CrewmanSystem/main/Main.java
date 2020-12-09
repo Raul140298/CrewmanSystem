@@ -65,9 +65,9 @@ public class Main{
 //        gestionarPromocionXProducto();
 //        gestionarPedidos();
 //        gestionarLineasDePedido();
-//        gestionarFacturas();
+        gestionarFacturas();
 //        gestionarNotasDeCredito();
-        gestionarGuiasDeRemision();
+//        gestionarGuiasDeRemision();
 //        gestionarQuejas();
 
 //        misZonas = daoZona.listar();
@@ -201,8 +201,8 @@ public class Main{
 //        misProductosXZonas=daoProductoXZona.listarSinPromocion("", "", "", "", 149);
 //        for(ProductoXZona pxz : misProductosXZonas) System.out.println(pxz.getIdProductoXZona());
 //        System.out.println(daoPedido.entregarPedido(59));
-        Empleado miEmpleado = daoEmpleado.permitirAccesoEmpleado("rauljl1", "rauljl1");
-        miEmpleado.getZona().setIdZona(140);
+//        Empleado miEmpleado = daoEmpleado.permitirAccesoEmpleado("rauljl1", "rauljl1");
+//        miEmpleado.getZona().setIdZona(140);
 //        miEmpleado.setFoto(foto);
         
         System.out.println("");
@@ -678,22 +678,19 @@ public class Main{
 //            System.out.println("Error al insertar la fecha en gestionar facturas");
 //        }
 
-//        misFacturas=daoFactura.listar(misPedidos.get(0).getIdPedido());
-        
-//        Factura factura=misFacturas.get(0);
-//        double monto=daoFactura.eliminar(factura);
-//        misPedidos.get(0).setMontoPagar(misPedidos.get(0).getMontoPagar()+monto);
-//        daoPedido.actualizarSubtotal(misPedidos.get(0));
-//        System.out.println("LISTADO DE FACTURAS DEL PEDIDO "+misPedidos.get(0).getIdPedido());
-//        System.out.println("==================================================================================");
-//        for(Factura f:misFacturas){
-//            System.out.print(f.getIdFactura()+" - "+f.getPedido().getIdPedido()+" - "+f.getObservacion()+" - "+f.getMonto()+" - "+
-//            f.getFechaEmision()+" - "+f.getFechaVencimiento()+" - ");
-//            if(f.isEstadoPagar()) System.out.println("PAGADO");
-//            else System.out.println("FALTA PAGAR");
-//        } 
-//            
-//        System.out.println("\n");
+        try{
+            misFacturas=daoFactura.listar(25, "", "", sdf.parse("13-10-2020"), sdf.parse("13-12-2022"), sdf.parse("13-10-2020"), sdf.parse("13-12-2022"), 2, 2);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        for(Factura f:misFacturas){
+            System.out.print(f.getIdFactura()+" - "+f.getPedido().getIdPedido()+" - "+f.getPedido().getEmpleado().getNombre()+" - "+f.getObservacion()+" - "+f.getMonto()+" - "+
+            f.getFechaEmision()+" - "+f.getFechaVencimiento()+" - ");
+            if(f.isEstadoPagar()) System.out.println("PAGADO");
+            else System.out.println("FALTA PAGAR");
+        } 
+            
+        System.out.println("\n");
     }
     
     private static void gestionarNotasDeCredito(){

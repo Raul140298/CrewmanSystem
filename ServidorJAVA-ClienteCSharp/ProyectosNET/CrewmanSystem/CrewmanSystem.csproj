@@ -739,6 +739,24 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\GuiaRemisionWS\configuration91.svcinfo" />
+    <None Include="Connected Services\GuiaRemisionWS\configuration.svcinfo" />
+    <None Include="Connected Services\GuiaRemisionWS\CrewmanSystem.GuiaRemisionWS.actualizarGuiaRemisionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GuiaRemisionWS\CrewmanSystem.GuiaRemisionWS.guiaRemision.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GuiaRemisionWS\CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GuiaRemisionWS\CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GuiaRemisionWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Resources\signo-de-recarga.png" />
     <None Include="Connected Services\CarteraWS\CarteraWS.wsdl" />
     <None Include="Connected Services\CarteraWS\CarteraWS.xsd">
@@ -902,18 +920,6 @@
     <None Include="Connected Services\FamiliaWS\FamiliaWS.wsdl" />
     <None Include="Connected Services\FamiliaWS\FamiliaWS.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\GuiaRemisionWS\CrewmanSystem.GuiaRemisionWS.actualizarGuiaRemisionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GuiaRemisionWS\CrewmanSystem.GuiaRemisionWS.guiaRemision.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GuiaRemisionWS\CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GuiaRemisionWS\CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GuiaRemisionWS\GuiaRemisionWS.wsdl" />
     <None Include="Connected Services\GuiaRemisionWS\GuiaRemisionWS.xsd">
@@ -1241,12 +1247,6 @@
     <None Include="Connected Services\FacturaWS\configuration91.svcinfo" />
     <None Include="Connected Services\FacturaWS\configuration.svcinfo" />
     <None Include="Connected Services\FacturaWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\GuiaRemisionWS\configuration91.svcinfo" />
-    <None Include="Connected Services\GuiaRemisionWS\configuration.svcinfo" />
-    <None Include="Connected Services\GuiaRemisionWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

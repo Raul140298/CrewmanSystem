@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="PBgxCWAOPW+6l7ys4wd2tcuQ7basT8HvcEXVW/J0n3Q=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="puOPMDMSFIqNSqsu2IQmGJCPSQ05Ygf5NPOnHW/3wtk=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="basicHttpBinding" name="GuiaRemisionWSPortBinding1">
+    <bindingConfiguration bindingType="basicHttpBinding" name="GuiaRemisionWSPortBinding">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>GuiaRemisionWSPortBinding1</serializedValue>
+          <serializedValue>GuiaRemisionWSPortBinding</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="GuiaRemisionWSPort1" contract="GuiaRemisionWS.GuiaRemisionWS" bindingType="basicHttpBinding" address="http://54.80.91.225:8080/CrewmanSystemServices/GuiaRemisionWS" bindingConfiguration="GuiaRemisionWSPortBinding1">
+    <endpoint name="GuiaRemisionWSPort" contract="GuiaRemisionWS.GuiaRemisionWS" bindingType="basicHttpBinding" address="http://54.80.91.225:8080/CrewmanSystemServices/GuiaRemisionWS" bindingConfiguration="GuiaRemisionWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://54.80.91.225:8080/CrewmanSystemServices/GuiaRemisionWS</serializedValue>
@@ -124,7 +124,7 @@
           <serializedValue>basicHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>GuiaRemisionWSPortBinding1</serializedValue>
+          <serializedValue>GuiaRemisionWSPortBinding</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>GuiaRemisionWS.GuiaRemisionWS</serializedValue>
@@ -187,7 +187,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>GuiaRemisionWSPort1</serializedValue>
+          <serializedValue>GuiaRemisionWSPort</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
