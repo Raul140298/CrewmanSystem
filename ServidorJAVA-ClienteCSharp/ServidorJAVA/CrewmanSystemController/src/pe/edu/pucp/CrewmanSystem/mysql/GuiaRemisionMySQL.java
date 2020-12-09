@@ -9,7 +9,13 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Date;
+import pe.edu.pucp.CrewmanSystem.dao.EmpleadoDAO;
+import pe.edu.pucp.CrewmanSystem.model.Cliente;
+import pe.edu.pucp.CrewmanSystem.model.Empleado;
+import pe.edu.pucp.CrewmanSystem.model.EstadoPedido;
 import pe.edu.pucp.CrewmanSystem.model.Pedido;
+import pe.edu.pucp.CrewmanSystem.model.Persona;
+import pe.edu.pucp.CrewmanSystem.model.TipoPedido;
 
 public class GuiaRemisionMySQL implements GuiaRemisionDAO{
     Connection con;
@@ -70,64 +76,53 @@ public class GuiaRemisionMySQL implements GuiaRemisionDAO{
     }
     
     @Override
-    public ArrayList<GuiaRemision>listar(int idPedido)
-    {
+    public ArrayList<GuiaRemision>listar(int idVendedor,String razonSocial,String grupo,
+            Date fechaInicialRegistro,Date fechaFinRegistro,
+            Date fechaInicialTraslado,Date fechaFinTraslado){
+        EmpleadoDAO daoEmpleado = new EmpleadoMySQL();
         ArrayList<GuiaRemision> guiaRemisions = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            String sql = "{ call LISTAR_GUIADEREMISION (?)}";
-            cs = con.prepareCall(sql);
-            cs.setInt("_ID_PEDIDO",idPedido);
-            cs.executeUpdate();
-            rs = cs.getResultSet();
-            while(rs.next()){
-                GuiaRemision guiaRemision=new GuiaRemision();
-                guiaRemision.setIdGuiaRemision(rs.getInt("ID_GUIA_DE_REMISION"));
-                Pedido p=new Pedido();
-                p.setIdPedido(rs.getInt("ID_PEDIDO"));
-                guiaRemision.setPedido(p);
-                guiaRemision.setMotivoTraslado(rs.getString("MOTIVO_TRASLADO"));
-                guiaRemision.setFechaRegistro(rs.getDate("FECHA_REGISTRO"));
-                guiaRemision.setFechaTraslado(rs.getDate("FECHA_TRASLADO"));
-                guiaRemisions.add(guiaRemision);
-            }
-        }catch(Exception ex){
-            System.out.println(ex.getMessage());
-        }finally{
-            try{
-                rs.close();
-                con.close();
-            }catch(Exception ex){
-                System.out.println(ex.getMessage());
-            }
-        }
-        return guiaRemisions;
-    }
-
-    @Override
-    public ArrayList<GuiaRemision> listarPorVendedor(int idVendedor,String motivoTraslado,
-    Date fechaIniRegistro,Date fechaFinRegistro, Date fechaIniTraslado, Date fechaFinTraslado) {
-        ArrayList<GuiaRemision> guiaRemisions = new ArrayList<>();
-        try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            String sql = "{ call LISTAR_GUIADEREMISION_X_VENDEDOR (?,?,?,?,?,?)}";
+            String sql = "{ call LISTAR_GUIADEREMISION (?,?,?,?,?,?,?)}";
             cs = con.prepareCall(sql);
             cs.setInt("_ID_VENDEDOR",idVendedor);
-            cs.setString("_MOTIVO_TRASLADO", motivoTraslado);
-            cs.setDate("_FECHA_INI_REGISTRO", new java.sql.Date(fechaIniRegistro.getTime()));
+            cs.setString("_RAZON_SOCIAL", razonSocial);
+            cs.setString("_GRUPO", grupo);
+            cs.setDate("_FECHA_INICIAL_REGISTRO", new java.sql.Date(fechaInicialRegistro.getTime()));
             cs.setDate("_FECHA_FIN_REGISTRO", new java.sql.Date(fechaFinRegistro.getTime()));
-            cs.setDate("_FECHA_INI_TRASLADO", new java.sql.Date(fechaIniTraslado.getTime()));
+            cs.setDate("_FECHA_INICIAL_TRASLADO", new java.sql.Date(fechaInicialTraslado.getTime()));
             cs.setDate("_FECHA_FIN_TRASLADO", new java.sql.Date(fechaFinTraslado.getTime()));
             cs.executeUpdate();
             rs = cs.getResultSet();
             while(rs.next()){
                 GuiaRemision guiaRemision=new GuiaRemision();
+                Pedido pedido = new Pedido();
+                Cliente cliente = new Cliente();
+                Empleado vendedor = new Empleado();
+                Persona persona = new Persona();
+                
                 guiaRemision.setIdGuiaRemision(rs.getInt("ID_GUIA_DE_REMISION"));
-                Pedido p=new Pedido();
-                p.setIdPedido(rs.getInt("ID_PEDIDO"));
-                guiaRemision.setPedido(p);
+                
+                pedido.setIdPedido(rs.getInt("ID_PEDIDO"));
+                pedido.setMontoTotal(rs.getDouble("MONTO_TOTAL"));
+                pedido.setMontoPagar(rs.getDouble("MONTO_PAGAR"));
+                pedido.setTipoPedido(TipoPedido.valueOf(rs.getString("TIPO_PEDIDO")));
+                pedido.setEstadoPedido(EstadoPedido.valueOf(rs.getString("ESTADO_PEDIDO")));
+                
+                cliente.setIdCliente(rs.getInt("ID_CLIENTE"));
+                cliente.setRuc(rs.getString("RUC"));
+                cliente.setRazonSocial(rs.getString("RAZON_SOCIAL"));
+                cliente.setGrupo(rs.getString("GRUPO"));
+                cliente.setTipoEmpresa(rs.getString("TIPOCLIENTE"));
+                cliente.setDireccion(rs.getString("DIRECCION"));
+                pedido.setCliente(cliente);
+                
+                vendedor.setIdEmpleado(rs.getInt("ID_EMPLEADO"));
+                daoEmpleado.obtenerEmpleado(vendedor);
+                pedido.setEmpleado(vendedor);
+                
+                guiaRemision.setPedido(pedido);
                 guiaRemision.setMotivoTraslado(rs.getString("MOTIVO_TRASLADO"));
                 guiaRemision.setFechaRegistro(rs.getDate("FECHA_REGISTRO"));
                 guiaRemision.setFechaTraslado(rs.getDate("FECHA_TRASLADO"));
@@ -145,5 +140,4 @@ public class GuiaRemisionMySQL implements GuiaRemisionDAO{
         }
         return guiaRemisions;
     }
-    
 }

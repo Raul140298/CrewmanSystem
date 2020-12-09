@@ -915,9 +915,6 @@
     <None Include="Connected Services\GuiaRemisionWS\CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GuiaRemisionWS\CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsXVendedorResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\GuiaRemisionWS\GuiaRemisionWS.wsdl" />
     <None Include="Connected Services\GuiaRemisionWS\GuiaRemisionWS.xsd">
       <SubType>Designer</SubType>

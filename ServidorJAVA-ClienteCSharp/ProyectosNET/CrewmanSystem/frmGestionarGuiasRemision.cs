@@ -21,19 +21,21 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgv = dgvGuiasDeRemision;
 			dgvGuiasDeRemision.AutoGenerateColumns = false;
-			GuiaRemisionWS.guiaRemision[] misGuias = daoGuiaRemision.listarGuiaRemisionsXVendedor(Program.empleado.idEmpleado,"", DateTime.MinValue, 
-				DateTime.MaxValue, DateTime.MinValue, DateTime.MaxValue);
-			dgv = dgvGuiasDeRemision;
-			if (misGuias != null)
-			{
-				dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>(daoGuiaRemision.listarGuiaRemisionsXVendedor(Program.empleado.idEmpleado, "", DateTime.MinValue,
-				DateTime.MaxValue, DateTime.MinValue, DateTime.MaxValue).ToArray());
-			}
-			else
-			{
+			GuiaRemisionWS.guiaRemision[] misGuias = 
+				daoGuiaRemision.listarGuiaRemisions(Program.empleado.idEmpleado,"","", DateTime.Today.AddMonths(-3),
+				DateTime.Today.AddMonths(3), DateTime.Today.AddMonths(-3), DateTime.Today.AddMonths(3));
+			if (misGuias == null)
 				dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>();
+			else 
+				dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>(misGuias.ToList());
 
+			if (Program.empleado.cargo.nombre == "VENDEDOR")
+			{
+				dgvGuiasDeRemision.Columns["NOMBRE"].Visible = false;
+				dgvGuiasDeRemision.Columns["APELLIDO_PATERNO"].Visible = false;
+				dgvGuiasDeRemision.Columns["APELLIDO_MATERNO"].Visible = false;
 			}
+
 			#region colores de seleccion
 			dgvGuiasDeRemision.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dgvGuiasDeRemision.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
@@ -48,12 +50,21 @@ namespace CrewmanSystem
 
         private void dgvGuiasDeRemision_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-			//Castear objetos y mostrar valor determinado
-			GuiaRemisionWS.guiaRemision guiaRemision = dgvGuiasDeRemision.Rows[e.RowIndex].DataBoundItem
-											as GuiaRemisionWS.guiaRemision;
+            try
+            {
+				GuiaRemisionWS.guiaRemision guiaRemision = dgvGuiasDeRemision.Rows[e.RowIndex].DataBoundItem
+								as GuiaRemisionWS.guiaRemision;
 
-			dgvGuiasDeRemision.Rows[e.RowIndex].Cells["ID_PEDIDO"].Value = guiaRemision.pedido.idPedido;
-
+				dgvGuiasDeRemision.Rows[e.RowIndex].Cells["ID_PEDIDO"].Value = guiaRemision.pedido.idPedido;
+				dgvGuiasDeRemision.Rows[e.RowIndex].Cells["RUC"].Value = guiaRemision.pedido.cliente.ruc;
+				dgvGuiasDeRemision.Rows[e.RowIndex].Cells["RAZON_SOCIAL"].Value = guiaRemision.pedido.cliente.razonSocial;
+				dgvGuiasDeRemision.Rows[e.RowIndex].Cells["GRUPO"].Value = guiaRemision.pedido.cliente.grupo;
+				dgvGuiasDeRemision.Rows[e.RowIndex].Cells["TIPO_CLIENTE"].Value = guiaRemision.pedido.cliente.tipoEmpresa;
+				dgvGuiasDeRemision.Rows[e.RowIndex].Cells["NOMBRE"].Value = guiaRemision.pedido.empleado.nombre;
+				dgvGuiasDeRemision.Rows[e.RowIndex].Cells["APELLIDO_PATERNO"].Value = guiaRemision.pedido.empleado.apellidoPaterno;
+				dgvGuiasDeRemision.Rows[e.RowIndex].Cells["APELLIDO_MATERNO"].Value = guiaRemision.pedido.empleado.apellidoMaterno;
+			}
+            catch (Exception){ }
 		}
 
         private void dgvGuiasDeRemision_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)

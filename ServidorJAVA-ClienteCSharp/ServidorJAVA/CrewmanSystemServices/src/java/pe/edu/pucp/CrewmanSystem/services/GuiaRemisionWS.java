@@ -45,27 +45,16 @@ public class GuiaRemisionWS {
     }
     
     @WebMethod(operationName = "listarGuiaRemisions")
-    public ArrayList<GuiaRemision> listarGuiaRemisions(@WebParam(name = "idPedido") int idPedido) {
-        ArrayList<GuiaRemision> misGuiaRemisions = new ArrayList<>();
-        try{
-            misGuiaRemisions = daoGuiaRemision.listar(idPedido);
-        }catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-        return misGuiaRemisions;
-    }
-    
-    @WebMethod(operationName = "listarGuiaRemisionsXVendedor")
-    public ArrayList<GuiaRemision> listarGuiaRemisionsXVendedor(@WebParam(name = "idVendedor") int idVendedor,
-    @WebParam(name = "motivoTraslado") String motivoTraslado,
+    public ArrayList<GuiaRemision> listarGuiaRemisions(@WebParam(name = "idVendedor") int idVendedor,
+    @WebParam(name = "razonSocial") String razonSocial,
+    @WebParam(name = "grupo") String grupo,
     @WebParam(name = "fechaIniRegistro") Date fechaIniRegistro,
     @WebParam(name = "fechaFinRegistro") Date fechaFinRegistro, 
     @WebParam(name = "fechaIniTraslado")Date fechaIniTraslado, 
     @WebParam(name = "fechaFinTraslado")Date fechaFinTraslado) {
         ArrayList<GuiaRemision> misGuiaRemisions = new ArrayList<>();
         try{
-            misGuiaRemisions = daoGuiaRemision.listarPorVendedor(idVendedor,motivoTraslado,
-                    fechaIniRegistro,fechaFinRegistro,fechaIniTraslado,fechaFinTraslado);
+            misGuiaRemisions = daoGuiaRemision.listar(idVendedor,razonSocial,grupo,fechaIniRegistro,fechaFinRegistro,fechaIniTraslado,fechaFinTraslado);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }

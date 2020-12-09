@@ -5,23 +5,11 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/GuiaRemisionWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="insertarGuiaRemision">
-    <part name="parameters" element="tns:insertarGuiaRemision" />
-  </message>
-  <message name="insertarGuiaRemisionResponse">
-    <part name="parameters" element="tns:insertarGuiaRemisionResponse" />
-  </message>
   <message name="listarGuiaRemisions">
     <part name="parameters" element="tns:listarGuiaRemisions" />
   </message>
   <message name="listarGuiaRemisionsResponse">
     <part name="parameters" element="tns:listarGuiaRemisionsResponse" />
-  </message>
-  <message name="listarGuiaRemisionsXVendedor">
-    <part name="parameters" element="tns:listarGuiaRemisionsXVendedor" />
-  </message>
-  <message name="listarGuiaRemisionsXVendedorResponse">
-    <part name="parameters" element="tns:listarGuiaRemisionsXVendedorResponse" />
   </message>
   <message name="actualizarGuiaRemision">
     <part name="parameters" element="tns:actualizarGuiaRemision" />
@@ -29,35 +17,28 @@
   <message name="actualizarGuiaRemisionResponse">
     <part name="parameters" element="tns:actualizarGuiaRemisionResponse" />
   </message>
+  <message name="insertarGuiaRemision">
+    <part name="parameters" element="tns:insertarGuiaRemision" />
+  </message>
+  <message name="insertarGuiaRemisionResponse">
+    <part name="parameters" element="tns:insertarGuiaRemisionResponse" />
+  </message>
   <portType name="GuiaRemisionWS">
-    <operation name="insertarGuiaRemision">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/insertarGuiaRemisionRequest" message="tns:insertarGuiaRemision" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/insertarGuiaRemisionResponse" message="tns:insertarGuiaRemisionResponse" />
-    </operation>
     <operation name="listarGuiaRemisions">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/listarGuiaRemisionsRequest" message="tns:listarGuiaRemisions" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/listarGuiaRemisionsResponse" message="tns:listarGuiaRemisionsResponse" />
-    </operation>
-    <operation name="listarGuiaRemisionsXVendedor">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/listarGuiaRemisionsXVendedorRequest" message="tns:listarGuiaRemisionsXVendedor" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/listarGuiaRemisionsXVendedorResponse" message="tns:listarGuiaRemisionsXVendedorResponse" />
     </operation>
     <operation name="actualizarGuiaRemision">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/actualizarGuiaRemisionRequest" message="tns:actualizarGuiaRemision" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/actualizarGuiaRemisionResponse" message="tns:actualizarGuiaRemisionResponse" />
     </operation>
+    <operation name="insertarGuiaRemision">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/insertarGuiaRemisionRequest" message="tns:insertarGuiaRemision" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/insertarGuiaRemisionResponse" message="tns:insertarGuiaRemisionResponse" />
+    </operation>
   </portType>
   <binding name="GuiaRemisionWSPortBinding" type="tns:GuiaRemisionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarGuiaRemision">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="listarGuiaRemisions">
       <soap:operation soapAction="" />
       <input>
@@ -67,7 +48,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarGuiaRemisionsXVendedor">
+    <operation name="actualizarGuiaRemision">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +57,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarGuiaRemision">
+    <operation name="insertarGuiaRemision">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

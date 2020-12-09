@@ -147,7 +147,6 @@ public class FacturaMySQL implements FacturaDAO{
                 pedido.setIdPedido(rs.getInt("ID_PEDIDO"));
                 pedido.setMontoTotal(rs.getDouble("MONTO_TOTAL"));
                 pedido.setMontoPagar(rs.getDouble("MONTO_PAGAR"));
-
                 pedido.setTipoPedido(TipoPedido.valueOf(rs.getString("TIPO_PEDIDO")));
                 pedido.setEstadoPedido(EstadoPedido.valueOf(rs.getString("ESTADO_PEDIDO")));
                 

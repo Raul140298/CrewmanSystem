@@ -67,7 +67,7 @@ public class Main{
 //        gestionarLineasDePedido();
 //        gestionarFacturas();
 //        gestionarNotasDeCredito();
-//        gestionarGuiasDeRemision();
+        gestionarGuiasDeRemision();
 //        gestionarQuejas();
 
 //        misZonas = daoZona.listar();
@@ -719,12 +719,16 @@ public class Main{
 //        } catch(Exception e){
 //            System.out.println("Error en el insertar Guia de remision");
 //        }
-        ArrayList<GuiaRemision> misGuias = daoGuiaRemision.listar(misPedidos.get(0).getIdPedido());    
-        System.out.println("LISTADO DE GUIAS DE REMISION DEL PEDIDO "+misPedidos.get(0).getIdPedido());
-        System.out.println("==================================================================================");
-        for(GuiaRemision g:misGuias) 
-            System.out.println(g.getIdGuiaRemision()+ " - "+g.getMotivoTraslado()+" - "+g.getFechaRegistro()+" - "+g.getFechaTraslado());
-        System.out.println("\n");
+        try{
+            ArrayList<GuiaRemision> misGuias = daoGuiaRemision.listar(25,"","",sdf.parse("18-06-2019"), sdf.parse("18-06-2022"), sdf.parse("18-06-2019"), sdf.parse("18-06-2022"));    
+//            System.out.println("LISTADO DE GUIAS DE REMISION DEL PEDIDO "+misPedidos.get(0).getIdPedido());
+            System.out.println("==================================================================================");
+            for(GuiaRemision g:misGuias) 
+                System.out.println(g.getIdGuiaRemision()+ " - "+g.getMotivoTraslado()+" - "+g.getFechaRegistro()+" - "+g.getFechaTraslado());
+            System.out.println("\n");
+        } catch(Exception e){
+            System.out.println(e.getMessage());
+        }
     }
     
     private static void gestionarQuejas(){

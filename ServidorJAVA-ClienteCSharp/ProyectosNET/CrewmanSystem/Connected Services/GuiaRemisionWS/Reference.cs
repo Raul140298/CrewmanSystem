@@ -16,20 +16,6 @@ namespace CrewmanSystem.GuiaRemisionWS {
     public interface GuiaRemisionWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/insertarGuiaRemisionRequ" +
-            "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/insertarGuiaRemisionResp" +
-            "onse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionResponse insertarGuiaRemision(CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/insertarGuiaRemisionRequ" +
-            "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/insertarGuiaRemisionResp" +
-            "onse")]
-        System.Threading.Tasks.Task<CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionResponse> insertarGuiaRemisionAsync(CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/listarGuiaRemisionsReque" +
             "st", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/listarGuiaRemisionsRespo" +
             "nse")]
@@ -44,20 +30,6 @@ namespace CrewmanSystem.GuiaRemisionWS {
         System.Threading.Tasks.Task<CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsResponse> listarGuiaRemisionsAsync(CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/listarGuiaRemisionsXVend" +
-            "edorRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/listarGuiaRemisionsXVend" +
-            "edorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsXVendedorResponse listarGuiaRemisionsXVendedor(CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsXVendedorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/listarGuiaRemisionsXVend" +
-            "edorRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/listarGuiaRemisionsXVend" +
-            "edorResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsXVendedorResponse> listarGuiaRemisionsXVendedorAsync(CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsXVendedorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/actualizarGuiaRemisionRe" +
             "quest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/actualizarGuiaRemisionRe" +
             "sponse")]
@@ -70,10 +42,24 @@ namespace CrewmanSystem.GuiaRemisionWS {
             "quest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/actualizarGuiaRemisionRe" +
             "sponse")]
         System.Threading.Tasks.Task<CrewmanSystem.GuiaRemisionWS.actualizarGuiaRemisionResponse> actualizarGuiaRemisionAsync(CrewmanSystem.GuiaRemisionWS.actualizarGuiaRemisionRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/insertarGuiaRemisionRequ" +
+            "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/insertarGuiaRemisionResp" +
+            "onse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionResponse insertarGuiaRemision(CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/insertarGuiaRemisionRequ" +
+            "est", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/GuiaRemisionWS/insertarGuiaRemisionResp" +
+            "onse")]
+        System.Threading.Tasks.Task<CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionResponse> insertarGuiaRemisionAsync(CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -189,7 +175,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -487,7 +473,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -743,7 +729,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -873,7 +859,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1078,7 +1064,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1124,7 +1110,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1212,7 +1198,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1328,7 +1314,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1472,7 +1458,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1658,7 +1644,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1788,7 +1774,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1946,7 +1932,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2062,7 +2048,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2192,7 +2178,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2322,7 +2308,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2396,7 +2382,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2456,7 +2442,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2530,7 +2516,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2590,7 +2576,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2692,7 +2678,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2892,7 +2878,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3036,7 +3022,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3168,7 +3154,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personaContacto))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(empleado))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3340,7 +3326,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3405,7 +3391,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/")]
     public enum estadoPedido {
@@ -3424,7 +3410,7 @@ namespace CrewmanSystem.GuiaRemisionWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/")]
     public enum tipoPedido {
@@ -3439,54 +3425,48 @@ namespace CrewmanSystem.GuiaRemisionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarGuiaRemision", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarGuiaRemisionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.GuiaRemisionWS.guiaRemision guiaRemision;
-        
-        public insertarGuiaRemisionRequest() {
-        }
-        
-        public insertarGuiaRemisionRequest(CrewmanSystem.GuiaRemisionWS.guiaRemision guiaRemision) {
-            this.guiaRemision = guiaRemision;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarGuiaRemisionResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarGuiaRemisionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarGuiaRemisionResponse() {
-        }
-        
-        public insertarGuiaRemisionResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarGuiaRemisions", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
     public partial class listarGuiaRemisionsRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPedido;
+        public int idVendedor;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string razonSocial;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string grupo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fechaIniRegistro;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fechaFinRegistro;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fechaIniTraslado;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fechaFinTraslado;
         
         public listarGuiaRemisionsRequest() {
         }
         
-        public listarGuiaRemisionsRequest(int idPedido) {
-            this.idPedido = idPedido;
+        public listarGuiaRemisionsRequest(int idVendedor, string razonSocial, string grupo, System.DateTime fechaIniRegistro, System.DateTime fechaFinRegistro, System.DateTime fechaIniTraslado, System.DateTime fechaFinTraslado) {
+            this.idVendedor = idVendedor;
+            this.razonSocial = razonSocial;
+            this.grupo = grupo;
+            this.fechaIniRegistro = fechaIniRegistro;
+            this.fechaFinRegistro = fechaFinRegistro;
+            this.fechaIniTraslado = fechaIniTraslado;
+            this.fechaFinTraslado = fechaFinTraslado;
         }
     }
     
@@ -3504,67 +3484,6 @@ namespace CrewmanSystem.GuiaRemisionWS {
         }
         
         public listarGuiaRemisionsResponse(CrewmanSystem.GuiaRemisionWS.guiaRemision[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarGuiaRemisionsXVendedor", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarGuiaRemisionsXVendedorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idVendedor;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string motivoTraslado;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fechaIniRegistro;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fechaFinRegistro;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fechaIniTraslado;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fechaFinTraslado;
-        
-        public listarGuiaRemisionsXVendedorRequest() {
-        }
-        
-        public listarGuiaRemisionsXVendedorRequest(int idVendedor, string motivoTraslado, System.DateTime fechaIniRegistro, System.DateTime fechaFinRegistro, System.DateTime fechaIniTraslado, System.DateTime fechaFinTraslado) {
-            this.idVendedor = idVendedor;
-            this.motivoTraslado = motivoTraslado;
-            this.fechaIniRegistro = fechaIniRegistro;
-            this.fechaFinRegistro = fechaFinRegistro;
-            this.fechaIniTraslado = fechaIniTraslado;
-            this.fechaFinTraslado = fechaFinTraslado;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarGuiaRemisionsXVendedorResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarGuiaRemisionsXVendedorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.GuiaRemisionWS.guiaRemision[] @return;
-        
-        public listarGuiaRemisionsXVendedorResponse() {
-        }
-        
-        public listarGuiaRemisionsXVendedorResponse(CrewmanSystem.GuiaRemisionWS.guiaRemision[] @return) {
             this.@return = @return;
         }
     }
@@ -3605,6 +3524,42 @@ namespace CrewmanSystem.GuiaRemisionWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarGuiaRemision", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarGuiaRemisionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.GuiaRemisionWS.guiaRemision guiaRemision;
+        
+        public insertarGuiaRemisionRequest() {
+        }
+        
+        public insertarGuiaRemisionRequest(CrewmanSystem.GuiaRemisionWS.guiaRemision guiaRemision) {
+            this.guiaRemision = guiaRemision;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarGuiaRemisionResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarGuiaRemisionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarGuiaRemisionResponse() {
+        }
+        
+        public insertarGuiaRemisionResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface GuiaRemisionWSChannel : CrewmanSystem.GuiaRemisionWS.GuiaRemisionWS, System.ServiceModel.IClientChannel {
     }
@@ -3633,36 +3588,19 @@ namespace CrewmanSystem.GuiaRemisionWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionResponse CrewmanSystem.GuiaRemisionWS.GuiaRemisionWS.insertarGuiaRemision(CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionRequest request) {
-            return base.Channel.insertarGuiaRemision(request);
-        }
-        
-        public int insertarGuiaRemision(CrewmanSystem.GuiaRemisionWS.guiaRemision guiaRemision) {
-            CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionRequest inValue = new CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionRequest();
-            inValue.guiaRemision = guiaRemision;
-            CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionResponse retVal = ((CrewmanSystem.GuiaRemisionWS.GuiaRemisionWS)(this)).insertarGuiaRemision(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionResponse> CrewmanSystem.GuiaRemisionWS.GuiaRemisionWS.insertarGuiaRemisionAsync(CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionRequest request) {
-            return base.Channel.insertarGuiaRemisionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionResponse> insertarGuiaRemisionAsync(CrewmanSystem.GuiaRemisionWS.guiaRemision guiaRemision) {
-            CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionRequest inValue = new CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionRequest();
-            inValue.guiaRemision = guiaRemision;
-            return ((CrewmanSystem.GuiaRemisionWS.GuiaRemisionWS)(this)).insertarGuiaRemisionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsResponse CrewmanSystem.GuiaRemisionWS.GuiaRemisionWS.listarGuiaRemisions(CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsRequest request) {
             return base.Channel.listarGuiaRemisions(request);
         }
         
-        public CrewmanSystem.GuiaRemisionWS.guiaRemision[] listarGuiaRemisions(int idPedido) {
+        public CrewmanSystem.GuiaRemisionWS.guiaRemision[] listarGuiaRemisions(int idVendedor, string razonSocial, string grupo, System.DateTime fechaIniRegistro, System.DateTime fechaFinRegistro, System.DateTime fechaIniTraslado, System.DateTime fechaFinTraslado) {
             CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsRequest inValue = new CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsRequest();
-            inValue.idPedido = idPedido;
+            inValue.idVendedor = idVendedor;
+            inValue.razonSocial = razonSocial;
+            inValue.grupo = grupo;
+            inValue.fechaIniRegistro = fechaIniRegistro;
+            inValue.fechaFinRegistro = fechaFinRegistro;
+            inValue.fechaIniTraslado = fechaIniTraslado;
+            inValue.fechaFinTraslado = fechaFinTraslado;
             CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsResponse retVal = ((CrewmanSystem.GuiaRemisionWS.GuiaRemisionWS)(this)).listarGuiaRemisions(inValue);
             return retVal.@return;
         }
@@ -3672,43 +3610,16 @@ namespace CrewmanSystem.GuiaRemisionWS {
             return base.Channel.listarGuiaRemisionsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsResponse> listarGuiaRemisionsAsync(int idPedido) {
+        public System.Threading.Tasks.Task<CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsResponse> listarGuiaRemisionsAsync(int idVendedor, string razonSocial, string grupo, System.DateTime fechaIniRegistro, System.DateTime fechaFinRegistro, System.DateTime fechaIniTraslado, System.DateTime fechaFinTraslado) {
             CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsRequest inValue = new CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsRequest();
-            inValue.idPedido = idPedido;
+            inValue.idVendedor = idVendedor;
+            inValue.razonSocial = razonSocial;
+            inValue.grupo = grupo;
+            inValue.fechaIniRegistro = fechaIniRegistro;
+            inValue.fechaFinRegistro = fechaFinRegistro;
+            inValue.fechaIniTraslado = fechaIniTraslado;
+            inValue.fechaFinTraslado = fechaFinTraslado;
             return ((CrewmanSystem.GuiaRemisionWS.GuiaRemisionWS)(this)).listarGuiaRemisionsAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsXVendedorResponse CrewmanSystem.GuiaRemisionWS.GuiaRemisionWS.listarGuiaRemisionsXVendedor(CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsXVendedorRequest request) {
-            return base.Channel.listarGuiaRemisionsXVendedor(request);
-        }
-        
-        public CrewmanSystem.GuiaRemisionWS.guiaRemision[] listarGuiaRemisionsXVendedor(int idVendedor, string motivoTraslado, System.DateTime fechaIniRegistro, System.DateTime fechaFinRegistro, System.DateTime fechaIniTraslado, System.DateTime fechaFinTraslado) {
-            CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsXVendedorRequest inValue = new CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsXVendedorRequest();
-            inValue.idVendedor = idVendedor;
-            inValue.motivoTraslado = motivoTraslado;
-            inValue.fechaIniRegistro = fechaIniRegistro;
-            inValue.fechaFinRegistro = fechaFinRegistro;
-            inValue.fechaIniTraslado = fechaIniTraslado;
-            inValue.fechaFinTraslado = fechaFinTraslado;
-            CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsXVendedorResponse retVal = ((CrewmanSystem.GuiaRemisionWS.GuiaRemisionWS)(this)).listarGuiaRemisionsXVendedor(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsXVendedorResponse> CrewmanSystem.GuiaRemisionWS.GuiaRemisionWS.listarGuiaRemisionsXVendedorAsync(CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsXVendedorRequest request) {
-            return base.Channel.listarGuiaRemisionsXVendedorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsXVendedorResponse> listarGuiaRemisionsXVendedorAsync(int idVendedor, string motivoTraslado, System.DateTime fechaIniRegistro, System.DateTime fechaFinRegistro, System.DateTime fechaIniTraslado, System.DateTime fechaFinTraslado) {
-            CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsXVendedorRequest inValue = new CrewmanSystem.GuiaRemisionWS.listarGuiaRemisionsXVendedorRequest();
-            inValue.idVendedor = idVendedor;
-            inValue.motivoTraslado = motivoTraslado;
-            inValue.fechaIniRegistro = fechaIniRegistro;
-            inValue.fechaFinRegistro = fechaFinRegistro;
-            inValue.fechaIniTraslado = fechaIniTraslado;
-            inValue.fechaFinTraslado = fechaFinTraslado;
-            return ((CrewmanSystem.GuiaRemisionWS.GuiaRemisionWS)(this)).listarGuiaRemisionsXVendedorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3732,6 +3643,29 @@ namespace CrewmanSystem.GuiaRemisionWS {
             CrewmanSystem.GuiaRemisionWS.actualizarGuiaRemisionRequest inValue = new CrewmanSystem.GuiaRemisionWS.actualizarGuiaRemisionRequest();
             inValue.guiaRemision = guiaRemision;
             return ((CrewmanSystem.GuiaRemisionWS.GuiaRemisionWS)(this)).actualizarGuiaRemisionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionResponse CrewmanSystem.GuiaRemisionWS.GuiaRemisionWS.insertarGuiaRemision(CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionRequest request) {
+            return base.Channel.insertarGuiaRemision(request);
+        }
+        
+        public int insertarGuiaRemision(CrewmanSystem.GuiaRemisionWS.guiaRemision guiaRemision) {
+            CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionRequest inValue = new CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionRequest();
+            inValue.guiaRemision = guiaRemision;
+            CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionResponse retVal = ((CrewmanSystem.GuiaRemisionWS.GuiaRemisionWS)(this)).insertarGuiaRemision(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionResponse> CrewmanSystem.GuiaRemisionWS.GuiaRemisionWS.insertarGuiaRemisionAsync(CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionRequest request) {
+            return base.Channel.insertarGuiaRemisionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionResponse> insertarGuiaRemisionAsync(CrewmanSystem.GuiaRemisionWS.guiaRemision guiaRemision) {
+            CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionRequest inValue = new CrewmanSystem.GuiaRemisionWS.insertarGuiaRemisionRequest();
+            inValue.guiaRemision = guiaRemision;
+            return ((CrewmanSystem.GuiaRemisionWS.GuiaRemisionWS)(this)).insertarGuiaRemisionAsync(inValue);
         }
     }
 }

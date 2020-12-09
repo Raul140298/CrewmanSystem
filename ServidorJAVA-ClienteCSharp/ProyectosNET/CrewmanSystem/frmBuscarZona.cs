@@ -13,9 +13,11 @@ namespace CrewmanSystem
 {
 	public partial class frmBuscarZona : Form
 	{
-		ZonaWS.ZonaWSClient daoZona = new ZonaWS.ZonaWSClient();
+		private ZonaWS.ZonaWSClient daoZona;
+		
 		public frmBuscarZona()
 		{
+			daoZona = new ZonaWS.ZonaWSClient();
 			InitializeComponent();
 
 			#region colores de seleccion

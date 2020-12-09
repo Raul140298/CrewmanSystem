@@ -6,7 +6,6 @@ import java.util.Date;
 public interface GuiaRemisionDAO{
     int insertar(GuiaRemision guiaRemision);
     int actualizar(GuiaRemision guiaRemision);
-    ArrayList<GuiaRemision> listar(int idPedido);
-    ArrayList<GuiaRemision> listarPorVendedor(int idVendedor,String motivoTraslado,
+    ArrayList<GuiaRemision> listar(int idVendedor,String razonSocial,String grupo,
     Date fechaIniRegistro,Date fechaFinRegistro, Date fechaIniTraslado, Date fechaFinTraslado);
 }
