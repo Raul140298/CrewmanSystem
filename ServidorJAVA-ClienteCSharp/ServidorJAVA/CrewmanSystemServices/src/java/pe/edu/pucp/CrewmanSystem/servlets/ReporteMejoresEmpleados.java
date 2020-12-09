@@ -24,7 +24,7 @@ public class ReporteMejoresEmpleados extends HttpServlet {
             throws ServletException, IOException {
         try{
             JasperReport reporte = (JasperReport)
-                    JRLoader.loadObjectFromFile(ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/MejoresClientes.jasper").getFile());
+                    JRLoader.loadObjectFromFile(ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/MejoresEmpleados.jasper").getFile());
             
             String rutaLogo = ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/images/portada2.jpg").getPath();
             ImageIcon icono = new ImageIcon(rutaLogo);
@@ -34,7 +34,6 @@ public class ReporteMejoresEmpleados extends HttpServlet {
             Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             
             HashMap hm = new HashMap();
-            hm.put("AUTOR","RAUL JERI");
             hm.put("LOGO", imagen);
             
             JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);

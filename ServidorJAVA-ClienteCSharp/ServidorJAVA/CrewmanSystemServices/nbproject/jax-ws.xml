@@ -67,6 +67,9 @@
     <service name="FacturaWS">
       <implementation-class>pe.edu.pucp.CrewmanSystem.services.FacturaWS</implementation-class>
     </service>
+    <service name="ReporteWS">
+      <implementation-class>pe.edu.pucp.CrewmanSystem.services.ReporteWS</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>
