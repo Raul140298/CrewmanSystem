@@ -16,40 +16,6 @@ namespace CrewmanSystem.FacturaWS {
     public interface FacturaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/actualizarFacturaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/actualizarFacturaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.FacturaWS.actualizarFacturaResponse actualizarFactura(CrewmanSystem.FacturaWS.actualizarFacturaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/actualizarFacturaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/actualizarFacturaResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.FacturaWS.actualizarFacturaResponse> actualizarFacturaAsync(CrewmanSystem.FacturaWS.actualizarFacturaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/listarFacturasPorPedidoReques" +
-            "t", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/listarFacturasPorPedidoRespon" +
-            "se")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.FacturaWS.listarFacturasPorPedidoResponse listarFacturasPorPedido(CrewmanSystem.FacturaWS.listarFacturasPorPedidoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/listarFacturasPorPedidoReques" +
-            "t", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/listarFacturasPorPedidoRespon" +
-            "se")]
-        System.Threading.Tasks.Task<CrewmanSystem.FacturaWS.listarFacturasPorPedidoResponse> listarFacturasPorPedidoAsync(CrewmanSystem.FacturaWS.listarFacturasPorPedidoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/eliminarFacturaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/eliminarFacturaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.FacturaWS.eliminarFacturaResponse eliminarFactura(CrewmanSystem.FacturaWS.eliminarFacturaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/eliminarFacturaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/eliminarFacturaResponse")]
-        System.Threading.Tasks.Task<CrewmanSystem.FacturaWS.eliminarFacturaResponse> eliminarFacturaAsync(CrewmanSystem.FacturaWS.eliminarFacturaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/listarFacturasRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/listarFacturasResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -68,10 +34,44 @@ namespace CrewmanSystem.FacturaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/insertarFacturaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/insertarFacturaResponse")]
         System.Threading.Tasks.Task<CrewmanSystem.FacturaWS.insertarFacturaResponse> insertarFacturaAsync(CrewmanSystem.FacturaWS.insertarFacturaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/eliminarFacturaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/eliminarFacturaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.FacturaWS.eliminarFacturaResponse eliminarFactura(CrewmanSystem.FacturaWS.eliminarFacturaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/eliminarFacturaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/eliminarFacturaResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.FacturaWS.eliminarFacturaResponse> eliminarFacturaAsync(CrewmanSystem.FacturaWS.eliminarFacturaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/listarFacturasPorPedidoReques" +
+            "t", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/listarFacturasPorPedidoRespon" +
+            "se")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.FacturaWS.listarFacturasPorPedidoResponse listarFacturasPorPedido(CrewmanSystem.FacturaWS.listarFacturasPorPedidoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/listarFacturasPorPedidoReques" +
+            "t", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/listarFacturasPorPedidoRespon" +
+            "se")]
+        System.Threading.Tasks.Task<CrewmanSystem.FacturaWS.listarFacturasPorPedidoResponse> listarFacturasPorPedidoAsync(CrewmanSystem.FacturaWS.listarFacturasPorPedidoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/actualizarFacturaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/actualizarFacturaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.FacturaWS.actualizarFacturaResponse actualizarFactura(CrewmanSystem.FacturaWS.actualizarFacturaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/actualizarFacturaRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/FacturaWS/actualizarFacturaResponse")]
+        System.Threading.Tasks.Task<CrewmanSystem.FacturaWS.actualizarFacturaResponse> actualizarFacturaAsync(CrewmanSystem.FacturaWS.actualizarFacturaRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -271,7 +271,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -373,7 +373,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -461,7 +461,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -759,7 +759,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1015,7 +1015,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1145,7 +1145,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1350,7 +1350,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1396,7 +1396,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1512,7 +1512,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1642,7 +1642,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1772,7 +1772,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1916,7 +1916,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2102,7 +2102,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2232,7 +2232,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2390,7 +2390,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2450,7 +2450,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2524,7 +2524,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2584,7 +2584,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2660,7 +2660,7 @@ namespace CrewmanSystem.FacturaWS {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(personaContacto))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(empleado))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2676,6 +2676,8 @@ namespace CrewmanSystem.FacturaWS {
         private string correoField;
         
         private string dniField;
+        
+        private byte[] fotoField;
         
         private ushort generoField;
         
@@ -2748,7 +2750,19 @@ namespace CrewmanSystem.FacturaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=5)]
+        public byte[] foto {
+            get {
+                return this.fotoField;
+            }
+            set {
+                this.fotoField = value;
+                this.RaisePropertyChanged("foto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public ushort genero {
             get {
                 return this.generoField;
@@ -2760,7 +2774,7 @@ namespace CrewmanSystem.FacturaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public int idPersona {
             get {
                 return this.idPersonaField;
@@ -2772,7 +2786,7 @@ namespace CrewmanSystem.FacturaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public string nombre {
             get {
                 return this.nombreField;
@@ -2784,7 +2798,7 @@ namespace CrewmanSystem.FacturaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public string telefono1 {
             get {
                 return this.telefono1Field;
@@ -2796,7 +2810,7 @@ namespace CrewmanSystem.FacturaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
         public string telefono2 {
             get {
                 return this.telefono2Field;
@@ -2818,12 +2832,14 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/")]
     public partial class personaContacto : persona {
+        
+        private bool activo1Field;
         
         private string cargoField;
         
@@ -2832,7 +2848,19 @@ namespace CrewmanSystem.FacturaWS {
         private int idPersonaContactoField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("activo", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo1 {
+            get {
+                return this.activo1Field;
+            }
+            set {
+                this.activo1Field = value;
+                this.RaisePropertyChanged("activo1");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public string cargo {
             get {
                 return this.cargoField;
@@ -2844,7 +2872,7 @@ namespace CrewmanSystem.FacturaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public cliente cliente {
             get {
                 return this.clienteField;
@@ -2856,7 +2884,7 @@ namespace CrewmanSystem.FacturaWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public int idPersonaContacto {
             get {
                 return this.idPersonaContactoField;
@@ -2869,7 +2897,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2999,7 +3027,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3143,7 +3171,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/")]
     public enum estadoPedido {
@@ -3162,7 +3190,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3278,7 +3306,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3394,7 +3422,7 @@ namespace CrewmanSystem.FacturaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/")]
     public enum tipoPedido {
@@ -3404,114 +3432,6 @@ namespace CrewmanSystem.FacturaWS {
         
         /// <remarks/>
         PEDIDO,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarFactura", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarFacturaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.FacturaWS.factura factura;
-        
-        public actualizarFacturaRequest() {
-        }
-        
-        public actualizarFacturaRequest(CrewmanSystem.FacturaWS.factura factura) {
-            this.factura = factura;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarFacturaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarFacturaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarFacturaResponse() {
-        }
-        
-        public actualizarFacturaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFacturasPorPedido", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarFacturasPorPedidoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idPedido;
-        
-        public listarFacturasPorPedidoRequest() {
-        }
-        
-        public listarFacturasPorPedidoRequest(int idPedido) {
-            this.idPedido = idPedido;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFacturasPorPedidoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarFacturasPorPedidoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.FacturaWS.factura[] @return;
-        
-        public listarFacturasPorPedidoResponse() {
-        }
-        
-        public listarFacturasPorPedidoResponse(CrewmanSystem.FacturaWS.factura[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarFactura", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarFacturaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public CrewmanSystem.FacturaWS.factura factura;
-        
-        public eliminarFacturaRequest() {
-        }
-        
-        public eliminarFacturaRequest(CrewmanSystem.FacturaWS.factura factura) {
-            this.factura = factura;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarFacturaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarFacturaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarFacturaResponse() {
-        }
-        
-        public eliminarFacturaResponse(int @return) {
-            this.@return = @return;
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3626,6 +3546,114 @@ namespace CrewmanSystem.FacturaWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarFactura", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarFacturaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.FacturaWS.factura factura;
+        
+        public eliminarFacturaRequest() {
+        }
+        
+        public eliminarFacturaRequest(CrewmanSystem.FacturaWS.factura factura) {
+            this.factura = factura;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarFacturaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarFacturaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarFacturaResponse() {
+        }
+        
+        public eliminarFacturaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFacturasPorPedido", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarFacturasPorPedidoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idPedido;
+        
+        public listarFacturasPorPedidoRequest() {
+        }
+        
+        public listarFacturasPorPedidoRequest(int idPedido) {
+            this.idPedido = idPedido;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFacturasPorPedidoResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarFacturasPorPedidoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.FacturaWS.factura[] @return;
+        
+        public listarFacturasPorPedidoResponse() {
+        }
+        
+        public listarFacturasPorPedidoResponse(CrewmanSystem.FacturaWS.factura[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarFactura", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarFacturaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public CrewmanSystem.FacturaWS.factura factura;
+        
+        public actualizarFacturaRequest() {
+        }
+        
+        public actualizarFacturaRequest(CrewmanSystem.FacturaWS.factura factura) {
+            this.factura = factura;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarFacturaResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarFacturaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarFacturaResponse() {
+        }
+        
+        public actualizarFacturaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface FacturaWSChannel : CrewmanSystem.FacturaWS.FacturaWS, System.ServiceModel.IClientChannel {
     }
@@ -3651,75 +3679,6 @@ namespace CrewmanSystem.FacturaWS {
         
         public FacturaWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.FacturaWS.actualizarFacturaResponse CrewmanSystem.FacturaWS.FacturaWS.actualizarFactura(CrewmanSystem.FacturaWS.actualizarFacturaRequest request) {
-            return base.Channel.actualizarFactura(request);
-        }
-        
-        public int actualizarFactura(CrewmanSystem.FacturaWS.factura factura) {
-            CrewmanSystem.FacturaWS.actualizarFacturaRequest inValue = new CrewmanSystem.FacturaWS.actualizarFacturaRequest();
-            inValue.factura = factura;
-            CrewmanSystem.FacturaWS.actualizarFacturaResponse retVal = ((CrewmanSystem.FacturaWS.FacturaWS)(this)).actualizarFactura(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.FacturaWS.actualizarFacturaResponse> CrewmanSystem.FacturaWS.FacturaWS.actualizarFacturaAsync(CrewmanSystem.FacturaWS.actualizarFacturaRequest request) {
-            return base.Channel.actualizarFacturaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.FacturaWS.actualizarFacturaResponse> actualizarFacturaAsync(CrewmanSystem.FacturaWS.factura factura) {
-            CrewmanSystem.FacturaWS.actualizarFacturaRequest inValue = new CrewmanSystem.FacturaWS.actualizarFacturaRequest();
-            inValue.factura = factura;
-            return ((CrewmanSystem.FacturaWS.FacturaWS)(this)).actualizarFacturaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.FacturaWS.listarFacturasPorPedidoResponse CrewmanSystem.FacturaWS.FacturaWS.listarFacturasPorPedido(CrewmanSystem.FacturaWS.listarFacturasPorPedidoRequest request) {
-            return base.Channel.listarFacturasPorPedido(request);
-        }
-        
-        public CrewmanSystem.FacturaWS.factura[] listarFacturasPorPedido(int idPedido) {
-            CrewmanSystem.FacturaWS.listarFacturasPorPedidoRequest inValue = new CrewmanSystem.FacturaWS.listarFacturasPorPedidoRequest();
-            inValue.idPedido = idPedido;
-            CrewmanSystem.FacturaWS.listarFacturasPorPedidoResponse retVal = ((CrewmanSystem.FacturaWS.FacturaWS)(this)).listarFacturasPorPedido(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.FacturaWS.listarFacturasPorPedidoResponse> CrewmanSystem.FacturaWS.FacturaWS.listarFacturasPorPedidoAsync(CrewmanSystem.FacturaWS.listarFacturasPorPedidoRequest request) {
-            return base.Channel.listarFacturasPorPedidoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.FacturaWS.listarFacturasPorPedidoResponse> listarFacturasPorPedidoAsync(int idPedido) {
-            CrewmanSystem.FacturaWS.listarFacturasPorPedidoRequest inValue = new CrewmanSystem.FacturaWS.listarFacturasPorPedidoRequest();
-            inValue.idPedido = idPedido;
-            return ((CrewmanSystem.FacturaWS.FacturaWS)(this)).listarFacturasPorPedidoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.FacturaWS.eliminarFacturaResponse CrewmanSystem.FacturaWS.FacturaWS.eliminarFactura(CrewmanSystem.FacturaWS.eliminarFacturaRequest request) {
-            return base.Channel.eliminarFactura(request);
-        }
-        
-        public int eliminarFactura(CrewmanSystem.FacturaWS.factura factura) {
-            CrewmanSystem.FacturaWS.eliminarFacturaRequest inValue = new CrewmanSystem.FacturaWS.eliminarFacturaRequest();
-            inValue.factura = factura;
-            CrewmanSystem.FacturaWS.eliminarFacturaResponse retVal = ((CrewmanSystem.FacturaWS.FacturaWS)(this)).eliminarFactura(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.FacturaWS.eliminarFacturaResponse> CrewmanSystem.FacturaWS.FacturaWS.eliminarFacturaAsync(CrewmanSystem.FacturaWS.eliminarFacturaRequest request) {
-            return base.Channel.eliminarFacturaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.FacturaWS.eliminarFacturaResponse> eliminarFacturaAsync(CrewmanSystem.FacturaWS.factura factura) {
-            CrewmanSystem.FacturaWS.eliminarFacturaRequest inValue = new CrewmanSystem.FacturaWS.eliminarFacturaRequest();
-            inValue.factura = factura;
-            return ((CrewmanSystem.FacturaWS.FacturaWS)(this)).eliminarFacturaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3782,6 +3741,75 @@ namespace CrewmanSystem.FacturaWS {
             CrewmanSystem.FacturaWS.insertarFacturaRequest inValue = new CrewmanSystem.FacturaWS.insertarFacturaRequest();
             inValue.factura = factura;
             return ((CrewmanSystem.FacturaWS.FacturaWS)(this)).insertarFacturaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.FacturaWS.eliminarFacturaResponse CrewmanSystem.FacturaWS.FacturaWS.eliminarFactura(CrewmanSystem.FacturaWS.eliminarFacturaRequest request) {
+            return base.Channel.eliminarFactura(request);
+        }
+        
+        public int eliminarFactura(CrewmanSystem.FacturaWS.factura factura) {
+            CrewmanSystem.FacturaWS.eliminarFacturaRequest inValue = new CrewmanSystem.FacturaWS.eliminarFacturaRequest();
+            inValue.factura = factura;
+            CrewmanSystem.FacturaWS.eliminarFacturaResponse retVal = ((CrewmanSystem.FacturaWS.FacturaWS)(this)).eliminarFactura(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.FacturaWS.eliminarFacturaResponse> CrewmanSystem.FacturaWS.FacturaWS.eliminarFacturaAsync(CrewmanSystem.FacturaWS.eliminarFacturaRequest request) {
+            return base.Channel.eliminarFacturaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.FacturaWS.eliminarFacturaResponse> eliminarFacturaAsync(CrewmanSystem.FacturaWS.factura factura) {
+            CrewmanSystem.FacturaWS.eliminarFacturaRequest inValue = new CrewmanSystem.FacturaWS.eliminarFacturaRequest();
+            inValue.factura = factura;
+            return ((CrewmanSystem.FacturaWS.FacturaWS)(this)).eliminarFacturaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.FacturaWS.listarFacturasPorPedidoResponse CrewmanSystem.FacturaWS.FacturaWS.listarFacturasPorPedido(CrewmanSystem.FacturaWS.listarFacturasPorPedidoRequest request) {
+            return base.Channel.listarFacturasPorPedido(request);
+        }
+        
+        public CrewmanSystem.FacturaWS.factura[] listarFacturasPorPedido(int idPedido) {
+            CrewmanSystem.FacturaWS.listarFacturasPorPedidoRequest inValue = new CrewmanSystem.FacturaWS.listarFacturasPorPedidoRequest();
+            inValue.idPedido = idPedido;
+            CrewmanSystem.FacturaWS.listarFacturasPorPedidoResponse retVal = ((CrewmanSystem.FacturaWS.FacturaWS)(this)).listarFacturasPorPedido(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.FacturaWS.listarFacturasPorPedidoResponse> CrewmanSystem.FacturaWS.FacturaWS.listarFacturasPorPedidoAsync(CrewmanSystem.FacturaWS.listarFacturasPorPedidoRequest request) {
+            return base.Channel.listarFacturasPorPedidoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.FacturaWS.listarFacturasPorPedidoResponse> listarFacturasPorPedidoAsync(int idPedido) {
+            CrewmanSystem.FacturaWS.listarFacturasPorPedidoRequest inValue = new CrewmanSystem.FacturaWS.listarFacturasPorPedidoRequest();
+            inValue.idPedido = idPedido;
+            return ((CrewmanSystem.FacturaWS.FacturaWS)(this)).listarFacturasPorPedidoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.FacturaWS.actualizarFacturaResponse CrewmanSystem.FacturaWS.FacturaWS.actualizarFactura(CrewmanSystem.FacturaWS.actualizarFacturaRequest request) {
+            return base.Channel.actualizarFactura(request);
+        }
+        
+        public int actualizarFactura(CrewmanSystem.FacturaWS.factura factura) {
+            CrewmanSystem.FacturaWS.actualizarFacturaRequest inValue = new CrewmanSystem.FacturaWS.actualizarFacturaRequest();
+            inValue.factura = factura;
+            CrewmanSystem.FacturaWS.actualizarFacturaResponse retVal = ((CrewmanSystem.FacturaWS.FacturaWS)(this)).actualizarFactura(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.FacturaWS.actualizarFacturaResponse> CrewmanSystem.FacturaWS.FacturaWS.actualizarFacturaAsync(CrewmanSystem.FacturaWS.actualizarFacturaRequest request) {
+            return base.Channel.actualizarFacturaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.FacturaWS.actualizarFacturaResponse> actualizarFacturaAsync(CrewmanSystem.FacturaWS.factura factura) {
+            CrewmanSystem.FacturaWS.actualizarFacturaRequest inValue = new CrewmanSystem.FacturaWS.actualizarFacturaRequest();
+            inValue.factura = factura;
+            return ((CrewmanSystem.FacturaWS.FacturaWS)(this)).actualizarFacturaAsync(inValue);
         }
     }
 }

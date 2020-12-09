@@ -739,6 +739,28 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.actualizarFacturaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.eliminarFacturaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.factura.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.insertarFacturaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.listarFacturasPorPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.listarFacturasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\FacturaWS\FacturaWS.wsdl" />
+    <None Include="Connected Services\FacturaWS\FacturaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\GuiaRemisionWS\configuration91.svcinfo" />
     <None Include="Connected Services\GuiaRemisionWS\configuration.svcinfo" />
     <None Include="Connected Services\GuiaRemisionWS\CrewmanSystem.GuiaRemisionWS.actualizarGuiaRemisionResponse.datasource">
@@ -754,6 +776,66 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GuiaRemisionWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\FacturaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\FacturaWS\configuration.svcinfo" />
+    <None Include="Connected Services\FacturaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\PedidoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\PedidoWS\configuration.svcinfo" />
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.actualizarPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.anularResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.aprobarBorradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.culminarPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.eliminarPedidoEnProcesoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.eliminarPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.entregarPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.generarReporteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.insertarPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.insertarTotalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.liberarStockResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.listarPedidosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.listarPedidosSinGuiaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.mostrarPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.obtenerPedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.pedido.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PedidoWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -880,28 +962,6 @@
     <None Include="Connected Services\EmpleadoXZonaWS\EmpleadoXZonaWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.actualizarFacturaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.eliminarFacturaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.factura.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.insertarFacturaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.listarFacturasPorPedidoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.listarFacturasResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\FacturaWS\FacturaWS.wsdl" />
-    <None Include="Connected Services\FacturaWS\FacturaWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\FamiliaWS\CrewmanSystem.FamiliaWS.actualizarFamiliaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -991,54 +1051,6 @@
     <None Include="Connected Services\NotaDeCreditoWS\NotaDeCreditoWS.wsdl" />
     <None Include="Connected Services\NotaDeCreditoWS\NotaDeCreditoWS.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.actualizarPedidoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.anularResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.aprobarBorradorResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.culminarPedidoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.eliminarPedidoEnProcesoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.eliminarPedidoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.entregarPedidoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.generarReporteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.insertarPedidoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.insertarTotalResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.liberarStockResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.listarPedidosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.listarPedidosSinGuiaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.mostrarPedidoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.obtenerPedidoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PedidoWS\CrewmanSystem.PedidoWS.pedido.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\PedidoWS\PedidoWS.wsdl" />
     <None Include="Connected Services\PedidoWS\PedidoWS.xsd">
@@ -1244,12 +1256,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\FacturaWS\configuration91.svcinfo" />
-    <None Include="Connected Services\FacturaWS\configuration.svcinfo" />
-    <None Include="Connected Services\FacturaWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <None Include="Connected Services\LineaCreditoWS\configuration91.svcinfo" />
     <None Include="Connected Services\LineaCreditoWS\configuration.svcinfo" />
     <None Include="Connected Services\LineaCreditoWS\Reference.svcmap">
@@ -1265,12 +1271,6 @@
     <None Include="Connected Services\NotaDeCreditoWS\configuration91.svcinfo" />
     <None Include="Connected Services\NotaDeCreditoWS\configuration.svcinfo" />
     <None Include="Connected Services\NotaDeCreditoWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\PedidoWS\configuration91.svcinfo" />
-    <None Include="Connected Services\PedidoWS\configuration.svcinfo" />
-    <None Include="Connected Services\PedidoWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

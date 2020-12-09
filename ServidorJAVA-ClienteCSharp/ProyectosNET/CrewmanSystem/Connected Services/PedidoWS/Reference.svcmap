@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f1862796-f549-47e3-892d-fe8880ed7947" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e90e6c64-c69e-49aa-b4c4-3aa8ab2c941b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://54.80.91.225:8080/CrewmanSystemServices/PedidoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PedidoWS.wsdl" MetadataType="Wsdl" ID="2d91a3de-ba4f-44ce-bfd5-6612e73280a9" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/PedidoWS?WSDL" />
-    <MetadataFile FileName="PedidoWS.xsd" MetadataType="Schema" ID="b70dfc2f-82a4-4f60-b0e0-8af08f21dfe7" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/PedidoWS?xsd=1" />
+    <MetadataFile FileName="PedidoWS.wsdl" MetadataType="Wsdl" ID="baa0fcf6-33b6-43da-9337-d043797adfdd" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/PedidoWS?WSDL" />
+    <MetadataFile FileName="PedidoWS.xsd" MetadataType="Schema" ID="db58a0b2-51c9-43c9-844a-5f49129e822c" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/PedidoWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
