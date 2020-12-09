@@ -28,7 +28,7 @@ import pe.edu.pucp.CrewmanSystem.servlets.ReporteMejoresEmpleados;
 @WebService(serviceName = "ReporteWS")
 public class ReporteWS
 {
-    @WebMethod(operationName = "generarReporte")
+    @WebMethod(operationName = "generarReporteMejoresEmpleados")
     public byte[] generarReporte() {
         byte[] arreglo = null;
         try{
@@ -71,3 +71,4 @@ public class ReporteWS
         return arreglo;
     }
 }
+
