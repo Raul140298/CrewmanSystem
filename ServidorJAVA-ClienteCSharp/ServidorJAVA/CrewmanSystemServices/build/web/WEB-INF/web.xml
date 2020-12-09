@@ -4,9 +4,17 @@
         <servlet-name>ReporteMejoresClientes</servlet-name>
         <servlet-class>pe.edu.pucp.CrewmanSystem.servlets.ReporteMejoresClientes</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ReportePedidos</servlet-name>
+        <servlet-class>pe.edu.pucp.CrewmanSystem.servlets.ReportePedidos</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ReporteMejoresClientes</servlet-name>
         <url-pattern>/ReporteMejoresClientes</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReportePedidos</servlet-name>
+        <url-pattern>/ReportePedidos</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
