@@ -273,11 +273,11 @@ namespace CrewmanSystem
 					}
 	
 					CreaPantalla(sender, padreb, panel, color, tipo, formulario);
-					Program.pantallas.Last().SetCabecera(n, a, e, b, f);
+					Program.pantallas.Last().SetCabecera(n, a, e, b, false);
 					
 					//Activo lo que tiene que hacer ese botón y muestro su cabecera respectiva
 					ActivaBoton(Program.pantallas.Last());
-					ocultaBotonesCabecera(n, a, e, b, f);
+					ocultaBotonesCabecera(n, a, e, b, false);
 				}
 				else //MISMO BOTON
 				{
@@ -664,6 +664,11 @@ namespace CrewmanSystem
 		{
 			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarCarteras(), false, true, false, true, true);
 		}
+
+		private void btnReporteEmpleados_Click(object sender, EventArgs e)
+		{
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmReporteMejoresEmpleados(), false, true, false, true, false);
+		}
 		#endregion
 
 		#region GESTIONPEDIDOS
@@ -886,8 +891,8 @@ namespace CrewmanSystem
 
 
 
-        #endregion
 
-        
-    }
+		#endregion
+
+	}
 }

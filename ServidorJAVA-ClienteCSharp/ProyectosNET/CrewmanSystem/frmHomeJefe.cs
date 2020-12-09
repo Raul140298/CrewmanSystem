@@ -16,6 +16,7 @@ namespace CrewmanSystem
 		public frmHomeJefe()
 		{
 			InitializeComponent();
+			btnRecarga.IconColor = Program.color1;
 			chartVentas.ChartAreas[0].AxisX.LabelStyle.Angle = -90;
 			daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
 			string saludo = "";
@@ -47,5 +48,15 @@ namespace CrewmanSystem
 		{
 			actualizarMapa();
 		}
-    }
+
+		private void btnRecarga_MouseMove(object sender, MouseEventArgs e)
+		{
+			btnRecarga.IconColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.5);
+		}
+
+		private void btnRecarga_MouseLeave(object sender, EventArgs e)
+		{
+			btnRecarga.IconColor = Program.color1;
+		}
+	}
 }

@@ -18,6 +18,7 @@ namespace CrewmanSystem
 		public frmHomeVendedor()
 		{
 			InitializeComponent();
+			btnRecarga.IconColor = Program.color1;
 			daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
 			daoVisita = new VisitaWS.VisitaWSClient();
 			string saludo = "";
@@ -69,5 +70,15 @@ namespace CrewmanSystem
         {
 			cargarValores();
 		}
-    }
+
+		private void btnRecarga_MouseMove(object sender, MouseEventArgs e)
+		{
+			btnRecarga.IconColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.5);
+		}
+
+		private void btnRecarga_MouseLeave(object sender, EventArgs e)
+		{
+			btnRecarga.IconColor = Program.color1;
+		}
+	}
 }
