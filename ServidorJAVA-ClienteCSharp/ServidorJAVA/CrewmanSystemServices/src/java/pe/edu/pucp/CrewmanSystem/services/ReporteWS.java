@@ -29,7 +29,7 @@ import pe.edu.pucp.CrewmanSystem.servlets.ReporteMejoresEmpleados;
 public class ReporteWS
 {
     @WebMethod(operationName = "generarReporte")
-    public byte[] generarReporte(@WebParam(name = "nombre") String nombre) {
+    public byte[] generarReporte() {
         byte[] arreglo = null;
         try{
             //Referencia al archivo JASPER
