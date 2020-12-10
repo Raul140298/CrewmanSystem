@@ -513,6 +513,12 @@
     <Compile Include="frmPerfil.Designer.cs">
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReporteClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteClientes.Designer.cs">
+      <DependentUpon>frmReporteClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReporteMejoresEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -536,12 +542,6 @@
     </Compile>
     <Compile Include="frmVentanaPrincipal.Designer.cs">
       <DependentUpon>frmVentanaPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmReportePedidos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmReportePedidos.Designer.cs">
-      <DependentUpon>frmReportePedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSalir.cs">
       <SubType>Form</SubType>
@@ -737,11 +737,11 @@
     <EmbeddedResource Include="frmPerfil.resx">
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteClientes.resx">
+      <DependentUpon>frmReporteClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReporteMejoresEmpleados.resx">
       <DependentUpon>frmReporteMejoresEmpleados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmReportePedidos.resx">
-      <DependentUpon>frmReportePedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportePedidosXCliente.resx">
       <DependentUpon>frmReportePedidosXCliente.cs</DependentUpon>
@@ -864,6 +864,9 @@
     </None>
     <None Include="Connected Services\ReporteWS\configuration91.svcinfo" />
     <None Include="Connected Services\ReporteWS\configuration.svcinfo" />
+    <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReporteMejoresClientesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReporteMejoresEmpleadosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

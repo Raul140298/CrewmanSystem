@@ -32,31 +32,40 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.pnlChildForm = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlLateralIzquierdo = new System.Windows.Forms.Panel();
             this.pnlEmpleado = new System.Windows.Forms.Panel();
+            this.pnlEmpGestionPedidos = new System.Windows.Forms.Panel();
+            this.pnlEmpGestionProductos = new System.Windows.Forms.Panel();
+            this.pnlJefeDeVentas = new System.Windows.Forms.Panel();
+            this.pnlGestionClientes = new System.Windows.Forms.Panel();
+            this.pnlGestionPedidos = new System.Windows.Forms.Panel();
+            this.pnlGestionEmpleados = new System.Windows.Forms.Panel();
+            this.pnlGestionZonas = new System.Windows.Forms.Panel();
+            this.pnlGestionProducto = new System.Windows.Forms.Panel();
+            this.pnlCabecera = new System.Windows.Forms.Panel();
+            this.lblCountRows = new System.Windows.Forms.Label();
+            this.pnlCargo = new System.Windows.Forms.Panel();
+            this.pnlControlBox = new System.Windows.Forms.Panel();
+            this.lblControlName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEmpPerfil = new FontAwesome.Sharp.IconButton();
             this.btnSegmentacion = new FontAwesome.Sharp.IconButton();
             this.btnVisitas = new FontAwesome.Sharp.IconButton();
             this.btnPromociones = new FontAwesome.Sharp.IconButton();
-            this.pnlEmpGestionPedidos = new System.Windows.Forms.Panel();
             this.btnEmpQuejas = new FontAwesome.Sharp.IconButton();
             this.btnEmpGestionGuiasRemision = new FontAwesome.Sharp.IconButton();
             this.btnEmpGestionFacturas = new FontAwesome.Sharp.IconButton();
             this.btnEmpPedidos = new FontAwesome.Sharp.IconButton();
             this.btnEmpBorradores = new FontAwesome.Sharp.IconButton();
             this.btnEmpGestionPedidos = new FontAwesome.Sharp.IconButton();
-            this.pnlEmpGestionProductos = new System.Windows.Forms.Panel();
             this.btnEmpProductoXZona = new FontAwesome.Sharp.IconButton();
             this.btnEmpProducto = new FontAwesome.Sharp.IconButton();
             this.btnEmpGestionProductos = new FontAwesome.Sharp.IconButton();
-            this.pnlJefeDeVentas = new System.Windows.Forms.Panel();
             this.btnPerfil = new FontAwesome.Sharp.IconButton();
-            this.pnlGestionClientes = new System.Windows.Forms.Panel();
+            this.btnReporteClientes = new FontAwesome.Sharp.IconButton();
             this.btnClientes = new FontAwesome.Sharp.IconButton();
             this.btnGestionClientes = new FontAwesome.Sharp.IconButton();
             this.btnCumplimientoDeMetas = new FontAwesome.Sharp.IconButton();
-            this.pnlGestionPedidos = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnGuiaDeRemision = new FontAwesome.Sharp.IconButton();
             this.btnFactura = new FontAwesome.Sharp.IconButton();
@@ -64,41 +73,32 @@
             this.btnAprobados = new FontAwesome.Sharp.IconButton();
             this.btnPedido = new FontAwesome.Sharp.IconButton();
             this.btnReportePedidos = new FontAwesome.Sharp.IconButton();
-            this.pnlGestionEmpleados = new System.Windows.Forms.Panel();
             this.btnReporteEmpleados = new FontAwesome.Sharp.IconButton();
             this.btnCarteras = new FontAwesome.Sharp.IconButton();
             this.btnEmpleados = new FontAwesome.Sharp.IconButton();
             this.btnGestionEmpleados = new FontAwesome.Sharp.IconButton();
-            this.pnlGestionZonas = new System.Windows.Forms.Panel();
             this.btnProductoXZona = new FontAwesome.Sharp.IconButton();
             this.btnZona = new FontAwesome.Sharp.IconButton();
             this.btnGestionarZonas = new FontAwesome.Sharp.IconButton();
-            this.pnlGestionProducto = new System.Windows.Forms.Panel();
             this.btnMarca = new FontAwesome.Sharp.IconButton();
             this.btnPromocion = new FontAwesome.Sharp.IconButton();
             this.btnProducto = new FontAwesome.Sharp.IconButton();
             this.btnSubfamilia = new FontAwesome.Sharp.IconButton();
             this.btnFamilia = new FontAwesome.Sharp.IconButton();
             this.btnGestionProducto = new FontAwesome.Sharp.IconButton();
-            this.pnlCabecera = new System.Windows.Forms.Panel();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
-            this.lblCountRows = new System.Windows.Forms.Label();
             this.btnLeft = new FontAwesome.Sharp.IconButton();
             this.btnRight = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnActualizar = new FontAwesome.Sharp.IconButton();
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.btnAtras = new FontAwesome.Sharp.IconButton();
-            this.pnlCargo = new System.Windows.Forms.Panel();
             this.btnHome = new FontAwesome.Sharp.IconButton();
-            this.pnlControlBox = new System.Windows.Forms.Panel();
-            this.lblControlName = new System.Windows.Forms.Label();
             this.btnMinimizar = new FontAwesome.Sharp.IconButton();
             this.btnMaximizar = new FontAwesome.Sharp.IconButton();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.pnlContenedor.SuspendLayout();
             this.pnlChildForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlLateralIzquierdo.SuspendLayout();
             this.pnlEmpleado.SuspendLayout();
             this.pnlEmpGestionPedidos.SuspendLayout();
@@ -112,6 +112,7 @@
             this.pnlCabecera.SuspendLayout();
             this.pnlCargo.SuspendLayout();
             this.pnlControlBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlContenedor
@@ -136,17 +137,6 @@
             this.pnlChildForm.Size = new System.Drawing.Size(975, 756);
             this.pnlChildForm.TabIndex = 3;
             this.pnlChildForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlChildForm_MouseDown);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::CrewmanSystem.Properties.Resources.MARCADEAGUA;
-            this.pictureBox1.Location = new System.Drawing.Point(834, 616);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(117, 124);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
             // 
             // pnlLateralIzquierdo
             // 
@@ -173,11 +163,194 @@
             this.pnlEmpleado.Controls.Add(this.pnlEmpGestionProductos);
             this.pnlEmpleado.Controls.Add(this.btnEmpGestionProductos);
             this.pnlEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEmpleado.Location = new System.Drawing.Point(0, 1136);
+            this.pnlEmpleado.Location = new System.Drawing.Point(0, 1186);
             this.pnlEmpleado.Name = "pnlEmpleado";
             this.pnlEmpleado.Size = new System.Drawing.Size(264, 838);
             this.pnlEmpleado.TabIndex = 1;
             this.pnlEmpleado.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlEmpleado_MouseDown);
+            // 
+            // pnlEmpGestionPedidos
+            // 
+            this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpQuejas);
+            this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpGestionGuiasRemision);
+            this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpGestionFacturas);
+            this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpPedidos);
+            this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpBorradores);
+            this.pnlEmpGestionPedidos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlEmpGestionPedidos.Location = new System.Drawing.Point(0, 196);
+            this.pnlEmpGestionPedidos.Name = "pnlEmpGestionPedidos";
+            this.pnlEmpGestionPedidos.Size = new System.Drawing.Size(264, 247);
+            this.pnlEmpGestionPedidos.TabIndex = 3;
+            // 
+            // pnlEmpGestionProductos
+            // 
+            this.pnlEmpGestionProductos.Controls.Add(this.btnEmpProductoXZona);
+            this.pnlEmpGestionProductos.Controls.Add(this.btnEmpProducto);
+            this.pnlEmpGestionProductos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlEmpGestionProductos.Location = new System.Drawing.Point(0, 45);
+            this.pnlEmpGestionProductos.Name = "pnlEmpGestionProductos";
+            this.pnlEmpGestionProductos.Size = new System.Drawing.Size(264, 106);
+            this.pnlEmpGestionProductos.TabIndex = 1;
+            // 
+            // pnlJefeDeVentas
+            // 
+            this.pnlJefeDeVentas.Controls.Add(this.btnPerfil);
+            this.pnlJefeDeVentas.Controls.Add(this.pnlGestionClientes);
+            this.pnlJefeDeVentas.Controls.Add(this.btnGestionClientes);
+            this.pnlJefeDeVentas.Controls.Add(this.btnCumplimientoDeMetas);
+            this.pnlJefeDeVentas.Controls.Add(this.pnlGestionPedidos);
+            this.pnlJefeDeVentas.Controls.Add(this.btnReportePedidos);
+            this.pnlJefeDeVentas.Controls.Add(this.pnlGestionEmpleados);
+            this.pnlJefeDeVentas.Controls.Add(this.btnGestionEmpleados);
+            this.pnlJefeDeVentas.Controls.Add(this.pnlGestionZonas);
+            this.pnlJefeDeVentas.Controls.Add(this.btnGestionarZonas);
+            this.pnlJefeDeVentas.Controls.Add(this.pnlGestionProducto);
+            this.pnlJefeDeVentas.Controls.Add(this.btnGestionProducto);
+            this.pnlJefeDeVentas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlJefeDeVentas.Location = new System.Drawing.Point(0, 0);
+            this.pnlJefeDeVentas.Name = "pnlJefeDeVentas";
+            this.pnlJefeDeVentas.Size = new System.Drawing.Size(264, 1186);
+            this.pnlJefeDeVentas.TabIndex = 0;
+            this.pnlJefeDeVentas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlJefeDeVentas_MouseDown);
+            // 
+            // pnlGestionClientes
+            // 
+            this.pnlGestionClientes.Controls.Add(this.btnReporteClientes);
+            this.pnlGestionClientes.Controls.Add(this.btnClientes);
+            this.pnlGestionClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlGestionClientes.Location = new System.Drawing.Point(0, 1038);
+            this.pnlGestionClientes.Name = "pnlGestionClientes";
+            this.pnlGestionClientes.Size = new System.Drawing.Size(264, 98);
+            this.pnlGestionClientes.TabIndex = 30;
+            // 
+            // pnlGestionPedidos
+            // 
+            this.pnlGestionPedidos.Controls.Add(this.iconButton1);
+            this.pnlGestionPedidos.Controls.Add(this.btnGuiaDeRemision);
+            this.pnlGestionPedidos.Controls.Add(this.btnFactura);
+            this.pnlGestionPedidos.Controls.Add(this.btnPedReporte);
+            this.pnlGestionPedidos.Controls.Add(this.btnAprobados);
+            this.pnlGestionPedidos.Controls.Add(this.btnPedido);
+            this.pnlGestionPedidos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlGestionPedidos.Location = new System.Drawing.Point(0, 661);
+            this.pnlGestionPedidos.Name = "pnlGestionPedidos";
+            this.pnlGestionPedidos.Size = new System.Drawing.Size(264, 287);
+            this.pnlGestionPedidos.TabIndex = 26;
+            this.pnlGestionPedidos.Visible = false;
+            // 
+            // pnlGestionEmpleados
+            // 
+            this.pnlGestionEmpleados.Controls.Add(this.btnReporteEmpleados);
+            this.pnlGestionEmpleados.Controls.Add(this.btnCarteras);
+            this.pnlGestionEmpleados.Controls.Add(this.btnEmpleados);
+            this.pnlGestionEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlGestionEmpleados.Location = new System.Drawing.Point(0, 472);
+            this.pnlGestionEmpleados.Name = "pnlGestionEmpleados";
+            this.pnlGestionEmpleados.Size = new System.Drawing.Size(264, 144);
+            this.pnlGestionEmpleados.TabIndex = 5;
+            // 
+            // pnlGestionZonas
+            // 
+            this.pnlGestionZonas.Controls.Add(this.btnProductoXZona);
+            this.pnlGestionZonas.Controls.Add(this.btnZona);
+            this.pnlGestionZonas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlGestionZonas.Location = new System.Drawing.Point(0, 326);
+            this.pnlGestionZonas.Name = "pnlGestionZonas";
+            this.pnlGestionZonas.Size = new System.Drawing.Size(264, 101);
+            this.pnlGestionZonas.TabIndex = 3;
+            // 
+            // pnlGestionProducto
+            // 
+            this.pnlGestionProducto.Controls.Add(this.btnMarca);
+            this.pnlGestionProducto.Controls.Add(this.btnPromocion);
+            this.pnlGestionProducto.Controls.Add(this.btnProducto);
+            this.pnlGestionProducto.Controls.Add(this.btnSubfamilia);
+            this.pnlGestionProducto.Controls.Add(this.btnFamilia);
+            this.pnlGestionProducto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlGestionProducto.Location = new System.Drawing.Point(0, 45);
+            this.pnlGestionProducto.Name = "pnlGestionProducto";
+            this.pnlGestionProducto.Size = new System.Drawing.Size(264, 236);
+            this.pnlGestionProducto.TabIndex = 1;
+            // 
+            // pnlCabecera
+            // 
+            this.pnlCabecera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.pnlCabecera.Controls.Add(this.btnBuscar);
+            this.pnlCabecera.Controls.Add(this.lblCountRows);
+            this.pnlCabecera.Controls.Add(this.btnLeft);
+            this.pnlCabecera.Controls.Add(this.btnRight);
+            this.pnlCabecera.Controls.Add(this.btnEliminar);
+            this.pnlCabecera.Controls.Add(this.btnActualizar);
+            this.pnlCabecera.Controls.Add(this.btnNuevo);
+            this.pnlCabecera.Controls.Add(this.btnAtras);
+            this.pnlCabecera.Controls.Add(this.pnlCargo);
+            this.pnlCabecera.Controls.Add(this.pnlControlBox);
+            this.pnlCabecera.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCabecera.Location = new System.Drawing.Point(0, 0);
+            this.pnlCabecera.Name = "pnlCabecera";
+            this.pnlCabecera.Size = new System.Drawing.Size(1260, 75);
+            this.pnlCabecera.TabIndex = 0;
+            // 
+            // lblCountRows
+            // 
+            this.lblCountRows.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCountRows.AutoSize = true;
+            this.lblCountRows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.lblCountRows.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblCountRows.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblCountRows.Location = new System.Drawing.Point(1073, 40);
+            this.lblCountRows.Name = "lblCountRows";
+            this.lblCountRows.Size = new System.Drawing.Size(45, 20);
+            this.lblCountRows.TabIndex = 19;
+            this.lblCountRows.Text = "rows";
+            this.lblCountRows.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlCargo
+            // 
+            this.pnlCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.pnlCargo.Controls.Add(this.btnHome);
+            this.pnlCargo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlCargo.Location = new System.Drawing.Point(0, 32);
+            this.pnlCargo.Name = "pnlCargo";
+            this.pnlCargo.Size = new System.Drawing.Size(285, 43);
+            this.pnlCargo.TabIndex = 1;
+            // 
+            // pnlControlBox
+            // 
+            this.pnlControlBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            this.pnlControlBox.Controls.Add(this.lblControlName);
+            this.pnlControlBox.Controls.Add(this.btnMinimizar);
+            this.pnlControlBox.Controls.Add(this.btnMaximizar);
+            this.pnlControlBox.Controls.Add(this.btnSalir);
+            this.pnlControlBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlControlBox.Location = new System.Drawing.Point(0, 0);
+            this.pnlControlBox.Name = "pnlControlBox";
+            this.pnlControlBox.Size = new System.Drawing.Size(1260, 32);
+            this.pnlControlBox.TabIndex = 0;
+            this.pnlControlBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // lblControlName
+            // 
+            this.lblControlName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblControlName.Location = new System.Drawing.Point(12, 5);
+            this.lblControlName.Name = "lblControlName";
+            this.lblControlName.Size = new System.Drawing.Size(252, 22);
+            this.lblControlName.TabIndex = 74;
+            this.lblControlName.Text = " Crewman System";
+            this.lblControlName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblControlName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblControlName_MouseDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::CrewmanSystem.Properties.Resources.MARCADEAGUA;
+            this.pictureBox1.Location = new System.Drawing.Point(834, 616);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(117, 124);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
             // 
             // btnEmpPerfil
             // 
@@ -282,19 +455,6 @@
             this.btnPromociones.UseCompatibleTextRendering = true;
             this.btnPromociones.UseVisualStyleBackColor = false;
             this.btnPromociones.Click += new System.EventHandler(this.btnPromociones_Click);
-            // 
-            // pnlEmpGestionPedidos
-            // 
-            this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpQuejas);
-            this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpGestionGuiasRemision);
-            this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpGestionFacturas);
-            this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpPedidos);
-            this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpBorradores);
-            this.pnlEmpGestionPedidos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEmpGestionPedidos.Location = new System.Drawing.Point(0, 196);
-            this.pnlEmpGestionPedidos.Name = "pnlEmpGestionPedidos";
-            this.pnlEmpGestionPedidos.Size = new System.Drawing.Size(264, 247);
-            this.pnlEmpGestionPedidos.TabIndex = 3;
             // 
             // btnEmpQuejas
             // 
@@ -437,16 +597,6 @@
             this.btnEmpGestionPedidos.UseVisualStyleBackColor = false;
             this.btnEmpGestionPedidos.Click += new System.EventHandler(this.btnEmpGestionPedidos_Click);
             // 
-            // pnlEmpGestionProductos
-            // 
-            this.pnlEmpGestionProductos.Controls.Add(this.btnEmpProductoXZona);
-            this.pnlEmpGestionProductos.Controls.Add(this.btnEmpProducto);
-            this.pnlEmpGestionProductos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEmpGestionProductos.Location = new System.Drawing.Point(0, 45);
-            this.pnlEmpGestionProductos.Name = "pnlEmpGestionProductos";
-            this.pnlEmpGestionProductos.Size = new System.Drawing.Size(264, 106);
-            this.pnlEmpGestionProductos.TabIndex = 1;
-            // 
             // btnEmpProductoXZona
             // 
             this.btnEmpProductoXZona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
@@ -519,27 +669,6 @@
             this.btnEmpGestionProductos.UseVisualStyleBackColor = false;
             this.btnEmpGestionProductos.Click += new System.EventHandler(this.btnEmpGestionProductos_Click);
             // 
-            // pnlJefeDeVentas
-            // 
-            this.pnlJefeDeVentas.Controls.Add(this.btnPerfil);
-            this.pnlJefeDeVentas.Controls.Add(this.pnlGestionClientes);
-            this.pnlJefeDeVentas.Controls.Add(this.btnGestionClientes);
-            this.pnlJefeDeVentas.Controls.Add(this.btnCumplimientoDeMetas);
-            this.pnlJefeDeVentas.Controls.Add(this.pnlGestionPedidos);
-            this.pnlJefeDeVentas.Controls.Add(this.btnReportePedidos);
-            this.pnlJefeDeVentas.Controls.Add(this.pnlGestionEmpleados);
-            this.pnlJefeDeVentas.Controls.Add(this.btnGestionEmpleados);
-            this.pnlJefeDeVentas.Controls.Add(this.pnlGestionZonas);
-            this.pnlJefeDeVentas.Controls.Add(this.btnGestionarZonas);
-            this.pnlJefeDeVentas.Controls.Add(this.pnlGestionProducto);
-            this.pnlJefeDeVentas.Controls.Add(this.btnGestionProducto);
-            this.pnlJefeDeVentas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlJefeDeVentas.Location = new System.Drawing.Point(0, 0);
-            this.pnlJefeDeVentas.Name = "pnlJefeDeVentas";
-            this.pnlJefeDeVentas.Size = new System.Drawing.Size(264, 1136);
-            this.pnlJefeDeVentas.TabIndex = 0;
-            this.pnlJefeDeVentas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlJefeDeVentas_MouseDown);
-            // 
             // btnPerfil
             // 
             this.btnPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
@@ -553,7 +682,7 @@
             this.btnPerfil.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPerfil.IconSize = 20;
             this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPerfil.Location = new System.Drawing.Point(0, 1091);
+            this.btnPerfil.Location = new System.Drawing.Point(0, 1136);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnPerfil.Rotation = 0D;
@@ -566,14 +695,28 @@
             this.btnPerfil.UseVisualStyleBackColor = false;
             this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click_1);
             // 
-            // pnlGestionClientes
+            // btnReporteClientes
             // 
-            this.pnlGestionClientes.Controls.Add(this.btnClientes);
-            this.pnlGestionClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlGestionClientes.Location = new System.Drawing.Point(0, 1038);
-            this.pnlGestionClientes.Name = "pnlGestionClientes";
-            this.pnlGestionClientes.Size = new System.Drawing.Size(264, 53);
-            this.pnlGestionClientes.TabIndex = 30;
+            this.btnReporteClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+            this.btnReporteClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReporteClientes.FlatAppearance.BorderSize = 0;
+            this.btnReporteClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporteClientes.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnReporteClientes.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnReporteClientes.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnReporteClientes.IconColor = System.Drawing.Color.Black;
+            this.btnReporteClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReporteClientes.IconSize = 16;
+            this.btnReporteClientes.Location = new System.Drawing.Point(0, 45);
+            this.btnReporteClientes.Name = "btnReporteClientes";
+            this.btnReporteClientes.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+            this.btnReporteClientes.Rotation = 0D;
+            this.btnReporteClientes.Size = new System.Drawing.Size(264, 45);
+            this.btnReporteClientes.TabIndex = 2;
+            this.btnReporteClientes.Text = "Reporte";
+            this.btnReporteClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporteClientes.UseVisualStyleBackColor = false;
+            this.btnReporteClientes.Click += new System.EventHandler(this.btnReporteClientes_Click);
             // 
             // btnClientes
             // 
@@ -649,21 +792,6 @@
             this.btnCumplimientoDeMetas.UseCompatibleTextRendering = true;
             this.btnCumplimientoDeMetas.UseVisualStyleBackColor = false;
             this.btnCumplimientoDeMetas.Click += new System.EventHandler(this.btnCumplimientoDeMetas_Click);
-            // 
-            // pnlGestionPedidos
-            // 
-            this.pnlGestionPedidos.Controls.Add(this.iconButton1);
-            this.pnlGestionPedidos.Controls.Add(this.btnGuiaDeRemision);
-            this.pnlGestionPedidos.Controls.Add(this.btnFactura);
-            this.pnlGestionPedidos.Controls.Add(this.btnPedReporte);
-            this.pnlGestionPedidos.Controls.Add(this.btnAprobados);
-            this.pnlGestionPedidos.Controls.Add(this.btnPedido);
-            this.pnlGestionPedidos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlGestionPedidos.Location = new System.Drawing.Point(0, 661);
-            this.pnlGestionPedidos.Name = "pnlGestionPedidos";
-            this.pnlGestionPedidos.Size = new System.Drawing.Size(264, 287);
-            this.pnlGestionPedidos.TabIndex = 26;
-            this.pnlGestionPedidos.Visible = false;
             // 
             // iconButton1
             // 
@@ -830,17 +958,6 @@
             this.btnReportePedidos.UseVisualStyleBackColor = false;
             this.btnReportePedidos.Click += new System.EventHandler(this.btnGestionPedidos_Click);
             // 
-            // pnlGestionEmpleados
-            // 
-            this.pnlGestionEmpleados.Controls.Add(this.btnReporteEmpleados);
-            this.pnlGestionEmpleados.Controls.Add(this.btnCarteras);
-            this.pnlGestionEmpleados.Controls.Add(this.btnEmpleados);
-            this.pnlGestionEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlGestionEmpleados.Location = new System.Drawing.Point(0, 472);
-            this.pnlGestionEmpleados.Name = "pnlGestionEmpleados";
-            this.pnlGestionEmpleados.Size = new System.Drawing.Size(264, 144);
-            this.pnlGestionEmpleados.TabIndex = 5;
-            // 
             // btnReporteEmpleados
             // 
             this.btnReporteEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
@@ -936,16 +1053,6 @@
             this.btnGestionEmpleados.UseVisualStyleBackColor = false;
             this.btnGestionEmpleados.Click += new System.EventHandler(this.btnGestionEmpleados_Click);
             // 
-            // pnlGestionZonas
-            // 
-            this.pnlGestionZonas.Controls.Add(this.btnProductoXZona);
-            this.pnlGestionZonas.Controls.Add(this.btnZona);
-            this.pnlGestionZonas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlGestionZonas.Location = new System.Drawing.Point(0, 326);
-            this.pnlGestionZonas.Name = "pnlGestionZonas";
-            this.pnlGestionZonas.Size = new System.Drawing.Size(264, 101);
-            this.pnlGestionZonas.TabIndex = 3;
-            // 
             // btnProductoXZona
             // 
             this.btnProductoXZona.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
@@ -1017,19 +1124,6 @@
             this.btnGestionarZonas.UseCompatibleTextRendering = true;
             this.btnGestionarZonas.UseVisualStyleBackColor = false;
             this.btnGestionarZonas.Click += new System.EventHandler(this.btnGestionarZonas_Click);
-            // 
-            // pnlGestionProducto
-            // 
-            this.pnlGestionProducto.Controls.Add(this.btnMarca);
-            this.pnlGestionProducto.Controls.Add(this.btnPromocion);
-            this.pnlGestionProducto.Controls.Add(this.btnProducto);
-            this.pnlGestionProducto.Controls.Add(this.btnSubfamilia);
-            this.pnlGestionProducto.Controls.Add(this.btnFamilia);
-            this.pnlGestionProducto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlGestionProducto.Location = new System.Drawing.Point(0, 45);
-            this.pnlGestionProducto.Name = "pnlGestionProducto";
-            this.pnlGestionProducto.Size = new System.Drawing.Size(264, 236);
-            this.pnlGestionProducto.TabIndex = 1;
             // 
             // btnMarca
             // 
@@ -1172,25 +1266,6 @@
             this.btnGestionProducto.UseVisualStyleBackColor = false;
             this.btnGestionProducto.Click += new System.EventHandler(this.btnGestionProducto_Click);
             // 
-            // pnlCabecera
-            // 
-            this.pnlCabecera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.pnlCabecera.Controls.Add(this.btnBuscar);
-            this.pnlCabecera.Controls.Add(this.lblCountRows);
-            this.pnlCabecera.Controls.Add(this.btnLeft);
-            this.pnlCabecera.Controls.Add(this.btnRight);
-            this.pnlCabecera.Controls.Add(this.btnEliminar);
-            this.pnlCabecera.Controls.Add(this.btnActualizar);
-            this.pnlCabecera.Controls.Add(this.btnNuevo);
-            this.pnlCabecera.Controls.Add(this.btnAtras);
-            this.pnlCabecera.Controls.Add(this.pnlCargo);
-            this.pnlCabecera.Controls.Add(this.pnlControlBox);
-            this.pnlCabecera.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCabecera.Location = new System.Drawing.Point(0, 0);
-            this.pnlCabecera.Name = "pnlCabecera";
-            this.pnlCabecera.Size = new System.Drawing.Size(1260, 75);
-            this.pnlCabecera.TabIndex = 0;
-            // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
@@ -1214,21 +1289,6 @@
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // lblCountRows
-            // 
-            this.lblCountRows.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCountRows.AutoSize = true;
-            this.lblCountRows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.lblCountRows.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblCountRows.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblCountRows.Location = new System.Drawing.Point(1073, 40);
-            this.lblCountRows.Name = "lblCountRows";
-            this.lblCountRows.Size = new System.Drawing.Size(45, 20);
-            this.lblCountRows.TabIndex = 19;
-            this.lblCountRows.Text = "rows";
-            this.lblCountRows.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnLeft
             // 
@@ -1372,16 +1432,6 @@
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
-            // pnlCargo
-            // 
-            this.pnlCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.pnlCargo.Controls.Add(this.btnHome);
-            this.pnlCargo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlCargo.Location = new System.Drawing.Point(0, 32);
-            this.pnlCargo.Name = "pnlCargo";
-            this.pnlCargo.Size = new System.Drawing.Size(285, 43);
-            this.pnlCargo.TabIndex = 1;
-            // 
             // btnHome
             // 
             this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
@@ -1406,31 +1456,6 @@
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // pnlControlBox
-            // 
-            this.pnlControlBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            this.pnlControlBox.Controls.Add(this.lblControlName);
-            this.pnlControlBox.Controls.Add(this.btnMinimizar);
-            this.pnlControlBox.Controls.Add(this.btnMaximizar);
-            this.pnlControlBox.Controls.Add(this.btnSalir);
-            this.pnlControlBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlControlBox.Location = new System.Drawing.Point(0, 0);
-            this.pnlControlBox.Name = "pnlControlBox";
-            this.pnlControlBox.Size = new System.Drawing.Size(1260, 32);
-            this.pnlControlBox.TabIndex = 0;
-            this.pnlControlBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
-            // 
-            // lblControlName
-            // 
-            this.lblControlName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblControlName.Location = new System.Drawing.Point(12, 5);
-            this.lblControlName.Name = "lblControlName";
-            this.lblControlName.Size = new System.Drawing.Size(252, 22);
-            this.lblControlName.TabIndex = 74;
-            this.lblControlName.Text = " Crewman System";
-            this.lblControlName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblControlName.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblControlName_MouseDown);
             // 
             // btnMinimizar
             // 
@@ -1519,7 +1544,6 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmPanel_MouseDown);
             this.pnlContenedor.ResumeLayout(false);
             this.pnlChildForm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlLateralIzquierdo.ResumeLayout(false);
             this.pnlEmpleado.ResumeLayout(false);
             this.pnlEmpGestionPedidos.ResumeLayout(false);
@@ -1534,6 +1558,7 @@
             this.pnlCabecera.PerformLayout();
             this.pnlCargo.ResumeLayout(false);
             this.pnlControlBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -1606,5 +1631,6 @@
         private FontAwesome.Sharp.IconButton btnEmpPedidos;
         private FontAwesome.Sharp.IconButton btnEmpBorradores;
 		private FontAwesome.Sharp.IconButton btnReporteEmpleados;
-	}
+        private FontAwesome.Sharp.IconButton btnReporteClientes;
+    }
 }
