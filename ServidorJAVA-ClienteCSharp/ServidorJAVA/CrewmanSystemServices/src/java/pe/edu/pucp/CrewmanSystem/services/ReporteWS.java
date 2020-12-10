@@ -19,6 +19,7 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.util.JRLoader;
 import pe.edu.pucp.CrewmanSystem.config.DBManager;
+import pe.edu.pucp.CrewmanSystem.servlets.ReporteMejoresClientes;
 import pe.edu.pucp.CrewmanSystem.servlets.ReporteMejoresEmpleados;
 import pe.edu.pucp.CrewmanSystem.servlets.ReportePedidos;
 import pe.edu.pucp.CrewmanSystem.servlets.ReportePedidosXCliente;
@@ -143,6 +144,35 @@ public class ReporteWS
             con.close();
             arreglo = JasperExportManager.exportReportToPdf(jp);
                     
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return arreglo;
+    }
+    
+    @WebMethod(operationName = "generarReporteMejoresClientes")
+    public byte[] generarReporteMejoresClientes() {
+        byte[] arreglo = null;
+
+        try{
+            JasperReport reporte = (JasperReport)
+                    JRLoader.loadObjectFromFile(ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/MejoresClientes.jasper").getFile());
+
+            String rutaLogo = ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/images/portada.jpeg").getPath();
+            ImageIcon icono = new ImageIcon(rutaLogo);
+            Image imagen = icono.getImage();
+
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+
+            HashMap hm = new HashMap();
+            hm.put("PORTADA", imagen);
+
+            JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
+
+            con.close();
+            arreglo = JasperExportManager.exportReportToPdf(jp);
+
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
