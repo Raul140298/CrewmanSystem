@@ -28,24 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnReporte = new System.Windows.Forms.Button();
+            this.sfdReporte = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
-            // button1
+            // btnReporte
             // 
-            this.button1.Location = new System.Drawing.Point(328, 73);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 42);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnReporte.FlatAppearance.BorderSize = 0;
+            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporte.ForeColor = System.Drawing.Color.White;
+            this.btnReporte.Location = new System.Drawing.Point(180, 76);
+            this.btnReporte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(317, 30);
+            this.btnReporte.TabIndex = 9;
+            this.btnReporte.Text = "Generar Reportes - Mejores Clientes";
+            this.btnReporte.UseVisualStyleBackColor = false;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // frmReporteClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnReporte);
             this.Name = "frmReporteClientes";
             this.Text = "frmReporteClientes";
             this.ResumeLayout(false);
@@ -54,6 +61,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.SaveFileDialog sfdReporte;
     }
 }
