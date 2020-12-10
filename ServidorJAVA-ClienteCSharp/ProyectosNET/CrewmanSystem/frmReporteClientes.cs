@@ -23,11 +23,10 @@ namespace CrewmanSystem
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            byte[] arreglo = null;
             sfdReporte.ShowDialog();
-            arreglo = daoReporte.generar
             if (sfdReporte.FileName != null && sfdReporte.FileName != "")
             {
+                byte[] arreglo = daoReporte.generarReporteMejoresClientes();
                 File.WriteAllBytes(sfdReporte.FileName, arreglo);
             }
         }

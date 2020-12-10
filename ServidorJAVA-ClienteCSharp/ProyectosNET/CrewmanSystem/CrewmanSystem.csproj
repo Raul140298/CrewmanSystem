@@ -864,6 +864,9 @@
     </None>
     <None Include="Connected Services\ReporteWS\configuration91.svcinfo" />
     <None Include="Connected Services\ReporteWS\configuration.svcinfo" />
+    <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReporteMejoresClientesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReporteMejoresEmpleadosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
