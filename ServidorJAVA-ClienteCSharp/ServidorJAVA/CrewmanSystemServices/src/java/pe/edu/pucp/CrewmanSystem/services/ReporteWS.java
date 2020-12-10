@@ -20,6 +20,7 @@ import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.util.JRLoader;
 import pe.edu.pucp.CrewmanSystem.config.DBManager;
 import pe.edu.pucp.CrewmanSystem.servlets.ReporteMejoresEmpleados;
+import pe.edu.pucp.CrewmanSystem.servlets.ReportePedidosXCliente;
 
 /**
  *
@@ -29,7 +30,7 @@ import pe.edu.pucp.CrewmanSystem.servlets.ReporteMejoresEmpleados;
 public class ReporteWS
 {
     @WebMethod(operationName = "generarReporteMejoresEmpleados")
-    public byte[] generarReporte() {
+    public byte[] generarReporteMejoresEmpleados() {
         byte[] arreglo = null;
         try{
             //Referencia al archivo JASPER
@@ -68,6 +69,48 @@ public class ReporteWS
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
+        return arreglo;
+    }
+    
+    @WebMethod(operationName = "generarReportePedidosXCliente")
+    public byte[] generarReportePedidosXCliente(@WebParam(name = "tipoCliente") String tipoCliente) {
+        byte[] arreglo = null;
+        
+        try{
+            JasperReport reporte = (JasperReport)
+                    JRLoader.loadObjectFromFile(ReportePedidosXCliente.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/R_PEDIDOSXCLIENTE.jasper").getFile());
+
+            //Obtener la ruta del subreporte1
+            String rutaSubreporte1 = 
+               ReportePedidosXCliente.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/SR_PEDIDOS.jasper")
+                    .getPath();
+            
+            //Obtener la ruta del subreporte2
+            String rutaSubreporte2 = 
+               ReportePedidosXCliente.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/SR_DETALLES.jasper")
+                    .getPath();
+
+            
+            HashMap hm = new HashMap();
+            hm.put("RUTA_SUBREPORTE_PEDIDOS",rutaSubreporte1);
+            hm.put("RUTA_SUBREPORTE_DETALLES", rutaSubreporte2);
+            hm.put("PTIPO_CLIENTE",tipoCliente);
+            
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            
+            
+            JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
+            
+            con.close();
+            
+            //Convertirlo a arreglo bytes
+            arreglo = JasperExportManager.exportReportToPdf(jp);
+                    
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        
         return arreglo;
     }
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.CrewmanSystem.pucp.edu.pe/" targetNamespace="http://services.CrewmanSystem.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="generarReportePedidosXCliente" type="tns:generarReportePedidosXCliente" />
+  <xs:element name="generarReportePedidosXClienteResponse" type="tns:generarReportePedidosXClienteResponse" />
+  <xs:complexType name="generarReportePedidosXCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tipoCliente" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReportePedidosXClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

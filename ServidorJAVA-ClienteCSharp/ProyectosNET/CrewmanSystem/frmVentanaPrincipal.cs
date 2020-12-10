@@ -688,7 +688,7 @@ namespace CrewmanSystem
 
 		private void btnPedReporte_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmReportePedidos(), false, false, false, false, false);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmReportePedidosXCliente(), false, false, false, false, false);
 		}
 		private void btnFactura_Click(object sender, EventArgs e)
 		{

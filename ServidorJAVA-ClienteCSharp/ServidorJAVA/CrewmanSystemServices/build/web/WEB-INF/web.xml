@@ -12,6 +12,10 @@
         <servlet-name>ReporteMejoresEmpleados</servlet-name>
         <servlet-class>pe.edu.pucp.CrewmanSystem.servlets.ReporteMejoresEmpleados</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ReportePedidosXCliente</servlet-name>
+        <servlet-class>pe.edu.pucp.CrewmanSystem.servlets.ReportePedidosXCliente</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ReporteMejoresClientes</servlet-name>
         <url-pattern>/ReporteMejoresClientes</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>ReporteMejoresEmpleados</servlet-name>
         <url-pattern>/ReporteMejoresEmpleados</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReportePedidosXCliente</servlet-name>
+        <url-pattern>/ReportePedidosXCliente</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
