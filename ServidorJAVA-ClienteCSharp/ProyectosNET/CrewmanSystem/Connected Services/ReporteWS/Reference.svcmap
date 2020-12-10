@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d3972cda-3036-4871-a62a-ad5bbc0265ba" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="16fb2d4d-4e09-4415-8264-9e9865216389" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://54.80.91.225:8080/CrewmanSystemServices/ReporteWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ReporteWS1.xsd" MetadataType="Schema" ID="44e893b9-c013-4d8a-a913-97167433686b" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/ReporteWS?xsd=1" />
-    <MetadataFile FileName="ReporteWS1.wsdl" MetadataType="Wsdl" ID="ee3f79a3-14aa-402c-9b17-74739e929583" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/ReporteWS?WSDL" />
+    <MetadataFile FileName="ReporteWS.xsd" MetadataType="Schema" ID="1773b5c0-c827-4769-bb75-5a0c3088fd6b" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/ReporteWS?xsd=1" />
+    <MetadataFile FileName="ReporteWS.wsdl" MetadataType="Wsdl" ID="a7619d6d-b245-48c9-a256-cc249db1a460" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/ReporteWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
