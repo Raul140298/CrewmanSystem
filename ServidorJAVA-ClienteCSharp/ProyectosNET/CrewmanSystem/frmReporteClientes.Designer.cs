@@ -51,6 +51,7 @@
             // 
             this.sfdReporte.DefaultExt = "pdf";
             this.sfdReporte.FileName = "ReporteMejoresClientes";
+            this.sfdReporte.Filter = "PDF (*.pdf)|*.pdf";
             // 
             // frmReporteClientes
             // 
