@@ -36,16 +36,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // sfdReporte
+            // 
+            this.sfdReporte.DefaultExt = "pdf";
+            this.sfdReporte.FileName = "ReporteDePedidos.pdf";
+            this.sfdReporte.Filter = "PDF (*.pdf)|*.pdf";
+            // 
             // btnGenerar
             // 
             this.btnGenerar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.btnGenerar.FlatAppearance.BorderSize = 0;
             this.btnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerar.ForeColor = System.Drawing.Color.White;
-            this.btnGenerar.Location = new System.Drawing.Point(240, 105);
-            this.btnGenerar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGenerar.Location = new System.Drawing.Point(320, 129);
+            this.btnGenerar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(120, 24);
+            this.btnGenerar.Size = new System.Drawing.Size(160, 30);
             this.btnGenerar.TabIndex = 8;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = false;
@@ -54,10 +60,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(82, 38);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(109, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.Size = new System.Drawing.Size(111, 17);
             this.label1.TabIndex = 9;
             this.label1.Text = "Tipo de Cliente: ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -66,10 +71,10 @@
             // 
             this.cboTipoCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoCliente.FormattingEnabled = true;
-            this.cboTipoCliente.Location = new System.Drawing.Point(200, 38);
-            this.cboTipoCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.cboTipoCliente.Location = new System.Drawing.Point(267, 47);
+            this.cboTipoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboTipoCliente.Name = "cboTipoCliente";
-            this.cboTipoCliente.Size = new System.Drawing.Size(92, 21);
+            this.cboTipoCliente.Size = new System.Drawing.Size(121, 24);
             this.cboTipoCliente.TabIndex = 10;
             // 
             // button1
@@ -78,10 +83,10 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(219, 250);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(292, 308);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 25);
+            this.button1.Size = new System.Drawing.Size(220, 31);
             this.button1.TabIndex = 11;
             this.button1.Text = "Generar Reporte Pedidos";
             this.button1.UseVisualStyleBackColor = false;
@@ -90,25 +95,24 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(82, 205);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(109, 252);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 13);
+            this.label2.Size = new System.Drawing.Size(168, 17);
             this.label2.TabIndex = 12;
             this.label2.Text = "Reporte total de pedidos:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmReportePedidosXCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cboTipoCliente);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGenerar);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmReportePedidosXCliente";
             this.Text = "frmReportePedidosXCliente";
             this.ResumeLayout(false);

@@ -34,8 +34,10 @@ namespace CrewmanSystem
             {
                 arreglo = daoReporte.generarReportePedidosXCliente(cboTipoCliente.SelectedItem.ToString());
             }
-            File.WriteAllBytes(sfdReporte.FileName,arreglo);
-            MessageBox.Show("Se ha guardado correctamente", "Mensaje de Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (sfdReporte.FileName != null && sfdReporte.FileName != "")
+            {
+                File.WriteAllBytes(sfdReporte.FileName, arreglo);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -44,8 +46,10 @@ namespace CrewmanSystem
             byte[] arreglo;
 
             arreglo = daoReporte.generarReportePedidos();
-            File.WriteAllBytes(sfdReporte.FileName, arreglo);
-            MessageBox.Show("Se ha guardado correctamente", "Mensaje de Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (sfdReporte.FileName != null && sfdReporte.FileName != "")
+            {
+                File.WriteAllBytes(sfdReporte.FileName, arreglo);
+            }
         }
     }
 }
