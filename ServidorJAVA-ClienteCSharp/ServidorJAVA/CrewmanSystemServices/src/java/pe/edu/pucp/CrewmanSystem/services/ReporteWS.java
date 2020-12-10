@@ -43,7 +43,7 @@ public class ReporteWS
         
             //Referencia a la ruta de la imagen
             String rutaLogo = 
-               ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/images/portada2.jpg")
+               ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/images/icono.jpg")
                     .getPath();
             //Generamos el objeto Image
             ImageIcon icono = new ImageIcon(rutaLogo);

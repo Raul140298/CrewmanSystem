@@ -26,7 +26,7 @@ public class ReporteMejoresEmpleados extends HttpServlet {
             JasperReport reporte = (JasperReport)
                     JRLoader.loadObjectFromFile(ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/MejoresEmpleados.jasper").getFile());
             
-            String rutaLogo = ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/images/portada2.jpg").getPath();
+            String rutaLogo = ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/images/icono.jpg").getPath();
             ImageIcon icono = new ImageIcon(rutaLogo);
             Image imagen = icono.getImage();
             
