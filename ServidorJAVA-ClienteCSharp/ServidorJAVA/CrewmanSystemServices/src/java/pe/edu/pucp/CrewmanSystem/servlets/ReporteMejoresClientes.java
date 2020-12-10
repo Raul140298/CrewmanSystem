@@ -25,23 +25,22 @@ public class ReporteMejoresClientes extends HttpServlet {
         try{
             JasperReport reporte = (JasperReport)
                     JRLoader.loadObjectFromFile(ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/MejoresClientes.jasper").getFile());
-            
-            String rutaLogo = ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/images/portada.jpeg").getPath();
+
+            String rutaLogo = ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/images/portada.jpg").getPath();
             ImageIcon icono = new ImageIcon(rutaLogo);
             Image imagen = icono.getImage();
-            
+
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            
+
             HashMap hm = new HashMap();
-            hm.put("AUTOR","MARADONA");
             hm.put("PORTADA", imagen);
-            
+
             JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
-            
+
             con.close();
             JasperExportManager.exportReportToPdfStream(jp, response.getOutputStream());
-                    
+
         }catch(Exception e){
             System.out.println(e.getMessage());
         }

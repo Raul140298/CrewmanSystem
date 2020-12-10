@@ -5,6 +5,7 @@
  */
 package pe.edu.pucp.CrewmanSystem.servlets;
 
+import java.awt.Image;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -15,6 +16,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.ImageIcon;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
@@ -41,7 +43,10 @@ public class ReportePedidosXCliente extends HttpServlet {
                ReportePedidosXCliente.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/SR_DETALLES.jasper")
                     .getPath();
 
-            
+            //Obtener logo
+            String rutaLogo = ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/images/icono.jpg").getPath();
+            ImageIcon icono = new ImageIcon(rutaLogo);
+            Image imagen = icono.getImage();
             
             
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -51,6 +56,7 @@ public class ReportePedidosXCliente extends HttpServlet {
             hm.put("RUTA_SUBREPORTE_PEDIDOS",rutaSubreporte1);
             hm.put("RUTA_SUBREPORTE_DETALLES", rutaSubreporte2);
             hm.put("PTIPO_CLIENTE","");
+            hm.put("LOGO", imagen);
             
             JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
             

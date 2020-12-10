@@ -90,16 +90,21 @@ public class ReporteWS
             String rutaSubreporte2 = 
                ReportePedidosXCliente.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/SR_DETALLES.jasper")
                     .getPath();
-
             
-            HashMap hm = new HashMap();
-            hm.put("RUTA_SUBREPORTE_PEDIDOS",rutaSubreporte1);
-            hm.put("RUTA_SUBREPORTE_DETALLES", rutaSubreporte2);
-            hm.put("PTIPO_CLIENTE",tipoCliente);
+            //Obtener logo
+            String rutaLogo = ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/images/icono.jpg").getPath();
+            ImageIcon icono = new ImageIcon(rutaLogo);
+            Image imagen = icono.getImage();
+
             
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             
+            HashMap hm = new HashMap();
+            hm.put("RUTA_SUBREPORTE_PEDIDOS",rutaSubreporte1);
+            hm.put("RUTA_SUBREPORTE_DETALLES", rutaSubreporte2);
+            hm.put("PTIPO_CLIENTE","");
+            hm.put("LOGO", imagen);
             
             JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
             
