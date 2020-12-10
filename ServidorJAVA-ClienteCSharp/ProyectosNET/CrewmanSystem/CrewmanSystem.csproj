@@ -864,10 +864,10 @@
     </None>
     <None Include="Connected Services\ReporteWS\configuration91.svcinfo" />
     <None Include="Connected Services\ReporteWS\configuration.svcinfo" />
-    <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReporteResponse.datasource">
+    <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReporteMejoresEmpleadosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.pedido.datasource">
+    <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReportePedidosXClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ReporteWS\Reference.svcmap">

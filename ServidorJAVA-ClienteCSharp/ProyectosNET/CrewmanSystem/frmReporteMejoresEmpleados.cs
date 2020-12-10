@@ -26,7 +26,7 @@ namespace CrewmanSystem
             sfdReporte.ShowDialog();
             if (sfdReporte.FileName != null && sfdReporte.FileName != "")
             {
-                byte[] arreglo = daoReporte.generarReporte();
+                byte[] arreglo = daoReporte.generarReporteMejoresEmpleados();
                 File.WriteAllBytes(sfdReporte.FileName + ".pdf", arreglo);
             }
             MessageBox.Show("Se ha guardado correctamente", "Mensaje de Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
