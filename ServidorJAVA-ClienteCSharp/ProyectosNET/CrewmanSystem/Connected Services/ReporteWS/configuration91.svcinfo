@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="m1kxDFutnskmH+SXH9PV3z6AD9j3F6RJ3xdjq6jxT5c=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="cRWh6Yr2bMImhSf5s6Q3TNrxSkiX6G0u4Uxe++cPQZg=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="ReporteWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="ReporteWSPort" contract="ReporteWS.ReporteWS" bindingType="basicHttpBinding" address="http://localhost:8080/CrewmanSystemServices/ReporteWS" bindingConfiguration="ReporteWSPortBinding">
+    <endpoint name="ReporteWSPort" contract="ReporteWS.ReporteWS" bindingType="basicHttpBinding" address="http://54.80.91.225:8080/CrewmanSystemServices/ReporteWS" bindingConfiguration="ReporteWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/CrewmanSystemServices/ReporteWS</serializedValue>
+          <serializedValue>http://54.80.91.225:8080/CrewmanSystemServices/ReporteWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

@@ -2,7 +2,7 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.CrewmanSystem.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ReporteWS" targetNamespace="http://services.CrewmanSystem.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://localhost:8080/CrewmanSystemServices/ReporteWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
+      <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/ReporteWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
   <message name="generarReporteMejoresEmpleados">
@@ -10,6 +10,12 @@
   </message>
   <message name="generarReporteMejoresEmpleadosResponse">
     <part name="parameters" element="tns:generarReporteMejoresEmpleadosResponse" />
+  </message>
+  <message name="generarReportePedidos">
+    <part name="parameters" element="tns:generarReportePedidos" />
+  </message>
+  <message name="generarReportePedidosResponse">
+    <part name="parameters" element="tns:generarReportePedidosResponse" />
   </message>
   <message name="generarReportePedidosXCliente">
     <part name="parameters" element="tns:generarReportePedidosXCliente" />
@@ -22,6 +28,10 @@
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReporteMejoresEmpleadosRequest" message="tns:generarReporteMejoresEmpleados" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReporteMejoresEmpleadosResponse" message="tns:generarReporteMejoresEmpleadosResponse" />
     </operation>
+    <operation name="generarReportePedidos">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosRequest" message="tns:generarReportePedidos" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosResponse" message="tns:generarReportePedidosResponse" />
+    </operation>
     <operation name="generarReportePedidosXCliente">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosXClienteRequest" message="tns:generarReportePedidosXCliente" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosXClienteResponse" message="tns:generarReportePedidosXClienteResponse" />
@@ -30,6 +40,15 @@
   <binding name="ReporteWSPortBinding" type="tns:ReporteWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <operation name="generarReporteMejoresEmpleados">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="generarReportePedidos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -50,7 +69,7 @@
   </binding>
   <service name="ReporteWS">
     <port name="ReporteWSPort" binding="tns:ReporteWSPortBinding">
-      <soap:address location="http://localhost:8080/CrewmanSystemServices/ReporteWS" />
+      <soap:address location="http://54.80.91.225:8080/CrewmanSystemServices/ReporteWS" />
     </port>
   </service>
 </definitions>

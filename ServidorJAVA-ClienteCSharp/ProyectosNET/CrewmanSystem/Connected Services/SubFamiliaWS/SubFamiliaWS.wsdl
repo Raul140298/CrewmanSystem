@@ -5,17 +5,11 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/SubFamiliaWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="listarSubFamilias">
-    <part name="parameters" element="tns:listarSubFamilias" />
+  <message name="insertarSubFamilia">
+    <part name="parameters" element="tns:insertarSubFamilia" />
   </message>
-  <message name="listarSubFamiliasResponse">
-    <part name="parameters" element="tns:listarSubFamiliasResponse" />
-  </message>
-  <message name="eliminarSubFamilia">
-    <part name="parameters" element="tns:eliminarSubFamilia" />
-  </message>
-  <message name="eliminarSubFamiliaResponse">
-    <part name="parameters" element="tns:eliminarSubFamiliaResponse" />
+  <message name="insertarSubFamiliaResponse">
+    <part name="parameters" element="tns:insertarSubFamiliaResponse" />
   </message>
   <message name="actualizarSubFamilia">
     <part name="parameters" element="tns:actualizarSubFamilia" />
@@ -23,42 +17,39 @@
   <message name="actualizarSubFamiliaResponse">
     <part name="parameters" element="tns:actualizarSubFamiliaResponse" />
   </message>
-  <message name="insertarSubFamilia">
-    <part name="parameters" element="tns:insertarSubFamilia" />
+  <message name="eliminarSubFamilia">
+    <part name="parameters" element="tns:eliminarSubFamilia" />
   </message>
-  <message name="insertarSubFamiliaResponse">
-    <part name="parameters" element="tns:insertarSubFamiliaResponse" />
+  <message name="eliminarSubFamiliaResponse">
+    <part name="parameters" element="tns:eliminarSubFamiliaResponse" />
+  </message>
+  <message name="listarSubFamilias">
+    <part name="parameters" element="tns:listarSubFamilias" />
+  </message>
+  <message name="listarSubFamiliasResponse">
+    <part name="parameters" element="tns:listarSubFamiliasResponse" />
   </message>
   <portType name="SubFamiliaWS">
-    <operation name="listarSubFamilias">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/listarSubFamiliasRequest" message="tns:listarSubFamilias" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/listarSubFamiliasResponse" message="tns:listarSubFamiliasResponse" />
-    </operation>
-    <operation name="eliminarSubFamilia">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/eliminarSubFamiliaRequest" message="tns:eliminarSubFamilia" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/eliminarSubFamiliaResponse" message="tns:eliminarSubFamiliaResponse" />
+    <operation name="insertarSubFamilia">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/insertarSubFamiliaRequest" message="tns:insertarSubFamilia" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/insertarSubFamiliaResponse" message="tns:insertarSubFamiliaResponse" />
     </operation>
     <operation name="actualizarSubFamilia">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/actualizarSubFamiliaRequest" message="tns:actualizarSubFamilia" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/actualizarSubFamiliaResponse" message="tns:actualizarSubFamiliaResponse" />
     </operation>
-    <operation name="insertarSubFamilia">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/insertarSubFamiliaRequest" message="tns:insertarSubFamilia" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/insertarSubFamiliaResponse" message="tns:insertarSubFamiliaResponse" />
+    <operation name="eliminarSubFamilia">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/eliminarSubFamiliaRequest" message="tns:eliminarSubFamilia" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/eliminarSubFamiliaResponse" message="tns:eliminarSubFamiliaResponse" />
+    </operation>
+    <operation name="listarSubFamilias">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/listarSubFamiliasRequest" message="tns:listarSubFamilias" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/SubFamiliaWS/listarSubFamiliasResponse" message="tns:listarSubFamiliasResponse" />
     </operation>
   </portType>
   <binding name="SubFamiliaWSPortBinding" type="tns:SubFamiliaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarSubFamilias">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarSubFamilia">
+    <operation name="insertarSubFamilia">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +67,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarSubFamilia">
+    <operation name="eliminarSubFamilia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarSubFamilias">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
