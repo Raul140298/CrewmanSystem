@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://54.80.91.225:8080/CrewmanSystemServices/PersonaContactoWS?xsd=1" namespace="http://services.CrewmanSystem.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="eliminarPersonaContacto">
-    <part name="parameters" element="tns:eliminarPersonaContacto" />
+  <message name="actualizarPersonaContacto">
+    <part name="parameters" element="tns:actualizarPersonaContacto" />
   </message>
-  <message name="eliminarPersonaContactoResponse">
-    <part name="parameters" element="tns:eliminarPersonaContactoResponse" />
+  <message name="actualizarPersonaContactoResponse">
+    <part name="parameters" element="tns:actualizarPersonaContactoResponse" />
   </message>
   <message name="insertarPersonaContacto">
     <part name="parameters" element="tns:insertarPersonaContacto" />
@@ -17,39 +17,39 @@
   <message name="insertarPersonaContactoResponse">
     <part name="parameters" element="tns:insertarPersonaContactoResponse" />
   </message>
+  <message name="eliminarPersonaContacto">
+    <part name="parameters" element="tns:eliminarPersonaContacto" />
+  </message>
+  <message name="eliminarPersonaContactoResponse">
+    <part name="parameters" element="tns:eliminarPersonaContactoResponse" />
+  </message>
   <message name="mostrarPersonaContacto">
     <part name="parameters" element="tns:mostrarPersonaContacto" />
   </message>
   <message name="mostrarPersonaContactoResponse">
     <part name="parameters" element="tns:mostrarPersonaContactoResponse" />
   </message>
-  <message name="actualizarPersonaContacto">
-    <part name="parameters" element="tns:actualizarPersonaContacto" />
-  </message>
-  <message name="actualizarPersonaContactoResponse">
-    <part name="parameters" element="tns:actualizarPersonaContactoResponse" />
-  </message>
   <portType name="PersonaContactoWS">
-    <operation name="eliminarPersonaContacto">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/eliminarPersonaContactoRequest" message="tns:eliminarPersonaContacto" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/eliminarPersonaContactoResponse" message="tns:eliminarPersonaContactoResponse" />
+    <operation name="actualizarPersonaContacto">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/actualizarPersonaContactoRequest" message="tns:actualizarPersonaContacto" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/actualizarPersonaContactoResponse" message="tns:actualizarPersonaContactoResponse" />
     </operation>
     <operation name="insertarPersonaContacto">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/insertarPersonaContactoRequest" message="tns:insertarPersonaContacto" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/insertarPersonaContactoResponse" message="tns:insertarPersonaContactoResponse" />
     </operation>
+    <operation name="eliminarPersonaContacto">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/eliminarPersonaContactoRequest" message="tns:eliminarPersonaContacto" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/eliminarPersonaContactoResponse" message="tns:eliminarPersonaContactoResponse" />
+    </operation>
     <operation name="mostrarPersonaContacto">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/mostrarPersonaContactoRequest" message="tns:mostrarPersonaContacto" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/mostrarPersonaContactoResponse" message="tns:mostrarPersonaContactoResponse" />
     </operation>
-    <operation name="actualizarPersonaContacto">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/actualizarPersonaContactoRequest" message="tns:actualizarPersonaContacto" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/PersonaContactoWS/actualizarPersonaContactoResponse" message="tns:actualizarPersonaContactoResponse" />
-    </operation>
   </portType>
   <binding name="PersonaContactoWSPortBinding" type="tns:PersonaContactoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="eliminarPersonaContacto">
+    <operation name="actualizarPersonaContacto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -67,7 +67,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="mostrarPersonaContacto">
+    <operation name="eliminarPersonaContacto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +76,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarPersonaContacto">
+    <operation name="mostrarPersonaContacto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
