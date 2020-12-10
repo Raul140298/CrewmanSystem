@@ -65,6 +65,7 @@
 			this.btnPedido = new FontAwesome.Sharp.IconButton();
 			this.btnReportePedidos = new FontAwesome.Sharp.IconButton();
 			this.pnlGestionEmpleados = new System.Windows.Forms.Panel();
+			this.btnReporteEmpleados = new FontAwesome.Sharp.IconButton();
 			this.btnCarteras = new FontAwesome.Sharp.IconButton();
 			this.btnEmpleados = new FontAwesome.Sharp.IconButton();
 			this.btnGestionEmpleados = new FontAwesome.Sharp.IconButton();
@@ -95,7 +96,6 @@
 			this.btnMinimizar = new FontAwesome.Sharp.IconButton();
 			this.btnMaximizar = new FontAwesome.Sharp.IconButton();
 			this.btnSalir = new FontAwesome.Sharp.IconButton();
-			this.btnReporteEmpleados = new FontAwesome.Sharp.IconButton();
 			this.pnlContenedor.SuspendLayout();
 			this.pnlChildForm.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -686,6 +686,7 @@
 			this.iconButton1.Text = "Quejas";
 			this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.iconButton1.UseVisualStyleBackColor = false;
+			this.iconButton1.Visible = false;
 			this.iconButton1.Click += new System.EventHandler(this.btnEmpQuejas_Click);
 			// 
 			// btnGuiaDeRemision
@@ -839,6 +840,29 @@
 			this.pnlGestionEmpleados.Name = "pnlGestionEmpleados";
 			this.pnlGestionEmpleados.Size = new System.Drawing.Size(264, 144);
 			this.pnlGestionEmpleados.TabIndex = 5;
+			// 
+			// btnReporteEmpleados
+			// 
+			this.btnReporteEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+			this.btnReporteEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnReporteEmpleados.FlatAppearance.BorderSize = 0;
+			this.btnReporteEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnReporteEmpleados.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+			this.btnReporteEmpleados.ForeColor = System.Drawing.Color.Gainsboro;
+			this.btnReporteEmpleados.IconChar = FontAwesome.Sharp.IconChar.None;
+			this.btnReporteEmpleados.IconColor = System.Drawing.Color.Black;
+			this.btnReporteEmpleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnReporteEmpleados.IconSize = 16;
+			this.btnReporteEmpleados.Location = new System.Drawing.Point(0, 90);
+			this.btnReporteEmpleados.Name = "btnReporteEmpleados";
+			this.btnReporteEmpleados.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+			this.btnReporteEmpleados.Rotation = 0D;
+			this.btnReporteEmpleados.Size = new System.Drawing.Size(264, 45);
+			this.btnReporteEmpleados.TabIndex = 11;
+			this.btnReporteEmpleados.Text = "Reporte";
+			this.btnReporteEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnReporteEmpleados.UseVisualStyleBackColor = false;
+			this.btnReporteEmpleados.Click += new System.EventHandler(this.btnReporteEmpleados_Click);
 			// 
 			// btnCarteras
 			// 
@@ -1475,29 +1499,6 @@
 			this.btnSalir.TabIndex = 26;
 			this.btnSalir.UseVisualStyleBackColor = false;
 			this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-			// 
-			// btnReporteEmpleados
-			// 
-			this.btnReporteEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-			this.btnReporteEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnReporteEmpleados.FlatAppearance.BorderSize = 0;
-			this.btnReporteEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnReporteEmpleados.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-			this.btnReporteEmpleados.ForeColor = System.Drawing.Color.Gainsboro;
-			this.btnReporteEmpleados.IconChar = FontAwesome.Sharp.IconChar.None;
-			this.btnReporteEmpleados.IconColor = System.Drawing.Color.Black;
-			this.btnReporteEmpleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.btnReporteEmpleados.IconSize = 16;
-			this.btnReporteEmpleados.Location = new System.Drawing.Point(0, 90);
-			this.btnReporteEmpleados.Name = "btnReporteEmpleados";
-			this.btnReporteEmpleados.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-			this.btnReporteEmpleados.Rotation = 0D;
-			this.btnReporteEmpleados.Size = new System.Drawing.Size(264, 45);
-			this.btnReporteEmpleados.TabIndex = 11;
-			this.btnReporteEmpleados.Text = "Reporte";
-			this.btnReporteEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnReporteEmpleados.UseVisualStyleBackColor = false;
-			this.btnReporteEmpleados.Click += new System.EventHandler(this.btnReporteEmpleados_Click);
 			// 
 			// frmVentanaPrincipal
 			// 
