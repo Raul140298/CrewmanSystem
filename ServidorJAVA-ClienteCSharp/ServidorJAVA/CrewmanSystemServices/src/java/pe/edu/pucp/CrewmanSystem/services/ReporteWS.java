@@ -120,6 +120,7 @@ public class ReporteWS
         
         return arreglo;
     }
+    
     @WebMethod(operationName = "generarReportePedidos")
     public byte[] generarReportePedidos() {
         byte[] arreglo = null;

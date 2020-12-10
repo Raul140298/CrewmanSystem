@@ -25,7 +25,7 @@ namespace CrewmanSystem
         {
             byte[] arreglo = null;
             sfdReporte.ShowDialog();
-            //arreglo = daoReporte.gener
+            arreglo = daoReporte.generar
             if (sfdReporte.FileName != null && sfdReporte.FileName != "")
             {
                 File.WriteAllBytes(sfdReporte.FileName, arreglo);
