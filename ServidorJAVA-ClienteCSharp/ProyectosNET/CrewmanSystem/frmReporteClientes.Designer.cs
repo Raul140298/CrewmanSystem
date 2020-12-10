@@ -47,6 +47,11 @@
             this.btnReporte.UseVisualStyleBackColor = false;
             this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
+            // sfdReporte
+            // 
+            this.sfdReporte.DefaultExt = "pdf";
+            this.sfdReporte.FileName = "ReporteMejoresClientes";
+            // 
             // frmReporteClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
