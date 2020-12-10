@@ -158,7 +158,7 @@ public class ReporteWS
             JasperReport reporte = (JasperReport)
                     JRLoader.loadObjectFromFile(ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/MejoresClientes.jasper").getFile());
 
-            String rutaLogo = ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/images/portada.jpeg").getPath();
+            String rutaLogo = ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/images/portada.jpg").getPath();
             ImageIcon icono = new ImageIcon(rutaLogo);
             Image imagen = icono.getImage();
 
