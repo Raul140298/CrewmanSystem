@@ -13,7 +13,7 @@ namespace CrewmanSystem
 {
     public partial class frmReportePedidosXCliente : Form
     {
-        private ReportePedidosXClienteWS.ReportePedidosXClienteClient daoReporte;
+        private .ReportePedidosXClienteClient daoReporte;
         private String[] tipos = {"CUALQUIERA","ALTO","MEDIO","BAJO"};
         public frmReportePedidosXCliente()
         {

@@ -156,11 +156,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\ReportePedidosXClienteWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Connected Services\SubFamiliaWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -859,15 +854,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\ReportePedidosXClienteWS\configuration91.svcinfo" />
-    <None Include="Connected Services\ReportePedidosXClienteWS\configuration.svcinfo" />
-    <None Include="Connected Services\ReportePedidosXClienteWS\CrewmanSystem.ReportePedidosXClienteWS.generarReportePedidosXClienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ReportePedidosXClienteWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <Content Include="Resources\signo-de-recarga.png" />
     <None Include="Connected Services\CarteraWS\CarteraWS.wsdl" />
     <None Include="Connected Services\CarteraWS\CarteraWS.xsd">
@@ -1193,10 +1179,6 @@
     <None Include="Connected Services\QuejaWS\QuejaWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ReportePedidosXClienteWS\ReportePedidosXCliente.wsdl" />
-    <None Include="Connected Services\ReportePedidosXClienteWS\ReportePedidosXCliente.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\SubFamiliaWS\CrewmanSystem.SubFamiliaWS.actualizarSubFamiliaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1404,7 +1386,6 @@
     <WCFMetadataStorage Include="Connected Services\PromocionWS\" />
     <WCFMetadataStorage Include="Connected Services\PromocionXProductoWS\" />
     <WCFMetadataStorage Include="Connected Services\QuejaWS\" />
-    <WCFMetadataStorage Include="Connected Services\ReportePedidosXClienteWS\" />
     <WCFMetadataStorage Include="Connected Services\SubFamiliaWS\" />
     <WCFMetadataStorage Include="Connected Services\VisitaWS\" />
     <WCFMetadataStorage Include="Connected Services\ZonaWS\" />
