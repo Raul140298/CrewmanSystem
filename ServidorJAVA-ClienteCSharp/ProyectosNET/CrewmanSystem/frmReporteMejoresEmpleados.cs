@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +13,23 @@ namespace CrewmanSystem
 {
 	public partial class frmReporteMejoresEmpleados : Form
 	{
-		public frmReporteMejoresEmpleados()
+        private ReporteWS.ReporteWSClient daoReporte;
+
+        public frmReporteMejoresEmpleados()
 		{
 			InitializeComponent();
-		}
-	}
+            daoReporte = new ReporteWS.ReporteWSClient();
+        }
+
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            sfdReporte.ShowDialog();
+            if (sfdReporte.FileName != null && sfdReporte.FileName != "")
+            {
+                byte[] arreglo = daoReporte.generarReporte();
+                File.WriteAllBytes(sfdReporte.FileName + ".pdf", arreglo);
+            }
+            MessageBox.Show("Se ha guardado correctamente", "Mensaje de Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+    }
 }
