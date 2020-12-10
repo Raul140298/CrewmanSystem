@@ -608,7 +608,7 @@ namespace CrewmanSystem
 
 		private void btnSubfamilia_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarSubfamilias(),true, true, true, true, false);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarSubfamilias(),true, true, true, false, false);
 		}
 
 		private void btnProducto_Click(object sender, EventArgs e)
