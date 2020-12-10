@@ -45,6 +45,7 @@
       <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
       <xs:element minOccurs="0" name="correo" type="xs:string" />
       <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
       <xs:element name="genero" type="xs:unsignedShort" />
       <xs:element name="idPersona" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
@@ -88,6 +89,7 @@
       <xs:element minOccurs="0" name="grupo" type="xs:string" />
       <xs:element name="idCliente" type="xs:int" />
       <xs:element minOccurs="0" name="lineaCredito" type="tns:lineaCredito" />
+      <xs:element name="montoSeg" type="xs:double" />
       <xs:element minOccurs="0" name="personaContacto" type="tns:personaContacto" />
       <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
       <xs:element minOccurs="0" name="ruc" type="xs:string" />
@@ -111,6 +113,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:persona">
         <xs:sequence>
+          <xs:element name="activo" type="xs:boolean" />
           <xs:element minOccurs="0" name="cargo" type="xs:string" />
           <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
           <xs:element name="idPersonaContacto" type="xs:int" />

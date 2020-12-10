@@ -1202,8 +1202,8 @@
     <None Include="Connected Services\QuejaWS\QuejaWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ReporteWS\ReporteWS1.wsdl" />
-    <None Include="Connected Services\ReporteWS\ReporteWS1.xsd">
+    <None Include="Connected Services\ReporteWS\ReporteWS.wsdl" />
+    <None Include="Connected Services\ReporteWS\ReporteWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\SubFamiliaWS\CrewmanSystem.SubFamiliaWS.actualizarSubFamiliaResponse.datasource">

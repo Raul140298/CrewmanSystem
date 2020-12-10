@@ -567,6 +567,8 @@ namespace CrewmanSystem.CarteraWS {
         
         private lineaCredito lineaCreditoField;
         
+        private double montoSegField;
+        
         private personaContacto personaContactoField;
         
         private string razonSocialField;
@@ -711,6 +713,18 @@ namespace CrewmanSystem.CarteraWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public double montoSeg {
+            get {
+                return this.montoSegField;
+            }
+            set {
+                this.montoSegField = value;
+                this.RaisePropertyChanged("montoSeg");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
         public personaContacto personaContacto {
             get {
                 return this.personaContactoField;
@@ -722,7 +736,7 @@ namespace CrewmanSystem.CarteraWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
         public string razonSocial {
             get {
                 return this.razonSocialField;
@@ -734,7 +748,7 @@ namespace CrewmanSystem.CarteraWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
         public string ruc {
             get {
                 return this.rucField;
@@ -746,7 +760,7 @@ namespace CrewmanSystem.CarteraWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
         public string tipoEmpresa {
             get {
                 return this.tipoEmpresaField;
@@ -758,7 +772,7 @@ namespace CrewmanSystem.CarteraWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
         public zona zona {
             get {
                 return this.zonaField;
@@ -931,6 +945,8 @@ namespace CrewmanSystem.CarteraWS {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/")]
     public partial class personaContacto : persona {
         
+        private bool activo1Field;
+        
         private string cargoField;
         
         private cliente clienteField;
@@ -938,7 +954,19 @@ namespace CrewmanSystem.CarteraWS {
         private int idPersonaContactoField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("activo", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo1 {
+            get {
+                return this.activo1Field;
+            }
+            set {
+                this.activo1Field = value;
+                this.RaisePropertyChanged("activo1");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public string cargo {
             get {
                 return this.cargoField;
@@ -950,7 +978,7 @@ namespace CrewmanSystem.CarteraWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public cliente cliente {
             get {
                 return this.clienteField;
@@ -962,7 +990,7 @@ namespace CrewmanSystem.CarteraWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public int idPersonaContacto {
             get {
                 return this.idPersonaContactoField;
@@ -993,6 +1021,8 @@ namespace CrewmanSystem.CarteraWS {
         private string correoField;
         
         private string dniField;
+        
+        private byte[] fotoField;
         
         private ushort generoField;
         
@@ -1065,7 +1095,19 @@ namespace CrewmanSystem.CarteraWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=5)]
+        public byte[] foto {
+            get {
+                return this.fotoField;
+            }
+            set {
+                this.fotoField = value;
+                this.RaisePropertyChanged("foto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
         public ushort genero {
             get {
                 return this.generoField;
@@ -1077,7 +1119,7 @@ namespace CrewmanSystem.CarteraWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public int idPersona {
             get {
                 return this.idPersonaField;
@@ -1089,7 +1131,7 @@ namespace CrewmanSystem.CarteraWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
         public string nombre {
             get {
                 return this.nombreField;
@@ -1101,7 +1143,7 @@ namespace CrewmanSystem.CarteraWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
         public string telefono1 {
             get {
                 return this.telefono1Field;
@@ -1113,7 +1155,7 @@ namespace CrewmanSystem.CarteraWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
         public string telefono2 {
             get {
                 return this.telefono2Field;
