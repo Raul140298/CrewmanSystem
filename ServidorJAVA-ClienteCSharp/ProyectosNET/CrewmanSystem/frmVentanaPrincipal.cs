@@ -711,6 +711,12 @@ namespace CrewmanSystem
 		{
 			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarClientes(),true, true, true, true, true);
 		}
+
+		private void btnReporteClientes_Click(object sender, EventArgs e)
+		{
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmReporteClientes(), false, false, false, false, false);
+		}
+
 		#endregion
 
 		#region BOTONESSINDESPEGABLES
@@ -892,7 +898,7 @@ namespace CrewmanSystem
 
 
 
-		#endregion
+        #endregion
 
-	}
+    }
 }
