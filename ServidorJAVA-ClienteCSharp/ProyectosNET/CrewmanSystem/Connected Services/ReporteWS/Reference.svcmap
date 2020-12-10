@@ -22,8 +22,8 @@
     <MetadataSource Address="http://54.80.91.225:8080/CrewmanSystemServices/ReporteWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ReporteWS1.xsd" MetadataType="Schema" ID="b7c5abbf-6b76-48fe-ac0b-16b67b469b66" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/ReporteWS?xsd=1" />
-    <MetadataFile FileName="ReporteWS1.wsdl" MetadataType="Wsdl" ID="eb2dfd03-1eb8-4b47-9ce6-ac66ab3dfedf" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/ReporteWS?WSDL" />
+    <MetadataFile FileName="ReporteWS1.xsd" MetadataType="Schema" ID="44e893b9-c013-4d8a-a913-97167433686b" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/ReporteWS?xsd=1" />
+    <MetadataFile FileName="ReporteWS1.wsdl" MetadataType="Wsdl" ID="ee3f79a3-14aa-402c-9b17-74739e929583" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/ReporteWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
