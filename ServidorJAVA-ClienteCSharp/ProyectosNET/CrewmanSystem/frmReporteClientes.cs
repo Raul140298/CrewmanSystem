@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace CrewmanSystem
 {
-	public partial class frmReportePedidos : Form
-	{
-		public frmReportePedidos()
-		{
-			InitializeComponent();
-		}
-	}
+    public partial class frmReporteClientes : Form
+    {
+        public frmReporteClientes()
+        {
+            InitializeComponent();
+        }
+    }
 }
