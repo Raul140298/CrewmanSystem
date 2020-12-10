@@ -44,6 +44,11 @@ namespace CrewmanSystem
             this.btnGenerar.UseVisualStyleBackColor = true;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
+            // sfdReporte
+            // 
+            this.sfdReporte.DefaultExt = "pdf";
+            this.sfdReporte.Filter = "PDF (*.pdf)|*.pdf";
+            // 
             // frmReporteMejoresEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
