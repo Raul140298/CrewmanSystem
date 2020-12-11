@@ -177,5 +177,45 @@ public class ReporteWS
         }
         return arreglo;
     }
+    
+    public byte[] generarReporteQuejas(@WebParam(name = "idJefe") int idJefe) {
+        byte[] arreglo = null;
+        try{
+            //Referencia al archivo JASPER
+            String rutaReporte = ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/ReporteQuejas.jasper").getPath();
+            rutaReporte = rutaReporte.replaceAll("%20", " ");
+            JasperReport reporte = (JasperReport)JRLoader.loadObjectFromFile(rutaReporte);
+        
+            //Referencia a la ruta de la imagen
+            String rutaLogo = ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/images/icono.jpg").getPath();
+            rutaLogo = rutaLogo.replaceAll("%20", " ");
+            ImageIcon icono = new ImageIcon(rutaLogo);
+            Image imagen = icono.getImage();      
+            
+            //Registramos el Driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Creamos el objeto Connection
+            Connection con = DriverManager.getConnection(DBManager.urlMySQL, 
+                    DBManager.user, DBManager.pass);
+            
+            //Creamos un HashMap para enviar los parámetros
+            HashMap hm = new HashMap();
+            hm.put("LOGO",imagen);
+            hm.put("JEFE", idJefe);
+            
+            //Poblamos el reporte
+            JasperPrint jp = JasperFillManager.fillReport
+            (reporte, hm, con);
+            
+            //Cerrar la conexion
+            con.close();
+            
+            //Convertirlo a arreglo bytes
+            arreglo = JasperExportManager.exportReportToPdf(jp);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return arreglo;
+    }
 }
 
