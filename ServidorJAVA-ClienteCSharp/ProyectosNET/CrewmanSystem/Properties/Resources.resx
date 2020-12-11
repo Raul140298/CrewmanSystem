@@ -121,13 +121,28 @@
   <data name="CREWMANSYSTEMLOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CREWMANSYSTEMLOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="USER" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\USER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="signo-de-la-cruz" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\signo-de-la-cruz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icono1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MARCADEAGUA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MARCADEAGUA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mejoresClientes2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mejoresClientes2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mejoresEmpleados2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mejoresEmpleados2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reportePedidos2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reportePedidos2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reportePedidosXCliente2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reportePedidosXCliente2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="USER" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\USER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

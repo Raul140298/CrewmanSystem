@@ -757,11 +757,16 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\reportePedidosXCliente2.png" />
+    <None Include="Resources\reportePedidos2.png" />
+    <None Include="Resources\mejoresClientes2.png" />
+    <None Include="Resources\mejoresEmpleados2.png" />
+    <None Include="Resources\MARCADEAGUA.png" />
     <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.actualizarFacturaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -880,7 +885,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Resources\signo-de-recarga.png" />
     <None Include="Connected Services\CarteraWS\CarteraWS.wsdl" />
     <None Include="Connected Services\CarteraWS\CarteraWS.xsd">
       <SubType>Designer</SubType>
@@ -1381,13 +1385,11 @@
     </None>
     <Content Include="Resources\icono.ico" />
     <Content Include="Resources\icono.png" />
-    <Content Include="Resources\signo-de-la-cruz.png" />
     <None Include="Connected Services\ZonaWS\ZonaWS.wsdl" />
     <None Include="Connected Services\ZonaWS\ZonaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-    <None Include="Resources\MARCADEAGUA.png" />
     <None Include="Resources\USER.png" />
   </ItemGroup>
   <ItemGroup>

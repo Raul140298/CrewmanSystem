@@ -85,6 +85,7 @@
 			this.chartVentas.BackColor = System.Drawing.SystemColors.Control;
 			this.chartVentas.BackSecondaryColor = System.Drawing.SystemColors.Control;
 			this.chartVentas.BorderlineColor = System.Drawing.SystemColors.Control;
+			this.chartVentas.BorderSkin.BackColor = System.Drawing.Color.DarkGray;
 			chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
 			chartArea1.AxisX2.MajorGrid.LineColor = System.Drawing.Color.Transparent;
 			chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
@@ -98,6 +99,21 @@
 			this.chartVentas.Location = new System.Drawing.Point(39, 108);
 			this.chartVentas.Name = "chartVentas";
 			this.chartVentas.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+			this.chartVentas.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(152)))), ((int)(((byte)(0))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(39)))), ((int)(((byte)(176))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(103)))), ((int)(((byte)(108))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(26)))), ((int)(((byte)(74))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(173))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(72)))), ((int)(((byte)(51))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(147)))), ((int)(((byte)(126))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(117)))), ((int)(((byte)(33))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(194)))), ((int)(((byte)(64))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(220)))), ((int)(((byte)(91))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(18)))), ((int)(((byte)(107))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(183)))), ((int)(((byte)(110)))))};
 			series1.ChartArea = "ChartArea1";
 			series1.IsValueShownAsLabel = true;
 			series1.Legend = "Legend1";
