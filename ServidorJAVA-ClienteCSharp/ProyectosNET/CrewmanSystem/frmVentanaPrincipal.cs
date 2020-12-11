@@ -778,7 +778,7 @@ namespace CrewmanSystem
 
 		private void btnEmpQuejas_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarQuejas(),true, true, false, false, true);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmReporteQuejas(),false,false, false, false, false);
 		}
 		#endregion
 

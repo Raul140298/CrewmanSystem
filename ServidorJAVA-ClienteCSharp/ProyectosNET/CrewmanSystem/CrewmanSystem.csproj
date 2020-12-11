@@ -531,6 +531,12 @@
     <Compile Include="frmReportePedidosXCliente.Designer.cs">
       <DependentUpon>frmReportePedidosXCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReporteQuejas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteQuejas.Designer.cs">
+      <DependentUpon>frmReporteQuejas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSegmentarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -746,6 +752,9 @@
     <EmbeddedResource Include="frmReportePedidosXCliente.resx">
       <DependentUpon>frmReportePedidosXCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteQuejas.resx">
+      <DependentUpon>frmReporteQuejas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSegmentarClientes.resx">
       <DependentUpon>frmSegmentarClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -762,25 +771,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\QuejaWS\CrewmanSystem.QuejaWS.actualizarQuejaResponse.datasource">
+    <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReporteQuejasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\QuejaWS\CrewmanSystem.QuejaWS.eliminarQuejaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\QuejaWS\CrewmanSystem.QuejaWS.insertarQuejaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\QuejaWS\CrewmanSystem.QuejaWS.listarQuejasResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\QuejaWS\CrewmanSystem.QuejaWS.queja.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\QuejaWS\QuejaWS.wsdl" />
-    <None Include="Connected Services\QuejaWS\QuejaWS.xsd">
+    <None Include="Connected Services\ReporteWS\ReporteWS.wsdl" />
+    <None Include="Connected Services\ReporteWS\ReporteWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Resources\ReporteQuejas2.png" />
     <None Include="Resources\reportePedidosXCliente2.png" />
     <None Include="Resources\reportePedidos2.png" />
     <None Include="Resources\mejoresClientes2.png" />
@@ -1209,8 +1207,23 @@
     <None Include="Connected Services\PromocionXProductoWS\PromocionXProductoWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ReporteWS\ReporteWS.wsdl" />
-    <None Include="Connected Services\ReporteWS\ReporteWS.xsd">
+    <None Include="Connected Services\QuejaWS\CrewmanSystem.QuejaWS.actualizarQuejaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\QuejaWS\CrewmanSystem.QuejaWS.eliminarQuejaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\QuejaWS\CrewmanSystem.QuejaWS.insertarQuejaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\QuejaWS\CrewmanSystem.QuejaWS.listarQuejasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\QuejaWS\CrewmanSystem.QuejaWS.queja.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\QuejaWS\QuejaWS.wsdl" />
+    <None Include="Connected Services\QuejaWS\QuejaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\SubFamiliaWS\CrewmanSystem.SubFamiliaWS.actualizarSubFamiliaResponse.datasource">
@@ -1341,6 +1354,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\QuejaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\QuejaWS\configuration.svcinfo" />
+    <None Include="Connected Services\QuejaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Connected Services\SubFamiliaWS\configuration91.svcinfo" />
     <None Include="Connected Services\SubFamiliaWS\configuration.svcinfo" />
     <None Include="Connected Services\SubFamiliaWS\Reference.svcmap">
@@ -1374,12 +1393,6 @@
     <None Include="Connected Services\LineaPedidoWS\configuration91.svcinfo" />
     <None Include="Connected Services\LineaPedidoWS\configuration.svcinfo" />
     <None Include="Connected Services\LineaPedidoWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\QuejaWS\configuration91.svcinfo" />
-    <None Include="Connected Services\QuejaWS\configuration.svcinfo" />
-    <None Include="Connected Services\QuejaWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
