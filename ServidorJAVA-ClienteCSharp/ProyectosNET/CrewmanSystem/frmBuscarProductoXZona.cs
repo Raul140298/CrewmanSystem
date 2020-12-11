@@ -32,7 +32,14 @@ namespace CrewmanSystem
 			cboZona.ValueMember = "idZona";
 			cboZona.DisplayMember = "nombre";
 
-			cboZona.SelectedItem = vacio;
+            if (Program.empleado.cargo.nombre == "VENDEDOR") 
+			{
+				cboZona.SelectedValue = Program.empleado.zona.idZona;
+				cboZona.Enabled = false;
+			}
+			else
+				cboZona.SelectedItem = vacio;
+			
 			completarTabla();
 			#region colores de seleccion
 			dgvProductoXZona.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;

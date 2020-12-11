@@ -1,6 +1,6 @@
 ﻿namespace CrewmanSystem
 {
-    partial class frmReporteClientes
+    partial class frmReporteMejoresClientes
     {
         /// <summary>
         /// Required designer variable.
@@ -53,14 +53,14 @@
             this.sfdReporte.FileName = "ReporteMejoresClientes";
             this.sfdReporte.Filter = "PDF (*.pdf)|*.pdf";
             // 
-            // frmReporteClientes
+            // frmReporteMejoresClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnReporte);
-            this.Name = "frmReporteClientes";
-            this.Text = "frmReporteClientes";
+            this.Name = "frmReporteMejoresClientes";
+            this.Text = "frmReporteMejoresClientes";
             this.ResumeLayout(false);
 
         }

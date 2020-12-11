@@ -18,7 +18,12 @@ namespace CrewmanSystem
 			daoProductoXZona = new ProductoXZonaWS.ProductoXZonaWSClient();
 			InitializeComponent();
 			dgvProductosXZona.AutoGenerateColumns = false;
-			ProductoXZonaWS.productoXZona[] misProductoXZonas = daoProductoXZona.listarProductosXZonas("", "", "", "", 0);
+			ProductoXZonaWS.productoXZona[] misProductoXZonas = null;
+			if (Program.empleado.cargo.nombre == "VENDEDOR")
+				misProductoXZonas = daoProductoXZona.listarProductosXZonas("", "", "", "", Program.empleado.zona.idZona);
+            else
+				misProductoXZonas = daoProductoXZona.listarProductosXZonas("", "", "", "", 0);
+
 			if (misProductoXZonas != null)
 			{
 				dgvProductosXZona.DataSource = new BindingList<ProductoXZonaWS.productoXZona>(misProductoXZonas.ToArray());
