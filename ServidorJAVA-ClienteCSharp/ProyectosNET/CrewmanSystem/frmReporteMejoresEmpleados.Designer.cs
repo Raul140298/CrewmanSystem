@@ -54,6 +54,7 @@ namespace CrewmanSystem
             // sfdReporte
             // 
             this.sfdReporte.DefaultExt = "pdf";
+            this.sfdReporte.FileName = "ReporteMejoresEmpleados.pdf";
             this.sfdReporte.Filter = "PDF (*.pdf)|*.pdf";
             // 
             // frmReporteMejoresEmpleados

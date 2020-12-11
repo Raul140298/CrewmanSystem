@@ -23,11 +23,19 @@ namespace CrewmanSystem
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            sfdReporte.ShowDialog();
-            if (sfdReporte.FileName != null && sfdReporte.FileName != "")
+            if (sfdReporte.ShowDialog() == DialogResult.OK)
             {
-                byte[] arreglo = daoReporte.generarReporteMejoresClientes();
-                File.WriteAllBytes(sfdReporte.FileName, arreglo);
+                try
+                {
+                    string nombre = Program.empleado.nombre + " " + Program.empleado.apellidoPaterno + " " + Program.empleado.apellidoMaterno;
+                    byte[] arreglo = daoReporte.generarReporteMejoresClientes(nombre);
+                    File.WriteAllBytes(sfdReporte.FileName, arreglo);
+                    MessageBox.Show("El reporte fue generado con exito", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("No se pudo generar el reporte", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

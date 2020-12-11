@@ -8,6 +8,7 @@ package pe.edu.pucp.CrewmanSystem.services;
 import java.awt.Image;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.util.Date;
 import java.util.HashMap;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
@@ -135,7 +136,7 @@ public class ReporteWS
     }
     
     @WebMethod(operationName = "generarReporteMejoresClientes")
-    public byte[] generarReporteMejoresClientes(String nombre) {
+    public byte[] generarReporteMejoresClientes(@WebParam(name = "nombre") String nombre) {
         byte[] arreglo = null;
 
         try{
@@ -154,6 +155,7 @@ public class ReporteWS
             HashMap hm = new HashMap();
             hm.put("LOGO", imagen);
             hm.put("NOMBRE", nombre);
+            hm.put("FECHA", new java.sql.Date(new Date().getTime()));
 
             JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
 

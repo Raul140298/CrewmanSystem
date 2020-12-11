@@ -11,17 +11,17 @@
   <message name="generarReporteMejoresClientesResponse">
     <part name="parameters" element="tns:generarReporteMejoresClientesResponse" />
   </message>
-  <message name="generarReporteMejoresEmpleados">
-    <part name="parameters" element="tns:generarReporteMejoresEmpleados" />
-  </message>
-  <message name="generarReporteMejoresEmpleadosResponse">
-    <part name="parameters" element="tns:generarReporteMejoresEmpleadosResponse" />
-  </message>
   <message name="generarReportePedidos">
     <part name="parameters" element="tns:generarReportePedidos" />
   </message>
   <message name="generarReportePedidosResponse">
     <part name="parameters" element="tns:generarReportePedidosResponse" />
+  </message>
+  <message name="generarReporteMejoresEmpleados">
+    <part name="parameters" element="tns:generarReporteMejoresEmpleados" />
+  </message>
+  <message name="generarReporteMejoresEmpleadosResponse">
+    <part name="parameters" element="tns:generarReporteMejoresEmpleadosResponse" />
   </message>
   <message name="generarReportePedidosXCliente">
     <part name="parameters" element="tns:generarReportePedidosXCliente" />
@@ -34,13 +34,13 @@
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReporteMejoresClientesRequest" message="tns:generarReporteMejoresClientes" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReporteMejoresClientesResponse" message="tns:generarReporteMejoresClientesResponse" />
     </operation>
-    <operation name="generarReporteMejoresEmpleados">
-      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReporteMejoresEmpleadosRequest" message="tns:generarReporteMejoresEmpleados" />
-      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReporteMejoresEmpleadosResponse" message="tns:generarReporteMejoresEmpleadosResponse" />
-    </operation>
     <operation name="generarReportePedidos">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosRequest" message="tns:generarReportePedidos" />
       <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosResponse" message="tns:generarReportePedidosResponse" />
+    </operation>
+    <operation name="generarReporteMejoresEmpleados">
+      <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReporteMejoresEmpleadosRequest" message="tns:generarReporteMejoresEmpleados" />
+      <output wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReporteMejoresEmpleadosResponse" message="tns:generarReporteMejoresEmpleadosResponse" />
     </operation>
     <operation name="generarReportePedidosXCliente">
       <input wsam:Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosXClienteRequest" message="tns:generarReportePedidosXCliente" />
@@ -58,7 +58,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="generarReporteMejoresEmpleados">
+    <operation name="generarReportePedidos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -67,7 +67,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="generarReportePedidos">
+    <operation name="generarReporteMejoresEmpleados">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
