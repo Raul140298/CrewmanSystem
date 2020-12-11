@@ -777,7 +777,7 @@
 			this.btnPedReporte.Rotation = 0D;
 			this.btnPedReporte.Size = new System.Drawing.Size(264, 45);
 			this.btnPedReporte.TabIndex = 10;
-			this.btnPedReporte.Text = "Reporte";
+			this.btnPedReporte.Text = "Reportes";
 			this.btnPedReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnPedReporte.UseVisualStyleBackColor = false;
 			this.btnPedReporte.Click += new System.EventHandler(this.btnPedReporte_Click);

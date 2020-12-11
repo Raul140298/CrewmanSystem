@@ -880,6 +880,10 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Resources\mejoresEmpleados2.png" />
+    <None Include="Resources\reportePedidosXCliente2.png" />
+    <None Include="Resources\reportePedidos2.png" />
+    <None Include="Resources\mejoresClientes2.png" />
     <Content Include="Resources\signo-de-recarga.png" />
     <None Include="Connected Services\CarteraWS\CarteraWS.wsdl" />
     <None Include="Connected Services\CarteraWS\CarteraWS.xsd">
