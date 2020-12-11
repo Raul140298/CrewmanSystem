@@ -29,6 +29,7 @@
   <xs:complexType name="generarReportePedidosXCliente">
     <xs:sequence>
       <xs:element minOccurs="0" name="tipoCliente" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoPedido" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="generarReportePedidosXClienteResponse">
