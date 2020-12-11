@@ -28,10 +28,10 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
 			this.pnlChildForm = new System.Windows.Forms.Panel();
 			this.btnRecarga = new FontAwesome.Sharp.IconButton();
 			this.chartVentas = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -85,30 +85,31 @@
 			this.chartVentas.BackColor = System.Drawing.SystemColors.Control;
 			this.chartVentas.BackSecondaryColor = System.Drawing.SystemColors.Control;
 			this.chartVentas.BorderlineColor = System.Drawing.SystemColors.Control;
-			chartArea5.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-			chartArea5.AxisX2.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-			chartArea5.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
-			chartArea5.BackColor = System.Drawing.SystemColors.Control;
-			chartArea5.Name = "ChartArea1";
-			this.chartVentas.ChartAreas.Add(chartArea5);
-			legend5.BackColor = System.Drawing.SystemColors.Control;
-			legend5.Enabled = false;
-			legend5.Name = "Legend1";
-			this.chartVentas.Legends.Add(legend5);
+			chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+			chartArea1.AxisX2.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+			chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Transparent;
+			chartArea1.BackColor = System.Drawing.SystemColors.Control;
+			chartArea1.Name = "ChartArea1";
+			this.chartVentas.ChartAreas.Add(chartArea1);
+			legend1.BackColor = System.Drawing.SystemColors.Control;
+			legend1.Enabled = false;
+			legend1.Name = "Legend1";
+			this.chartVentas.Legends.Add(legend1);
 			this.chartVentas.Location = new System.Drawing.Point(39, 108);
 			this.chartVentas.Name = "chartVentas";
-			series5.ChartArea = "ChartArea1";
-			series5.IsValueShownAsLabel = true;
-			series5.Legend = "Legend1";
-			series5.Name = "Suma Ventas";
-			this.chartVentas.Series.Add(series5);
+			this.chartVentas.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+			series1.ChartArea = "ChartArea1";
+			series1.IsValueShownAsLabel = true;
+			series1.Legend = "Legend1";
+			series1.Name = "Suma Ventas";
+			this.chartVentas.Series.Add(series1);
 			this.chartVentas.Size = new System.Drawing.Size(876, 541);
 			this.chartVentas.TabIndex = 58;
 			this.chartVentas.Text = "chart1";
-			title5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-			title5.Name = "Title1";
-			title5.Text = "Suma de ventas en el mes";
-			this.chartVentas.Titles.Add(title5);
+			title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+			title1.Name = "Title1";
+			title1.Text = "Suma de ventas en el mes";
+			this.chartVentas.Titles.Add(title1);
 			// 
 			// lblNombre
 			// 
