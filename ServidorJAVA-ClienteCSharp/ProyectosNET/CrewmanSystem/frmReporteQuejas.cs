@@ -27,7 +27,7 @@ namespace CrewmanSystem
             {
                 try
                 {
-                    //byte[] arreglo = daoReporte.generarReporteQuejas(Program.empleado.idEmpleado);
+                    byte[] arreglo = daoReporte.generarReporteQuejas(Program.empleado.idEmpleado);
                     File.WriteAllBytes(sfdReporte.FileName, arreglo);
                     MessageBox.Show("El reporte fue generado con exito", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
