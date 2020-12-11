@@ -58,6 +58,7 @@ public class ReportePedidosXCliente extends HttpServlet {
             hm.put("RUTA_SUBREPORTE_DETALLES", rutaSubreporte2);
             hm.put("PTIPO_CLIENTE","");
             hm.put("LOGO", imagen);
+            hm.put("PESTADO_PEDIDO","");
             
             JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
             

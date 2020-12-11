@@ -69,7 +69,8 @@ public class ReporteWS
     }
     
     @WebMethod(operationName = "generarReportePedidosXCliente")
-    public byte[] generarReportePedidosXCliente(@WebParam(name = "tipoCliente") String tipoCliente) {
+    public byte[] generarReportePedidosXCliente(@WebParam(name = "tipoCliente") String tipoCliente,
+            @WebParam(name = "estadoPedido") String estadoPedido) {
         byte[] arreglo = null;
         
         try{
@@ -99,6 +100,7 @@ public class ReporteWS
             hm.put("RUTA_SUBREPORTE_DETALLES", rutaSubreporte2);
             hm.put("PTIPO_CLIENTE","");
             hm.put("LOGO", imagen);
+            hm.put("PESTADO_PEDIDO",estadoPedido);
             
             JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
             
