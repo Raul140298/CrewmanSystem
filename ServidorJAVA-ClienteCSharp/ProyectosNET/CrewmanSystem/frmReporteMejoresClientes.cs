@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace CrewmanSystem
 {
-    public partial class frmReporteClientes : Form
+    public partial class frmReporteMejoresClientes : Form
     {
         private ReporteWS.ReporteWSClient daoReporte;
 
-        public frmReporteClientes()
+        public frmReporteMejoresClientes()
         {
             InitializeComponent();
             daoReporte = new ReporteWS.ReporteWSClient();
