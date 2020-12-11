@@ -531,6 +531,12 @@
     <Compile Include="frmReportePedidosXCliente.Designer.cs">
       <DependentUpon>frmReportePedidosXCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReporteQuejas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteQuejas.Designer.cs">
+      <DependentUpon>frmReporteQuejas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSegmentarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -746,6 +752,9 @@
     <EmbeddedResource Include="frmReportePedidosXCliente.resx">
       <DependentUpon>frmReportePedidosXCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteQuejas.resx">
+      <DependentUpon>frmReporteQuejas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSegmentarClientes.resx">
       <DependentUpon>frmSegmentarClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -762,6 +771,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ReporteQuejas2.png" />
     <None Include="Resources\reportePedidosXCliente2.png" />
     <None Include="Resources\reportePedidos2.png" />
     <None Include="Resources\mejoresClientes2.png" />
