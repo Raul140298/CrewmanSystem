@@ -29,12 +29,13 @@
 		private void InitializeComponent()
 		{
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.dgvEmpleados = new System.Windows.Forms.DataGridView();
 			this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,20 +98,20 @@
 			this.dgvEmpleados.Name = "dgvEmpleados";
 			this.dgvEmpleados.ReadOnly = true;
 			this.dgvEmpleados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-			this.dgvEmpleados.RowHeadersWidth = 51;
+			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
 			dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
 			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
 			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-			this.dgvEmpleados.RowsDefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvEmpleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+			this.dgvEmpleados.RowHeadersWidth = 51;
+			dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+			dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+			this.dgvEmpleados.RowsDefaultCellStyle = dataGridViewCellStyle8;
 			this.dgvEmpleados.RowTemplate.Height = 24;
 			this.dgvEmpleados.Size = new System.Drawing.Size(758, 524);
 			this.dgvEmpleados.TabIndex = 5;
@@ -119,6 +120,8 @@
 			// ID
 			// 
 			this.ID.DataPropertyName = "idEmpleado";
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			this.ID.DefaultCellStyle = dataGridViewCellStyle2;
 			this.ID.HeaderText = "Id";
 			this.ID.MinimumWidth = 6;
 			this.ID.Name = "ID";
@@ -163,9 +166,9 @@
 			// SUMA_VENTAS
 			// 
 			this.SUMA_VENTAS.DataPropertyName = "sumVentas";
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle2.Format = "N2";
-			this.SUMA_VENTAS.DefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyle3.Format = "N2";
+			this.SUMA_VENTAS.DefaultCellStyle = dataGridViewCellStyle3;
 			this.SUMA_VENTAS.HeaderText = "Suma Ventas";
 			this.SUMA_VENTAS.MinimumWidth = 6;
 			this.SUMA_VENTAS.Name = "SUMA_VENTAS";
@@ -175,9 +178,9 @@
 			// OBJETIVO_VENTAS
 			// 
 			this.OBJETIVO_VENTAS.DataPropertyName = "objetivoVentas";
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle3.Format = "N2";
-			this.OBJETIVO_VENTAS.DefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyle4.Format = "N2";
+			this.OBJETIVO_VENTAS.DefaultCellStyle = dataGridViewCellStyle4;
 			this.OBJETIVO_VENTAS.HeaderText = "Objetivo Ventas";
 			this.OBJETIVO_VENTAS.MinimumWidth = 6;
 			this.OBJETIVO_VENTAS.Name = "OBJETIVO_VENTAS";
@@ -186,8 +189,8 @@
 			// 
 			// CLIENTES_VISITADOS
 			// 
-			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			this.CLIENTES_VISITADOS.DefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.CLIENTES_VISITADOS.DefaultCellStyle = dataGridViewCellStyle5;
 			this.CLIENTES_VISITADOS.HeaderText = "Clientes Visitados";
 			this.CLIENTES_VISITADOS.MinimumWidth = 6;
 			this.CLIENTES_VISITADOS.Name = "CLIENTES_VISITADOS";
@@ -196,8 +199,8 @@
 			// 
 			// CLIENTES_ASIGNADOS
 			// 
-			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			this.CLIENTES_ASIGNADOS.DefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.CLIENTES_ASIGNADOS.DefaultCellStyle = dataGridViewCellStyle6;
 			this.CLIENTES_ASIGNADOS.HeaderText = "Clientes Asignados";
 			this.CLIENTES_ASIGNADOS.MinimumWidth = 6;
 			this.CLIENTES_ASIGNADOS.Name = "CLIENTES_ASIGNADOS";
@@ -221,14 +224,14 @@
 		#endregion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvEmpleados;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_PATERNO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_MATERNO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SUMA_VENTAS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OBJETIVO_VENTAS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CLIENTES_VISITADOS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CLIENTES_ASIGNADOS;
-    }
+		private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+		private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
+		private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_PATERNO;
+		private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_MATERNO;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
+		private System.Windows.Forms.DataGridViewTextBoxColumn SUMA_VENTAS;
+		private System.Windows.Forms.DataGridViewTextBoxColumn OBJETIVO_VENTAS;
+		private System.Windows.Forms.DataGridViewTextBoxColumn CLIENTES_VISITADOS;
+		private System.Windows.Forms.DataGridViewTextBoxColumn CLIENTES_ASIGNADOS;
+	}
 }
