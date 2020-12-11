@@ -23,10 +23,13 @@ public class ReporteMejoresClientes extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try{
-            JasperReport reporte = (JasperReport)
-                    JRLoader.loadObjectFromFile(ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/MejoresClientes.jasper").getFile());
+            String rutaReporte = ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/MejoresClientes.jasper").getPath();
+            rutaReporte = rutaReporte.replaceAll("%20", " ");
+            JasperReport reporte = (JasperReport)JRLoader.loadObjectFromFile(rutaReporte);
 
             String rutaLogo = ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/images/portada.jpg").getPath();
+            rutaLogo = rutaLogo.replaceAll("%20", " ");
+
             ImageIcon icono = new ImageIcon(rutaLogo);
             Image imagen = icono.getImage();
 

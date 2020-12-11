@@ -24,10 +24,6 @@ import pe.edu.pucp.CrewmanSystem.servlets.ReporteMejoresEmpleados;
 import pe.edu.pucp.CrewmanSystem.servlets.ReportePedidos;
 import pe.edu.pucp.CrewmanSystem.servlets.ReportePedidosXCliente;
 
-/**
- *
- * @author raul1
- */
 @WebService(serviceName = "ReporteWS")
 public class ReporteWS
 {
@@ -36,16 +32,13 @@ public class ReporteWS
         byte[] arreglo = null;
         try{
             //Referencia al archivo JASPER
-            JasperReport reporte = (JasperReport)
-                JRLoader.loadObjectFromFile(
-            ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/MejoresEmpleados.jasper")
-                    .getFile());
+            String rutaReporte = ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/MejoresEmpleados.jasper").getPath();
+            rutaReporte = rutaReporte.replaceAll("%20", " ");
+            JasperReport reporte = (JasperReport)JRLoader.loadObjectFromFile(rutaReporte);
         
             //Referencia a la ruta de la imagen
-            String rutaLogo = 
-               ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/images/icono.jpg")
-                    .getPath();
-            //Generamos el objeto Image
+            String rutaLogo = ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/images/icono.jpg").getPath();
+            rutaLogo = rutaLogo.replaceAll("%20", " ");
             ImageIcon icono = new ImageIcon(rutaLogo);
             Image imagen = icono.getImage();      
             
@@ -79,24 +72,23 @@ public class ReporteWS
         byte[] arreglo = null;
         
         try{
-            JasperReport reporte = (JasperReport)
-                    JRLoader.loadObjectFromFile(ReportePedidosXCliente.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/R_PEDIDOSXCLIENTE.jasper").getFile());
+            String rutaReporte = ReportePedidosXCliente.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/R_PEDIDOSXCLIENTE.jasper").getPath();
+            rutaReporte = rutaReporte.replaceAll("%20", " ");
+            JasperReport reporte = (JasperReport)JRLoader.loadObjectFromFile(rutaReporte);
 
             //Obtener la ruta del subreporte1
-            String rutaSubreporte1 = 
-               ReportePedidosXCliente.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/SR_PEDIDOS.jasper")
-                    .getPath();
+            String rutaSubreporte1 = ReportePedidosXCliente.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/SR_PEDIDOS.jasper").getPath();
+            rutaSubreporte1 = rutaSubreporte1.replaceAll("%20", " ");
             
             //Obtener la ruta del subreporte2
-            String rutaSubreporte2 = 
-               ReportePedidosXCliente.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/SR_DETALLES.jasper")
-                    .getPath();
-            
+            String rutaSubreporte2 = ReportePedidosXCliente.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/SR_DETALLES.jasper").getPath();
+            rutaSubreporte2 = rutaSubreporte2.replaceAll("%20", " ");
+
             //Obtener logo
-            String rutaLogo = ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/images/icono.jpg").getPath();
+            String rutaLogo = ReportePedidosXCliente.class.getResource("/pe/edu/pucp/CrewmanSystem/images/icono.jpg").getPath();
+            rutaLogo = rutaLogo.replaceAll("%20", " ");
             ImageIcon icono = new ImageIcon(rutaLogo);
             Image imagen = icono.getImage();
-
             
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
@@ -111,7 +103,6 @@ public class ReporteWS
             
             con.close();
             
-            //Convertirlo a arreglo bytes
             arreglo = JasperExportManager.exportReportToPdf(jp);
                     
         }catch(Exception e){
@@ -126,24 +117,17 @@ public class ReporteWS
         byte[] arreglo = null;
         
         try{
-            JasperReport reporte= (JasperReport)JRLoader.loadObjectFromFile(ReportePedidos.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/ReportePedidos.jasper").getFile());
-            
-            //String rutaLogo = ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/images/portada.jpeg").getPath();
-           // ImageIcon icono = new ImageIcon(rutaLogo);
-            //Image imagen = icono.getImage();
+            String rutaReporte = ReportePedidos.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/ReportePedidos.jasper").getPath();
+            rutaReporte = rutaReporte.replaceAll("%20", " ");
+            JasperReport reporte= (JasperReport)JRLoader.loadObjectFromFile(rutaReporte);
             
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            
-            //HashMap hm = new HashMap();
-            //hm.put("AUTOR","MARADONA");
-           // hm.put("PORTADA", imagen);
-            
+                        
             JasperPrint jp = JasperFillManager.fillReport(reporte, null, con);
             
             con.close();
-            arreglo = JasperExportManager.exportReportToPdf(jp);
-                    
+            arreglo = JasperExportManager.exportReportToPdf(jp);        
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
@@ -151,14 +135,16 @@ public class ReporteWS
     }
     
     @WebMethod(operationName = "generarReporteMejoresClientes")
-    public byte[] generarReporteMejoresClientes() {
+    public byte[] generarReporteMejoresClientes(String nombre) {
         byte[] arreglo = null;
 
         try{
-            JasperReport reporte = (JasperReport)
-                    JRLoader.loadObjectFromFile(ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/MejoresClientes.jasper").getFile());
+            String rutaReporte = ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/MejoresClientes.jasper").getPath();
+            rutaReporte = rutaReporte.replaceAll("%20", " ");
+            JasperReport reporte = (JasperReport)JRLoader.loadObjectFromFile(rutaReporte);
 
-            String rutaLogo = ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/images/portada.jpg").getPath();
+            String rutaLogo = ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/images/icono.jpg").getPath();
+            rutaLogo = rutaLogo.replaceAll("%20", " ");
             ImageIcon icono = new ImageIcon(rutaLogo);
             Image imagen = icono.getImage();
 
@@ -166,13 +152,13 @@ public class ReporteWS
             Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
 
             HashMap hm = new HashMap();
-            hm.put("PORTADA", imagen);
+            hm.put("LOGO", imagen);
+            hm.put("NOMBRE", nombre);
 
             JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
 
             con.close();
             arreglo = JasperExportManager.exportReportToPdf(jp);
-
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
