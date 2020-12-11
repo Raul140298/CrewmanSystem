@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.TimeZone;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -162,7 +163,9 @@ public class ReporteWS
 
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-
+            
+            TimeZone.setDefault(TimeZone.getTimeZone("GMT-5"));
+            
             HashMap hm = new HashMap();
             hm.put("LOGO", imagen);
             hm.put("NOMBRE", nombre);
