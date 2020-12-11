@@ -667,7 +667,7 @@ namespace CrewmanSystem
 
 		private void btnReporteEmpleados_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmReporteMejoresEmpleados(), false, true, false, true, false);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmReporteMejoresEmpleados(), false, false, false, false, false);
 		}
 		#endregion
 

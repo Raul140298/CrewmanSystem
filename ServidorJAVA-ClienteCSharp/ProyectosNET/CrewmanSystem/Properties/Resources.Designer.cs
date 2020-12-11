@@ -71,11 +71,21 @@ namespace CrewmanSystem.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon icono {
+            get {
+                object obj = ResourceManager.GetObject("icono", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MARCADEAGUA {
+        internal static System.Drawing.Bitmap icono1 {
             get {
-                object obj = ResourceManager.GetObject("MARCADEAGUA", resourceCulture);
+                object obj = ResourceManager.GetObject("icono1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +93,9 @@ namespace CrewmanSystem.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap mejoresClientes {
+        internal static System.Drawing.Bitmap MARCADEAGUA {
             get {
-                object obj = ResourceManager.GetObject("mejoresClientes", resourceCulture);
+                object obj = ResourceManager.GetObject("MARCADEAGUA", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,29 +113,9 @@ namespace CrewmanSystem.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap mejoresEmpleados {
-            get {
-                object obj = ResourceManager.GetObject("mejoresEmpleados", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap mejoresEmpleados2 {
             get {
                 object obj = ResourceManager.GetObject("mejoresEmpleados2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap reportePedidos {
-            get {
-                object obj = ResourceManager.GetObject("reportePedidos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,29 +133,9 @@ namespace CrewmanSystem.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap reportePedidosXCliente {
-            get {
-                object obj = ResourceManager.GetObject("reportePedidosXCliente", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap reportePedidosXCliente2 {
             get {
                 object obj = ResourceManager.GetObject("reportePedidosXCliente2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap signo_de_la_cruz {
-            get {
-                object obj = ResourceManager.GetObject("signo-de-la-cruz", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

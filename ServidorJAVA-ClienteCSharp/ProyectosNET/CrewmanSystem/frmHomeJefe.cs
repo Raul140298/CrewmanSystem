@@ -16,6 +16,9 @@ namespace CrewmanSystem
 		public frmHomeJefe()
 		{
 			InitializeComponent();
+
+			chartVentas.PaletteCustomColors = new System.Drawing.Color[] {Program.colorR};
+
 			btnRecarga.IconColor = Program.color1;
 			chartVentas.ChartAreas[0].AxisX.LabelStyle.Angle = -90;
 			daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
