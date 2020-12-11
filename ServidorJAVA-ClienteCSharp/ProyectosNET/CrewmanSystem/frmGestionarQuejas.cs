@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,10 +14,18 @@ namespace CrewmanSystem
 	public partial class frmGestionarQuejas : Form
 	{
 		private QuejaWS.QuejaWSClient daoQueja;
+		private ReporteWS.ReporteWSClient daoReporte;
+
 		public frmGestionarQuejas()
 		{
 			daoQueja = new QuejaWS.QuejaWSClient();
+			daoReporte = new ReporteWS.ReporteWSClient();
 			InitializeComponent();
+
+			if (Program.empleado.cargo.idCargo == 1)
+			{
+				panel1.Visible = false;
+			}
 			
 			dgvQuejas.AutoGenerateColumns = false;
 			QuejaWS.queja[] misQuejas = daoQueja.listarQuejas(Program.empleado.idEmpleado); 
@@ -44,7 +53,24 @@ namespace CrewmanSystem
 			#endregion
 		}
 
-		private void dgvQuejas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+		private void btnGenerar_Click(object sender, EventArgs e)
+		{
+			if (sfdReporte.ShowDialog() == DialogResult.OK)
+			{
+				try
+				{
+					byte[] arreglo = daoReporte.generarReporteQuejas(Program.empleado.idEmpleado);
+					File.WriteAllBytes(sfdReporte.FileName, arreglo);
+					MessageBox.Show("El reporte fue generado con exito", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				}
+				catch (Exception)
+				{
+					MessageBox.Show("No se pudo generar el reporte", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
+			}
+		}
+
+		private void dgvQuejas_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
 		{
 			try
 			{

@@ -61,6 +61,12 @@ namespace CrewmanSystem
 			home.Boton = btnHome;
 			home.Tipo = BTNtipo.vacio;
 			pnlLateralIzquierdo.Visible = true;
+			//Limpiamos las pantallas en caso se hizo un cierre de cesión.
+			while (Program.pantallas.Count > 0)
+			{
+				if(Program.pantallas.Last().Formulario != null) Program.pantallas.Last().Formulario.Close();
+				Program.pantallas.RemoveAt(Program.pantallas.Count - 1);				
+			}
 			if (cargo == 1)
 			{
 				btnHome.Text = "  VENDEDOR";
@@ -700,7 +706,7 @@ namespace CrewmanSystem
 
 		private void btnQuejaJefe_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmReporteQuejas(), false, false, false, false, false);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarQuejas(), true, false, true, false, false);
 		}
 
 		#endregion
