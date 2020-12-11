@@ -38,7 +38,7 @@
             this.btnReporte.FlatAppearance.BorderSize = 0;
             this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReporte.ForeColor = System.Drawing.Color.White;
-            this.btnReporte.Location = new System.Drawing.Point(180, 76);
+            this.btnReporte.Location = new System.Drawing.Point(26, 41);
             this.btnReporte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(317, 30);
