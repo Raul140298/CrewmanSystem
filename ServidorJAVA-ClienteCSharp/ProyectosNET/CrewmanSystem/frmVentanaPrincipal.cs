@@ -337,7 +337,6 @@ namespace CrewmanSystem
 		{
 			if (sender != null)
 			{
-				//MessageBox.Show(sender.Boton.Name + " " + sender.Tipo);
 				switch (sender.Tipo)
 				{
 					case BTNtipo.btnConPanel:
