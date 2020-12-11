@@ -771,6 +771,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReporteQuejasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReporteWS\ReporteWS.wsdl" />
+    <None Include="Connected Services\ReporteWS\ReporteWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Resources\ReporteQuejas2.png" />
     <None Include="Resources\reportePedidosXCliente2.png" />
     <None Include="Resources\reportePedidos2.png" />
@@ -1217,10 +1224,6 @@
     </None>
     <None Include="Connected Services\QuejaWS\QuejaWS.wsdl" />
     <None Include="Connected Services\QuejaWS\QuejaWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ReporteWS\ReporteWS.wsdl" />
-    <None Include="Connected Services\ReporteWS\ReporteWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\SubFamiliaWS\CrewmanSystem.SubFamiliaWS.actualizarSubFamiliaResponse.datasource">
