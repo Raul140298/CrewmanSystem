@@ -66,13 +66,13 @@ namespace CrewmanSystem
 				btnHome.Text = "  VENDEDOR";
 				pnlJefeDeVentas.Visible = false;
 				home.Formulario = new frmHomeVendedor();
-				
+
 			}
 			else if (cargo == 2)
 			{
 				btnHome.Text = "  JEFE DE VENTAS";
-				pnlEmpleado.Visible = false;	
-				home.Formulario = new frmHomeJefe();	
+				pnlEmpleado.Visible = false;
+				home.Formulario = new frmHomeJefe();
 			}
 			else
 			{
@@ -132,7 +132,7 @@ namespace CrewmanSystem
 
 		private void showSubMenu(Panel subMenu)
 		{
-			if(subMenu != null)
+			if (subMenu != null)
 			{
 				subMenu.Visible = true;
 			}
@@ -182,7 +182,7 @@ namespace CrewmanSystem
 			}
 		}
 
-		private void desactivaBotonesCabecera(bool n,bool a,bool e,bool b,bool f)
+		private void desactivaBotonesCabecera(bool n, bool a, bool e, bool b, bool f)
 		{
 			btnNuevo.Enabled = n;
 			btnActualizar.Enabled = a;
@@ -208,8 +208,8 @@ namespace CrewmanSystem
 			btnNuevo.Visible = n;
 
 			btnLeft.Visible = f;
-			btnRight.Visible = f;			
-			if(f == false) lblCountRows.Text = "";
+			btnRight.Visible = f;
+			if (f == false) lblCountRows.Text = "";
 		}
 
 		private void pintaBoton(IconButton senderBtn, Color color)
@@ -271,10 +271,10 @@ namespace CrewmanSystem
 						frmVentanaPrincipal.antBtn = 0;
 						if (Program.pantallas.Last().Tipo == BTNtipo.btnDePanel) DesactivaBoton(Program.pantallas.Last());//Desactivamos el anterior que sea de panel
 					}
-	
+
 					CreaPantalla(sender, padreb, panel, color, tipo, formulario);
 					Program.pantallas.Last().SetCabecera(n, a, e, b, false);
-					
+
 					//Activo lo que tiene que hacer ese botón y muestro su cabecera respectiva
 					ActivaBoton(Program.pantallas.Last());
 					ocultaBotonesCabecera(n, a, e, b, false);
@@ -299,7 +299,7 @@ namespace CrewmanSystem
 
 		private void ActivaBoton(CrewPantalla sender)
 		{
-			if(sender != null)
+			if (sender != null)
 			{
 				switch (sender.Tipo)
 				{
@@ -335,11 +335,11 @@ namespace CrewmanSystem
 
 		private void DesactivaBoton(CrewPantalla sender)
 		{
-			if(sender != null)
+			if (sender != null)
 			{
 				//MessageBox.Show(sender.Boton.Name + " " + sender.Tipo);
 				switch (sender.Tipo)
-				{	
+				{
 					case BTNtipo.btnConPanel:
 						hideSubMenu(sender.Panel);
 						despintaBoton(sender.Boton);
@@ -382,7 +382,7 @@ namespace CrewmanSystem
 
 		private void btnMaximizar_Click(object sender, EventArgs e)
 		{
-			if(this.WindowState == FormWindowState.Maximized)
+			if (this.WindowState == FormWindowState.Maximized)
 			{
 				this.WindowState = FormWindowState.Normal;
 				this.Size = anterior;
@@ -391,8 +391,8 @@ namespace CrewmanSystem
 			{
 				anterior = this.Size;
 				this.WindowState = FormWindowState.Maximized;
-			}	
-			
+			}
+
 		}
 
 		private void btnMinimizar_Click(object sender, EventArgs e)
@@ -478,13 +478,13 @@ namespace CrewmanSystem
 		{
 			string formulario = "";
 			if (Program.pantallas.Count < 1) return;
-			if(Program.pantallas.Last().Formulario != null) formulario = Program.pantallas.Last().Formulario.GetType().Name;
+			if (Program.pantallas.Last().Formulario != null) formulario = Program.pantallas.Last().Formulario.GetType().Name;
 			nBtn = boton;
 			switch (formulario)
-			{		
+			{
 				case "frmGestionarZonas":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaZona());
-					if(boton == 2 ) frmGestionarZonas.eliminar();
+					if (boton == 2) frmGestionarZonas.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarZona());
 					break;
 				case "frmGestionarVisitas":
@@ -497,7 +497,7 @@ namespace CrewmanSystem
 				case "frmGestionarRutas":
 					break;
 				case "frmGestionarQuejas":
-					if(boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaQueja());
+					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaQueja());
 					break;
 				case "frmGestionarPromociones":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaPromocion());
@@ -564,7 +564,7 @@ namespace CrewmanSystem
 					break;
 				case "frmGestionarCarteras":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaCartera());
-					if(boton==3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarCartera());
+					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarCartera());
 					break;
 				case "frmBuscarCartera":
 					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaCartera());
@@ -598,27 +598,27 @@ namespace CrewmanSystem
 		#region GESTIONPRODUCTOS
 		private void btnGestionProducto_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, null, pnlGestionProducto, Program.colorR, BTNtipo.btnConPanel, null,false, false, false, false, false);
+			ClickBoton((IconButton)sender, null, pnlGestionProducto, Program.colorR, BTNtipo.btnConPanel, null, false, false, false, false, false);
 		}
 
 		private void btnFamilia_Click(object sender, EventArgs e)
-		{			
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarFamilias(),true, true, true, false, false);
+		{
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarFamilias(), true, true, true, false, false);
 		}
 
 		private void btnSubfamilia_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarSubfamilias(),true, true, true, false, false);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarSubfamilias(), true, true, true, false, false);
 		}
 
 		private void btnProducto_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarProductos(),true, true, true, true, true);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarProductos(), true, true, true, true, true);
 		}
 
 		private void btnPromocion_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarPromociones(),true, true, true, true, true);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarPromociones(), true, true, true, true, true);
 		}
 
 		private void btnMarca_Click(object sender, EventArgs e)
@@ -630,17 +630,17 @@ namespace CrewmanSystem
 		#region GESTIONZONAS
 		private void btnGestionarZonas_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, null, pnlGestionZonas, Program.colorR, BTNtipo.btnConPanel, null,false, false, false, false, false);
+			ClickBoton((IconButton)sender, null, pnlGestionZonas, Program.colorR, BTNtipo.btnConPanel, null, false, false, false, false, false);
 		}
 
 		private void btnZona_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarZonas(),true, true, true, false, false);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarZonas(), true, true, true, false, false);
 		}
 
 		private void btnProductoXZona_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarProductosXZona(),true, false, false, true, true);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarProductosXZona(), true, false, false, true, true);
 		}
 
 		//private void btnPromocionXZona_Click(object sender, EventArgs e)
@@ -697,6 +697,11 @@ namespace CrewmanSystem
 		private void btnGuiaDeRemision_Click(object sender, EventArgs e)
 		{
 			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarGuiasRemision(), false, true, true, true, true);
+		}
+
+		private void btnQuejaJefe_Click(object sender, EventArgs e)
+		{
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmReporteQuejas(), false, false, false, false, false);
 		}
 
 		#endregion
@@ -778,7 +783,7 @@ namespace CrewmanSystem
 
 		private void btnEmpQuejas_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmReporteQuejas(),false,false, false, false, false);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarQuejas(),true,false, true, false, false);
 		}
 		#endregion
 
@@ -898,7 +903,6 @@ namespace CrewmanSystem
 
 
 
-        #endregion
-
-    }
+		#endregion
+	}
 }
