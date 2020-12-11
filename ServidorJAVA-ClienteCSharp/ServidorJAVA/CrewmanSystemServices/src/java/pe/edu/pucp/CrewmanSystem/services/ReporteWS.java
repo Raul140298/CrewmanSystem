@@ -122,10 +122,19 @@ public class ReporteWS
             rutaReporte = rutaReporte.replaceAll("%20", " ");
             JasperReport reporte= (JasperReport)JRLoader.loadObjectFromFile(rutaReporte);
             
+            String rutaSubReporte1 = ReportePedidos.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/Subreporte1.jasper").getPath();
+            rutaSubReporte1 = rutaSubReporte1.replaceAll("%20", " ");
+            
+            String rutaSubReporte2 = ReportePedidos.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/Subreporte2.jasper").getPath();
+            rutaSubReporte2 = rutaSubReporte2.replaceAll("%20", " ");
+            
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-                        
-            JasperPrint jp = JasperFillManager.fillReport(reporte, null, con);
+                
+            HashMap hm = new HashMap();
+            hm.put("RUTA_SUBREPORTE", rutaSubReporte1);
+            hm.put("RUTA_SUBREPORTE2", rutaSubReporte2);
+            JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
             
             con.close();
             arreglo = JasperExportManager.exportReportToPdf(jp);        
