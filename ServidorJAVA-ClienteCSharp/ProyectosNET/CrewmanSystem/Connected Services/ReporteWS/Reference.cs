@@ -15,6 +15,17 @@ namespace CrewmanSystem.ReporteWS {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.CrewmanSystem.pucp.edu.pe/", ConfigurationName="ReporteWS.ReporteWS")]
     public interface ReporteWS {
         
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento tipoCliente del espacio de nombres  no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosXCliente" +
+            "Request", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosXCliente" +
+            "Response")]
+        CrewmanSystem.ReporteWS.generarReportePedidosXClienteResponse generarReportePedidosXCliente(CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosXCliente" +
+            "Request", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosXCliente" +
+            "Response")]
+        System.Threading.Tasks.Task<CrewmanSystem.ReporteWS.generarReportePedidosXClienteResponse> generarReportePedidosXClienteAsync(CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequest request);
+        
         // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nombre del espacio de nombres  no está marcado para aceptar valores nil.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReporteMejoresClientes" +
             "Request", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReporteMejoresClientes" +
@@ -25,16 +36,6 @@ namespace CrewmanSystem.ReporteWS {
             "Request", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReporteMejoresClientes" +
             "Response")]
         System.Threading.Tasks.Task<CrewmanSystem.ReporteWS.generarReporteMejoresClientesResponse> generarReporteMejoresClientesAsync(CrewmanSystem.ReporteWS.generarReporteMejoresClientesRequest request);
-        
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el espacio de nombres de partes de mensaje () no coincide con el valor predeterminado (http://services.CrewmanSystem.pucp.edu.pe/).
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosResponse" +
-            "")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        CrewmanSystem.ReporteWS.generarReportePedidosResponse generarReportePedidos(CrewmanSystem.ReporteWS.generarReportePedidosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosResponse" +
-            "")]
-        System.Threading.Tasks.Task<CrewmanSystem.ReporteWS.generarReportePedidosResponse> generarReportePedidosAsync(CrewmanSystem.ReporteWS.generarReportePedidosRequest request);
         
         // CODEGEN: Se está generando un contrato de mensaje, ya que el espacio de nombres de partes de mensaje () no coincide con el valor predeterminado (http://services.CrewmanSystem.pucp.edu.pe/).
         [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReporteMejoresEmpleado" +
@@ -48,16 +49,87 @@ namespace CrewmanSystem.ReporteWS {
             "sResponse")]
         System.Threading.Tasks.Task<CrewmanSystem.ReporteWS.generarReporteMejoresEmpleadosResponse> generarReporteMejoresEmpleadosAsync(CrewmanSystem.ReporteWS.generarReporteMejoresEmpleadosRequest request);
         
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento tipoCliente del espacio de nombres  no está marcado para aceptar valores nil.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosXCliente" +
-            "Request", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosXCliente" +
-            "Response")]
-        CrewmanSystem.ReporteWS.generarReportePedidosXClienteResponse generarReportePedidosXCliente(CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequest request);
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el espacio de nombres de partes de mensaje () no coincide con el valor predeterminado (http://services.CrewmanSystem.pucp.edu.pe/).
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosResponse" +
+            "")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        CrewmanSystem.ReporteWS.generarReportePedidosResponse generarReportePedidos(CrewmanSystem.ReporteWS.generarReportePedidosRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosXCliente" +
-            "Request", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosXCliente" +
-            "Response")]
-        System.Threading.Tasks.Task<CrewmanSystem.ReporteWS.generarReportePedidosXClienteResponse> generarReportePedidosXClienteAsync(CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosRequest", ReplyAction="http://services.CrewmanSystem.pucp.edu.pe/ReporteWS/generarReportePedidosResponse" +
+            "")]
+        System.Threading.Tasks.Task<CrewmanSystem.ReporteWS.generarReportePedidosResponse> generarReportePedidosAsync(CrewmanSystem.ReporteWS.generarReportePedidosRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class generarReportePedidosXClienteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="generarReportePedidosXCliente", Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        public CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequestBody Body;
+        
+        public generarReportePedidosXClienteRequest() {
+        }
+        
+        public generarReportePedidosXClienteRequest(CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class generarReportePedidosXClienteRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string tipoCliente;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string estadoPedido;
+        
+        public generarReportePedidosXClienteRequestBody() {
+        }
+        
+        public generarReportePedidosXClienteRequestBody(string tipoCliente, string estadoPedido) {
+            this.tipoCliente = tipoCliente;
+            this.estadoPedido = estadoPedido;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class generarReportePedidosXClienteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="generarReportePedidosXClienteResponse", Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
+        public CrewmanSystem.ReporteWS.generarReportePedidosXClienteResponseBody Body;
+        
+        public generarReportePedidosXClienteResponse() {
+        }
+        
+        public generarReportePedidosXClienteResponse(CrewmanSystem.ReporteWS.generarReportePedidosXClienteResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
+    public partial class generarReportePedidosXClienteResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public byte[] @return;
+        
+        public generarReportePedidosXClienteResponseBody() {
+        }
+        
+        public generarReportePedidosXClienteResponseBody(byte[] @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -131,33 +203,6 @@ namespace CrewmanSystem.ReporteWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReportePedidos", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class generarReportePedidosRequest {
-        
-        public generarReportePedidosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReportePedidosResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
-    public partial class generarReportePedidosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
-        public byte[] @return;
-        
-        public generarReportePedidosResponse() {
-        }
-        
-        public generarReportePedidosResponse(byte[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="generarReporteMejoresEmpleados", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
     public partial class generarReporteMejoresEmpleadosRequest {
         
@@ -185,67 +230,26 @@ namespace CrewmanSystem.ReporteWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class generarReportePedidosXClienteRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReportePedidos", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class generarReportePedidosRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="generarReportePedidosXCliente", Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        public CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequestBody Body;
-        
-        public generarReportePedidosXClienteRequest() {
-        }
-        
-        public generarReportePedidosXClienteRequest(CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequestBody Body) {
-            this.Body = Body;
+        public generarReportePedidosRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class generarReportePedidosXClienteRequestBody {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="generarReportePedidosResponse", WrapperNamespace="http://services.CrewmanSystem.pucp.edu.pe/", IsWrapped=true)]
+    public partial class generarReportePedidosResponse {
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string tipoCliente;
-        
-        public generarReportePedidosXClienteRequestBody() {
-        }
-        
-        public generarReportePedidosXClienteRequestBody(string tipoCliente) {
-            this.tipoCliente = tipoCliente;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class generarReportePedidosXClienteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="generarReportePedidosXClienteResponse", Namespace="http://services.CrewmanSystem.pucp.edu.pe/", Order=0)]
-        public CrewmanSystem.ReporteWS.generarReportePedidosXClienteResponseBody Body;
-        
-        public generarReportePedidosXClienteResponse() {
-        }
-        
-        public generarReportePedidosXClienteResponse(CrewmanSystem.ReporteWS.generarReportePedidosXClienteResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="")]
-    public partial class generarReportePedidosXClienteResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
         public byte[] @return;
         
-        public generarReportePedidosXClienteResponseBody() {
+        public generarReportePedidosResponse() {
         }
         
-        public generarReportePedidosXClienteResponseBody(byte[] @return) {
+        public generarReportePedidosResponse(byte[] @return) {
             this.@return = @return;
         }
     }
@@ -278,6 +282,33 @@ namespace CrewmanSystem.ReporteWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CrewmanSystem.ReporteWS.generarReportePedidosXClienteResponse CrewmanSystem.ReporteWS.ReporteWS.generarReportePedidosXCliente(CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequest request) {
+            return base.Channel.generarReportePedidosXCliente(request);
+        }
+        
+        public byte[] generarReportePedidosXCliente(string tipoCliente, string estadoPedido) {
+            CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequest inValue = new CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequest();
+            inValue.Body = new CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequestBody();
+            inValue.Body.tipoCliente = tipoCliente;
+            inValue.Body.estadoPedido = estadoPedido;
+            CrewmanSystem.ReporteWS.generarReportePedidosXClienteResponse retVal = ((CrewmanSystem.ReporteWS.ReporteWS)(this)).generarReportePedidosXCliente(inValue);
+            return retVal.Body.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CrewmanSystem.ReporteWS.generarReportePedidosXClienteResponse> CrewmanSystem.ReporteWS.ReporteWS.generarReportePedidosXClienteAsync(CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequest request) {
+            return base.Channel.generarReportePedidosXClienteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CrewmanSystem.ReporteWS.generarReportePedidosXClienteResponse> generarReportePedidosXClienteAsync(string tipoCliente, string estadoPedido) {
+            CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequest inValue = new CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequest();
+            inValue.Body = new CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequestBody();
+            inValue.Body.tipoCliente = tipoCliente;
+            inValue.Body.estadoPedido = estadoPedido;
+            return ((CrewmanSystem.ReporteWS.ReporteWS)(this)).generarReportePedidosXClienteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CrewmanSystem.ReporteWS.generarReporteMejoresClientesResponse CrewmanSystem.ReporteWS.ReporteWS.generarReporteMejoresClientes(CrewmanSystem.ReporteWS.generarReporteMejoresClientesRequest request) {
             return base.Channel.generarReporteMejoresClientes(request);
         }
@@ -303,27 +334,6 @@ namespace CrewmanSystem.ReporteWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.ReporteWS.generarReportePedidosResponse CrewmanSystem.ReporteWS.ReporteWS.generarReportePedidos(CrewmanSystem.ReporteWS.generarReportePedidosRequest request) {
-            return base.Channel.generarReportePedidos(request);
-        }
-        
-        public byte[] generarReportePedidos() {
-            CrewmanSystem.ReporteWS.generarReportePedidosRequest inValue = new CrewmanSystem.ReporteWS.generarReportePedidosRequest();
-            CrewmanSystem.ReporteWS.generarReportePedidosResponse retVal = ((CrewmanSystem.ReporteWS.ReporteWS)(this)).generarReportePedidos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.ReporteWS.generarReportePedidosResponse> CrewmanSystem.ReporteWS.ReporteWS.generarReportePedidosAsync(CrewmanSystem.ReporteWS.generarReportePedidosRequest request) {
-            return base.Channel.generarReportePedidosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CrewmanSystem.ReporteWS.generarReportePedidosResponse> generarReportePedidosAsync() {
-            CrewmanSystem.ReporteWS.generarReportePedidosRequest inValue = new CrewmanSystem.ReporteWS.generarReportePedidosRequest();
-            return ((CrewmanSystem.ReporteWS.ReporteWS)(this)).generarReportePedidosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         CrewmanSystem.ReporteWS.generarReporteMejoresEmpleadosResponse CrewmanSystem.ReporteWS.ReporteWS.generarReporteMejoresEmpleados(CrewmanSystem.ReporteWS.generarReporteMejoresEmpleadosRequest request) {
             return base.Channel.generarReporteMejoresEmpleados(request);
         }
@@ -345,28 +355,24 @@ namespace CrewmanSystem.ReporteWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CrewmanSystem.ReporteWS.generarReportePedidosXClienteResponse CrewmanSystem.ReporteWS.ReporteWS.generarReportePedidosXCliente(CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequest request) {
-            return base.Channel.generarReportePedidosXCliente(request);
+        CrewmanSystem.ReporteWS.generarReportePedidosResponse CrewmanSystem.ReporteWS.ReporteWS.generarReportePedidos(CrewmanSystem.ReporteWS.generarReportePedidosRequest request) {
+            return base.Channel.generarReportePedidos(request);
         }
         
-        public byte[] generarReportePedidosXCliente(string tipoCliente) {
-            CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequest inValue = new CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequest();
-            inValue.Body = new CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequestBody();
-            inValue.Body.tipoCliente = tipoCliente;
-            CrewmanSystem.ReporteWS.generarReportePedidosXClienteResponse retVal = ((CrewmanSystem.ReporteWS.ReporteWS)(this)).generarReportePedidosXCliente(inValue);
-            return retVal.Body.@return;
+        public byte[] generarReportePedidos() {
+            CrewmanSystem.ReporteWS.generarReportePedidosRequest inValue = new CrewmanSystem.ReporteWS.generarReportePedidosRequest();
+            CrewmanSystem.ReporteWS.generarReportePedidosResponse retVal = ((CrewmanSystem.ReporteWS.ReporteWS)(this)).generarReportePedidos(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CrewmanSystem.ReporteWS.generarReportePedidosXClienteResponse> CrewmanSystem.ReporteWS.ReporteWS.generarReportePedidosXClienteAsync(CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequest request) {
-            return base.Channel.generarReportePedidosXClienteAsync(request);
+        System.Threading.Tasks.Task<CrewmanSystem.ReporteWS.generarReportePedidosResponse> CrewmanSystem.ReporteWS.ReporteWS.generarReportePedidosAsync(CrewmanSystem.ReporteWS.generarReportePedidosRequest request) {
+            return base.Channel.generarReportePedidosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CrewmanSystem.ReporteWS.generarReportePedidosXClienteResponse> generarReportePedidosXClienteAsync(string tipoCliente) {
-            CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequest inValue = new CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequest();
-            inValue.Body = new CrewmanSystem.ReporteWS.generarReportePedidosXClienteRequestBody();
-            inValue.Body.tipoCliente = tipoCliente;
-            return ((CrewmanSystem.ReporteWS.ReporteWS)(this)).generarReportePedidosXClienteAsync(inValue);
+        public System.Threading.Tasks.Task<CrewmanSystem.ReporteWS.generarReportePedidosResponse> generarReportePedidosAsync() {
+            CrewmanSystem.ReporteWS.generarReportePedidosRequest inValue = new CrewmanSystem.ReporteWS.generarReportePedidosRequest();
+            return ((CrewmanSystem.ReporteWS.ReporteWS)(this)).generarReportePedidosAsync(inValue);
         }
     }
 }

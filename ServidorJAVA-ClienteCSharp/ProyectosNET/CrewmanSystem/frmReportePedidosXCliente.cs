@@ -15,12 +15,14 @@ namespace CrewmanSystem
     {
         private ReporteWS.ReporteWSClient daoReporte;
         private String[] tipos = {"CUALQUIERA","ALTO","MEDIO","BAJO"};
+        private String[] estados = { "CUALQUIERA", "EN_PROCESO", "FINALIZADO", "CANCELADO" };
 
         public frmReportePedidosXCliente()
         {
             daoReporte = new ReporteWS.ReporteWSClient();
             InitializeComponent();
             cboTipoCliente.DataSource = tipos;
+            cboEstado.DataSource = estados;
         }
 
         private void btnReportePedidos_Click(object sender, EventArgs e)
@@ -48,10 +50,18 @@ namespace CrewmanSystem
                 try
                 {
                     byte[] arreglo;
+                    String tipo;
+                    String estado;
                     if (cboTipoCliente.SelectedItem.ToString() == "CUALQUIERA")
-                        arreglo = daoReporte.generarReportePedidosXCliente("");
+                        tipo = "";
                     else
-                        arreglo = daoReporte.generarReportePedidosXCliente(cboTipoCliente.SelectedItem.ToString());
+                        tipo = cboTipoCliente.SelectedItem.ToString();
+
+                    if (cboEstado.SelectedItem.ToString() == "CUALQUIERA")
+                        estado = "";
+                    else
+                        estado = cboEstado.SelectedItem.ToString();
+                    arreglo = daoReporte.generarReportePedidosXCliente(tipo,estado);
                     File.WriteAllBytes(sfdReportePedidosXCliente.FileName, arreglo);
                     MessageBox.Show("El reporte fue generado con exito", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
