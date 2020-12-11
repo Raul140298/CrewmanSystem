@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b9c12856-db3c-41b3-8972-9fdd562751b7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="07866e40-77a6-4535-8bea-ca2b65ee8a43" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://54.80.91.225:8080/CrewmanSystemServices/QuejaWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="QuejaWS.xsd" MetadataType="Schema" ID="15d8785d-4096-4330-97fc-851d76b611ed" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/QuejaWS?xsd=1" />
-    <MetadataFile FileName="QuejaWS.wsdl" MetadataType="Wsdl" ID="52b1aeda-750b-41ca-ba51-67cd525d538e" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/QuejaWS?WSDL" />
+    <MetadataFile FileName="QuejaWS.xsd" MetadataType="Schema" ID="7616fa1a-afcc-4cb1-b305-65c0880088f0" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/QuejaWS?xsd=1" />
+    <MetadataFile FileName="QuejaWS.wsdl" MetadataType="Wsdl" ID="816186c4-166e-4ffd-b88d-e4d7b9a4e0cb" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/QuejaWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

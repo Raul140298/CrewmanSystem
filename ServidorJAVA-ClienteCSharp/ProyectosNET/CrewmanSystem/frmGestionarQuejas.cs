@@ -17,16 +17,19 @@ namespace CrewmanSystem
 		{
 			daoQueja = new QuejaWS.QuejaWSClient();
 			InitializeComponent();
+			
 			dgvQuejas.AutoGenerateColumns = false;
-			QuejaWS.queja[] misQuejas = daoQueja.listarQuejas(Program.empleado.idEmpleado); //Aqui debe ir un id
+			QuejaWS.queja[] misQuejas = daoQueja.listarQuejas(Program.empleado.idEmpleado); 
 			if (misQuejas != null)
-			{
 				dgvQuejas.DataSource = new BindingList<QuejaWS.queja>(misQuejas.ToArray());
-			}
 			else
-			{
 				dgvQuejas.DataSource = new BindingList<QuejaWS.queja>();
 
+			if (Program.empleado.cargo.nombre == "VENDEDOR")
+			{
+				dgvQuejas.Columns["NOMBRE"].Visible = false;
+				dgvQuejas.Columns["APELLIDO_PATERNO"].Visible = false;
+				dgvQuejas.Columns["APELLIDO_MATERNO"].Visible = false;
 			}
 
 			#region colores de seleccion
@@ -43,10 +46,21 @@ namespace CrewmanSystem
 
 		private void dgvQuejas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
 		{
-			QuejaWS.queja queja = dgvQuejas.Rows[e.RowIndex].DataBoundItem
-											as QuejaWS.queja;
+			try
+			{
+				QuejaWS.queja queja = dgvQuejas.Rows[e.RowIndex].DataBoundItem
+				as QuejaWS.queja;
 
-			dgvQuejas.Rows[e.RowIndex].Cells["ID_PEDIDO"].Value = queja.pedido.idPedido;
+				dgvQuejas.Rows[e.RowIndex].Cells["ID_PEDIDO"].Value = queja.pedido.idPedido;
+				dgvQuejas.Rows[e.RowIndex].Cells["RUC"].Value = queja.pedido.cliente.ruc;
+				dgvQuejas.Rows[e.RowIndex].Cells["RAZON_SOCIAL"].Value = queja.pedido.cliente.razonSocial;
+				dgvQuejas.Rows[e.RowIndex].Cells["GRUPO"].Value = queja.pedido.cliente.grupo;
+				dgvQuejas.Rows[e.RowIndex].Cells["TIPO_CLIENTE"].Value = queja.pedido.cliente.tipoEmpresa;
+				dgvQuejas.Rows[e.RowIndex].Cells["NOMBRE"].Value = queja.pedido.empleado.nombre;
+				dgvQuejas.Rows[e.RowIndex].Cells["APELLIDO_PATERNO"].Value = queja.pedido.empleado.apellidoPaterno;
+				dgvQuejas.Rows[e.RowIndex].Cells["APELLIDO_MATERNO"].Value = queja.pedido.empleado.apellidoMaterno;
+			}
+			catch (Exception) { }
 		}
 	}
 }

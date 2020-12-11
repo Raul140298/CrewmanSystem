@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.TimeZone;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import pe.edu.pucp.CrewmanSystem.dao.*;
@@ -65,10 +66,10 @@ public class Main{
 //        gestionarPromocionXProducto();
 //        gestionarPedidos();
 //        gestionarLineasDePedido();
-        gestionarFacturas();
+//        gestionarFacturas();
 //        gestionarNotasDeCredito();
 //        gestionarGuiasDeRemision();
-//        gestionarQuejas();
+        gestionarQuejas();
 
 //        misZonas = daoZona.listar();
 //        Promocion promo = new Promocion();
@@ -204,6 +205,7 @@ public class Main{
 //        Empleado miEmpleado = daoEmpleado.permitirAccesoEmpleado("rauljl1", "rauljl1");
 //        miEmpleado.getZona().setIdZona(140);
 //        miEmpleado.setFoto(foto);
+        TimeZone.setDefault(TimeZone.getTimeZone("GMT-5"));
         System.out.println(new Date());
         System.out.println(new java.sql.Date(new Date().getTime()));
         System.out.println("");
@@ -731,13 +733,11 @@ public class Main{
     
     private static void gestionarQuejas(){
         //misPedidos=daoPedido.listar();
-        Queja queja1= new Queja(misPedidos.get(0),"El pedido llego retrasado");
+//        Queja queja1= new Queja(misPedidos.get(0),"El pedido llego retrasado");
 //        daoQueja.insertar(queja1);
-        misQuejas = daoQueja.listar(misPedidos.get(0).getIdPedido());
-        System.out.println("LISTADO DE QUEJAS DEL PEDIDO "+misPedidos.get(0).getIdPedido());
-        System.out.println("==================================================================================");
+        misQuejas = daoQueja.listar(25);
         for(Queja p:misQuejas) 
-            System.out.println(p.getIdQueja()+ " - "+p.getDescripcion()+" - "+p.getFechaCreacion());
+            System.out.println(p.getIdQueja()+ " - "+p.getDescripcion()+" - "+p.getFechaCreacion()+" - "+p.getPedido().getCliente().getRazonSocial()+" - "+p.getPedido().getEmpleado().getNombre());
         System.out.println("\n");
     }
 

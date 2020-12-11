@@ -8,7 +8,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import pe.edu.pucp.CrewmanSystem.dao.EmpleadoDAO;
+import pe.edu.pucp.CrewmanSystem.model.Cliente;
+import pe.edu.pucp.CrewmanSystem.model.Empleado;
+import pe.edu.pucp.CrewmanSystem.model.EstadoPedido;
 import pe.edu.pucp.CrewmanSystem.model.Pedido;
+import pe.edu.pucp.CrewmanSystem.model.Persona;
+import pe.edu.pucp.CrewmanSystem.model.TipoPedido;
 
 public class QuejaMySQL implements QuejaDAO{
     Connection con;
@@ -90,6 +96,7 @@ public class QuejaMySQL implements QuejaDAO{
     @Override
     public ArrayList<Queja>listar(int idVendedor)
     {
+        EmpleadoDAO daoEmpleado = new EmpleadoMySQL();
         ArrayList<Queja> quejas = new ArrayList<>();
         try{    
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -102,12 +109,31 @@ public class QuejaMySQL implements QuejaDAO{
             while(rs.next()){
                 Queja queja = new Queja();
                 Pedido pedido = new Pedido();
+                Cliente cliente = new Cliente();
+                Empleado vendedor = new Empleado();
+                Persona persona = new Persona();
                 
                 queja.setIdQueja(rs.getInt("ID_QUEJA"));
                 
                 pedido.setIdPedido(rs.getInt("ID_PEDIDO"));
-                queja.setPedido(pedido);
+                pedido.setMontoTotal(rs.getDouble("MONTO_TOTAL"));
+                pedido.setMontoPagar(rs.getDouble("MONTO_PAGAR"));
+                pedido.setTipoPedido(TipoPedido.valueOf(rs.getString("TIPO_PEDIDO")));
+                pedido.setEstadoPedido(EstadoPedido.valueOf(rs.getString("ESTADO_PEDIDO")));
                 
+                cliente.setIdCliente(rs.getInt("ID_CLIENTE"));
+                cliente.setRuc(rs.getString("RUC"));
+                cliente.setRazonSocial(rs.getString("RAZON_SOCIAL"));
+                cliente.setGrupo(rs.getString("GRUPO"));
+                cliente.setTipoEmpresa(rs.getString("TIPOCLIENTE"));
+                cliente.setDireccion(rs.getString("DIRECCION"));
+                pedido.setCliente(cliente);
+                
+                vendedor.setIdEmpleado(rs.getInt("ID_EMPLEADO"));
+                daoEmpleado.obtenerEmpleado(vendedor);
+                pedido.setEmpleado(vendedor);
+                
+                queja.setPedido(pedido);
                 queja.setDescripcion(rs.getString("DESCRIPCION"));
                 queja.setFechaCreacion(rs.getDate("FECHA_CREACION"));
                 quejas.add(queja);
