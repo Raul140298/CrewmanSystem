@@ -11,25 +11,26 @@ using System.Windows.Forms;
 
 namespace CrewmanSystem
 {
-	public partial class frmReporteMejoresEmpleados : Form
-	{
+    public partial class frmReporteMejoresClientes : Form
+    {
         private ReporteWS.ReporteWSClient daoReporte;
 
-        public frmReporteMejoresEmpleados()
-		{
-			InitializeComponent();
+        public frmReporteMejoresClientes()
+        {
+            InitializeComponent();
             daoReporte = new ReporteWS.ReporteWSClient();
         }
 
-        private void btnGenerar_Click(object sender, EventArgs e)
+        private void btnReporte_Click(object sender, EventArgs e)
         {
             if (sfdReporte.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
-                    byte[] arreglo = daoReporte.generarReporteMejoresEmpleados();
+                    string nombre = Program.empleado.nombre + " " + Program.empleado.apellidoPaterno + " " + Program.empleado.apellidoMaterno;
+                    byte[] arreglo = daoReporte.generarReporteMejoresClientes(nombre);
                     File.WriteAllBytes(sfdReporte.FileName, arreglo);
-                    MessageBox.Show("El reporte fue generado con exito", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("El reporte fue generado con exito", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception)
                 {

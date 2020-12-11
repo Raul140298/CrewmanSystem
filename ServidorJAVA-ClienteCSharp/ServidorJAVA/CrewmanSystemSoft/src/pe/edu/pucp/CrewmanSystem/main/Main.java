@@ -204,7 +204,8 @@ public class Main{
 //        Empleado miEmpleado = daoEmpleado.permitirAccesoEmpleado("rauljl1", "rauljl1");
 //        miEmpleado.getZona().setIdZona(140);
 //        miEmpleado.setFoto(foto);
-        
+        System.out.println(new Date());
+        System.out.println(new java.sql.Date(new Date().getTime()));
         System.out.println("");
     }
     

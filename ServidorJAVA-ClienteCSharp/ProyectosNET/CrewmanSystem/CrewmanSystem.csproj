@@ -513,11 +513,11 @@
     <Compile Include="frmPerfil.Designer.cs">
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReporteClientes.cs">
+    <Compile Include="frmReporteMejoresClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReporteClientes.Designer.cs">
-      <DependentUpon>frmReporteClientes.cs</DependentUpon>
+    <Compile Include="frmReporteMejoresClientes.Designer.cs">
+      <DependentUpon>frmReporteMejoresClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="frmReporteMejoresEmpleados.cs">
       <SubType>Form</SubType>
@@ -737,8 +737,8 @@
     <EmbeddedResource Include="frmPerfil.resx">
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReporteClientes.resx">
-      <DependentUpon>frmReporteClientes.cs</DependentUpon>
+    <EmbeddedResource Include="frmReporteMejoresClientes.resx">
+      <DependentUpon>frmReporteMejoresClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReporteMejoresEmpleados.resx">
       <DependentUpon>frmReporteMejoresEmpleados.cs</DependentUpon>
