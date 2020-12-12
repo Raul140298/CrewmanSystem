@@ -13,14 +13,17 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarQuejas : Form
 	{
-		private QuejaWS.QuejaWSClient daoQueja;
+		public static QuejaWS.QuejaWSClient daoQueja;
 		private ReporteWS.ReporteWSClient daoReporte;
+		public static DataGridView dgv;
+		public static QuejaWS.queja quejaSeleccionada;
 
 		public frmGestionarQuejas()
 		{
 			daoQueja = new QuejaWS.QuejaWSClient();
 			daoReporte = new ReporteWS.ReporteWSClient();
 			InitializeComponent();
+			dgv = dgvQuejas;
 
 			if (Program.empleado.cargo.idCargo == 1)
 			{
@@ -87,6 +90,34 @@ namespace CrewmanSystem
 				dgvQuejas.Rows[e.RowIndex].Cells["APELLIDO_MATERNO"].Value = queja.pedido.empleado.apellidoMaterno;
 			}
 			catch (Exception) { }
+		}
+
+		public static void eliminar()
+		{
+			quejaSeleccionada = (QuejaWS.queja)dgv.CurrentRow.DataBoundItem;
+			daoQueja.eliminarQueja(quejaSeleccionada.idQueja);
+		}
+
+		private void dgvQuejas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			frmVentanaPrincipal.act.Enabled = false;
+			frmVentanaPrincipal.elim.Enabled = false;
+		}
+
+		private void dgvQuejas_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+		{
+			//Preguntar al profe
+			if (e.StateChanged != DataGridViewElementStates.Selected)
+			{
+				//frmVentanaPrincipal.act.Enabled = false;
+				//frmVentanaPrincipal.elim.Enabled = false;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+			}
 		}
 	}
 }
