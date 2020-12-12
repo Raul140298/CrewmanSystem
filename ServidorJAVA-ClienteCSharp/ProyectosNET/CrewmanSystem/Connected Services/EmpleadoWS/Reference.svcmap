@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7cf5c7f0-e596-472d-9eac-3a43aa082deb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="def1289e-8df4-4804-b40e-9fccd73ceac8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://54.80.91.225:8080/CrewmanSystemServices/EmpleadoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EmpleadoWS.xsd" MetadataType="Schema" ID="d5fee1eb-8427-499a-8655-f7001c81c0df" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/EmpleadoWS?xsd=1" />
-    <MetadataFile FileName="EmpleadoWS.wsdl" MetadataType="Wsdl" ID="e2fb8ab4-21bd-4091-b3dd-17deb2bd26f5" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/EmpleadoWS?WSDL" />
+    <MetadataFile FileName="EmpleadoWS.xsd" MetadataType="Schema" ID="857f334d-4646-4162-874f-f7d10a5740fb" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/EmpleadoWS?xsd=1" />
+    <MetadataFile FileName="EmpleadoWS.wsdl" MetadataType="Wsdl" ID="6084c628-ff9f-4480-9bc9-ba007aef45e4" SourceId="1" SourceUrl="http://54.80.91.225:8080/CrewmanSystemServices/EmpleadoWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

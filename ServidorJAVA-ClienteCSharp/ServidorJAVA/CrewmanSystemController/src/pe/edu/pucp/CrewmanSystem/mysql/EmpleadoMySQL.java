@@ -51,8 +51,11 @@ public class EmpleadoMySQL implements EmpleadoDAO{
                 
                 if(empleado.getZona().getIdZona()>0){
                     EmpleadoXZonaDAO daoEmpleadoXZona = new EmpleadoXZonaMySQL();
-                    EmpleadoXZona exz = new EmpleadoXZona(empleado.getZona(), empleado);
-                    daoEmpleadoXZona.insertar(exz);
+                    EmpleadoXZona exz = new EmpleadoXZona();
+                    exz.setZona(empleado.getZona());
+                    exz.setEmpleado(empleado);
+                    int resultadoZona = daoEmpleadoXZona.insertar(exz);
+                    if(resultadoZona==0) return 0;
                 }
             }
             else{
@@ -67,9 +70,9 @@ public class EmpleadoMySQL implements EmpleadoDAO{
                 resultado=cs.getInt("_ID_EMPLEADO");
                 
                 if(empleado.getZona().getIdZona()>0){
-                EmpleadoXZonaDAO daoEmpleadoXZona = new EmpleadoXZonaMySQL();
-                EmpleadoXZona exz = new EmpleadoXZona(empleado.getZona(), empleado);
-                daoEmpleadoXZona.insertar(exz);
+                    EmpleadoXZonaDAO daoEmpleadoXZona = new EmpleadoXZonaMySQL();
+                    EmpleadoXZona exz = new EmpleadoXZona(empleado.getZona(), empleado);
+                    daoEmpleadoXZona.insertar(exz);
                 }
             }
             empleado.setIdEmpleado(resultado);
