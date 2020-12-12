@@ -22,12 +22,7 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgv = dgvCarteras;
 			dgvCarteras.AutoGenerateColumns = false;
-			EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado, "", "", "");
-
-			if (misEmpleados != null)
-				dgvCarteras.DataSource = new BindingList<EmpleadoWS.empleado>(misEmpleados.ToArray());
-			else
-				dgvCarteras.DataSource = new BindingList<EmpleadoWS.empleado>();
+			
 			#region colores de seleccion
 			dgvCarteras.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dgvCarteras.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
@@ -69,5 +64,14 @@ namespace CrewmanSystem
 				frmVentanaPrincipal.elim.Enabled = true;
 			}
 		}
-    }
+		public void recargarDGV()
+		{
+			EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado, "", "", "");
+
+			if (misEmpleados != null)
+				dgvCarteras.DataSource = new BindingList<EmpleadoWS.empleado>(misEmpleados.ToArray());
+			else
+				dgvCarteras.DataSource = new BindingList<EmpleadoWS.empleado>();
+		}
+	}
 }

@@ -581,7 +581,7 @@ namespace CrewmanSystem
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoEmpleado());
 					if (boton == 2) frmGestionarEmpleados.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarEmpleado());
-					//if (boton == 4) ((frmGestionarEmpleados)Program.pantallas.Last().Formulario).recargarDGV();
+					if (boton == 4) ((frmGestionarEmpleados)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmBuscarEmpleado":
 					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoEmpleado());
@@ -589,7 +589,7 @@ namespace CrewmanSystem
 				case "frmGestionarCarteras":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaCartera());
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarCartera());
-					//if (boton == 4) ((frmGestionarCarteras)Program.pantallas.Last().Formulario).recargarDGV();
+					if (boton == 4) ((frmGestionarCarteras)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmBuscarCartera":
 					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaCartera());
@@ -598,7 +598,7 @@ namespace CrewmanSystem
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoCliente());
 					if (boton == 2) frmGestionarClientes.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarCliente());
-					//if (boton == 4) ((frmGestionarClientes)Program.pantallas.Last().Formulario).recargarDGV();
+					if (boton == 4) ((frmGestionarClientes)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmBuscarCliente":
 					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoCliente());
