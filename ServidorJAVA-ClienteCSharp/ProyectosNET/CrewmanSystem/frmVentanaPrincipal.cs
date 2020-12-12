@@ -869,7 +869,7 @@ namespace CrewmanSystem
 			estado = BTNestado.nuevo;
 			estadoBotones();
 			llamarMetodosDAO((IconButton)sender, 0);
-			//llamarMetodosDAO(null, 4);
+			llamarMetodosDAO(null, 4);
 		}
 
 		private void btnActualizar_Click(object sender, EventArgs e)
