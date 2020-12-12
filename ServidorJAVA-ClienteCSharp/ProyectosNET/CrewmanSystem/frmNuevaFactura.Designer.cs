@@ -103,14 +103,16 @@
             // 
             // txtMonto
             // 
+            this.txtMonto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMonto.Location = new System.Drawing.Point(244, 153);
             this.txtMonto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMonto.Name = "txtMonto";
-            this.txtMonto.Size = new System.Drawing.Size(154, 22);
+            this.txtMonto.Size = new System.Drawing.Size(154, 15);
             this.txtMonto.TabIndex = 91;
             // 
             // txtObservacion
             // 
+            this.txtObservacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtObservacion.Location = new System.Drawing.Point(244, 198);
             this.txtObservacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtObservacion.Multiline = true;
@@ -129,11 +131,12 @@
             // txtImpuestos
             // 
             this.txtImpuestos.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtImpuestos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtImpuestos.Enabled = false;
             this.txtImpuestos.Location = new System.Drawing.Point(244, 372);
             this.txtImpuestos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtImpuestos.Name = "txtImpuestos";
-            this.txtImpuestos.Size = new System.Drawing.Size(154, 22);
+            this.txtImpuestos.Size = new System.Drawing.Size(154, 15);
             this.txtImpuestos.TabIndex = 94;
             // 
             // label2
@@ -189,19 +192,21 @@
             // txtIdPedido
             // 
             this.txtIdPedido.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtIdPedido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdPedido.Enabled = false;
             this.txtIdPedido.Location = new System.Drawing.Point(244, 68);
             this.txtIdPedido.Name = "txtIdPedido";
-            this.txtIdPedido.Size = new System.Drawing.Size(97, 22);
+            this.txtIdPedido.Size = new System.Drawing.Size(97, 15);
             this.txtIdPedido.TabIndex = 101;
             // 
             // txtMontoPendiente
             // 
             this.txtMontoPendiente.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtMontoPendiente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMontoPendiente.Enabled = false;
             this.txtMontoPendiente.Location = new System.Drawing.Point(244, 110);
             this.txtMontoPendiente.Name = "txtMontoPendiente";
-            this.txtMontoPendiente.Size = new System.Drawing.Size(154, 22);
+            this.txtMontoPendiente.Size = new System.Drawing.Size(154, 15);
             this.txtMontoPendiente.TabIndex = 103;
             // 
             // label7
@@ -217,6 +222,7 @@
             // cboEstadoPagar
             // 
             this.cboEstadoPagar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEstadoPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboEstadoPagar.FormattingEnabled = true;
             this.cboEstadoPagar.Location = new System.Drawing.Point(547, 153);
             this.cboEstadoPagar.Name = "cboEstadoPagar";
@@ -246,16 +252,18 @@
             // txtIdFactura
             // 
             this.txtIdFactura.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtIdFactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdFactura.Enabled = false;
             this.txtIdFactura.Location = new System.Drawing.Point(244, 30);
             this.txtIdFactura.Name = "txtIdFactura";
-            this.txtIdFactura.Size = new System.Drawing.Size(97, 22);
+            this.txtIdFactura.Size = new System.Drawing.Size(97, 15);
             this.txtIdFactura.TabIndex = 107;
             // 
             // frmNuevaFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(800, 534);
             this.Controls.Add(this.txtIdFactura);
             this.Controls.Add(this.label9);

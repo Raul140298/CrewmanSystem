@@ -45,11 +45,12 @@
             // txtIdGuiaRemision
             // 
             this.txtIdGuiaRemision.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtIdGuiaRemision.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdGuiaRemision.Enabled = false;
             this.txtIdGuiaRemision.Location = new System.Drawing.Point(251, 33);
             this.txtIdGuiaRemision.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdGuiaRemision.Name = "txtIdGuiaRemision";
-            this.txtIdGuiaRemision.Size = new System.Drawing.Size(97, 22);
+            this.txtIdGuiaRemision.Size = new System.Drawing.Size(97, 15);
             this.txtIdGuiaRemision.TabIndex = 112;
             // 
             // label9
@@ -65,11 +66,12 @@
             // txtIdPedido
             // 
             this.txtIdPedido.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtIdPedido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdPedido.Enabled = false;
             this.txtIdPedido.Location = new System.Drawing.Point(251, 70);
             this.txtIdPedido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdPedido.Name = "txtIdPedido";
-            this.txtIdPedido.Size = new System.Drawing.Size(97, 22);
+            this.txtIdPedido.Size = new System.Drawing.Size(97, 15);
             this.txtIdPedido.TabIndex = 110;
             // 
             // btnBuscarPedido
@@ -80,7 +82,7 @@
             this.btnBuscarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarPedido.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnBuscarPedido.Location = new System.Drawing.Point(375, 73);
-            this.btnBuscarPedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarPedido.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarPedido.Name = "btnBuscarPedido";
             this.btnBuscarPedido.Padding = new System.Windows.Forms.Padding(3, 0, 0, 1);
             this.btnBuscarPedido.Size = new System.Drawing.Size(35, 22);
@@ -111,10 +113,11 @@
             // 
             // txtMotivoTraslado
             // 
+            this.txtMotivoTraslado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMotivoTraslado.Location = new System.Drawing.Point(251, 127);
             this.txtMotivoTraslado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMotivoTraslado.Name = "txtMotivoTraslado";
-            this.txtMotivoTraslado.Size = new System.Drawing.Size(263, 22);
+            this.txtMotivoTraslado.Size = new System.Drawing.Size(263, 15);
             this.txtMotivoTraslado.TabIndex = 114;
             // 
             // label4
@@ -172,6 +175,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(628, 425);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label4);
@@ -185,7 +189,7 @@
             this.Controls.Add(this.txtIdPedido);
             this.Controls.Add(this.btnBuscarPedido);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmNuevaGuiaRemision";
             this.Text = "frmNuevaGuiaRemision";
             this.ResumeLayout(false);

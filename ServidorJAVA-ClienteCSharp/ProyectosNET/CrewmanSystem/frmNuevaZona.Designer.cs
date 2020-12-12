@@ -41,6 +41,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel2.Controls.Add(this.btnGuardar);
             this.panel2.Controls.Add(this.txtNombre);
             this.panel2.Controls.Add(this.txtId);
@@ -66,22 +67,25 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Location = new System.Drawing.Point(6, 79);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(280, 22);
+            this.txtNombre.Size = new System.Drawing.Size(280, 15);
             this.txtNombre.TabIndex = 18;
             // 
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(6, 38);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(80, 22);
+            this.txtId.Size = new System.Drawing.Size(80, 15);
             this.txtId.TabIndex = 17;
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblID);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
