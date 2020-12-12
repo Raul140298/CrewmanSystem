@@ -15,6 +15,7 @@ namespace CrewmanSystem
 		public static MarcaWS.MarcaWSClient daoMarca;
 		public static MarcaWS.marca marcaSeleccionada;
 		public static DataGridView dgv;
+		public MarcaWS.marca[] misMarcas;
 
 		public frmGestionarMarcas()
 		{
@@ -22,7 +23,7 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgv = dataGridView1;
 			dataGridView1.AutoGenerateColumns = false;
-			MarcaWS.marca[] misMarcas = daoMarca.listarMarcas();
+			misMarcas = daoMarca.listarMarcas();
 			if (misMarcas != null)
 			{
 				dataGridView1.DataSource = new BindingList<MarcaWS.marca>(misMarcas.ToArray());
@@ -71,6 +72,20 @@ namespace CrewmanSystem
 		{
 			marcaSeleccionada = (MarcaWS.marca)dgv.CurrentRow.DataBoundItem;
 			daoMarca.eliminarMarca(marcaSeleccionada.idMarca);
+		}
+
+		public void recargarDGV()
+		{
+			misMarcas = daoMarca.listarMarcas();
+			if (misMarcas != null)
+			{
+				dataGridView1.DataSource = new BindingList<MarcaWS.marca>(misMarcas.ToArray());
+			}
+			else
+			{
+				dataGridView1.DataSource = new BindingList<MarcaWS.marca>();
+
+			}
 		}
 	}
 }

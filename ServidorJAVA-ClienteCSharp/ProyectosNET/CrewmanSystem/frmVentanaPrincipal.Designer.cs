@@ -1237,7 +1237,7 @@
 			this.btnRecarga.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnRecarga.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.btnRecarga.UseVisualStyleBackColor = false;
-			this.btnRecarga.Click += new System.EventHandler(this.iconButton1_Click);
+			this.btnRecarga.Click += new System.EventHandler(this.btnRecarga_Click);
 			// 
 			// btnBuscar
 			// 

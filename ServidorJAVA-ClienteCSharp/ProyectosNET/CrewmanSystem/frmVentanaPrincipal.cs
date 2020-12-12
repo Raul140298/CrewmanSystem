@@ -207,7 +207,7 @@ namespace CrewmanSystem
 			btnEliminar.Visible = false;
 			btnActualizar.Visible = false;
 			btnNuevo.Visible = false;
-			btnRecarga.Visible = false;
+			btnRecarga.Visible = f;
 
 			btnBuscar.Visible = b;
 			btnEliminar.Visible = e;
@@ -280,12 +280,11 @@ namespace CrewmanSystem
 					}
 
 					CreaPantalla(sender, padreb, panel, color, tipo, formulario);
-					Program.pantallas.Last().SetCabecera(n, a, e, b, false);
+					Program.pantallas.Last().SetCabecera(n, a, e, b, f);
 
 					//Activo lo que tiene que hacer ese botón y muestro su cabecera respectiva
 					ActivaBoton(Program.pantallas.Last());
-					ocultaBotonesCabecera(n, a, e, b, false);
-					if (f == true) btnRecarga.Visible = true;
+					ocultaBotonesCabecera(n, a, e, b, f);
 				}
 				else //MISMO BOTON
 				{
@@ -293,6 +292,7 @@ namespace CrewmanSystem
 					Program.pantallas.RemoveAt(Program.pantallas.Count - 1);
 					ActivaBoton(Program.pantallas.First());
 				}
+				btnRight.Visible = btnLeft.Visible = false;
 			}
 		}
 
@@ -338,6 +338,7 @@ namespace CrewmanSystem
 						MessageBox.Show("BTNtipo aun no declarado");
 						break;
 				}
+				btnRight.Visible = btnLeft.Visible = false;
 			}
 		}
 
@@ -371,6 +372,7 @@ namespace CrewmanSystem
 				}
 				estado = BTNestado.vacio;
 				estadoBotones();
+				btnRight.Visible = btnLeft.Visible = false;
 			}
 		}
 
@@ -481,7 +483,7 @@ namespace CrewmanSystem
 			child.Show();
 		}
 
-		private void llamarMetodosDAO(IconButton sender, int boton)
+		public void llamarMetodosDAO(IconButton sender, int boton)
 		{
 			string formulario = "";
 			if (Program.pantallas.Count < 1) return;
@@ -500,6 +502,7 @@ namespace CrewmanSystem
 				case "frmGestionarSubfamilias":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaSubfamilia());
 					if (boton == 2) frmGestionarSubfamilias.eliminar();
+					if (boton == 4) ((frmGestionarSubfamilias)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarRutas":
 					break;
@@ -510,6 +513,7 @@ namespace CrewmanSystem
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaPromocion());
 					if (boton == 2) frmGestionarPromociones.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarPromocion());
+					if (boton == 4) ((frmGestionarPromociones)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmBuscarPromocion":
 					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaPromocion());
@@ -523,6 +527,7 @@ namespace CrewmanSystem
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoProducto());
 					if (boton == 2) frmGestionarProductos.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarProducto(0));
+					if (boton == 4) ((frmGestionarProductos)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmBuscarProducto":
 					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoProducto());
@@ -547,6 +552,7 @@ namespace CrewmanSystem
 				case "frmGestionarMarcas":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaMarca());
 					if (boton == 2) frmGestionarMarcas.eliminar();
+					if (boton == 4) ((frmGestionarMarcas)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarGuiasRemision":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaGuiaRemision());
@@ -854,8 +860,8 @@ namespace CrewmanSystem
 									  Program.pantallas.Last().E,
 									  Program.pantallas.Last().B,
 									  Program.pantallas.Last().F);
-				
 			}
+			btnRight.Visible = btnLeft.Visible = false;
 		}
 
 		private void btnNuevo_Click(object sender, EventArgs e)
@@ -863,6 +869,7 @@ namespace CrewmanSystem
 			estado = BTNestado.nuevo;
 			estadoBotones();
 			llamarMetodosDAO((IconButton)sender, 0);
+			//llamarMetodosDAO(null, 4);
 		}
 
 		private void btnActualizar_Click(object sender, EventArgs e)
@@ -870,6 +877,7 @@ namespace CrewmanSystem
 			estado = BTNestado.actualizar;
 			estadoBotones();
 			llamarMetodosDAO((IconButton)sender, 1);
+			//llamarMetodosDAO(null, 4);
 		}
 
 		private void btnEliminar_Click(object sender, EventArgs e)
@@ -877,10 +885,12 @@ namespace CrewmanSystem
 			estado = BTNestado.eliminar;
 			estadoBotones();
 			frmConfirmarEliminar confirma = new frmConfirmarEliminar();
+			confirma.ventanaPrincipal = this;
 			if(confirma.ShowDialog() == DialogResult.OK)
             {
 				llamarMetodosDAO((IconButton)sender, 2);
 				MessageBox.Show("Se eliminó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				llamarMetodosDAO(null, 4);
 			}
 		}
 
@@ -907,7 +917,7 @@ namespace CrewmanSystem
 			modificaPagina();
 		}
 
-		private void iconButton1_Click(object sender, EventArgs e)
+		private void btnRecarga_Click(object sender, EventArgs e)
 		{
 			foreach (Control c in Program.pantallas.Last().Formulario.Controls)
 			{
@@ -934,7 +944,7 @@ namespace CrewmanSystem
 								if (c3 is DataGridView)
 								{
 									MessageBox.Show(c3.Name);
-									llamarMetodosDAO(null,4);
+									llamarMetodosDAO(null, 4);
 								}
 							}
 						}
@@ -943,7 +953,8 @@ namespace CrewmanSystem
 			}
 		}
 
-
 		#endregion
+
+
 	}
 }

@@ -15,6 +15,7 @@ namespace CrewmanSystem
 		public static SubFamiliaWS.SubFamiliaWSClient daoSubFamilia;
 		public static SubFamiliaWS.subFamilia subfamiliaSeleccionada;
 		public static DataGridView dgv;
+		public SubFamiliaWS.subFamilia[] misSubFamilias;
 
 		public frmGestionarSubfamilias()
 		{
@@ -22,7 +23,7 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgv = dgvSubfamilias;
 			dgvSubfamilias.AutoGenerateColumns = false;
-			SubFamiliaWS.subFamilia[] misSubFamilias = daoSubFamilia.listarSubFamilias("");
+			misSubFamilias = daoSubFamilia.listarSubFamilias("");
 			if (misSubFamilias != null)
 			{
 				dgvSubfamilias.DataSource = new BindingList<SubFamiliaWS.subFamilia>(misSubFamilias.ToArray());
@@ -81,5 +82,19 @@ namespace CrewmanSystem
 			frmVentanaPrincipal.act.Enabled = false;
 			frmVentanaPrincipal.elim.Enabled = false;
 		}
-    }
+
+		public void recargarDGV()
+		{
+			misSubFamilias = daoSubFamilia.listarSubFamilias("");
+			if (misSubFamilias != null)
+			{
+				dgvSubfamilias.DataSource = new BindingList<SubFamiliaWS.subFamilia>(misSubFamilias.ToArray());
+			}
+			else
+			{
+				dgvSubfamilias.DataSource = new BindingList<SubFamiliaWS.subFamilia>();
+
+			}
+		}
+	}
 }

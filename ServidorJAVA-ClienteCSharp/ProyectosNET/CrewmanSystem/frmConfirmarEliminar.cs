@@ -12,6 +12,8 @@ namespace CrewmanSystem
 {
 	public partial class frmConfirmarEliminar : Form
 	{
+		public frmVentanaPrincipal ventanaPrincipal;
+
 		public frmConfirmarEliminar()
 		{
 			InitializeComponent();

@@ -15,6 +15,7 @@ namespace CrewmanSystem
 		public static PromocionWS.PromocionWSClient daoPromocion;
 		public static PromocionWS.promocion promocionSeleccionada;
 		public static DataGridView dgv;
+		public PromocionWS.promocion[] misPromocions;
 
 		public frmGestionarPromociones()
 		{
@@ -22,7 +23,7 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgv = dataGridView1;
 			dataGridView1.AutoGenerateColumns = false;
-			PromocionWS.promocion[] misPromocions = daoPromocion.listarPromocions("", DateTime.MinValue, DateTime.MaxValue);
+			misPromocions = daoPromocion.listarPromocions("", DateTime.MinValue, DateTime.MaxValue);
 			if (misPromocions != null)
 			{
 				dataGridView1.DataSource = new BindingList<PromocionWS.promocion>(misPromocions.ToArray());
@@ -88,5 +89,18 @@ namespace CrewmanSystem
             {
             }
         }
-    }
+
+		public void recargarDGV()
+		{
+			misPromocions = daoPromocion.listarPromocions("", DateTime.MinValue, DateTime.MaxValue);
+			if (misPromocions != null)
+			{
+				dataGridView1.DataSource = new BindingList<PromocionWS.promocion>(misPromocions.ToArray());
+			}
+			else
+			{
+				dataGridView1.DataSource = new BindingList<PromocionWS.promocion>();
+			}
+		}
+	}
 }
