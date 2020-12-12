@@ -23,15 +23,7 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgv = dgvProductos;
 			dgvProductos.AutoGenerateColumns = false;
-			misProductos = daoProducto.listarProductos("", "", "", "");
-			if (misProductos != null)
-			{
-				dgvProductos.DataSource = new BindingList<ProductoWS.producto>(misProductos.ToArray());
-			}
-			else
-			{
-				dgvProductos.DataSource = new BindingList<ProductoWS.producto>();
-			}
+			recargarDGV();
 
 			#region colores de seleccion
 			dgvProductos.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;

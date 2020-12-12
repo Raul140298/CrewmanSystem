@@ -61,6 +61,7 @@ namespace CrewmanSystem
                 }
                 else
                 {
+                    ((frmGestionarQuejas)Program.pantallas[Program.pantallas.Count - 2].Formulario).recargarDGV();
                     MessageBox.Show("Se insertó correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtIdFactura.Text = resultado.ToString();
                 }

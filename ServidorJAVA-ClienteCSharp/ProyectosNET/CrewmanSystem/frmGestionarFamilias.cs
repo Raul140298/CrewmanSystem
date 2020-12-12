@@ -23,15 +23,7 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgv = dataGridView1;
 			dataGridView1.AutoGenerateColumns = false;
-			misFamilias = daoFamilia.listarFamilias();
-			if (misFamilias != null)
-			{
-				dataGridView1.DataSource = new BindingList<FamiliaWS.familia>(misFamilias.ToArray());
-			}
-			else
-			{
-				dataGridView1.DataSource = new BindingList<FamiliaWS.familia>();
-			}
+			recargarDGV();
 			#region colores de seleccion
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
