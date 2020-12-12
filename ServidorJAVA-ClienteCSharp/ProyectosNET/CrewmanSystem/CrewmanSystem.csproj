@@ -836,7 +836,13 @@
     <None Include="Connected Services\PromocionXProductoWS\PromocionXProductoWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReportePromocionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReporteQuejasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReporteVisitasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ReporteWS\ReporteWS.wsdl" />
