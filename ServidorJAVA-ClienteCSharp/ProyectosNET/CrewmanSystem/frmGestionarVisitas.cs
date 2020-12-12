@@ -95,5 +95,9 @@ namespace CrewmanSystem
                 }
             }
         }
+        public void recargarDGV()
+        {
+            completarVisita();
+        }
     }
 }

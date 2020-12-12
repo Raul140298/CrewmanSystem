@@ -25,22 +25,9 @@ namespace CrewmanSystem
 			InitializeComponent();
 			
 			dgv = dgvPedidos;
-			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos(Program.empleado.idEmpleado, "", "", DateTime.MinValue, DateTime.MaxValue, "BORRADOR", "AMBOS");
 			dgvPedidos.AutoGenerateColumns = false;
-			if (misPedidos != null)
-				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
-			else
-				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>();
-			if(Program.empleado.cargo.nombre == "VENDEDOR")
-            {
-				dgvPedidos.Columns["NOMBRE"].Visible = false;
-				dgvPedidos.Columns["APELLIDO_PATERNO"].Visible = false;
-				dgvPedidos.Columns["APELLIDO_MATERNO"].Visible = false;
-			}
 
-			dgvPedidos.Columns["FECHA_APROBADO"].Visible = false; 
-			dgvPedidos.Columns["FECHA_ESTIMADA"].Visible = false;
-
+			recargarDGV();
 			#region colores de seleccion
 			dgvPedidos.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dgvPedidos.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
@@ -107,5 +94,23 @@ namespace CrewmanSystem
 			pedidoSeleccionado = (PedidoWS.pedido)dgv.CurrentRow.DataBoundItem;
 			daoPedido.eliminarPedido(pedidoSeleccionado.idPedido);
 		}
-    }
+		public void recargarDGV()
+		{
+			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos(Program.empleado.idEmpleado, "", "", DateTime.MinValue, DateTime.MaxValue, "BORRADOR", "AMBOS");
+
+			if (misPedidos != null)
+				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
+			else
+				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>();
+			if (Program.empleado.cargo.nombre == "VENDEDOR")
+			{
+				dgvPedidos.Columns["NOMBRE"].Visible = false;
+				dgvPedidos.Columns["APELLIDO_PATERNO"].Visible = false;
+				dgvPedidos.Columns["APELLIDO_MATERNO"].Visible = false;
+			}
+
+			dgvPedidos.Columns["FECHA_APROBADO"].Visible = false;
+			dgvPedidos.Columns["FECHA_ESTIMADA"].Visible = false;
+		}
+	}
 }

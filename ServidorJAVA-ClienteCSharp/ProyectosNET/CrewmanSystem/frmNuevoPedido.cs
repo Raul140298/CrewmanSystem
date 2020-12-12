@@ -265,6 +265,7 @@ namespace CrewmanSystem
                     }
                     else
                     {
+                        ((frmGestionarPedidos)Program.pantallas[Program.pantallas.Count - 2].Formulario).recargarDGV();
                         MessageBox.Show("Se insertó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         pedido.idPedido = resultado;
                         txtIDOrdenVenta.Text = resultado.ToString();

@@ -21,20 +21,7 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgv = dgvGuiasDeRemision;
 			dgvGuiasDeRemision.AutoGenerateColumns = false;
-			GuiaRemisionWS.guiaRemision[] misGuias = 
-				daoGuiaRemision.listarGuiaRemisions(Program.empleado.idEmpleado,"","", DateTime.Today.AddMonths(-3),
-				DateTime.Today.AddMonths(3), DateTime.Today.AddMonths(-3), DateTime.Today.AddMonths(3));
-			if (misGuias == null)
-				dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>();
-			else 
-				dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>(misGuias.ToList());
-
-			if (Program.empleado.cargo.nombre == "VENDEDOR")
-			{
-				dgvGuiasDeRemision.Columns["NOMBRE"].Visible = false;
-				dgvGuiasDeRemision.Columns["APELLIDO_PATERNO"].Visible = false;
-				dgvGuiasDeRemision.Columns["APELLIDO_MATERNO"].Visible = false;
-			}
+			recargarDGV();
 
 			#region colores de seleccion
 			dgvGuiasDeRemision.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
@@ -83,5 +70,22 @@ namespace CrewmanSystem
 			}
 			
 		}
-    }
+		public void recargarDGV()
+		{
+			GuiaRemisionWS.guiaRemision[] misGuias =
+				daoGuiaRemision.listarGuiaRemisions(Program.empleado.idEmpleado, "", "", DateTime.Today.AddMonths(-3),
+				DateTime.Today.AddMonths(3), DateTime.Today.AddMonths(-3), DateTime.Today.AddMonths(3));
+			if (misGuias == null)
+				dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>();
+			else
+				dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>(misGuias.ToList());
+
+			if (Program.empleado.cargo.nombre == "VENDEDOR")
+			{
+				dgvGuiasDeRemision.Columns["NOMBRE"].Visible = false;
+				dgvGuiasDeRemision.Columns["APELLIDO_PATERNO"].Visible = false;
+				dgvGuiasDeRemision.Columns["APELLIDO_MATERNO"].Visible = false;
+			}
+		}
+	}
 }
