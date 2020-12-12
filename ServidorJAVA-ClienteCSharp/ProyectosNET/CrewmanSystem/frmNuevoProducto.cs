@@ -37,7 +37,8 @@ namespace CrewmanSystem
                 cboFamilia.DataSource = new BindingList<FamiliaWS.familia>();
             cboFamilia.ValueMember = "idFamilia";
             cboFamilia.DisplayMember = "descripcion";
-            
+            txtStockReservado.Text = 0.ToString();
+
             if (frmVentanaPrincipal.nBtn == 1)
             {   //OBTNER DATOS DE FILA SELECCIONADA
                 ProductoWS.producto miProducto = new ProductoWS.producto();

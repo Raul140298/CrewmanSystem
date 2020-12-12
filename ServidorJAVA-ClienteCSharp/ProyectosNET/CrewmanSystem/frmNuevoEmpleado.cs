@@ -15,6 +15,7 @@ namespace CrewmanSystem
 	{
         private ZonaWS.ZonaWSClient daoZona;
         private EmpleadoWS.EmpleadoWSClient daoEmpleado;
+        private EmpleadoXZonaWS.EmpleadoXZonaWSClient daoEmpleadoXZona;
         private string[] cargos = { "VENDEDOR", "JEFE DE VENTAS" };
         private String ruta;
         private byte[] foto = null;
@@ -24,6 +25,7 @@ namespace CrewmanSystem
             InitializeComponent();
             daoZona = new ZonaWS.ZonaWSClient();
             daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
+            daoEmpleadoXZona = new EmpleadoXZonaWS.EmpleadoXZonaWSClient();
             cboCargo.DataSource = cargos;
             cboCargo.SelectedIndex = 0;
             cboCargo.Enabled = false;
@@ -194,9 +196,22 @@ namespace CrewmanSystem
                 if (frmVentanaPrincipal.nBtn == 0)
                 {
                     int resultado = daoEmpleado.insertarEmpleado(empleado);
-                    /* meter a la fuera si es necesario empleado x zona */
                     txtID.Text = resultado.ToString();
+                    empleado.idEmpleado = resultado;
                     if (resultado == 0)
+                    {
+                        MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    EmpleadoXZonaWS.empleadoXZona exz = new EmpleadoXZonaWS.empleadoXZona();
+                    exz.empleado = new EmpleadoXZonaWS.empleado();
+                    exz.empleado.idEmpleado = empleado.idEmpleado;
+                    exz.zona = new EmpleadoXZonaWS.zona();
+                    exz.zona.idZona = empleado.zona.idZona;
+                    int resultado2 = daoEmpleadoXZona.insertarEmpleadoXZona(exz);
+
+                    if (resultado2 == 0)
                     {
                         MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
