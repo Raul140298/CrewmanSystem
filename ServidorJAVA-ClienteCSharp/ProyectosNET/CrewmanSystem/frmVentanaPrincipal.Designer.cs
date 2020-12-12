@@ -97,6 +97,7 @@
 			this.btnMinimizar = new FontAwesome.Sharp.IconButton();
 			this.btnMaximizar = new FontAwesome.Sharp.IconButton();
 			this.btnSalir = new FontAwesome.Sharp.IconButton();
+			this.iconButton1 = new FontAwesome.Sharp.IconButton();
 			this.pnlContenedor.SuspendLayout();
 			this.pnlChildForm.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -1199,6 +1200,7 @@
 			// pnlCabecera
 			// 
 			this.pnlCabecera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+			this.pnlCabecera.Controls.Add(this.iconButton1);
 			this.pnlCabecera.Controls.Add(this.btnBuscar);
 			this.pnlCabecera.Controls.Add(this.lblCountRows);
 			this.pnlCabecera.Controls.Add(this.btnLeft);
@@ -1524,6 +1526,28 @@
 			this.btnSalir.UseVisualStyleBackColor = false;
 			this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
 			// 
+			// iconButton1
+			// 
+			this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+			this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
+			this.iconButton1.FlatAppearance.BorderSize = 0;
+			this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+			this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
+			this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Sync;
+			this.iconButton1.IconColor = System.Drawing.Color.Gainsboro;
+			this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.iconButton1.IconSize = 16;
+			this.iconButton1.Location = new System.Drawing.Point(1152, 32);
+			this.iconButton1.Name = "iconButton1";
+			this.iconButton1.Rotation = 0D;
+			this.iconButton1.Size = new System.Drawing.Size(36, 43);
+			this.iconButton1.TabIndex = 22;
+			this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.iconButton1.UseVisualStyleBackColor = false;
+			this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+			// 
 			// frmVentanaPrincipal
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1631,5 +1655,6 @@
 		private FontAwesome.Sharp.IconButton btnReporteEmpleados;
         private FontAwesome.Sharp.IconButton btnReporteClientes;
         private FontAwesome.Sharp.IconButton btnPedReporte;
-    }
+		private FontAwesome.Sharp.IconButton iconButton1;
+	}
 }

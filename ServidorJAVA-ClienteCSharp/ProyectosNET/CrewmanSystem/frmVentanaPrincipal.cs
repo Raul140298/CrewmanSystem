@@ -553,6 +553,7 @@ namespace CrewmanSystem
 				case "frmGestionarFamilias":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaFamilia());
 					if (boton == 2) frmGestionarFamilias.eliminar();
+					if (boton == 4) ((frmGestionarFamilias)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarFacturas":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaFactura());
@@ -904,8 +905,41 @@ namespace CrewmanSystem
 			modificaPagina();
 		}
 
-
-
+		private void iconButton1_Click(object sender, EventArgs e)
+		{
+			foreach (Control c in Program.pantallas.Last().Formulario.Controls)
+			{
+				if (c is DataGridView)
+				{
+					MessageBox.Show(c.Name);
+					llamarMetodosDAO(null, 4);
+				}
+				if (c is Panel)
+				{
+					MessageBox.Show(c.Name);
+					foreach (Control c2 in c.Controls)
+					{
+						if (c2 is DataGridView)
+						{
+							MessageBox.Show(c2.Name);
+							llamarMetodosDAO(null, 4);
+						}
+						if (c2 is Panel)
+						{
+							MessageBox.Show(c2.Name);
+							foreach (Control c3 in c2.Controls)
+							{
+								if (c3 is DataGridView)
+								{
+									MessageBox.Show(c3.Name);
+									llamarMetodosDAO(null,4);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 
 
 		#endregion
