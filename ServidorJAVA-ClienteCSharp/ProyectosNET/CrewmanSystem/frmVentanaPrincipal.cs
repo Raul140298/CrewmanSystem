@@ -575,7 +575,7 @@ namespace CrewmanSystem
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaFactura());
 					if (boton == 2) frmGestionarFacturas.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarFactura(0));
-					//if (boton == 4) ((frmGestionarFacturas)Program.pantallas.Last().Formulario).recargarDGV();
+					if (boton == 4) ((frmGestionarFacturas)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarEmpleados":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoEmpleado());

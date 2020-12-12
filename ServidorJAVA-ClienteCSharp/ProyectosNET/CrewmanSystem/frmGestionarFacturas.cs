@@ -22,20 +22,7 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgv = dgvFacturas;
 			dgvFacturas.AutoGenerateColumns = false;
-			FacturaWS.factura[] misFacturas = daoFactura.listarFacturas(Program.empleado.idEmpleado,"","",
-																		DateTime.MinValue,DateTime.MaxValue,
-																		DateTime.MinValue,DateTime.MaxValue,2,2);
-			if (misFacturas != null)
-				dgvFacturas.DataSource = new BindingList<FacturaWS.factura>(misFacturas.ToArray());
-			else
-				dgvFacturas.DataSource = new BindingList<FacturaWS.factura>();
-			
-			if(Program.empleado.cargo.nombre == "VENDEDOR")
-            {
-				dgvFacturas.Columns["NOMBRE"].Visible = false;
-				dgvFacturas.Columns["APELLIDO_PATERNO"].Visible = false;
-				dgvFacturas.Columns["APELLIDO_MATERNO"].Visible = false;
-            }
+			recargarDGV();
 
 			#region colores de seleccion
 			dgvFacturas.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
@@ -106,5 +93,22 @@ namespace CrewmanSystem
 			}
             catch (Exception){}
 		}
-    }
+		public void recargarDGV()
+		{
+			FacturaWS.factura[] misFacturas = daoFactura.listarFacturas(Program.empleado.idEmpleado, "", "",
+																		DateTime.MinValue, DateTime.MaxValue,
+																		DateTime.MinValue, DateTime.MaxValue, 2, 2);
+			if (misFacturas != null)
+				dgvFacturas.DataSource = new BindingList<FacturaWS.factura>(misFacturas.ToArray());
+			else
+				dgvFacturas.DataSource = new BindingList<FacturaWS.factura>();
+
+			if (Program.empleado.cargo.nombre == "VENDEDOR")
+			{
+				dgvFacturas.Columns["NOMBRE"].Visible = false;
+				dgvFacturas.Columns["APELLIDO_PATERNO"].Visible = false;
+				dgvFacturas.Columns["APELLIDO_MATERNO"].Visible = false;
+			}
+		}
+	}
 }
