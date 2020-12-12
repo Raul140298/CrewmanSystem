@@ -176,7 +176,7 @@
             this.txtObjetivoVentas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtObjetivoVentas.Name = "txtObjetivoVentas";
             this.txtObjetivoVentas.Size = new System.Drawing.Size(150, 22);
-            this.txtObjetivoVentas.TabIndex = 127;
+            this.txtObjetivoVentas.TabIndex = 8;
             // 
             // label12
             // 
@@ -196,7 +196,7 @@
             this.cboZona.Margin = new System.Windows.Forms.Padding(4);
             this.cboZona.Name = "cboZona";
             this.cboZona.Size = new System.Drawing.Size(222, 24);
-            this.cboZona.TabIndex = 114;
+            this.cboZona.TabIndex = 9;
             // 
             // groupBox2
             // 
@@ -229,7 +229,7 @@
             this.txtTelefono1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefono1.Name = "txtTelefono1";
             this.txtTelefono1.Size = new System.Drawing.Size(136, 22);
-            this.txtTelefono1.TabIndex = 100;
+            this.txtTelefono1.TabIndex = 5;
             // 
             // txtTelefono2
             // 
@@ -237,7 +237,7 @@
             this.txtTelefono2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefono2.Name = "txtTelefono2";
             this.txtTelefono2.Size = new System.Drawing.Size(136, 22);
-            this.txtTelefono2.TabIndex = 105;
+            this.txtTelefono2.TabIndex = 6;
             // 
             // label8
             // 
@@ -265,7 +265,7 @@
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(316, 22);
-            this.txtCorreo.TabIndex = 108;
+            this.txtCorreo.TabIndex = 7;
             // 
             // groupBox1
             // 
@@ -305,7 +305,7 @@
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(138, 22);
-            this.txtNombre.TabIndex = 95;
+            this.txtNombre.TabIndex = 2;
             // 
             // txtApMaterno
             // 
@@ -313,7 +313,7 @@
             this.txtApMaterno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApMaterno.Name = "txtApMaterno";
             this.txtApMaterno.Size = new System.Drawing.Size(142, 22);
-            this.txtApMaterno.TabIndex = 98;
+            this.txtApMaterno.TabIndex = 4;
             // 
             // txtDNI
             // 
@@ -321,7 +321,7 @@
             this.txtDNI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(138, 22);
-            this.txtDNI.TabIndex = 104;
+            this.txtDNI.TabIndex = 1;
             // 
             // txtApPaterno
             // 
@@ -329,7 +329,7 @@
             this.txtApPaterno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApPaterno.Name = "txtApPaterno";
             this.txtApPaterno.Size = new System.Drawing.Size(138, 22);
-            this.txtApPaterno.TabIndex = 106;
+            this.txtApPaterno.TabIndex = 3;
             // 
             // label2
             // 
@@ -425,7 +425,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(154, 30);
-            this.btnGuardar.TabIndex = 112;
+            this.btnGuardar.TabIndex = 10;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);

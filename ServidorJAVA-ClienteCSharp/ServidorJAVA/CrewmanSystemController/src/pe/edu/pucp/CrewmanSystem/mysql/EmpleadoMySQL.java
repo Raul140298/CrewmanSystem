@@ -48,12 +48,6 @@ public class EmpleadoMySQL implements EmpleadoDAO{
                 cs.setString("_CONTRASEÑA", empleado.getContraseña());
                 cs.executeUpdate();
                 resultado=cs.getInt("_ID_EMPLEADO");
-                
-                if(empleado.getZona().getIdZona()>0){
-                    EmpleadoXZonaDAO daoEmpleadoXZona = new EmpleadoXZonaMySQL();
-                    EmpleadoXZona exz = new EmpleadoXZona(empleado.getZona(), empleado);
-                    daoEmpleadoXZona.insertar(exz);
-                }
             }
             else{
                 String sql ="{ call INSERTAR_JEFE(?,?,?,?,?)}";
@@ -65,12 +59,6 @@ public class EmpleadoMySQL implements EmpleadoDAO{
                 cs.setString("_CONTRASEÑA", empleado.getContraseña());
                 cs.executeUpdate();
                 resultado=cs.getInt("_ID_EMPLEADO");
-                
-                if(empleado.getZona().getIdZona()>0){
-                EmpleadoXZonaDAO daoEmpleadoXZona = new EmpleadoXZonaMySQL();
-                EmpleadoXZona exz = new EmpleadoXZona(empleado.getZona(), empleado);
-                daoEmpleadoXZona.insertar(exz);
-                }
             }
             empleado.setIdEmpleado(resultado);
         }

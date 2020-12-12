@@ -513,6 +513,12 @@
     <Compile Include="frmPerfil.Designer.cs">
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReporteMejoresClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteMejoresClientes.Designer.cs">
+      <DependentUpon>frmReporteMejoresClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReporteMejoresEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -525,6 +531,12 @@
     <Compile Include="frmReportePedidosXCliente.Designer.cs">
       <DependentUpon>frmReportePedidosXCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReporteQuejas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReporteQuejas.Designer.cs">
+      <DependentUpon>frmReporteQuejas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSegmentarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -536,12 +548,6 @@
     </Compile>
     <Compile Include="frmVentanaPrincipal.Designer.cs">
       <DependentUpon>frmVentanaPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmReportePedidos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmReportePedidos.Designer.cs">
-      <DependentUpon>frmReportePedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSalir.cs">
       <SubType>Form</SubType>
@@ -737,14 +743,17 @@
     <EmbeddedResource Include="frmPerfil.resx">
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteMejoresClientes.resx">
+      <DependentUpon>frmReporteMejoresClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReporteMejoresEmpleados.resx">
       <DependentUpon>frmReporteMejoresEmpleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReportePedidos.resx">
-      <DependentUpon>frmReportePedidos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmReportePedidosXCliente.resx">
       <DependentUpon>frmReportePedidosXCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReporteQuejas.resx">
+      <DependentUpon>frmReporteQuejas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSegmentarClientes.resx">
       <DependentUpon>frmSegmentarClientes.cs</DependentUpon>
@@ -757,11 +766,89 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.actualizarEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.actualizarPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.cambiarContraseñaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.eliminarEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.eliminarPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.empleado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.insertarEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.insertarPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.listarPorJefeVentasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.mostrarPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.obtenerEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.obtenerNumClientesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.obtenerNumVisitasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.permitirAccesoEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.persona.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\EmpleadoWS.wsdl" />
+    <None Include="Connected Services\EmpleadoWS\EmpleadoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PromocionXProductoWS\CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PromocionXProductoWS\CrewmanSystem.PromocionXProductoWS.listarPromocionXProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PromocionXProductoWS\CrewmanSystem.PromocionXProductoWS.promocionXProducto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PromocionXProductoWS\PromocionXProductoWS.wsdl" />
+    <None Include="Connected Services\PromocionXProductoWS\PromocionXProductoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReporteQuejasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReporteWS\ReporteWS.wsdl" />
+    <None Include="Connected Services\ReporteWS\ReporteWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\ReporteQuejas2.png" />
+    <None Include="Resources\reportePedidosXCliente2.png" />
+    <None Include="Resources\reportePedidos2.png" />
+    <None Include="Resources\mejoresClientes2.png" />
+    <None Include="Resources\mejoresEmpleados2.png" />
+    <None Include="Resources\MARCADEAGUA.png" />
     <None Include="Connected Services\FacturaWS\CrewmanSystem.FacturaWS.actualizarFacturaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -864,6 +951,9 @@
     </None>
     <None Include="Connected Services\ReporteWS\configuration91.svcinfo" />
     <None Include="Connected Services\ReporteWS\configuration.svcinfo" />
+    <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReporteMejoresClientesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReporteMejoresEmpleadosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -877,7 +967,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Resources\signo-de-recarga.png" />
     <None Include="Connected Services\CarteraWS\CarteraWS.wsdl" />
     <None Include="Connected Services\CarteraWS\CarteraWS.xsd">
       <SubType>Designer</SubType>
@@ -937,58 +1026,6 @@
     </None>
     <None Include="Connected Services\ClienteXZonaWS\CrewmanSystem.ClienteXZonaWS.obtenerClientePorZonaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.actualizarEmpleadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.actualizarPersonaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.cambiarContraseñaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.eliminarEmpleadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.eliminarPersonaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.empleado.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.insertarEmpleadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.insertarPersonaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.listarPorJefeVentasResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.mostrarPersonaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.obtenerEmpleadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.obtenerNumClientesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.obtenerNumVisitasResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.permitirAccesoEmpleadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.persona.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\EmpleadoWS.wsdl" />
-    <None Include="Connected Services\EmpleadoWS\EmpleadoWS.xsd">
-      <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\EmpleadoXZonaWS\CrewmanSystem.EmpleadoXZonaWS.eliminarEmpleadoXZonaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -1170,19 +1207,6 @@
     <None Include="Connected Services\PromocionWS\PromocionWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\PromocionXProductoWS\CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PromocionXProductoWS\CrewmanSystem.PromocionXProductoWS.listarPromocionXProductoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PromocionXProductoWS\CrewmanSystem.PromocionXProductoWS.promocionXProducto.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PromocionXProductoWS\PromocionXProductoWS.wsdl" />
-    <None Include="Connected Services\PromocionXProductoWS\PromocionXProductoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\QuejaWS\CrewmanSystem.QuejaWS.actualizarQuejaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1200,10 +1224,6 @@
     </None>
     <None Include="Connected Services\QuejaWS\QuejaWS.wsdl" />
     <None Include="Connected Services\QuejaWS\QuejaWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ReporteWS\ReporteWS.wsdl" />
-    <None Include="Connected Services\ReporteWS\ReporteWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\SubFamiliaWS\CrewmanSystem.SubFamiliaWS.actualizarSubFamiliaResponse.datasource">
@@ -1358,9 +1378,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\EmpleadoWS\configuration91.svcinfo" />
-    <None Include="Connected Services\EmpleadoWS\configuration.svcinfo" />
-    <None Include="Connected Services\EmpleadoWS\Reference.svcmap">
+    <None Include="Connected Services\LineaPedidoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\LineaPedidoWS\configuration.svcinfo" />
+    <None Include="Connected Services\LineaPedidoWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -1370,21 +1390,19 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\LineaPedidoWS\configuration91.svcinfo" />
-    <None Include="Connected Services\LineaPedidoWS\configuration.svcinfo" />
-    <None Include="Connected Services\LineaPedidoWS\Reference.svcmap">
+    <None Include="Connected Services\EmpleadoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\EmpleadoWS\configuration.svcinfo" />
+    <None Include="Connected Services\EmpleadoWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Resources\icono.ico" />
     <Content Include="Resources\icono.png" />
-    <Content Include="Resources\signo-de-la-cruz.png" />
     <None Include="Connected Services\ZonaWS\ZonaWS.wsdl" />
     <None Include="Connected Services\ZonaWS\ZonaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-    <None Include="Resources\MARCADEAGUA.png" />
     <None Include="Resources\USER.png" />
   </ItemGroup>
   <ItemGroup>

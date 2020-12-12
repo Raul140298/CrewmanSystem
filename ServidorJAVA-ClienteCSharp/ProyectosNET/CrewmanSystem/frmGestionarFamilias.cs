@@ -15,6 +15,7 @@ namespace CrewmanSystem
 		public static FamiliaWS.FamiliaWSClient daoFamilia;
 		public static FamiliaWS.familia familiaSeleccionada;
 		public static DataGridView dgv;
+		FamiliaWS.familia[] misFamilias;
 
 		public frmGestionarFamilias()
 		{
@@ -22,7 +23,7 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgv = dataGridView1;
 			dataGridView1.AutoGenerateColumns = false;
-			FamiliaWS.familia[] misFamilias = daoFamilia.listarFamilias();
+			misFamilias = daoFamilia.listarFamilias();
 			if (misFamilias != null)
 			{
 				dataGridView1.DataSource = new BindingList<FamiliaWS.familia>(misFamilias.ToArray());
@@ -70,6 +71,19 @@ namespace CrewmanSystem
 		{
 			frmVentanaPrincipal.act.Enabled = false;
 			frmVentanaPrincipal.elim.Enabled = false;
+		}
+
+		public void recargarDGV()
+		{
+			misFamilias = daoFamilia.listarFamilias();
+			if (misFamilias != null)
+			{
+				dataGridView1.DataSource = new BindingList<FamiliaWS.familia>(misFamilias.ToArray());
+			}
+			else
+			{
+				dataGridView1.DataSource = new BindingList<FamiliaWS.familia>();
+			}
 		}
 	}
 }

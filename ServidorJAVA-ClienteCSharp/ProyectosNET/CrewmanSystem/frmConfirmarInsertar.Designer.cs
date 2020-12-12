@@ -31,9 +31,9 @@
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.panel4 = new System.Windows.Forms.Panel();
-			this.label1 = new System.Windows.Forms.Label();
 			this.btnConfirmar = new FontAwesome.Sharp.IconButton();
 			this.btnCancelar = new FontAwesome.Sharp.IconButton();
+			this.label1 = new System.Windows.Forms.Label();
 			this.panel4.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -65,28 +65,13 @@
 			this.panel4.Size = new System.Drawing.Size(322, 130);
 			this.panel4.TabIndex = 10;
 			// 
-			// label1
-			// 
-			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-			this.label1.Location = new System.Drawing.Point(-13, 66);
-			this.label1.Name = "label1";
-			this.label1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-			this.label1.Size = new System.Drawing.Size(344, 20);
-			this.label1.TabIndex = 37;
-			this.label1.Text = "¿Está seguro que desea ingresar los datos?";
-			// 
 			// btnConfirmar
 			// 
 			this.btnConfirmar.BackColor = System.Drawing.Color.Transparent;
 			this.btnConfirmar.Dock = System.Windows.Forms.DockStyle.Left;
 			this.btnConfirmar.FlatAppearance.BorderSize = 0;
-			this.btnConfirmar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-			this.btnConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnConfirmar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+			this.btnConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
 			this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnConfirmar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
 			this.btnConfirmar.ForeColor = System.Drawing.Color.Gainsboro;
@@ -109,8 +94,8 @@
 			this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
 			this.btnCancelar.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnCancelar.FlatAppearance.BorderSize = 0;
-			this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-			this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+			this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
 			this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnCancelar.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
 			this.btnCancelar.ForeColor = System.Drawing.Color.Gainsboro;
@@ -127,6 +112,21 @@
 			this.btnCancelar.Text = "CANCELAR";
 			this.btnCancelar.UseVisualStyleBackColor = false;
 			this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+			// 
+			// label1
+			// 
+			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+			this.label1.Location = new System.Drawing.Point(-1, 45);
+			this.label1.Name = "label1";
+			this.label1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+			this.label1.Size = new System.Drawing.Size(325, 41);
+			this.label1.TabIndex = 38;
+			this.label1.Text = "¿Está seguro que desea ingresar los datos?";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// frmConfirmarInsertar
 			// 
@@ -145,7 +145,6 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "frmConfirmarInsertar";
 			this.panel4.ResumeLayout(false);
-			this.panel4.PerformLayout();
 			this.ResumeLayout(false);
 
         }
@@ -154,8 +153,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton btnConfirmar;
         private FontAwesome.Sharp.IconButton btnCancelar;
-    }
+		private System.Windows.Forms.Label label1;
+	}
 }

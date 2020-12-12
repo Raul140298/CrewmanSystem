@@ -16,6 +16,10 @@
         <servlet-name>ReportePedidosXCliente</servlet-name>
         <servlet-class>pe.edu.pucp.CrewmanSystem.servlets.ReportePedidosXCliente</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ReporteQuejas</servlet-name>
+        <servlet-class>pe.edu.pucp.CrewmanSystem.servlets.ReporteQuejas</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ReporteMejoresClientes</servlet-name>
         <url-pattern>/ReporteMejoresClientes</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>ReportePedidosXCliente</servlet-name>
         <url-pattern>/ReportePedidosXCliente</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReporteQuejas</servlet-name>
+        <url-pattern>/ReporteQuejas</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

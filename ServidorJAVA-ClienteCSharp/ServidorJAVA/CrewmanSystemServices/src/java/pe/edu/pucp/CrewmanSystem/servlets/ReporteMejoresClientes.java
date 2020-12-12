@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.util.Date;
 import java.util.HashMap;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -23,25 +24,33 @@ public class ReporteMejoresClientes extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try{
-            JasperReport reporte = (JasperReport)
-                    JRLoader.loadObjectFromFile(ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/MejoresClientes.jasper").getFile());
-            
-            String rutaLogo = ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/images/portada.jpeg").getPath();
+            String rutaReporte = ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/MejoresClientes.jasper").getPath();
+            rutaReporte = rutaReporte.replaceAll("%20", " ");
+            JasperReport reporte = (JasperReport)JRLoader.loadObjectFromFile(rutaReporte);
+
+            String rutaLogo = ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/images/icono.jpg").getPath();
+            rutaLogo = rutaLogo.replaceAll("%20", " ");
             ImageIcon icono = new ImageIcon(rutaLogo);
             Image imagen = icono.getImage();
+
+            String subreporte = ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/MejoresClientes_Subreporte.jasper").getPath();
+            subreporte = subreporte.replaceAll("%20", " ");
             
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            
+
             HashMap hm = new HashMap();
-            hm.put("AUTOR","MARADONA");
-            hm.put("PORTADA", imagen);
+            hm.put("LOGO", imagen);
+            hm.put("NOMBRE", "Usuario Prueba");
+            hm.put("FECHA", new java.sql.Date(new Date().getTime()));
+            hm.put("RUTA_SUBREPORTE",subreporte);
+            hm.put("ID_JEFE",21);
             
             JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
-            
+
             con.close();
             JasperExportManager.exportReportToPdfStream(jp, response.getOutputStream());
-                    
+
         }catch(Exception e){
             System.out.println(e.getMessage());
         }

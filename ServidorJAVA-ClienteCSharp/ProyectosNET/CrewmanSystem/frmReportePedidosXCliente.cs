@@ -15,37 +15,61 @@ namespace CrewmanSystem
     {
         private ReporteWS.ReporteWSClient daoReporte;
         private String[] tipos = {"CUALQUIERA","ALTO","MEDIO","BAJO"};
+        private String[] estados = { "CUALQUIERA", "EN_PROCESO", "FINALIZADO", "CANCELADO" };
+
         public frmReportePedidosXCliente()
         {
             daoReporte = new ReporteWS.ReporteWSClient();
             InitializeComponent();
             cboTipoCliente.DataSource = tipos;
+            cboEstado.DataSource = estados;
         }
 
-        private void btnGenerar_Click(object sender, EventArgs e)
+        private void btnReportePedidos_Click(object sender, EventArgs e)
         {
-            sfdReporte.ShowDialog();
-            byte[] arreglo;
-            if (cboTipoCliente.SelectedItem.ToString() == "CUALQUIERA")
+            if (sfdReportePedidos.ShowDialog() == DialogResult.OK)
             {
-                arreglo = daoReporte.generarReportePedidosXCliente("");
+                try
+                {
+                    byte[] arreglo;
+                    arreglo = daoReporte.generarReportePedidos();
+                    File.WriteAllBytes(sfdReportePedidos.FileName, arreglo);
+                    MessageBox.Show("El reporte fue generado con exito", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("No se pudo generar el reporte", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
-            {
-                arreglo = daoReporte.generarReportePedidosXCliente(cboTipoCliente.SelectedItem.ToString());
-            }
-            File.WriteAllBytes(sfdReporte.FileName,arreglo);
-            MessageBox.Show("Se ha guardado correctamente", "Mensaje de Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnReportePedidosXCliente_Click(object sender, EventArgs e)
         {
-            sfdReporte.ShowDialog();
-            byte[] arreglo;
+            if (sfdReportePedidosXCliente.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    byte[] arreglo;
+                    String tipo;
+                    String estado;
+                    if (cboTipoCliente.SelectedItem.ToString() == "CUALQUIERA")
+                        tipo = "";
+                    else
+                        tipo = cboTipoCliente.SelectedItem.ToString();
 
-            arreglo = daoReporte.generarReportePedidos();
-            File.WriteAllBytes(sfdReporte.FileName, arreglo);
-            MessageBox.Show("Se ha guardado correctamente", "Mensaje de Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (cboEstado.SelectedItem.ToString() == "CUALQUIERA")
+                        estado = "";
+                    else
+                        estado = cboEstado.SelectedItem.ToString();
+                    arreglo = daoReporte.generarReportePedidosXCliente(tipo,estado);
+                    File.WriteAllBytes(sfdReportePedidosXCliente.FileName, arreglo);
+                    MessageBox.Show("El reporte fue generado con exito", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("No se pudo generar el reporte", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

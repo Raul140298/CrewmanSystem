@@ -53,18 +53,20 @@
 			this.pnlJefeDeVentas = new System.Windows.Forms.Panel();
 			this.btnPerfil = new FontAwesome.Sharp.IconButton();
 			this.pnlGestionClientes = new System.Windows.Forms.Panel();
+			this.btnReporteClientes = new FontAwesome.Sharp.IconButton();
 			this.btnClientes = new FontAwesome.Sharp.IconButton();
 			this.btnGestionClientes = new FontAwesome.Sharp.IconButton();
 			this.btnCumplimientoDeMetas = new FontAwesome.Sharp.IconButton();
 			this.pnlGestionPedidos = new System.Windows.Forms.Panel();
-			this.iconButton1 = new FontAwesome.Sharp.IconButton();
+			this.btnPedReporte = new FontAwesome.Sharp.IconButton();
+			this.btnQuejaJefe = new FontAwesome.Sharp.IconButton();
 			this.btnGuiaDeRemision = new FontAwesome.Sharp.IconButton();
 			this.btnFactura = new FontAwesome.Sharp.IconButton();
-			this.btnPedReporte = new FontAwesome.Sharp.IconButton();
 			this.btnAprobados = new FontAwesome.Sharp.IconButton();
 			this.btnPedido = new FontAwesome.Sharp.IconButton();
 			this.btnReportePedidos = new FontAwesome.Sharp.IconButton();
 			this.pnlGestionEmpleados = new System.Windows.Forms.Panel();
+			this.btnReporteEmpleados = new FontAwesome.Sharp.IconButton();
 			this.btnCarteras = new FontAwesome.Sharp.IconButton();
 			this.btnEmpleados = new FontAwesome.Sharp.IconButton();
 			this.btnGestionEmpleados = new FontAwesome.Sharp.IconButton();
@@ -80,6 +82,7 @@
 			this.btnFamilia = new FontAwesome.Sharp.IconButton();
 			this.btnGestionProducto = new FontAwesome.Sharp.IconButton();
 			this.pnlCabecera = new System.Windows.Forms.Panel();
+			this.btnRecarga = new FontAwesome.Sharp.IconButton();
 			this.btnBuscar = new FontAwesome.Sharp.IconButton();
 			this.lblCountRows = new System.Windows.Forms.Label();
 			this.btnLeft = new FontAwesome.Sharp.IconButton();
@@ -95,7 +98,6 @@
 			this.btnMinimizar = new FontAwesome.Sharp.IconButton();
 			this.btnMaximizar = new FontAwesome.Sharp.IconButton();
 			this.btnSalir = new FontAwesome.Sharp.IconButton();
-			this.btnReporteEmpleados = new FontAwesome.Sharp.IconButton();
 			this.pnlContenedor.SuspendLayout();
 			this.pnlChildForm.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -173,7 +175,7 @@
 			this.pnlEmpleado.Controls.Add(this.pnlEmpGestionProductos);
 			this.pnlEmpleado.Controls.Add(this.btnEmpGestionProductos);
 			this.pnlEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlEmpleado.Location = new System.Drawing.Point(0, 1050);
+			this.pnlEmpleado.Location = new System.Drawing.Point(0, 1186);
 			this.pnlEmpleado.Name = "pnlEmpleado";
 			this.pnlEmpleado.Size = new System.Drawing.Size(264, 838);
 			this.pnlEmpleado.TabIndex = 1;
@@ -192,7 +194,7 @@
 			this.btnEmpPerfil.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnEmpPerfil.IconSize = 20;
 			this.btnEmpPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnEmpPerfil.Location = new System.Drawing.Point(0, 591);
+			this.btnEmpPerfil.Location = new System.Drawing.Point(0, 578);
 			this.btnEmpPerfil.Name = "btnEmpPerfil";
 			this.btnEmpPerfil.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
 			this.btnEmpPerfil.Rotation = 0D;
@@ -218,7 +220,7 @@
 			this.btnSegmentacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnSegmentacion.IconSize = 20;
 			this.btnSegmentacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnSegmentacion.Location = new System.Drawing.Point(0, 546);
+			this.btnSegmentacion.Location = new System.Drawing.Point(0, 533);
 			this.btnSegmentacion.Name = "btnSegmentacion";
 			this.btnSegmentacion.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
 			this.btnSegmentacion.Rotation = 0D;
@@ -244,7 +246,7 @@
 			this.btnVisitas.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnVisitas.IconSize = 20;
 			this.btnVisitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnVisitas.Location = new System.Drawing.Point(0, 501);
+			this.btnVisitas.Location = new System.Drawing.Point(0, 488);
 			this.btnVisitas.Name = "btnVisitas";
 			this.btnVisitas.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
 			this.btnVisitas.Rotation = 0D;
@@ -270,7 +272,7 @@
 			this.btnPromociones.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnPromociones.IconSize = 20;
 			this.btnPromociones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnPromociones.Location = new System.Drawing.Point(0, 456);
+			this.btnPromociones.Location = new System.Drawing.Point(0, 443);
 			this.btnPromociones.Name = "btnPromociones";
 			this.btnPromociones.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
 			this.btnPromociones.Rotation = 0D;
@@ -291,7 +293,7 @@
 			this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpPedidos);
 			this.pnlEmpGestionPedidos.Controls.Add(this.btnEmpBorradores);
 			this.pnlEmpGestionPedidos.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlEmpGestionPedidos.Location = new System.Drawing.Point(0, 209);
+			this.pnlEmpGestionPedidos.Location = new System.Drawing.Point(0, 196);
 			this.pnlEmpGestionPedidos.Name = "pnlEmpGestionPedidos";
 			this.pnlEmpGestionPedidos.Size = new System.Drawing.Size(264, 247);
 			this.pnlEmpGestionPedidos.TabIndex = 3;
@@ -424,7 +426,7 @@
 			this.btnEmpGestionPedidos.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnEmpGestionPedidos.IconSize = 20;
 			this.btnEmpGestionPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnEmpGestionPedidos.Location = new System.Drawing.Point(0, 164);
+			this.btnEmpGestionPedidos.Location = new System.Drawing.Point(0, 151);
 			this.btnEmpGestionPedidos.Name = "btnEmpGestionPedidos";
 			this.btnEmpGestionPedidos.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
 			this.btnEmpGestionPedidos.Rotation = 0D;
@@ -442,7 +444,7 @@
 			this.pnlEmpGestionProductos.Controls.Add(this.btnEmpProductoXZona);
 			this.pnlEmpGestionProductos.Controls.Add(this.btnEmpProducto);
 			this.pnlEmpGestionProductos.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlEmpGestionProductos.Location = new System.Drawing.Point(0, 58);
+			this.pnlEmpGestionProductos.Location = new System.Drawing.Point(0, 45);
 			this.pnlEmpGestionProductos.Name = "pnlEmpGestionProductos";
 			this.pnlEmpGestionProductos.Size = new System.Drawing.Size(264, 106);
 			this.pnlEmpGestionProductos.TabIndex = 1;
@@ -510,7 +512,7 @@
 			this.btnEmpGestionProductos.Name = "btnEmpGestionProductos";
 			this.btnEmpGestionProductos.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
 			this.btnEmpGestionProductos.Rotation = 0D;
-			this.btnEmpGestionProductos.Size = new System.Drawing.Size(264, 58);
+			this.btnEmpGestionProductos.Size = new System.Drawing.Size(264, 45);
 			this.btnEmpGestionProductos.TabIndex = 0;
 			this.btnEmpGestionProductos.Text = "  Gestión de Productos";
 			this.btnEmpGestionProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -536,7 +538,7 @@
 			this.pnlJefeDeVentas.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlJefeDeVentas.Location = new System.Drawing.Point(0, 0);
 			this.pnlJefeDeVentas.Name = "pnlJefeDeVentas";
-			this.pnlJefeDeVentas.Size = new System.Drawing.Size(264, 1050);
+			this.pnlJefeDeVentas.Size = new System.Drawing.Size(264, 1186);
 			this.pnlJefeDeVentas.TabIndex = 0;
 			this.pnlJefeDeVentas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlJefeDeVentas_MouseDown);
 			// 
@@ -553,7 +555,7 @@
 			this.btnPerfil.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnPerfil.IconSize = 20;
 			this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnPerfil.Location = new System.Drawing.Point(0, 1101);
+			this.btnPerfil.Location = new System.Drawing.Point(0, 1136);
 			this.btnPerfil.Name = "btnPerfil";
 			this.btnPerfil.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
 			this.btnPerfil.Rotation = 0D;
@@ -568,12 +570,36 @@
 			// 
 			// pnlGestionClientes
 			// 
+			this.pnlGestionClientes.Controls.Add(this.btnReporteClientes);
 			this.pnlGestionClientes.Controls.Add(this.btnClientes);
 			this.pnlGestionClientes.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlGestionClientes.Location = new System.Drawing.Point(0, 1044);
+			this.pnlGestionClientes.Location = new System.Drawing.Point(0, 1038);
 			this.pnlGestionClientes.Name = "pnlGestionClientes";
-			this.pnlGestionClientes.Size = new System.Drawing.Size(264, 57);
+			this.pnlGestionClientes.Size = new System.Drawing.Size(264, 98);
 			this.pnlGestionClientes.TabIndex = 30;
+			// 
+			// btnReporteClientes
+			// 
+			this.btnReporteClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+			this.btnReporteClientes.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnReporteClientes.FlatAppearance.BorderSize = 0;
+			this.btnReporteClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnReporteClientes.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+			this.btnReporteClientes.ForeColor = System.Drawing.Color.Gainsboro;
+			this.btnReporteClientes.IconChar = FontAwesome.Sharp.IconChar.None;
+			this.btnReporteClientes.IconColor = System.Drawing.Color.Black;
+			this.btnReporteClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnReporteClientes.IconSize = 16;
+			this.btnReporteClientes.Location = new System.Drawing.Point(0, 45);
+			this.btnReporteClientes.Name = "btnReporteClientes";
+			this.btnReporteClientes.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+			this.btnReporteClientes.Rotation = 0D;
+			this.btnReporteClientes.Size = new System.Drawing.Size(264, 45);
+			this.btnReporteClientes.TabIndex = 2;
+			this.btnReporteClientes.Text = "Reporte";
+			this.btnReporteClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnReporteClientes.UseVisualStyleBackColor = false;
+			this.btnReporteClientes.Click += new System.EventHandler(this.btnReporteClientes_Click);
 			// 
 			// btnClientes
 			// 
@@ -591,7 +617,7 @@
 			this.btnClientes.Name = "btnClientes";
 			this.btnClientes.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
 			this.btnClientes.Rotation = 0D;
-			this.btnClientes.Size = new System.Drawing.Size(264, 49);
+			this.btnClientes.Size = new System.Drawing.Size(264, 45);
 			this.btnClientes.TabIndex = 1;
 			this.btnClientes.Text = "Clientes";
 			this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -611,7 +637,7 @@
 			this.btnGestionClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnGestionClientes.IconSize = 20;
 			this.btnGestionClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnGestionClientes.Location = new System.Drawing.Point(0, 999);
+			this.btnGestionClientes.Location = new System.Drawing.Point(0, 993);
 			this.btnGestionClientes.Name = "btnGestionClientes";
 			this.btnGestionClientes.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
 			this.btnGestionClientes.Rotation = 0D;
@@ -637,7 +663,7 @@
 			this.btnCumplimientoDeMetas.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnCumplimientoDeMetas.IconSize = 20;
 			this.btnCumplimientoDeMetas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnCumplimientoDeMetas.Location = new System.Drawing.Point(0, 954);
+			this.btnCumplimientoDeMetas.Location = new System.Drawing.Point(0, 948);
 			this.btnCumplimientoDeMetas.Name = "btnCumplimientoDeMetas";
 			this.btnCumplimientoDeMetas.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
 			this.btnCumplimientoDeMetas.Rotation = 0D;
@@ -652,41 +678,64 @@
 			// 
 			// pnlGestionPedidos
 			// 
-			this.pnlGestionPedidos.Controls.Add(this.iconButton1);
+			this.pnlGestionPedidos.Controls.Add(this.btnPedReporte);
+			this.pnlGestionPedidos.Controls.Add(this.btnQuejaJefe);
 			this.pnlGestionPedidos.Controls.Add(this.btnGuiaDeRemision);
 			this.pnlGestionPedidos.Controls.Add(this.btnFactura);
-			this.pnlGestionPedidos.Controls.Add(this.btnPedReporte);
 			this.pnlGestionPedidos.Controls.Add(this.btnAprobados);
 			this.pnlGestionPedidos.Controls.Add(this.btnPedido);
 			this.pnlGestionPedidos.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlGestionPedidos.Location = new System.Drawing.Point(0, 661);
 			this.pnlGestionPedidos.Name = "pnlGestionPedidos";
-			this.pnlGestionPedidos.Size = new System.Drawing.Size(264, 293);
+			this.pnlGestionPedidos.Size = new System.Drawing.Size(264, 287);
 			this.pnlGestionPedidos.TabIndex = 26;
 			this.pnlGestionPedidos.Visible = false;
 			// 
-			// iconButton1
+			// btnPedReporte
 			// 
-			this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-			this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-			this.iconButton1.FlatAppearance.BorderSize = 0;
-			this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-			this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
-			this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-			this.iconButton1.IconColor = System.Drawing.Color.Black;
-			this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.iconButton1.IconSize = 16;
-			this.iconButton1.Location = new System.Drawing.Point(0, 233);
-			this.iconButton1.Name = "iconButton1";
-			this.iconButton1.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-			this.iconButton1.Rotation = 0D;
-			this.iconButton1.Size = new System.Drawing.Size(264, 45);
-			this.iconButton1.TabIndex = 13;
-			this.iconButton1.Text = "Quejas";
-			this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.iconButton1.UseVisualStyleBackColor = false;
-			this.iconButton1.Click += new System.EventHandler(this.btnEmpQuejas_Click);
+			this.btnPedReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+			this.btnPedReporte.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnPedReporte.FlatAppearance.BorderSize = 0;
+			this.btnPedReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnPedReporte.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+			this.btnPedReporte.ForeColor = System.Drawing.Color.Gainsboro;
+			this.btnPedReporte.IconChar = FontAwesome.Sharp.IconChar.None;
+			this.btnPedReporte.IconColor = System.Drawing.Color.Black;
+			this.btnPedReporte.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnPedReporte.IconSize = 16;
+			this.btnPedReporte.Location = new System.Drawing.Point(0, 233);
+			this.btnPedReporte.Name = "btnPedReporte";
+			this.btnPedReporte.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+			this.btnPedReporte.Rotation = 0D;
+			this.btnPedReporte.Size = new System.Drawing.Size(264, 45);
+			this.btnPedReporte.TabIndex = 14;
+			this.btnPedReporte.Text = "Reportes";
+			this.btnPedReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnPedReporte.UseVisualStyleBackColor = false;
+			this.btnPedReporte.Click += new System.EventHandler(this.btnPedReporte_Click);
+			// 
+			// btnQuejaJefe
+			// 
+			this.btnQuejaJefe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+			this.btnQuejaJefe.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnQuejaJefe.FlatAppearance.BorderSize = 0;
+			this.btnQuejaJefe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnQuejaJefe.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+			this.btnQuejaJefe.ForeColor = System.Drawing.Color.Gainsboro;
+			this.btnQuejaJefe.IconChar = FontAwesome.Sharp.IconChar.None;
+			this.btnQuejaJefe.IconColor = System.Drawing.Color.Black;
+			this.btnQuejaJefe.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnQuejaJefe.IconSize = 16;
+			this.btnQuejaJefe.Location = new System.Drawing.Point(0, 188);
+			this.btnQuejaJefe.Name = "btnQuejaJefe";
+			this.btnQuejaJefe.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+			this.btnQuejaJefe.Rotation = 0D;
+			this.btnQuejaJefe.Size = new System.Drawing.Size(264, 45);
+			this.btnQuejaJefe.TabIndex = 13;
+			this.btnQuejaJefe.Text = "Quejas";
+			this.btnQuejaJefe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnQuejaJefe.UseVisualStyleBackColor = false;
+			this.btnQuejaJefe.Click += new System.EventHandler(this.btnQuejaJefe_Click);
 			// 
 			// btnGuiaDeRemision
 			// 
@@ -700,7 +749,7 @@
 			this.btnGuiaDeRemision.IconColor = System.Drawing.Color.Black;
 			this.btnGuiaDeRemision.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnGuiaDeRemision.IconSize = 16;
-			this.btnGuiaDeRemision.Location = new System.Drawing.Point(0, 188);
+			this.btnGuiaDeRemision.Location = new System.Drawing.Point(0, 143);
 			this.btnGuiaDeRemision.Name = "btnGuiaDeRemision";
 			this.btnGuiaDeRemision.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
 			this.btnGuiaDeRemision.Rotation = 0D;
@@ -723,7 +772,7 @@
 			this.btnFactura.IconColor = System.Drawing.Color.Black;
 			this.btnFactura.IconFont = FontAwesome.Sharp.IconFont.Auto;
 			this.btnFactura.IconSize = 16;
-			this.btnFactura.Location = new System.Drawing.Point(0, 143);
+			this.btnFactura.Location = new System.Drawing.Point(0, 98);
 			this.btnFactura.Name = "btnFactura";
 			this.btnFactura.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
 			this.btnFactura.Rotation = 0D;
@@ -733,29 +782,6 @@
 			this.btnFactura.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnFactura.UseVisualStyleBackColor = false;
 			this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
-			// 
-			// btnPedReporte
-			// 
-			this.btnPedReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-			this.btnPedReporte.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnPedReporte.FlatAppearance.BorderSize = 0;
-			this.btnPedReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnPedReporte.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-			this.btnPedReporte.ForeColor = System.Drawing.Color.Gainsboro;
-			this.btnPedReporte.IconChar = FontAwesome.Sharp.IconChar.None;
-			this.btnPedReporte.IconColor = System.Drawing.Color.Black;
-			this.btnPedReporte.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.btnPedReporte.IconSize = 16;
-			this.btnPedReporte.Location = new System.Drawing.Point(0, 98);
-			this.btnPedReporte.Name = "btnPedReporte";
-			this.btnPedReporte.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-			this.btnPedReporte.Rotation = 0D;
-			this.btnPedReporte.Size = new System.Drawing.Size(264, 45);
-			this.btnPedReporte.TabIndex = 10;
-			this.btnPedReporte.Text = "Reporte";
-			this.btnPedReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnPedReporte.UseVisualStyleBackColor = false;
-			this.btnPedReporte.Click += new System.EventHandler(this.btnPedReporte_Click);
 			// 
 			// btnAprobados
 			// 
@@ -839,6 +865,29 @@
 			this.pnlGestionEmpleados.Name = "pnlGestionEmpleados";
 			this.pnlGestionEmpleados.Size = new System.Drawing.Size(264, 144);
 			this.pnlGestionEmpleados.TabIndex = 5;
+			// 
+			// btnReporteEmpleados
+			// 
+			this.btnReporteEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
+			this.btnReporteEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnReporteEmpleados.FlatAppearance.BorderSize = 0;
+			this.btnReporteEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnReporteEmpleados.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+			this.btnReporteEmpleados.ForeColor = System.Drawing.Color.Gainsboro;
+			this.btnReporteEmpleados.IconChar = FontAwesome.Sharp.IconChar.None;
+			this.btnReporteEmpleados.IconColor = System.Drawing.Color.Black;
+			this.btnReporteEmpleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnReporteEmpleados.IconSize = 16;
+			this.btnReporteEmpleados.Location = new System.Drawing.Point(0, 90);
+			this.btnReporteEmpleados.Name = "btnReporteEmpleados";
+			this.btnReporteEmpleados.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
+			this.btnReporteEmpleados.Rotation = 0D;
+			this.btnReporteEmpleados.Size = new System.Drawing.Size(264, 45);
+			this.btnReporteEmpleados.TabIndex = 11;
+			this.btnReporteEmpleados.Text = "Reporte";
+			this.btnReporteEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnReporteEmpleados.UseVisualStyleBackColor = false;
+			this.btnReporteEmpleados.Click += new System.EventHandler(this.btnReporteEmpleados_Click);
 			// 
 			// btnCarteras
 			// 
@@ -1151,6 +1200,7 @@
 			// pnlCabecera
 			// 
 			this.pnlCabecera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+			this.pnlCabecera.Controls.Add(this.btnRecarga);
 			this.pnlCabecera.Controls.Add(this.btnBuscar);
 			this.pnlCabecera.Controls.Add(this.lblCountRows);
 			this.pnlCabecera.Controls.Add(this.btnLeft);
@@ -1166,6 +1216,28 @@
 			this.pnlCabecera.Name = "pnlCabecera";
 			this.pnlCabecera.Size = new System.Drawing.Size(1260, 75);
 			this.pnlCabecera.TabIndex = 0;
+			// 
+			// btnRecarga
+			// 
+			this.btnRecarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+			this.btnRecarga.Dock = System.Windows.Forms.DockStyle.Right;
+			this.btnRecarga.FlatAppearance.BorderSize = 0;
+			this.btnRecarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnRecarga.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+			this.btnRecarga.ForeColor = System.Drawing.Color.Gainsboro;
+			this.btnRecarga.IconChar = FontAwesome.Sharp.IconChar.Sync;
+			this.btnRecarga.IconColor = System.Drawing.Color.Gainsboro;
+			this.btnRecarga.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnRecarga.IconSize = 16;
+			this.btnRecarga.Location = new System.Drawing.Point(1152, 32);
+			this.btnRecarga.Name = "btnRecarga";
+			this.btnRecarga.Rotation = 0D;
+			this.btnRecarga.Size = new System.Drawing.Size(36, 43);
+			this.btnRecarga.TabIndex = 22;
+			this.btnRecarga.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnRecarga.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnRecarga.UseVisualStyleBackColor = false;
+			this.btnRecarga.Click += new System.EventHandler(this.btnRecarga_Click);
 			// 
 			// btnBuscar
 			// 
@@ -1476,29 +1548,6 @@
 			this.btnSalir.UseVisualStyleBackColor = false;
 			this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
 			// 
-			// btnReporteEmpleados
-			// 
-			this.btnReporteEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(60)))), ((int)(((byte)(67)))));
-			this.btnReporteEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnReporteEmpleados.FlatAppearance.BorderSize = 0;
-			this.btnReporteEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnReporteEmpleados.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-			this.btnReporteEmpleados.ForeColor = System.Drawing.Color.Gainsboro;
-			this.btnReporteEmpleados.IconChar = FontAwesome.Sharp.IconChar.None;
-			this.btnReporteEmpleados.IconColor = System.Drawing.Color.Black;
-			this.btnReporteEmpleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
-			this.btnReporteEmpleados.IconSize = 16;
-			this.btnReporteEmpleados.Location = new System.Drawing.Point(0, 90);
-			this.btnReporteEmpleados.Name = "btnReporteEmpleados";
-			this.btnReporteEmpleados.Padding = new System.Windows.Forms.Padding(46, 0, 0, 0);
-			this.btnReporteEmpleados.Rotation = 0D;
-			this.btnReporteEmpleados.Size = new System.Drawing.Size(264, 45);
-			this.btnReporteEmpleados.TabIndex = 11;
-			this.btnReporteEmpleados.Text = "Reporte";
-			this.btnReporteEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnReporteEmpleados.UseVisualStyleBackColor = false;
-			this.btnReporteEmpleados.Click += new System.EventHandler(this.btnReporteEmpleados_Click);
-			// 
 			// frmVentanaPrincipal
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1594,10 +1643,9 @@
         private FontAwesome.Sharp.IconButton btnSegmentacion;
         private FontAwesome.Sharp.IconButton btnEmpPerfil;
         private FontAwesome.Sharp.IconButton btnPerfil;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnQuejaJefe;
         private FontAwesome.Sharp.IconButton btnGuiaDeRemision;
         private FontAwesome.Sharp.IconButton btnFactura;
-        private FontAwesome.Sharp.IconButton btnPedReporte;
         private FontAwesome.Sharp.IconButton btnAprobados;
         private FontAwesome.Sharp.IconButton btnEmpQuejas;
         private FontAwesome.Sharp.IconButton btnEmpGestionGuiasRemision;
@@ -1605,5 +1653,8 @@
         private FontAwesome.Sharp.IconButton btnEmpPedidos;
         private FontAwesome.Sharp.IconButton btnEmpBorradores;
 		private FontAwesome.Sharp.IconButton btnReporteEmpleados;
+        private FontAwesome.Sharp.IconButton btnReporteClientes;
+        private FontAwesome.Sharp.IconButton btnPedReporte;
+		private FontAwesome.Sharp.IconButton btnRecarga;
 	}
 }

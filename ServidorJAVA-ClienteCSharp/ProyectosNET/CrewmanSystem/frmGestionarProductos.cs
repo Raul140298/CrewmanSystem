@@ -15,6 +15,7 @@ namespace CrewmanSystem
 		public static ProductoWS.ProductoWSClient daoProducto;
 		public static ProductoWS.producto productoSeleccionado;
 		public static DataGridView dgv;
+		public ProductoWS.producto[] misProductos;
 
 		public frmGestionarProductos()
 		{
@@ -22,7 +23,7 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgv = dgvProductos;
 			dgvProductos.AutoGenerateColumns = false;
-			ProductoWS.producto[] misProductos = daoProducto.listarProductos("", "", "", "");
+			misProductos = daoProducto.listarProductos("", "", "", "");
 			if (misProductos != null)
 			{
 				dgvProductos.DataSource = new BindingList<ProductoWS.producto>(misProductos.ToArray());
@@ -84,5 +85,18 @@ namespace CrewmanSystem
 			productoSeleccionado = (ProductoWS.producto)dgv.CurrentRow.DataBoundItem;
 			daoProducto.eliminarProducto(productoSeleccionado.idProducto);
 		}
-    }
+
+		public void recargarDGV()
+		{
+			misProductos = daoProducto.listarProductos("", "", "", "");
+			if (misProductos != null)
+			{
+				dgvProductos.DataSource = new BindingList<ProductoWS.producto>(misProductos.ToArray());
+			}
+			else
+			{
+				dgvProductos.DataSource = new BindingList<ProductoWS.producto>();
+			}
+		}
+	}
 }

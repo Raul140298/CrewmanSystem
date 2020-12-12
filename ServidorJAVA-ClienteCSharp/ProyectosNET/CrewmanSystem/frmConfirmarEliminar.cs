@@ -12,6 +12,8 @@ namespace CrewmanSystem
 {
 	public partial class frmConfirmarEliminar : Form
 	{
+		public frmVentanaPrincipal ventanaPrincipal;
+
 		public frmConfirmarEliminar()
 		{
 			InitializeComponent();
@@ -21,6 +23,7 @@ namespace CrewmanSystem
 		{
 			this.Hide();
 			this.Close();
+			frmVentanaPrincipal.elim.BackColor = Program.color0;
 			this.DialogResult = DialogResult.OK;
 		}
 

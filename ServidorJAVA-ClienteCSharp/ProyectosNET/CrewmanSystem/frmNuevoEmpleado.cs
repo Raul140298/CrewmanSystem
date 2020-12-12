@@ -15,6 +15,7 @@ namespace CrewmanSystem
 	{
         private ZonaWS.ZonaWSClient daoZona;
         private EmpleadoWS.EmpleadoWSClient daoEmpleado;
+        private EmpleadoXZonaWS.EmpleadoXZonaWSClient daoEmpleadoXZona;
         private string[] cargos = { "VENDEDOR", "JEFE DE VENTAS" };
         private String ruta;
         private byte[] foto = null;
@@ -24,27 +25,21 @@ namespace CrewmanSystem
             InitializeComponent();
             daoZona = new ZonaWS.ZonaWSClient();
             daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
+            daoEmpleadoXZona = new EmpleadoXZonaWS.EmpleadoXZonaWSClient();
             cboCargo.DataSource = cargos;
             cboCargo.SelectedIndex = 0;
             cboCargo.Enabled = false;
 
-            ZonaWS.zona[] auxZonas = daoZona.listarZonas();
-            ZonaWS.zona[] miLista = new ZonaWS.zona[auxZonas.Length + 1];
-            ZonaWS.zona zonaPorDefecto = new ZonaWS.zona();
-            zonaPorDefecto.idZona = 0;
-            zonaPorDefecto.nombre = "Ninguno";
-            miLista[0] = zonaPorDefecto;
-            for (int i = 0; i < auxZonas.Length; i++) miLista[i+1] = auxZonas[i];
-
+            ZonaWS.zona[] miLista = daoZona.listarZonas();
             BindingList<ZonaWS.zona> listaZonas = new BindingList<ZonaWS.zona>(miLista.ToArray());
             cboZona.DataSource= listaZonas;
             cboZona.ValueMember = "idZona";
             cboZona.DisplayMember = "nombre";
-            cboZona.Enabled = false;
+            cboZona.SelectedIndex = 0;
             txtSumaVentas.Enabled = false;
 
             if (frmVentanaPrincipal.nBtn == 1)
-            {   //OBTNER DATOS DE FILA SELECCIONADA
+            {   
                 EmpleadoWS.empleado miEmpleado;
                 if (Program.pantallas[Program.pantallas.Count - 1].Formulario.Name == "frmGestionarEmpleados")
                 {
@@ -202,7 +197,21 @@ namespace CrewmanSystem
                 {
                     int resultado = daoEmpleado.insertarEmpleado(empleado);
                     txtID.Text = resultado.ToString();
+                    empleado.idEmpleado = resultado;
                     if (resultado == 0)
+                    {
+                        MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    EmpleadoXZonaWS.empleadoXZona exz = new EmpleadoXZonaWS.empleadoXZona();
+                    exz.empleado = new EmpleadoXZonaWS.empleado();
+                    exz.empleado.idEmpleado = empleado.idEmpleado;
+                    exz.zona = new EmpleadoXZonaWS.zona();
+                    exz.zona.idZona = empleado.zona.idZona;
+                    int resultado2 = daoEmpleadoXZona.insertarEmpleadoXZona(exz);
+
+                    if (resultado2 == 0)
                     {
                         MessageBox.Show("No se insertó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
