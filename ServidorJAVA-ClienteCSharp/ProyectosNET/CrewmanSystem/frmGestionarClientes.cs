@@ -24,11 +24,7 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgv = dgvClientes;
 			dgvClientes.AutoGenerateColumns = false;
-			ClienteWS.cliente[] misClientes = daoCliente.listarClientes("","",0);
-			if (misClientes != null)
-				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
-			else
-				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>();
+			recargarDGV();
 
 			#region colores de seleccion
 			dgvClientes.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
@@ -100,5 +96,13 @@ namespace CrewmanSystem
 			if(formMostrarCliente.ShowDialog() == DialogResult.OK) { 
             }
         }
-    }
+		public void recargarDGV()
+		{
+			ClienteWS.cliente[] misClientes = daoCliente.listarClientes("", "", 0);
+			if (misClientes != null)
+				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
+			else
+				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>();
+		}
+	}
 }
