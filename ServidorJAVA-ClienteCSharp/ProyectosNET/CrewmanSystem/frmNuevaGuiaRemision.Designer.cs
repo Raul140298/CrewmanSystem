@@ -45,12 +45,11 @@
             // txtIdGuiaRemision
             // 
             this.txtIdGuiaRemision.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtIdGuiaRemision.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdGuiaRemision.Enabled = false;
             this.txtIdGuiaRemision.Location = new System.Drawing.Point(251, 33);
             this.txtIdGuiaRemision.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdGuiaRemision.Name = "txtIdGuiaRemision";
-            this.txtIdGuiaRemision.Size = new System.Drawing.Size(97, 15);
+            this.txtIdGuiaRemision.Size = new System.Drawing.Size(97, 22);
             this.txtIdGuiaRemision.TabIndex = 112;
             // 
             // label9
@@ -66,12 +65,11 @@
             // txtIdPedido
             // 
             this.txtIdPedido.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtIdPedido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdPedido.Enabled = false;
             this.txtIdPedido.Location = new System.Drawing.Point(251, 70);
             this.txtIdPedido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdPedido.Name = "txtIdPedido";
-            this.txtIdPedido.Size = new System.Drawing.Size(97, 15);
+            this.txtIdPedido.Size = new System.Drawing.Size(97, 22);
             this.txtIdPedido.TabIndex = 110;
             // 
             // btnBuscarPedido
@@ -104,7 +102,7 @@
             // label2
             // 
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Location = new System.Drawing.Point(59, 127);
+            this.label2.Location = new System.Drawing.Point(60, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(179, 22);
             this.label2.TabIndex = 113;
@@ -113,17 +111,16 @@
             // 
             // txtMotivoTraslado
             // 
-            this.txtMotivoTraslado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMotivoTraslado.Location = new System.Drawing.Point(251, 127);
+            this.txtMotivoTraslado.Location = new System.Drawing.Point(251, 109);
             this.txtMotivoTraslado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMotivoTraslado.Name = "txtMotivoTraslado";
-            this.txtMotivoTraslado.Size = new System.Drawing.Size(263, 15);
+            this.txtMotivoTraslado.Size = new System.Drawing.Size(263, 22);
             this.txtMotivoTraslado.TabIndex = 114;
             // 
             // label4
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Location = new System.Drawing.Point(60, 254);
+            this.label4.Location = new System.Drawing.Point(58, 189);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(179, 22);
             this.label4.TabIndex = 121;
@@ -133,7 +130,7 @@
             // lblID
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Location = new System.Drawing.Point(59, 190);
+            this.lblID.Location = new System.Drawing.Point(60, 151);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(179, 22);
             this.lblID.TabIndex = 120;
@@ -142,7 +139,7 @@
             // 
             // dtpRangoIniTraslado
             // 
-            this.dtpRangoIniTraslado.Location = new System.Drawing.Point(251, 254);
+            this.dtpRangoIniTraslado.Location = new System.Drawing.Point(251, 187);
             this.dtpRangoIniTraslado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpRangoIniTraslado.Name = "dtpRangoIniTraslado";
             this.dtpRangoIniTraslado.Size = new System.Drawing.Size(263, 22);
@@ -150,7 +147,7 @@
             // 
             // dtpRangoIniRegistro
             // 
-            this.dtpRangoIniRegistro.Location = new System.Drawing.Point(251, 190);
+            this.dtpRangoIniRegistro.Location = new System.Drawing.Point(251, 149);
             this.dtpRangoIniRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpRangoIniRegistro.Name = "dtpRangoIniRegistro";
             this.dtpRangoIniRegistro.Size = new System.Drawing.Size(263, 22);
@@ -162,7 +159,7 @@
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(229, 337);
+            this.btnGuardar.Location = new System.Drawing.Point(251, 244);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(155, 30);
@@ -175,8 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(628, 425);
+            this.ClientSize = new System.Drawing.Size(628, 305);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblID);

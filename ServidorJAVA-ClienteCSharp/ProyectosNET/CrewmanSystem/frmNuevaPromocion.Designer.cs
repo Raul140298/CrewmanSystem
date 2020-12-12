@@ -180,7 +180,6 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcion.Location = new System.Drawing.Point(179, 123);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescripcion.Multiline = true;
@@ -190,22 +189,20 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Location = new System.Drawing.Point(179, 85);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(280, 15);
+            this.txtNombre.Size = new System.Drawing.Size(280, 22);
             this.txtNombre.TabIndex = 64;
             // 
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(179, 48);
             this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(85, 15);
+            this.txtId.Size = new System.Drawing.Size(85, 22);
             this.txtId.TabIndex = 63;
             // 
             // groupBox2
@@ -244,7 +241,6 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -271,7 +267,6 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel2.Controls.Add(this.btnGuardar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 809);
@@ -282,7 +277,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox3.Controls.Add(this.txtUnidades);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label4);
@@ -310,12 +304,11 @@
             // txtUnidades
             // 
             this.txtUnidades.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtUnidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUnidades.Enabled = false;
             this.txtUnidades.Location = new System.Drawing.Point(387, 101);
             this.txtUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUnidades.Name = "txtUnidades";
-            this.txtUnidades.Size = new System.Drawing.Size(72, 15);
+            this.txtUnidades.Size = new System.Drawing.Size(72, 22);
             this.txtUnidades.TabIndex = 89;
             // 
             // label5
@@ -341,12 +334,11 @@
             // txtCantUnidades
             // 
             this.txtCantUnidades.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtCantUnidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCantUnidades.Enabled = false;
             this.txtCantUnidades.Location = new System.Drawing.Point(179, 101);
             this.txtCantUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantUnidades.Name = "txtCantUnidades";
-            this.txtCantUnidades.Size = new System.Drawing.Size(81, 15);
+            this.txtCantUnidades.Size = new System.Drawing.Size(81, 22);
             this.txtCantUnidades.TabIndex = 86;
             // 
             // label3
@@ -361,13 +353,11 @@
             // 
             // txtPrecioReal
             // 
-            this.txtPrecioReal.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtPrecioReal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrecioReal.Enabled = false;
             this.txtPrecioReal.Location = new System.Drawing.Point(179, 139);
             this.txtPrecioReal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecioReal.Name = "txtPrecioReal";
-            this.txtPrecioReal.Size = new System.Drawing.Size(81, 15);
+            this.txtPrecioReal.Size = new System.Drawing.Size(81, 22);
             this.txtPrecioReal.TabIndex = 84;
             // 
             // btnBuscarProducto
@@ -423,31 +413,28 @@
             // 
             // txtStock
             // 
-            this.txtStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtStock.Location = new System.Drawing.Point(387, 178);
             this.txtStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(72, 15);
+            this.txtStock.Size = new System.Drawing.Size(72, 22);
             this.txtStock.TabIndex = 79;
             // 
             // txtDescuento
             // 
-            this.txtDescuento.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescuento.Location = new System.Drawing.Point(179, 178);
             this.txtDescuento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.Size = new System.Drawing.Size(81, 15);
+            this.txtDescuento.Size = new System.Drawing.Size(81, 22);
             this.txtDescuento.TabIndex = 78;
             // 
             // txtNombreProducto
             // 
             this.txtNombreProducto.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtNombreProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreProducto.Enabled = false;
             this.txtNombreProducto.Location = new System.Drawing.Point(179, 62);
             this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombreProducto.Name = "txtNombreProducto";
-            this.txtNombreProducto.Size = new System.Drawing.Size(280, 15);
+            this.txtNombreProducto.Size = new System.Drawing.Size(280, 22);
             this.txtNombreProducto.TabIndex = 77;
             // 
             // label8
@@ -482,7 +469,6 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel6.Controls.Add(this.groupBox3);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 430);
@@ -509,7 +495,7 @@
             this.dgvPromocionXProducto.AllowUserToDeleteRows = false;
             this.dgvPromocionXProducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvPromocionXProducto.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvPromocionXProducto.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgvPromocionXProducto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dgvPromocionXProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPromocionXProducto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -633,7 +619,6 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel8.Location = new System.Drawing.Point(751, 0);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -643,7 +628,6 @@
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
