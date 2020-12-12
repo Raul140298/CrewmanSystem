@@ -43,6 +43,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel2.Controls.Add(this.btnGuardar);
             this.panel2.Controls.Add(this.cboFamilia);
             this.panel2.Controls.Add(this.txtDescripcion);
@@ -70,6 +71,7 @@
             // cboFamilia
             // 
             this.cboFamilia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboFamilia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboFamilia.FormattingEnabled = true;
             this.cboFamilia.Location = new System.Drawing.Point(6, 123);
             this.cboFamilia.Name = "cboFamilia";
@@ -78,22 +80,25 @@
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcion.Location = new System.Drawing.Point(6, 79);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(280, 22);
+            this.txtDescripcion.Size = new System.Drawing.Size(280, 15);
             this.txtDescripcion.TabIndex = 18;
             // 
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(6, 38);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(47, 22);
+            this.txtId.Size = new System.Drawing.Size(47, 15);
             this.txtId.TabIndex = 17;
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblID);

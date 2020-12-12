@@ -72,6 +72,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.pbFoto);
             this.panel2.Controls.Add(this.groupBox3);
@@ -87,16 +88,19 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(569, 49);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(31, 23);
             this.button1.TabIndex = 134;
             this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pbFoto
             // 
+            this.pbFoto.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbFoto.Location = new System.Drawing.Point(408, 49);
             this.pbFoto.Name = "pbFoto";
@@ -107,6 +111,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.txtSumaVentas);
             this.groupBox3.Controls.Add(this.label1);
@@ -134,10 +139,11 @@
             // 
             // txtSumaVentas
             // 
+            this.txtSumaVentas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSumaVentas.Location = new System.Drawing.Point(171, 36);
             this.txtSumaVentas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSumaVentas.Name = "txtSumaVentas";
-            this.txtSumaVentas.Size = new System.Drawing.Size(150, 22);
+            this.txtSumaVentas.Size = new System.Drawing.Size(150, 15);
             this.txtSumaVentas.TabIndex = 129;
             // 
             // label1
@@ -153,6 +159,7 @@
             // cboCargo
             // 
             this.cboCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboCargo.FormattingEnabled = true;
             this.cboCargo.Location = new System.Drawing.Point(171, 113);
             this.cboCargo.Margin = new System.Windows.Forms.Padding(4);
@@ -172,10 +179,11 @@
             // 
             // txtObjetivoVentas
             // 
+            this.txtObjetivoVentas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtObjetivoVentas.Location = new System.Drawing.Point(171, 75);
             this.txtObjetivoVentas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtObjetivoVentas.Name = "txtObjetivoVentas";
-            this.txtObjetivoVentas.Size = new System.Drawing.Size(150, 22);
+            this.txtObjetivoVentas.Size = new System.Drawing.Size(150, 15);
             this.txtObjetivoVentas.TabIndex = 8;
             // 
             // label12
@@ -191,6 +199,7 @@
             // cboZona
             // 
             this.cboZona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboZona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboZona.FormattingEnabled = true;
             this.cboZona.Location = new System.Drawing.Point(171, 151);
             this.cboZona.Margin = new System.Windows.Forms.Padding(4);
@@ -200,6 +209,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.txtTelefono1);
             this.groupBox2.Controls.Add(this.txtTelefono2);
@@ -225,18 +235,20 @@
             // 
             // txtTelefono1
             // 
+            this.txtTelefono1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefono1.Location = new System.Drawing.Point(171, 31);
             this.txtTelefono1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefono1.Name = "txtTelefono1";
-            this.txtTelefono1.Size = new System.Drawing.Size(136, 22);
+            this.txtTelefono1.Size = new System.Drawing.Size(136, 15);
             this.txtTelefono1.TabIndex = 5;
             // 
             // txtTelefono2
             // 
+            this.txtTelefono2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefono2.Location = new System.Drawing.Point(171, 65);
             this.txtTelefono2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefono2.Name = "txtTelefono2";
-            this.txtTelefono2.Size = new System.Drawing.Size(136, 22);
+            this.txtTelefono2.Size = new System.Drawing.Size(136, 15);
             this.txtTelefono2.TabIndex = 6;
             // 
             // label8
@@ -261,14 +273,16 @@
             // 
             // txtCorreo
             // 
+            this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCorreo.Location = new System.Drawing.Point(171, 101);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(316, 22);
+            this.txtCorreo.Size = new System.Drawing.Size(316, 15);
             this.txtCorreo.TabIndex = 7;
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.txtApMaterno);
@@ -292,43 +306,48 @@
             // txtID
             // 
             this.txtID.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtID.Enabled = false;
             this.txtID.Location = new System.Drawing.Point(171, 32);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(81, 22);
+            this.txtID.Size = new System.Drawing.Size(81, 15);
             this.txtID.TabIndex = 94;
             // 
             // txtNombre
             // 
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Location = new System.Drawing.Point(171, 105);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(138, 22);
+            this.txtNombre.Size = new System.Drawing.Size(138, 15);
             this.txtNombre.TabIndex = 2;
             // 
             // txtApMaterno
             // 
+            this.txtApMaterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApMaterno.Location = new System.Drawing.Point(171, 177);
             this.txtApMaterno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApMaterno.Name = "txtApMaterno";
-            this.txtApMaterno.Size = new System.Drawing.Size(142, 22);
+            this.txtApMaterno.Size = new System.Drawing.Size(142, 15);
             this.txtApMaterno.TabIndex = 4;
             // 
             // txtDNI
             // 
+            this.txtDNI.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDNI.Location = new System.Drawing.Point(171, 67);
             this.txtDNI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(138, 22);
+            this.txtDNI.Size = new System.Drawing.Size(138, 15);
             this.txtDNI.TabIndex = 1;
             // 
             // txtApPaterno
             // 
+            this.txtApPaterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApPaterno.Location = new System.Drawing.Point(171, 141);
             this.txtApPaterno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApPaterno.Name = "txtApPaterno";
-            this.txtApPaterno.Size = new System.Drawing.Size(138, 22);
+            this.txtApPaterno.Size = new System.Drawing.Size(138, 15);
             this.txtApPaterno.TabIndex = 3;
             // 
             // label2

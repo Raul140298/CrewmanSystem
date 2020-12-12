@@ -45,11 +45,12 @@
             // txtIdGuiaRemision
             // 
             this.txtIdGuiaRemision.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtIdGuiaRemision.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdGuiaRemision.Enabled = false;
             this.txtIdGuiaRemision.Location = new System.Drawing.Point(251, 33);
             this.txtIdGuiaRemision.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdGuiaRemision.Name = "txtIdGuiaRemision";
-            this.txtIdGuiaRemision.Size = new System.Drawing.Size(97, 22);
+            this.txtIdGuiaRemision.Size = new System.Drawing.Size(97, 15);
             this.txtIdGuiaRemision.TabIndex = 112;
             // 
             // label9
@@ -65,11 +66,12 @@
             // txtIdPedido
             // 
             this.txtIdPedido.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtIdPedido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdPedido.Enabled = false;
             this.txtIdPedido.Location = new System.Drawing.Point(251, 70);
             this.txtIdPedido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdPedido.Name = "txtIdPedido";
-            this.txtIdPedido.Size = new System.Drawing.Size(97, 22);
+            this.txtIdPedido.Size = new System.Drawing.Size(97, 15);
             this.txtIdPedido.TabIndex = 110;
             // 
             // btnBuscarPedido
@@ -111,10 +113,11 @@
             // 
             // txtMotivoTraslado
             // 
+            this.txtMotivoTraslado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMotivoTraslado.Location = new System.Drawing.Point(251, 109);
             this.txtMotivoTraslado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMotivoTraslado.Name = "txtMotivoTraslado";
-            this.txtMotivoTraslado.Size = new System.Drawing.Size(263, 22);
+            this.txtMotivoTraslado.Size = new System.Drawing.Size(263, 15);
             this.txtMotivoTraslado.TabIndex = 114;
             // 
             // label4
@@ -172,6 +175,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(628, 305);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label4);
