@@ -510,6 +510,7 @@ namespace CrewmanSystem
 					break;
 				case "frmGestionarQuejas":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaQueja());
+					if (boton == 2) frmGestionarQuejas.eliminar();
 					if (boton == 4) ((frmGestionarQuejas)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarPromociones":

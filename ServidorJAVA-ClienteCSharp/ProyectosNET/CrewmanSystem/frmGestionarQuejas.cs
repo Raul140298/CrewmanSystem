@@ -13,14 +13,18 @@ namespace CrewmanSystem
 {
 	public partial class frmGestionarQuejas : Form
 	{
-		private QuejaWS.QuejaWSClient daoQueja;
+		public static QuejaWS.QuejaWSClient daoQueja;
 		private ReporteWS.ReporteWSClient daoReporte;
+		public static DataGridView dgv;
+		public static QuejaWS.queja quejaSeleccionada;
+		public QuejaWS.queja[] misQuejas;
 
 		public frmGestionarQuejas()
 		{
 			daoQueja = new QuejaWS.QuejaWSClient();
 			daoReporte = new ReporteWS.ReporteWSClient();
 			InitializeComponent();
+			dgv = dgvQuejas;
 
 			if (Program.empleado.cargo.idCargo == 1)
 			{
@@ -28,6 +32,7 @@ namespace CrewmanSystem
 			}
 			
 			dgvQuejas.AutoGenerateColumns = false;
+
 			recargarDGV();
 
 			#region colores de seleccion
@@ -77,9 +82,38 @@ namespace CrewmanSystem
 			}
 			catch (Exception) { }
 		}
+
+		public static void eliminar()
+		{
+			quejaSeleccionada = (QuejaWS.queja)dgv.CurrentRow.DataBoundItem;
+			daoQueja.eliminarQueja(quejaSeleccionada.idQueja);
+		}
+
+		private void dgvQuejas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			frmVentanaPrincipal.act.Enabled = false;
+			frmVentanaPrincipal.elim.Enabled = false;
+		}
+
+		private void dgvQuejas_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+		{
+			//Preguntar al profe
+			if (e.StateChanged != DataGridViewElementStates.Selected)
+			{
+				//frmVentanaPrincipal.act.Enabled = false;
+				//frmVentanaPrincipal.elim.Enabled = false;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+			}
+		}
+
 		public void recargarDGV()
 		{
-			QuejaWS.queja[] misQuejas = daoQueja.listarQuejas(Program.empleado.idEmpleado);
+			misQuejas = daoQueja.listarQuejas(Program.empleado.idEmpleado);
 			if (misQuejas != null)
 				dgvQuejas.DataSource = new BindingList<QuejaWS.queja>(misQuejas.ToArray());
 			else
