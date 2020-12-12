@@ -57,9 +57,15 @@ namespace CrewmanSystem
 
 			dgvPedidos.AutoGenerateColumns = false;
 			if (misPedidos != null)
+			{
 				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
+				lblNotFound.Visible = false;
+			}
 			else
+			{
 				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>();
+				lblNotFound.Visible = true;
+			}
 			if (Program.empleado.cargo.nombre == "VENDEDOR")
 			{
 				dgvPedidos.Columns["NOMBRE"].Visible = false;
