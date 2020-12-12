@@ -57,6 +57,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel2.Controls.Add(this.txtStockReservado);
             this.panel2.Controls.Add(this.txtStock);
             this.panel2.Controls.Add(this.txtCantidad);
@@ -77,32 +78,37 @@
             // 
             // txtStockReservado
             // 
+            this.txtStockReservado.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtStockReservado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtStockReservado.Enabled = false;
             this.txtStockReservado.Location = new System.Drawing.Point(5, 437);
             this.txtStockReservado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStockReservado.Name = "txtStockReservado";
-            this.txtStockReservado.Size = new System.Drawing.Size(280, 22);
+            this.txtStockReservado.Size = new System.Drawing.Size(280, 15);
             this.txtStockReservado.TabIndex = 57;
             // 
             // txtStock
             // 
+            this.txtStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtStock.Location = new System.Drawing.Point(5, 397);
             this.txtStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(280, 22);
+            this.txtStock.Size = new System.Drawing.Size(280, 15);
             this.txtStock.TabIndex = 56;
             // 
             // txtCantidad
             // 
+            this.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCantidad.Location = new System.Drawing.Point(6, 269);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(280, 22);
+            this.txtCantidad.Size = new System.Drawing.Size(280, 15);
             this.txtCantidad.TabIndex = 55;
             // 
             // cboUnidades
             // 
             this.cboUnidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboUnidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboUnidades.FormattingEnabled = true;
             this.cboUnidades.Location = new System.Drawing.Point(5, 314);
             this.cboUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -113,6 +119,7 @@
             // cboMarca
             // 
             this.cboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboMarca.FormattingEnabled = true;
             this.cboMarca.Location = new System.Drawing.Point(6, 169);
             this.cboMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -122,10 +129,11 @@
             // 
             // txtPrecioSugerido
             // 
+            this.txtPrecioSugerido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrecioSugerido.Location = new System.Drawing.Point(5, 358);
             this.txtPrecioSugerido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecioSugerido.Name = "txtPrecioSugerido";
-            this.txtPrecioSugerido.Size = new System.Drawing.Size(280, 22);
+            this.txtPrecioSugerido.Size = new System.Drawing.Size(280, 15);
             this.txtPrecioSugerido.TabIndex = 51;
             // 
             // btnGuardar
@@ -146,6 +154,7 @@
             // cboSubfamilia
             // 
             this.cboSubfamilia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSubfamilia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboSubfamilia.FormattingEnabled = true;
             this.cboSubfamilia.Location = new System.Drawing.Point(6, 123);
             this.cboSubfamilia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -155,7 +164,9 @@
             // 
             // cboFamilia
             // 
+            this.cboFamilia.BackColor = System.Drawing.SystemColors.Window;
             this.cboFamilia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboFamilia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboFamilia.FormattingEnabled = true;
             this.cboFamilia.Location = new System.Drawing.Point(6, 79);
             this.cboFamilia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -166,24 +177,27 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Location = new System.Drawing.Point(6, 217);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(280, 22);
+            this.txtNombre.Size = new System.Drawing.Size(280, 15);
             this.txtNombre.TabIndex = 18;
             // 
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(5, 38);
             this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(98, 22);
+            this.txtId.Size = new System.Drawing.Size(98, 15);
             this.txtId.TabIndex = 17;
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
