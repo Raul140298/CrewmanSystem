@@ -181,6 +181,7 @@ public class ReporteWS
         return arreglo;
     }
     
+    @WebMethod(operationName = "generarReporteQuejas")
     public byte[] generarReporteQuejas(@WebParam(name = "idJefe") int idJefe) {
         byte[] arreglo = null;
         try{
@@ -198,8 +199,7 @@ public class ReporteWS
             //Registramos el Driver
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Creamos el objeto Connection
-            Connection con = DriverManager.getConnection(DBManager.urlMySQL, 
-                    DBManager.user, DBManager.pass);
+            Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             
             //Creamos un HashMap para enviar los parámetros
             HashMap hm = new HashMap();

@@ -59,7 +59,7 @@ public class Main{
 //        gestionarMarcas();
 //        gestionarZonas();
 //        gestionarClientes();
-//        gestionarEmpleados();
+        gestionarEmpleados();
 //        gestionarProductos();
 //        gestionarProductoXZona();
 //        gestionarPromociones();
@@ -69,7 +69,7 @@ public class Main{
 //        gestionarFacturas();
 //        gestionarNotasDeCredito();
 //        gestionarGuiasDeRemision();
-        gestionarQuejas();
+//        gestionarQuejas();
 
 //        misZonas = daoZona.listar();
 //        Promocion promo = new Promocion();
@@ -334,7 +334,7 @@ public class Main{
     private static void gestionarEmpleados(){
 //        Cargo cargo=new Cargo("JEFE DE VENTAS");
 //        Cargo cargo=new Cargo(1, "EMPLEADO");
-//
+////
 //        Empleado empleado1= new Empleado(cargo,"71421991","Keiko","Montez","Monterroso",'F',"985745102","","keipoper@gmail.com");
 //        empleado1.setUsuario("keikomontmont");
 //        empleado1.setContraseña("matangalachanga");
