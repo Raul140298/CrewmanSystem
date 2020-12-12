@@ -495,9 +495,11 @@ namespace CrewmanSystem
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaZona());
 					if (boton == 2) frmGestionarZonas.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarZona());
+					//if (boton == 4) ((frmGestionarZonas)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarVisitas":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaVisita());
+					//if (boton == 4) ((frmGestionarVisitas)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarSubfamilias":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaSubfamilia());
@@ -508,6 +510,7 @@ namespace CrewmanSystem
 					break;
 				case "frmGestionarQuejas":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaQueja());
+					//if (boton == 4) ((frmGestionarQuejas)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarPromociones":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaPromocion());
@@ -522,6 +525,7 @@ namespace CrewmanSystem
 				case "frmGestionarProductosXZona":
 					if (boton == 0) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoProductoXZona());
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarProductoXZona());
+					//if (boton == 4) ((frmGestionarProductosXZona)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarProductos":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoProducto());
@@ -537,6 +541,7 @@ namespace CrewmanSystem
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoPedido());
 					if (boton == 2) frmGestionarPedidos.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarPedido(0));
+					//if (boton == 4) ((frmGestionarPedidos)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarAprobados":
 					if (boton == 2) frmGestionarAprobados.eliminar();
@@ -557,6 +562,7 @@ namespace CrewmanSystem
 				case "frmGestionarGuiasRemision":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaGuiaRemision());
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarGuiaRemision());
+					//if (boton == 4) ((frmGestionarGuiasRemision)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarFamilias":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaFamilia());
@@ -567,11 +573,13 @@ namespace CrewmanSystem
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaFactura());
 					if (boton == 2) frmGestionarFacturas.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarFactura(0));
+					//if (boton == 4) ((frmGestionarFacturas)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarEmpleados":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoEmpleado());
 					if (boton == 2) frmGestionarEmpleados.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarEmpleado());
+					//if (boton == 4) ((frmGestionarEmpleados)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmBuscarEmpleado":
 					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoEmpleado());
@@ -579,6 +587,7 @@ namespace CrewmanSystem
 				case "frmGestionarCarteras":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaCartera());
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarCartera());
+					//if (boton == 4) ((frmGestionarCarteras)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmBuscarCartera":
 					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaCartera());
@@ -587,6 +596,7 @@ namespace CrewmanSystem
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoCliente());
 					if (boton == 2) frmGestionarClientes.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarCliente());
+					//if (boton == 4) ((frmGestionarClientes)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmBuscarCliente":
 					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoCliente());
@@ -869,7 +879,6 @@ namespace CrewmanSystem
 			estado = BTNestado.nuevo;
 			estadoBotones();
 			llamarMetodosDAO((IconButton)sender, 0);
-			llamarMetodosDAO(null, 4);
 		}
 
 		private void btnActualizar_Click(object sender, EventArgs e)
@@ -877,7 +886,6 @@ namespace CrewmanSystem
 			estado = BTNestado.actualizar;
 			estadoBotones();
 			llamarMetodosDAO((IconButton)sender, 1);
-			//llamarMetodosDAO(null, 4);
 		}
 
 		private void btnEliminar_Click(object sender, EventArgs e)
