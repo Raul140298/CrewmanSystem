@@ -28,23 +28,16 @@ namespace CrewmanSystem
             cboCargo.SelectedIndex = 0;
             cboCargo.Enabled = false;
 
-            ZonaWS.zona[] auxZonas = daoZona.listarZonas();
-            ZonaWS.zona[] miLista = new ZonaWS.zona[auxZonas.Length + 1];
-            ZonaWS.zona zonaPorDefecto = new ZonaWS.zona();
-            zonaPorDefecto.idZona = 0;
-            zonaPorDefecto.nombre = "Ninguno";
-            miLista[0] = zonaPorDefecto;
-            for (int i = 0; i < auxZonas.Length; i++) miLista[i+1] = auxZonas[i];
-
+            ZonaWS.zona[] miLista = daoZona.listarZonas();
             BindingList<ZonaWS.zona> listaZonas = new BindingList<ZonaWS.zona>(miLista.ToArray());
             cboZona.DataSource= listaZonas;
             cboZona.ValueMember = "idZona";
             cboZona.DisplayMember = "nombre";
-            cboZona.Enabled = false;
+            cboZona.SelectedIndex = 0;
             txtSumaVentas.Enabled = false;
 
             if (frmVentanaPrincipal.nBtn == 1)
-            {   //OBTNER DATOS DE FILA SELECCIONADA
+            {   
                 EmpleadoWS.empleado miEmpleado;
                 if (Program.pantallas[Program.pantallas.Count - 1].Formulario.Name == "frmGestionarEmpleados")
                 {
@@ -201,6 +194,7 @@ namespace CrewmanSystem
                 if (frmVentanaPrincipal.nBtn == 0)
                 {
                     int resultado = daoEmpleado.insertarEmpleado(empleado);
+                    /* meter a la fuera si es necesario empleado x zona */
                     txtID.Text = resultado.ToString();
                     if (resultado == 0)
                     {

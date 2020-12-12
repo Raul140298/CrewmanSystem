@@ -771,6 +771,71 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.actualizarEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.actualizarPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.cambiarContraseñaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.eliminarEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.eliminarPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.empleado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.insertarEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.insertarPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.listarPorJefeVentasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.mostrarPersonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.obtenerEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.obtenerNumClientesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.obtenerNumVisitasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.permitirAccesoEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.persona.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EmpleadoWS\EmpleadoWS.wsdl" />
+    <None Include="Connected Services\EmpleadoWS\EmpleadoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PromocionXProductoWS\CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PromocionXProductoWS\CrewmanSystem.PromocionXProductoWS.listarPromocionXProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PromocionXProductoWS\CrewmanSystem.PromocionXProductoWS.promocionXProducto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PromocionXProductoWS\PromocionXProductoWS.wsdl" />
+    <None Include="Connected Services\PromocionXProductoWS\PromocionXProductoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReporteQuejasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -962,58 +1027,6 @@
     <None Include="Connected Services\ClienteXZonaWS\CrewmanSystem.ClienteXZonaWS.obtenerClientePorZonaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.actualizarEmpleadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.actualizarPersonaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.cambiarContraseñaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.eliminarEmpleadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.eliminarPersonaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.empleado.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.insertarEmpleadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.insertarPersonaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.listarPorJefeVentasResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.listarPorJefeVentasYZonaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.mostrarPersonaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.obtenerEmpleadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.obtenerNumClientesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.obtenerNumVisitasResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.permitirAccesoEmpleadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.persona.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EmpleadoWS\EmpleadoWS.wsdl" />
-    <None Include="Connected Services\EmpleadoWS\EmpleadoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\EmpleadoXZonaWS\CrewmanSystem.EmpleadoXZonaWS.eliminarEmpleadoXZonaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1194,19 +1207,6 @@
     <None Include="Connected Services\PromocionWS\PromocionWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\PromocionXProductoWS\CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PromocionXProductoWS\CrewmanSystem.PromocionXProductoWS.listarPromocionXProductoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PromocionXProductoWS\CrewmanSystem.PromocionXProductoWS.promocionXProducto.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\PromocionXProductoWS\PromocionXProductoWS.wsdl" />
-    <None Include="Connected Services\PromocionXProductoWS\PromocionXProductoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\QuejaWS\CrewmanSystem.QuejaWS.actualizarQuejaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -1378,9 +1378,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\EmpleadoWS\configuration91.svcinfo" />
-    <None Include="Connected Services\EmpleadoWS\configuration.svcinfo" />
-    <None Include="Connected Services\EmpleadoWS\Reference.svcmap">
+    <None Include="Connected Services\LineaPedidoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\LineaPedidoWS\configuration.svcinfo" />
+    <None Include="Connected Services\LineaPedidoWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -1390,9 +1390,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\LineaPedidoWS\configuration91.svcinfo" />
-    <None Include="Connected Services\LineaPedidoWS\configuration.svcinfo" />
-    <None Include="Connected Services\LineaPedidoWS\Reference.svcmap">
+    <None Include="Connected Services\EmpleadoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\EmpleadoWS\configuration.svcinfo" />
+    <None Include="Connected Services\EmpleadoWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
