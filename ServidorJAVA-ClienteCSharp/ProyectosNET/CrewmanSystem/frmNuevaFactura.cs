@@ -110,6 +110,7 @@ namespace CrewmanSystem
                     }
                     else
                     {
+                        ((frmGestionarFacturas)Program.pantallas[Program.pantallas.Count - 2].Formulario).recargarDGV();
                         MessageBox.Show("Se insertó correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtIdFactura.Text = resultado.ToString();
                         txtMontoPendiente.Text = (Convert.ToDouble(txtMontoPendiente.Text) - Convert.ToDouble(txtMonto.Text)).ToString();
@@ -125,6 +126,7 @@ namespace CrewmanSystem
                     }
                     else
                     {
+                        ((frmGestionarFacturas)Program.pantallas[Program.pantallas.Count - 2].Formulario).recargarDGV();
                         MessageBox.Show("Se actualizó correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtIdFactura.Text = resultado.ToString();
                         txtMontoPendiente.Text = (frmGestionarFacturas.facturaSeleccionada.pedido.montoPagar - Convert.ToDouble(txtMonto.Text)).ToString();

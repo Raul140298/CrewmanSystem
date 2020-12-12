@@ -59,15 +59,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtSumaVentas = new System.Windows.Forms.TextBox();
             this.pnlJefeVentas = new System.Windows.Forms.Panel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtZonaJefe = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnCambiarContraseña = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.txtZonaJefe = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.btnActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
@@ -76,9 +76,9 @@
             this.pnlVendedor.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.pnlJefeVentas.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -110,12 +110,15 @@
             // 
             // btnAgregarImagen
             // 
+            this.btnAgregarImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnAgregarImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarImagen.ForeColor = System.Drawing.SystemColors.Window;
             this.btnAgregarImagen.Location = new System.Drawing.Point(632, 26);
             this.btnAgregarImagen.Name = "btnAgregarImagen";
             this.btnAgregarImagen.Size = new System.Drawing.Size(31, 23);
             this.btnAgregarImagen.TabIndex = 139;
             this.btnAgregarImagen.Text = "...";
-            this.btnAgregarImagen.UseVisualStyleBackColor = true;
+            this.btnAgregarImagen.UseVisualStyleBackColor = false;
             this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
             // 
             // pbFoto
@@ -186,6 +189,7 @@
             // txtCorreo
             // 
             this.txtCorreo.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCorreo.Enabled = false;
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtCorreo.Location = new System.Drawing.Point(214, 74);
@@ -197,6 +201,7 @@
             // txtTelefono2
             // 
             this.txtTelefono2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtTelefono2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTelefono2.Enabled = false;
             this.txtTelefono2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtTelefono2.Location = new System.Drawing.Point(489, 40);
@@ -208,6 +213,7 @@
             // txtTelefono1
             // 
             this.txtTelefono1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtTelefono1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTelefono1.Enabled = false;
             this.txtTelefono1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtTelefono1.Location = new System.Drawing.Point(214, 40);
@@ -314,6 +320,7 @@
             // txtApellidoMaterno
             // 
             this.txtApellidoMaterno.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtApellidoMaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtApellidoMaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtApellidoMaterno.Location = new System.Drawing.Point(214, 118);
             this.txtApellidoMaterno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -324,6 +331,7 @@
             // txtApellidoPaterno
             // 
             this.txtApellidoPaterno.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtApellidoPaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtApellidoPaterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtApellidoPaterno.Location = new System.Drawing.Point(214, 82);
             this.txtApellidoPaterno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -334,6 +342,7 @@
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtNombre.Location = new System.Drawing.Point(214, 46);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -369,6 +378,7 @@
             // txtZona
             // 
             this.txtZona.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtZona.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtZona.Enabled = false;
             this.txtZona.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtZona.Location = new System.Drawing.Point(214, 82);
@@ -380,6 +390,7 @@
             // txtObjetivoVentas
             // 
             this.txtObjetivoVentas.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtObjetivoVentas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtObjetivoVentas.Enabled = false;
             this.txtObjetivoVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtObjetivoVentas.Location = new System.Drawing.Point(489, 48);
@@ -430,6 +441,7 @@
             // txtSumaVentas
             // 
             this.txtSumaVentas.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtSumaVentas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSumaVentas.Enabled = false;
             this.txtSumaVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtSumaVentas.Location = new System.Drawing.Point(214, 48);
@@ -447,72 +459,6 @@
             this.pnlJefeVentas.Size = new System.Drawing.Size(740, 112);
             this.pnlJefeVentas.TabIndex = 138;
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.groupBox3);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 622);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(740, 104);
-            this.panel4.TabIndex = 139;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Location = new System.Drawing.Point(244, 732);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(180, 29);
-            this.btnActualizar.TabIndex = 62;
-            this.btnActualizar.Text = "Actualizar Datos";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.btnCambiarContraseña);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.txtContraseña);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(30, 6);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(633, 88);
-            this.groupBox3.TabIndex = 61;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Cuenta";
-            // 
-            // btnCambiarContraseña
-            // 
-            this.btnCambiarContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnCambiarContraseña.Location = new System.Drawing.Point(428, 34);
-            this.btnCambiarContraseña.Name = "btnCambiarContraseña";
-            this.btnCambiarContraseña.Size = new System.Drawing.Size(180, 29);
-            this.btnCambiarContraseña.TabIndex = 106;
-            this.btnCambiarContraseña.Text = "Cambiar Contraseña";
-            this.btnCambiarContraseña.UseVisualStyleBackColor = true;
-            this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click);
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label7.Location = new System.Drawing.Point(51, 24);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(145, 42);
-            this.label7.TabIndex = 105;
-            this.label7.Text = "Contraseña :";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.BackColor = System.Drawing.SystemColors.Window;
-            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtContraseña.Location = new System.Drawing.Point(214, 37);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(180, 23);
-            this.txtContraseña.TabIndex = 104;
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.txtZonaJefe);
@@ -528,6 +474,7 @@
             // txtZonaJefe
             // 
             this.txtZonaJefe.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtZonaJefe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtZonaJefe.Enabled = false;
             this.txtZonaJefe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtZonaJefe.Location = new System.Drawing.Point(214, 48);
@@ -548,6 +495,79 @@
             this.label11.TabIndex = 109;
             this.label11.Text = "Zona :";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.groupBox3);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 622);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(740, 104);
+            this.panel4.TabIndex = 139;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnCambiarContraseña);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.txtContraseña);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(30, 6);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(633, 88);
+            this.groupBox3.TabIndex = 61;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Cuenta";
+            // 
+            // btnCambiarContraseña
+            // 
+            this.btnCambiarContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnCambiarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnCambiarContraseña.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCambiarContraseña.Location = new System.Drawing.Point(428, 34);
+            this.btnCambiarContraseña.Name = "btnCambiarContraseña";
+            this.btnCambiarContraseña.Size = new System.Drawing.Size(180, 29);
+            this.btnCambiarContraseña.TabIndex = 106;
+            this.btnCambiarContraseña.Text = "Cambiar Contraseña";
+            this.btnCambiarContraseña.UseVisualStyleBackColor = false;
+            this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label7.Location = new System.Drawing.Point(51, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(145, 42);
+            this.label7.TabIndex = 105;
+            this.label7.Text = "Contraseña :";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.BackColor = System.Drawing.SystemColors.Window;
+            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtContraseña.Location = new System.Drawing.Point(214, 37);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(180, 23);
+            this.txtContraseña.TabIndex = 104;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnActualizar.Location = new System.Drawing.Point(244, 732);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(180, 29);
+            this.btnActualizar.TabIndex = 62;
+            this.btnActualizar.Text = "Actualizar Datos";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // frmPerfil
             // 
@@ -573,11 +593,11 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.pnlJefeVentas.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
