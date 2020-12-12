@@ -23,18 +23,8 @@ namespace CrewmanSystem
 
             InitializeComponent();
 			dgv = dgvPedidos;
-			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos(Program.empleado.idEmpleado, "", "", DateTime.MinValue, DateTime.MaxValue, "PEDIDO", "AMBOS");
-            dgvPedidos.AutoGenerateColumns = false;
-            if (misPedidos != null)
-                dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
-            else
-                dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>();
-            if (Program.empleado.cargo.nombre == "VENDEDOR")
-            {
-                dgvPedidos.Columns["NOMBRE"].Visible = false;
-                dgvPedidos.Columns["APELLIDO_PATERNO"].Visible = false;
-                dgvPedidos.Columns["APELLIDO_MATERNO"].Visible = false;
-            }
+			dgvPedidos.AutoGenerateColumns = false;
+			recargarDGV();
 
             #region colores de seleccion
             dgvPedidos.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
@@ -93,6 +83,21 @@ namespace CrewmanSystem
             {
 				frmVentanaPrincipal.act.Enabled = false;
 				frmVentanaPrincipal.elim.Enabled = false;
+			}
+		}
+		public void recargarDGV()
+		{
+			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos(Program.empleado.idEmpleado, "", "", DateTime.MinValue, DateTime.MaxValue, "PEDIDO", "AMBOS");
+
+			if (misPedidos != null)
+				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
+			else
+				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>();
+			if (Program.empleado.cargo.nombre == "VENDEDOR")
+			{
+				dgvPedidos.Columns["NOMBRE"].Visible = false;
+				dgvPedidos.Columns["APELLIDO_PATERNO"].Visible = false;
+				dgvPedidos.Columns["APELLIDO_MATERNO"].Visible = false;
 			}
 		}
 	}

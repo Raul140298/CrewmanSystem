@@ -82,6 +82,7 @@ namespace CrewmanSystem
                 }
                 else
                 {
+                    ((frmGestionarGuiasRemision)Program.pantallas[Program.pantallas.Count - 2].Formulario).recargarDGV();
                     MessageBox.Show("Se insertó correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtIdGuiaRemision.Text = resultado.ToString();
                 }
@@ -96,6 +97,7 @@ namespace CrewmanSystem
                 }
                 else
                 {
+                    ((frmGestionarGuiasRemision)Program.pantallas[Program.pantallas.Count - 2].Formulario).recargarDGV();
                     MessageBox.Show("Se actualizó correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtIdGuiaRemision.Text = resultado.ToString();
                 }

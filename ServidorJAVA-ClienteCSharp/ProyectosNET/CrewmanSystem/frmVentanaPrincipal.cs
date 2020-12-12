@@ -541,11 +541,12 @@ namespace CrewmanSystem
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoPedido());
 					if (boton == 2) frmGestionarPedidos.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarPedido(0));
-					//if (boton == 4) ((frmGestionarPedidos)Program.pantallas.Last().Formulario).recargarDGV();
+					if (boton == 4) ((frmGestionarPedidos)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarAprobados":
 					if (boton == 2) frmGestionarAprobados.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarAprobado());
+					if (boton == 4) ((frmGestionarAprobados)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmBuscarAprobado":
 					if (boton == 2) frmGestionarAprobados.eliminar();
@@ -562,7 +563,7 @@ namespace CrewmanSystem
 				case "frmGestionarGuiasRemision":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaGuiaRemision());
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarGuiaRemision());
-					//if (boton == 4) ((frmGestionarGuiasRemision)Program.pantallas.Last().Formulario).recargarDGV();
+					if (boton == 4) ((frmGestionarGuiasRemision)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarFamilias":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaFamilia());
