@@ -148,7 +148,7 @@ public class ReporteWS
     }
     
     @WebMethod(operationName = "generarReporteMejoresClientes")
-    public byte[] generarReporteMejoresClientes(@WebParam(name = "nombre") String nombre) {
+    public byte[] generarReporteMejoresClientes(@WebParam(name = "idEmpleado") int idEmpleado, @WebParam(name = "nombre") String nombre) {
         byte[] arreglo = null;
 
         try{
@@ -161,6 +161,9 @@ public class ReporteWS
             ImageIcon icono = new ImageIcon(rutaLogo);
             Image imagen = icono.getImage();
 
+            String subreporte = ReporteMejoresClientes.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/MejoresClientes_Subreporte.jasper").getPath();
+            subreporte = subreporte.replaceAll("%20", " ");
+            
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             
@@ -170,7 +173,9 @@ public class ReporteWS
             hm.put("LOGO", imagen);
             hm.put("NOMBRE", nombre);
             hm.put("FECHA", new java.sql.Date(new Date().getTime()));
-
+            hm.put("RUTA_SUBREPORTE",subreporte);
+            hm.put("ID_JEFE",idEmpleado);
+            
             JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
 
             con.close();
