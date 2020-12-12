@@ -69,6 +69,7 @@
             // 
             this.cboTipoCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cboTipoCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipoCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboTipoCliente.FormattingEnabled = true;
             this.cboTipoCliente.Location = new System.Drawing.Point(271, 303);
             this.cboTipoCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -149,6 +150,7 @@
             // 
             this.cboEstado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboEstado.FormattingEnabled = true;
             this.cboEstado.Location = new System.Drawing.Point(271, 349);
             this.cboEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -160,6 +162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(641, 906);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cboEstado);

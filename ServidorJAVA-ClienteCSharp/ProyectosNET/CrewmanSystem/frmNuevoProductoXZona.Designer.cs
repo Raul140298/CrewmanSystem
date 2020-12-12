@@ -54,13 +54,13 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvProducto = new System.Windows.Forms.DataGridView();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.NRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CANT_UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRECIO_REAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.gbZona.SuspendLayout();
             this.gbProducto.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -350,6 +350,24 @@
             this.dgvProducto.TabIndex = 10;
             this.dgvProducto.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProductoXZona_CellFormatting);
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(771, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(23, 114);
+            this.panel5.TabIndex = 9;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(23, 114);
+            this.panel4.TabIndex = 0;
+            // 
             // NRO
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
@@ -374,11 +392,11 @@
             dataGridViewCellStyle3.Format = "N2";
             dataGridViewCellStyle3.NullValue = null;
             this.CANT_UNIDADES.DefaultCellStyle = dataGridViewCellStyle3;
-            this.CANT_UNIDADES.HeaderText = "Cant. Unidades";
+            this.CANT_UNIDADES.HeaderText = "Contenido Neto";
             this.CANT_UNIDADES.MinimumWidth = 6;
             this.CANT_UNIDADES.Name = "CANT_UNIDADES";
             this.CANT_UNIDADES.ReadOnly = true;
-            this.CANT_UNIDADES.Width = 151;
+            this.CANT_UNIDADES.Width = 152;
             // 
             // UNIDADES
             // 
@@ -400,24 +418,6 @@
             this.PRECIO_REAL.Name = "PRECIO_REAL";
             this.PRECIO_REAL.ReadOnly = true;
             this.PRECIO_REAL.Width = 124;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(771, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(23, 114);
-            this.panel5.TabIndex = 9;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(23, 114);
-            this.panel4.TabIndex = 0;
             // 
             // frmNuevoProductoXZona
             // 
@@ -466,10 +466,10 @@
         private System.Windows.Forms.TextBox txtCantUnidades;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPrecioSugerido;
-		private System.Windows.Forms.DataGridViewTextBoxColumn NRO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn CANT_UNIDADES;
-		private System.Windows.Forms.DataGridViewTextBoxColumn UNIDADES;
-		private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO_REAL;
-	}
+        private System.Windows.Forms.DataGridViewTextBoxColumn NRO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CANT_UNIDADES;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UNIDADES;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO_REAL;
+    }
 }

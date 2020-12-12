@@ -125,7 +125,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel2.Controls.Add(this.txtRuc);
             this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.label17);
@@ -297,6 +297,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel3.Controls.Add(this.txtCargo);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label2);

@@ -72,6 +72,8 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dgvPromocionXProducto = new System.Windows.Forms.DataGridView();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.NRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE_PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CANT_UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,8 +81,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCUENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.STOCK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -93,6 +93,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lblSubfamilia);
             this.groupBox1.Controls.Add(this.lblFamilia);
@@ -180,6 +181,7 @@
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcion.Location = new System.Drawing.Point(179, 123);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescripcion.Multiline = true;
@@ -189,24 +191,27 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Location = new System.Drawing.Point(179, 85);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(280, 22);
+            this.txtNombre.Size = new System.Drawing.Size(280, 15);
             this.txtNombre.TabIndex = 64;
             // 
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(179, 48);
             this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(85, 22);
+            this.txtId.Size = new System.Drawing.Size(85, 15);
             this.txtId.TabIndex = 63;
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox2.Controls.Add(this.cboZona);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(20, 319);
@@ -221,6 +226,7 @@
             // cboZona
             // 
             this.cboZona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboZona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboZona.FormattingEnabled = true;
             this.cboZona.Location = new System.Drawing.Point(179, 46);
             this.cboZona.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -241,6 +247,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -267,6 +274,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel2.Controls.Add(this.btnGuardar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 809);
@@ -277,6 +285,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox3.Controls.Add(this.txtUnidades);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label4);
@@ -293,9 +302,9 @@
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Location = new System.Drawing.Point(20, 7);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(647, 220);
             this.groupBox3.TabIndex = 93;
             this.groupBox3.TabStop = false;
@@ -304,11 +313,12 @@
             // txtUnidades
             // 
             this.txtUnidades.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtUnidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUnidades.Enabled = false;
             this.txtUnidades.Location = new System.Drawing.Point(387, 101);
             this.txtUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUnidades.Name = "txtUnidades";
-            this.txtUnidades.Size = new System.Drawing.Size(72, 22);
+            this.txtUnidades.Size = new System.Drawing.Size(72, 15);
             this.txtUnidades.TabIndex = 89;
             // 
             // label5
@@ -334,11 +344,12 @@
             // txtCantUnidades
             // 
             this.txtCantUnidades.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtCantUnidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCantUnidades.Enabled = false;
             this.txtCantUnidades.Location = new System.Drawing.Point(179, 101);
             this.txtCantUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantUnidades.Name = "txtCantUnidades";
-            this.txtCantUnidades.Size = new System.Drawing.Size(81, 22);
+            this.txtCantUnidades.Size = new System.Drawing.Size(81, 15);
             this.txtCantUnidades.TabIndex = 86;
             // 
             // label3
@@ -353,11 +364,12 @@
             // 
             // txtPrecioReal
             // 
+            this.txtPrecioReal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrecioReal.Enabled = false;
             this.txtPrecioReal.Location = new System.Drawing.Point(179, 139);
             this.txtPrecioReal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecioReal.Name = "txtPrecioReal";
-            this.txtPrecioReal.Size = new System.Drawing.Size(81, 22);
+            this.txtPrecioReal.Size = new System.Drawing.Size(81, 15);
             this.txtPrecioReal.TabIndex = 84;
             // 
             // btnBuscarProducto
@@ -368,7 +380,7 @@
             this.btnBuscarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarProducto.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnBuscarProducto.Location = new System.Drawing.Point(477, 62);
-            this.btnBuscarProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarProducto.Name = "btnBuscarProducto";
             this.btnBuscarProducto.Padding = new System.Windows.Forms.Padding(3, 0, 0, 1);
             this.btnBuscarProducto.Size = new System.Drawing.Size(39, 22);
@@ -385,7 +397,7 @@
             this.btnAddProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddProducto.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnAddProducto.Location = new System.Drawing.Point(477, 177);
-            this.btnAddProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddProducto.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddProducto.Name = "btnAddProducto";
             this.btnAddProducto.Padding = new System.Windows.Forms.Padding(3, 0, 0, 1);
             this.btnAddProducto.Size = new System.Drawing.Size(39, 22);
@@ -402,7 +414,7 @@
             this.btnRemoveProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveProducto.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnRemoveProducto.Location = new System.Drawing.Point(525, 177);
-            this.btnRemoveProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemoveProducto.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveProducto.Name = "btnRemoveProducto";
             this.btnRemoveProducto.Padding = new System.Windows.Forms.Padding(3, 0, 0, 1);
             this.btnRemoveProducto.Size = new System.Drawing.Size(39, 22);
@@ -413,28 +425,31 @@
             // 
             // txtStock
             // 
+            this.txtStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtStock.Location = new System.Drawing.Point(387, 178);
             this.txtStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(72, 22);
+            this.txtStock.Size = new System.Drawing.Size(72, 15);
             this.txtStock.TabIndex = 79;
             // 
             // txtDescuento
             // 
+            this.txtDescuento.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescuento.Location = new System.Drawing.Point(179, 178);
             this.txtDescuento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.Size = new System.Drawing.Size(81, 22);
+            this.txtDescuento.Size = new System.Drawing.Size(81, 15);
             this.txtDescuento.TabIndex = 78;
             // 
             // txtNombreProducto
             // 
             this.txtNombreProducto.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtNombreProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreProducto.Enabled = false;
             this.txtNombreProducto.Location = new System.Drawing.Point(179, 62);
             this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombreProducto.Name = "txtNombreProducto";
-            this.txtNombreProducto.Size = new System.Drawing.Size(280, 22);
+            this.txtNombreProducto.Size = new System.Drawing.Size(280, 15);
             this.txtNombreProducto.TabIndex = 77;
             // 
             // label8
@@ -469,6 +484,7 @@
             // 
             // panel6
             // 
+            this.panel6.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel6.Controls.Add(this.groupBox3);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 430);
@@ -495,7 +511,7 @@
             this.dgvPromocionXProducto.AllowUserToDeleteRows = false;
             this.dgvPromocionXProducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvPromocionXProducto.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvPromocionXProducto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dgvPromocionXProducto.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvPromocionXProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPromocionXProducto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -544,6 +560,26 @@
             this.dgvPromocionXProducto.TabIndex = 110;
             this.dgvPromocionXProducto.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPromocionXProducto_CellFormatting);
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel8.Location = new System.Drawing.Point(751, 0);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(20, 137);
+            this.panel8.TabIndex = 109;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(20, 137);
+            this.panel9.TabIndex = 108;
+            // 
             // NRO
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
@@ -568,11 +604,11 @@
             dataGridViewCellStyle3.Format = "N2";
             dataGridViewCellStyle3.NullValue = null;
             this.CANT_UNIDADES.DefaultCellStyle = dataGridViewCellStyle3;
-            this.CANT_UNIDADES.HeaderText = "Cant. Unidades";
+            this.CANT_UNIDADES.HeaderText = "Contenido Neto";
             this.CANT_UNIDADES.MinimumWidth = 6;
             this.CANT_UNIDADES.Name = "CANT_UNIDADES";
             this.CANT_UNIDADES.ReadOnly = true;
-            this.CANT_UNIDADES.Width = 151;
+            this.CANT_UNIDADES.Width = 152;
             // 
             // UNIDADES
             // 
@@ -616,24 +652,6 @@
             this.STOCK.Name = "STOCK";
             this.STOCK.ReadOnly = true;
             this.STOCK.Width = 79;
-            // 
-            // panel8
-            // 
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(751, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(20, 137);
-            this.panel8.TabIndex = 109;
-            // 
-            // panel9
-            // 
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(20, 137);
-            this.panel9.TabIndex = 108;
             // 
             // frmNuevaPromocion
             // 
@@ -702,12 +720,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCantUnidades;
-		private System.Windows.Forms.DataGridViewTextBoxColumn NRO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE_PRODUCTO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn CANT_UNIDADES;
-		private System.Windows.Forms.DataGridViewTextBoxColumn UNIDADES;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-		private System.Windows.Forms.DataGridViewTextBoxColumn DESCUENTO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn STOCK;
-	}
+        private System.Windows.Forms.DataGridViewTextBoxColumn NRO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE_PRODUCTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CANT_UNIDADES;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UNIDADES;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DESCUENTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STOCK;
+    }
 }

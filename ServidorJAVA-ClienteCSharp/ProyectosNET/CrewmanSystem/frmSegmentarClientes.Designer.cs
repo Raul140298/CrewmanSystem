@@ -59,10 +59,11 @@
             // txtFecha
             // 
             this.txtFecha.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFecha.Enabled = false;
             this.txtFecha.Location = new System.Drawing.Point(350, 149);
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(105, 22);
+            this.txtFecha.Size = new System.Drawing.Size(105, 15);
             this.txtFecha.TabIndex = 51;
             this.txtFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -70,6 +71,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(632, 421);
             this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.btnSegmentar);

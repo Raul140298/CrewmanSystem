@@ -55,14 +55,6 @@ namespace CrewmanSystem
 				dgvPedidos.Rows[e.RowIndex].Cells["APELLIDO_PATERNO"].Value = pedido.empleado.apellidoPaterno;
 				dgvPedidos.Rows[e.RowIndex].Cells["APELLIDO_MATERNO"].Value = pedido.empleado.apellidoMaterno;
 				dgvPedidos.Rows[e.RowIndex].Cells["FECHA_REGISTRO"].Value = pedido.fechaRegistro.ToString("dd/MM/yyyy");
-				DateTime fechaAprobado = pedido.fechaAprobado;
-				string fechaAprobadoStr = "";
-				if (fechaAprobado.Year > 2000) fechaAprobadoStr = fechaAprobado.ToString("dd/MM/yyyy");
-				dgvPedidos.Rows[e.RowIndex].Cells["FECHA_APROBADO"].Value = fechaAprobadoStr;
-				DateTime fechaEstimada = pedido.fechaEstim;
-				string fechaEstimadaStr = "";
-				if (fechaEstimada.Year > 2000) fechaEstimadaStr = fechaEstimada.ToString("dd/MM/yyyy");
-				dgvPedidos.Rows[e.RowIndex].Cells["FECHA_ESTIMADA"].Value = fechaEstimadaStr;
 			}
             catch (Exception){ }
 		}
@@ -108,9 +100,6 @@ namespace CrewmanSystem
 				dgvPedidos.Columns["APELLIDO_PATERNO"].Visible = false;
 				dgvPedidos.Columns["APELLIDO_MATERNO"].Visible = false;
 			}
-
-			dgvPedidos.Columns["FECHA_APROBADO"].Visible = false;
-			dgvPedidos.Columns["FECHA_ESTIMADA"].Visible = false;
 		}
 	}
 }

@@ -16,7 +16,7 @@ namespace CrewmanSystem
 		public frmHomeJefe()
 		{
 			InitializeComponent();
-
+			chartVentas.ChartAreas[0].BackColor = SystemColors.ControlLight;
 			chartVentas.PaletteCustomColors = new System.Drawing.Color[] {Program.colorR};
 
 			btnRecarga.IconColor = Program.color1;
