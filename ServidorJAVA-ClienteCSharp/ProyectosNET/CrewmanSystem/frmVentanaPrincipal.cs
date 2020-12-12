@@ -499,7 +499,7 @@ namespace CrewmanSystem
 					break;
 				case "frmGestionarVisitas":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaVisita());
-					//if (boton == 4) ((frmGestionarVisitas)Program.pantallas.Last().Formulario).recargarDGV();
+					if (boton == 4) ((frmGestionarVisitas)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarSubfamilias":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaSubfamilia());
@@ -510,7 +510,7 @@ namespace CrewmanSystem
 					break;
 				case "frmGestionarQuejas":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaQueja());
-					//if (boton == 4) ((frmGestionarQuejas)Program.pantallas.Last().Formulario).recargarDGV();
+					if (boton == 4) ((frmGestionarQuejas)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarPromociones":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaPromocion());
