@@ -21,6 +21,7 @@ namespace CrewmanSystem
 		{
 			this.Hide();
 			this.Close();
+			frmVentanaPrincipal.elim.BackColor = Program.color0;
 			this.DialogResult = DialogResult.OK;
 		}
 

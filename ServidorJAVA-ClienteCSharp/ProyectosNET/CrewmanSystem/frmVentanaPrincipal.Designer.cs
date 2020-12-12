@@ -82,6 +82,7 @@
 			this.btnFamilia = new FontAwesome.Sharp.IconButton();
 			this.btnGestionProducto = new FontAwesome.Sharp.IconButton();
 			this.pnlCabecera = new System.Windows.Forms.Panel();
+			this.btnRecarga = new FontAwesome.Sharp.IconButton();
 			this.btnBuscar = new FontAwesome.Sharp.IconButton();
 			this.lblCountRows = new System.Windows.Forms.Label();
 			this.btnLeft = new FontAwesome.Sharp.IconButton();
@@ -1199,6 +1200,7 @@
 			// pnlCabecera
 			// 
 			this.pnlCabecera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+			this.pnlCabecera.Controls.Add(this.btnRecarga);
 			this.pnlCabecera.Controls.Add(this.btnBuscar);
 			this.pnlCabecera.Controls.Add(this.lblCountRows);
 			this.pnlCabecera.Controls.Add(this.btnLeft);
@@ -1214,6 +1216,28 @@
 			this.pnlCabecera.Name = "pnlCabecera";
 			this.pnlCabecera.Size = new System.Drawing.Size(1260, 75);
 			this.pnlCabecera.TabIndex = 0;
+			// 
+			// btnRecarga
+			// 
+			this.btnRecarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+			this.btnRecarga.Dock = System.Windows.Forms.DockStyle.Right;
+			this.btnRecarga.FlatAppearance.BorderSize = 0;
+			this.btnRecarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnRecarga.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+			this.btnRecarga.ForeColor = System.Drawing.Color.Gainsboro;
+			this.btnRecarga.IconChar = FontAwesome.Sharp.IconChar.Sync;
+			this.btnRecarga.IconColor = System.Drawing.Color.Gainsboro;
+			this.btnRecarga.IconFont = FontAwesome.Sharp.IconFont.Auto;
+			this.btnRecarga.IconSize = 16;
+			this.btnRecarga.Location = new System.Drawing.Point(1152, 32);
+			this.btnRecarga.Name = "btnRecarga";
+			this.btnRecarga.Rotation = 0D;
+			this.btnRecarga.Size = new System.Drawing.Size(36, 43);
+			this.btnRecarga.TabIndex = 22;
+			this.btnRecarga.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnRecarga.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnRecarga.UseVisualStyleBackColor = false;
+			this.btnRecarga.Click += new System.EventHandler(this.iconButton1_Click);
 			// 
 			// btnBuscar
 			// 
@@ -1631,5 +1655,6 @@
 		private FontAwesome.Sharp.IconButton btnReporteEmpleados;
         private FontAwesome.Sharp.IconButton btnReporteClientes;
         private FontAwesome.Sharp.IconButton btnPedReporte;
-    }
+		private FontAwesome.Sharp.IconButton btnRecarga;
+	}
 }

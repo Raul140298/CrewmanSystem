@@ -58,8 +58,8 @@
 			this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
 			this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-			this.btnCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-			this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+			this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
 			this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnCerrarSesion.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
 			this.btnCerrarSesion.ForeColor = System.Drawing.Color.Gainsboro;
@@ -81,8 +81,8 @@
 			this.btnSalir.BackColor = System.Drawing.Color.Transparent;
 			this.btnSalir.Dock = System.Windows.Forms.DockStyle.Left;
 			this.btnSalir.FlatAppearance.BorderSize = 0;
-			this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-			this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+			this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+			this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
 			this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnSalir.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
 			this.btnSalir.ForeColor = System.Drawing.Color.Gainsboro;
@@ -139,7 +139,7 @@
 			this.panel2.Size = new System.Drawing.Size(70, 168);
 			this.panel2.TabIndex = 0;
 			// 
-			// frmConfirmarSalir
+			// frmConfirmarEliminar
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -147,7 +147,7 @@
 			this.ClientSize = new System.Drawing.Size(460, 170);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Name = "frmConfirmarSalir";
+			this.Name = "frmConfirmarEliminar";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "frmConfirmarSalir";
 			this.panel1.ResumeLayout(false);
