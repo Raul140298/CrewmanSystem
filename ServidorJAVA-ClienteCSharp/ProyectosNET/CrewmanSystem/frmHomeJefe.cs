@@ -20,7 +20,7 @@ namespace CrewmanSystem
 			chartVentas.PaletteCustomColors = new System.Drawing.Color[] {Program.colorR};
 
 			btnRecarga.IconColor = Program.color1;
-			chartVentas.ChartAreas[0].AxisX.LabelStyle.Angle = -90;
+			
 			daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
 			string saludo = "";
 			if (Program.empleado.genero == 'M') saludo = "Bienvenido, ";
@@ -41,6 +41,8 @@ namespace CrewmanSystem
 			if (empleados == null || empleados.Length < 1) misEmpleados = new BindingList<EmpleadoWS.empleado>();
 			else misEmpleados = new BindingList<EmpleadoWS.empleado>(empleados.ToList());
 			chartVentas.Series.Add("Suma Ventas");
+			chartVentas.ChartAreas[0].AxisX.LabelStyle.Angle = -90;
+			chartVentas.ChartAreas[0].AxisX.Interval = 1;
 			foreach (EmpleadoWS.empleado emp in empleados)
 			{
 				chartVentas.Series["Suma Ventas"].Points.AddXY(emp.apellidoPaterno + " " + emp.apellidoMaterno + ", " + emp.nombre, emp.sumVentas);
