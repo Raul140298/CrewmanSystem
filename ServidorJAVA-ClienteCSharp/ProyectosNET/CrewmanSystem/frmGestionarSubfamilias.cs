@@ -23,16 +23,7 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgv = dgvSubfamilias;
 			dgvSubfamilias.AutoGenerateColumns = false;
-			misSubFamilias = daoSubFamilia.listarSubFamilias("");
-			if (misSubFamilias != null)
-			{
-				dgvSubfamilias.DataSource = new BindingList<SubFamiliaWS.subFamilia>(misSubFamilias.ToArray());
-			}
-			else
-			{
-				dgvSubfamilias.DataSource = new BindingList<SubFamiliaWS.subFamilia>();
-
-			}
+			recargarDGV();
 
 			#region colores de seleccion
 			dgvSubfamilias.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;

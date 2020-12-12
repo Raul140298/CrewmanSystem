@@ -15,6 +15,7 @@ namespace CrewmanSystem
 		public static ZonaWS.ZonaWSClient daoZona;
 		public static ZonaWS.zona zonaSeleccionada;
 		public static DataGridView dgv;
+		public ZonaWS.zona[] misZonas;
 
 		public frmGestionarZonas()
 		{
@@ -22,16 +23,7 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgv = dataGridView1;
 			dataGridView1.AutoGenerateColumns = false;
-			ZonaWS.zona[] misZonas = daoZona.listarZonas();
-			if (misZonas != null)
-			{
-				dataGridView1.DataSource = new BindingList<ZonaWS.zona>(misZonas.ToArray());
-			}
-			else
-			{
-				dataGridView1.DataSource = new BindingList<ZonaWS.zona>();
-
-			}
+			recargarDGV();
 			#region colores de seleccion
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
@@ -70,6 +62,19 @@ namespace CrewmanSystem
 		{
 			zonaSeleccionada = (ZonaWS.zona)dgv.CurrentRow.DataBoundItem;
 			daoZona.eliminarZona(zonaSeleccionada.idZona);
+		}
+		public void recargarDGV()
+		{
+			misZonas = daoZona.listarZonas();
+			if (misZonas != null)
+			{
+				dataGridView1.DataSource = new BindingList<ZonaWS.zona>(misZonas.ToArray());
+			}
+			else
+			{
+				dataGridView1.DataSource = new BindingList<ZonaWS.zona>();
+
+			}
 		}
 	}
 }

@@ -13,25 +13,13 @@ namespace CrewmanSystem
 	public partial class frmGestionarProductosXZona : Form
 	{
 		private static ProductoXZonaWS.ProductoXZonaWSClient daoProductoXZona;
+		public ProductoXZonaWS.productoXZona[] misProductoXZonas;
 		public frmGestionarProductosXZona()
 		{
 			daoProductoXZona = new ProductoXZonaWS.ProductoXZonaWSClient();
 			InitializeComponent();
 			dgvProductosXZona.AutoGenerateColumns = false;
-			ProductoXZonaWS.productoXZona[] misProductoXZonas = null;
-			if (Program.empleado.cargo.nombre == "VENDEDOR")
-				misProductoXZonas = daoProductoXZona.listarProductosXZonas("", "", "", "", Program.empleado.zona.idZona);
-            else
-				misProductoXZonas = daoProductoXZona.listarProductosXZonas("", "", "", "", 0);
-
-			if (misProductoXZonas != null)
-			{
-				dgvProductosXZona.DataSource = new BindingList<ProductoXZonaWS.productoXZona>(misProductoXZonas.ToArray());
-			}
-			else
-			{
-				dgvProductosXZona.DataSource = new BindingList<ProductoXZonaWS.productoXZona>();
-			}
+			recargarDGV();
 
 			#region colores de seleccion
 			dgvProductosXZona.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
@@ -59,5 +47,23 @@ namespace CrewmanSystem
 			dgvProductosXZona.Rows[e.RowIndex].Cells["FAMILIA"].Value = productoXZona.producto.subFamilia.familia.descripcion;
 			dgvProductosXZona.Rows[e.RowIndex].Cells["MARCA"].Value = productoXZona.producto.marca.nombre;
 		}
-    }
+
+		public void recargarDGV()
+		{
+			misProductoXZonas = null;
+			if (Program.empleado.cargo.nombre == "VENDEDOR")
+				misProductoXZonas = daoProductoXZona.listarProductosXZonas("", "", "", "", Program.empleado.zona.idZona);
+			else
+				misProductoXZonas = daoProductoXZona.listarProductosXZonas("", "", "", "", 0);
+
+			if (misProductoXZonas != null)
+			{
+				dgvProductosXZona.DataSource = new BindingList<ProductoXZonaWS.productoXZona>(misProductoXZonas.ToArray());
+			}
+			else
+			{
+				dgvProductosXZona.DataSource = new BindingList<ProductoXZonaWS.productoXZona>();
+			}
+		}
+	}
 }

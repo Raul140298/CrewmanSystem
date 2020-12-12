@@ -23,16 +23,7 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgv = dataGridView1;
 			dataGridView1.AutoGenerateColumns = false;
-			misMarcas = daoMarca.listarMarcas();
-			if (misMarcas != null)
-			{
-				dataGridView1.DataSource = new BindingList<MarcaWS.marca>(misMarcas.ToArray());
-			}
-			else
-			{
-				dataGridView1.DataSource = new BindingList<MarcaWS.marca>();
-
-			}
+			recargarDGV();
 
 			#region colores de seleccion
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;

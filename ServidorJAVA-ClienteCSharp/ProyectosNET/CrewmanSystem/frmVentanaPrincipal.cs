@@ -495,7 +495,7 @@ namespace CrewmanSystem
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaZona());
 					if (boton == 2) frmGestionarZonas.eliminar();
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarZona());
-					//if (boton == 4) ((frmGestionarZonas)Program.pantallas.Last().Formulario).recargarDGV();
+					if (boton == 4) ((frmGestionarZonas)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarVisitas":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaVisita());
@@ -525,7 +525,7 @@ namespace CrewmanSystem
 				case "frmGestionarProductosXZona":
 					if (boton == 0) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoProductoXZona());
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarProductoXZona());
-					//if (boton == 4) ((frmGestionarProductosXZona)Program.pantallas.Last().Formulario).recargarDGV();
+					if (boton == 4) ((frmGestionarProductosXZona)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarProductos":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoProducto());

@@ -23,15 +23,7 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgv = dataGridView1;
 			dataGridView1.AutoGenerateColumns = false;
-			misPromocions = daoPromocion.listarPromocions("", DateTime.MinValue, DateTime.MaxValue);
-			if (misPromocions != null)
-			{
-				dataGridView1.DataSource = new BindingList<PromocionWS.promocion>(misPromocions.ToArray());
-			}
-			else
-			{
-				dataGridView1.DataSource = new BindingList<PromocionWS.promocion>();
-			}
+			recargarDGV();
 
 			#region colores de seleccion
 			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
