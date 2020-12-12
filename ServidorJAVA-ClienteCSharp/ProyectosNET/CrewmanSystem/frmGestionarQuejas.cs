@@ -17,6 +17,7 @@ namespace CrewmanSystem
 		private ReporteWS.ReporteWSClient daoReporte;
 		public static DataGridView dgv;
 		public static QuejaWS.queja quejaSeleccionada;
+		public QuejaWS.queja[] misQuejas;
 
 		public frmGestionarQuejas()
 		{
@@ -31,18 +32,8 @@ namespace CrewmanSystem
 			}
 			
 			dgvQuejas.AutoGenerateColumns = false;
-			QuejaWS.queja[] misQuejas = daoQueja.listarQuejas(Program.empleado.idEmpleado); 
-			if (misQuejas != null)
-				dgvQuejas.DataSource = new BindingList<QuejaWS.queja>(misQuejas.ToArray());
-			else
-				dgvQuejas.DataSource = new BindingList<QuejaWS.queja>();
 
-			if (Program.empleado.cargo.nombre == "VENDEDOR")
-			{
-				dgvQuejas.Columns["NOMBRE"].Visible = false;
-				dgvQuejas.Columns["APELLIDO_PATERNO"].Visible = false;
-				dgvQuejas.Columns["APELLIDO_MATERNO"].Visible = false;
-			}
+			recargarDGV();
 
 			#region colores de seleccion
 			dgvQuejas.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
@@ -117,6 +108,22 @@ namespace CrewmanSystem
 			{
 				frmVentanaPrincipal.act.Enabled = true;
 				frmVentanaPrincipal.elim.Enabled = true;
+			}
+		}
+
+		public void recargarDGV()
+		{
+			misQuejas = daoQueja.listarQuejas(Program.empleado.idEmpleado);
+			if (misQuejas != null)
+				dgvQuejas.DataSource = new BindingList<QuejaWS.queja>(misQuejas.ToArray());
+			else
+				dgvQuejas.DataSource = new BindingList<QuejaWS.queja>();
+
+			if (Program.empleado.cargo.nombre == "VENDEDOR")
+			{
+				dgvQuejas.Columns["NOMBRE"].Visible = false;
+				dgvQuejas.Columns["APELLIDO_PATERNO"].Visible = false;
+				dgvQuejas.Columns["APELLIDO_MATERNO"].Visible = false;
 			}
 		}
 	}
