@@ -207,6 +207,7 @@ namespace CrewmanSystem
 			btnEliminar.Visible = false;
 			btnActualizar.Visible = false;
 			btnNuevo.Visible = false;
+			btnRecarga.Visible = false;
 
 			btnBuscar.Visible = b;
 			btnEliminar.Visible = e;
@@ -284,6 +285,7 @@ namespace CrewmanSystem
 					//Activo lo que tiene que hacer ese botón y muestro su cabecera respectiva
 					ActivaBoton(Program.pantallas.Last());
 					ocultaBotonesCabecera(n, a, e, b, false);
+					if (f == true) btnRecarga.Visible = true;
 				}
 				else //MISMO BOTON
 				{
@@ -609,12 +611,12 @@ namespace CrewmanSystem
 
 		private void btnFamilia_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarFamilias(), true, true, true, false, false);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarFamilias(), true, true, true, false, true);
 		}
 
 		private void btnSubfamilia_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarSubfamilias(), true, true, true, false, false);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarSubfamilias(), true, true, true, false, true);
 		}
 
 		private void btnProducto_Click(object sender, EventArgs e)
@@ -629,7 +631,7 @@ namespace CrewmanSystem
 
 		private void btnMarca_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarMarcas(), true, true, true, false, false);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarMarcas(), true, true, true, false, true);
 		}
 		#endregion
 
@@ -641,7 +643,7 @@ namespace CrewmanSystem
 
 		private void btnZona_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarZonas(), true, true, true, false, false);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarZonas(), true, true, true, false, true);
 		}
 
 		private void btnProductoXZona_Click(object sender, EventArgs e)
@@ -707,7 +709,7 @@ namespace CrewmanSystem
 
 		private void btnQuejaJefe_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarQuejas(), true, false, true, false, false);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarQuejas(), true, false, true, false, true);
 		}
 
 		#endregion
@@ -733,7 +735,7 @@ namespace CrewmanSystem
 		#region BOTONESSINDESPEGABLES
 		private void btnCumplimientoDeMetas_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmListarCumplimientoDeMetas(), false, false, false, false, false);
+			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmListarCumplimientoDeMetas(), false, false, false, false, true);
 		}
 		private void btnPerfil_Click_1(object sender, EventArgs e)
 		{
@@ -789,7 +791,7 @@ namespace CrewmanSystem
 
 		private void btnEmpQuejas_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarQuejas(),true,false, true, false, false);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarQuejas(),true,false, true, false, true);
 		}
 		#endregion
 
