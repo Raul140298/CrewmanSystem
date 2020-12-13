@@ -432,5 +432,4 @@ public class EmpleadoMySQL implements EmpleadoDAO{
         }
         return resultado;
     }
-    
 }

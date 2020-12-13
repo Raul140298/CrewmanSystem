@@ -42,13 +42,13 @@ namespace CrewmanSystem
             }
             else
             {
-                if(txtContraseña1 != txtContraseña2)
+                if(txtContraseña1.Text != txtContraseña2.Text)
                 {
                     MessageBox.Show("Las contraseñas no coinciden",
                     "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                int resultado = daoEmpleado.cambiarContraseña(Program.empleado.idEmpleado, txtContraseña1.Text);
+                int resultado = daoEmpleado.cambiarContraseña(Program.empleado.idEmpleado, txtContraseñaActual.Text, txtContraseña1.Text);
                 if (resultado == 0)
                 {
                     MessageBox.Show("Contraseña actual incorrecta", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -62,7 +62,6 @@ namespace CrewmanSystem
                     this.DialogResult = DialogResult.OK;
                     return;
                 }
-                txtContraseña1.Text = "";
             }
         }
     }
