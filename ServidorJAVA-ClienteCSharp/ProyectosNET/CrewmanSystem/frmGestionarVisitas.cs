@@ -103,7 +103,7 @@ namespace CrewmanSystem
 
         public void revisarDGV(object source, ElapsedEventArgs e)
         {
-            int i = 0;
+            //int i = 0;
             if (dgvVisitas.InvokeRequired)
             {
                 dgvVisitas.Invoke(new Action(() =>

@@ -31,6 +31,9 @@ namespace CrewmanSystem
 		public static System.Timers.Timer aTimer;
 		public static Thread a;
 		public static Boolean banderaWhile;
+		public CrewPantalla home;
+		public bool ishome;
+
 		public frmVentanaPrincipal()
 		{
 			//INICIALIZACION DE LA VENTANA
@@ -42,6 +45,7 @@ namespace CrewmanSystem
 			nHojaDGV = 1;
 			act = btnActualizar;
 			elim = btnEliminar;
+			ishome = false;
 			//logeoExitoso
 			logeoExitoso(Program.empleado.cargo.idCargo);
 
@@ -61,10 +65,11 @@ namespace CrewmanSystem
 
 		private void logeoExitoso(int cargo)
 		{
-			CrewPantalla home = new CrewPantalla();
+			home = new CrewPantalla();
 			home.Boton = btnHome;
 			home.Tipo = BTNtipo.vacio;
 			pnlLateralIzquierdo.Visible = true;
+			ishome = true;
 			//Limpiamos las pantallas en caso se hizo un cierre de cesión.
 			while (Program.pantallas.Count > 0)
 			{
@@ -86,7 +91,7 @@ namespace CrewmanSystem
 			}
 			else
 			{
-				MessageBox.Show("ERROR!!!!!!!!");
+				MessageBox.Show("  ERROR!!!!!!!!");
 			}
 			Program.pantallas.Add(home);
 			llamarFormulario(home.Formulario);
@@ -108,6 +113,7 @@ namespace CrewmanSystem
 			pnlEmpGestionPedidos.Visible = false;
 
 			ocultaBotonesCabecera(false, false, false, false, false);
+			btnRecarga.Visible = true;
 
 			pnlControlBox.BackColor = Program.colorR;
 			pnlLateralIzquierdo.AutoScroll = false;
@@ -293,6 +299,7 @@ namespace CrewmanSystem
 					//Activo lo que tiene que hacer ese botón y muestro su cabecera respectiva
 					ActivaBoton(Program.pantallas.Last());
 					ocultaBotonesCabecera(n, a, e, b, f);
+					if(Program.pantallas.Last().Tipo == BTNtipo.btnConPanel) btnRecarga.Visible = true;
 				}
 				else //MISMO BOTON
 				{
@@ -398,27 +405,34 @@ namespace CrewmanSystem
 				switch (sender.Tipo)
 				{
 					case BTNtipo.btnConPanel:
+						ishome = true;
 						padre = sender;
 						pintaBoton(sender.Boton, Program.colorR);
 						showSubMenu(sender.Panel);
+						btnRecarga.Visible = true;
 						break;
 					case BTNtipo.btnDePanel:
+						ishome = false;
 						//desactivaBotonesCabecera(true, true, true, true, true);
 						sender.Boton.ForeColor = Program.colorR;
 						llamarFormulario(sender.Formulario);
 						break;
 					case BTNtipo.btnSinPanel:
+						ishome = false;
 						pintaBoton(sender.Boton, Program.colorR);
 						llamarFormulario(sender.Formulario);
 						break;
 					case BTNtipo.cabecera:
+						ishome = false;
 						llamarFormulario(sender.Formulario);
 						break;
 					case BTNtipo.vacio:
+						ishome = true;
 						lblCountRows.Text = "";
 						Program.pantallas.First().Formulario.BringToFront();
 						Program.pantallas.First().Formulario.Show();
 						ocultaBotonesCabecera(false, false, false, false, false);
+						btnRecarga.Visible = true;
 						break;
 					default:
 						MessageBox.Show("BTNtipo aun no declarado");
@@ -1023,38 +1037,56 @@ namespace CrewmanSystem
 
 		private void btnRecarga_Click(object sender, EventArgs e)
 		{
-			foreach (Control c in Program.pantallas.Last().Formulario.Controls)
+			if (ishome == true)
 			{
-				if (c is DataGridView)
+				int cargo = Program.empleado.cargo.idCargo;
+				MessageBox.Show("Estas al inicio");
+				if (cargo == 1)
 				{
-					MessageBox.Show(c.Name);
-					llamarMetodosDAO(null, 4);
+					((frmHomeVendedor)Program.pantallas.First().Formulario).cargarValores();
+
 				}
-				if (c is Panel)
+				else if (cargo == 2)
 				{
-					MessageBox.Show(c.Name);
-					foreach (Control c2 in c.Controls)
+					((frmHomeJefe)Program.pantallas.First().Formulario).actualizarMapa();
+				}
+			}
+			else
+			{
+				foreach (Control c in Program.pantallas.Last().Formulario.Controls)
+				{
+					if (c is DataGridView)
 					{
-						if (c2 is DataGridView)
+						MessageBox.Show(c.Name);
+						llamarMetodosDAO(null, 4);
+					}
+					if (c is Panel)
+					{
+						MessageBox.Show(c.Name);
+						foreach (Control c2 in c.Controls)
 						{
-							MessageBox.Show(c2.Name);
-							llamarMetodosDAO(null, 4);
-						}
-						if (c2 is Panel)
-						{
-							MessageBox.Show(c2.Name);
-							foreach (Control c3 in c2.Controls)
+							if (c2 is DataGridView)
 							{
-								if (c3 is DataGridView)
+								MessageBox.Show(c2.Name);
+								llamarMetodosDAO(null, 4);
+							}
+							if (c2 is Panel)
+							{
+								MessageBox.Show(c2.Name);
+								foreach (Control c3 in c2.Controls)
 								{
-									MessageBox.Show(c3.Name);
-									llamarMetodosDAO(null, 4);
+									if (c3 is DataGridView)
+									{
+										MessageBox.Show(c3.Name);
+										llamarMetodosDAO(null, 4);
+									}
 								}
 							}
 						}
 					}
 				}
 			}
+			
 		}
 
 
