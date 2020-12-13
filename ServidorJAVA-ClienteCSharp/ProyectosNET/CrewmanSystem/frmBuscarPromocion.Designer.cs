@@ -116,10 +116,9 @@
             this.dgvPromociones.RowTemplate.Height = 24;
             this.dgvPromociones.Size = new System.Drawing.Size(800, 368);
             this.dgvPromociones.TabIndex = 47;
-            this.dgvPromociones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPromociones_CellContentClick);
             this.dgvPromociones.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPromociones_CellContentDoubleClick_1);
             this.dgvPromociones.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPromociones_CellFormatting);
-            this.dgvPromociones.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvPromociones_RowStateChanged);
+            this.dgvPromociones.SelectionChanged += new System.EventHandler(this.dgvPromociones_SelectionChanged);
             // 
             // ID
             // 

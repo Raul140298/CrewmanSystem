@@ -515,7 +515,6 @@ namespace CrewmanSystem
 				case "frmGestionarZonas":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaZona());
 					if (boton == 2) frmGestionarZonas.eliminar();
-					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarZona());
 					if (boton == 4) ((frmGestionarZonas)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarVisitas":

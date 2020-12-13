@@ -63,28 +63,20 @@ namespace CrewmanSystem
         {
 			completarTabla();
         }
-
-		private void dgvPromociones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		private void dgvPromociones_SelectionChanged(object sender, EventArgs e)
 		{
-			frmVentanaPrincipal.act.Enabled = false;
-			frmVentanaPrincipal.elim.Enabled = false;
+			if (dgvPromociones.SelectedCells.Count != 1 && dgvPromociones.SelectedCells.Count != 0)
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
+			}
 		}
-
-		private void dgvPromociones_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-		{
-            //Preguntar al profe
-            if (e.StateChanged != DataGridViewElementStates.Selected)
-            {
-                //frmVentanaPrincipal.act.Enabled = false;
-                //frmVentanaPrincipal.elim.Enabled = false;
-                return;
-            }
-            else
-            {
-                frmVentanaPrincipal.act.Enabled = true;
-                frmVentanaPrincipal.elim.Enabled = true;
-            }
-        }
 		public static void eliminar()
 		{
 			promocionSeleccionada = (PromocionWS.promocion)dgv.CurrentRow.DataBoundItem;
