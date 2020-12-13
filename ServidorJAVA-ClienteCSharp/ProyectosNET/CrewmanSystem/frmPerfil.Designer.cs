@@ -63,10 +63,7 @@
             this.txtZonaJefe = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnCambiarContraseña = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
             this.btnActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -78,7 +75,6 @@
             this.pnlJefeVentas.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -389,7 +385,7 @@
             this.txtZona.Location = new System.Drawing.Point(214, 90);
             this.txtZona.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtZona.Name = "txtZona";
-            this.txtZona.Size = new System.Drawing.Size(180, 19);
+            this.txtZona.Size = new System.Drawing.Size(201, 19);
             this.txtZona.TabIndex = 108;
             // 
             // txtObjetivoVentas
@@ -487,7 +483,7 @@
             this.txtZonaJefe.Location = new System.Drawing.Point(214, 49);
             this.txtZonaJefe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtZonaJefe.Name = "txtZonaJefe";
-            this.txtZonaJefe.Size = new System.Drawing.Size(180, 19);
+            this.txtZonaJefe.Size = new System.Drawing.Size(201, 19);
             this.txtZonaJefe.TabIndex = 110;
             // 
             // label11
@@ -506,26 +502,12 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel4.Controls.Add(this.groupBox3);
+            this.panel4.Controls.Add(this.btnCambiarContraseña);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 622);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(813, 104);
+            this.panel4.Size = new System.Drawing.Size(813, 77);
             this.panel4.TabIndex = 139;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox3.Controls.Add(this.btnCambiarContraseña);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.txtContraseña);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(30, 6);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(633, 88);
-            this.groupBox3.TabIndex = 61;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Cuenta";
             // 
             // btnCambiarContraseña
             // 
@@ -533,7 +515,7 @@
             this.btnCambiarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCambiarContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnCambiarContraseña.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCambiarContraseña.Location = new System.Drawing.Point(410, 24);
+            this.btnCambiarContraseña.Location = new System.Drawing.Point(244, 22);
             this.btnCambiarContraseña.Name = "btnCambiarContraseña";
             this.btnCambiarContraseña.Size = new System.Drawing.Size(201, 36);
             this.btnCambiarContraseña.TabIndex = 106;
@@ -541,37 +523,13 @@
             this.btnCambiarContraseña.UseVisualStyleBackColor = false;
             this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click);
             // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label7.Location = new System.Drawing.Point(51, 24);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(145, 42);
-            this.label7.TabIndex = 105;
-            this.label7.Text = "Contraseña :";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.BackColor = System.Drawing.SystemColors.Window;
-            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtContraseña.Location = new System.Drawing.Point(214, 37);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(180, 16);
-            this.txtContraseña.TabIndex = 104;
-            // 
             // btnActualizar
             // 
             this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnActualizar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnActualizar.Location = new System.Drawing.Point(244, 732);
+            this.btnActualizar.Location = new System.Drawing.Point(244, 705);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(201, 35);
             this.btnActualizar.TabIndex = 62;
@@ -607,8 +565,6 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -650,9 +606,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnCambiarContraseña;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtContraseña;
     }
 }

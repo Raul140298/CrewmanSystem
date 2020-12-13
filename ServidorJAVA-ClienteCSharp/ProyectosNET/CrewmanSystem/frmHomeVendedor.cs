@@ -18,7 +18,6 @@ namespace CrewmanSystem
 		public frmHomeVendedor()
 		{
 			InitializeComponent();
-			btnRecarga.IconColor = Program.color1;
 			daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
 			daoVisita = new VisitaWS.VisitaWSClient();
 			string saludo = "";
@@ -33,7 +32,7 @@ namespace CrewmanSystem
 			cargarValores();
 		}
 
-		private void cargarValores()
+		public void cargarValores()
         {
 			this.cpbSumaVentas.ProgressColor = Program.colorR;
 			this.cpbSumaVentas.Minimum = 0;
@@ -64,21 +63,6 @@ namespace CrewmanSystem
 			this.cpbVisitados.Value = numClientes;
 			double porcentajeVisitas = (double)this.cpbVisitados.Value * 100 / this.cpbVisitados.Maximum;
 			this.cpbVisitados.Text = porcentajeVisitas + "%";
-		}
-
-		private void btnRecarga_Click(object sender, EventArgs e)
-        {
-			cargarValores();
-		}
-
-		private void btnRecarga_MouseMove(object sender, MouseEventArgs e)
-		{
-			btnRecarga.IconColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.5);
-		}
-
-		private void btnRecarga_MouseLeave(object sender, EventArgs e)
-		{
-			btnRecarga.IconColor = Program.color1;
 		}
 	}
 }

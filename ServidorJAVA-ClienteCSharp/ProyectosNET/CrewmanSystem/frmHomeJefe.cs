@@ -18,9 +18,6 @@ namespace CrewmanSystem
 			InitializeComponent();
 			chartVentas.ChartAreas[0].BackColor = SystemColors.ControlLight;
 			chartVentas.PaletteCustomColors = new System.Drawing.Color[] {Program.colorR};
-
-			btnRecarga.IconColor = Program.color1;
-			
 			daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
 			string saludo = "";
 			if (Program.empleado.genero == 'M') saludo = "Bienvenido, ";
@@ -33,7 +30,7 @@ namespace CrewmanSystem
 			actualizarMapa();
 		}
 
-		private void actualizarMapa()
+		public void actualizarMapa()
         {
 			chartVentas.Series.Clear();
 			BindingList<EmpleadoWS.empleado> misEmpleados;
@@ -47,21 +44,6 @@ namespace CrewmanSystem
 			{
 				chartVentas.Series["Suma Ventas"].Points.AddXY(emp.apellidoPaterno + " " + emp.apellidoMaterno + ", " + emp.nombre, emp.sumVentas);
 			}
-		}
-
-        private void btnRecarga_Click(object sender, EventArgs e)
-		{
-			actualizarMapa();
-		}
-
-		private void btnRecarga_MouseMove(object sender, MouseEventArgs e)
-		{
-			btnRecarga.IconColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.5);
-		}
-
-		private void btnRecarga_MouseLeave(object sender, EventArgs e)
-		{
-			btnRecarga.IconColor = Program.color1;
 		}
 	}
 }

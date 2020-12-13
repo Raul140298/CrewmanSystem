@@ -25,7 +25,8 @@ namespace CrewmanSystem
 
 		private void btnSalir_Click(object sender, EventArgs e)
 		{
-			Application.Exit();
+			Environment.Exit(Environment.ExitCode);//<- Detiene todos los threads y la aplicación.
+			//Application.Exit();
 		}
 
 		private void btnCerrarSesion_Click(object sender, EventArgs e)
@@ -37,8 +38,6 @@ namespace CrewmanSystem
 			frmLogeo logeo = new frmLogeo();
 			logeo.Show();
 			Program.panel.Closed += (s, args) => this.Close();
-			
-			
 		}
 	}
 }
