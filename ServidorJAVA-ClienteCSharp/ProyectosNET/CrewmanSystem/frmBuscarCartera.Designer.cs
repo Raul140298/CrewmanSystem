@@ -51,6 +51,7 @@
             this.apellidoMaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SUMA_VENTAS_MENSUAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblNotFound = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -280,11 +281,25 @@
             this.SUMA_VENTAS_MENSUAL.ReadOnly = true;
             this.SUMA_VENTAS_MENSUAL.Width = 137;
             // 
+            // lblNotFound
+            // 
+            this.lblNotFound.AutoSize = true;
+            this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotFound.Location = new System.Drawing.Point(285, 268);
+            this.lblNotFound.Name = "lblNotFound";
+            this.lblNotFound.Size = new System.Drawing.Size(230, 20);
+            this.lblNotFound.TabIndex = 53;
+            this.lblNotFound.Text = "No se encontraron resultados";
+            this.lblNotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNotFound.Visible = false;
+            // 
             // frmBuscarCartera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblNotFound);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -294,6 +309,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -316,5 +332,6 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn apellidoMaterno;
 		private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
 		private System.Windows.Forms.DataGridViewTextBoxColumn SUMA_VENTAS_MENSUAL;
-	}
+        private System.Windows.Forms.Label lblNotFound;
+    }
 }
