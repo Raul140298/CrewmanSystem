@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace CrewmanSystem
@@ -88,6 +89,38 @@ namespace CrewmanSystem
 			else
 			{
 				dgvProductos.DataSource = new BindingList<ProductoWS.producto>();
+			}
+		}
+
+		public void revisarDGV(object source, ElapsedEventArgs e)
+		{
+
+			if (dgvProductos.InvokeRequired)
+			{
+				dgvProductos.Invoke(new Action(() =>
+				{
+					if (dgvProductos.Rows.Count > 0)
+					{
+						int i = ((ProductoWS.producto)dgvProductos.CurrentRow.DataBoundItem).idProducto;
+						int j = dgvProductos.CurrentCell.ColumnIndex;
+
+						recargarDGV();
+
+						int k = 0;
+						foreach (ProductoWS.producto p in misProductos)
+						{
+							if (p.idProducto == i)
+							{
+								i = k;
+								break;
+							}
+							k++;
+						}
+
+						if (k != misProductos.Length)
+							dgvProductos.CurrentCell = dgv[j, i];
+					}
+				}));
 			}
 		}
 	}

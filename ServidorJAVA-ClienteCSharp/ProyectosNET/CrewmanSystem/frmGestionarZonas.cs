@@ -87,25 +87,27 @@ namespace CrewmanSystem
 			{
 				dataGridView1.Invoke(new Action(() =>
 				{
-					int i = ((ZonaWS.zona)dataGridView1.CurrentRow.DataBoundItem).idZona;
-					int j = dataGridView1.CurrentCell.ColumnIndex;
-
-					recargarDGV();
-
-					int k = 0;
-					foreach (ZonaWS.zona z in misZonas)
+					if (dataGridView1.Rows.Count > 0)
 					{
-						if (z.idZona == i)
-						{
-							i = k;
-							break;
-						}
-						k++;
-					}
-					
-					if (k != misZonas.Length)
-						dataGridView1.CurrentCell = dataGridView1[j, i];
+						int i = ((ZonaWS.zona)dataGridView1.CurrentRow.DataBoundItem).idZona;
+						int j = dataGridView1.CurrentCell.ColumnIndex;
 
+						recargarDGV();
+
+						int k = 0;
+						foreach (ZonaWS.zona z in misZonas)
+						{
+							if (z.idZona == i)
+							{
+								i = k;
+								break;
+							}
+							k++;
+						}
+
+						if (k != misZonas.Length)
+							dataGridView1.CurrentCell = dataGridView1[j, i];
+					}
 				}));
             }
         }

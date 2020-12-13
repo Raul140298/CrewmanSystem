@@ -95,24 +95,27 @@ namespace CrewmanSystem
 			{
 				dgvSubfamilias.Invoke(new Action(() =>
 				{
-					int i = ((SubFamiliaWS.subFamilia)dgvSubfamilias.CurrentRow.DataBoundItem).idSubFamilia;
-					int j = dgvSubfamilias.CurrentCell.ColumnIndex;
-
-					recargarDGV();
-
-					int k = 0;
-					foreach (SubFamiliaWS.subFamilia sub in misSubFamilias)
+					if (dgvSubfamilias.Rows.Count > 0)
 					{
-						if (sub.idSubFamilia == i)
-						{
-							i = k;
-							break;
-						}
-						k++;
-					}
+						int i = ((SubFamiliaWS.subFamilia)dgvSubfamilias.CurrentRow.DataBoundItem).idSubFamilia;
+						int j = dgvSubfamilias.CurrentCell.ColumnIndex;
 
-					if (k != misSubFamilias.Length)
-						dgvSubfamilias.CurrentCell = dgvSubfamilias[j, i];
+						recargarDGV();
+
+						int k = 0;
+						foreach (SubFamiliaWS.subFamilia sub in misSubFamilias)
+						{
+							if (sub.idSubFamilia == i)
+							{
+								i = k;
+								break;
+							}
+							k++;
+						}
+
+						if (k != misSubFamilias.Length)
+							dgvSubfamilias.CurrentCell = dgvSubfamilias[j, i];
+					}
 				}));
 			}
 		}

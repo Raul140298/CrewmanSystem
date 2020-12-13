@@ -86,24 +86,27 @@ namespace CrewmanSystem
 			{
 				dataGridView1.Invoke(new Action(() =>
 				{
-					int i = ((MarcaWS.marca)dataGridView1.CurrentRow.DataBoundItem).idMarca;
-					int j = dgv.CurrentCell.ColumnIndex;
-
-					recargarDGV();
-
-					int k = 0;
-					foreach (MarcaWS.marca m in misMarcas)
+					if (dataGridView1.Rows.Count > 0)
 					{
-						if (m.idMarca == i)
-						{
-							i = k;
-							break;
-						}
-						k++;
-					}
+						int i = ((MarcaWS.marca)dataGridView1.CurrentRow.DataBoundItem).idMarca;
+						int j = dgv.CurrentCell.ColumnIndex;
 
-					if (k != misMarcas.Length)
-						dgv.CurrentCell = dgv[j, i];
+						recargarDGV();
+
+						int k = 0;
+						foreach (MarcaWS.marca m in misMarcas)
+						{
+							if (m.idMarca == i)
+							{
+								i = k;
+								break;
+							}
+							k++;
+						}
+
+						if (k != misMarcas.Length)
+							dgv.CurrentCell = dgv[j, i];
+					}
 				}));
 			}
 		}

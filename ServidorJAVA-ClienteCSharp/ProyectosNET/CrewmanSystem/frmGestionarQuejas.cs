@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace CrewmanSystem
@@ -124,6 +125,37 @@ namespace CrewmanSystem
 				dgvQuejas.Columns["NOMBRE"].Visible = false;
 				dgvQuejas.Columns["APELLIDO_PATERNO"].Visible = false;
 				dgvQuejas.Columns["APELLIDO_MATERNO"].Visible = false;
+			}
+		}
+		public void revisarDGV(object source, ElapsedEventArgs e)
+		{
+
+			if (dgvQuejas.InvokeRequired)
+			{
+				dgvQuejas.Invoke(new Action(() =>
+				{
+					if (dgvQuejas.Rows.Count > 0)
+					{
+						int i = ((QuejaWS.queja)dgvQuejas.CurrentRow.DataBoundItem).idQueja;
+						int j = dgvQuejas.CurrentCell.ColumnIndex;
+
+						recargarDGV();
+
+						int k = 0;
+						foreach (QuejaWS.queja q in misQuejas)
+						{
+							if (q.idQueja == i)
+							{
+								i = k;
+								break;
+							}
+							k++;
+						}
+
+						if (k != misQuejas.Length)
+							dgv.CurrentCell = dgv[j, i];
+					}
+				}));
 			}
 		}
 	}

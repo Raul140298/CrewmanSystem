@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace CrewmanSystem
@@ -15,6 +16,7 @@ namespace CrewmanSystem
 		private GuiaRemisionWS.GuiaRemisionWSClient daoGuiaRemision;
 		public static GuiaRemisionWS.guiaRemision guiaRemisionSeleccionado;
 		public static DataGridView dgv;
+		private GuiaRemisionWS.guiaRemision[] misGuias;
 		public frmGestionarGuiasRemision()
 		{
 			daoGuiaRemision = new GuiaRemisionWS.GuiaRemisionWSClient();
@@ -72,7 +74,7 @@ namespace CrewmanSystem
 		}
 		public void recargarDGV()
 		{
-			GuiaRemisionWS.guiaRemision[] misGuias =
+			misGuias =
 				daoGuiaRemision.listarGuiaRemisions(Program.empleado.idEmpleado, "", "", DateTime.Today.AddMonths(-3),
 				DateTime.Today.AddMonths(3), DateTime.Today.AddMonths(-3), DateTime.Today.AddMonths(3));
 			if (misGuias == null)
@@ -85,6 +87,38 @@ namespace CrewmanSystem
 				dgvGuiasDeRemision.Columns["NOMBRE"].Visible = false;
 				dgvGuiasDeRemision.Columns["APELLIDO_PATERNO"].Visible = false;
 				dgvGuiasDeRemision.Columns["APELLIDO_MATERNO"].Visible = false;
+			}
+		}
+		public void revisarDGV(object source, ElapsedEventArgs e)
+		{
+
+			if (dgvGuiasDeRemision.InvokeRequired)
+			{
+				dgvGuiasDeRemision.Invoke(new Action(() =>
+				{
+					if (dgvGuiasDeRemision.Rows.Count > 0)
+					{
+						int i = ((GuiaRemisionWS.guiaRemision)dgvGuiasDeRemision.CurrentRow.DataBoundItem).idGuiaRemision;
+						int j = dgvGuiasDeRemision.CurrentCell.ColumnIndex;
+
+						recargarDGV();
+
+						int k = 0;
+						foreach (GuiaRemisionWS.guiaRemision g in misGuias)
+						{
+							if (g.idGuiaRemision == i)
+							{
+								i = k;
+								break;
+							}
+							k++;
+						}
+
+						if (k != misGuias.Length)
+							dgvGuiasDeRemision.CurrentCell = dgvGuiasDeRemision[j, i];
+
+					}
+				}));
 			}
 		}
 	}
