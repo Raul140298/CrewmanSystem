@@ -31,7 +31,6 @@ import pe.edu.pucp.CrewmanSystem.servlets.ReportePedidosXCliente;
 public class ReporteWS {
     private SimpleDateFormat sdf; 
     
-    
     @WebMethod(operationName = "generarReporteMejoresEmpleados")
     public byte[] generarReporteMejoresEmpleados() {
         byte[] arreglo = null;
@@ -250,7 +249,6 @@ public class ReporteWS {
             Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             
             TimeZone.setDefault(TimeZone.getTimeZone("GMT-5"));
-            
             
             //Creamos un HashMap para enviar los parámetros
             HashMap hm = new HashMap();

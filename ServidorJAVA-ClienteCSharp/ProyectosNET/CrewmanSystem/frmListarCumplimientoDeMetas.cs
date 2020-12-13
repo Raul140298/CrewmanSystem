@@ -57,11 +57,17 @@ namespace CrewmanSystem
         private void dgvEmpleados_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
 			EmpleadoWS.empleado empleado = dgvEmpleados.Rows[e.RowIndex].DataBoundItem
-				as EmpleadoWS.empleado;
+				as EmpleadoWS.empleado; 
+			try 
+			{
+				dgvEmpleados.Rows[e.RowIndex].Cells["ZONA"].Value = empleado.zona.nombre;
+				dgvEmpleados.Rows[e.RowIndex].Cells["CLIENTES_VISITADOS"].Value = numVisitados.ElementAt(e.RowIndex);
+				dgvEmpleados.Rows[e.RowIndex].Cells["CLIENTES_ASIGNADOS"].Value = numAsignados.ElementAt(e.RowIndex);
+			}
+            catch (Exception)
+            {
 
-			dgvEmpleados.Rows[e.RowIndex].Cells["ZONA"].Value = empleado.zona.nombre;
-			dgvEmpleados.Rows[e.RowIndex].Cells["CLIENTES_VISITADOS"].Value = numVisitados.ElementAt(e.RowIndex);
-			dgvEmpleados.Rows[e.RowIndex].Cells["CLIENTES_ASIGNADOS"].Value = numAsignados.ElementAt(e.RowIndex);
+            }
 		}
 	}
 }
