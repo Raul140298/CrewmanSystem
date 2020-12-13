@@ -91,40 +91,44 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1008, 212);
+            this.panel1.Size = new System.Drawing.Size(1497, 190);
             this.panel1.TabIndex = 110;
             // 
             // txtGrupo
             // 
             this.txtGrupo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtGrupo.Location = new System.Drawing.Point(234, 83);
+            this.txtGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGrupo.Location = new System.Drawing.Point(800, 38);
             this.txtGrupo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtGrupo.Name = "txtGrupo";
-            this.txtGrupo.Size = new System.Drawing.Size(263, 15);
+            this.txtGrupo.Size = new System.Drawing.Size(315, 19);
             this.txtGrupo.TabIndex = 125;
             // 
             // label1
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Location = new System.Drawing.Point(42, 83);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(688, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 22);
+            this.label1.Size = new System.Drawing.Size(106, 22);
             this.label1.TabIndex = 124;
             this.label1.Text = "Grupo :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dtpRangoFinTraslado
             // 
-            this.dtpRangoFinTraslado.Location = new System.Drawing.Point(706, 161);
+            this.dtpRangoFinTraslado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpRangoFinTraslado.Location = new System.Drawing.Point(800, 118);
             this.dtpRangoFinTraslado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpRangoFinTraslado.Name = "dtpRangoFinTraslado";
-            this.dtpRangoFinTraslado.Size = new System.Drawing.Size(263, 22);
+            this.dtpRangoFinTraslado.Size = new System.Drawing.Size(315, 26);
             this.dtpRangoFinTraslado.TabIndex = 123;
             // 
             // label5
             // 
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Location = new System.Drawing.Point(514, 163);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(615, 122);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(179, 22);
             this.label5.TabIndex = 122;
@@ -134,7 +138,8 @@
             // label2
             // 
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Location = new System.Drawing.Point(514, 125);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(615, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(179, 22);
             this.label2.TabIndex = 121;
@@ -143,18 +148,20 @@
             // 
             // dtpRangoFinRegistro
             // 
-            this.dtpRangoFinRegistro.Location = new System.Drawing.Point(706, 125);
+            this.dtpRangoFinRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpRangoFinRegistro.Location = new System.Drawing.Point(800, 76);
             this.dtpRangoFinRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpRangoFinRegistro.Name = "dtpRangoFinRegistro";
-            this.dtpRangoFinRegistro.Size = new System.Drawing.Size(263, 22);
+            this.dtpRangoFinRegistro.Size = new System.Drawing.Size(315, 26);
             this.dtpRangoFinRegistro.TabIndex = 120;
             // 
             // label4
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Location = new System.Drawing.Point(42, 163);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(52, 122);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(179, 22);
+            this.label4.Size = new System.Drawing.Size(209, 22);
             this.label4.TabIndex = 117;
             this.label4.Text = "Fecha Traslado Inicial :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -162,7 +169,8 @@
             // label3
             // 
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(42, 43);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(82, 38);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(179, 22);
             this.label3.TabIndex = 116;
@@ -172,9 +180,10 @@
             // lblID
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Location = new System.Drawing.Point(42, 123);
+            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(56, 80);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(179, 22);
+            this.lblID.Size = new System.Drawing.Size(205, 22);
             this.lblID.TabIndex = 115;
             this.lblID.Text = "Fecha Registro Inicial:";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -184,8 +193,9 @@
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(533, 43);
+            this.btnBuscar.Location = new System.Drawing.Point(1158, 34);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(160, 30);
@@ -196,37 +206,40 @@
             // 
             // dtpRangoIniTraslado
             // 
-            this.dtpRangoIniTraslado.Location = new System.Drawing.Point(234, 161);
+            this.dtpRangoIniTraslado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpRangoIniTraslado.Location = new System.Drawing.Point(274, 118);
             this.dtpRangoIniTraslado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpRangoIniTraslado.Name = "dtpRangoIniTraslado";
-            this.dtpRangoIniTraslado.Size = new System.Drawing.Size(263, 22);
+            this.dtpRangoIniTraslado.Size = new System.Drawing.Size(315, 26);
             this.dtpRangoIniTraslado.TabIndex = 113;
             // 
             // dtpRangoIniRegistro
             // 
-            this.dtpRangoIniRegistro.Location = new System.Drawing.Point(234, 123);
+            this.dtpRangoIniRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpRangoIniRegistro.Location = new System.Drawing.Point(274, 76);
             this.dtpRangoIniRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpRangoIniRegistro.Name = "dtpRangoIniRegistro";
-            this.dtpRangoIniRegistro.Size = new System.Drawing.Size(263, 22);
+            this.dtpRangoIniRegistro.Size = new System.Drawing.Size(315, 26);
             this.dtpRangoIniRegistro.TabIndex = 112;
             // 
             // txtRazonSocial
             // 
             this.txtRazonSocial.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRazonSocial.Location = new System.Drawing.Point(234, 43);
+            this.txtRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRazonSocial.Location = new System.Drawing.Point(274, 38);
             this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(263, 15);
+            this.txtRazonSocial.Size = new System.Drawing.Size(315, 19);
             this.txtRazonSocial.TabIndex = 110;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dgvGuiasDeRemision);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 212);
+            this.panel2.Location = new System.Drawing.Point(0, 190);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1008, 277);
+            this.panel2.Size = new System.Drawing.Size(1497, 299);
             this.panel2.TabIndex = 111;
             // 
             // dgvGuiasDeRemision
@@ -286,7 +299,7 @@
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvGuiasDeRemision.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvGuiasDeRemision.RowTemplate.Height = 24;
-            this.dgvGuiasDeRemision.Size = new System.Drawing.Size(1008, 277);
+            this.dgvGuiasDeRemision.Size = new System.Drawing.Size(1497, 299);
             this.dgvGuiasDeRemision.TabIndex = 4;
             this.dgvGuiasDeRemision.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGuiasDeRemision_CellContentClick);
             this.dgvGuiasDeRemision.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvGuiasDeRemision_CellFormatting);
@@ -416,7 +429,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 489);
+            this.ClientSize = new System.Drawing.Size(1497, 489);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);

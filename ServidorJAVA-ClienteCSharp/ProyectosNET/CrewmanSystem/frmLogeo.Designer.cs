@@ -162,10 +162,10 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(56, 223);
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblUsuario.Location = new System.Drawing.Point(56, 220);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(70, 17);
+            this.lblUsuario.Size = new System.Drawing.Size(84, 20);
             this.lblUsuario.TabIndex = 21;
             this.lblUsuario.Text = "USUARIO";
             // 
@@ -203,7 +203,7 @@
             // 
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtUsuario.Location = new System.Drawing.Point(56, 240);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(286, 19);
@@ -214,7 +214,7 @@
             // 
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseña.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtContraseña.Location = new System.Drawing.Point(56, 310);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '•';
@@ -227,10 +227,10 @@
             // 
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseña.Location = new System.Drawing.Point(56, 293);
+            this.lblContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblContraseña.Location = new System.Drawing.Point(56, 290);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(103, 17);
+            this.lblContraseña.Size = new System.Drawing.Size(124, 20);
             this.lblContraseña.TabIndex = 20;
             this.lblContraseña.Text = "CONTRASEÑA";
             // 
@@ -277,6 +277,7 @@
             // 
             // lblMensajeError
             // 
+            this.lblMensajeError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensajeError.ForeColor = System.Drawing.Color.DarkRed;
             this.lblMensajeError.Location = new System.Drawing.Point(56, 25);
             this.lblMensajeError.Name = "lblMensajeError";
