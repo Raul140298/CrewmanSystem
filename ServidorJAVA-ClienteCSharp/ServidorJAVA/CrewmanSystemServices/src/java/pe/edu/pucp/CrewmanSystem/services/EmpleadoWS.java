@@ -175,10 +175,11 @@ public class EmpleadoWS
     
     @WebMethod(operationName = "cambiarContraseña")
     public int cambiarContraseña(@WebParam(name = "idEmpleado") int idEmpleado,
-            @WebParam(name = "contraseña") String contraseña) {
+            @WebParam(name = "contraseñaActual") String contraseñaActual,
+            @WebParam(name = "contraseñaNueva") String contraseñaNueva) {
         int resultado = 0;
         try{
-            resultado = daoEmpleado.cambiarContraseña(idEmpleado, contraseña);
+            resultado = daoEmpleado.cambiarContraseña(idEmpleado, contraseñaActual, contraseñaNueva);
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }

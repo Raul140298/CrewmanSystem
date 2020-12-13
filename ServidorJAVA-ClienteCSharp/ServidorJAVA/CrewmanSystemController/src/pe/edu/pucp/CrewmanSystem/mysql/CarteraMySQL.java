@@ -29,11 +29,13 @@ public class CarteraMySQL implements CarteraDAO{
             cs.executeUpdate();
                         
             for(Visita v : cartera.getListaVisita()){
-                sql ="{ call INSERTAR_CLIENTECARTERA(?,?,?)}";
+                sql ="{ call INSERTAR_CLIENTECARTERA(?,?,?,?,?)}";
                 cs = con.prepareCall(sql);
                 cs.setInt("_ID_CARTERA", cartera.getIdCartera());
                 cs.setInt("_ID_CLIENTE", v.getCliente().getIdCliente());
                 cs.setInt("_ID_EMPLEADO", cartera.getEmpleado().getIdEmpleado());
+                cs.setDate("_FECHA_REGISTRO", new java.sql.Date(v.getFechaRegistro().getTime()));
+                cs.setBoolean("_ESTADO", v.isEstado());
                 cs.executeUpdate();
             }
             resultado = 1;

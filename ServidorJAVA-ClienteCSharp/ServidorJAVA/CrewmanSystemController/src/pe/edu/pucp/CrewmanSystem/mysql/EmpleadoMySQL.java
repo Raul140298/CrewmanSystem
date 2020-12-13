@@ -13,11 +13,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import pe.edu.pucp.CrewmanSystem.dao.EmpleadoXZonaDAO;
 import pe.edu.pucp.CrewmanSystem.dao.PersonaDAO;
-import pe.edu.pucp.CrewmanSystem.dao.VisitaDAO;
 import pe.edu.pucp.CrewmanSystem.model.Cargo;
 import pe.edu.pucp.CrewmanSystem.model.EmpleadoXZona;
 import pe.edu.pucp.CrewmanSystem.model.Persona;
-import pe.edu.pucp.CrewmanSystem.model.Visita;
 import pe.edu.pucp.CrewmanSystem.model.Zona;
 
 public class EmpleadoMySQL implements EmpleadoDAO{
@@ -410,16 +408,19 @@ public class EmpleadoMySQL implements EmpleadoDAO{
     }
 
     @Override
-    public int cambiarContraseña(int idEmpleado, String contraseña) {
+    public int cambiarContraseña(int idEmpleado, String contraseñaActual, String contraseñaNueva) {
         int resultado = 0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
-            String sql ="{ call CAMBIAR_CONTRASEÑA(?,?)}";
+            String sql ="{ call CAMBIAR_CONTRASEÑA(?,?,?,?)}";
             cs = con.prepareCall(sql);
+            cs.registerOutParameter("_RESULTADO",java.sql.Types.INTEGER);
             cs.setInt("_ID_EMPLEADO", idEmpleado);
-            cs.setString("_CONTRASEÑA", contraseña);
-            resultado = cs.executeUpdate();
+            cs.setString("_CONTRASEÑA_ACTUAL", contraseñaActual);
+            cs.setString("_CONTRASEÑA_NUEVA", contraseñaNueva);
+            cs.executeUpdate();
+            resultado = cs.getInt("_RESULTADO");
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
