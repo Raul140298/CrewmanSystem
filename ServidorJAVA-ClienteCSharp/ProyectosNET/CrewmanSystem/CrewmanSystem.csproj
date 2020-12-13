@@ -804,6 +804,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\segmentar.png" />
+    <None Include="Resources\ruta.png" />
+    <None Include="Resources\promocion.png" />
     <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.actualizarEmpleadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
