@@ -64,6 +64,12 @@ namespace CrewmanSystem
             this.btnGenerar.UseVisualStyleBackColor = false;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
+            // sfdReporte
+            // 
+            this.sfdReporte.DefaultExt = "pdf";
+            this.sfdReporte.FileName = "ReporteDeQuejas.pdf";
+            this.sfdReporte.Filter = "PDF (*.pdf)|*.pdf";
+            // 
             // frmReporteQuejas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -74,6 +80,7 @@ namespace CrewmanSystem
             this.Controls.Add(this.btnGenerar);
             this.Name = "frmReporteQuejas";
             this.Text = "frmReporteQuejas";
+            this.Load += new System.EventHandler(this.frmReporteQuejas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

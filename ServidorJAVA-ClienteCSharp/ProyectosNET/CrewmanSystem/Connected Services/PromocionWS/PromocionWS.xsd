@@ -6,6 +6,8 @@
   <xs:element name="eliminarPromocionResponse" type="tns:eliminarPromocionResponse" />
   <xs:element name="insertarPromocion" type="tns:insertarPromocion" />
   <xs:element name="insertarPromocionResponse" type="tns:insertarPromocionResponse" />
+  <xs:element name="listarPromocionPorZona" type="tns:listarPromocionPorZona" />
+  <xs:element name="listarPromocionPorZonaResponse" type="tns:listarPromocionPorZonaResponse" />
   <xs:element name="listarPromocions" type="tns:listarPromocions" />
   <xs:element name="listarPromocionsResponse" type="tns:listarPromocionsResponse" />
   <xs:complexType name="eliminarPromocion">
@@ -113,6 +115,7 @@
       <xs:element minOccurs="0" name="grupo" type="xs:string" />
       <xs:element name="idCliente" type="xs:int" />
       <xs:element minOccurs="0" name="lineaCredito" type="tns:lineaCredito" />
+      <xs:element name="montoSeg" type="xs:double" />
       <xs:element minOccurs="0" name="personaContacto" type="tns:personaContacto" />
       <xs:element minOccurs="0" name="razonSocial" type="xs:string" />
       <xs:element minOccurs="0" name="ruc" type="xs:string" />
@@ -158,6 +161,7 @@
       <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
       <xs:element minOccurs="0" name="correo" type="xs:string" />
       <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
       <xs:element name="genero" type="xs:unsignedShort" />
       <xs:element name="idPersona" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
@@ -269,6 +273,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:persona">
         <xs:sequence>
+          <xs:element name="activo" type="xs:boolean" />
           <xs:element minOccurs="0" name="cargo" type="xs:string" />
           <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
           <xs:element name="idPersonaContacto" type="xs:int" />
@@ -334,6 +339,19 @@
   <xs:complexType name="actualizarPromocionResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPromocionPorZona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaIni" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+      <xs:element name="idZona" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPromocionPorZonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:promocion" />
     </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="estadoPedido">

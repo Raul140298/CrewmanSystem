@@ -35,17 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.NRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FECHA_REGISTRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FECHA_ULT_COMPRA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TIPO_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FECHA_VISITA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApPaterno = new System.Windows.Forms.TextBox();
@@ -67,6 +56,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.NRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIPO_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -109,13 +105,9 @@
             this.RUC,
             this.RAZON_SOCIAL,
             this.GRUPO,
-            this.FECHA_REGISTRO,
-            this.FECHA_ULT_COMPRA,
             this.TIPO_CLIENTE,
             this.ZONA,
-            this.DIRECCION,
-            this.ESTADO,
-            this.FECHA_VISITA});
+            this.DIRECCION});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
@@ -143,98 +135,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(718, 260);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
-            // 
-            // NRO
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.NRO.DefaultCellStyle = dataGridViewCellStyle2;
-            this.NRO.HeaderText = "Nro";
-            this.NRO.MinimumWidth = 6;
-            this.NRO.Name = "NRO";
-            this.NRO.ReadOnly = true;
-            this.NRO.Width = 64;
-            // 
-            // RUC
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.RUC.DefaultCellStyle = dataGridViewCellStyle3;
-            this.RUC.HeaderText = "RUC";
-            this.RUC.MinimumWidth = 6;
-            this.RUC.Name = "RUC";
-            this.RUC.ReadOnly = true;
-            this.RUC.Width = 73;
-            // 
-            // RAZON_SOCIAL
-            // 
-            this.RAZON_SOCIAL.HeaderText = "Razón Social";
-            this.RAZON_SOCIAL.MinimumWidth = 6;
-            this.RAZON_SOCIAL.Name = "RAZON_SOCIAL";
-            this.RAZON_SOCIAL.ReadOnly = true;
-            this.RAZON_SOCIAL.Width = 136;
-            // 
-            // GRUPO
-            // 
-            this.GRUPO.HeaderText = "Grupo";
-            this.GRUPO.MinimumWidth = 6;
-            this.GRUPO.Name = "GRUPO";
-            this.GRUPO.ReadOnly = true;
-            this.GRUPO.Width = 83;
-            // 
-            // FECHA_REGISTRO
-            // 
-            this.FECHA_REGISTRO.HeaderText = "Fecha Registro";
-            this.FECHA_REGISTRO.MinimumWidth = 6;
-            this.FECHA_REGISTRO.Name = "FECHA_REGISTRO";
-            this.FECHA_REGISTRO.ReadOnly = true;
-            this.FECHA_REGISTRO.Width = 151;
-            // 
-            // FECHA_ULT_COMPRA
-            // 
-            this.FECHA_ULT_COMPRA.HeaderText = "Fecha Ult. Compra";
-            this.FECHA_ULT_COMPRA.MinimumWidth = 6;
-            this.FECHA_ULT_COMPRA.Name = "FECHA_ULT_COMPRA";
-            this.FECHA_ULT_COMPRA.ReadOnly = true;
-            this.FECHA_ULT_COMPRA.Width = 177;
-            // 
-            // TIPO_CLIENTE
-            // 
-            this.TIPO_CLIENTE.HeaderText = "Tipo Cliente";
-            this.TIPO_CLIENTE.MinimumWidth = 6;
-            this.TIPO_CLIENTE.Name = "TIPO_CLIENTE";
-            this.TIPO_CLIENTE.ReadOnly = true;
-            this.TIPO_CLIENTE.Width = 126;
-            // 
-            // ZONA
-            // 
-            this.ZONA.HeaderText = "Zona";
-            this.ZONA.MinimumWidth = 6;
-            this.ZONA.Name = "ZONA";
-            this.ZONA.ReadOnly = true;
-            this.ZONA.Width = 73;
-            // 
-            // DIRECCION
-            // 
-            this.DIRECCION.HeaderText = "Dirección";
-            this.DIRECCION.MinimumWidth = 6;
-            this.DIRECCION.Name = "DIRECCION";
-            this.DIRECCION.ReadOnly = true;
-            this.DIRECCION.Width = 109;
-            // 
-            // ESTADO
-            // 
-            this.ESTADO.HeaderText = "Estado";
-            this.ESTADO.MinimumWidth = 6;
-            this.ESTADO.Name = "ESTADO";
-            this.ESTADO.ReadOnly = true;
-            this.ESTADO.Width = 89;
-            // 
-            // FECHA_VISITA
-            // 
-            this.FECHA_VISITA.HeaderText = "Fecha Visita";
-            this.FECHA_VISITA.MinimumWidth = 6;
-            this.FECHA_VISITA.Name = "FECHA_VISITA";
-            this.FECHA_VISITA.ReadOnly = true;
-            this.FECHA_VISITA.Width = 130;
             // 
             // groupBox1
             // 
@@ -478,6 +378,66 @@
             this.panel3.Size = new System.Drawing.Size(39, 318);
             this.panel3.TabIndex = 6;
             // 
+            // NRO
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.NRO.DefaultCellStyle = dataGridViewCellStyle2;
+            this.NRO.HeaderText = "Nro";
+            this.NRO.MinimumWidth = 6;
+            this.NRO.Name = "NRO";
+            this.NRO.ReadOnly = true;
+            this.NRO.Width = 64;
+            // 
+            // RUC
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.RUC.DefaultCellStyle = dataGridViewCellStyle3;
+            this.RUC.HeaderText = "RUC";
+            this.RUC.MinimumWidth = 6;
+            this.RUC.Name = "RUC";
+            this.RUC.ReadOnly = true;
+            this.RUC.Width = 73;
+            // 
+            // RAZON_SOCIAL
+            // 
+            this.RAZON_SOCIAL.HeaderText = "Razón Social";
+            this.RAZON_SOCIAL.MinimumWidth = 6;
+            this.RAZON_SOCIAL.Name = "RAZON_SOCIAL";
+            this.RAZON_SOCIAL.ReadOnly = true;
+            this.RAZON_SOCIAL.Width = 136;
+            // 
+            // GRUPO
+            // 
+            this.GRUPO.HeaderText = "Grupo";
+            this.GRUPO.MinimumWidth = 6;
+            this.GRUPO.Name = "GRUPO";
+            this.GRUPO.ReadOnly = true;
+            this.GRUPO.Width = 83;
+            // 
+            // TIPO_CLIENTE
+            // 
+            this.TIPO_CLIENTE.HeaderText = "Tipo Cliente";
+            this.TIPO_CLIENTE.MinimumWidth = 6;
+            this.TIPO_CLIENTE.Name = "TIPO_CLIENTE";
+            this.TIPO_CLIENTE.ReadOnly = true;
+            this.TIPO_CLIENTE.Width = 126;
+            // 
+            // ZONA
+            // 
+            this.ZONA.HeaderText = "Zona";
+            this.ZONA.MinimumWidth = 6;
+            this.ZONA.Name = "ZONA";
+            this.ZONA.ReadOnly = true;
+            this.ZONA.Width = 73;
+            // 
+            // DIRECCION
+            // 
+            this.DIRECCION.HeaderText = "Dirección";
+            this.DIRECCION.MinimumWidth = 6;
+            this.DIRECCION.Name = "DIRECCION";
+            this.DIRECCION.ReadOnly = true;
+            this.DIRECCION.Width = 109;
+            // 
             // frmNuevaCartera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -529,16 +489,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-		private System.Windows.Forms.DataGridViewTextBoxColumn NRO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
-		private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
-		private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ULT_COMPRA;
-		private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_CLIENTE;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
-		private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_VISITA;
-	}
+        private System.Windows.Forms.DataGridViewTextBoxColumn NRO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_CLIENTE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
+    }
 }

@@ -21,8 +21,7 @@ namespace CrewmanSystem
 			daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
 			InitializeComponent();
 			dgv = dgvCarteras;
-			dgvCarteras.AutoGenerateColumns = false;
-			
+			recargarDGV();
 			#region colores de seleccion
 			dgvCarteras.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
 			dgvCarteras.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
@@ -67,7 +66,7 @@ namespace CrewmanSystem
 		public void recargarDGV()
 		{
 			EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado, "", "", "");
-
+			dgvCarteras.AutoGenerateColumns = false;
 			if (misEmpleados != null)
 				dgvCarteras.DataSource = new BindingList<EmpleadoWS.empleado>(misEmpleados.ToArray());
 			else
