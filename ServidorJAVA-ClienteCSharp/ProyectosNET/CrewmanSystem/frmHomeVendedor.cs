@@ -34,7 +34,6 @@ namespace CrewmanSystem
 
 		public void cargarValores()
         {
-			MessageBox.Show("cargar valores");
 			this.cpbSumaVentas.ProgressColor = Program.colorR;
 			this.cpbSumaVentas.Minimum = 0;
 			this.cpbSumaVentas.Maximum = Convert.ToInt32(Program.empleado.objetivoVentas);

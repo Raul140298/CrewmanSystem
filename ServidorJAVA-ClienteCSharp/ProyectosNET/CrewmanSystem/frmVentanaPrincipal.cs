@@ -1040,7 +1040,7 @@ namespace CrewmanSystem
 			if (ishome == true)
 			{
 				int cargo = Program.empleado.cargo.idCargo;
-				MessageBox.Show("Estas al inicio");
+				//MessageBox.Show("Estas al inicio");
 				if (cargo == 1)
 				{
 					((frmHomeVendedor)Program.pantallas.First().Formulario).cargarValores();
@@ -1057,27 +1057,27 @@ namespace CrewmanSystem
 				{
 					if (c is DataGridView)
 					{
-						MessageBox.Show(c.Name);
+						//MessageBox.Show(c.Name);
 						llamarMetodosDAO(null, 4);
 					}
 					if (c is Panel)
 					{
-						MessageBox.Show(c.Name);
+						//MessageBox.Show(c.Name);
 						foreach (Control c2 in c.Controls)
 						{
 							if (c2 is DataGridView)
 							{
-								MessageBox.Show(c2.Name);
+								//MessageBox.Show(c2.Name);
 								llamarMetodosDAO(null, 4);
 							}
 							if (c2 is Panel)
 							{
-								MessageBox.Show(c2.Name);
+								//MessageBox.Show(c2.Name);
 								foreach (Control c3 in c2.Controls)
 								{
 									if (c3 is DataGridView)
 									{
-										MessageBox.Show(c3.Name);
+										//MessageBox.Show(c3.Name);
 										llamarMetodosDAO(null, 4);
 									}
 								}

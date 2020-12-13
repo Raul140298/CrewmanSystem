@@ -32,7 +32,6 @@ namespace CrewmanSystem
 
 		public void actualizarMapa()
         {
-			MessageBox.Show("actualizar mapa");
 			chartVentas.Series.Clear();
 			BindingList<EmpleadoWS.empleado> misEmpleados;
 			EmpleadoWS.empleado[] empleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado, "", "", "");
