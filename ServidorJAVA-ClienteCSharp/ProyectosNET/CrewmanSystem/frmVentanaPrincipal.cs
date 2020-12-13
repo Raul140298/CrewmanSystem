@@ -439,6 +439,7 @@ namespace CrewmanSystem
 						break;
 				}
 				btnRight.Visible = btnLeft.Visible = false;
+				btnRecarga.Visible = false;
 			}
 		}
 
