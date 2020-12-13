@@ -54,7 +54,7 @@ namespace CrewmanSystem
 			#endregion
 		}
 
-		private void completarTabla()
+		public void completarTabla()
         {
 			dgvProductoXZona.AutoGenerateColumns = false;
 			int idZona = ((ZonaWS.zona)cboZona.SelectedItem).idZona;

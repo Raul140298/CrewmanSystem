@@ -55,7 +55,7 @@ namespace CrewmanSystem
 			#endregion
 		}
 
-        private void completarTabla()
+        public void completarTabla()
 		{
 			dgvClientes.AutoGenerateColumns = false;
 			if (tipoFrmVendedor == 2)

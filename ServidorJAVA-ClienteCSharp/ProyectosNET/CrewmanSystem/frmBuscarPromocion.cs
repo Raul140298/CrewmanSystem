@@ -35,7 +35,7 @@ namespace CrewmanSystem
 			#endregion
 		}
 
-		private void completarTabla()
+		public void completarTabla()
         {
 			dgvPromociones.AutoGenerateColumns = false;
 			PromocionWS.promocion[] misPromocions = daoPromocion.listarPromocions(txtNombre.Text, dtpFechaInicio.Value, dtpFechaFIn.Value);

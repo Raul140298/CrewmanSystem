@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CrewmanSystem
 {
-	public partial class frmNuevoPedido : Form
+	public partial class frmNuevoBorrador : Form
 	{
         public static ClienteWS.cliente clienteSeleccionado;
         public static ZonaWS.ZonaWSClient daoZona;
@@ -23,7 +23,7 @@ namespace CrewmanSystem
         string[] estadoBorrador = { "ESPERANDO", "EN_PROCESO" };
         string[] estadoPedido = { "EN_PROCESO", "FINALIZADO" };
         public static PedidoWS.pedido pedidoSeleccionado;
-        public frmNuevoPedido()
+        public frmNuevoBorrador()
         {
             montoTotal = 0;
             daoZona = new ZonaWS.ZonaWSClient();
@@ -46,14 +46,14 @@ namespace CrewmanSystem
                     gboCliente.Enabled = false;
                 }
                 //OBTENER DATOS DE FILA SELECCIONADA
-                if (Program.pantallas[Program.pantallas.Count - 1].Formulario.Name == "frmGestionarPedidos")
+                if (Program.pantallas[Program.pantallas.Count - 1].Formulario.Name == "frmGestionarBorradores")
                 {
-                    pedidoSeleccionado = (PedidoWS.pedido)frmGestionarPedidos.dgv.CurrentRow.DataBoundItem;
+                    pedidoSeleccionado = (PedidoWS.pedido)frmGestionarBorradores.dgv.CurrentRow.DataBoundItem;
                     
                 }
                 else
                 {
-                    pedidoSeleccionado = (PedidoWS.pedido)frmBuscarPedido.dgv.CurrentRow.DataBoundItem;
+                    pedidoSeleccionado = (PedidoWS.pedido)frmBuscarBorrador.dgv.CurrentRow.DataBoundItem;
                 }
                 txtIDOrdenVenta.Text = pedidoSeleccionado.idPedido.ToString();
                 txtDireccion.Text = pedidoSeleccionado.direccionEntrega;
@@ -110,7 +110,7 @@ namespace CrewmanSystem
             }
         }
 
-        private void completarTabla()
+        public void completarTabla()
         {
             dgvLineas.DataSource = null;
             dgvLineas.AutoGenerateColumns = false;
@@ -265,7 +265,7 @@ namespace CrewmanSystem
                     }
                     else
                     {
-                        ((frmGestionarPedidos)Program.pantallas[Program.pantallas.Count - 2].Formulario).recargarDGV();
+                        ((frmGestionarBorradores)Program.pantallas[Program.pantallas.Count - 2].Formulario).recargarDGV();
                         MessageBox.Show("Se insertó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         pedido.idPedido = resultado;
                         txtIDOrdenVenta.Text = resultado.ToString();

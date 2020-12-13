@@ -46,10 +46,10 @@ namespace CrewmanSystem
 
         private void btnBuscarPedido_Click(object sender, EventArgs e)
         {
-            frmBuscarPedido formBusquedaPedidoAGuiaRemision = new frmBuscarPedido(2);
+            frmBuscarBorrador formBusquedaPedidoAGuiaRemision = new frmBuscarBorrador(2);
             if (formBusquedaPedidoAGuiaRemision.ShowDialog() == DialogResult.OK)
             {
-                pedidoSeleccionado = frmBuscarPedido.pedidoSeleccionado;
+                pedidoSeleccionado = frmBuscarBorrador.pedidoSeleccionado;
                 txtIdPedido.Text = pedidoSeleccionado.idPedido.ToString();
             }
         }

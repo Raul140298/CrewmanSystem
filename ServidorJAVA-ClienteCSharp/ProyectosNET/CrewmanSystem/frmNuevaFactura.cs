@@ -137,10 +137,10 @@ namespace CrewmanSystem
 
         private void btnBuscarPedido_Click(object sender, EventArgs e)
         {
-            frmBuscarPedido formBusquedaPedidoAPagar = new frmBuscarPedido(1);
+            frmBuscarBorrador formBusquedaPedidoAPagar = new frmBuscarBorrador(1);
             if (formBusquedaPedidoAPagar.ShowDialog() == DialogResult.OK)
             {
-                pedidoSeleccionado = frmBuscarPedido.pedidoSeleccionado;
+                pedidoSeleccionado = frmBuscarBorrador.pedidoSeleccionado;
                 txtIdPedido.Text = pedidoSeleccionado.idPedido.ToString();
                 txtMontoPendiente.Text = pedidoSeleccionado.montoPagar.ToString("n2");
             }

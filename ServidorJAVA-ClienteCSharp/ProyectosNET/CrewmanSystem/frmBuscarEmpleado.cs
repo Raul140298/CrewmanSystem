@@ -74,7 +74,7 @@ namespace CrewmanSystem
 			}
 		}
 
-		private void completarTabla()
+		public void completarTabla()
 		{ 
 			dgvEmpleados.AutoGenerateColumns = false;
 			EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado,txtNombre.Text,txtApPaterno.Text,txtApMaterno.Text);

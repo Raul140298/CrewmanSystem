@@ -544,6 +544,7 @@ namespace CrewmanSystem
 				case "frmBuscarPromocion":
 					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaPromocion());
 					if (boton == 2) frmBuscarPromocion.eliminar();
+					if (boton == 4) ((frmBuscarPromocion)Program.pantallas.Last().Formulario).completarTabla();
 					break;
 				case "frmGestionarProductosXZona":
 					if (boton == 0) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoProductoXZona());
@@ -559,24 +560,27 @@ namespace CrewmanSystem
 				case "frmBuscarProducto":
 					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoProducto());
 					if (boton == 2) frmBuscarProducto.eliminar();
+					if (boton == 4) ((frmBuscarProducto)Program.pantallas.Last().Formulario).completarTabla();
+					break;
+				case "frmGestionarBorradores":
+					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoBorrador());
+					if (boton == 2) frmGestionarBorradores.eliminar();
+					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarBorrador(0));
+					if (boton == 4) ((frmGestionarBorradores)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
 				case "frmGestionarPedidos":
-					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoPedido());
 					if (boton == 2) frmGestionarPedidos.eliminar();
-					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarPedido(0));
+					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarPedido());
 					if (boton == 4) ((frmGestionarPedidos)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
-				case "frmGestionarAprobados":
-					if (boton == 2) frmGestionarAprobados.eliminar();
-					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarAprobado());
-					if (boton == 4) ((frmGestionarAprobados)Program.pantallas.Last().Formulario).recargarDGV();
-					break;
-				case "frmBuscarAprobado":
-					if (boton == 2) frmGestionarAprobados.eliminar();
-					break;
 				case "frmBuscarPedido":
-					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoPedido());
-					if (boton == 2) frmBuscarPedido.eliminar();
+					if (boton == 2) frmGestionarPedidos.eliminar();
+					if (boton == 4) ((frmBuscarPedido)Program.pantallas.Last().Formulario).completarTabla();
+					break;
+				case "frmBuscarBorrador":
+					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoBorrador());
+					if (boton == 2) frmBuscarBorrador.eliminar();
+					if (boton == 4) ((frmBuscarBorrador)Program.pantallas.Last().Formulario).completarTabla();
 					break;
 				case "frmGestionarMarcas":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaMarca());
@@ -590,6 +594,7 @@ namespace CrewmanSystem
 					break;
 				case "frmBuscarGuiaRemision":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaGuiaRemision());
+					if (boton == 4) ((frmBuscarGuiaRemision)Program.pantallas.Last().Formulario).completarTabla();
 					break;
 				case "frmGestionarFamilias":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaFamilia());
@@ -610,6 +615,7 @@ namespace CrewmanSystem
 					break;
 				case "frmBuscarEmpleado":
 					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoEmpleado());
+					if (boton == 4) ((frmBuscarEmpleado)Program.pantallas.Last().Formulario).completarTabla();
 					break;
 				case "frmGestionarCarteras":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaCartera());
@@ -618,6 +624,7 @@ namespace CrewmanSystem
 					break;
 				case "frmBuscarCartera":
 					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaCartera());
+					if (boton == 4) ((frmBuscarCartera)Program.pantallas.Last().Formulario).completarTabla();
 					break;
 				case "frmGestionarClientes":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoCliente());
@@ -628,6 +635,7 @@ namespace CrewmanSystem
 				case "frmBuscarCliente":
 					if (boton == 1) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevoCliente());
 					if (boton == 2) frmBuscarCliente.eliminar();
+					if (boton == 4) ((frmBuscarCliente)Program.pantallas.Last().Formulario).completarTabla();
 					break;
 				default:
 					MessageBox.Show("Error: El formulario aún no existe");
@@ -729,12 +737,12 @@ namespace CrewmanSystem
 		}
 		private void btnPedidos_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarPedidos(), false, true, true, true, true);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarBorradores(), false, true, true, true, true);
 		}
 
 		private void btnAprobados_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarAprobados(), false, false, true, true, true);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarPedidos(), false, false, true, true, true);
 		}
 
 		private void btnPedReporte_Click(object sender, EventArgs e)
@@ -814,12 +822,12 @@ namespace CrewmanSystem
 
 		private void btnEmpBorradores_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarPedidos(), true, true, true, true, true);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarBorradores(), true, true, true, true, true);
 		}
 
 		private void btnEmpPedidos_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarAprobados(), false, false, true, true, true);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarPedidos(), false, false, true, true, true);
 		}
 
 		private void btnEmpGestionFacturas_Click(object sender, EventArgs e)

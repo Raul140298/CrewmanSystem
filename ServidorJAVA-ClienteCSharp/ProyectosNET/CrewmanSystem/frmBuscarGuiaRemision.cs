@@ -32,7 +32,7 @@ namespace CrewmanSystem
 			completarTabla();
         }
 
-		private void completarTabla()
+		public void completarTabla()
 		{
 			dgvGuiasDeRemision.AutoGenerateColumns = false;
 			misGuiasRemision = 
