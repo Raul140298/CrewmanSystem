@@ -11,10 +11,12 @@ import java.util.GregorianCalendar;
 import pe.edu.pucp.CrewmanSystem.config.DBManager;
 import pe.edu.pucp.CrewmanSystem.dao.ClienteDAO;
 import pe.edu.pucp.CrewmanSystem.dao.ClienteXZonaDAO;
+import pe.edu.pucp.CrewmanSystem.dao.EmpleadoDAO;
 import pe.edu.pucp.CrewmanSystem.dao.LineaCreditoDAO;
 import pe.edu.pucp.CrewmanSystem.dao.PersonaContactoDAO;
 import pe.edu.pucp.CrewmanSystem.model.Cliente;
 import pe.edu.pucp.CrewmanSystem.model.ClienteXZona;
+import pe.edu.pucp.CrewmanSystem.model.Empleado;
 import pe.edu.pucp.CrewmanSystem.model.LineaCredito;
 import pe.edu.pucp.CrewmanSystem.model.PersonaContacto;
 import pe.edu.pucp.CrewmanSystem.model.Zona;
@@ -396,6 +398,10 @@ public class ClienteMySQL implements ClienteDAO{
             sql ="{ call ACTUALIZAR_FECHA_SEG (?)}";
             cs = con.prepareCall(sql);
             cs.setDate("_FECHA_ULTIMA_SEG", new java.sql.Date(new Date().getTime()));
+            resultado = cs.executeUpdate();
+            if(resultado == 0)return 0;
+            sql ="{ call REINICIAR_MONTOS ()}";
+            cs = con.prepareCall(sql);
             resultado = cs.executeUpdate();
             con.commit();
         }catch(Exception ex){
