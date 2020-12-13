@@ -93,6 +93,9 @@ namespace CrewmanSystem
             nuevaVisita.cliente.zona.nombre = miCliente.zona.nombre;
             nuevaVisita.empleado = new VisitaWS.empleado();
             nuevaVisita.empleado.idEmpleado = Program.empleado.idEmpleado;
+            nuevaVisita.fechaRegistro = DateTime.Today.AddYears(-100);
+            nuevaVisita.fechaRegistroSpecified = true;
+            nuevaVisita.estado = false;
 
             VisitaWS.visita[] visitas = new VisitaWS.visita[misVisitas.Count + 1];
             for (int cont = 0; cont < misVisitas.Count; cont++) visitas[cont] = misVisitas.ElementAt(cont);
@@ -166,8 +169,11 @@ namespace CrewmanSystem
                     cartera.listaVisita[cont] = new CarteraWS.visita();
                     cartera.listaVisita[cont].cliente = new CarteraWS.cliente();
                     cartera.listaVisita[cont].cliente.idCliente = ((VisitaWS.visita)misVisitas.ElementAt(cont)).cliente.idCliente;
+                    cartera.listaVisita[cont].fechaRegistro = ((VisitaWS.visita)misVisitas.ElementAt(cont)).fechaRegistro;
+                    cartera.listaVisita[cont].fechaRegistroSpecified = true;
+                    cartera.listaVisita[cont].estado = ((VisitaWS.visita)misVisitas.ElementAt(cont)).estado;
                 }
-                if (frmVentanaPrincipal.nBtn == 1)
+                if (frmVentanaPrincipal.nBtn == 1)  
                 {
                     int resultado = daoCartera.actualizarCartera(cartera);
                     if (resultado == 0)

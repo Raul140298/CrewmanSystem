@@ -35,6 +35,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlLateralIzquierdo = new System.Windows.Forms.Panel();
             this.pnlEmpleado = new System.Windows.Forms.Panel();
+            this.btnEmpPerfil = new FontAwesome.Sharp.IconButton();
+            this.btnSegmentacion = new FontAwesome.Sharp.IconButton();
+            this.btnRecursos = new FontAwesome.Sharp.IconButton();
             this.btnVisitas = new FontAwesome.Sharp.IconButton();
             this.btnPromociones = new FontAwesome.Sharp.IconButton();
             this.pnlEmpGestionPedidos = new System.Windows.Forms.Panel();
@@ -96,9 +99,6 @@
             this.btnMinimizar = new FontAwesome.Sharp.IconButton();
             this.btnMaximizar = new FontAwesome.Sharp.IconButton();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.btnRecursos = new FontAwesome.Sharp.IconButton();
-            this.btnEmpPerfil = new FontAwesome.Sharp.IconButton();
-            this.btnSegmentacion = new FontAwesome.Sharp.IconButton();
             this.pnlContenedor.SuspendLayout();
             this.pnlChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -183,6 +183,84 @@
             this.pnlEmpleado.Size = new System.Drawing.Size(264, 838);
             this.pnlEmpleado.TabIndex = 1;
             this.pnlEmpleado.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlEmpleado_MouseDown);
+            // 
+            // btnEmpPerfil
+            // 
+            this.btnEmpPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnEmpPerfil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmpPerfil.FlatAppearance.BorderSize = 0;
+            this.btnEmpPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpPerfil.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnEmpPerfil.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnEmpPerfil.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
+            this.btnEmpPerfil.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnEmpPerfil.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEmpPerfil.IconSize = 20;
+            this.btnEmpPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmpPerfil.Location = new System.Drawing.Point(0, 623);
+            this.btnEmpPerfil.Name = "btnEmpPerfil";
+            this.btnEmpPerfil.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnEmpPerfil.Rotation = 0D;
+            this.btnEmpPerfil.Size = new System.Drawing.Size(264, 45);
+            this.btnEmpPerfil.TabIndex = 34;
+            this.btnEmpPerfil.Text = "  Mi Perfil";
+            this.btnEmpPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmpPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEmpPerfil.UseCompatibleTextRendering = true;
+            this.btnEmpPerfil.UseVisualStyleBackColor = false;
+            this.btnEmpPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
+            // 
+            // btnSegmentacion
+            // 
+            this.btnSegmentacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnSegmentacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSegmentacion.FlatAppearance.BorderSize = 0;
+            this.btnSegmentacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSegmentacion.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnSegmentacion.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSegmentacion.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
+            this.btnSegmentacion.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnSegmentacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSegmentacion.IconSize = 20;
+            this.btnSegmentacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSegmentacion.Location = new System.Drawing.Point(0, 578);
+            this.btnSegmentacion.Name = "btnSegmentacion";
+            this.btnSegmentacion.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnSegmentacion.Rotation = 0D;
+            this.btnSegmentacion.Size = new System.Drawing.Size(264, 45);
+            this.btnSegmentacion.TabIndex = 33;
+            this.btnSegmentacion.Text = "  Segmentación de Clientes";
+            this.btnSegmentacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSegmentacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSegmentacion.UseCompatibleTextRendering = true;
+            this.btnSegmentacion.UseVisualStyleBackColor = false;
+            this.btnSegmentacion.Click += new System.EventHandler(this.btnSegmentacion_Click);
+            // 
+            // btnRecursos
+            // 
+            this.btnRecursos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnRecursos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRecursos.FlatAppearance.BorderSize = 0;
+            this.btnRecursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecursos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnRecursos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnRecursos.IconChar = FontAwesome.Sharp.IconChar.Archive;
+            this.btnRecursos.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnRecursos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRecursos.IconSize = 20;
+            this.btnRecursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRecursos.Location = new System.Drawing.Point(0, 533);
+            this.btnRecursos.Name = "btnRecursos";
+            this.btnRecursos.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnRecursos.Rotation = 0D;
+            this.btnRecursos.Size = new System.Drawing.Size(264, 45);
+            this.btnRecursos.TabIndex = 32;
+            this.btnRecursos.Text = "  Recursos";
+            this.btnRecursos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRecursos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRecursos.UseCompatibleTextRendering = true;
+            this.btnRecursos.UseVisualStyleBackColor = false;
+            this.btnRecursos.Click += new System.EventHandler(this.btnRecursos_Click);
             // 
             // btnVisitas
             // 
@@ -501,7 +579,7 @@
             this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPerfil.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnPerfil.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPerfil.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
+            this.btnPerfil.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
             this.btnPerfil.IconColor = System.Drawing.Color.Gainsboro;
             this.btnPerfil.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPerfil.IconSize = 20;
@@ -1498,84 +1576,6 @@
             this.btnSalir.TabIndex = 26;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // btnRecursos
-            // 
-            this.btnRecursos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnRecursos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRecursos.FlatAppearance.BorderSize = 0;
-            this.btnRecursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecursos.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnRecursos.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnRecursos.IconChar = FontAwesome.Sharp.IconChar.Archive;
-            this.btnRecursos.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnRecursos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRecursos.IconSize = 20;
-            this.btnRecursos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRecursos.Location = new System.Drawing.Point(0, 533);
-            this.btnRecursos.Name = "btnRecursos";
-            this.btnRecursos.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btnRecursos.Rotation = 0D;
-            this.btnRecursos.Size = new System.Drawing.Size(264, 45);
-            this.btnRecursos.TabIndex = 32;
-            this.btnRecursos.Text = "  Recursos";
-            this.btnRecursos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRecursos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRecursos.UseCompatibleTextRendering = true;
-            this.btnRecursos.UseVisualStyleBackColor = false;
-            this.btnRecursos.Click += new System.EventHandler(this.btnRecursos_Click);
-            // 
-            // btnEmpPerfil
-            // 
-            this.btnEmpPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnEmpPerfil.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEmpPerfil.FlatAppearance.BorderSize = 0;
-            this.btnEmpPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpPerfil.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnEmpPerfil.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnEmpPerfil.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
-            this.btnEmpPerfil.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnEmpPerfil.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEmpPerfil.IconSize = 20;
-            this.btnEmpPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpPerfil.Location = new System.Drawing.Point(0, 623);
-            this.btnEmpPerfil.Name = "btnEmpPerfil";
-            this.btnEmpPerfil.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btnEmpPerfil.Rotation = 0D;
-            this.btnEmpPerfil.Size = new System.Drawing.Size(264, 45);
-            this.btnEmpPerfil.TabIndex = 34;
-            this.btnEmpPerfil.Text = "  Mi Perfil";
-            this.btnEmpPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEmpPerfil.UseCompatibleTextRendering = true;
-            this.btnEmpPerfil.UseVisualStyleBackColor = false;
-            this.btnEmpPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
-            // 
-            // btnSegmentacion
-            // 
-            this.btnSegmentacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnSegmentacion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSegmentacion.FlatAppearance.BorderSize = 0;
-            this.btnSegmentacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSegmentacion.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnSegmentacion.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSegmentacion.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
-            this.btnSegmentacion.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnSegmentacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSegmentacion.IconSize = 20;
-            this.btnSegmentacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSegmentacion.Location = new System.Drawing.Point(0, 578);
-            this.btnSegmentacion.Name = "btnSegmentacion";
-            this.btnSegmentacion.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btnSegmentacion.Rotation = 0D;
-            this.btnSegmentacion.Size = new System.Drawing.Size(264, 45);
-            this.btnSegmentacion.TabIndex = 33;
-            this.btnSegmentacion.Text = "  Segmentación de Clientes";
-            this.btnSegmentacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSegmentacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSegmentacion.UseCompatibleTextRendering = true;
-            this.btnSegmentacion.UseVisualStyleBackColor = false;
-            this.btnSegmentacion.Click += new System.EventHandler(this.btnSegmentacion_Click);
             // 
             // frmVentanaPrincipal
             // 
