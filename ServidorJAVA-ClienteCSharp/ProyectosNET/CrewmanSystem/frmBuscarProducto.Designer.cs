@@ -78,7 +78,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(985, 120);
+            this.panel1.Size = new System.Drawing.Size(985, 126);
             this.panel1.TabIndex = 45;
             // 
             // btnSeleccionar
@@ -86,8 +86,9 @@
             this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.btnSeleccionar.FlatAppearance.BorderSize = 0;
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.Location = new System.Drawing.Point(712, 64);
+            this.btnSeleccionar.Location = new System.Drawing.Point(712, 65);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(144, 30);
             this.btnSeleccionar.TabIndex = 64;
@@ -98,6 +99,7 @@
             // label5
             // 
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(11, 28);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 22);
@@ -108,6 +110,7 @@
             // label4
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(384, 28);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 22);
@@ -118,7 +121,8 @@
             // label3
             // 
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(11, 68);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(11, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 22);
             this.label3.TabIndex = 60;
@@ -128,7 +132,8 @@
             // lblID
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Location = new System.Drawing.Point(366, 68);
+            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(366, 69);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(103, 22);
             this.lblID.TabIndex = 59;
@@ -140,6 +145,7 @@
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(712, 24);
             this.btnBuscar.Name = "btnBuscar";
@@ -152,33 +158,37 @@
             // txtSubfamilia
             // 
             this.txtSubfamilia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSubfamilia.Location = new System.Drawing.Point(475, 68);
+            this.txtSubfamilia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubfamilia.Location = new System.Drawing.Point(475, 70);
             this.txtSubfamilia.Name = "txtSubfamilia";
-            this.txtSubfamilia.Size = new System.Drawing.Size(189, 15);
+            this.txtSubfamilia.Size = new System.Drawing.Size(189, 19);
             this.txtSubfamilia.TabIndex = 53;
             // 
             // txtFamilia
             // 
             this.txtFamilia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFamilia.Location = new System.Drawing.Point(157, 68);
+            this.txtFamilia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFamilia.Location = new System.Drawing.Point(157, 70);
             this.txtFamilia.Name = "txtFamilia";
-            this.txtFamilia.Size = new System.Drawing.Size(189, 15);
+            this.txtFamilia.Size = new System.Drawing.Size(189, 19);
             this.txtFamilia.TabIndex = 51;
             // 
             // txtMarca
             // 
             this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMarca.Location = new System.Drawing.Point(475, 28);
+            this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMarca.Location = new System.Drawing.Point(475, 29);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(189, 15);
+            this.txtMarca.Size = new System.Drawing.Size(189, 19);
             this.txtMarca.TabIndex = 49;
             // 
             // txtNombre
             // 
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombre.Location = new System.Drawing.Point(157, 28);
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(157, 29);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(189, 15);
+            this.txtNombre.Size = new System.Drawing.Size(189, 19);
             this.txtNombre.TabIndex = 46;
             // 
             // dgvProductos
@@ -213,7 +223,7 @@
             this.dgvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProductos.EnableHeadersVisualStyles = false;
             this.dgvProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.dgvProductos.Location = new System.Drawing.Point(0, 120);
+            this.dgvProductos.Location = new System.Drawing.Point(0, 126);
             this.dgvProductos.MultiSelect = false;
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
@@ -233,7 +243,7 @@
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvProductos.RowTemplate.Height = 24;
-            this.dgvProductos.Size = new System.Drawing.Size(985, 497);
+            this.dgvProductos.Size = new System.Drawing.Size(985, 491);
             this.dgvProductos.TabIndex = 46;
             this.dgvProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProductos_CellFormatting);
             this.dgvProductos.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvProductos_RowStateChanged);

@@ -76,23 +76,25 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 160);
+            this.panel1.Size = new System.Drawing.Size(800, 188);
             this.panel1.TabIndex = 47;
             // 
             // cboZona
             // 
             this.cboZona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboZona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboZona.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboZona.FormattingEnabled = true;
-            this.cboZona.Location = new System.Drawing.Point(183, 111);
+            this.cboZona.Location = new System.Drawing.Point(214, 118);
             this.cboZona.Name = "cboZona";
-            this.cboZona.Size = new System.Drawing.Size(241, 24);
+            this.cboZona.Size = new System.Drawing.Size(241, 28);
             this.cboZona.TabIndex = 55;
             // 
             // lblZona
             // 
             this.lblZona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblZona.Location = new System.Drawing.Point(12, 111);
+            this.lblZona.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblZona.Location = new System.Drawing.Point(43, 124);
             this.lblZona.Name = "lblZona";
             this.lblZona.Size = new System.Drawing.Size(155, 22);
             this.lblZona.TabIndex = 54;
@@ -104,8 +106,9 @@
             this.btnSeleccionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.btnSeleccionar.FlatAppearance.BorderSize = 0;
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.Location = new System.Drawing.Point(478, 62);
+            this.btnSeleccionar.Location = new System.Drawing.Point(509, 77);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(160, 30);
             this.btnSeleccionar.TabIndex = 53;
@@ -119,8 +122,9 @@
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(478, 19);
+            this.btnBuscar.Location = new System.Drawing.Point(509, 39);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(160, 30);
             this.btnBuscar.TabIndex = 52;
@@ -131,7 +135,8 @@
             // label1
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Location = new System.Drawing.Point(12, 66);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(43, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(155, 22);
             this.label1.TabIndex = 51;
@@ -141,7 +146,8 @@
             // lblID
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Location = new System.Drawing.Point(12, 24);
+            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(43, 42);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(155, 22);
             this.lblID.TabIndex = 50;
@@ -151,17 +157,19 @@
             // txtGrupo
             // 
             this.txtGrupo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtGrupo.Location = new System.Drawing.Point(183, 66);
+            this.txtGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGrupo.Location = new System.Drawing.Point(214, 81);
             this.txtGrupo.Name = "txtGrupo";
-            this.txtGrupo.Size = new System.Drawing.Size(241, 15);
+            this.txtGrupo.Size = new System.Drawing.Size(241, 19);
             this.txtGrupo.TabIndex = 49;
             // 
             // txtRazonSocial
             // 
             this.txtRazonSocial.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRazonSocial.Location = new System.Drawing.Point(183, 23);
+            this.txtRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRazonSocial.Location = new System.Drawing.Point(214, 43);
             this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(241, 15);
+            this.txtRazonSocial.Size = new System.Drawing.Size(241, 19);
             this.txtRazonSocial.TabIndex = 46;
             // 
             // panel2
@@ -169,9 +177,9 @@
             this.panel2.Controls.Add(this.lblNotFound);
             this.panel2.Controls.Add(this.dgvClientes);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 160);
+            this.panel2.Location = new System.Drawing.Point(0, 188);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 470);
+            this.panel2.Size = new System.Drawing.Size(800, 442);
             this.panel2.TabIndex = 49;
             // 
             // dgvClientes
@@ -226,7 +234,7 @@
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvClientes.RowTemplate.Height = 24;
-            this.dgvClientes.Size = new System.Drawing.Size(800, 470);
+            this.dgvClientes.Size = new System.Drawing.Size(800, 442);
             this.dgvClientes.TabIndex = 50;
             this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             this.dgvClientes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvClientes_CellFormatting);

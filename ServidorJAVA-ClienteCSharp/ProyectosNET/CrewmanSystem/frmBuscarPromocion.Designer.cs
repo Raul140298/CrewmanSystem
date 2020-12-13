@@ -189,6 +189,7 @@
             // label2
             // 
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(0, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 22);
@@ -199,6 +200,7 @@
             // label1
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 22);
@@ -209,6 +211,7 @@
             // lblID
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.Location = new System.Drawing.Point(3, 24);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(163, 22);
@@ -221,8 +224,9 @@
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(501, 20);
+            this.btnBuscar.Location = new System.Drawing.Point(531, 20);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(144, 30);
             this.btnBuscar.TabIndex = 58;
@@ -232,24 +236,27 @@
             // 
             // dtpFechaFIn
             // 
+            this.dtpFechaFIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaFIn.Location = new System.Drawing.Point(172, 114);
             this.dtpFechaFIn.Name = "dtpFechaFIn";
-            this.dtpFechaFIn.Size = new System.Drawing.Size(281, 22);
+            this.dtpFechaFIn.Size = new System.Drawing.Size(320, 26);
             this.dtpFechaFIn.TabIndex = 56;
             // 
             // dtpFechaInicio
             // 
+            this.dtpFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaInicio.Location = new System.Drawing.Point(172, 69);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
-            this.dtpFechaInicio.Size = new System.Drawing.Size(281, 22);
+            this.dtpFechaInicio.Size = new System.Drawing.Size(320, 26);
             this.dtpFechaInicio.TabIndex = 55;
             // 
             // txtNombre
             // 
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombre.Location = new System.Drawing.Point(172, 24);
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(172, 25);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(281, 15);
+            this.txtNombre.Size = new System.Drawing.Size(320, 19);
             this.txtNombre.TabIndex = 46;
             // 
             // frmBuscarPromocion
