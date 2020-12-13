@@ -43,7 +43,7 @@ namespace CrewmanSystem
 			nHojaDGV = 1;
 			act = btnActualizar;
 			elim = btnEliminar;
-			ishome = false;
+			ishome = true;
 			//logeoExitoso
 			logeoExitoso(Program.empleado.cargo.idCargo);
 
@@ -170,6 +170,7 @@ namespace CrewmanSystem
 					btnEliminar.BackColor = Program.color0;
 					btnBuscar.BackColor = Program.color0;
 					desactivaBotonesCabecera(false, false, false, false, false);
+					btnRecarga.Visible = false;
 					break;
 				case BTNestado.actualizar:
 					btnActualizar.BackColor = Program.colorR;
@@ -177,6 +178,7 @@ namespace CrewmanSystem
 					btnEliminar.BackColor = Program.color0;
 					btnBuscar.BackColor = Program.color0;
 					desactivaBotonesCabecera(false, false, false, false, false);
+					btnRecarga.Visible = false;
 					break;
 				case BTNestado.eliminar:
 					btnEliminar.BackColor = Program.colorR;
@@ -190,6 +192,7 @@ namespace CrewmanSystem
 					btnActualizar.BackColor = Program.color0;
 					btnEliminar.BackColor = Program.color0;
 					desactivaBotonesCabecera(false, false, false, false, false);
+					btnRecarga.Visible = false;
 					break;
 				default:
 					MessageBox.Show("Error: El formulario no existe");
@@ -357,7 +360,6 @@ namespace CrewmanSystem
 						break;
 				}
 				btnRight.Visible = btnLeft.Visible = false;
-				btnRecarga.Visible = false;
 			}
 		}
 
