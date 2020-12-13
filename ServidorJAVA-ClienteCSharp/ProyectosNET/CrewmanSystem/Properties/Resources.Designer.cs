@@ -123,6 +123,16 @@ namespace CrewmanSystem.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap promocion {
+            get {
+                object obj = ResourceManager.GetObject("promocion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap reportePedidos2 {
             get {
                 object obj = ResourceManager.GetObject("reportePedidos2", resourceCulture);
@@ -146,6 +156,26 @@ namespace CrewmanSystem.Properties {
         internal static System.Drawing.Bitmap ReporteQuejas2 {
             get {
                 object obj = ResourceManager.GetObject("ReporteQuejas2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ruta {
+            get {
+                object obj = ResourceManager.GetObject("ruta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap segmentar {
+            get {
+                object obj = ResourceManager.GetObject("segmentar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
