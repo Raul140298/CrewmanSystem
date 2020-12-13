@@ -42,10 +42,12 @@ namespace CrewmanSystem
 			if (misPromocions != null)
 			{
 				dgvPromociones.DataSource = new BindingList<PromocionWS.promocion>(misPromocions.ToArray());
+				lblNotFound.Visible = false;
 			}
 			else
 			{
 				dgvPromociones.DataSource = new BindingList<PromocionWS.promocion>();
+				lblNotFound.Visible = true;
 			}
 		}
 
