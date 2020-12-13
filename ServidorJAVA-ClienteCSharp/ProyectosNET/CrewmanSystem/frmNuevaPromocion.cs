@@ -96,7 +96,7 @@ namespace CrewmanSystem
             frmBuscarProductoPorZona formBusquedaProductoPorZona = new frmBuscarProductoPorZona(1,idZona);
             if(formBusquedaProductoPorZona.ShowDialog() == DialogResult.OK)
             {
-                miProductoXZona = formBusquedaProductoPorZona.ProductoXZonaSeleccionado;
+                miProductoXZona = frmBuscarProductoPorZona.productoXZonaSeleccionado;
                 txtNombreProducto.Text = miProductoXZona.producto.nombre;
                 txtPrecioReal.Text = miProductoXZona.precioReal.ToString();
                 txtCantUnidades.Text = miProductoXZona.producto.cantUnidad.ToString();

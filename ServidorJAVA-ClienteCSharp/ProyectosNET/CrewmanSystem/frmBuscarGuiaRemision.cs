@@ -14,9 +14,11 @@ namespace CrewmanSystem
 	{
 		public static GuiaRemisionWS.guiaRemision[] misGuiasRemision;
 		public static GuiaRemisionWS.GuiaRemisionWSClient daoGuiaRemision= new GuiaRemisionWS.GuiaRemisionWSClient();
+		public static DataGridView dgv;
 		public frmBuscarGuiaRemision()
         {
             InitializeComponent();
+			dgv = dgvGuiasDeRemision;
 			dtpRangoIniRegistro.Value = DateTime.Today.AddMonths(-3);
             dtpRangoFinRegistro.Value = DateTime.Today.AddMonths(3);
 			dtpRangoIniTraslado.Value = DateTime.Today.AddMonths(-3);
@@ -30,11 +32,6 @@ namespace CrewmanSystem
 			completarTabla();
         }
 
-        private void dgvGuiasDeRemision_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-			//
-        }
-
 		private void completarTabla()
 		{
 			dgvGuiasDeRemision.AutoGenerateColumns = false;
@@ -43,13 +40,33 @@ namespace CrewmanSystem
 				dtpRangoIniRegistro.Value,dtpRangoFinRegistro.Value, dtpRangoIniTraslado.Value,dtpRangoFinTraslado.Value);
 			dgvGuiasDeRemision.AutoGenerateColumns = false;
 			if (misGuiasRemision != null)
+            {
 				dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>(misGuiasRemision.ToArray());
-			else
+				lblNotFound.Visible = false;
+			}
+            else
+            {
 				dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>();
-		
+				lblNotFound.Visible = true;
+			}
 		}
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+		private void dgvGuiasDeRemision_SelectionChanged(object sender, EventArgs e)
+		{
+			if (dgvGuiasDeRemision.SelectedCells.Count != 1 && dgvGuiasDeRemision.SelectedCells.Count != 0)
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
+			}
+		}
+
+		private void btnBuscar_Click(object sender, EventArgs e)
         {
 			completarTabla();
         }

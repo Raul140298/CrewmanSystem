@@ -669,6 +669,9 @@ namespace CrewmanSystem
 					if (boton == 3) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmBuscarGuiaRemision());
 					if (boton == 4) ((frmGestionarGuiasRemision)Program.pantallas.Last().Formulario).recargarDGV();
 					break;
+				case "frmBuscarGuiaRemision":
+					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaGuiaRemision());
+					break;
 				case "frmGestionarFamilias":
 					if (boton < 2) CreaPantalla(sender, null, null, Program.colorR, BTNtipo.cabecera, new frmNuevaFamilia());
 					if (boton == 2) frmGestionarFamilias.eliminar();
