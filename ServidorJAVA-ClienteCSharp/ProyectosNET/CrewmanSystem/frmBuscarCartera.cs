@@ -53,40 +53,40 @@ namespace CrewmanSystem
 			completarTabla();
 
 			#region colores de seleccion
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvCarteras.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvCarteras.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvCarteras.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvCarteras.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvCarteras.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvCarteras.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
 
 		private void completarTabla()
 		{
-			dataGridView1.AutoGenerateColumns = false;
+			dgvCarteras.AutoGenerateColumns = false;
 			EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado, txtNombre.Text, txtApPaterno.Text, txtApMaterno.Text);
 			if (misEmpleados != null)
 			{
-				dataGridView1.DataSource = new BindingList<EmpleadoWS.empleado>(misEmpleados.ToArray());
+				dgvCarteras.DataSource = new BindingList<EmpleadoWS.empleado>(misEmpleados.ToArray());
 				lblNotFound.Visible = false;
 			}
 			else
 			{
-				dataGridView1.DataSource = new BindingList<EmpleadoWS.empleado>();
+				dgvCarteras.DataSource = new BindingList<EmpleadoWS.empleado>();
 				lblNotFound.Visible = true;
 			}
 		}
 
-		private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+		private void dgvCarteras_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
 		{
 			//castear objetos y mostrar valor determinado
-			EmpleadoWS.empleado empleado = dataGridView1.Rows[e.RowIndex].DataBoundItem
+			EmpleadoWS.empleado empleado = dgvCarteras.Rows[e.RowIndex].DataBoundItem
 			as EmpleadoWS.empleado;
 
-			dataGridView1.Rows[e.RowIndex].Cells["ZONA"].Value = empleado.zona.nombre;
+			dgvCarteras.Rows[e.RowIndex].Cells["ZONA"].Value = empleado.zona.nombre;
 		}
 
 		private void btnBuscar_Click(object sender, EventArgs e)
@@ -97,29 +97,27 @@ namespace CrewmanSystem
 			if (zonaSeleccionada.idZona == 0)
 			{
 				EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado, txtNombre.Text, txtApPaterno.Text, txtApMaterno.Text);
-				dataGridView1.DataSource = misEmpleados;
+				dgvCarteras.DataSource = misEmpleados;
 			}
 			else
 			{
 				EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentasYZona(Program.empleado.idEmpleado, txtNombre.Text, txtApPaterno.Text, txtApMaterno.Text, zonaSeleccionada.idZona);
-				dataGridView1.DataSource = misEmpleados;
+				dgvCarteras.DataSource = misEmpleados;
 			}
 		}
-
-        private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-        {
-			//Preguntar al profe
-			if (e.StateChanged != DataGridViewElementStates.Selected)
+		private void dgvCarteras_SelectionChanged(object sender, EventArgs e)
+		{
+			if (dgvCarteras.SelectedCells.Count != 1 && dgvCarteras.SelectedCells.Count != 0)
 			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
 				return;
 			}
 			else
 			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
 			}
 		}
-    }
+	}
 }

@@ -101,19 +101,13 @@ namespace CrewmanSystem
 			catch (Exception) { }
 		}
 
-		private void dgvPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-			frmVentanaPrincipal.act.Enabled = false;
-			frmVentanaPrincipal.elim.Enabled = false;
-		}
-
 		private void btnBuscar_Click(object sender, EventArgs e)
 		{
 			completarTabla();
 		}
 		private void dgvPedidos_SelectionChanged(object sender, EventArgs e)
 		{
-			if (((PedidoWS.pedido)dgvPedidos.CurrentRow.DataBoundItem).estadoPedido == PedidoWS.estadoPedido.EN_PROCESO && dgvPedidos.SelectedCells.Count != 1)
+			if (((PedidoWS.pedido)dgvPedidos.CurrentRow.DataBoundItem).estadoPedido == PedidoWS.estadoPedido.EN_PROCESO && dgvPedidos.SelectedCells.Count != 1 && dgvPedidos.SelectedCells.Count != 0)
 			{
 				frmVentanaPrincipal.act.Enabled = true;
 				frmVentanaPrincipal.elim.Enabled = true;
