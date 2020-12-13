@@ -50,28 +50,20 @@ namespace CrewmanSystem
 
 			dgvProductos.Rows[e.RowIndex].Cells["MARCA"].Value = producto.marca.nombre;
 		}
-
-        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		private void dgvProductos_SelectionChanged(object sender, EventArgs e)
 		{
-			frmVentanaPrincipal.act.Enabled = false;
-			frmVentanaPrincipal.elim.Enabled = false;
-		}
-
-		private void dgvProductos_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-		{
-			//Preguntar al profe
-			if(e.StateChanged != DataGridViewElementStates.Selected)
-            {
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
-				return;
-            }
-            else
-            {
+			if (dgvProductos.SelectedCells.Count != 1 && dgvProductos.SelectedCells.Count != 0)
+			{
 				frmVentanaPrincipal.act.Enabled = true;
 				frmVentanaPrincipal.elim.Enabled = true;
-            }
-        }
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
+			}
+		}
 
         public static void eliminar()
 		{
@@ -85,42 +77,12 @@ namespace CrewmanSystem
 			if (misProductos != null)
 			{
 				dgvProductos.DataSource = new BindingList<ProductoWS.producto>(misProductos.ToArray());
+				lblNotFound.Visible = false;
 			}
 			else
 			{
 				dgvProductos.DataSource = new BindingList<ProductoWS.producto>();
-			}
-		}
-
-		public void revisarDGV(object source, ElapsedEventArgs e)
-		{
-
-			if (dgvProductos.InvokeRequired)
-			{
-				dgvProductos.Invoke(new Action(() =>
-				{
-					if (dgvProductos.Rows.Count > 0)
-					{
-						int i = ((ProductoWS.producto)dgvProductos.CurrentRow.DataBoundItem).idProducto;
-						int j = dgvProductos.CurrentCell.ColumnIndex;
-
-						recargarDGV();
-
-						int k = 0;
-						foreach (ProductoWS.producto p in misProductos)
-						{
-							if (p.idProducto == i)
-							{
-								i = k;
-								break;
-							}
-							k++;
-						}
-
-						if (k != misProductos.Length)
-							dgvProductos.CurrentCell = dgv[j, i];
-					}
-				}));
+				lblNotFound.Visible = true;
 			}
 		}
 	}

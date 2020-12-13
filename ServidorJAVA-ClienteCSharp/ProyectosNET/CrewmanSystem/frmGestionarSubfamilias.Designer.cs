@@ -38,6 +38,7 @@
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblNotFound = new System.Windows.Forms.Label();
             this.pnlGestion.SuspendLayout();
             this.pnlGridView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubfamilias)).BeginInit();
@@ -55,6 +56,7 @@
             // 
             // pnlGridView
             // 
+            this.pnlGridView.Controls.Add(this.lblNotFound);
             this.pnlGridView.Controls.Add(this.dgvSubfamilias);
             this.pnlGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGridView.Location = new System.Drawing.Point(0, 0);
@@ -112,9 +114,8 @@
             this.dgvSubfamilias.RowTemplate.Height = 24;
             this.dgvSubfamilias.Size = new System.Drawing.Size(681, 506);
             this.dgvSubfamilias.TabIndex = 1;
-            this.dgvSubfamilias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubfamilias_CellContentClick);
             this.dgvSubfamilias.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvSubfamilias_CellFormatting);
-            this.dgvSubfamilias.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvSubfamilias_RowStateChanged);
+            this.dgvSubfamilias.SelectionChanged += new System.EventHandler(this.dgvSubfamilias_SelectionChanged);
             // 
             // ID
             // 
@@ -144,6 +145,19 @@
             this.FAMILIA.ReadOnly = true;
             this.FAMILIA.Width = 91;
             // 
+            // lblNotFound
+            // 
+            this.lblNotFound.AutoSize = true;
+            this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotFound.Location = new System.Drawing.Point(34, 64);
+            this.lblNotFound.Name = "lblNotFound";
+            this.lblNotFound.Size = new System.Drawing.Size(230, 20);
+            this.lblNotFound.TabIndex = 15;
+            this.lblNotFound.Text = "No se encontraron resultados";
+            this.lblNotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNotFound.Visible = false;
+            // 
             // frmGestionarSubfamilias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -155,6 +169,7 @@
             this.Text = "Gestión de Subfamilias";
             this.pnlGestion.ResumeLayout(false);
             this.pnlGridView.ResumeLayout(false);
+            this.pnlGridView.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubfamilias)).EndInit();
             this.ResumeLayout(false);
 
@@ -168,5 +183,6 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn ID;
 		private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
 		private System.Windows.Forms.DataGridViewTextBoxColumn FAMILIA;
-	}
+        private System.Windows.Forms.Label lblNotFound;
+    }
 }

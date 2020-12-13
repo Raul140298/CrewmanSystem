@@ -37,12 +37,19 @@ namespace CrewmanSystem
         private void completarVisita()
         {
             VisitaWS.visita[] visitas = daoVisita.listarVisitas(Program.empleado.cartera.idCartera);
-            if (visitas == null || visitas.Length < 1) misVisitas = new BindingList<VisitaWS.visita>();
-            else misVisitas = new BindingList<VisitaWS.visita>(visitas);
+            if (visitas == null || visitas.Length < 1)
+            {
+                misVisitas = new BindingList<VisitaWS.visita>();
+                lblNotFound.Visible = true;
+            }
+            else
+            {
+                misVisitas = new BindingList<VisitaWS.visita>(visitas);
+                lblNotFound.Visible = false;
+            }
             dgvVisitas.AutoGenerateColumns = false;
             dgvVisitas.DataSource = misVisitas;
         }
-
         private void dgvVisitas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             VisitaWS.visita v = dgvVisitas.Rows[e.RowIndex].DataBoundItem as VisitaWS.visita;
@@ -96,21 +103,6 @@ namespace CrewmanSystem
         public void recargarDGV()
         {
             completarVisita();
-        }
-
-        public void revisarDGV(object source, ElapsedEventArgs e)
-        {
-            if (dgvVisitas.InvokeRequired)
-            {
-                dgvVisitas.Invoke(new Action(() =>
-                {
-                    misVisitasThread = daoVisita.listarVisitas(Program.empleado.cartera.idCartera);
-                    if (misVisitasThread!=null && misVisitasThread.Length != dgvVisitas.Rows.Count)
-                    {
-                        dgvVisitas.DataSource = new BindingList<VisitaWS.visita>(misVisitasThread);
-                    }
-                }));
-            }
         }
     }
 }

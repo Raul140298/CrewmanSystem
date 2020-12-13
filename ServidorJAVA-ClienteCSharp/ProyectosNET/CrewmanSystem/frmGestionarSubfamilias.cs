@@ -46,33 +46,25 @@ namespace CrewmanSystem
 
 			dgvSubfamilias.Rows[e.RowIndex].Cells["FAMILIA"].Value = subfamilia.familia.descripcion;
 		}
-
-		private void dgvSubfamilias_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+		private void dgvSubfamilias_SelectionChanged(object sender, EventArgs e)
 		{
-			//Preguntar al profe
-			if (e.StateChanged != DataGridViewElementStates.Selected)
+			if (dgvSubfamilias.SelectedCells.Count != 1 && dgvSubfamilias.SelectedCells.Count != 0)
 			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
 				return;
 			}
 			else
 			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
 			}
 		}
 
-		public static void eliminar()
+        public static void eliminar()
 		{
 			subfamiliaSeleccionada = (SubFamiliaWS.subFamilia)dgv.CurrentRow.DataBoundItem;
 			daoSubFamilia.eliminarSubFamilia(subfamiliaSeleccionada.idSubFamilia);
-		}
-
-		private void dgvSubfamilias_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-			frmVentanaPrincipal.act.Enabled = false;
-			frmVentanaPrincipal.elim.Enabled = false;
 		}
 
 		public void recargarDGV()
@@ -81,42 +73,12 @@ namespace CrewmanSystem
 			if (misSubFamilias != null)
 			{
 				dgvSubfamilias.DataSource = new BindingList<SubFamiliaWS.subFamilia>(misSubFamilias.ToArray());
+				lblNotFound.Visible = false;
 			}
 			else
 			{
 				dgvSubfamilias.DataSource = new BindingList<SubFamiliaWS.subFamilia>();
-
-			}
-		}
-		public void revisarDGV(object source, ElapsedEventArgs e)
-		{
-
-			if (dgvSubfamilias.InvokeRequired)
-			{
-				dgvSubfamilias.Invoke(new Action(() =>
-				{
-					if (dgvSubfamilias.Rows.Count > 0)
-					{
-						int i = ((SubFamiliaWS.subFamilia)dgvSubfamilias.CurrentRow.DataBoundItem).idSubFamilia;
-						int j = dgvSubfamilias.CurrentCell.ColumnIndex;
-
-						recargarDGV();
-
-						int k = 0;
-						foreach (SubFamiliaWS.subFamilia sub in misSubFamilias)
-						{
-							if (sub.idSubFamilia == i)
-							{
-								i = k;
-								break;
-							}
-							k++;
-						}
-
-						if (k != misSubFamilias.Length)
-							dgvSubfamilias.CurrentCell = dgvSubfamilias[j, i];
-					}
-				}));
+				lblNotFound.Visible = true;
 			}
 		}
 	}

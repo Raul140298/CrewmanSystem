@@ -36,15 +36,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlGestion = new System.Windows.Forms.Panel();
             this.pnlGridView = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPromociones = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_INICIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_FIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblNotFound = new System.Windows.Forms.Label();
             this.pnlGestion.SuspendLayout();
             this.pnlGridView.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPromociones)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlGestion
@@ -59,7 +60,8 @@
             // 
             // pnlGridView
             // 
-            this.pnlGridView.Controls.Add(this.dataGridView1);
+            this.pnlGridView.Controls.Add(this.lblNotFound);
+            this.pnlGridView.Controls.Add(this.dgvPromociones);
             this.pnlGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGridView.Location = new System.Drawing.Point(0, 0);
             this.pnlGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -67,15 +69,15 @@
             this.pnlGridView.Size = new System.Drawing.Size(681, 506);
             this.pnlGridView.TabIndex = 11;
             // 
-            // dataGridView1
+            // dgvPromociones
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvPromociones.AllowUserToAddRows = false;
+            this.dgvPromociones.AllowUserToDeleteRows = false;
+            this.dgvPromociones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvPromociones.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvPromociones.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgvPromociones.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvPromociones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -83,24 +85,24 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 30;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvPromociones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPromociones.ColumnHeadersHeight = 30;
+            this.dgvPromociones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvPromociones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.NOMBRE,
             this.ZONA,
             this.FECHA_INICIO,
             this.FECHA_FIN});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvPromociones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPromociones.EnableHeadersVisualStyles = false;
+            this.dgvPromociones.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.dgvPromociones.Location = new System.Drawing.Point(0, 0);
+            this.dgvPromociones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvPromociones.MultiSelect = false;
+            this.dgvPromociones.Name = "dgvPromociones";
+            this.dgvPromociones.ReadOnly = true;
+            this.dgvPromociones.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,20 +110,19 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView1.RowHeadersWidth = 51;
+            this.dgvPromociones.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvPromociones.RowHeadersWidth = 51;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(681, 506);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
-            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
-            this.dataGridView1.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dataGridView1_RowStateChanged);
+            this.dgvPromociones.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvPromociones.RowTemplate.Height = 24;
+            this.dgvPromociones.Size = new System.Drawing.Size(681, 506);
+            this.dgvPromociones.TabIndex = 1;
+            this.dgvPromociones.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPromociones_CellContentDoubleClick);
+            this.dgvPromociones.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPromociones_CellFormatting);
+            this.dgvPromociones.SelectionChanged += new System.EventHandler(this.dgvPromociones_SelectionChanged);
             // 
             // ID
             // 
@@ -173,6 +174,19 @@
             this.FECHA_FIN.ReadOnly = true;
             this.FECHA_FIN.Width = 111;
             // 
+            // lblNotFound
+            // 
+            this.lblNotFound.AutoSize = true;
+            this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotFound.Location = new System.Drawing.Point(137, 78);
+            this.lblNotFound.Name = "lblNotFound";
+            this.lblNotFound.Size = new System.Drawing.Size(230, 20);
+            this.lblNotFound.TabIndex = 13;
+            this.lblNotFound.Text = "No se encontraron resultados";
+            this.lblNotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNotFound.Visible = false;
+            // 
             // frmGestionarPromociones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -184,7 +198,8 @@
             this.Text = "frmGestionarPromociones";
             this.pnlGestion.ResumeLayout(false);
             this.pnlGridView.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.pnlGridView.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPromociones)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -193,11 +208,12 @@
 
 		private System.Windows.Forms.Panel pnlGestion;
 		private System.Windows.Forms.Panel pnlGridView;
-		private System.Windows.Forms.DataGridView dataGridView1;
+		private System.Windows.Forms.DataGridView dgvPromociones;
 		private System.Windows.Forms.DataGridViewTextBoxColumn ID;
 		private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
 		private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
 		private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_INICIO;
 		private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_FIN;
-	}
+        private System.Windows.Forms.Label lblNotFound;
+    }
 }

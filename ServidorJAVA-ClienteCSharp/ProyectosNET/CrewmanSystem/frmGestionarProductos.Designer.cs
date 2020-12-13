@@ -48,6 +48,7 @@
             this.SUBFAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblNotFound = new System.Windows.Forms.Label();
             this.pnlGestion.SuspendLayout();
             this.pnlGridView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
@@ -64,6 +65,7 @@
             // 
             // pnlGridView
             // 
+            this.pnlGridView.Controls.Add(this.lblNotFound);
             this.pnlGridView.Controls.Add(this.dgvProductos);
             this.pnlGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGridView.Location = new System.Drawing.Point(0, 0);
@@ -125,9 +127,8 @@
             this.dgvProductos.RowTemplate.Height = 24;
             this.dgvProductos.Size = new System.Drawing.Size(1097, 383);
             this.dgvProductos.TabIndex = 1;
-            this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
             this.dgvProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProductos_CellFormatting);
-            this.dgvProductos.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvProductos_RowStateChanged);
+            this.dgvProductos.SelectionChanged += new System.EventHandler(this.dgvProductos_SelectionChanged);
             // 
             // ID
             // 
@@ -221,6 +222,19 @@
             this.MARCA.ReadOnly = true;
             this.MARCA.Width = 84;
             // 
+            // lblNotFound
+            // 
+            this.lblNotFound.AutoSize = true;
+            this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotFound.Location = new System.Drawing.Point(372, 78);
+            this.lblNotFound.Name = "lblNotFound";
+            this.lblNotFound.Size = new System.Drawing.Size(230, 20);
+            this.lblNotFound.TabIndex = 12;
+            this.lblNotFound.Text = "No se encontraron resultados";
+            this.lblNotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNotFound.Visible = false;
+            // 
             // frmGestionarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -231,6 +245,7 @@
             this.Text = "Gestión de Productos";
             this.pnlGestion.ResumeLayout(false);
             this.pnlGridView.ResumeLayout(false);
+            this.pnlGridView.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.ResumeLayout(false);
 
@@ -250,5 +265,6 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn SUBFAMILIA;
 		private System.Windows.Forms.DataGridViewTextBoxColumn FAMILIA;
 		private System.Windows.Forms.DataGridViewTextBoxColumn MARCA;
-	}
+        private System.Windows.Forms.Label lblNotFound;
+    }
 }

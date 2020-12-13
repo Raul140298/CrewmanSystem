@@ -39,7 +39,6 @@
             this.btnGenerar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvQuejas = new System.Windows.Forms.DataGridView();
-            this.sfdReporte = new System.Windows.Forms.SaveFileDialog();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_PEDIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +50,8 @@
             this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.APELLIDO_PATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.APELLIDO_MATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sfdReporte = new System.Windows.Forms.SaveFileDialog();
+            this.lblNotFound = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuejas)).BeginInit();
@@ -97,6 +98,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblNotFound);
             this.panel2.Controls.Add(this.dgvQuejas);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -160,9 +162,8 @@
             this.dgvQuejas.RowTemplate.Height = 24;
             this.dgvQuejas.Size = new System.Drawing.Size(935, 350);
             this.dgvQuejas.TabIndex = 2;
-            this.dgvQuejas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuejas_CellContentClick);
-            this.dgvQuejas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvQuejas_CellFormatting_1);
-            this.dgvQuejas.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvQuejas_RowStateChanged);
+            this.dgvQuejas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvQuejas_CellFormatting);
+            this.dgvQuejas.SelectionChanged += new System.EventHandler(this.dgvQuejas_SelectionChanged);
             // 
             // ID
             // 
@@ -261,6 +262,19 @@
             this.APELLIDO_MATERNO.ReadOnly = true;
             this.APELLIDO_MATERNO.Width = 162;
             // 
+            // lblNotFound
+            // 
+            this.lblNotFound.AutoSize = true;
+            this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotFound.Location = new System.Drawing.Point(349, 65);
+            this.lblNotFound.Name = "lblNotFound";
+            this.lblNotFound.Size = new System.Drawing.Size(230, 20);
+            this.lblNotFound.TabIndex = 14;
+            this.lblNotFound.Text = "No se encontraron resultados";
+            this.lblNotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNotFound.Visible = false;
+            // 
             // frmGestionarQuejas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -272,6 +286,7 @@
             this.Text = "frmGestionarQuejas";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuejas)).EndInit();
             this.ResumeLayout(false);
 
@@ -296,5 +311,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
         private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_PATERNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_MATERNO;
+        private System.Windows.Forms.Label lblNotFound;
     }
 }
