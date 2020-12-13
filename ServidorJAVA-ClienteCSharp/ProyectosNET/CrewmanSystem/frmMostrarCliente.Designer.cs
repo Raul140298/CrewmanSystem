@@ -43,8 +43,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtZona = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.txtRazon = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtGrupo = new System.Windows.Forms.TextBox();
@@ -71,8 +73,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtIdContacto = new System.Windows.Forms.TextBox();
-            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
             this.contextMenuStrip2.SuspendLayout();
             this.tbcCliente.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -217,6 +217,14 @@
             this.label6.Text = "Dirección :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // dtpFechaInicio
+            // 
+            this.dtpFechaInicio.Enabled = false;
+            this.dtpFechaInicio.Location = new System.Drawing.Point(184, 126);
+            this.dtpFechaInicio.Name = "dtpFechaInicio";
+            this.dtpFechaInicio.Size = new System.Drawing.Size(347, 26);
+            this.dtpFechaInicio.TabIndex = 116;
+            // 
             // label5
             // 
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -236,6 +244,16 @@
             this.txtRazon.Name = "txtRazon";
             this.txtRazon.Size = new System.Drawing.Size(252, 19);
             this.txtRazon.TabIndex = 114;
+            // 
+            // label4
+            // 
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Location = new System.Drawing.Point(36, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(127, 22);
+            this.label4.TabIndex = 75;
+            this.label4.Text = "Fecha Inicio :";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtDireccion
             // 
@@ -524,24 +542,6 @@
             this.txtIdContacto.Size = new System.Drawing.Size(82, 19);
             this.txtIdContacto.TabIndex = 84;
             // 
-            // dtpFechaInicio
-            // 
-            this.dtpFechaInicio.Enabled = false;
-            this.dtpFechaInicio.Location = new System.Drawing.Point(184, 126);
-            this.dtpFechaInicio.Name = "dtpFechaInicio";
-            this.dtpFechaInicio.Size = new System.Drawing.Size(347, 26);
-            this.dtpFechaInicio.TabIndex = 116;
-            // 
-            // label4
-            // 
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Location = new System.Drawing.Point(36, 130);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 22);
-            this.label4.TabIndex = 75;
-            this.label4.Text = "Fecha Inicio :";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // frmMostrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -550,6 +550,7 @@
             this.Controls.Add(this.tbcCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmMostrarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalle del Cliente";
