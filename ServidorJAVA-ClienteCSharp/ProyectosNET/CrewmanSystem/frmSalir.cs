@@ -37,8 +37,6 @@ namespace CrewmanSystem
 			frmLogeo logeo = new frmLogeo();
 			logeo.Show();
 			Program.panel.Closed += (s, args) => this.Close();
-			
-			
 		}
 	}
 }
