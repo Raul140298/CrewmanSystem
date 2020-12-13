@@ -9,7 +9,9 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace CrewmanSystem
@@ -26,7 +28,9 @@ namespace CrewmanSystem
 		public static IconButton elim;
 		public static int nBtn;
 		public static int antBtn;
-
+		public static System.Timers.Timer aTimer;
+		public static Thread a;
+		public static Boolean banderaWhile;
 		public frmVentanaPrincipal()
 		{
 			//INICIALIZACION DE LA VENTANA
@@ -86,6 +90,9 @@ namespace CrewmanSystem
 			}
 			Program.pantallas.Add(home);
 			llamarFormulario(home.Formulario);
+			banderaWhile = true;
+			a = new Thread(timerThread);
+			a.Start();
 		}
 
 		#region ESTETICA, BOTONES Y OCULTAMIENTO
@@ -280,6 +287,7 @@ namespace CrewmanSystem
 					}
 
 					CreaPantalla(sender, padreb, panel, color, tipo, formulario);
+					CreaEventoTimer(formulario);
 					Program.pantallas.Last().SetCabecera(n, a, e, b, f);
 
 					//Activo lo que tiene que hacer ese botón y muestro su cabecera respectiva
@@ -295,7 +303,85 @@ namespace CrewmanSystem
 				btnRight.Visible = btnLeft.Visible = false;
 			}
 		}
+		public void timerThread()
+		{
+			aTimer = new System.Timers.Timer();
+			aTimer.Elapsed += new ElapsedEventHandler(haceNada);
+			aTimer.Interval = 10000;
+			aTimer.Enabled = true;
+			while (banderaWhile) ;
+			aTimer.Enabled = false;
+		}
+		public void haceNada(object source, ElapsedEventArgs e)
+        {
 
+        }
+		private void CreaEventoTimer(Form formulario)
+        {
+			if (formulario == null)
+			{
+				aTimer.Elapsed += new ElapsedEventHandler(haceNada);
+				return;
+			}
+			switch (formulario.GetType().Name)
+			{
+				case "frmGestionarZonas":
+					aTimer.Elapsed += new ElapsedEventHandler(((frmGestionarZonas)formulario).revisarDGV);
+					break;
+				case "frmGestionarSubfamilias":
+					aTimer.Elapsed += new ElapsedEventHandler(((frmGestionarSubfamilias)formulario).revisarDGV);
+					break;
+				case "frmGestionarRutas":
+					break;
+				case "frmGestionarQuejas":
+					
+					break;
+				case "frmGestionarPromociones":
+					
+					break;
+
+				case "frmGestionarProductosXZona":
+					aTimer.Elapsed += new ElapsedEventHandler(haceNada);
+					break;
+				case "frmGestionarProductos":
+					
+					break;
+
+				case "frmGestionarPedidos":
+					
+					break;
+				case "frmGestionarAprobados":
+					
+					break;
+				case "frmBuscarAprobado":
+					
+					break;
+
+				case "frmGestionarMarcas":
+					aTimer.Elapsed += new ElapsedEventHandler(((frmGestionarMarcas)formulario).revisarDGV);
+					break;
+				case "frmGestionarGuiasRemision":
+					
+					break;
+				case "frmGestionarFamilias":
+					
+					break;
+				case "frmGestionarFacturas":
+					
+					break;
+				case "frmGestionarEmpleados":
+					
+					break;
+
+				case "frmGestionarCarteras":
+					
+					break;
+
+				case "frmGestionarClientes":
+					
+					break;
+			}
+		}
 		private void CreaPantalla(IconButton sender, CrewPantalla padreb, Panel panel, Color color, BTNtipo tipo, Form formulario)
 		{
 			Program.pantallas.Add(new CrewPantalla(sender, padreb, panel, color, formulario, tipo));
@@ -383,9 +469,11 @@ namespace CrewmanSystem
 
 		private void btnSalir_Click(object sender, EventArgs e)
 		{
+			
 			frmSalir panel = new frmSalir();
 			if (panel.ShowDialog() == DialogResult.OK)
 			{
+				
 			}
 		}
 

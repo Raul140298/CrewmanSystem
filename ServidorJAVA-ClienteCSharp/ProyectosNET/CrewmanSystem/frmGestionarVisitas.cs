@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace CrewmanSystem
@@ -14,7 +15,7 @@ namespace CrewmanSystem
     {
         private VisitaWS.VisitaWSClient daoVisita;
         private BindingList<VisitaWS.visita> misVisitas;
-
+        private VisitaWS.visita[] misVisitasThread;
         public frmGestionarVisitas()
         {
             InitializeComponent();
@@ -98,6 +99,22 @@ namespace CrewmanSystem
         public void recargarDGV()
         {
             completarVisita();
+        }
+
+        public void revisarDGV(object source, ElapsedEventArgs e)
+        {
+            int i = 0;
+            if (dgvVisitas.InvokeRequired)
+            {
+                dgvVisitas.Invoke(new Action(() =>
+                {
+                    misVisitasThread = daoVisita.listarVisitas(Program.empleado.cartera.idCartera);
+                    if (misVisitasThread!=null && misVisitasThread.Length != dgvVisitas.Rows.Count)
+                    {
+                        dgvVisitas.DataSource = new BindingList<VisitaWS.visita>(misVisitasThread);
+                    }
+                }));
+            }
         }
     }
 }

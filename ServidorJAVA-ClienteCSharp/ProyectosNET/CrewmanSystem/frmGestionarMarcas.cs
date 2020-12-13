@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace CrewmanSystem
@@ -16,7 +17,7 @@ namespace CrewmanSystem
 		public static MarcaWS.marca marcaSeleccionada;
 		public static DataGridView dgv;
 		public MarcaWS.marca[] misMarcas;
-
+		public MarcaWS.marca[] misMarcasPruebaThread;
 		public frmGestionarMarcas()
 		{
 			daoMarca = new MarcaWS.MarcaWSClient();
@@ -76,6 +77,34 @@ namespace CrewmanSystem
 			{
 				dataGridView1.DataSource = new BindingList<MarcaWS.marca>();
 
+			}
+		}
+		public void revisarDGV(object source, ElapsedEventArgs e)
+		{
+			
+			if (dataGridView1.InvokeRequired)
+			{
+				dataGridView1.Invoke(new Action(() =>
+				{
+					int i = ((MarcaWS.marca)dataGridView1.CurrentRow.DataBoundItem).idMarca;
+					int j = dgv.CurrentCell.ColumnIndex;
+
+					recargarDGV();
+
+					int k = 0;
+					foreach (MarcaWS.marca m in misMarcas)
+					{
+						if (m.idMarca == i)
+						{
+							i = k;
+							break;
+						}
+						k++;
+					}
+
+					if (k != misMarcas.Length)
+						dgv.CurrentCell = dgv[j, i];
+				}));
 			}
 		}
 	}

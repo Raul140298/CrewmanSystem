@@ -30,11 +30,15 @@ namespace CrewmanSystem
 
 		private void btnCerrarSesion_Click(object sender, EventArgs e)
 		{
+			frmVentanaPrincipal.banderaWhile = false;
+			frmVentanaPrincipal.a.Join();
 			Program.panel.Hide();
 			this.Hide();
 			frmLogeo logeo = new frmLogeo();
 			logeo.Show();
 			Program.panel.Closed += (s, args) => this.Close();
+			
+			
 		}
 	}
 }

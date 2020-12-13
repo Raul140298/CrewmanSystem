@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.Timers;
 
 namespace CrewmanSystem
 {
@@ -16,9 +18,10 @@ namespace CrewmanSystem
 		public static ZonaWS.zona zonaSeleccionada;
 		public static DataGridView dgv;
 		public ZonaWS.zona[] misZonas;
-
+		public ZonaWS.zona[] misZonasPruebaThread;
 		public frmGestionarZonas()
 		{
+
 			daoZona = new ZonaWS.ZonaWSClient();
 			InitializeComponent();
 			dgv = dataGridView1;
@@ -76,5 +79,37 @@ namespace CrewmanSystem
 
 			}
 		}
+		
+		public void revisarDGV(object source, ElapsedEventArgs e)
+		{
+
+			if (dataGridView1.InvokeRequired)
+			{
+				dataGridView1.Invoke(new Action(() =>
+				{
+					int i = ((ZonaWS.zona)dataGridView1.CurrentRow.DataBoundItem).idZona;
+					int j = dataGridView1.CurrentCell.ColumnIndex;
+
+					recargarDGV();
+
+					int k = 0;
+					foreach (ZonaWS.zona z in misZonas)
+					{
+						if (z.idZona == i)
+						{
+							i = k;
+							break;
+						}
+						k++;
+					}
+					
+					if (k != misZonas.Length)
+						dataGridView1.CurrentCell = dataGridView1[j, i];
+
+				}));
+            }
+        }
+
+
 	}
 }

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace CrewmanSystem
@@ -16,7 +17,7 @@ namespace CrewmanSystem
 		public static SubFamiliaWS.subFamilia subfamiliaSeleccionada;
 		public static DataGridView dgv;
 		public SubFamiliaWS.subFamilia[] misSubFamilias;
-
+		public SubFamiliaWS.subFamilia[] misSubFamiliasThread;
 		public frmGestionarSubfamilias()
 		{
 			daoSubFamilia = new SubFamiliaWS.SubFamiliaWSClient();
@@ -85,6 +86,34 @@ namespace CrewmanSystem
 			{
 				dgvSubfamilias.DataSource = new BindingList<SubFamiliaWS.subFamilia>();
 
+			}
+		}
+		public void revisarDGV(object source, ElapsedEventArgs e)
+		{
+
+			if (dgvSubfamilias.InvokeRequired)
+			{
+				dgvSubfamilias.Invoke(new Action(() =>
+				{
+					int i = ((SubFamiliaWS.subFamilia)dgvSubfamilias.CurrentRow.DataBoundItem).idSubFamilia;
+					int j = dgvSubfamilias.CurrentCell.ColumnIndex;
+
+					recargarDGV();
+
+					int k = 0;
+					foreach (SubFamiliaWS.subFamilia sub in misSubFamilias)
+					{
+						if (sub.idSubFamilia == i)
+						{
+							i = k;
+							break;
+						}
+						k++;
+					}
+
+					if (k != misSubFamilias.Length)
+						dgvSubfamilias.CurrentCell = dgvSubfamilias[j, i];
+				}));
 			}
 		}
 	}
