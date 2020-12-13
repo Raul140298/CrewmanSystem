@@ -22,12 +22,6 @@ namespace CrewmanSystem
 
         private void btnCambiarContraseña_Click(object sender, EventArgs e)
         {
-            if (txtContraseñaActual.Text != Program.empleado.contraseña)
-            {
-                MessageBox.Show("La contraseña actual no es la correcta",
-                    "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
             if (txtContraseña1.Text == "")
             {
                 MessageBox.Show("Debe indicar una contraseña",
@@ -57,7 +51,7 @@ namespace CrewmanSystem
                 int resultado = daoEmpleado.cambiarContraseña(Program.empleado.idEmpleado, txtContraseña1.Text);
                 if (resultado == 0)
                 {
-                    MessageBox.Show("No se actualizó la contraseña correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Contraseña actual incorrecta", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
