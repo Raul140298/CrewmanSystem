@@ -14,6 +14,7 @@ namespace CrewmanSystem
 	{
 		private ProductoXZonaWS.ProductoXZonaWSClient daoProductosXZona;
 		private ZonaWS.ZonaWSClient daoZona;
+		private ProductoXZonaWS.productoXZona[] misProductoXZonas;
 		public frmBuscarProductoXZona()
 		{
 			daoProductosXZona = new ProductoXZonaWS.ProductoXZonaWSClient();
@@ -55,17 +56,21 @@ namespace CrewmanSystem
 
 		private void completarTabla()
         {
-			int idZona = ((ZonaWS.zona)cboZona.SelectedItem).idZona;
-			ProductoXZonaWS.productoXZona[] productoXZonas = 
-				daoProductosXZona.listarProductosXZonas(txtNombre.Text,txtFamilia.Text,txtSubfamilia.Text,txtMarca.Text,idZona);
-			BindingList<ProductoXZonaWS.productoXZona> listaProductoXZona;
-
-			if (productoXZonas == null || productoXZonas.Length < 1) listaProductoXZona =
-					new BindingList<ProductoXZonaWS.productoXZona>();
-			else listaProductoXZona = new BindingList<ProductoXZonaWS.productoXZona>(productoXZonas);
-
 			dgvProductoXZona.AutoGenerateColumns = false;
-			dgvProductoXZona.DataSource = listaProductoXZona;
+			int idZona = ((ZonaWS.zona)cboZona.SelectedItem).idZona;
+
+			misProductoXZonas = daoProductosXZona.listarProductosXZonas(txtNombre.Text,txtFamilia.Text,txtSubfamilia.Text,txtMarca.Text,idZona);
+
+			if (misProductoXZonas != null)
+			{
+				dgvProductoXZona.DataSource = new BindingList<ProductoXZonaWS.productoXZona>(misProductoXZonas);
+				lblNotFound.Visible = false;
+			}
+			else
+			{
+				dgvProductoXZona.DataSource = new BindingList<ProductoXZonaWS.productoXZona>();
+				lblNotFound.Visible = true;
+			}
 		}
 
 		private void btnBuscar_Click(object sender, EventArgs e)

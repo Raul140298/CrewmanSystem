@@ -42,6 +42,7 @@
             this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SUMA_VENTAS_MENSUAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OBJETIVO_VENTAS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblNotFound = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarteras)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,9 +99,8 @@
             this.dgvCarteras.RowTemplate.Height = 24;
             this.dgvCarteras.Size = new System.Drawing.Size(800, 450);
             this.dgvCarteras.TabIndex = 3;
-            this.dgvCarteras.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCarteras_CellContentClick);
             this.dgvCarteras.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvCarteras_CellFormatting);
-            this.dgvCarteras.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvCarteras_RowStateChanged);
+            this.dgvCarteras.SelectionChanged += new System.EventHandler(this.dgvCarteras_SelectionChanged);
             // 
             // ID
             // 
@@ -172,17 +172,32 @@
             this.OBJETIVO_VENTAS.ReadOnly = true;
             this.OBJETIVO_VENTAS.Width = 155;
             // 
+            // lblNotFound
+            // 
+            this.lblNotFound.AutoSize = true;
+            this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotFound.Location = new System.Drawing.Point(285, 63);
+            this.lblNotFound.Name = "lblNotFound";
+            this.lblNotFound.Size = new System.Drawing.Size(230, 20);
+            this.lblNotFound.TabIndex = 5;
+            this.lblNotFound.Text = "No se encontraron resultados";
+            this.lblNotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNotFound.Visible = false;
+            // 
             // frmGestionarCarteras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblNotFound);
             this.Controls.Add(this.dgvCarteras);
             this.Name = "frmGestionarCarteras";
             this.Text = "frmGestionarCarteras";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarteras)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 
@@ -196,5 +211,6 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
 		private System.Windows.Forms.DataGridViewTextBoxColumn SUMA_VENTAS_MENSUAL;
 		private System.Windows.Forms.DataGridViewTextBoxColumn OBJETIVO_VENTAS;
-	}
+        private System.Windows.Forms.Label lblNotFound;
+    }
 }

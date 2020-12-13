@@ -252,12 +252,6 @@
     <Compile Include="frmBuscarPromocion.Designer.cs">
       <DependentUpon>frmBuscarPromocion.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBuscarZona.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBuscarZona.Designer.cs">
-      <DependentUpon>frmBuscarZona.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmCambiarContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -635,9 +629,6 @@
     <EmbeddedResource Include="frmBuscarPromocion.resx">
       <DependentUpon>frmBuscarPromocion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBuscarZona.resx">
-      <DependentUpon>frmBuscarZona.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmCambiarContraseña.resx">
       <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
     </EmbeddedResource>
@@ -804,6 +795,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\segmentar.png" />
+    <None Include="Resources\ruta.png" />
+    <None Include="Resources\promocion.png" />
     <None Include="Connected Services\EmpleadoWS\CrewmanSystem.EmpleadoWS.actualizarEmpleadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
