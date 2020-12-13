@@ -187,6 +187,7 @@
             // 
             // txtRuc
             // 
+            this.txtRuc.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtRuc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRuc.Location = new System.Drawing.Point(374, 32);
             this.txtRuc.Name = "txtRuc";
@@ -324,7 +325,7 @@
             // 
             // txtDNI
             // 
-            this.txtDNI.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDNI.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtDNI.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDNI.Location = new System.Drawing.Point(374, 38);
             this.txtDNI.Name = "txtDNI";
