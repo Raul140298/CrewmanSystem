@@ -192,11 +192,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="CrewPantalla.cs" />
-    <Compile Include="frmBuscarAprobado.cs">
+    <Compile Include="frmBuscarPedido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBuscarAprobado.Designer.cs">
-      <DependentUpon>frmBuscarAprobado.cs</DependentUpon>
+    <Compile Include="frmBuscarPedido.Designer.cs">
+      <DependentUpon>frmBuscarPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBuscarCartera.cs">
       <SubType>Form</SubType>
@@ -228,11 +228,11 @@
     <Compile Include="frmBuscarGuiaRemision.Designer.cs">
       <DependentUpon>frmBuscarGuiaRemision.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBuscarPedido.cs">
+    <Compile Include="frmBuscarBorrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBuscarPedido.Designer.cs">
-      <DependentUpon>frmBuscarPedido.cs</DependentUpon>
+    <Compile Include="frmBuscarBorrador.Designer.cs">
+      <DependentUpon>frmBuscarBorrador.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBuscarProducto.cs">
       <SubType>Form</SubType>
@@ -282,11 +282,11 @@
     <Compile Include="frmConfirmarVisita.Designer.cs">
       <DependentUpon>frmConfirmarVisita.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGestionarAprobados.cs">
+    <Compile Include="frmGestionarPedidos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGestionarAprobados.Designer.cs">
-      <DependentUpon>frmGestionarAprobados.cs</DependentUpon>
+    <Compile Include="frmGestionarPedidos.Designer.cs">
+      <DependentUpon>frmGestionarPedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGestionarCarteras.cs">
       <SubType>Form</SubType>
@@ -336,11 +336,11 @@
     <Compile Include="frmGestionarMarcas.Designer.cs">
       <DependentUpon>frmGestionarMarcas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGestionarPedidos.cs">
+    <Compile Include="frmGestionarBorradores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGestionarPedidos.Designer.cs">
-      <DependentUpon>frmGestionarPedidos.cs</DependentUpon>
+    <Compile Include="frmGestionarBorradores.Designer.cs">
+      <DependentUpon>frmGestionarBorradores.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGestionarProductos.cs">
       <SubType>Form</SubType>
@@ -498,11 +498,11 @@
     <Compile Include="frmNuevoEmpleado.Designer.cs">
       <DependentUpon>frmNuevoEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNuevoPedido.cs">
+    <Compile Include="frmNuevoBorrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNuevoPedido.Designer.cs">
-      <DependentUpon>frmNuevoPedido.cs</DependentUpon>
+    <Compile Include="frmNuevoBorrador.Designer.cs">
+      <DependentUpon>frmNuevoBorrador.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNuevoProducto.cs">
       <SubType>Form</SubType>
@@ -596,8 +596,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmBuscarAprobado.resx">
-      <DependentUpon>frmBuscarAprobado.cs</DependentUpon>
+    <EmbeddedResource Include="frmBuscarPedido.resx">
+      <DependentUpon>frmBuscarPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarCartera.resx">
       <DependentUpon>frmBuscarCartera.cs</DependentUpon>
@@ -614,8 +614,8 @@
     <EmbeddedResource Include="frmBuscarGuiaRemision.resx">
       <DependentUpon>frmBuscarGuiaRemision.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBuscarPedido.resx">
-      <DependentUpon>frmBuscarPedido.cs</DependentUpon>
+    <EmbeddedResource Include="frmBuscarBorrador.resx">
+      <DependentUpon>frmBuscarBorrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarProducto.resx">
       <DependentUpon>frmBuscarProducto.cs</DependentUpon>
@@ -644,8 +644,8 @@
     <EmbeddedResource Include="frmConfirmarVisita.resx">
       <DependentUpon>frmConfirmarVisita.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGestionarAprobados.resx">
-      <DependentUpon>frmGestionarAprobados.cs</DependentUpon>
+    <EmbeddedResource Include="frmGestionarPedidos.resx">
+      <DependentUpon>frmGestionarPedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionarCarteras.resx">
       <DependentUpon>frmGestionarCarteras.cs</DependentUpon>
@@ -671,8 +671,8 @@
     <EmbeddedResource Include="frmGestionarMarcas.resx">
       <DependentUpon>frmGestionarMarcas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGestionarPedidos.resx">
-      <DependentUpon>frmGestionarPedidos.cs</DependentUpon>
+    <EmbeddedResource Include="frmGestionarBorradores.resx">
+      <DependentUpon>frmGestionarBorradores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionarProductos.resx">
       <DependentUpon>frmGestionarProductos.cs</DependentUpon>
@@ -752,8 +752,8 @@
     <EmbeddedResource Include="frmNuevoEmpleado.resx">
       <DependentUpon>frmNuevoEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNuevoPedido.resx">
-      <DependentUpon>frmNuevoPedido.cs</DependentUpon>
+    <EmbeddedResource Include="frmNuevoBorrador.resx">
+      <DependentUpon>frmNuevoBorrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNuevoProducto.resx">
       <DependentUpon>frmNuevoProducto.cs</DependentUpon>

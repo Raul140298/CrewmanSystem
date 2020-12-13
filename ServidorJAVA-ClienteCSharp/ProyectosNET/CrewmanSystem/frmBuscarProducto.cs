@@ -38,7 +38,7 @@ namespace CrewmanSystem
 			#endregion
 		}
 
-		private void completarTabla()
+		public void completarTabla()
         {
 			dgvProductos.AutoGenerateColumns = false;
 			ProductoWS.producto[] listaProductos = daoProducto.listarProductos(txtNombre.Text, txtFamilia.Text, txtSubfamilia.Text, txtMarca.Text);

@@ -53,7 +53,7 @@ namespace CrewmanSystem
             #endregion
         }
 
-        private void completarTabla()
+        public void completarTabla()
         {
             int numAnulado;
             if (rbEmisionAmbos.Checked) numAnulado = 2;
