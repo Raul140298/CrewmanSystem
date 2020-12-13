@@ -55,8 +55,9 @@
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(244, 432);
+            this.btnGuardar.Location = new System.Drawing.Point(244, 413);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(154, 30);
             this.btnGuardar.TabIndex = 49;
@@ -69,7 +70,7 @@
             this.btnBuscarPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.btnBuscarPedido.FlatAppearance.BorderSize = 0;
             this.btnBuscarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnBuscarPedido.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnBuscarPedido.Location = new System.Drawing.Point(364, 67);
             this.btnBuscarPedido.Margin = new System.Windows.Forms.Padding(4);
@@ -84,6 +85,7 @@
             // label1
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label1.Location = new System.Drawing.Point(60, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(178, 22);
@@ -94,25 +96,28 @@
             // dtpEmision
             // 
             this.dtpEmision.Enabled = false;
+            this.dtpEmision.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dtpEmision.Location = new System.Drawing.Point(244, 279);
             this.dtpEmision.Margin = new System.Windows.Forms.Padding(4);
             this.dtpEmision.Name = "dtpEmision";
-            this.dtpEmision.Size = new System.Drawing.Size(434, 22);
+            this.dtpEmision.Size = new System.Drawing.Size(330, 26);
             this.dtpEmision.TabIndex = 90;
             this.dtpEmision.Value = new System.DateTime(2020, 11, 24, 0, 0, 0, 0);
             // 
             // txtMonto
             // 
             this.txtMonto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtMonto.Location = new System.Drawing.Point(244, 153);
             this.txtMonto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMonto.Name = "txtMonto";
-            this.txtMonto.Size = new System.Drawing.Size(154, 15);
+            this.txtMonto.Size = new System.Drawing.Size(97, 19);
             this.txtMonto.TabIndex = 91;
             // 
             // txtObservacion
             // 
             this.txtObservacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtObservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtObservacion.Location = new System.Drawing.Point(244, 198);
             this.txtObservacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtObservacion.Multiline = true;
@@ -122,10 +127,11 @@
             // 
             // dtpVencimiento
             // 
+            this.dtpVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dtpVencimiento.Location = new System.Drawing.Point(244, 323);
             this.dtpVencimiento.Margin = new System.Windows.Forms.Padding(4);
             this.dtpVencimiento.Name = "dtpVencimiento";
-            this.dtpVencimiento.Size = new System.Drawing.Size(434, 22);
+            this.dtpVencimiento.Size = new System.Drawing.Size(330, 26);
             this.dtpVencimiento.TabIndex = 93;
             // 
             // txtImpuestos
@@ -133,16 +139,18 @@
             this.txtImpuestos.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtImpuestos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtImpuestos.Enabled = false;
-            this.txtImpuestos.Location = new System.Drawing.Point(244, 372);
+            this.txtImpuestos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtImpuestos.Location = new System.Drawing.Point(244, 370);
             this.txtImpuestos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtImpuestos.Name = "txtImpuestos";
-            this.txtImpuestos.Size = new System.Drawing.Size(154, 15);
+            this.txtImpuestos.Size = new System.Drawing.Size(154, 19);
             this.txtImpuestos.TabIndex = 94;
             // 
             // label2
             // 
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Location = new System.Drawing.Point(60, 153);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(59, 152);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(178, 22);
             this.label2.TabIndex = 95;
@@ -152,6 +160,7 @@
             // label3
             // 
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label3.Location = new System.Drawing.Point(60, 198);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(178, 22);
@@ -162,6 +171,7 @@
             // label4
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label4.Location = new System.Drawing.Point(59, 281);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(178, 22);
@@ -172,9 +182,10 @@
             // label5
             // 
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Location = new System.Drawing.Point(59, 323);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label5.Location = new System.Drawing.Point(39, 327);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(178, 22);
+            this.label5.Size = new System.Drawing.Size(198, 22);
             this.label5.TabIndex = 98;
             this.label5.Text = "Fecha de vencimiento :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -182,7 +193,8 @@
             // label6
             // 
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Location = new System.Drawing.Point(59, 372);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label6.Location = new System.Drawing.Point(59, 369);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(178, 22);
             this.label6.TabIndex = 99;
@@ -194,9 +206,10 @@
             this.txtIdPedido.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtIdPedido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdPedido.Enabled = false;
-            this.txtIdPedido.Location = new System.Drawing.Point(244, 68);
+            this.txtIdPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtIdPedido.Location = new System.Drawing.Point(244, 70);
             this.txtIdPedido.Name = "txtIdPedido";
-            this.txtIdPedido.Size = new System.Drawing.Size(97, 15);
+            this.txtIdPedido.Size = new System.Drawing.Size(97, 19);
             this.txtIdPedido.TabIndex = 101;
             // 
             // txtMontoPendiente
@@ -204,15 +217,17 @@
             this.txtMontoPendiente.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtMontoPendiente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMontoPendiente.Enabled = false;
+            this.txtMontoPendiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtMontoPendiente.Location = new System.Drawing.Point(244, 110);
             this.txtMontoPendiente.Name = "txtMontoPendiente";
-            this.txtMontoPendiente.Size = new System.Drawing.Size(154, 15);
+            this.txtMontoPendiente.Size = new System.Drawing.Size(97, 19);
             this.txtMontoPendiente.TabIndex = 103;
             // 
             // label7
             // 
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Location = new System.Drawing.Point(60, 110);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label7.Location = new System.Drawing.Point(60, 107);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(178, 22);
             this.label7.TabIndex = 102;
@@ -223,16 +238,18 @@
             // 
             this.cboEstadoPagar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEstadoPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboEstadoPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cboEstadoPagar.FormattingEnabled = true;
-            this.cboEstadoPagar.Location = new System.Drawing.Point(547, 153);
+            this.cboEstadoPagar.Location = new System.Drawing.Point(506, 150);
             this.cboEstadoPagar.Name = "cboEstadoPagar";
-            this.cboEstadoPagar.Size = new System.Drawing.Size(131, 24);
+            this.cboEstadoPagar.Size = new System.Drawing.Size(163, 28);
             this.cboEstadoPagar.TabIndex = 104;
             // 
             // label8
             // 
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Location = new System.Drawing.Point(416, 153);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label8.Location = new System.Drawing.Point(375, 152);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(125, 22);
             this.label8.TabIndex = 105;
@@ -242,9 +259,10 @@
             // label9
             // 
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label9.Location = new System.Drawing.Point(150, 30);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label9.Location = new System.Drawing.Point(134, 30);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 22);
+            this.label9.Size = new System.Drawing.Size(104, 22);
             this.label9.TabIndex = 106;
             this.label9.Text = "ID Factura :";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -254,9 +272,10 @@
             this.txtIdFactura.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtIdFactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdFactura.Enabled = false;
+            this.txtIdFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtIdFactura.Location = new System.Drawing.Point(244, 30);
             this.txtIdFactura.Name = "txtIdFactura";
-            this.txtIdFactura.Size = new System.Drawing.Size(97, 15);
+            this.txtIdFactura.Size = new System.Drawing.Size(97, 19);
             this.txtIdFactura.TabIndex = 107;
             // 
             // frmNuevaFactura

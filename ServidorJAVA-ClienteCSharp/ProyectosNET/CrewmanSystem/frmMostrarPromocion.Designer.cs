@@ -54,6 +54,13 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dgvPromocionXProducto = new System.Windows.Forms.DataGridView();
+            this.NRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOMBRE_PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CANT_UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DESCUENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.STOCK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -73,13 +80,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.NRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOMBRE_PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CANT_UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DESCUENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.STOCK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -104,6 +104,7 @@
             this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox2.Controls.Add(this.cboZona);
             this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(20, 319);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(647, 96);
@@ -117,9 +118,9 @@
             this.cboZona.Enabled = false;
             this.cboZona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboZona.FormattingEnabled = true;
-            this.cboZona.Location = new System.Drawing.Point(179, 46);
+            this.cboZona.Location = new System.Drawing.Point(180, 44);
             this.cboZona.Name = "cboZona";
-            this.cboZona.Size = new System.Drawing.Size(239, 24);
+            this.cboZona.Size = new System.Drawing.Size(239, 28);
             this.cboZona.TabIndex = 86;
             // 
             // label2
@@ -145,6 +146,7 @@
             this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.txtId);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(20, 19);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(647, 287);
@@ -195,7 +197,7 @@
             // lblID
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Location = new System.Drawing.Point(11, 48);
+            this.lblID.Location = new System.Drawing.Point(11, 46);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(155, 22);
             this.lblID.TabIndex = 69;
@@ -205,9 +207,9 @@
             // dtpFechaFin
             // 
             this.dtpFechaFin.Enabled = false;
-            this.dtpFechaFin.Location = new System.Drawing.Point(179, 247);
+            this.dtpFechaFin.Location = new System.Drawing.Point(180, 243);
             this.dtpFechaFin.Name = "dtpFechaFin";
-            this.dtpFechaFin.Size = new System.Drawing.Size(280, 22);
+            this.dtpFechaFin.Size = new System.Drawing.Size(318, 26);
             this.dtpFechaFin.TabIndex = 67;
             // 
             // dtpFechaInicio
@@ -215,7 +217,7 @@
             this.dtpFechaInicio.Enabled = false;
             this.dtpFechaInicio.Location = new System.Drawing.Point(179, 206);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
-            this.dtpFechaInicio.Size = new System.Drawing.Size(280, 22);
+            this.dtpFechaInicio.Size = new System.Drawing.Size(319, 26);
             this.dtpFechaInicio.TabIndex = 66;
             // 
             // txtDescripcion
@@ -226,7 +228,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(179, 123);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(280, 64);
+            this.txtDescripcion.Size = new System.Drawing.Size(422, 64);
             this.txtDescripcion.TabIndex = 65;
             // 
             // txtNombre
@@ -234,9 +236,9 @@
             this.txtNombre.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Enabled = false;
-            this.txtNombre.Location = new System.Drawing.Point(179, 85);
+            this.txtNombre.Location = new System.Drawing.Point(180, 86);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(280, 15);
+            this.txtNombre.Size = new System.Drawing.Size(280, 19);
             this.txtNombre.TabIndex = 64;
             // 
             // txtId
@@ -244,9 +246,9 @@
             this.txtId.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(179, 48);
+            this.txtId.Location = new System.Drawing.Point(179, 49);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(85, 15);
+            this.txtId.Size = new System.Drawing.Size(85, 19);
             this.txtId.TabIndex = 63;
             // 
             // panel6
@@ -315,6 +317,75 @@
             this.dgvPromocionXProducto.Size = new System.Drawing.Size(661, 173);
             this.dgvPromocionXProducto.TabIndex = 114;
             this.dgvPromocionXProducto.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPromocionXProducto_CellFormatting);
+            // 
+            // NRO
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.NRO.DefaultCellStyle = dataGridViewCellStyle2;
+            this.NRO.HeaderText = "Nro";
+            this.NRO.MinimumWidth = 6;
+            this.NRO.Name = "NRO";
+            this.NRO.ReadOnly = true;
+            this.NRO.Width = 64;
+            // 
+            // NOMBRE_PRODUCTO
+            // 
+            this.NOMBRE_PRODUCTO.HeaderText = "Producto";
+            this.NOMBRE_PRODUCTO.MinimumWidth = 6;
+            this.NOMBRE_PRODUCTO.Name = "NOMBRE_PRODUCTO";
+            this.NOMBRE_PRODUCTO.ReadOnly = true;
+            this.NOMBRE_PRODUCTO.Width = 104;
+            // 
+            // CANT_UNIDADES
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.CANT_UNIDADES.DefaultCellStyle = dataGridViewCellStyle3;
+            this.CANT_UNIDADES.HeaderText = "Contenido Neto";
+            this.CANT_UNIDADES.MinimumWidth = 6;
+            this.CANT_UNIDADES.Name = "CANT_UNIDADES";
+            this.CANT_UNIDADES.ReadOnly = true;
+            this.CANT_UNIDADES.Width = 152;
+            // 
+            // UNIDADES
+            // 
+            this.UNIDADES.HeaderText = "Unidades";
+            this.UNIDADES.MinimumWidth = 6;
+            this.UNIDADES.Name = "UNIDADES";
+            this.UNIDADES.ReadOnly = true;
+            this.UNIDADES.Width = 107;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "precioReal";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column3.HeaderText = "Precio";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 85;
+            // 
+            // DESCUENTO
+            // 
+            this.DESCUENTO.DataPropertyName = "descuento";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.DESCUENTO.DefaultCellStyle = dataGridViewCellStyle5;
+            this.DESCUENTO.HeaderText = "Descuento";
+            this.DESCUENTO.MinimumWidth = 6;
+            this.DESCUENTO.Name = "DESCUENTO";
+            this.DESCUENTO.ReadOnly = true;
+            this.DESCUENTO.Width = 118;
+            // 
+            // STOCK
+            // 
+            this.STOCK.DataPropertyName = "stock";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.STOCK.DefaultCellStyle = dataGridViewCellStyle6;
+            this.STOCK.HeaderText = "Stock";
+            this.STOCK.MinimumWidth = 6;
+            this.STOCK.Name = "STOCK";
+            this.STOCK.ReadOnly = true;
+            this.STOCK.Width = 79;
             // 
             // panel8
             // 
@@ -528,75 +599,6 @@
             this.label6.TabIndex = 74;
             this.label6.Text = "Producto :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // NRO
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.NRO.DefaultCellStyle = dataGridViewCellStyle2;
-            this.NRO.HeaderText = "Nro";
-            this.NRO.MinimumWidth = 6;
-            this.NRO.Name = "NRO";
-            this.NRO.ReadOnly = true;
-            this.NRO.Width = 64;
-            // 
-            // NOMBRE_PRODUCTO
-            // 
-            this.NOMBRE_PRODUCTO.HeaderText = "Producto";
-            this.NOMBRE_PRODUCTO.MinimumWidth = 6;
-            this.NOMBRE_PRODUCTO.Name = "NOMBRE_PRODUCTO";
-            this.NOMBRE_PRODUCTO.ReadOnly = true;
-            this.NOMBRE_PRODUCTO.Width = 104;
-            // 
-            // CANT_UNIDADES
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.CANT_UNIDADES.DefaultCellStyle = dataGridViewCellStyle3;
-            this.CANT_UNIDADES.HeaderText = "Contenido Neto";
-            this.CANT_UNIDADES.MinimumWidth = 6;
-            this.CANT_UNIDADES.Name = "CANT_UNIDADES";
-            this.CANT_UNIDADES.ReadOnly = true;
-            this.CANT_UNIDADES.Width = 152;
-            // 
-            // UNIDADES
-            // 
-            this.UNIDADES.HeaderText = "Unidades";
-            this.UNIDADES.MinimumWidth = 6;
-            this.UNIDADES.Name = "UNIDADES";
-            this.UNIDADES.ReadOnly = true;
-            this.UNIDADES.Width = 107;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "precioReal";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column3.HeaderText = "Precio";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 85;
-            // 
-            // DESCUENTO
-            // 
-            this.DESCUENTO.DataPropertyName = "descuento";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.DESCUENTO.DefaultCellStyle = dataGridViewCellStyle5;
-            this.DESCUENTO.HeaderText = "Descuento";
-            this.DESCUENTO.MinimumWidth = 6;
-            this.DESCUENTO.Name = "DESCUENTO";
-            this.DESCUENTO.ReadOnly = true;
-            this.DESCUENTO.Width = 118;
-            // 
-            // STOCK
-            // 
-            this.STOCK.DataPropertyName = "stock";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.STOCK.DefaultCellStyle = dataGridViewCellStyle6;
-            this.STOCK.HeaderText = "Stock";
-            this.STOCK.MinimumWidth = 6;
-            this.STOCK.Name = "STOCK";
-            this.STOCK.ReadOnly = true;
-            this.STOCK.Width = 79;
             // 
             // frmMostrarPromocion
             // 

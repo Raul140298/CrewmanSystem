@@ -35,6 +35,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.NRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIPO_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApPaterno = new System.Windows.Forms.TextBox();
@@ -56,13 +63,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.NRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TIPO_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -136,248 +136,6 @@
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Controls.Add(this.txtApPaterno);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtId);
-            this.groupBox1.Location = new System.Drawing.Point(39, 26);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(718, 118);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Vendedor";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombre.Enabled = false;
-            this.txtNombre.Location = new System.Drawing.Point(154, 75);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(170, 15);
-            this.txtNombre.TabIndex = 3;
-            // 
-            // txtApPaterno
-            // 
-            this.txtApPaterno.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtApPaterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtApPaterno.Enabled = false;
-            this.txtApPaterno.Location = new System.Drawing.Point(503, 75);
-            this.txtApPaterno.Name = "txtApPaterno";
-            this.txtApPaterno.Size = new System.Drawing.Size(170, 15);
-            this.txtApPaterno.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(108, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Id :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(364, 78);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Apellido Paterno :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(69, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Nombre :";
-            // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(154, 38);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 15);
-            this.txtId.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 164);
-            this.panel1.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(757, 330);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(43, 318);
-            this.panel4.TabIndex = 7;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(262, 21);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(160, 30);
-            this.btnGuardar.TabIndex = 51;
-            this.btnGuardar.Text = "GUARDAR";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel6.Controls.Add(this.btnGuardar);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(39, 590);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(718, 58);
-            this.panel6.TabIndex = 9;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox2.Controls.Add(this.btnBuscarCliente);
-            this.groupBox2.Controls.Add(this.btnAddCliente);
-            this.groupBox2.Controls.Add(this.btnRemoveCliente);
-            this.groupBox2.Controls.Add(this.txtRazonSocial);
-            this.groupBox2.Controls.Add(this.txtRUC);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(39, 19);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(718, 133);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Clientes";
-            // 
-            // btnBuscarCliente
-            // 
-            this.btnBuscarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnBuscarCliente.FlatAppearance.BorderSize = 0;
-            this.btnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarCliente.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnBuscarCliente.Location = new System.Drawing.Point(338, 42);
-            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Padding = new System.Windows.Forms.Padding(2, 0, 0, 1);
-            this.btnBuscarCliente.Size = new System.Drawing.Size(39, 22);
-            this.btnBuscarCliente.TabIndex = 86;
-            this.btnBuscarCliente.Text = "...";
-            this.btnBuscarCliente.UseVisualStyleBackColor = false;
-            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
-            // 
-            // btnAddCliente
-            // 
-            this.btnAddCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnAddCliente.FlatAppearance.BorderSize = 0;
-            this.btnAddCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCliente.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAddCliente.Location = new System.Drawing.Point(503, 81);
-            this.btnAddCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddCliente.Name = "btnAddCliente";
-            this.btnAddCliente.Padding = new System.Windows.Forms.Padding(2, 0, 0, 1);
-            this.btnAddCliente.Size = new System.Drawing.Size(39, 22);
-            this.btnAddCliente.TabIndex = 85;
-            this.btnAddCliente.Text = "+";
-            this.btnAddCliente.UseVisualStyleBackColor = false;
-            this.btnAddCliente.Click += new System.EventHandler(this.btnAddCliente_Click);
-            // 
-            // btnRemoveCliente
-            // 
-            this.btnRemoveCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnRemoveCliente.FlatAppearance.BorderSize = 0;
-            this.btnRemoveCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveCliente.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnRemoveCliente.Location = new System.Drawing.Point(550, 81);
-            this.btnRemoveCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRemoveCliente.Name = "btnRemoveCliente";
-            this.btnRemoveCliente.Padding = new System.Windows.Forms.Padding(2, 0, 0, 1);
-            this.btnRemoveCliente.Size = new System.Drawing.Size(39, 22);
-            this.btnRemoveCliente.TabIndex = 84;
-            this.btnRemoveCliente.Text = "-";
-            this.btnRemoveCliente.UseVisualStyleBackColor = false;
-            this.btnRemoveCliente.Click += new System.EventHandler(this.btnRemoveCliente_Click);
-            // 
-            // txtRazonSocial
-            // 
-            this.txtRazonSocial.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtRazonSocial.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRazonSocial.Enabled = false;
-            this.txtRazonSocial.Location = new System.Drawing.Point(154, 81);
-            this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(330, 15);
-            this.txtRazonSocial.TabIndex = 7;
-            // 
-            // txtRUC
-            // 
-            this.txtRUC.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtRUC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRUC.Enabled = false;
-            this.txtRUC.Location = new System.Drawing.Point(154, 42);
-            this.txtRUC.Name = "txtRUC";
-            this.txtRUC.Size = new System.Drawing.Size(170, 15);
-            this.txtRUC.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(36, 84);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 17);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Razón Social :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(90, 45);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 17);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "RUC :";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.Controls.Add(this.groupBox2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 164);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 166);
-            this.panel2.TabIndex = 3;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 330);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(39, 318);
-            this.panel3.TabIndex = 6;
-            // 
             // NRO
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
@@ -437,6 +195,251 @@
             this.DIRECCION.Name = "DIRECCION";
             this.DIRECCION.ReadOnly = true;
             this.DIRECCION.Width = 109;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox1.Controls.Add(this.txtNombre);
+            this.groupBox1.Controls.Add(this.txtApPaterno);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtId);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(39, 26);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(718, 119);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Vendedor";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Enabled = false;
+            this.txtNombre.Location = new System.Drawing.Point(153, 78);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(170, 19);
+            this.txtNombre.TabIndex = 3;
+            // 
+            // txtApPaterno
+            // 
+            this.txtApPaterno.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtApPaterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtApPaterno.Enabled = false;
+            this.txtApPaterno.Location = new System.Drawing.Point(511, 78);
+            this.txtApPaterno.Name = "txtApPaterno";
+            this.txtApPaterno.Size = new System.Drawing.Size(170, 19);
+            this.txtApPaterno.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(108, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(32, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Id :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(364, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(141, 20);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Apellido Paterno :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(69, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Nombre :";
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(154, 41);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 19);
+            this.txtId.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 164);
+            this.panel1.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(757, 330);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(43, 318);
+            this.panel4.TabIndex = 7;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(262, 8);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(160, 30);
+            this.btnGuardar.TabIndex = 51;
+            this.btnGuardar.Text = "GUARDAR";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel6.Controls.Add(this.btnGuardar);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(39, 590);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(718, 58);
+            this.panel6.TabIndex = 9;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox2.Controls.Add(this.btnBuscarCliente);
+            this.groupBox2.Controls.Add(this.btnAddCliente);
+            this.groupBox2.Controls.Add(this.btnRemoveCliente);
+            this.groupBox2.Controls.Add(this.txtRazonSocial);
+            this.groupBox2.Controls.Add(this.txtRUC);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(39, 19);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(718, 133);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Clientes";
+            // 
+            // btnBuscarCliente
+            // 
+            this.btnBuscarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnBuscarCliente.FlatAppearance.BorderSize = 0;
+            this.btnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarCliente.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(338, 42);
+            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Padding = new System.Windows.Forms.Padding(2, 0, 0, 1);
+            this.btnBuscarCliente.Size = new System.Drawing.Size(39, 22);
+            this.btnBuscarCliente.TabIndex = 86;
+            this.btnBuscarCliente.Text = "...";
+            this.btnBuscarCliente.UseVisualStyleBackColor = false;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
+            // 
+            // btnAddCliente
+            // 
+            this.btnAddCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnAddCliente.FlatAppearance.BorderSize = 0;
+            this.btnAddCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCliente.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAddCliente.Location = new System.Drawing.Point(511, 80);
+            this.btnAddCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddCliente.Name = "btnAddCliente";
+            this.btnAddCliente.Padding = new System.Windows.Forms.Padding(2, 0, 0, 1);
+            this.btnAddCliente.Size = new System.Drawing.Size(39, 22);
+            this.btnAddCliente.TabIndex = 85;
+            this.btnAddCliente.Text = "+";
+            this.btnAddCliente.UseVisualStyleBackColor = false;
+            this.btnAddCliente.Click += new System.EventHandler(this.btnAddCliente_Click);
+            // 
+            // btnRemoveCliente
+            // 
+            this.btnRemoveCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnRemoveCliente.FlatAppearance.BorderSize = 0;
+            this.btnRemoveCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveCliente.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnRemoveCliente.Location = new System.Drawing.Point(558, 80);
+            this.btnRemoveCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRemoveCliente.Name = "btnRemoveCliente";
+            this.btnRemoveCliente.Padding = new System.Windows.Forms.Padding(2, 0, 0, 1);
+            this.btnRemoveCliente.Size = new System.Drawing.Size(39, 22);
+            this.btnRemoveCliente.TabIndex = 84;
+            this.btnRemoveCliente.Text = "-";
+            this.btnRemoveCliente.UseVisualStyleBackColor = false;
+            this.btnRemoveCliente.Click += new System.EventHandler(this.btnRemoveCliente_Click);
+            // 
+            // txtRazonSocial
+            // 
+            this.txtRazonSocial.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtRazonSocial.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRazonSocial.Enabled = false;
+            this.txtRazonSocial.Location = new System.Drawing.Point(154, 81);
+            this.txtRazonSocial.Name = "txtRazonSocial";
+            this.txtRazonSocial.Size = new System.Drawing.Size(330, 19);
+            this.txtRazonSocial.TabIndex = 7;
+            // 
+            // txtRUC
+            // 
+            this.txtRUC.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtRUC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRUC.Enabled = false;
+            this.txtRUC.Location = new System.Drawing.Point(154, 42);
+            this.txtRUC.Name = "txtRUC";
+            this.txtRUC.Size = new System.Drawing.Size(170, 19);
+            this.txtRUC.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(36, 84);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(118, 20);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Razón Social :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(90, 45);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "RUC :";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Controls.Add(this.groupBox2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 164);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 166);
+            this.panel2.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 330);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(39, 318);
+            this.panel3.TabIndex = 6;
             // 
             // frmNuevaCartera
             // 

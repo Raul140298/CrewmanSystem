@@ -56,7 +56,7 @@
             this.btnReportePedidosXCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportePedidosXCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportePedidosXCliente.ForeColor = System.Drawing.Color.White;
-            this.btnReportePedidosXCliente.Location = new System.Drawing.Point(114, 413);
+            this.btnReportePedidosXCliente.Location = new System.Drawing.Point(114, 384);
             this.btnReportePedidosXCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReportePedidosXCliente.Name = "btnReportePedidosXCliente";
             this.btnReportePedidosXCliente.Size = new System.Drawing.Size(418, 45);
@@ -85,7 +85,7 @@
             this.btnReportePedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportePedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportePedidos.ForeColor = System.Drawing.Color.White;
-            this.btnReportePedidos.Location = new System.Drawing.Point(114, 735);
+            this.btnReportePedidos.Location = new System.Drawing.Point(114, 746);
             this.btnReportePedidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReportePedidos.Name = "btnReportePedidos";
             this.btnReportePedidos.Size = new System.Drawing.Size(418, 45);
@@ -105,7 +105,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(111, 303);
+            this.label1.Location = new System.Drawing.Point(111, 302);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 22);
             this.label1.TabIndex = 50;
@@ -127,7 +127,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::CrewmanSystem.Properties.Resources.reportePedidosXCliente2;
-            this.pictureBox1.Location = new System.Drawing.Point(114, 62);
+            this.pictureBox1.Location = new System.Drawing.Point(114, 51);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(418, 234);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -139,7 +139,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(111, 349);
+            this.label2.Location = new System.Drawing.Point(111, 340);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 22);
             this.label2.TabIndex = 52;
@@ -152,7 +152,7 @@
             this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(271, 349);
+            this.cboEstado.Location = new System.Drawing.Point(271, 341);
             this.cboEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(261, 24);

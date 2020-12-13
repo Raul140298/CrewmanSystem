@@ -35,6 +35,7 @@
             // 
             // lblFecha
             // 
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.Location = new System.Drawing.Point(109, 146);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(235, 29);
@@ -47,10 +48,11 @@
             this.btnSegmentar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.btnSegmentar.FlatAppearance.BorderSize = 0;
             this.btnSegmentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSegmentar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSegmentar.ForeColor = System.Drawing.Color.White;
             this.btnSegmentar.Location = new System.Drawing.Point(225, 215);
             this.btnSegmentar.Name = "btnSegmentar";
-            this.btnSegmentar.Size = new System.Drawing.Size(160, 40);
+            this.btnSegmentar.Size = new System.Drawing.Size(160, 30);
             this.btnSegmentar.TabIndex = 50;
             this.btnSegmentar.Text = "SEGMENTAR";
             this.btnSegmentar.UseVisualStyleBackColor = false;
@@ -61,9 +63,10 @@
             this.txtFecha.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFecha.Enabled = false;
-            this.txtFecha.Location = new System.Drawing.Point(350, 149);
+            this.txtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFecha.Location = new System.Drawing.Point(350, 150);
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(105, 15);
+            this.txtFecha.Size = new System.Drawing.Size(105, 19);
             this.txtFecha.TabIndex = 51;
             this.txtFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 

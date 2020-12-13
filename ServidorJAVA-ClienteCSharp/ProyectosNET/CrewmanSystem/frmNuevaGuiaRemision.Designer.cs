@@ -47,15 +47,17 @@
             this.txtIdGuiaRemision.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtIdGuiaRemision.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdGuiaRemision.Enabled = false;
+            this.txtIdGuiaRemision.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtIdGuiaRemision.Location = new System.Drawing.Point(251, 33);
             this.txtIdGuiaRemision.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdGuiaRemision.Name = "txtIdGuiaRemision";
-            this.txtIdGuiaRemision.Size = new System.Drawing.Size(97, 15);
+            this.txtIdGuiaRemision.Size = new System.Drawing.Size(97, 19);
             this.txtIdGuiaRemision.TabIndex = 112;
             // 
             // label9
             // 
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label9.Location = new System.Drawing.Point(12, 33);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(225, 25);
@@ -68,10 +70,11 @@
             this.txtIdPedido.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtIdPedido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdPedido.Enabled = false;
+            this.txtIdPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtIdPedido.Location = new System.Drawing.Point(251, 70);
             this.txtIdPedido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdPedido.Name = "txtIdPedido";
-            this.txtIdPedido.Size = new System.Drawing.Size(97, 15);
+            this.txtIdPedido.Size = new System.Drawing.Size(97, 19);
             this.txtIdPedido.TabIndex = 110;
             // 
             // btnBuscarPedido
@@ -79,9 +82,9 @@
             this.btnBuscarPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.btnBuscarPedido.FlatAppearance.BorderSize = 0;
             this.btnBuscarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnBuscarPedido.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnBuscarPedido.Location = new System.Drawing.Point(375, 73);
+            this.btnBuscarPedido.Location = new System.Drawing.Point(369, 69);
             this.btnBuscarPedido.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarPedido.Name = "btnBuscarPedido";
             this.btnBuscarPedido.Padding = new System.Windows.Forms.Padding(3, 0, 0, 1);
@@ -94,7 +97,8 @@
             // label1
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Location = new System.Drawing.Point(60, 70);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.Location = new System.Drawing.Point(60, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(179, 22);
             this.label1.TabIndex = 108;
@@ -104,6 +108,7 @@
             // label2
             // 
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label2.Location = new System.Drawing.Point(60, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(179, 22);
@@ -114,18 +119,21 @@
             // txtMotivoTraslado
             // 
             this.txtMotivoTraslado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMotivoTraslado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtMotivoTraslado.Location = new System.Drawing.Point(251, 109);
             this.txtMotivoTraslado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMotivoTraslado.Multiline = true;
             this.txtMotivoTraslado.Name = "txtMotivoTraslado";
-            this.txtMotivoTraslado.Size = new System.Drawing.Size(263, 15);
+            this.txtMotivoTraslado.Size = new System.Drawing.Size(322, 63);
             this.txtMotivoTraslado.TabIndex = 114;
             // 
             // label4
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Location = new System.Drawing.Point(58, 189);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label4.Location = new System.Drawing.Point(42, 235);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(179, 22);
+            this.label4.Size = new System.Drawing.Size(195, 22);
             this.label4.TabIndex = 121;
             this.label4.Text = "Fecha Traslado Inicial :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -133,27 +141,30 @@
             // lblID
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblID.Location = new System.Drawing.Point(60, 151);
+            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblID.Location = new System.Drawing.Point(44, 195);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(179, 22);
+            this.lblID.Size = new System.Drawing.Size(193, 22);
             this.lblID.TabIndex = 120;
             this.lblID.Text = "Fecha Registro Inicial:";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dtpRangoIniTraslado
             // 
-            this.dtpRangoIniTraslado.Location = new System.Drawing.Point(251, 187);
+            this.dtpRangoIniTraslado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.dtpRangoIniTraslado.Location = new System.Drawing.Point(249, 231);
             this.dtpRangoIniTraslado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpRangoIniTraslado.Name = "dtpRangoIniTraslado";
-            this.dtpRangoIniTraslado.Size = new System.Drawing.Size(263, 22);
+            this.dtpRangoIniTraslado.Size = new System.Drawing.Size(324, 26);
             this.dtpRangoIniTraslado.TabIndex = 119;
             // 
             // dtpRangoIniRegistro
             // 
-            this.dtpRangoIniRegistro.Location = new System.Drawing.Point(251, 149);
+            this.dtpRangoIniRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.dtpRangoIniRegistro.Location = new System.Drawing.Point(249, 193);
             this.dtpRangoIniRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpRangoIniRegistro.Name = "dtpRangoIniRegistro";
-            this.dtpRangoIniRegistro.Size = new System.Drawing.Size(263, 22);
+            this.dtpRangoIniRegistro.Size = new System.Drawing.Size(324, 26);
             this.dtpRangoIniRegistro.TabIndex = 118;
             // 
             // btnGuardar
@@ -161,8 +172,9 @@
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(251, 244);
+            this.btnGuardar.Location = new System.Drawing.Point(249, 288);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(155, 30);
@@ -176,7 +188,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(628, 305);
+            this.ClientSize = new System.Drawing.Size(628, 344);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblID);

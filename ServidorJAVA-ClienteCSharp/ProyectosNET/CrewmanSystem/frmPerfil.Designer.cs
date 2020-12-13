@@ -141,10 +141,10 @@
             this.groupBox2.Controls.Add(this.txtCorreo);
             this.groupBox2.Controls.Add(this.txtTelefono2);
             this.groupBox2.Controls.Add(this.txtTelefono1);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(30, 223);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(664, 121);
+            this.groupBox2.Size = new System.Drawing.Size(650, 121);
             this.groupBox2.TabIndex = 137;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Contacto";
@@ -157,7 +157,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label5.Location = new System.Drawing.Point(370, 30);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(122, 42);
+            this.label5.Size = new System.Drawing.Size(108, 42);
             this.label5.TabIndex = 102;
             this.label5.Text = "Teléfono 2 :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -168,9 +168,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(25, 30);
+            this.label4.Location = new System.Drawing.Point(39, 30);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 42);
+            this.label4.Size = new System.Drawing.Size(157, 42);
             this.label4.TabIndex = 101;
             this.label4.Text = "Teléfono 1 :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -181,9 +181,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(23, 77);
+            this.label3.Location = new System.Drawing.Point(37, 77);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(173, 29);
+            this.label3.Size = new System.Drawing.Size(159, 29);
             this.label3.TabIndex = 100;
             this.label3.Text = "Correo :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -197,7 +197,7 @@
             this.txtCorreo.Location = new System.Drawing.Point(214, 81);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(195, 19);
+            this.txtCorreo.Size = new System.Drawing.Size(214, 19);
             this.txtCorreo.TabIndex = 99;
             // 
             // txtTelefono2
@@ -206,10 +206,10 @@
             this.txtTelefono2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefono2.Enabled = false;
             this.txtTelefono2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtTelefono2.Location = new System.Drawing.Point(500, 41);
+            this.txtTelefono2.Location = new System.Drawing.Point(495, 41);
             this.txtTelefono2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefono2.Name = "txtTelefono2";
-            this.txtTelefono2.Size = new System.Drawing.Size(144, 19);
+            this.txtTelefono2.Size = new System.Drawing.Size(138, 19);
             this.txtTelefono2.TabIndex = 98;
             // 
             // txtTelefono1
@@ -236,7 +236,7 @@
             this.groupBox1.Controls.Add(this.txtApellidoMaterno);
             this.groupBox1.Controls.Add(this.txtApellidoPaterno);
             this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(30, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(448, 195);
@@ -372,7 +372,7 @@
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.txtSumaVentas);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(30, 6);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(650, 134);
@@ -470,7 +470,7 @@
             this.groupBox5.BackColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox5.Controls.Add(this.txtZonaJefe);
             this.groupBox5.Controls.Add(this.label11);
-            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(30, 7);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(633, 90);
