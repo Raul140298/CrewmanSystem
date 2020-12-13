@@ -65,9 +65,10 @@
             this.panel8.Controls.Add(this.btnSalir);
             this.panel8.Controls.Add(this.panel9);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(394, 0);
+            this.panel8.Location = new System.Drawing.Point(295, 0);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(586, 628);
+            this.panel8.Size = new System.Drawing.Size(440, 510);
             this.panel8.TabIndex = 1;
             this.panel8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseDown);
             // 
@@ -85,11 +86,12 @@
             this.btnSalir.IconColor = System.Drawing.Color.Black;
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 20;
-            this.btnSalir.Location = new System.Drawing.Point(553, -1);
+            this.btnSalir.Location = new System.Drawing.Point(415, -1);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Padding = new System.Windows.Forms.Padding(4, 4, 0, 0);
+            this.btnSalir.Padding = new System.Windows.Forms.Padding(3, 3, 0, 0);
             this.btnSalir.Rotation = 0D;
-            this.btnSalir.Size = new System.Drawing.Size(33, 33);
+            this.btnSalir.Size = new System.Drawing.Size(25, 27);
             this.btnSalir.TabIndex = 25;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -99,8 +101,9 @@
             this.panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel9.Image = ((System.Drawing.Image)(resources.GetObject("panel9.Image")));
             this.panel9.Location = new System.Drawing.Point(0, -1);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(586, 631);
+            this.panel9.Size = new System.Drawing.Size(440, 513);
             this.panel9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.panel9.TabIndex = 24;
             this.panel9.TabStop = false;
@@ -115,8 +118,9 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(398, 240);
+            this.panel1.Size = new System.Drawing.Size(298, 195);
             this.panel1.TabIndex = 15;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -126,9 +130,10 @@
             this.panel6.Controls.Add(this.pictureBox1);
             this.panel6.Controls.Add(this.label1);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(56, 0);
+            this.panel6.Location = new System.Drawing.Point(42, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(286, 186);
+            this.panel6.Size = new System.Drawing.Size(214, 151);
             this.panel6.TabIndex = 22;
             this.panel6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel6_MouseDown);
             // 
@@ -139,9 +144,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::CrewmanSystem.Properties.Resources.USER;
             this.pictureBox1.InitialImage = global::CrewmanSystem.Properties.Resources.USER;
-            this.pictureBox1.Location = new System.Drawing.Point(109, 56);
+            this.pictureBox1.Location = new System.Drawing.Point(82, 46);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(52, 58);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
@@ -152,9 +158,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(92, 144);
+            this.label1.Location = new System.Drawing.Point(69, 117);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 29);
+            this.label1.Size = new System.Drawing.Size(83, 25);
             this.label1.TabIndex = 22;
             this.label1.Text = "Ingresar";
             // 
@@ -163,9 +170,10 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblUsuario.Location = new System.Drawing.Point(56, 220);
+            this.lblUsuario.Location = new System.Drawing.Point(42, 178);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(84, 20);
+            this.lblUsuario.Size = new System.Drawing.Size(70, 17);
             this.lblUsuario.TabIndex = 21;
             this.lblUsuario.Text = "USUARIO";
             // 
@@ -173,9 +181,10 @@
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(342, 0);
+            this.panel5.Location = new System.Drawing.Point(256, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(56, 240);
+            this.panel5.Size = new System.Drawing.Size(42, 195);
             this.panel5.TabIndex = 18;
             this.panel5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseDown);
             // 
@@ -184,8 +193,9 @@
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(56, 240);
+            this.panel2.Size = new System.Drawing.Size(42, 195);
             this.panel2.TabIndex = 17;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
@@ -193,9 +203,10 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 240);
+            this.panel3.Location = new System.Drawing.Point(0, 195);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(56, 89);
+            this.panel3.Size = new System.Drawing.Size(42, 72);
             this.panel3.TabIndex = 16;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             // 
@@ -204,9 +215,10 @@
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtUsuario.Location = new System.Drawing.Point(56, 240);
+            this.txtUsuario.Location = new System.Drawing.Point(42, 195);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(286, 19);
+            this.txtUsuario.Size = new System.Drawing.Size(214, 16);
             this.txtUsuario.TabIndex = 18;
             this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
@@ -215,10 +227,11 @@
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseña.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtContraseña.Location = new System.Drawing.Point(56, 310);
+            this.txtContraseña.Location = new System.Drawing.Point(42, 251);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '•';
-            this.txtContraseña.Size = new System.Drawing.Size(286, 19);
+            this.txtContraseña.Size = new System.Drawing.Size(214, 16);
             this.txtContraseña.TabIndex = 19;
             this.txtContraseña.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContraseña_KeyDown);
             this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
@@ -228,9 +241,10 @@
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblContraseña.Location = new System.Drawing.Point(56, 290);
+            this.lblContraseña.Location = new System.Drawing.Point(42, 234);
+            this.lblContraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(124, 20);
+            this.lblContraseña.Size = new System.Drawing.Size(103, 17);
             this.lblContraseña.TabIndex = 20;
             this.lblContraseña.Text = "CONTRASEÑA";
             // 
@@ -246,8 +260,9 @@
             this.panel0.Controls.Add(this.panel1);
             this.panel0.Controls.Add(this.panel7);
             this.panel0.Location = new System.Drawing.Point(0, 0);
+            this.panel0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel0.Name = "panel0";
-            this.panel0.Size = new System.Drawing.Size(398, 713);
+            this.panel0.Size = new System.Drawing.Size(298, 579);
             this.panel0.TabIndex = 0;
             this.panel0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel0_MouseDown);
             // 
@@ -255,9 +270,10 @@
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(342, 240);
+            this.panel4.Location = new System.Drawing.Point(256, 195);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(56, 89);
+            this.panel4.Size = new System.Drawing.Size(42, 72);
             this.panel4.TabIndex = 17;
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
             // 
@@ -269,9 +285,10 @@
             this.panel7.Controls.Add(this.btnIngresar);
             this.panel7.Controls.Add(this.label2);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(0, 329);
+            this.panel7.Location = new System.Drawing.Point(0, 267);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(398, 384);
+            this.panel7.Size = new System.Drawing.Size(298, 312);
             this.panel7.TabIndex = 14;
             this.panel7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseDown);
             // 
@@ -279,9 +296,10 @@
             // 
             this.lblMensajeError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensajeError.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblMensajeError.Location = new System.Drawing.Point(56, 25);
+            this.lblMensajeError.Location = new System.Drawing.Point(42, 20);
+            this.lblMensajeError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMensajeError.Name = "lblMensajeError";
-            this.lblMensajeError.Size = new System.Drawing.Size(286, 66);
+            this.lblMensajeError.Size = new System.Drawing.Size(214, 54);
             this.lblMensajeError.TabIndex = 28;
             this.lblMensajeError.Text = "Tus credenciales de inicio de sesión no coinciden con una cuenta en nuestro siste" +
     "ma.";
@@ -292,9 +310,10 @@
             // 
             this.lblVersion.AutoSize = true;
             this.lblVersion.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblVersion.Location = new System.Drawing.Point(325, 273);
+            this.lblVersion.Location = new System.Drawing.Point(244, 222);
+            this.lblVersion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(63, 17);
+            this.lblVersion.Size = new System.Drawing.Size(49, 13);
             this.lblVersion.TabIndex = 27;
             this.lblVersion.Text = "v7.11.26";
             // 
@@ -310,11 +329,12 @@
             this.btnIngresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnIngresar.IconSize = 35;
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIngresar.Location = new System.Drawing.Point(165, 120);
+            this.btnIngresar.Location = new System.Drawing.Point(124, 98);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Padding = new System.Windows.Forms.Padding(14, 5, 0, 0);
+            this.btnIngresar.Padding = new System.Windows.Forms.Padding(10, 4, 0, 0);
             this.btnIngresar.Rotation = 0D;
-            this.btnIngresar.Size = new System.Drawing.Size(70, 64);
+            this.btnIngresar.Size = new System.Drawing.Size(52, 52);
             this.btnIngresar.TabIndex = 26;
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
@@ -326,24 +346,26 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label2.Location = new System.Drawing.Point(336, -26);
+            this.label2.Location = new System.Drawing.Point(252, -21);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 20);
+            this.label2.Size = new System.Drawing.Size(47, 17);
             this.label2.TabIndex = 23;
             this.label2.Text = "v4.0.0";
             // 
             // frmLogeo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(980, 628);
+            this.ClientSize = new System.Drawing.Size(735, 510);
             this.ControlBox = false;
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel0);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogeo";

@@ -31,6 +31,15 @@ namespace CrewmanSystem
             dtpFechaVencimientoFinal.Value = DateTime.Today.AddMonths(3);
             rbEmisionAmbos.Checked = true;
             rbPagadoAmbos.Checked = true;
+
+            if (idTipo == 0) btnSeleccionar.Visible = false;
+
+            if (Program.empleado.cargo.nombre == "VENDEDOR")
+            {
+                dgvFacturas.Columns["NOMBRE"].Visible = false;
+                dgvFacturas.Columns["APELLIDO_PATERNO"].Visible = false;
+                dgvFacturas.Columns["APELLIDO_MATERNO"].Visible = false;
+            }
             completarTabla();
             #region colores de seleccion
             dgvFacturas.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
@@ -61,17 +70,15 @@ namespace CrewmanSystem
                                                                         dtpFechaVencimientoIni.Value, dtpFechaVencimientoFinal.Value, 
                                                                         numAnulado, numPagado);
             dgvFacturas.AutoGenerateColumns = false;
-            if (misFacturas != null) dgvFacturas.DataSource = new BindingList<FacturaWS.factura>(misFacturas.ToArray());
-            else dgvFacturas.DataSource = new BindingList<FacturaWS.factura>();
-
-            if (idTipo == 0) btnSeleccionar.Visible = false;
-
-            if (Program.empleado.cargo.nombre == "VENDEDOR")
+            if (misFacturas != null)
             {
-                dgvFacturas.Columns["NOMBRE"].Visible = false;
-                dgvFacturas.Columns["APELLIDO_PATERNO"].Visible = false;
-                dgvFacturas.Columns["APELLIDO_MATERNO"].Visible = false;
+                dgvFacturas.DataSource = new BindingList<FacturaWS.factura>(misFacturas.ToArray());
+                lblNotFound.Visible = false;
             }
+            else {
+                dgvFacturas.DataSource = new BindingList<FacturaWS.factura>();
+                lblNotFound.Visible = true;
+            } 
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

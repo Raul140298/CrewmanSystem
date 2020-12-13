@@ -33,8 +33,7 @@ namespace CrewmanSystem
                 }
                 else
                 {
-                    //frmBuscarGuiaRemision.productoSeleccionado = (ProductoWS.producto)frmBuscarProducto.dgv.CurrentRow.DataBoundItem;
-                    //miProducto = frmBuscarProducto.productoSeleccionado;
+                    miGuiaRemision = (GuiaRemisionWS.guiaRemision)frmBuscarGuiaRemision.dgv.CurrentRow.DataBoundItem;
                 }
                 txtIdGuiaRemision.Text = miGuiaRemision.idGuiaRemision.ToString();
                 txtIdPedido.Text = miGuiaRemision.pedido.idPedido.ToString();

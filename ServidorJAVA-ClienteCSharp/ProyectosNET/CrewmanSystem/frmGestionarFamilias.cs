@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace CrewmanSystem
@@ -15,7 +16,7 @@ namespace CrewmanSystem
 		public static FamiliaWS.FamiliaWSClient daoFamilia;
 		public static FamiliaWS.familia familiaSeleccionada;
 		public static DataGridView dgv;
-		FamiliaWS.familia[] misFamilias;
+		private FamiliaWS.familia[] misFamilias;
 
 		public frmGestionarFamilias()
 		{
@@ -77,5 +78,6 @@ namespace CrewmanSystem
 				dataGridView1.DataSource = new BindingList<FamiliaWS.familia>();
 			}
 		}
+	
 	}
 }

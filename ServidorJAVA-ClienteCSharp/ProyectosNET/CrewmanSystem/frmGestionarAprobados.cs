@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace CrewmanSystem
@@ -16,7 +17,8 @@ namespace CrewmanSystem
         public static PedidoWS.pedido pedidoSeleccionado;
 		public static DataGridView dgv;
 		private ClienteWS.ClienteWSClient daoCliente;
-        public frmGestionarAprobados()
+		PedidoWS.pedido[] misPedidos;
+		public frmGestionarAprobados()
         {
             daoPedido = new PedidoWS.PedidoWSClient();
             daoCliente = new ClienteWS.ClienteWSClient();
@@ -87,7 +89,7 @@ namespace CrewmanSystem
 		}
 		public void recargarDGV()
 		{
-			PedidoWS.pedido[] misPedidos = daoPedido.listarPedidos(Program.empleado.idEmpleado, "", "", DateTime.MinValue, DateTime.MaxValue, "PEDIDO", "AMBOS");
+			misPedidos = daoPedido.listarPedidos(Program.empleado.idEmpleado, "", "", DateTime.MinValue, DateTime.MaxValue, "PEDIDO", "AMBOS");
 
 			if (misPedidos != null)
 			{
@@ -104,6 +106,37 @@ namespace CrewmanSystem
 				dgvPedidos.Columns["NOMBRE"].Visible = false;
 				dgvPedidos.Columns["APELLIDO_PATERNO"].Visible = false;
 				dgvPedidos.Columns["APELLIDO_MATERNO"].Visible = false;
+			}
+		}
+		public void revisarDGV(object source, ElapsedEventArgs e)
+		{
+
+			if (dgvPedidos.InvokeRequired)
+			{
+				dgvPedidos.Invoke(new Action(() =>
+				{
+					if (dgvPedidos.Rows.Count > 0)
+					{
+						int i = ((PedidoWS.pedido)dgvPedidos.CurrentRow.DataBoundItem).idPedido;
+						int j = dgvPedidos.CurrentCell.ColumnIndex;
+
+						recargarDGV();
+
+						int k = 0;
+						foreach (PedidoWS.pedido p in misPedidos)
+						{
+							if (p.idPedido == i)
+							{
+								i = k;
+								break;
+							}
+							k++;
+						}
+
+						if (k != misPedidos.Length)
+							dgvPedidos.CurrentCell = dgvPedidos[j, i];
+					}
+				}));
 			}
 		}
 	}

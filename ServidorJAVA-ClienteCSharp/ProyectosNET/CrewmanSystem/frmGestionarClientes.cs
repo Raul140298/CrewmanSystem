@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace CrewmanSystem
@@ -16,7 +17,7 @@ namespace CrewmanSystem
 		public static PersonaContactoWS.PersonaContactoWSClient daoPersonaContacto;
 		public static ClienteWS.cliente clienteSeleccionado;
 		public static DataGridView dgv;
-
+		private ClienteWS.cliente[] misClientes;
 		public frmGestionarClientes()
 		{
 			daoCliente = new ClienteWS.ClienteWSClient();
@@ -98,11 +99,43 @@ namespace CrewmanSystem
         }
 		public void recargarDGV()
 		{
-			ClienteWS.cliente[] misClientes = daoCliente.listarClientes("", "", 0);
+			misClientes = daoCliente.listarClientes("", "", 0);
 			if (misClientes != null)
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
 			else
 				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>();
+		}
+
+		public void revisarDGV(object source, ElapsedEventArgs e)
+		{
+
+			if (dgvClientes.InvokeRequired)
+			{
+				dgvClientes.Invoke(new Action(() =>
+				{
+					if (dgvClientes.Rows.Count > 0)
+					{
+						int i = ((ClienteWS.cliente)dgvClientes.CurrentRow.DataBoundItem).idCliente;
+						int j = dgvClientes.CurrentCell.ColumnIndex;
+
+						recargarDGV();
+
+						int k = 0;
+						foreach (ClienteWS.cliente c in misClientes)
+						{
+							if (c.idCliente== i)
+							{
+								i = k;
+								break;
+							}
+							k++;
+						}
+
+						if (k != misClientes.Length)
+							dgvClientes.CurrentCell = dgvClientes[j, i];
+					}
+				}));
+			}
 		}
 	}
 }

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace CrewmanSystem
@@ -63,6 +64,38 @@ namespace CrewmanSystem
 			else
 			{
 				dgvProductosXZona.DataSource = new BindingList<ProductoXZonaWS.productoXZona>();
+			}
+		}
+
+		public void revisarDGV(object source, ElapsedEventArgs e)
+		{
+
+			if (dgvProductosXZona.InvokeRequired)
+			{
+				dgvProductosXZona.Invoke(new Action(() =>
+				{
+					if (dgvProductosXZona.Rows.Count > 0)
+					{
+						int i = ((ProductoXZonaWS.productoXZona)dgvProductosXZona.CurrentRow.DataBoundItem).idProductoXZona;
+						int j = dgvProductosXZona.CurrentCell.ColumnIndex;
+
+						recargarDGV();
+
+						int k = 0;
+						foreach (ProductoXZonaWS.productoXZona p in misProductoXZonas)
+						{
+							if (p.idProductoXZona == i)
+							{
+								i = k;
+								break;
+							}
+							k++;
+						}
+
+						if (k != misProductoXZonas.Length)
+							dgvProductosXZona.CurrentCell = dgvProductosXZona[j, i];
+					}
+				}));
 			}
 		}
 	}

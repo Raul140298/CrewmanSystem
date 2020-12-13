@@ -50,9 +50,15 @@ namespace CrewmanSystem
 
 
             if (misProductoXZona != null)
+            {
                 dgvProductos.DataSource = new BindingList<ProductoXZonaWS.productoXZona>(misProductoXZona.ToArray());
+                lblNotFound.Visible = false;
+            }
             else
+            {
                 dgvProductos.DataSource = new BindingList<ProductoXZonaWS.productoXZona>();
+                lblNotFound.Visible = true;
+            }
             
         }
 
@@ -71,8 +77,8 @@ namespace CrewmanSystem
             this.DialogResult = DialogResult.OK;
         }
 
-        public ProductoXZonaWS.productoXZona ProductoXZonaSeleccionado
-        { get => productoXZonaSeleccionado; set => productoXZonaSeleccionado = value; }
+        //public ProductoXZonaWS.productoXZona ProductoXZonaSeleccionado
+        //{ get => productoXZonaSeleccionado; set => productoXZonaSeleccionado = value; }
 
         private void dgvProductos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {

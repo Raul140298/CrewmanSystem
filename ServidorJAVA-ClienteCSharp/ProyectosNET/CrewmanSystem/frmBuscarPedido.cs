@@ -88,9 +88,15 @@ namespace CrewmanSystem
 
 			dgvPedidos.AutoGenerateColumns = false;
 			if (misPedidos != null)
+			{
 				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
+				lblNotFound.Visible = false;
+			}
 			else
+			{
 				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>();
+				lblNotFound.Visible = true;
+			}
 			if (Program.empleado.cargo.nombre == "VENDEDOR")
 			{
 				dgvPedidos.Columns["NOMBRE"].Visible = false;
@@ -98,7 +104,20 @@ namespace CrewmanSystem
 				dgvPedidos.Columns["APELLIDO_MATERNO"].Visible = false;
 			}
 		}
-
+		private void dgvPedidos_SelectionChanged(object sender, EventArgs e)
+		{
+			if (dgvPedidos.SelectedCells.Count != 1 && dgvPedidos.SelectedCells.Count != 0)
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
+			}
+		}
 		private void dgvPedidos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
 		{
 			//castear objetos y mostrar valor determinado
@@ -117,31 +136,8 @@ namespace CrewmanSystem
 			}
 			catch (Exception) { }
 		}
-		
-		private void dgvPedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-			frmVentanaPrincipal.act.Enabled = false;
-			frmVentanaPrincipal.elim.Enabled = false;
-		}
 
-		private void dgvPedidos_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-		{
-			if (idTipo == 1 || idTipo == 2) return;
-			//Preguntar al profe
-			if (e.StateChanged != DataGridViewElementStates.Selected)
-			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
-				return;
-			}
-			else
-			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
-			}
-		}
-		
-		public static void eliminar()
+        public static void eliminar()
 		{
 			pedidoSeleccionado = (PedidoWS.pedido)dgv.CurrentRow.DataBoundItem;
 			daoPedido.eliminarPedido(pedidoSeleccionado.idPedido);

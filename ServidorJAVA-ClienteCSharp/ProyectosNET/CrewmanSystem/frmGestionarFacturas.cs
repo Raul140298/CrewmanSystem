@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace CrewmanSystem
@@ -15,7 +16,7 @@ namespace CrewmanSystem
 		public static FacturaWS.FacturaWSClient daoFactura;
 		public static FacturaWS.factura facturaSeleccionada;
 		public static DataGridView dgv;
-
+		private FacturaWS.factura[] misFacturas;
 		public frmGestionarFacturas()
 		{
 			daoFactura = new FacturaWS.FacturaWSClient();
@@ -95,7 +96,7 @@ namespace CrewmanSystem
 		}
 		public void recargarDGV()
 		{
-			FacturaWS.factura[] misFacturas = daoFactura.listarFacturas(Program.empleado.idEmpleado, "", "",
+			misFacturas = daoFactura.listarFacturas(Program.empleado.idEmpleado, "", "",
 																		DateTime.MinValue, DateTime.MaxValue,
 																		DateTime.MinValue, DateTime.MaxValue, 2, 2);
 			if (misFacturas != null)
@@ -108,6 +109,38 @@ namespace CrewmanSystem
 				dgvFacturas.Columns["NOMBRE"].Visible = false;
 				dgvFacturas.Columns["APELLIDO_PATERNO"].Visible = false;
 				dgvFacturas.Columns["APELLIDO_MATERNO"].Visible = false;
+			}
+		}
+		public void revisarDGV(object source, ElapsedEventArgs e)
+		{
+
+			if (dgvFacturas.InvokeRequired)
+			{
+				dgvFacturas.Invoke(new Action(() =>
+				{
+					
+					if (dgvFacturas.Rows.Count > 0 )
+					{
+						int i = ((FacturaWS.factura)dgvFacturas.CurrentRow.DataBoundItem).idFactura;
+						int j = dgvFacturas.CurrentCell.ColumnIndex;
+
+						recargarDGV();
+
+						int k = 0;
+						foreach (FacturaWS.factura f in misFacturas)
+						{
+							if (f.idFactura == i)
+							{
+								i = k;
+								break;
+							}
+							k++;
+						}
+
+						if (k != misFacturas.Length)
+							dgvFacturas.CurrentCell = dgvFacturas[j, i];
+					}
+				}));
 			}
 		}
 	}

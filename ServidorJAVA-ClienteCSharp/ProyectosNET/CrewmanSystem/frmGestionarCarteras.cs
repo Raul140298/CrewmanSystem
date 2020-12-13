@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace CrewmanSystem
@@ -15,7 +16,7 @@ namespace CrewmanSystem
 		public static EmpleadoWS.EmpleadoWSClient daoEmpleado;
 		public static EmpleadoWS.empleado empleadoSeleccionado;
 		public static DataGridView dgv;
-
+		private EmpleadoWS.empleado[] misEmpleados;
 		public frmGestionarCarteras()
 		{
 			daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
@@ -65,12 +66,43 @@ namespace CrewmanSystem
 		}
 		public void recargarDGV()
 		{
-			EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado, "", "", "");
+			misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado, "", "", "");
 			dgvCarteras.AutoGenerateColumns = false;
 			if (misEmpleados != null)
 				dgvCarteras.DataSource = new BindingList<EmpleadoWS.empleado>(misEmpleados.ToArray());
 			else
 				dgvCarteras.DataSource = new BindingList<EmpleadoWS.empleado>();
+		}
+		public void revisarDGV(object source, ElapsedEventArgs e)
+		{
+
+			if (dgvCarteras.InvokeRequired)
+			{
+				dgvCarteras.Invoke(new Action(() =>
+				{
+					if (dgvCarteras.Rows.Count > 0)
+					{
+						int i = ((EmpleadoWS.empleado)dgvCarteras.CurrentRow.DataBoundItem).idEmpleado;
+						int j = dgvCarteras.CurrentCell.ColumnIndex;
+
+						recargarDGV();
+
+						int k = 0;
+						foreach (EmpleadoWS.empleado f in misEmpleados)
+						{
+							if (f.idEmpleado == i)
+							{
+								i = k;
+								break;
+							}
+							k++;
+						}
+
+						if (k != misEmpleados.Length)
+							dgvCarteras.CurrentCell = dgvCarteras[j, i];
+					}
+				}));
+			}
 		}
 	}
 }

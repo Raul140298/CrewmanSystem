@@ -42,13 +42,34 @@ namespace CrewmanSystem
         {
 			dgvProductos.AutoGenerateColumns = false;
 			ProductoWS.producto[] listaProductos = daoProducto.listarProductos(txtNombre.Text, txtFamilia.Text, txtSubfamilia.Text, txtMarca.Text);
-			BindingList<ProductoWS.producto> misProductos = new BindingList<ProductoWS.producto>();
-			if (listaProductos!=null)
-				misProductos=new BindingList<ProductoWS.producto>(listaProductos.ToArray());
-			dgvProductos.DataSource = misProductos;
+			if (listaProductos != null)
+			{
+				dgvProductos.DataSource = new BindingList<ProductoWS.producto>(listaProductos.ToArray());
+				lblNotFound.Visible = false;
+            }
+            else
+            {
+				dgvProductos.DataSource = new BindingList<ProductoWS.producto>();
+				lblNotFound.Visible = true;
+			}
 		}
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+		private void dgvProductos_SelectionChanged(object sender, EventArgs e)
+		{
+			if (dgvProductos.SelectedCells.Count != 1 && dgvProductos.SelectedCells.Count != 0)
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
+			}
+		}
+
+		private void btnBuscar_Click(object sender, EventArgs e)
         {
 			completarTabla();
         }
@@ -66,23 +87,7 @@ namespace CrewmanSystem
 			dgvProductos.Rows[e.RowIndex].Cells["MARCA"].Value = producto.marca.nombre;
 		}
 
-		private void dgvProductos_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-		{
-			//Preguntar al profe
-			if (e.StateChanged != DataGridViewElementStates.Selected)
-			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
-				return;
-			}
-			else
-			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
-			}
-		}
-
-		public static void eliminar()
+        public static void eliminar()
 		{
 			productoSeleccionado = (ProductoWS.producto)dgv.CurrentRow.DataBoundItem;
 			daoProducto.eliminarProducto(productoSeleccionado.idProducto);

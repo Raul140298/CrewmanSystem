@@ -46,17 +46,17 @@
             this.txtGrupo = new System.Windows.Forms.TextBox();
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblNotFound = new System.Windows.Forms.Label();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_REGISTRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_ULTIMA_COMPRA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TIPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblNotFound = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -182,6 +182,19 @@
             this.panel2.Size = new System.Drawing.Size(800, 442);
             this.panel2.TabIndex = 49;
             // 
+            // lblNotFound
+            // 
+            this.lblNotFound.AutoSize = true;
+            this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotFound.Location = new System.Drawing.Point(285, 66);
+            this.lblNotFound.Name = "lblNotFound";
+            this.lblNotFound.Size = new System.Drawing.Size(230, 20);
+            this.lblNotFound.TabIndex = 53;
+            this.lblNotFound.Text = "No se encontraron resultados";
+            this.lblNotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNotFound.Visible = false;
+            // 
             // dgvClientes
             // 
             this.dgvClientes.AllowUserToAddRows = false;
@@ -206,10 +219,10 @@
             this.RUC,
             this.RAZON_SOCIAL,
             this.GRUPO,
+            this.ZONA,
+            this.TIPO,
             this.FECHA_REGISTRO,
             this.FECHA_ULTIMA_COMPRA,
-            this.TIPO,
-            this.ZONA,
             this.DIRECCION});
             this.dgvClientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvClientes.EnableHeadersVisualStyles = false;
@@ -236,9 +249,8 @@
             this.dgvClientes.RowTemplate.Height = 24;
             this.dgvClientes.Size = new System.Drawing.Size(800, 442);
             this.dgvClientes.TabIndex = 50;
-            this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             this.dgvClientes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvClientes_CellFormatting);
-            this.dgvClientes.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dgvClientes_RowStateChanged);
+            this.dgvClientes.SelectionChanged += new System.EventHandler(this.dgvClientes_SelectionChanged);
             // 
             // ID
             // 
@@ -280,6 +292,23 @@
             this.GRUPO.ReadOnly = true;
             this.GRUPO.Width = 83;
             // 
+            // ZONA
+            // 
+            this.ZONA.HeaderText = "Zona";
+            this.ZONA.MinimumWidth = 6;
+            this.ZONA.Name = "ZONA";
+            this.ZONA.ReadOnly = true;
+            this.ZONA.Width = 73;
+            // 
+            // TIPO
+            // 
+            this.TIPO.DataPropertyName = "tipoEmpresa";
+            this.TIPO.HeaderText = "Tipo Cliente";
+            this.TIPO.MinimumWidth = 6;
+            this.TIPO.Name = "TIPO";
+            this.TIPO.ReadOnly = true;
+            this.TIPO.Width = 126;
+            // 
             // FECHA_REGISTRO
             // 
             this.FECHA_REGISTRO.DataPropertyName = "fechaRegistro";
@@ -302,23 +331,6 @@
             this.FECHA_ULTIMA_COMPRA.ReadOnly = true;
             this.FECHA_ULTIMA_COMPRA.Width = 177;
             // 
-            // TIPO
-            // 
-            this.TIPO.DataPropertyName = "tipoEmpresa";
-            this.TIPO.HeaderText = "Tipo Cliente";
-            this.TIPO.MinimumWidth = 6;
-            this.TIPO.Name = "TIPO";
-            this.TIPO.ReadOnly = true;
-            this.TIPO.Width = 126;
-            // 
-            // ZONA
-            // 
-            this.ZONA.HeaderText = "Zona";
-            this.ZONA.MinimumWidth = 6;
-            this.ZONA.Name = "ZONA";
-            this.ZONA.ReadOnly = true;
-            this.ZONA.Width = 73;
-            // 
             // DIRECCION
             // 
             this.DIRECCION.DataPropertyName = "direccion";
@@ -327,19 +339,6 @@
             this.DIRECCION.Name = "DIRECCION";
             this.DIRECCION.ReadOnly = true;
             this.DIRECCION.Width = 109;
-            // 
-            // lblNotFound
-            // 
-            this.lblNotFound.AutoSize = true;
-            this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotFound.Location = new System.Drawing.Point(285, 66);
-            this.lblNotFound.Name = "lblNotFound";
-            this.lblNotFound.Size = new System.Drawing.Size(230, 20);
-            this.lblNotFound.TabIndex = 53;
-            this.lblNotFound.Text = "No se encontraron resultados";
-            this.lblNotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblNotFound.Visible = false;
             // 
             // frmBuscarCliente
             // 
@@ -373,15 +372,15 @@
         private System.Windows.Forms.Label lblZona;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvClientes;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-		private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
-		private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
-		private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ULTIMA_COMPRA;
-		private System.Windows.Forms.DataGridViewTextBoxColumn TIPO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
-		private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
         private System.Windows.Forms.Label lblNotFound;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ULTIMA_COMPRA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
     }
 }

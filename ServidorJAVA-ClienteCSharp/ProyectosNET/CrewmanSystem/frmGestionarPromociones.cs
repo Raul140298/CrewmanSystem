@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace CrewmanSystem
@@ -95,6 +96,37 @@ namespace CrewmanSystem
 			else
 			{
 				dataGridView1.DataSource = new BindingList<PromocionWS.promocion>();
+			}
+		}
+		public void revisarDGV(object source, ElapsedEventArgs e)
+		{
+
+			if (dataGridView1.InvokeRequired)
+			{
+				dataGridView1.Invoke(new Action(() =>
+				{
+					if (dataGridView1.Rows.Count > 0)
+					{
+						int i = ((PromocionWS.promocion)dataGridView1.CurrentRow.DataBoundItem).idPromocion;
+						int j = dataGridView1.CurrentCell.ColumnIndex;
+
+						recargarDGV();
+
+						int k = 0;
+						foreach (PromocionWS.promocion p in misPromocions)
+						{
+							if (p.idPromocion == i)
+							{
+								i = k;
+								break;
+							}
+							k++;
+						}
+
+						if (k != misPromocions.Length)
+							dataGridView1.CurrentCell = dgv[j, i];
+					}
+				}));
 			}
 		}
 	}
