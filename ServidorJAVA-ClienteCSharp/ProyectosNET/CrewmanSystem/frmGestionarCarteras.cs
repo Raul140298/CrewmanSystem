@@ -42,66 +42,33 @@ namespace CrewmanSystem
 
 			dgvCarteras.Rows[e.RowIndex].Cells["ZONA"].Value = empleado.zona.nombre;
 		}
-
-		private void dgvCarteras_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		private void dgvCarteras_SelectionChanged(object sender, EventArgs e)
 		{
-			frmVentanaPrincipal.act.Enabled = false;
-			frmVentanaPrincipal.elim.Enabled = false;
-		}
-
-		private void dgvCarteras_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-        {
-			//Preguntar al profe
-			if (e.StateChanged != DataGridViewElementStates.Selected)
+			if (dgvCarteras.SelectedCells.Count != 1 && dgvCarteras.SelectedCells.Count != 0)
 			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
 				return;
 			}
 			else
 			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
 			}
 		}
-		public void recargarDGV()
+        public void recargarDGV()
 		{
 			misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado, "", "", "");
 			dgvCarteras.AutoGenerateColumns = false;
 			if (misEmpleados != null)
-				dgvCarteras.DataSource = new BindingList<EmpleadoWS.empleado>(misEmpleados.ToArray());
-			else
-				dgvCarteras.DataSource = new BindingList<EmpleadoWS.empleado>();
-		}
-		public void revisarDGV(object source, ElapsedEventArgs e)
-		{
-
-			if (dgvCarteras.InvokeRequired)
 			{
-				dgvCarteras.Invoke(new Action(() =>
-				{
-					if (dgvCarteras.Rows.Count > 0)
-					{
-						int i = ((EmpleadoWS.empleado)dgvCarteras.CurrentRow.DataBoundItem).idEmpleado;
-						int j = dgvCarteras.CurrentCell.ColumnIndex;
-
-						recargarDGV();
-
-						int k = 0;
-						foreach (EmpleadoWS.empleado f in misEmpleados)
-						{
-							if (f.idEmpleado == i)
-							{
-								i = k;
-								break;
-							}
-							k++;
-						}
-
-						if (k != misEmpleados.Length)
-							dgvCarteras.CurrentCell = dgvCarteras[j, i];
-					}
-				}));
+				dgvCarteras.DataSource = new BindingList<EmpleadoWS.empleado>(misEmpleados.ToArray());
+				lblNotFound.Visible = false;
+			}
+			else
+			{
+				dgvCarteras.DataSource = new BindingList<EmpleadoWS.empleado>();
+				lblNotFound.Visible = true;
 			}
 		}
 	}

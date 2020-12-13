@@ -108,36 +108,5 @@ namespace CrewmanSystem
 				dgvPedidos.Columns["APELLIDO_MATERNO"].Visible = false;
 			}
 		}
-		public void revisarDGV(object source, ElapsedEventArgs e)
-		{
-
-			if (dgvPedidos.InvokeRequired)
-			{
-				dgvPedidos.Invoke(new Action(() =>
-				{
-					if (dgvPedidos.Rows.Count > 0)
-					{
-						int i = ((PedidoWS.pedido)dgvPedidos.CurrentRow.DataBoundItem).idPedido;
-						int j = dgvPedidos.CurrentCell.ColumnIndex;
-
-						recargarDGV();
-
-						int k = 0;
-						foreach (PedidoWS.pedido p in misPedidos)
-						{
-							if (p.idPedido == i)
-							{
-								i = k;
-								break;
-							}
-							k++;
-						}
-
-						if (k != misPedidos.Length)
-							dgvPedidos.CurrentCell = dgvPedidos[j, i];
-					}
-				}));
-			}
-		}
 	}
 }
