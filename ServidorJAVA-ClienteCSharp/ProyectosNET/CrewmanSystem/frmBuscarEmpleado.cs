@@ -20,7 +20,7 @@ namespace CrewmanSystem
 		public frmBuscarEmpleado()
 		{
 			InitializeComponent();
-			dgv = dataGridView1;
+			dgv = dgvEmpleados;
 			BindingList<ZonaWS.zona> misZonas;
 			daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
 			daoZona = new ZonaWS.ZonaWSClient();
@@ -48,41 +48,57 @@ namespace CrewmanSystem
 			completarTabla();
 
 			#region colores de seleccion
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvEmpleados.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvEmpleados.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvEmpleados.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvEmpleados.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvEmpleados.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvEmpleados.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
+		}
+
+		private void dgvEmpleados_SelectionChanged(object sender, EventArgs e)
+		{
+			if (dgvEmpleados.SelectedCells.Count != 1 && dgvEmpleados.SelectedCells.Count != 0)
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
+			}
 		}
 
 		private void completarTabla()
 		{ 
-			dataGridView1.AutoGenerateColumns = false;
+			dgvEmpleados.AutoGenerateColumns = false;
 			EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado,txtNombre.Text,txtApPaterno.Text,txtApMaterno.Text);
 			if (misEmpleados != null)
 			{
-				dataGridView1.DataSource = new BindingList<EmpleadoWS.empleado>(misEmpleados.ToArray());
+				dgvEmpleados.DataSource = new BindingList<EmpleadoWS.empleado>(misEmpleados.ToArray());
+				lblNotFound.Visible = false;
 			}
 			else
 			{
-				dataGridView1.DataSource = new BindingList<EmpleadoWS.empleado>();
+				dgvEmpleados.DataSource = new BindingList<EmpleadoWS.empleado>();
+				lblNotFound.Visible = true;
 			}
 		}
-
-        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
+        private void dgvEmpleados_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+		{
 			//castear objetos y mostrar valor determinado
-			EmpleadoWS.empleado empleado = dataGridView1.Rows[e.RowIndex].DataBoundItem
+			EmpleadoWS.empleado empleado = dgvEmpleados.Rows[e.RowIndex].DataBoundItem
 			as EmpleadoWS.empleado;
 
-			dataGridView1.Rows[e.RowIndex].Cells["ZONA"].Value = empleado.zona.nombre;
+			dgvEmpleados.Rows[e.RowIndex].Cells["ZONA"].Value = empleado.zona.nombre;
 		}
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+		private void btnBuscar_Click(object sender, EventArgs e)
         {
 			ZonaWS.zona zonaSeleccionada = new ZonaWS.zona();
 			zonaSeleccionada = (ZonaWS.zona)cboZona.SelectedItem;
@@ -90,33 +106,12 @@ namespace CrewmanSystem
 			if (zonaSeleccionada.idZona == 0)
 			{
 				EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado, txtNombre.Text, txtApPaterno.Text, txtApMaterno.Text);
-				dataGridView1.DataSource = misEmpleados;
+				dgvEmpleados.DataSource = misEmpleados;
 			}
             else
             {
 				EmpleadoWS.empleado[] misEmpleados = daoEmpleado.listarPorJefeVentasYZona(Program.empleado.idEmpleado, txtNombre.Text, txtApPaterno.Text, txtApMaterno.Text,zonaSeleccionada.idZona);
-				dataGridView1.DataSource = misEmpleados;
-			}
-		}
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-			frmVentanaPrincipal.act.Enabled = false;
-			frmVentanaPrincipal.elim.Enabled = false;
-		}
-
-        private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-        {
-			if (e.StateChanged != DataGridViewElementStates.Selected)
-			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
-				return;
-			}
-			else
-			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
+				dgvEmpleados.DataSource = misEmpleados;
 			}
 		}
     }
