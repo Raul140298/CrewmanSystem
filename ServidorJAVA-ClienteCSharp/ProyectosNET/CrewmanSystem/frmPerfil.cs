@@ -180,37 +180,10 @@ namespace CrewmanSystem
 
         private void btnCambiarContraseña_Click(object sender, EventArgs e)
         {
-            if (txtContraseña.Text == "")
+            frmCambiarContraseña formCambiarContraseña = new frmCambiarContraseña();
+            if(formCambiarContraseña.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("Debe indicar una contraseña",
-                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (txtContraseña.Text.Length < 8)
-            {
-                MessageBox.Show("La contraseña debe tener más de 8 caracteres de longitud",
-                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (txtContraseña.Text.Contains(" "))
-            {
-                MessageBox.Show("La contraseña no debe tener espacioes en blanco",
-                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            else
-            {
-                int resultado = daoEmpleado.cambiarContraseña(Program.empleado.idEmpleado, txtContraseña.Text);
-                if (resultado == 0)
-                {
-                    MessageBox.Show("No se actualizó la contraseña correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    MessageBox.Show("Se actualizó la contraseña correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    empleado.contraseña = txtContraseña.Text;
-                }
-                txtContraseña.Text = "";
+
             }
         }
     }

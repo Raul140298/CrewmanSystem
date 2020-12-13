@@ -243,6 +243,12 @@
     <Compile Include="frmBuscarZona.Designer.cs">
       <DependentUpon>frmBuscarZona.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCambiarContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCambiarContraseña.Designer.cs">
+      <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmConfirmarInsertar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -616,6 +622,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarZona.resx">
       <DependentUpon>frmBuscarZona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCambiarContraseña.resx">
+      <DependentUpon>frmCambiarContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConfirmarInsertar.resx">
       <DependentUpon>frmConfirmarInsertar.cs</DependentUpon>

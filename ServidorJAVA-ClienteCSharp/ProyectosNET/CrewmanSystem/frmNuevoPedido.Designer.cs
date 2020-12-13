@@ -97,7 +97,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(766, 975);
+            this.panel1.Size = new System.Drawing.Size(766, 1003);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -108,7 +108,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 669);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(766, 240);
+            this.panel3.Size = new System.Drawing.Size(766, 274);
             this.panel3.TabIndex = 5;
             // 
             // dgvLineas
@@ -158,7 +158,7 @@
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvLineas.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvLineas.RowTemplate.Height = 24;
-            this.dgvLineas.Size = new System.Drawing.Size(726, 240);
+            this.dgvLineas.Size = new System.Drawing.Size(726, 274);
             this.dgvLineas.TabIndex = 98;
             this.dgvLineas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvLineas_CellFormatting);
             // 
@@ -222,7 +222,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel5.Location = new System.Drawing.Point(746, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(20, 240);
+            this.panel5.Size = new System.Drawing.Size(20, 274);
             this.panel5.TabIndex = 96;
             // 
             // panel4
@@ -231,7 +231,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(20, 240);
+            this.panel4.Size = new System.Drawing.Size(20, 274);
             this.panel4.TabIndex = 0;
             // 
             // panel2
@@ -241,9 +241,9 @@
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.btnGuardar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 909);
+            this.panel2.Location = new System.Drawing.Point(0, 943);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(766, 66);
+            this.panel2.Size = new System.Drawing.Size(766, 60);
             this.panel2.TabIndex = 4;
             // 
             // txtMontoTotal
@@ -285,6 +285,7 @@
             // 
             // panel6
             // 
+            this.panel6.AutoScroll = true;
             this.panel6.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel6.Controls.Add(this.gboPedido);
             this.panel6.Controls.Add(this.gboCliente);
@@ -653,7 +654,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 975);
+            this.ClientSize = new System.Drawing.Size(766, 1003);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmNuevoPedido";
