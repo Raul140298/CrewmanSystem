@@ -62,7 +62,7 @@ public class Main{
 //        gestionarEmpleados();
 //        gestionarProductos();
 //        gestionarProductoXZona();
-//        gestionarPromociones();
+        gestionarPromociones();
 //        gestionarPromocionXProducto();
 //        gestionarPedidos();
 //        gestionarLineasDePedido();
@@ -422,7 +422,7 @@ public class Main{
         } catch(Exception e){
             System.out.println("Error en Gestionar Promociones");
         }
-        misPromociones=daoPromocion.listar(nombre,fechaIni,fechaFin);
+        misPromociones=daoPromocion.listarPorZona(nombre,fechaIni,fechaFin,125);
         System.out.println("LISTADO DE PROMOCIONES");
         System.out.println("==================================================================================");
         System.out.println("Nombre: "+nombre);

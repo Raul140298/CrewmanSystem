@@ -84,7 +84,10 @@ namespace CrewmanSystem
 
 		public void recargarDGV()
 		{
-			misPromocions = daoPromocion.listarPromocions("", DateTime.MinValue, DateTime.MaxValue);
+			if (Program.empleado.cargo.nombre == "VENDEDOR")
+				misPromocions = daoPromocion.listarPromocionPorZona("", DateTime.MinValue, DateTime.MaxValue, Program.empleado.zona.idZona);
+			else
+				misPromocions = daoPromocion.listarPromocions("", DateTime.MinValue, DateTime.MaxValue);
 			if (misPromocions != null)
 			{
 				dataGridView1.DataSource = new BindingList<PromocionWS.promocion>(misPromocions.ToArray());

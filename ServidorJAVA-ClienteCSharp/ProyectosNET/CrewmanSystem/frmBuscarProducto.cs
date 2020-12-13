@@ -38,9 +38,6 @@ namespace CrewmanSystem
 			#endregion
 		}
 
-		public ProductoWS.producto ProductoSeleccionado
-		{ get => productoSeleccionado; set => productoSeleccionado = value; }
-
 		private void completarTabla()
         {
 			dgvProductos.AutoGenerateColumns = false;

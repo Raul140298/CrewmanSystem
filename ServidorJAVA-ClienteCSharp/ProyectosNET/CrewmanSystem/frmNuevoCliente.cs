@@ -23,6 +23,8 @@ namespace CrewmanSystem
             cboZona.DataSource = new BindingList<ZonaWS.zona>(daoZona.listarZonas().ToArray());
             cboZona.ValueMember = "idZona";
             cboZona.DisplayMember = "nombre";
+            dtpFechaInicio.Value = DateTime.Today;
+            dtpFechaInicio.Enabled = false;
 
             ClienteWS.cliente miCliente = new ClienteWS.cliente();
             if (frmVentanaPrincipal.nBtn == 1)

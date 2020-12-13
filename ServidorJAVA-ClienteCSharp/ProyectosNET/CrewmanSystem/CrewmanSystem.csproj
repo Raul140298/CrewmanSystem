@@ -513,6 +513,12 @@
     <Compile Include="frmPerfil.Designer.cs">
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRecursosEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecursosEmpleado.Designer.cs">
+      <DependentUpon>frmRecursosEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReporteMejoresClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -743,6 +749,9 @@
     <EmbeddedResource Include="frmPerfil.resx">
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRecursosEmpleado.resx">
+      <DependentUpon>frmRecursosEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReporteMejoresClientes.resx">
       <DependentUpon>frmReporteMejoresClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -823,6 +832,9 @@
     <None Include="Connected Services\EmpleadoWS\EmpleadoWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\PromocionWS\CrewmanSystem.PromocionWS.listarPromocionPorZonaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\PromocionXProductoWS\CrewmanSystem.PromocionXProductoWS.insertarPromocionXProductoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -836,7 +848,13 @@
     <None Include="Connected Services\PromocionXProductoWS\PromocionXProductoWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReportePromocionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReporteQuejasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReporteVisitasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ReporteWS\ReporteWS.wsdl" />

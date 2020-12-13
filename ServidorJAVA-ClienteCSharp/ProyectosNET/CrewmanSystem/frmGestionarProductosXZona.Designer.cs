@@ -54,7 +54,7 @@
             this.dgvProductosXZona.AllowUserToDeleteRows = false;
             this.dgvProductosXZona.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvProductosXZona.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvProductosXZona.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dgvProductosXZona.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvProductosXZona.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProductosXZona.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -81,7 +81,7 @@
             this.dgvProductosXZona.EnableHeadersVisualStyles = false;
             this.dgvProductosXZona.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.dgvProductosXZona.Location = new System.Drawing.Point(0, 0);
-            this.dgvProductosXZona.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProductosXZona.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvProductosXZona.MultiSelect = false;
             this.dgvProductosXZona.Name = "dgvProductosXZona";
             this.dgvProductosXZona.ReadOnly = true;
@@ -101,7 +101,7 @@
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvProductosXZona.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvProductosXZona.RowTemplate.Height = 24;
-            this.dgvProductosXZona.Size = new System.Drawing.Size(600, 366);
+            this.dgvProductosXZona.Size = new System.Drawing.Size(800, 450);
             this.dgvProductosXZona.TabIndex = 2;
             this.dgvProductosXZona.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProductosXZona_CellFormatting);
             // 
@@ -114,7 +114,7 @@
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
-            this.ID.Width = 43;
+            this.ID.Width = 50;
             // 
             // PRODUCTO
             // 
@@ -122,7 +122,7 @@
             this.PRODUCTO.MinimumWidth = 6;
             this.PRODUCTO.Name = "PRODUCTO";
             this.PRODUCTO.ReadOnly = true;
-            this.PRODUCTO.Width = 89;
+            this.PRODUCTO.Width = 104;
             // 
             // ZONA
             // 
@@ -130,7 +130,7 @@
             this.ZONA.MinimumWidth = 6;
             this.ZONA.Name = "ZONA";
             this.ZONA.ReadOnly = true;
-            this.ZONA.Width = 65;
+            this.ZONA.Width = 73;
             // 
             // PRECIO_REAL
             // 
@@ -142,7 +142,7 @@
             this.PRECIO_REAL.MinimumWidth = 6;
             this.PRECIO_REAL.Name = "PRECIO_REAL";
             this.PRECIO_REAL.ReadOnly = true;
-            this.PRECIO_REAL.Width = 72;
+            this.PRECIO_REAL.Width = 85;
             // 
             // CANT_UNIDADES
             // 
@@ -154,7 +154,7 @@
             this.CANT_UNIDADES.MinimumWidth = 6;
             this.CANT_UNIDADES.Name = "CANT_UNIDADES";
             this.CANT_UNIDADES.ReadOnly = true;
-            this.CANT_UNIDADES.Width = 130;
+            this.CANT_UNIDADES.Width = 152;
             // 
             // UNIDADES
             // 
@@ -164,7 +164,7 @@
             this.UNIDADES.MinimumWidth = 6;
             this.UNIDADES.Name = "UNIDADES";
             this.UNIDADES.ReadOnly = true;
-            this.UNIDADES.Width = 92;
+            this.UNIDADES.Width = 107;
             // 
             // SUBFAMILIA
             // 
@@ -172,7 +172,7 @@
             this.SUBFAMILIA.MinimumWidth = 6;
             this.SUBFAMILIA.Name = "SUBFAMILIA";
             this.SUBFAMILIA.ReadOnly = true;
-            this.SUBFAMILIA.Width = 97;
+            this.SUBFAMILIA.Width = 115;
             // 
             // FAMILIA
             // 
@@ -180,7 +180,7 @@
             this.FAMILIA.MinimumWidth = 6;
             this.FAMILIA.Name = "FAMILIA";
             this.FAMILIA.ReadOnly = true;
-            this.FAMILIA.Width = 76;
+            this.FAMILIA.Width = 91;
             // 
             // MARCA
             // 
@@ -188,15 +188,15 @@
             this.MARCA.MinimumWidth = 6;
             this.MARCA.Name = "MARCA";
             this.MARCA.ReadOnly = true;
-            this.MARCA.Width = 71;
+            this.MARCA.Width = 84;
             // 
             // frmGestionarProductosXZona
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgvProductosXZona);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmGestionarProductosXZona";
             this.Text = "frmGestionarProductosXZona";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductosXZona)).EndInit();

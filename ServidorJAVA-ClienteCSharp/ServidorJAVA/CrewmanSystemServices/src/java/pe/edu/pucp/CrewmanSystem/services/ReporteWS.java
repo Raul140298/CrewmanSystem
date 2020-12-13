@@ -148,7 +148,7 @@ public class ReporteWS
     }
     
     @WebMethod(operationName = "generarReporteMejoresClientes")
-    public byte[] generarReporteMejoresClientes(@WebParam(name = "idEmpleado") int idEmpleado, @WebParam(name = "nombre") String nombre) {
+    public byte[] generarReporteMejoresClientes(@WebParam(name = "idEmpleado") int idJefe, @WebParam(name = "nombre") String nombre) {
         byte[] arreglo = null;
 
         try{
@@ -174,7 +174,7 @@ public class ReporteWS
             hm.put("NOMBRE", nombre);
             hm.put("FECHA", new java.sql.Date(new Date().getTime()));
             hm.put("RUTA_SUBREPORTE",subreporte);
-            hm.put("ID_JEFE",idEmpleado);
+            hm.put("ID_JEFE",idJefe);
             
             JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
 
@@ -210,6 +210,94 @@ public class ReporteWS
             HashMap hm = new HashMap();
             hm.put("LOGO",imagen);
             hm.put("JEFE", idJefe);
+            
+            //Poblamos el reporte
+            JasperPrint jp = JasperFillManager.fillReport
+            (reporte, hm, con);
+            
+            //Cerrar la conexion
+            con.close();
+            
+            //Convertirlo a arreglo bytes
+            arreglo = JasperExportManager.exportReportToPdf(jp);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return arreglo;
+    }
+    
+    @WebMethod(operationName = "generarReportePromocion")
+    public byte[] generarReportePromocion(@WebParam(name = "nombre") String nombre, @WebParam(name = "idPromocion") int idPromocion) {
+        byte[] arreglo = null;
+        try{
+            //Referencia al archivo JASPER
+            String rutaReporte = ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/Promocion.jasper").getPath();
+            rutaReporte = rutaReporte.replaceAll("%20", " ");
+            JasperReport reporte = (JasperReport)JRLoader.loadObjectFromFile(rutaReporte);
+        
+            //Referencia a la ruta de la imagen
+            String rutaLogo = ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/images/icono.jpg").getPath();
+            rutaLogo = rutaLogo.replaceAll("%20", " ");
+            ImageIcon icono = new ImageIcon(rutaLogo);
+            Image imagen = icono.getImage();      
+            
+            //Registramos el Driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Creamos el objeto Connection
+            Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            
+            TimeZone.setDefault(TimeZone.getTimeZone("GMT-5"));
+            
+            //Creamos un HashMap para enviar los parámetros
+            HashMap hm = new HashMap();
+            hm.put("LOGO",imagen);
+            hm.put("NOMBRE", nombre);
+            hm.put("FECHA", new java.sql.Date(new Date().getTime()));
+            hm.put("ID_PROMOCION", idPromocion);
+            
+            //Poblamos el reporte
+            JasperPrint jp = JasperFillManager.fillReport
+            (reporte, hm, con);
+            
+            //Cerrar la conexion
+            con.close();
+            
+            //Convertirlo a arreglo bytes
+            arreglo = JasperExportManager.exportReportToPdf(jp);
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return arreglo;
+    }
+    
+    @WebMethod(operationName = "generarReporteVisitas")
+    public byte[] generarReporteVisitas(@WebParam(name = "nombre") String nombre, @WebParam(name = "idEmpleado") int idEmpleado) {
+        byte[] arreglo = null;
+        try{
+            //Referencia al archivo JASPER
+            String rutaReporte = ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/Visitas.jasper").getPath();
+            rutaReporte = rutaReporte.replaceAll("%20", " ");
+            JasperReport reporte = (JasperReport)JRLoader.loadObjectFromFile(rutaReporte);
+        
+            //Referencia a la ruta de la imagen
+            String rutaLogo = ReporteMejoresEmpleados.class.getResource("/pe/edu/pucp/CrewmanSystem/images/icono.jpg").getPath();
+            rutaLogo = rutaLogo.replaceAll("%20", " ");
+            ImageIcon icono = new ImageIcon(rutaLogo);
+            Image imagen = icono.getImage();      
+            
+            //Registramos el Driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Creamos el objeto Connection
+            Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            
+            TimeZone.setDefault(TimeZone.getTimeZone("GMT-5"));
+            
+            //Creamos un HashMap para enviar los parámetros
+            HashMap hm = new HashMap();
+            hm.put("LOGO",imagen);
+            hm.put("NOMBRE", nombre);
+            hm.put("FECHA", new java.sql.Date(new Date().getTime()));
+            hm.put("ID_EMPLEADO", idEmpleado);
             
             //Poblamos el reporte
             JasperPrint jp = JasperFillManager.fillReport

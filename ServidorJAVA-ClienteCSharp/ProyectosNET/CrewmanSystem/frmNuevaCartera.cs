@@ -139,24 +139,9 @@ namespace CrewmanSystem
             dataGridView1.Rows[e.RowIndex].Cells["RUC"].Value = v.cliente.ruc;
             dataGridView1.Rows[e.RowIndex].Cells["RAZON_SOCIAL"].Value = v.cliente.razonSocial;
             dataGridView1.Rows[e.RowIndex].Cells["GRUPO"].Value = v.cliente.grupo;
-            dataGridView1.Rows[e.RowIndex].Cells["FECHA_REGISTRO"].Value = v.cliente.fechaRegistro.ToString("dd/MM/yyyy");
-            DateTime ultCompra = v.cliente.fechaUltimaCompra;
-            string fechaUltCompra;
-            if (ultCompra.Year < 2000) fechaUltCompra = "";
-            else fechaUltCompra = ultCompra.ToString("dd/MM/yyyy");
-            dataGridView1.Rows[e.RowIndex].Cells["FECHA_ULT_COMPRA"].Value = fechaUltCompra;
             dataGridView1.Rows[e.RowIndex].Cells["TIPO_CLIENTE"].Value = v.cliente.tipoEmpresa;
             dataGridView1.Rows[e.RowIndex].Cells["ZONA"].Value = v.cliente.zona.nombre;
             dataGridView1.Rows[e.RowIndex].Cells["DIRECCION"].Value = v.cliente.direccion;
-            string estado;
-            if (v.estado) estado = "VISITADO";
-            else estado = "NO VISITADO";
-            dataGridView1.Rows[e.RowIndex].Cells["ESTADO"].Value = estado;
-            DateTime visita = v.fechaRegistro;
-            string fechaVisita;
-            if (visita.Year < 2000) fechaVisita= "";
-            else fechaVisita = visita.ToString("dd/MM/yyyy");
-            dataGridView1.Rows[e.RowIndex].Cells["FECHA_VISITA"].Value = fechaVisita;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

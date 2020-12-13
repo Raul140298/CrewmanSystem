@@ -37,5 +37,10 @@ namespace CrewmanSystem
                 }
             }
         }
+
+        private void frmReporteQuejas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

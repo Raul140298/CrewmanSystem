@@ -912,10 +912,16 @@ namespace CrewmanSystem
 			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmGestionarVisitas(),false, false, false, false, true);
 		}
 
+		private void btnRecursos_Click(object sender, EventArgs e)
+		{
+			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmRecursosEmpleado(), false, false, false, false, true);
+		}
+
 		private void btnSegmentacion_Click(object sender, EventArgs e)
         {
 			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmSegmentarClientes(), false, false, false, false, false);
 		}
+
 		private void btnPerfil_Click(object sender, EventArgs e)
 		{
 			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmPerfil(), false, false, false, false, false);
@@ -1051,8 +1057,7 @@ namespace CrewmanSystem
 			}
 		}
 
-		#endregion
 
-
-	}
+        #endregion
+    }
 }

@@ -53,6 +53,7 @@ public class PromocionMySQL implements PromocionDAO{
         }
         return resultado;
     }
+    
     @Override
     public int actualizar(Promocion promocion)
     {
@@ -135,4 +136,42 @@ public class PromocionMySQL implements PromocionDAO{
         return promocions;
     }
     
+    @Override
+    public ArrayList<Promocion>listarPorZona(String nombre,Date fechaIni,Date fechaFin,int idZona){
+        ArrayList<Promocion> promocions = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            String sql ="{ call LISTAR_PROMOCION_POR_ZONA (?,?,?,?)}";
+            cs = con.prepareCall(sql);
+            cs.setString("_NOMBRE", nombre);
+            cs.setDate("_FECHA_INICIO", new java.sql.Date(fechaIni.getTime()));
+            cs.setDate("_FECHA_FIN", new java.sql.Date(fechaFin.getTime()));
+            cs.setInt("_ID_ZONA", idZona);
+            cs.executeUpdate();
+            rs = cs.getResultSet();
+            while(rs.next()){
+                Promocion promocion=new Promocion();
+                Zona zona = new Zona();
+                promocion.setIdPromocion(rs.getInt("ID_PROMOCION"));
+                promocion.setNombre(rs.getString("NOMBRE"));
+                promocion.setDescripcion(rs.getString("DESCRIPCION"));
+                zona.setIdZona(rs.getInt("ID_ZONA"));
+                zona.setNombre(rs.getString("ZONA"));
+                promocion.setZona(zona);
+                promocion.setFechaInicio(rs.getDate("FECHA_INICIO"));
+                promocion.setFechaFin(rs.getDate("FECHA_FIN"));
+                promocions.add(promocion);
+            }
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{
+                con.close();
+            }catch(Exception ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return promocions;
+    }
 }

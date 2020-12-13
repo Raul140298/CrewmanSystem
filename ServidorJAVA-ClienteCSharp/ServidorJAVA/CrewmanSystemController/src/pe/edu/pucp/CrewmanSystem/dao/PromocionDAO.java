@@ -8,4 +8,5 @@ public interface PromocionDAO{
     int actualizar(Promocion promocion);
     int eliminar(int idPromocion);
     ArrayList<Promocion> listar(String nombre,Date fechaIni,Date fechaFin);
+    ArrayList<Promocion> listarPorZona(String nombre,Date fechaIni,Date fechaFin,int idZona);
 }

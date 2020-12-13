@@ -70,4 +70,18 @@ public class PromocionWS
         }
         return misPromocions;
     }
+    
+    @WebMethod(operationName = "listarPromocionPorZona")
+    public ArrayList<Promocion> listarPromocionPorZona(@WebParam(name = "nombre") String nombre, 
+            @WebParam(name = "fechaIni") Date fechaIni, 
+            @WebParam(name = "fechaFin") Date fechaFin,
+            @WebParam(name = "idZona") int idZona) {
+        ArrayList<Promocion> misPromocions = new ArrayList<>();
+        try{
+            misPromocions = daoPromocion.listarPorZona(nombre, fechaIni, fechaFin,idZona);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return misPromocions;
+    }
 }
