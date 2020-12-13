@@ -71,10 +71,12 @@ namespace CrewmanSystem
 			if (misEmpleados != null)
 			{
 				dataGridView1.DataSource = new BindingList<EmpleadoWS.empleado>(misEmpleados.ToArray());
+				lblNotFound.Visible = false;
 			}
 			else
 			{
 				dataGridView1.DataSource = new BindingList<EmpleadoWS.empleado>();
+				lblNotFound.Visible = true;
 			}
 		}
 

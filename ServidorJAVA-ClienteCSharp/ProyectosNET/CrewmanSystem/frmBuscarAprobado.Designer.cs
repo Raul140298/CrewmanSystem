@@ -455,7 +455,7 @@
             this.lblNotFound.AutoSize = true;
             this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotFound.Location = new System.Drawing.Point(400, 340);
+            this.lblNotFound.Location = new System.Drawing.Point(287, 340);
             this.lblNotFound.Name = "lblNotFound";
             this.lblNotFound.Size = new System.Drawing.Size(230, 20);
             this.lblNotFound.TabIndex = 52;
