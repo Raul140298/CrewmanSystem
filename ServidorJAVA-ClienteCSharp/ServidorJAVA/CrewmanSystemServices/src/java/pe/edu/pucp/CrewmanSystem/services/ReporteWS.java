@@ -32,7 +32,7 @@ public class ReporteWS {
     private SimpleDateFormat sdf; 
     
     @WebMethod(operationName = "generarReporteMejoresEmpleados")
-    public byte[] generarReporteMejoresEmpleados() {
+    public byte[] generarReporteMejoresEmpleados(@WebParam(name = "idJefe") int idJefe, @WebParam(name = "nombre") String nombre) {
         byte[] arreglo = null;
         try{
             //Referencia al archivo JASPER
@@ -49,12 +49,14 @@ public class ReporteWS {
             //Registramos el Driver
             Class.forName("com.mysql.cj.jdbc.Driver");
             //Creamos el objeto Connection
-            Connection con = DriverManager.getConnection(DBManager.urlMySQL, 
-                    DBManager.user, DBManager.pass);
+            Connection con = DriverManager.getConnection(DBManager.urlMySQL,DBManager.user, DBManager.pass);
             
             //Creamos un HashMap para enviar los parámetros
             HashMap hm = new HashMap();
-            hm.put("LOGO",imagen);
+            hm.put("LOGO", imagen);
+            hm.put("NOMBRE", nombre);
+            hm.put("FECHA", nombre);
+            hm.put("ID_JEFE", idJefe);
             
             //Poblamos el reporte
             JasperPrint jp = JasperFillManager.fillReport
@@ -150,7 +152,7 @@ public class ReporteWS {
     }
     
     @WebMethod(operationName = "generarReporteMejoresClientes")
-    public byte[] generarReporteMejoresClientes(@WebParam(name = "idEmpleado") int idJefe, @WebParam(name = "nombre") String nombre) {
+    public byte[] generarReporteMejoresClientes(@WebParam(name = "idJefe") int idJefe, @WebParam(name = "nombre") String nombre) {
         byte[] arreglo = null;
 
         try{
