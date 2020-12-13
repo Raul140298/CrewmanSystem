@@ -8,6 +8,7 @@ package pe.edu.pucp.CrewmanSystem.services;
 import java.awt.Image;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.TimeZone;
@@ -27,8 +28,10 @@ import pe.edu.pucp.CrewmanSystem.servlets.ReportePedidos;
 import pe.edu.pucp.CrewmanSystem.servlets.ReportePedidosXCliente;
 
 @WebService(serviceName = "ReporteWS")
-public class ReporteWS
-{
+public class ReporteWS {
+    private SimpleDateFormat sdf; 
+    
+    
     @WebMethod(operationName = "generarReporteMejoresEmpleados")
     public byte[] generarReporteMejoresEmpleados() {
         byte[] arreglo = null;
@@ -247,6 +250,7 @@ public class ReporteWS
             Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             
             TimeZone.setDefault(TimeZone.getTimeZone("GMT-5"));
+            
             
             //Creamos un HashMap para enviar los parámetros
             HashMap hm = new HashMap();

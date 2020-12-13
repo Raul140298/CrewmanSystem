@@ -29,27 +29,24 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvVisitas = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CHECK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FECHA_REGISTRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FECHA_VISITA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CHECK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.FECHA_ULTIMA_COMPRA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIPO_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FECHA_VISITA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisitas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,17 +71,15 @@
             this.dgvVisitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvVisitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.CHECK,
             this.RUC,
             this.RAZON_SOCIAL,
             this.GRUPO,
-            this.FECHA_REGISTRO,
+            this.FECHA_VISITA,
+            this.CHECK,
             this.FECHA_ULTIMA_COMPRA,
             this.TIPO_CLIENTE,
             this.ZONA,
-            this.DIRECCION,
-            this.ESTADO,
-            this.FECHA_VISITA});
+            this.DIRECCION});
             this.dgvVisitas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvVisitas.EnableHeadersVisualStyles = false;
             this.dgvVisitas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
@@ -94,20 +89,20 @@
             this.dgvVisitas.Name = "dgvVisitas";
             this.dgvVisitas.ReadOnly = true;
             this.dgvVisitas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVisitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvVisitas.RowHeadersWidth = 51;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVisitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvVisitas.RowHeadersWidth = 51;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvVisitas.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvVisitas.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvVisitas.RowTemplate.Height = 24;
             this.dgvVisitas.Size = new System.Drawing.Size(800, 450);
             this.dgvVisitas.TabIndex = 2;
@@ -125,20 +120,10 @@
             this.ID.ReadOnly = true;
             this.ID.Width = 50;
             // 
-            // CHECK
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.CHECK.DefaultCellStyle = dataGridViewCellStyle3;
-            this.CHECK.HeaderText = "✓";
-            this.CHECK.MinimumWidth = 6;
-            this.CHECK.Name = "CHECK";
-            this.CHECK.ReadOnly = true;
-            this.CHECK.Width = 24;
-            // 
             // RUC
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.RUC.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.RUC.DefaultCellStyle = dataGridViewCellStyle3;
             this.RUC.HeaderText = "RUC";
             this.RUC.MinimumWidth = 6;
             this.RUC.Name = "RUC";
@@ -161,15 +146,25 @@
             this.GRUPO.ReadOnly = true;
             this.GRUPO.Width = 83;
             // 
-            // FECHA_REGISTRO
+            // FECHA_VISITA
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_VISITA.DefaultCellStyle = dataGridViewCellStyle4;
+            this.FECHA_VISITA.HeaderText = "Fecha Visita";
+            this.FECHA_VISITA.MinimumWidth = 6;
+            this.FECHA_VISITA.Name = "FECHA_VISITA";
+            this.FECHA_VISITA.ReadOnly = true;
+            this.FECHA_VISITA.Width = 130;
+            // 
+            // CHECK
             // 
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FECHA_REGISTRO.DefaultCellStyle = dataGridViewCellStyle5;
-            this.FECHA_REGISTRO.HeaderText = "Fecha Registro";
-            this.FECHA_REGISTRO.MinimumWidth = 6;
-            this.FECHA_REGISTRO.Name = "FECHA_REGISTRO";
-            this.FECHA_REGISTRO.ReadOnly = true;
-            this.FECHA_REGISTRO.Width = 151;
+            this.CHECK.DefaultCellStyle = dataGridViewCellStyle5;
+            this.CHECK.HeaderText = "✓";
+            this.CHECK.MinimumWidth = 6;
+            this.CHECK.Name = "CHECK";
+            this.CHECK.ReadOnly = true;
+            this.CHECK.Width = 24;
             // 
             // FECHA_ULTIMA_COMPRA
             // 
@@ -205,24 +200,6 @@
             this.DIRECCION.ReadOnly = true;
             this.DIRECCION.Width = 109;
             // 
-            // ESTADO
-            // 
-            this.ESTADO.HeaderText = "Estado";
-            this.ESTADO.MinimumWidth = 6;
-            this.ESTADO.Name = "ESTADO";
-            this.ESTADO.ReadOnly = true;
-            this.ESTADO.Width = 89;
-            // 
-            // FECHA_VISITA
-            // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FECHA_VISITA.DefaultCellStyle = dataGridViewCellStyle7;
-            this.FECHA_VISITA.HeaderText = "Fecha Visita";
-            this.FECHA_VISITA.MinimumWidth = 6;
-            this.FECHA_VISITA.Name = "FECHA_VISITA";
-            this.FECHA_VISITA.ReadOnly = true;
-            this.FECHA_VISITA.Width = 130;
-            // 
             // frmGestionarVisitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -240,16 +217,14 @@
 
         private System.Windows.Forms.DataGridView dgvVisitas;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn CHECK;
         private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
         private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_VISITA;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn CHECK;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ULTIMA_COMPRA;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_CLIENTE;
         private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
         private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_VISITA;
     }
 }
