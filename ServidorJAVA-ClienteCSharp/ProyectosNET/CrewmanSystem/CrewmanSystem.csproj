@@ -300,12 +300,6 @@
     <Compile Include="frmGestionarClientes.Designer.cs">
       <DependentUpon>frmGestionarClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGestionarClientesXZona.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGestionarClientesXZona.Designer.cs">
-      <DependentUpon>frmGestionarClientesXZona.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmGestionarEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -365,12 +359,6 @@
     </Compile>
     <Compile Include="frmGestionarQuejas.Designer.cs">
       <DependentUpon>frmGestionarQuejas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmGestionarRutas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGestionarRutas.Designer.cs">
-      <DependentUpon>frmGestionarRutas.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGestionarSubfamilias.cs">
       <SubType>Form</SubType>
@@ -653,9 +641,6 @@
     <EmbeddedResource Include="frmGestionarClientes.resx">
       <DependentUpon>frmGestionarClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGestionarClientesXZona.resx">
-      <DependentUpon>frmGestionarClientesXZona.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmGestionarEmpleados.resx">
       <DependentUpon>frmGestionarEmpleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -685,9 +670,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionarQuejas.resx">
       <DependentUpon>frmGestionarQuejas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmGestionarRutas.resx">
-      <DependentUpon>frmGestionarRutas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionarSubfamilias.resx">
       <DependentUpon>frmGestionarSubfamilias.cs</DependentUpon>

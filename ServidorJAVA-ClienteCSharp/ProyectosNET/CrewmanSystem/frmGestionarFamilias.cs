@@ -22,48 +22,39 @@ namespace CrewmanSystem
 		{
 			daoFamilia = new FamiliaWS.FamiliaWSClient();
 			InitializeComponent();
-			dgv = dataGridView1;
-			dataGridView1.AutoGenerateColumns = false;
+			dgv = dgvFamilias;
+			dgvFamilias.AutoGenerateColumns = false;
 			recargarDGV();
 			#region colores de seleccion
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvFamilias.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvFamilias.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvFamilias.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvFamilias.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvFamilias.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvFamilias.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
 
-		private void dgvFamilias_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-		{
-			//Preguntar al profe
-			if (e.StateChanged != DataGridViewElementStates.Selected)
-			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
-				return;
-			}
-			else
-			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
-			}
-
-		}
-
-		public static void eliminar()
+        public static void eliminar()
 		{
 			familiaSeleccionada = (FamiliaWS.familia)dgv.CurrentRow.DataBoundItem;
 			daoFamilia.eliminarFamilia(familiaSeleccionada.idFamilia);
 		}
-
-		private void dgvFamilias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		private void dgvFamilias_SelectionChanged(object sender, EventArgs e)
 		{
-			frmVentanaPrincipal.act.Enabled = false;
-			frmVentanaPrincipal.elim.Enabled = false;
+			if (dgvFamilias.SelectedCells.Count != 1 && dgvFamilias.SelectedCells.Count != 0)
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
+			}
 		}
 
 		public void recargarDGV()
@@ -71,11 +62,13 @@ namespace CrewmanSystem
 			misFamilias = daoFamilia.listarFamilias();
 			if (misFamilias != null)
 			{
-				dataGridView1.DataSource = new BindingList<FamiliaWS.familia>(misFamilias.ToArray());
+				dgvFamilias.DataSource = new BindingList<FamiliaWS.familia>(misFamilias.ToArray());
+				lblNotFound.Visible = false;
 			}
 			else
 			{
-				dataGridView1.DataSource = new BindingList<FamiliaWS.familia>();
+				dgvFamilias.DataSource = new BindingList<FamiliaWS.familia>();
+				lblNotFound.Visible = true;
 			}
 		}
 	

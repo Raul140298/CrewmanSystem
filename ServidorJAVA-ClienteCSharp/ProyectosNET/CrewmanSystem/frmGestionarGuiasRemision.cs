@@ -55,32 +55,35 @@ namespace CrewmanSystem
 			}
             catch (Exception){ }
 		}
-
-        private void dgvGuiasDeRemision_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-        {
-			//Preguntar al profe
-			if (e.StateChanged != DataGridViewElementStates.Selected)
+		private void dgvGuiasDeRemision_SelectionChanged(object sender, EventArgs e)
+		{
+			if (dgvGuiasDeRemision.SelectedCells.Count != 1 && dgvGuiasDeRemision.SelectedCells.Count != 0)
 			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
 				return;
 			}
 			else
 			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
 			}
-			
 		}
-		public void recargarDGV()
+        public void recargarDGV()
 		{
 			misGuias =
 				daoGuiaRemision.listarGuiaRemisions(Program.empleado.idEmpleado, "", "", DateTime.Today.AddMonths(-3),
 				DateTime.Today.AddMonths(3), DateTime.Today.AddMonths(-3), DateTime.Today.AddMonths(3));
 			if (misGuias == null)
+			{
 				dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>();
+				lblNotFound.Visible = true;
+			}
 			else
+			{
 				dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>(misGuias.ToList());
+				lblNotFound.Visible = false;
+			}
 
 			if (Program.empleado.cargo.nombre == "VENDEDOR")
 			{
@@ -89,37 +92,6 @@ namespace CrewmanSystem
 				dgvGuiasDeRemision.Columns["APELLIDO_MATERNO"].Visible = false;
 			}
 		}
-		public void revisarDGV(object source, ElapsedEventArgs e)
-		{
-
-			if (dgvGuiasDeRemision.InvokeRequired)
-			{
-				dgvGuiasDeRemision.Invoke(new Action(() =>
-				{
-					if (dgvGuiasDeRemision.Rows.Count > 0)
-					{
-						int i = ((GuiaRemisionWS.guiaRemision)dgvGuiasDeRemision.CurrentRow.DataBoundItem).idGuiaRemision;
-						int j = dgvGuiasDeRemision.CurrentCell.ColumnIndex;
-
-						recargarDGV();
-
-						int k = 0;
-						foreach (GuiaRemisionWS.guiaRemision g in misGuias)
-						{
-							if (g.idGuiaRemision == i)
-							{
-								i = k;
-								break;
-							}
-							k++;
-						}
-
-						if (k != misGuias.Length)
-							dgvGuiasDeRemision.CurrentCell = dgvGuiasDeRemision[j, i];
-
-					}
-				}));
-			}
-		}
+		
 	}
 }

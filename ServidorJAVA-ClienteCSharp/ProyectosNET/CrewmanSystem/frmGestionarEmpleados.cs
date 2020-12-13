@@ -22,52 +22,43 @@ namespace CrewmanSystem
 		{
 			daoEmpleado = new EmpleadoWS.EmpleadoWSClient();
 			InitializeComponent();
-			dgv = dataGridView1;
-			dataGridView1.AutoGenerateColumns = false;
+			dgv = dgvEmpleados;
+			dgvEmpleados.AutoGenerateColumns = false;
 			recargarDGV();
 			#region colores de seleccion
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvEmpleados.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvEmpleados.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvEmpleados.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvEmpleados.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvEmpleados.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvEmpleados.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
-
-		private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void dgvEmpleados_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
 		{
-			EmpleadoWS.empleado empleado = dataGridView1.Rows[e.RowIndex].DataBoundItem
+			EmpleadoWS.empleado empleado = dgvEmpleados.Rows[e.RowIndex].DataBoundItem
 			as EmpleadoWS.empleado;
 
-			dataGridView1.Rows[e.RowIndex].Cells["ZONA"].Value = empleado.zona.nombre;
+			dgvEmpleados.Rows[e.RowIndex].Cells["ZONA"].Value = empleado.zona.nombre;
 		}
-
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		private void dgvEmpleados_SelectionChanged(object sender, EventArgs e)
 		{
-			frmVentanaPrincipal.act.Enabled = false;
-			frmVentanaPrincipal.elim.Enabled = false;
-		}
-
-		private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-		{
-			//Preguntar al profe
-			if (e.StateChanged != DataGridViewElementStates.Selected)
+			if (dgvEmpleados.SelectedCells.Count != 1 && dgvEmpleados.SelectedCells.Count != 0)
 			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
 				return;
 			}
 			else
 			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
 			}
 		}
 
-		public static void eliminar()
+        public static void eliminar()
 		{
 			empleadoSeleccionado = (EmpleadoWS.empleado)dgv.CurrentRow.DataBoundItem;
 			daoEmpleado.eliminarEmpleado(empleadoSeleccionado.idEmpleado);
@@ -77,40 +68,16 @@ namespace CrewmanSystem
 			misEmpleados = daoEmpleado.listarPorJefeVentas(Program.empleado.idEmpleado, "", "", "");
 
 			if (misEmpleados != null)
-				dataGridView1.DataSource = new BindingList<EmpleadoWS.empleado>(misEmpleados.ToArray());
-			else
-				dataGridView1.DataSource = new BindingList<EmpleadoWS.empleado>();
-		}
-		public void revisarDGV(object source, ElapsedEventArgs e)
-		{
-
-			if (dataGridView1.InvokeRequired)
 			{
-				dataGridView1.Invoke(new Action(() =>
-				{
-					if (dataGridView1.Rows.Count > 0)
-					{
-						int i = ((EmpleadoWS.empleado)dataGridView1.CurrentRow.DataBoundItem).idEmpleado;
-						int j = dataGridView1.CurrentCell.ColumnIndex;
-
-						recargarDGV();
-
-						int k = 0;
-						foreach (EmpleadoWS.empleado f in misEmpleados)
-						{
-							if (f.idEmpleado == i)
-							{
-								i = k;
-								break;
-							}
-							k++;
-						}
-
-						if (k != misEmpleados.Length)
-							dataGridView1.CurrentCell = dataGridView1[j, i];
-					}
-				}));
+				dgvEmpleados.DataSource = new BindingList<EmpleadoWS.empleado>(misEmpleados.ToArray());
+				lblNotFound.Visible = false;
+			}
+			else
+			{
+				dgvEmpleados.DataSource = new BindingList<EmpleadoWS.empleado>();
+				lblNotFound.Visible = true;
 			}
 		}
+		
 	}
 }

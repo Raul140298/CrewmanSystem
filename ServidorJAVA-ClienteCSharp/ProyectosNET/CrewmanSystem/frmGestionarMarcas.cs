@@ -22,41 +22,33 @@ namespace CrewmanSystem
 		{
 			daoMarca = new MarcaWS.MarcaWSClient();
 			InitializeComponent();
-			dgv = dataGridView1;
-			dataGridView1.AutoGenerateColumns = false;
+			dgv = dgvMarcas;
+			dgvMarcas.AutoGenerateColumns = false;
 			recargarDGV();
 
 			#region colores de seleccion
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvMarcas.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvMarcas.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvMarcas.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvMarcas.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvMarcas.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvMarcas.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
-
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		private void dgvMarcas_SelectionChanged(object sender, EventArgs e)
 		{
-			frmVentanaPrincipal.act.Enabled = false;
-			frmVentanaPrincipal.elim.Enabled = false;
-		}
-
-		private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-		{
-			//Preguntar al profe
-			if (e.StateChanged != DataGridViewElementStates.Selected)
+			if (dgvMarcas.SelectedCells.Count != 1 && dgvMarcas.SelectedCells.Count != 0)
 			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
 				return;
 			}
 			else
 			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
 			}
 		}
 
@@ -71,44 +63,14 @@ namespace CrewmanSystem
 			misMarcas = daoMarca.listarMarcas();
 			if (misMarcas != null)
 			{
-				dataGridView1.DataSource = new BindingList<MarcaWS.marca>(misMarcas.ToArray());
+				dgvMarcas.DataSource = new BindingList<MarcaWS.marca>(misMarcas.ToArray());
 			}
 			else
 			{
-				dataGridView1.DataSource = new BindingList<MarcaWS.marca>();
+				dgvMarcas.DataSource = new BindingList<MarcaWS.marca>();
 
 			}
 		}
-		public void revisarDGV(object source, ElapsedEventArgs e)
-		{
-			
-			if (dataGridView1.InvokeRequired)
-			{
-				dataGridView1.Invoke(new Action(() =>
-				{
-					if (dataGridView1.Rows.Count > 0)
-					{
-						int i = ((MarcaWS.marca)dataGridView1.CurrentRow.DataBoundItem).idMarca;
-						int j = dgv.CurrentCell.ColumnIndex;
-
-						recargarDGV();
-
-						int k = 0;
-						foreach (MarcaWS.marca m in misMarcas)
-						{
-							if (m.idMarca == i)
-							{
-								i = k;
-								break;
-							}
-							k++;
-						}
-
-						if (k != misMarcas.Length)
-							dgv.CurrentCell = dgv[j, i];
-					}
-				}));
-			}
-		}
+		
 	}
 }
