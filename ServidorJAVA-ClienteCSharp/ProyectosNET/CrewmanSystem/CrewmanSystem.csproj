@@ -777,6 +777,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\ReporteWS\CrewmanSystem.ReporteWS.generarReportePedidoFinalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Resources\segmentar.png" />
     <None Include="Resources\ruta.png" />
     <None Include="Resources\promocion.png" />

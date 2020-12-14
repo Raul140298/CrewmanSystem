@@ -4,6 +4,8 @@
   <xs:element name="generarReporteMejoresClientesResponse" type="tns:generarReporteMejoresClientesResponse" />
   <xs:element name="generarReporteMejoresEmpleados" type="tns:generarReporteMejoresEmpleados" />
   <xs:element name="generarReporteMejoresEmpleadosResponse" type="tns:generarReporteMejoresEmpleadosResponse" />
+  <xs:element name="generarReportePedidoFinal" type="tns:generarReportePedidoFinal" />
+  <xs:element name="generarReportePedidoFinalResponse" type="tns:generarReportePedidoFinalResponse" />
   <xs:element name="generarReportePedidos" type="tns:generarReportePedidos" />
   <xs:element name="generarReportePedidosResponse" type="tns:generarReportePedidosResponse" />
   <xs:element name="generarReportePedidosXCliente" type="tns:generarReportePedidosXCliente" />
@@ -14,6 +16,17 @@
   <xs:element name="generarReporteQuejasResponse" type="tns:generarReporteQuejasResponse" />
   <xs:element name="generarReporteVisitas" type="tns:generarReporteVisitas" />
   <xs:element name="generarReporteVisitasResponse" type="tns:generarReporteVisitasResponse" />
+  <xs:complexType name="generarReportePedidoFinal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="idPedido" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReportePedidoFinalResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="generarReportePedidos">
     <xs:sequence>
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
@@ -25,17 +38,6 @@
       <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="generarReportePromocion">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-      <xs:element name="idPromocion" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="generarReportePromocionResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="generarReporteMejoresClientes">
     <xs:sequence>
       <xs:element name="idJefe" type="xs:int" />
@@ -43,6 +45,17 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="generarReporteMejoresClientesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReportePromocion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="idPromocion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReportePromocionResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
     </xs:sequence>

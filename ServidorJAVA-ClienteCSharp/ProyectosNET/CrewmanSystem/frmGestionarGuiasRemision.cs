@@ -94,7 +94,7 @@ namespace CrewmanSystem
 			}
 		}
 
-        private void dgvGuiasDeRemision_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvGuiasDeRemision_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 			if (e.ColumnIndex == 0)
 			{
@@ -102,8 +102,10 @@ namespace CrewmanSystem
 				{
 					try
 					{
-						//byte[] arreglo = daoReporte.generarGuiaDeRemision(((GuiaRemisionWS.guiaRemision)dgvGuiasDeRemision.CurrentRow.DataBoundItem).pedido.idPedido);
-						//File.WriteAllBytes(sfdGuia.FileName, arreglo);
+						ReporteWS.ReporteWSClient daoReporte = new ReporteWS.ReporteWSClient();
+						string nombre = Program.empleado.apellidoPaterno + " " + Program.empleado.apellidoPaterno + ", " + Program.empleado.nombre;
+						byte[] arreglo = daoReporte.generarReportePedidoFinal(nombre, ((GuiaRemisionWS.guiaRemision)dgvGuiasDeRemision.CurrentRow.DataBoundItem).pedido.idPedido);
+						File.WriteAllBytes(sfdGuia.FileName, arreglo);
 						MessageBox.Show("El reporte fue generado con exito", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 					}
 					catch (Exception)
