@@ -71,6 +71,7 @@ namespace CrewmanSystem
                     }
                     else
                     {
+                        ((frmGestionarMarcas)Program.pantallas[Program.pantallas.Count - 2].Formulario).recargarDGV();
                         MessageBox.Show("Se insertó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
@@ -84,6 +85,7 @@ namespace CrewmanSystem
                     }
                     else
                     {
+                        ((frmGestionarMarcas)Program.pantallas[Program.pantallas.Count - 2].Formulario).recargarDGV();
                         MessageBox.Show("Se actualizó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
