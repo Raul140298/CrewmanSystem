@@ -94,7 +94,7 @@
             // 
             this.lblZona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblZona.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZona.Location = new System.Drawing.Point(43, 124);
+            this.lblZona.Location = new System.Drawing.Point(43, 120);
             this.lblZona.Name = "lblZona";
             this.lblZona.Size = new System.Drawing.Size(155, 22);
             this.lblZona.TabIndex = 54;
@@ -108,7 +108,7 @@
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.Location = new System.Drawing.Point(509, 77);
+            this.btnSeleccionar.Location = new System.Drawing.Point(509, 76);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(160, 30);
             this.btnSeleccionar.TabIndex = 53;

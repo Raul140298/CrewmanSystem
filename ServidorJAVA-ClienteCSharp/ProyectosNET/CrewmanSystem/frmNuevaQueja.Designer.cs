@@ -44,14 +44,16 @@ namespace CrewmanSystem
             this.txtIdFactura.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtIdFactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdFactura.Enabled = false;
-            this.txtIdFactura.Location = new System.Drawing.Point(231, 39);
+            this.txtIdFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdFactura.Location = new System.Drawing.Point(231, 42);
             this.txtIdFactura.Name = "txtIdFactura";
-            this.txtIdFactura.Size = new System.Drawing.Size(97, 15);
+            this.txtIdFactura.Size = new System.Drawing.Size(97, 19);
             this.txtIdFactura.TabIndex = 127;
             // 
             // label9
             // 
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(137, 39);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(88, 22);
@@ -64,14 +66,16 @@ namespace CrewmanSystem
             this.txtIdPedido.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtIdPedido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdPedido.Enabled = false;
-            this.txtIdPedido.Location = new System.Drawing.Point(231, 77);
+            this.txtIdPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdPedido.Location = new System.Drawing.Point(231, 79);
             this.txtIdPedido.Name = "txtIdPedido";
-            this.txtIdPedido.Size = new System.Drawing.Size(97, 15);
+            this.txtIdPedido.Size = new System.Drawing.Size(97, 19);
             this.txtIdPedido.TabIndex = 121;
             // 
             // label3
             // 
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(47, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(178, 22);
@@ -82,7 +86,8 @@ namespace CrewmanSystem
             // txtObservacion
             // 
             this.txtObservacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtObservacion.Location = new System.Drawing.Point(231, 120);
+            this.txtObservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservacion.Location = new System.Drawing.Point(231, 121);
             this.txtObservacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtObservacion.Multiline = true;
             this.txtObservacion.Name = "txtObservacion";
@@ -109,6 +114,7 @@ namespace CrewmanSystem
             // label1
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(47, 76);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(178, 22);
@@ -121,8 +127,9 @@ namespace CrewmanSystem
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(231, 282);
+            this.btnGuardar.Location = new System.Drawing.Point(231, 289);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(154, 30);
             this.btnGuardar.TabIndex = 108;

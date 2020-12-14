@@ -58,6 +58,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblNotFound);
             this.panel1.Controls.Add(this.dgvPromociones);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -94,7 +95,7 @@
             this.dgvPromociones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPromociones.EnableHeadersVisualStyles = false;
             this.dgvPromociones.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.dgvPromociones.Location = new System.Drawing.Point(0, 164);
+            this.dgvPromociones.Location = new System.Drawing.Point(0, 189);
             this.dgvPromociones.MultiSelect = false;
             this.dgvPromociones.Name = "dgvPromociones";
             this.dgvPromociones.ReadOnly = true;
@@ -114,7 +115,7 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvPromociones.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPromociones.RowTemplate.Height = 24;
-            this.dgvPromociones.Size = new System.Drawing.Size(800, 368);
+            this.dgvPromociones.Size = new System.Drawing.Size(800, 343);
             this.dgvPromociones.TabIndex = 47;
             this.dgvPromociones.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPromociones_CellContentDoubleClick_1);
             this.dgvPromociones.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPromociones_CellFormatting);
@@ -183,14 +184,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 164);
+            this.panel2.Size = new System.Drawing.Size(800, 189);
             this.panel2.TabIndex = 46;
             // 
             // label2
             // 
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(0, 114);
+            this.label2.Location = new System.Drawing.Point(13, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 22);
             this.label2.TabIndex = 61;
@@ -201,7 +202,7 @@
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 69);
+            this.label1.Location = new System.Drawing.Point(13, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 22);
             this.label1.TabIndex = 60;
@@ -212,7 +213,7 @@
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(3, 24);
+            this.lblID.Location = new System.Drawing.Point(16, 41);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(163, 22);
             this.lblID.TabIndex = 59;
@@ -226,7 +227,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(531, 20);
+            this.btnBuscar.Location = new System.Drawing.Point(549, 39);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(144, 30);
             this.btnBuscar.TabIndex = 58;
@@ -237,7 +238,7 @@
             // dtpFechaFIn
             // 
             this.dtpFechaFIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaFIn.Location = new System.Drawing.Point(172, 114);
+            this.dtpFechaFIn.Location = new System.Drawing.Point(185, 126);
             this.dtpFechaFIn.Name = "dtpFechaFIn";
             this.dtpFechaFIn.Size = new System.Drawing.Size(320, 26);
             this.dtpFechaFIn.TabIndex = 56;
@@ -245,7 +246,7 @@
             // dtpFechaInicio
             // 
             this.dtpFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaInicio.Location = new System.Drawing.Point(172, 69);
+            this.dtpFechaInicio.Location = new System.Drawing.Point(185, 82);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(320, 26);
             this.dtpFechaInicio.TabIndex = 55;
@@ -254,7 +255,7 @@
             // 
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(172, 25);
+            this.txtNombre.Location = new System.Drawing.Point(185, 44);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(320, 19);
             this.txtNombre.TabIndex = 46;
@@ -264,7 +265,7 @@
             this.lblNotFound.AutoSize = true;
             this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotFound.Location = new System.Drawing.Point(134, 256);
+            this.lblNotFound.Location = new System.Drawing.Point(229, 254);
             this.lblNotFound.Name = "lblNotFound";
             this.lblNotFound.Size = new System.Drawing.Size(230, 20);
             this.lblNotFound.TabIndex = 54;
@@ -277,17 +278,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 532);
-            this.Controls.Add(this.lblNotFound);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBuscarPromocion";
             this.Text = "Búsqueda de Promociones";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPromociones)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
 		}
 

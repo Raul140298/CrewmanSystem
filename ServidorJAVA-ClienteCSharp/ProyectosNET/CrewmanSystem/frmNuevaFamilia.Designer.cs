@@ -70,7 +70,7 @@
             // 
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(6, 80);
+            this.txtDescripcion.Location = new System.Drawing.Point(6, 82);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(280, 19);
             this.txtDescripcion.TabIndex = 18;
@@ -81,7 +81,7 @@
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(6, 39);
+            this.txtId.Location = new System.Drawing.Point(6, 41);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(77, 19);
             this.txtId.TabIndex = 17;

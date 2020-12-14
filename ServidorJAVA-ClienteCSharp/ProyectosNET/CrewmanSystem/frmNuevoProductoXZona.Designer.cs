@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbZona = new System.Windows.Forms.GroupBox();
             this.cboZona = new System.Windows.Forms.ComboBox();
             this.lblNombreZona = new System.Windows.Forms.Label();
@@ -115,7 +115,7 @@
             // 
             this.txtNombreProducto.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtNombreProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombreProducto.Location = new System.Drawing.Point(176, 42);
+            this.txtNombreProducto.Location = new System.Drawing.Point(176, 45);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(231, 19);
             this.txtNombreProducto.TabIndex = 1;
@@ -164,7 +164,7 @@
             this.txtUnidades.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtUnidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUnidades.Enabled = false;
-            this.txtUnidades.Location = new System.Drawing.Point(387, 78);
+            this.txtUnidades.Location = new System.Drawing.Point(387, 81);
             this.txtUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUnidades.Name = "txtUnidades";
             this.txtUnidades.Size = new System.Drawing.Size(90, 19);
@@ -195,7 +195,7 @@
             this.txtCantUnidades.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtCantUnidades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCantUnidades.Enabled = false;
-            this.txtCantUnidades.Location = new System.Drawing.Point(176, 78);
+            this.txtCantUnidades.Location = new System.Drawing.Point(176, 81);
             this.txtCantUnidades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantUnidades.Name = "txtCantUnidades";
             this.txtCantUnidades.Size = new System.Drawing.Size(81, 19);
@@ -216,7 +216,7 @@
             this.txtPrecioSugerido.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtPrecioSugerido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrecioSugerido.Enabled = false;
-            this.txtPrecioSugerido.Location = new System.Drawing.Point(176, 116);
+            this.txtPrecioSugerido.Location = new System.Drawing.Point(176, 120);
             this.txtPrecioSugerido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecioSugerido.Name = "txtPrecioSugerido";
             this.txtPrecioSugerido.Size = new System.Drawing.Size(81, 19);
@@ -228,7 +228,7 @@
             this.btnRemove.FlatAppearance.BorderSize = 0;
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnRemove.Location = new System.Drawing.Point(544, 115);
+            this.btnRemove.Location = new System.Drawing.Point(544, 117);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(40, 23);
             this.btnRemove.TabIndex = 9;
@@ -242,7 +242,7 @@
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAdd.Location = new System.Drawing.Point(498, 115);
+            this.btnAdd.Location = new System.Drawing.Point(498, 116);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(40, 23);
             this.btnAdd.TabIndex = 8;
@@ -253,7 +253,7 @@
             // txtPrecioReal
             // 
             this.txtPrecioReal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPrecioReal.Location = new System.Drawing.Point(387, 116);
+            this.txtPrecioReal.Location = new System.Drawing.Point(387, 120);
             this.txtPrecioReal.Name = "txtPrecioReal";
             this.txtPrecioReal.Size = new System.Drawing.Size(90, 19);
             this.txtPrecioReal.TabIndex = 7;
@@ -323,14 +323,14 @@
             this.dgvProducto.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProducto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(4)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(4)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProducto.ColumnHeadersHeight = 30;
             this.dgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvProducto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -355,8 +355,8 @@
             // 
             // NRO
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.NRO.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.NRO.DefaultCellStyle = dataGridViewCellStyle2;
             this.NRO.HeaderText = "Nro";
             this.NRO.MinimumWidth = 6;
             this.NRO.Name = "NRO";
@@ -373,10 +373,10 @@
             // 
             // CANT_UNIDADES
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "N2";
-            dataGridViewCellStyle7.NullValue = null;
-            this.CANT_UNIDADES.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.CANT_UNIDADES.DefaultCellStyle = dataGridViewCellStyle3;
             this.CANT_UNIDADES.HeaderText = "Contenido Neto";
             this.CANT_UNIDADES.MinimumWidth = 6;
             this.CANT_UNIDADES.Name = "CANT_UNIDADES";
@@ -394,10 +394,10 @@
             // PRECIO_REAL
             // 
             this.PRECIO_REAL.DataPropertyName = "precioReal";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Format = "N2";
-            dataGridViewCellStyle8.NullValue = null;
-            this.PRECIO_REAL.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.PRECIO_REAL.DefaultCellStyle = dataGridViewCellStyle4;
             this.PRECIO_REAL.HeaderText = "Precio Real";
             this.PRECIO_REAL.MinimumWidth = 6;
             this.PRECIO_REAL.Name = "PRECIO_REAL";

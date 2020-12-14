@@ -141,7 +141,7 @@
             // txtSumaVentas
             // 
             this.txtSumaVentas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSumaVentas.Location = new System.Drawing.Point(171, 41);
+            this.txtSumaVentas.Location = new System.Drawing.Point(171, 43);
             this.txtSumaVentas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSumaVentas.Name = "txtSumaVentas";
             this.txtSumaVentas.Size = new System.Drawing.Size(150, 19);
@@ -181,7 +181,7 @@
             // txtObjetivoVentas
             // 
             this.txtObjetivoVentas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtObjetivoVentas.Location = new System.Drawing.Point(171, 73);
+            this.txtObjetivoVentas.Location = new System.Drawing.Point(171, 75);
             this.txtObjetivoVentas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtObjetivoVentas.Name = "txtObjetivoVentas";
             this.txtObjetivoVentas.Size = new System.Drawing.Size(150, 19);
@@ -202,7 +202,7 @@
             this.cboZona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboZona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboZona.FormattingEnabled = true;
-            this.cboZona.Location = new System.Drawing.Point(171, 150);
+            this.cboZona.Location = new System.Drawing.Point(169, 150);
             this.cboZona.Margin = new System.Windows.Forms.Padding(4);
             this.cboZona.Name = "cboZona";
             this.cboZona.Size = new System.Drawing.Size(222, 28);
@@ -238,7 +238,7 @@
             // txtTelefono1
             // 
             this.txtTelefono1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTelefono1.Location = new System.Drawing.Point(171, 43);
+            this.txtTelefono1.Location = new System.Drawing.Point(171, 45);
             this.txtTelefono1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefono1.Name = "txtTelefono1";
             this.txtTelefono1.Size = new System.Drawing.Size(176, 19);
@@ -247,7 +247,7 @@
             // txtTelefono2
             // 
             this.txtTelefono2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTelefono2.Location = new System.Drawing.Point(171, 77);
+            this.txtTelefono2.Location = new System.Drawing.Point(171, 79);
             this.txtTelefono2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefono2.Name = "txtTelefono2";
             this.txtTelefono2.Size = new System.Drawing.Size(176, 19);
@@ -276,7 +276,7 @@
             // txtCorreo
             // 
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCorreo.Location = new System.Drawing.Point(171, 112);
+            this.txtCorreo.Location = new System.Drawing.Point(171, 114);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(330, 19);
@@ -311,7 +311,7 @@
             this.txtID.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtID.Enabled = false;
-            this.txtID.Location = new System.Drawing.Point(171, 33);
+            this.txtID.Location = new System.Drawing.Point(171, 35);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(81, 19);
@@ -320,7 +320,7 @@
             // txtNombre
             // 
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombre.Location = new System.Drawing.Point(171, 106);
+            this.txtNombre.Location = new System.Drawing.Point(171, 108);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(176, 19);
@@ -329,7 +329,7 @@
             // txtApMaterno
             // 
             this.txtApMaterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtApMaterno.Location = new System.Drawing.Point(171, 178);
+            this.txtApMaterno.Location = new System.Drawing.Point(171, 180);
             this.txtApMaterno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApMaterno.Name = "txtApMaterno";
             this.txtApMaterno.Size = new System.Drawing.Size(176, 19);
@@ -338,7 +338,7 @@
             // txtDNI
             // 
             this.txtDNI.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDNI.Location = new System.Drawing.Point(171, 68);
+            this.txtDNI.Location = new System.Drawing.Point(171, 70);
             this.txtDNI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(176, 19);
@@ -347,7 +347,7 @@
             // txtApPaterno
             // 
             this.txtApPaterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtApPaterno.Location = new System.Drawing.Point(171, 142);
+            this.txtApPaterno.Location = new System.Drawing.Point(171, 144);
             this.txtApPaterno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtApPaterno.Name = "txtApPaterno";
             this.txtApPaterno.Size = new System.Drawing.Size(176, 19);

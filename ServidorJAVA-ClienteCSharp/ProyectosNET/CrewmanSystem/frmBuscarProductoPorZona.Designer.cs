@@ -246,7 +246,7 @@
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.Location = new System.Drawing.Point(671, 68);
+            this.btnSeleccionar.Location = new System.Drawing.Point(680, 68);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(140, 30);
             this.btnSeleccionar.TabIndex = 63;
@@ -269,7 +269,7 @@
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(358, 34);
+            this.label4.Location = new System.Drawing.Point(363, 34);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 22);
             this.label4.TabIndex = 61;
@@ -291,7 +291,7 @@
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(361, 72);
+            this.lblID.Location = new System.Drawing.Point(366, 72);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(97, 22);
             this.lblID.TabIndex = 59;
@@ -305,7 +305,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(671, 30);
+            this.btnBuscar.Location = new System.Drawing.Point(680, 30);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(140, 30);
             this.btnBuscar.TabIndex = 54;
@@ -317,7 +317,7 @@
             // 
             this.txtSubfamilia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSubfamilia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubfamilia.Location = new System.Drawing.Point(464, 73);
+            this.txtSubfamilia.Location = new System.Drawing.Point(469, 75);
             this.txtSubfamilia.Name = "txtSubfamilia";
             this.txtSubfamilia.Size = new System.Drawing.Size(176, 19);
             this.txtSubfamilia.TabIndex = 53;
@@ -326,7 +326,7 @@
             // 
             this.txtFamilia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFamilia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFamilia.Location = new System.Drawing.Point(159, 73);
+            this.txtFamilia.Location = new System.Drawing.Point(159, 75);
             this.txtFamilia.Name = "txtFamilia";
             this.txtFamilia.Size = new System.Drawing.Size(176, 19);
             this.txtFamilia.TabIndex = 51;
@@ -335,7 +335,7 @@
             // 
             this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(464, 37);
+            this.txtMarca.Location = new System.Drawing.Point(469, 37);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(176, 19);
             this.txtMarca.TabIndex = 49;
@@ -344,7 +344,7 @@
             // 
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(159, 35);
+            this.txtNombre.Location = new System.Drawing.Point(159, 37);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(176, 19);
             this.txtNombre.TabIndex = 46;
