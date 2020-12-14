@@ -104,7 +104,7 @@
             this.txtStockReservado.Location = new System.Drawing.Point(209, 352);
             this.txtStockReservado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStockReservado.Name = "txtStockReservado";
-            this.txtStockReservado.Size = new System.Drawing.Size(280, 19);
+            this.txtStockReservado.Size = new System.Drawing.Size(76, 19);
             this.txtStockReservado.TabIndex = 57;
             // 
             // label7
@@ -136,7 +136,7 @@
             this.txtStock.Location = new System.Drawing.Point(209, 316);
             this.txtStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(280, 19);
+            this.txtStock.Size = new System.Drawing.Size(76, 19);
             this.txtStock.TabIndex = 56;
             // 
             // label5
@@ -224,7 +224,7 @@
             this.txtPrecioSugerido.Location = new System.Drawing.Point(209, 278);
             this.txtPrecioSugerido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecioSugerido.Name = "txtPrecioSugerido";
-            this.txtPrecioSugerido.Size = new System.Drawing.Size(280, 19);
+            this.txtPrecioSugerido.Size = new System.Drawing.Size(76, 19);
             this.txtPrecioSugerido.TabIndex = 51;
             // 
             // label2
@@ -245,7 +245,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(209, 391);
+            this.btnGuardar.Location = new System.Drawing.Point(209, 392);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(160, 30);

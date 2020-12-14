@@ -108,7 +108,7 @@ namespace CrewmanSystem
                                 return;
                             }
                         }
-                        if(textBox == txtStock)
+                        if(textBox == txtStock || textBox == txtCantidad)
                         {
                             if (!textBox.Text.All(Char.IsDigit))
                             {
@@ -130,7 +130,24 @@ namespace CrewmanSystem
                     }
                 }
             }
-            //AQUI VA EL INSERTAR
+
+            if (Convert.ToInt32(txtCantidad.Text) <= 0)
+            {
+                MessageBox.Show("La cantidad de medida debe ser mayor a 0","Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (Convert.ToInt32(txtStock.Text) <= 0)
+            {
+                MessageBox.Show("El stock del producto debe ser mayor a 0", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (Convert.ToDecimal(txtPrecioSugerido.Text) <= 0)
+            {
+                MessageBox.Show("El precio del producto debe ser mayor a 0", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
             frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
             if (formInsertar.ShowDialog() == DialogResult.OK)
             {

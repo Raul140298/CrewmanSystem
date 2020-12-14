@@ -143,11 +143,12 @@ namespace CrewmanSystem
             }
             catch (Exception)
             {
-                MessageBox.Show("La cantidad ingresada no es valida", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("La cantidad de productos deben ser números", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (Convert.ToInt32(txtCantidad.Text)<=0)
             {
+                MessageBox.Show("La cantidad de productos deben ser mayores a 0", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             foreach (LineaPedidoWS.lineaPedido lp in lineas)

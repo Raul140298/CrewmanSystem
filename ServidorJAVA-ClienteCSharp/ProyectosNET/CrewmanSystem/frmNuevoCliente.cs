@@ -16,7 +16,6 @@ namespace CrewmanSystem
         PersonaContactoWS.PersonaContactoWSClient daoPersonaContacto = new PersonaContactoWS.PersonaContactoWSClient();
         ZonaWS.ZonaWSClient daoZona = new ZonaWS.ZonaWSClient();
         
-
 		public frmNuevoCliente()
 		{
 			InitializeComponent();
@@ -149,7 +148,6 @@ namespace CrewmanSystem
                     }
                 }
             }
-            //AQUI VA EL INSERTAR
             frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
             if (formInsertar.ShowDialog() == DialogResult.OK)
             {

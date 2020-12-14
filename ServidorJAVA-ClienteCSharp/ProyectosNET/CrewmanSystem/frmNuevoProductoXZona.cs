@@ -75,7 +75,7 @@ namespace CrewmanSystem
                     "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            //COPIAR LNEAS 135 DE NUEVA PROMOCION
+
             frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
             if (formInsertar.ShowDialog() == DialogResult.OK)
             {
@@ -119,7 +119,13 @@ namespace CrewmanSystem
                     "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            
+            if (Convert.ToDouble(txtPrecioReal.Text) <= 0)
+            {
+                MessageBox.Show("El precio del producto debe ser mayor a 0",
+                    "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             foreach (ProductoXZonaWS.productoXZona pXz in misProductoXZona)
             {
                 if (pXz.producto.idProducto == miProducto.idProducto) return;

@@ -146,18 +146,6 @@ namespace CrewmanSystem
                 return;
             }
 
-            if (Convert.ToInt32(txtDescuento) <= 0)
-            {
-                MessageBox.Show("Descuento invalido", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (Convert.ToInt32(txtStock) <= 0)
-            {
-                MessageBox.Show("Stock invalido", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             if (misPromocionXProducto == null || misPromocionXProducto.Count==0)
             {
                 MessageBox.Show("Falta agregar los productos de la promocion",
@@ -246,6 +234,16 @@ namespace CrewmanSystem
                 MessageBox.Show("Los datos de " +
                     txtStock.Name.Substring(3) + " solo pueden contener dígitos", 
                     "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (Convert.ToInt32(txtDescuento) <= 0)
+            {
+                MessageBox.Show("Descuento invalido", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (Convert.ToInt32(txtStock) <= 0)
+            {
+                MessageBox.Show("Stock invalido", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
