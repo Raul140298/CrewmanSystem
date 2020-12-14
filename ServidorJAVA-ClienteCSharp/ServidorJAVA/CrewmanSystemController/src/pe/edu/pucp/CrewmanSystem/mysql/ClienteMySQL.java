@@ -19,6 +19,7 @@ import pe.edu.pucp.CrewmanSystem.model.ClienteXZona;
 import pe.edu.pucp.CrewmanSystem.model.Empleado;
 import pe.edu.pucp.CrewmanSystem.model.LineaCredito;
 import pe.edu.pucp.CrewmanSystem.model.PersonaContacto;
+import pe.edu.pucp.CrewmanSystem.model.Visita;
 import pe.edu.pucp.CrewmanSystem.model.Zona;
 
 public class ClienteMySQL implements ClienteDAO{
@@ -341,6 +342,7 @@ public class ClienteMySQL implements ClienteDAO{
     
     @Override
     public int segmentarClientes(){
+        ArrayList<Empleado> empleados = new ArrayList<>();
         double menor=999999;
         double mayor=0;
         double monto;
@@ -403,6 +405,40 @@ public class ClienteMySQL implements ClienteDAO{
             sql ="{ call REINICIAR_MONTOS ()}";
             cs = con.prepareCall(sql);
             resultado = cs.executeUpdate();
+            sql ="{ call LISTAR_TODOS_EMPLEADOS ()}";
+            cs = con.prepareCall(sql);
+            resultado = cs.executeUpdate();
+            rs = cs.getResultSet();
+            while(rs.next()){
+                Empleado empleado = new Empleado();
+                empleado.setIdEmpleado(rs.getInt("ID_EMPLEADO"));
+                empleado.getCartera().setIdCartera(rs.getInt("ID_CARTERA"));
+                empleados.add(empleado);
+            }
+            for(Empleado e : empleados){
+                sql ="{ call LISTAR_TODOS_CLIENTES_POR_CARTERA (?)}";
+                cs = con.prepareCall(sql);
+                cs.setInt("_ID_CARTERA", e.getCartera().getIdCartera());
+                resultado = cs.executeUpdate();
+                rs = cs.getResultSet();
+                while(rs.next()){
+                    Visita visita = new Visita();
+                    visita.getCliente().setIdCliente(rs.getInt("ID_CLIENTE"));
+                    e.getCartera().getListaVisita().add(visita);
+                }
+            }
+            for(Empleado e : empleados){
+                for(Visita v : e.getCartera().getListaVisita()){
+                    sql ="{ call INSERTAR_CLIENTECARTERA (?,?,?,?,?)}";
+                    cs = con.prepareCall(sql);
+                    cs.setInt("_ID_CARTERA", e.getCartera().getIdCartera());
+                    cs.setInt("_ID_CLIENTE", v.getCliente().getIdCliente());
+                    cs.setInt("_ID_EMPLEADO", e.getIdEmpleado());
+                    cs.setDate("_FECHA_REGISTRO", new java.sql.Date(new Date().getTime()));
+                    cs.setBoolean("_ESTADO", false);
+                    resultado = cs.executeUpdate();
+                }
+            }
             con.commit();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
