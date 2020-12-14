@@ -343,6 +343,7 @@ public class ClienteMySQL implements ClienteDAO{
     @Override
     public int segmentarClientes(){
         ArrayList<Empleado> empleados = new ArrayList<>();
+        Calendar vacio = new GregorianCalendar(1999,1,1);
         double menor=999999;
         double mayor=0;
         double monto;
@@ -434,7 +435,7 @@ public class ClienteMySQL implements ClienteDAO{
                     cs.setInt("_ID_CARTERA", e.getCartera().getIdCartera());
                     cs.setInt("_ID_CLIENTE", v.getCliente().getIdCliente());
                     cs.setInt("_ID_EMPLEADO", e.getIdEmpleado());
-                    cs.setDate("_FECHA_REGISTRO", new java.sql.Date(new Date().getTime()));
+                    cs.setDate("_FECHA_REGISTRO", new java.sql.Date(vacio.getTimeInMillis()));
                     cs.setBoolean("_ESTADO", false);
                     resultado = cs.executeUpdate();
                 }

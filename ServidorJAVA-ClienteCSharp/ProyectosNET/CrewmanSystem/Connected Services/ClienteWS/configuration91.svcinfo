@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="GKsiQ3Eig7na/Kl2I73DXcK8k+SXq2ps6tdq7UNewPg=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Avt6LglZf3w7qb2Dgt83TeXzp436+jcyQpHXy02dhZw=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="ClienteWSPortBinding1">
       <properties>
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="ClienteWSPort1" contract="ClienteWS.ClienteWS" bindingType="basicHttpBinding" address="http://54.80.91.225:8080/CrewmanSystemServices/ClienteWS" bindingConfiguration="ClienteWSPortBinding1">
+    <endpoint name="ClienteWSPort" contract="ClienteWS.ClienteWS" bindingType="basicHttpBinding" address="http://54.80.91.225:8080/CrewmanSystemServices/ClienteWS" bindingConfiguration="ClienteWSPortBinding1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://54.80.91.225:8080/CrewmanSystemServices/ClienteWS</serializedValue>
@@ -187,7 +187,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ClienteWSPort1</serializedValue>
+          <serializedValue>ClienteWSPort</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
