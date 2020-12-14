@@ -977,7 +977,7 @@ namespace CrewmanSystem
 			modificaPagina();
 		}
 
-		private void btnRecarga_Click(object sender, EventArgs e)
+		public void btnRecarga_Click(object sender, EventArgs e)
 		{
 			if (ishome == true)
 			{
@@ -1032,6 +1032,6 @@ namespace CrewmanSystem
 		}
 
 
-        #endregion
-    }
+		#endregion
+	}
 }
