@@ -18,6 +18,7 @@ namespace CrewmanSystem
 		public static ClienteWS.cliente clienteSeleccionado;
 		public static DataGridView dgv;
 		private ClienteWS.cliente[] misClientes;
+
 		public frmGestionarClientes()
 		{
 			daoCliente = new ClienteWS.ClienteWSClient();

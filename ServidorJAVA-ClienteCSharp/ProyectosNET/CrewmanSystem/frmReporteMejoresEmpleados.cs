@@ -27,7 +27,8 @@ namespace CrewmanSystem
             {
                 try
                 {
-                    byte[] arreglo = daoReporte.generarReporteMejoresEmpleados();
+                    string nombre = Program.empleado.apellidoPaterno + " " + Program.empleado.apellidoMaterno + ", " + Program.empleado.nombre;
+                    byte[] arreglo = daoReporte.generarReporteMejoresEmpleados(Program.empleado.idEmpleado,nombre);
                     File.WriteAllBytes(sfdReporte.FileName, arreglo);
                     MessageBox.Show("El reporte fue generado con exito", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
