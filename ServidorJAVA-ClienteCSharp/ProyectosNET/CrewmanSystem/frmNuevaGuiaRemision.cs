@@ -63,7 +63,7 @@ namespace CrewmanSystem
                 MessageBox.Show("Debe ingresar el motivo de traslado", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (dtpRangoIniTraslado.Value <= dtpRangoIniRegistro.Value)
+            if (dtpRangoIniTraslado.Value < dtpRangoIniRegistro.Value)
             {
                 MessageBox.Show("Fecha de traslado inválida", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

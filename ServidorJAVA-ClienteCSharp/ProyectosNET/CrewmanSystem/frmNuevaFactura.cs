@@ -74,7 +74,7 @@ namespace CrewmanSystem
                 }
             }
 
-            if(dtpVencimiento.Value < DateTime.Now)
+            if (dtpVencimiento.Value < DateTime.Now)
             {
                 MessageBox.Show("Fecha de vencimiento inválida", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -83,6 +83,12 @@ namespace CrewmanSystem
             if (dtpEmision.Value > dtpVencimiento.Value)
             {
                 MessageBox.Show("Rango de fechas inválido","Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (Convert.ToDouble(txtMonto.Text) < 0)
+            {
+                MessageBox.Show("El monto debe ser positivo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

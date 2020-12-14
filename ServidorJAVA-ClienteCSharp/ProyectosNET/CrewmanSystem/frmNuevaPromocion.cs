@@ -134,6 +134,29 @@ namespace CrewmanSystem
                     }
                 }
             }
+            if (dtpFechaFin.Value < DateTime.Now)
+            {
+                MessageBox.Show("Fecha final de la promocion invalida", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (dtpFechaInicio.Value > dtpFechaFin.Value)
+            {
+                MessageBox.Show("Rango de fechas invalido","Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (Convert.ToInt32(txtDescuento) <= 0)
+            {
+                MessageBox.Show("Descuento invalido", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (Convert.ToInt32(txtStock) <= 0)
+            {
+                MessageBox.Show("Stock invalido", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             if (misPromocionXProducto == null || misPromocionXProducto.Count==0)
             {
