@@ -53,7 +53,7 @@
             // 
             this.txtContraseñaActual.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseñaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseñaActual.Location = new System.Drawing.Point(300, 34);
+            this.txtContraseñaActual.Location = new System.Drawing.Point(300, 36);
             this.txtContraseñaActual.Name = "txtContraseñaActual";
             this.txtContraseñaActual.PasswordChar = '*';
             this.txtContraseñaActual.Size = new System.Drawing.Size(189, 19);
@@ -74,7 +74,7 @@
             // 
             this.txtContraseña1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseña1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña1.Location = new System.Drawing.Point(300, 65);
+            this.txtContraseña1.Location = new System.Drawing.Point(300, 67);
             this.txtContraseña1.Name = "txtContraseña1";
             this.txtContraseña1.PasswordChar = '*';
             this.txtContraseña1.Size = new System.Drawing.Size(189, 19);
@@ -95,7 +95,7 @@
             // 
             this.txtContraseña2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseña2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña2.Location = new System.Drawing.Point(300, 96);
+            this.txtContraseña2.Location = new System.Drawing.Point(300, 98);
             this.txtContraseña2.Name = "txtContraseña2";
             this.txtContraseña2.PasswordChar = '*';
             this.txtContraseña2.Size = new System.Drawing.Size(189, 19);

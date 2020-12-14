@@ -51,11 +51,13 @@ public class ReporteWS {
             //Creamos el objeto Connection
             Connection con = DriverManager.getConnection(DBManager.urlMySQL,DBManager.user, DBManager.pass);
             
+            TimeZone.setDefault(TimeZone.getTimeZone("GMT-5"));
+            
             //Creamos un HashMap para enviar los parámetros
             HashMap hm = new HashMap();
             hm.put("LOGO", imagen);
             hm.put("NOMBRE", nombre);
-            hm.put("FECHA", nombre);
+            hm.put("FECHA", new java.sql.Date(new Date().getTime()));
             hm.put("ID_JEFE", idJefe);
             
             //Poblamos el reporte
@@ -75,7 +77,8 @@ public class ReporteWS {
     
     @WebMethod(operationName = "generarReportePedidosXCliente")
     public byte[] generarReportePedidosXCliente(@WebParam(name = "tipoCliente") String tipoCliente,
-            @WebParam(name = "estadoPedido") String estadoPedido) {
+            @WebParam(name = "estadoPedido") String estadoPedido, 
+            @WebParam(name = "nombre") String nombre) {
         byte[] arreglo = null;
         
         try{
@@ -100,12 +103,16 @@ public class ReporteWS {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             
+            TimeZone.setDefault(TimeZone.getTimeZone("GMT-5"));
+            
             HashMap hm = new HashMap();
             hm.put("RUTA_SUBREPORTE_PEDIDOS",rutaSubreporte1);
             hm.put("RUTA_SUBREPORTE_DETALLES", rutaSubreporte2);
-            hm.put("PTIPO_CLIENTE","");
-            hm.put("LOGO", imagen);
+            hm.put("PTIPO_CLIENTE",tipoCliente);
             hm.put("PESTADO_PEDIDO",estadoPedido);
+            hm.put("LOGO", imagen);
+            hm.put("PNOMBRE", nombre);
+            hm.put("FECHA", new java.sql.Date(new Date().getTime()));
             
             JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
             
@@ -121,26 +128,38 @@ public class ReporteWS {
     }
     
     @WebMethod(operationName = "generarReportePedidos")
-    public byte[] generarReportePedidos() {
+    public byte[] generarReportePedidos(@WebParam(name = "nombre") String nombre, @WebParam(name = "idJefe") int idJefe) {
         byte[] arreglo = null;
         
         try{
-            String rutaReporte = ReportePedidos.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/ReportePedidos.jasper").getPath();
+            String rutaReporte = ReportePedidos.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/ReportePedidos_PorJefe.jasper").getPath();
             rutaReporte = rutaReporte.replaceAll("%20", " ");
             JasperReport reporte= (JasperReport)JRLoader.loadObjectFromFile(rutaReporte);
             
-            String rutaSubReporte1 = ReportePedidos.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/Subreporte1.jasper").getPath();
+            String rutaSubReporte1 = ReportePedidos.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/ReportePedidos_SUBREPORTE1.jasper").getPath();
             rutaSubReporte1 = rutaSubReporte1.replaceAll("%20", " ");
             
-            String rutaSubReporte2 = ReportePedidos.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/Subreporte2.jasper").getPath();
+            String rutaSubReporte2 = ReportePedidos.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/ReportePedidos_SUBREPORTE2.jasper").getPath();
             rutaSubReporte2 = rutaSubReporte2.replaceAll("%20", " ");
+            
+            //Obtener logo
+            String rutaLogo = ReportePedidosXCliente.class.getResource("/pe/edu/pucp/CrewmanSystem/images/icono.jpg").getPath();
+            rutaLogo = rutaLogo.replaceAll("%20", " ");
+            ImageIcon icono = new ImageIcon(rutaLogo);
+            Image imagen = icono.getImage();
             
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
                 
+            TimeZone.setDefault(TimeZone.getTimeZone("GMT-5"));
+            
             HashMap hm = new HashMap();
             hm.put("RUTA_SUBREPORTE", rutaSubReporte1);
             hm.put("RUTA_SUBREPORTE2", rutaSubReporte2);
+            hm.put("LOGO", imagen);
+            hm.put("NOMBRE", nombre);
+            hm.put("FECHA", new java.sql.Date(new Date().getTime()));
+            hm.put("ID_EMPLEADO", idJefe);
             JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
             
             con.close();
@@ -191,7 +210,8 @@ public class ReporteWS {
     }
     
     @WebMethod(operationName = "generarReporteQuejas")
-    public byte[] generarReporteQuejas(@WebParam(name = "idJefe") int idJefe) {
+    public byte[] generarReporteQuejas(@WebParam(name = "idJefe") int idJefe, 
+            @WebParam(name = "nombre") String nombre) {
         byte[] arreglo = null;
         try{
             //Referencia al archivo JASPER
@@ -210,10 +230,14 @@ public class ReporteWS {
             //Creamos el objeto Connection
             Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
             
+            TimeZone.setDefault(TimeZone.getTimeZone("GMT-5"));
+            
             //Creamos un HashMap para enviar los parámetros
             HashMap hm = new HashMap();
-            hm.put("LOGO",imagen);
-            hm.put("JEFE", idJefe);
+            hm.put("LOGO", imagen);
+            hm.put("NOMBRE", nombre);
+            hm.put("FECHA", new java.sql.Date(new Date().getTime()));
+            hm.put("ID_JEFE", idJefe);
             
             //Poblamos el reporte
             JasperPrint jp = JasperFillManager.fillReport

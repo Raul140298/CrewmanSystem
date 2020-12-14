@@ -115,14 +115,14 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1602, 212);
+            this.panel1.Size = new System.Drawing.Size(1602, 353);
             this.panel1.TabIndex = 93;
             // 
             // label6
             // 
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(597, 159);
+            this.label6.Location = new System.Drawing.Point(49, 302);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(217, 22);
             this.label6.TabIndex = 115;
@@ -133,7 +133,7 @@
             // 
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(38, 159);
+            this.label7.Location = new System.Drawing.Point(41, 260);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(225, 22);
             this.label7.TabIndex = 114;
@@ -143,15 +143,15 @@
             // dtpFechaVencimientoFinal
             // 
             this.dtpFechaVencimientoFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaVencimientoFinal.Location = new System.Drawing.Point(820, 155);
+            this.dtpFechaVencimientoFinal.Location = new System.Drawing.Point(279, 298);
             this.dtpFechaVencimientoFinal.Name = "dtpFechaVencimientoFinal";
-            this.dtpFechaVencimientoFinal.Size = new System.Drawing.Size(321, 26);
+            this.dtpFechaVencimientoFinal.Size = new System.Drawing.Size(315, 26);
             this.dtpFechaVencimientoFinal.TabIndex = 113;
             // 
             // dtpFechaVencimientoIni
             // 
             this.dtpFechaVencimientoIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaVencimientoIni.Location = new System.Drawing.Point(276, 155);
+            this.dtpFechaVencimientoIni.Location = new System.Drawing.Point(279, 256);
             this.dtpFechaVencimientoIni.Name = "dtpFechaVencimientoIni";
             this.dtpFechaVencimientoIni.Size = new System.Drawing.Size(315, 26);
             this.dtpFechaVencimientoIni.TabIndex = 112;
@@ -161,7 +161,7 @@
             this.panel3.Controls.Add(this.rbPagadoAmbos);
             this.panel3.Controls.Add(this.rbPagadoNo);
             this.panel3.Controls.Add(this.rbPagadoSi);
-            this.panel3.Location = new System.Drawing.Point(694, 61);
+            this.panel3.Location = new System.Drawing.Point(279, 120);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(263, 34);
             this.panel3.TabIndex = 111;
@@ -210,7 +210,7 @@
             this.panel2.Controls.Add(this.rbEmisionAmbos);
             this.panel2.Controls.Add(this.rbAnuladoNo);
             this.panel2.Controls.Add(this.rbAnuladoSi);
-            this.panel2.Location = new System.Drawing.Point(276, 61);
+            this.panel2.Location = new System.Drawing.Point(279, 85);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(263, 34);
             this.panel2.TabIndex = 110;
@@ -261,7 +261,7 @@
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.Location = new System.Drawing.Point(1182, 71);
+            this.btnSeleccionar.Location = new System.Drawing.Point(638, 59);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(160, 30);
             this.btnSeleccionar.TabIndex = 109;
@@ -271,9 +271,9 @@
             // label5
             // 
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Location = new System.Drawing.Point(612, 73);
+            this.label5.Location = new System.Drawing.Point(181, 134);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 22);
+            this.label5.Size = new System.Drawing.Size(85, 22);
             this.label5.TabIndex = 108;
             this.label5.Text = "Pagado :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -282,7 +282,7 @@
             // 
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(84, 73);
+            this.label2.Location = new System.Drawing.Point(87, 97);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(179, 22);
             this.label2.TabIndex = 107;
@@ -293,7 +293,7 @@
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(587, 38);
+            this.label1.Location = new System.Drawing.Point(172, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 22);
             this.label1.TabIndex = 106;
@@ -303,16 +303,16 @@
             // txtGrupo
             // 
             this.txtGrupo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtGrupo.Location = new System.Drawing.Point(687, 39);
+            this.txtGrupo.Location = new System.Drawing.Point(279, 64);
             this.txtGrupo.Name = "txtGrupo";
-            this.txtGrupo.Size = new System.Drawing.Size(263, 19);
+            this.txtGrupo.Size = new System.Drawing.Size(315, 19);
             this.txtGrupo.TabIndex = 97;
             // 
             // label4
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(612, 114);
+            this.label4.Location = new System.Drawing.Point(64, 219);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(202, 22);
             this.label4.TabIndex = 105;
@@ -323,7 +323,7 @@
             // 
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(84, 39);
+            this.label3.Location = new System.Drawing.Point(87, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(179, 22);
             this.label3.TabIndex = 104;
@@ -334,7 +334,7 @@
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(84, 110);
+            this.lblID.Location = new System.Drawing.Point(87, 177);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(179, 22);
             this.lblID.TabIndex = 103;
@@ -348,7 +348,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(1182, 34);
+            this.btnBuscar.Location = new System.Drawing.Point(638, 27);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(160, 30);
             this.btnBuscar.TabIndex = 102;
@@ -359,15 +359,15 @@
             // dtpFechaEmisionFinal
             // 
             this.dtpFechaEmisionFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaEmisionFinal.Location = new System.Drawing.Point(820, 110);
+            this.dtpFechaEmisionFinal.Location = new System.Drawing.Point(279, 215);
             this.dtpFechaEmisionFinal.Name = "dtpFechaEmisionFinal";
-            this.dtpFechaEmisionFinal.Size = new System.Drawing.Size(321, 26);
+            this.dtpFechaEmisionFinal.Size = new System.Drawing.Size(315, 26);
             this.dtpFechaEmisionFinal.TabIndex = 101;
             // 
             // dtpFechaEmisionIni
             // 
             this.dtpFechaEmisionIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaEmisionIni.Location = new System.Drawing.Point(276, 110);
+            this.dtpFechaEmisionIni.Location = new System.Drawing.Point(279, 173);
             this.dtpFechaEmisionIni.Name = "dtpFechaEmisionIni";
             this.dtpFechaEmisionIni.Size = new System.Drawing.Size(315, 26);
             this.dtpFechaEmisionIni.TabIndex = 100;
@@ -375,7 +375,7 @@
             // txtRazonSocial
             // 
             this.txtRazonSocial.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRazonSocial.Location = new System.Drawing.Point(276, 39);
+            this.txtRazonSocial.Location = new System.Drawing.Point(279, 31);
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Size = new System.Drawing.Size(315, 19);
             this.txtRazonSocial.TabIndex = 96;
@@ -418,7 +418,7 @@
             this.dgvFacturas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvFacturas.EnableHeadersVisualStyles = false;
             this.dgvFacturas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.dgvFacturas.Location = new System.Drawing.Point(0, 212);
+            this.dgvFacturas.Location = new System.Drawing.Point(0, 353);
             this.dgvFacturas.MultiSelect = false;
             this.dgvFacturas.Name = "dgvFacturas";
             this.dgvFacturas.ReadOnly = true;
@@ -438,7 +438,7 @@
             dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvFacturas.RowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvFacturas.RowTemplate.Height = 24;
-            this.dgvFacturas.Size = new System.Drawing.Size(1602, 259);
+            this.dgvFacturas.Size = new System.Drawing.Size(1602, 268);
             this.dgvFacturas.TabIndex = 94;
             this.dgvFacturas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFacturas_CellFormatting);
             // 
@@ -594,7 +594,7 @@
             this.lblNotFound.AutoSize = true;
             this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotFound.Location = new System.Drawing.Point(686, 281);
+            this.lblNotFound.Location = new System.Drawing.Point(634, 428);
             this.lblNotFound.Name = "lblNotFound";
             this.lblNotFound.Size = new System.Drawing.Size(230, 20);
             this.lblNotFound.TabIndex = 95;
@@ -606,7 +606,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1602, 471);
+            this.ClientSize = new System.Drawing.Size(1602, 621);
             this.Controls.Add(this.lblNotFound);
             this.Controls.Add(this.dgvFacturas);
             this.Controls.Add(this.panel1);

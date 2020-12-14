@@ -31,8 +31,9 @@ namespace CrewmanSystem
             {
                 try
                 {
+                    string nombre = Program.empleado.apellidoPaterno + " " + Program.empleado.apellidoMaterno + ", " + Program.empleado.nombre;
                     byte[] arreglo;
-                    arreglo = daoReporte.generarReportePedidos();
+                    arreglo = daoReporte.generarReportePedidos(nombre, Program.empleado.idEmpleado);
                     File.WriteAllBytes(sfdReportePedidos.FileName, arreglo);
                     MessageBox.Show("El reporte fue generado con exito", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -50,8 +51,9 @@ namespace CrewmanSystem
                 try
                 {
                     byte[] arreglo;
-                    String tipo;
-                    String estado;
+                    string nombre = Program.empleado.apellidoPaterno + " " + Program.empleado.apellidoMaterno + ", " + Program.empleado.nombre;
+                    string tipo;
+                    string estado;
                     if (cboTipoCliente.SelectedItem.ToString() == "CUALQUIERA")
                         tipo = "";
                     else
@@ -61,7 +63,7 @@ namespace CrewmanSystem
                         estado = "";
                     else
                         estado = cboEstado.SelectedItem.ToString();
-                    arreglo = daoReporte.generarReportePedidosXCliente(tipo,estado);
+                    arreglo = daoReporte.generarReportePedidosXCliente(tipo,estado,nombre);
                     File.WriteAllBytes(sfdReportePedidosXCliente.FileName, arreglo);
                     MessageBox.Show("El reporte fue generado con exito", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

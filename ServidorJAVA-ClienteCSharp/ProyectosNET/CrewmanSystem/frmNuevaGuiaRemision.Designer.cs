@@ -48,7 +48,7 @@
             this.txtIdGuiaRemision.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdGuiaRemision.Enabled = false;
             this.txtIdGuiaRemision.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtIdGuiaRemision.Location = new System.Drawing.Point(251, 33);
+            this.txtIdGuiaRemision.Location = new System.Drawing.Point(251, 39);
             this.txtIdGuiaRemision.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdGuiaRemision.Name = "txtIdGuiaRemision";
             this.txtIdGuiaRemision.Size = new System.Drawing.Size(97, 19);
@@ -71,7 +71,7 @@
             this.txtIdPedido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdPedido.Enabled = false;
             this.txtIdPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtIdPedido.Location = new System.Drawing.Point(251, 70);
+            this.txtIdPedido.Location = new System.Drawing.Point(251, 72);
             this.txtIdPedido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdPedido.Name = "txtIdPedido";
             this.txtIdPedido.Size = new System.Drawing.Size(97, 19);
@@ -109,7 +109,7 @@
             // 
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(60, 109);
+            this.label2.Location = new System.Drawing.Point(58, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(179, 22);
             this.label2.TabIndex = 113;
@@ -161,7 +161,7 @@
             // dtpRangoIniRegistro
             // 
             this.dtpRangoIniRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.dtpRangoIniRegistro.Location = new System.Drawing.Point(249, 193);
+            this.dtpRangoIniRegistro.Location = new System.Drawing.Point(249, 191);
             this.dtpRangoIniRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpRangoIniRegistro.Name = "dtpRangoIniRegistro";
             this.dtpRangoIniRegistro.Size = new System.Drawing.Size(324, 26);
@@ -174,7 +174,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(249, 288);
+            this.btnGuardar.Location = new System.Drawing.Point(249, 279);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(155, 30);

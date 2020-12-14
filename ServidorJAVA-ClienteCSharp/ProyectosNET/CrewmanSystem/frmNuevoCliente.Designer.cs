@@ -130,7 +130,7 @@
             // label4
             // 
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Location = new System.Drawing.Point(40, 234);
+            this.label4.Location = new System.Drawing.Point(40, 236);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 22);
             this.label4.TabIndex = 151;
@@ -150,7 +150,7 @@
             // label1
             // 
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Location = new System.Drawing.Point(294, 31);
+            this.label1.Location = new System.Drawing.Point(294, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 22);
             this.label1.TabIndex = 149;
@@ -160,7 +160,7 @@
             // label2
             // 
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Location = new System.Drawing.Point(51, 32);
+            this.label2.Location = new System.Drawing.Point(51, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 22);
             this.label2.TabIndex = 148;
@@ -170,7 +170,7 @@
             // dtpFechaInicio
             // 
             this.dtpFechaInicio.Enabled = false;
-            this.dtpFechaInicio.Location = new System.Drawing.Point(181, 230);
+            this.dtpFechaInicio.Location = new System.Drawing.Point(181, 232);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(347, 26);
             this.dtpFechaInicio.TabIndex = 146;
@@ -189,7 +189,7 @@
             // 
             this.txtRuc.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtRuc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRuc.Location = new System.Drawing.Point(374, 32);
+            this.txtRuc.Location = new System.Drawing.Point(374, 42);
             this.txtRuc.Name = "txtRuc";
             this.txtRuc.Size = new System.Drawing.Size(154, 19);
             this.txtRuc.TabIndex = 144;
@@ -197,7 +197,7 @@
             // txtDireccion
             // 
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDireccion.Location = new System.Drawing.Point(181, 195);
+            this.txtDireccion.Location = new System.Drawing.Point(181, 197);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(347, 19);
             this.txtDireccion.TabIndex = 143;
@@ -213,7 +213,7 @@
             // txtRazonSocial
             // 
             this.txtRazonSocial.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRazonSocial.Location = new System.Drawing.Point(181, 77);
+            this.txtRazonSocial.Location = new System.Drawing.Point(181, 79);
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Size = new System.Drawing.Size(347, 19);
             this.txtRazonSocial.TabIndex = 141;
@@ -223,7 +223,7 @@
             this.txtIdC.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtIdC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdC.Enabled = false;
-            this.txtIdC.Location = new System.Drawing.Point(181, 32);
+            this.txtIdC.Location = new System.Drawing.Point(181, 42);
             this.txtIdC.Name = "txtIdC";
             this.txtIdC.Size = new System.Drawing.Size(89, 19);
             this.txtIdC.TabIndex = 140;
@@ -253,9 +253,9 @@
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.txtIdPC);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(23, 319);
+            this.groupBox2.Location = new System.Drawing.Point(23, 335);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(577, 347);
+            this.groupBox2.Size = new System.Drawing.Size(577, 344);
             this.groupBox2.TabIndex = 156;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Persona Contacto";
@@ -264,9 +264,9 @@
             // 
             this.txtCargo.BackColor = System.Drawing.SystemColors.Window;
             this.txtCargo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCargo.Location = new System.Drawing.Point(181, 227);
+            this.txtCargo.Location = new System.Drawing.Point(181, 229);
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(199, 19);
+            this.txtCargo.Size = new System.Drawing.Size(163, 19);
             this.txtCargo.TabIndex = 137;
             // 
             // label17
@@ -282,7 +282,7 @@
             // label16
             // 
             this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label16.Location = new System.Drawing.Point(68, 300);
+            this.label16.Location = new System.Drawing.Point(68, 301);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(94, 22);
             this.label16.TabIndex = 135;
@@ -292,7 +292,7 @@
             // rbFemenino
             // 
             this.rbFemenino.AutoSize = true;
-            this.rbFemenino.Location = new System.Drawing.Point(181, 300);
+            this.rbFemenino.Location = new System.Drawing.Point(181, 302);
             this.rbFemenino.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbFemenino.Name = "rbFemenino";
             this.rbFemenino.Size = new System.Drawing.Size(40, 24);
@@ -304,7 +304,7 @@
             // rbMasculino
             // 
             this.rbMasculino.AutoSize = true;
-            this.rbMasculino.Location = new System.Drawing.Point(230, 299);
+            this.rbMasculino.Location = new System.Drawing.Point(230, 301);
             this.rbMasculino.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbMasculino.Name = "rbMasculino";
             this.rbMasculino.Size = new System.Drawing.Size(44, 24);
@@ -316,7 +316,7 @@
             // label9
             // 
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label9.Location = new System.Drawing.Point(80, 263);
+            this.label9.Location = new System.Drawing.Point(82, 263);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 22);
             this.label9.TabIndex = 132;
@@ -327,7 +327,7 @@
             // 
             this.txtDNI.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtDNI.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDNI.Location = new System.Drawing.Point(374, 38);
+            this.txtDNI.Location = new System.Drawing.Point(374, 40);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(154, 19);
             this.txtDNI.TabIndex = 124;
@@ -335,7 +335,7 @@
             // label8
             // 
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Location = new System.Drawing.Point(300, 187);
+            this.label8.Location = new System.Drawing.Point(300, 189);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(109, 22);
             this.label8.TabIndex = 131;
@@ -346,7 +346,7 @@
             // 
             this.txtCorreo.BackColor = System.Drawing.SystemColors.Window;
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCorreo.Location = new System.Drawing.Point(181, 264);
+            this.txtCorreo.Location = new System.Drawing.Point(181, 266);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(347, 19);
             this.txtCorreo.TabIndex = 123;
@@ -354,7 +354,7 @@
             // label10
             // 
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label10.Location = new System.Drawing.Point(57, 187);
+            this.label10.Location = new System.Drawing.Point(59, 187);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(103, 22);
             this.label10.TabIndex = 130;
@@ -365,7 +365,7 @@
             // 
             this.txtTelefono2.BackColor = System.Drawing.SystemColors.Window;
             this.txtTelefono2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTelefono2.Location = new System.Drawing.Point(415, 188);
+            this.txtTelefono2.Location = new System.Drawing.Point(415, 190);
             this.txtTelefono2.Name = "txtTelefono2";
             this.txtTelefono2.Size = new System.Drawing.Size(113, 19);
             this.txtTelefono2.TabIndex = 122;
@@ -384,7 +384,7 @@
             // 
             this.txtTelefono1.BackColor = System.Drawing.SystemColors.Window;
             this.txtTelefono1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTelefono1.Location = new System.Drawing.Point(181, 188);
+            this.txtTelefono1.Location = new System.Drawing.Point(181, 190);
             this.txtTelefono1.Name = "txtTelefono1";
             this.txtTelefono1.Size = new System.Drawing.Size(113, 19);
             this.txtTelefono1.TabIndex = 121;
@@ -392,7 +392,7 @@
             // label13
             // 
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label13.Location = new System.Drawing.Point(319, 38);
+            this.label13.Location = new System.Drawing.Point(319, 40);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(49, 22);
             this.label13.TabIndex = 128;
@@ -403,7 +403,7 @@
             // 
             this.txtApMaterno.BackColor = System.Drawing.SystemColors.Window;
             this.txtApMaterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtApMaterno.Location = new System.Drawing.Point(181, 152);
+            this.txtApMaterno.Location = new System.Drawing.Point(181, 154);
             this.txtApMaterno.Name = "txtApMaterno";
             this.txtApMaterno.Size = new System.Drawing.Size(163, 19);
             this.txtApMaterno.TabIndex = 120;
@@ -411,7 +411,7 @@
             // label11
             // 
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label11.Location = new System.Drawing.Point(6, 151);
+            this.label11.Location = new System.Drawing.Point(8, 151);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(154, 22);
             this.label11.TabIndex = 127;
@@ -422,7 +422,7 @@
             // 
             this.txtApPaterno.BackColor = System.Drawing.SystemColors.Window;
             this.txtApPaterno.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtApPaterno.Location = new System.Drawing.Point(181, 115);
+            this.txtApPaterno.Location = new System.Drawing.Point(181, 117);
             this.txtApPaterno.Name = "txtApPaterno";
             this.txtApPaterno.Size = new System.Drawing.Size(163, 19);
             this.txtApPaterno.TabIndex = 119;
@@ -430,7 +430,7 @@
             // label15
             // 
             this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label15.Location = new System.Drawing.Point(6, 114);
+            this.label15.Location = new System.Drawing.Point(8, 114);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(154, 22);
             this.label15.TabIndex = 126;
@@ -441,7 +441,7 @@
             // 
             this.txtNombre.BackColor = System.Drawing.SystemColors.Window;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombre.Location = new System.Drawing.Point(181, 77);
+            this.txtNombre.Location = new System.Drawing.Point(181, 79);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(163, 19);
             this.txtNombre.TabIndex = 118;
@@ -449,7 +449,7 @@
             // label14
             // 
             this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label14.Location = new System.Drawing.Point(85, 37);
+            this.label14.Location = new System.Drawing.Point(85, 39);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(77, 22);
             this.label14.TabIndex = 125;
@@ -461,7 +461,7 @@
             this.txtIdPC.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtIdPC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdPC.Enabled = false;
-            this.txtIdPC.Location = new System.Drawing.Point(181, 38);
+            this.txtIdPC.Location = new System.Drawing.Point(181, 40);
             this.txtIdPC.Name = "txtIdPC";
             this.txtIdPC.Size = new System.Drawing.Size(89, 19);
             this.txtIdPC.TabIndex = 117;
@@ -473,7 +473,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(181, 3);
+            this.btnGuardar.Location = new System.Drawing.Point(181, 11);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(160, 30);
             this.btnGuardar.TabIndex = 157;
@@ -485,7 +485,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.btnGuardar);
-            this.panel1.Location = new System.Drawing.Point(23, 688);
+            this.panel1.Location = new System.Drawing.Point(23, 703);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(577, 53);
             this.panel1.TabIndex = 158;
@@ -496,7 +496,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(663, 586);
+            this.ClientSize = new System.Drawing.Size(663, 735);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

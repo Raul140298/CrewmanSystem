@@ -15,7 +15,7 @@ namespace CrewmanSystem
     {
         private VisitaWS.VisitaWSClient daoVisita;
         private BindingList<VisitaWS.visita> misVisitas;
-        private VisitaWS.visita[] misVisitasThread;
+        
         public frmGestionarVisitas()
         {
             InitializeComponent();

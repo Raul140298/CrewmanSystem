@@ -107,7 +107,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(557, 34);
+            this.btnBuscar.Location = new System.Drawing.Point(556, 34);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(160, 30);
@@ -142,7 +142,7 @@
             // 
             this.lblID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(38, 39);
+            this.lblID.Location = new System.Drawing.Point(38, 38);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(176, 22);
             this.lblID.TabIndex = 52;
