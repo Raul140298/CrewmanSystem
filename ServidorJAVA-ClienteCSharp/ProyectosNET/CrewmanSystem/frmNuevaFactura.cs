@@ -74,6 +74,12 @@ namespace CrewmanSystem
                 }
             }
 
+            if(dtpVencimiento.Value < DateTime.Now)
+            {
+                MessageBox.Show("Fecha de vencimiento inválida", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (dtpEmision.Value > dtpVencimiento.Value)
             {
                 MessageBox.Show("Rango de fechas inválido","Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -85,7 +91,7 @@ namespace CrewmanSystem
                 MessageBox.Show("Monto de pago excede el monto pendiente", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            //Insertar factura
+
             frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
             if (formInsertar.ShowDialog() == DialogResult.OK)
             {

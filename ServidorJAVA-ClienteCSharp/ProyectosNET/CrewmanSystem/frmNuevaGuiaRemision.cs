@@ -22,6 +22,9 @@ namespace CrewmanSystem
             daoGuiaRemision = new GuiaRemisionWS.GuiaRemisionWSClient();
             daoPedido = new PedidoWS.PedidoWSClient();
             InitializeComponent();
+            dtpRangoIniRegistro.Value = DateTime.Now;
+            dtpRangoIniRegistro.Enabled = false;
+
             if (frmVentanaPrincipal.nBtn == 1)
             {   //OBTNER DATOS DE FILA SELECCIONADA
                 GuiaRemisionWS.guiaRemision miGuiaRemision = new GuiaRemisionWS.guiaRemision();
@@ -40,7 +43,6 @@ namespace CrewmanSystem
                 txtMotivoTraslado.Text = miGuiaRemision.motivoTraslado;
                 dtpRangoIniRegistro.Value = miGuiaRemision.fechaRegistro;
                 dtpRangoIniTraslado.Value = miGuiaRemision.fechaTraslado;
-
             }
         }
 
@@ -56,6 +58,17 @@ namespace CrewmanSystem
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (txtMotivoTraslado.Text == "")
+            {
+                MessageBox.Show("Debe ingresar el motivo de traslado", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (dtpRangoIniTraslado.Value <= dtpRangoIniRegistro.Value)
+            {
+                MessageBox.Show("Fecha de traslado inválida", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             GuiaRemisionWS.guiaRemision guiaRemision = new GuiaRemisionWS.guiaRemision();
             int resultado;
             guiaRemision.motivoTraslado = txtMotivoTraslado.Text;
