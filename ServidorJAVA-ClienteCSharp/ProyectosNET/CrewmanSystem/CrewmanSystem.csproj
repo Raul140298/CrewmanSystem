@@ -546,11 +546,11 @@
     <Compile Include="frmReporteQuejas.Designer.cs">
       <DependentUpon>frmReporteQuejas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSegmentarClientes.cs">
+    <Compile Include="frmIniciarTemporada.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSegmentarClientes.Designer.cs">
-      <DependentUpon>frmSegmentarClientes.cs</DependentUpon>
+    <Compile Include="frmIniciarTemporada.Designer.cs">
+      <DependentUpon>frmIniciarTemporada.cs</DependentUpon>
     </Compile>
     <Compile Include="frmVentanaPrincipal.cs">
       <SubType>Form</SubType>
@@ -761,8 +761,8 @@
     <EmbeddedResource Include="frmReporteQuejas.resx">
       <DependentUpon>frmReporteQuejas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSegmentarClientes.resx">
-      <DependentUpon>frmSegmentarClientes.cs</DependentUpon>
+    <EmbeddedResource Include="frmIniciarTemporada.resx">
+      <DependentUpon>frmIniciarTemporada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVentanaPrincipal.resx">
       <DependentUpon>frmVentanaPrincipal.cs</DependentUpon>

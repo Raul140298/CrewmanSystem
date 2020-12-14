@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -92,6 +93,26 @@ namespace CrewmanSystem
 				dgvGuiasDeRemision.Columns["APELLIDO_MATERNO"].Visible = false;
 			}
 		}
-		
-	}
+
+        private void dgvGuiasDeRemision_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+			if (e.ColumnIndex == 0)
+			{
+				if (sfdGuia.ShowDialog() == DialogResult.OK)
+				{
+					try
+					{
+						//byte[] arreglo = daoReporte.generarGuiaDeRemision(((GuiaRemisionWS.guiaRemision)dgvGuiasDeRemision.CurrentRow.DataBoundItem).pedido.idPedido);
+						//File.WriteAllBytes(sfdGuia.FileName, arreglo);
+						MessageBox.Show("El reporte fue generado con exito", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					}
+					catch (Exception)
+					{
+						MessageBox.Show("No se pudo generar el reporte", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					}
+				}
+
+			}
+		}
+    }
 }

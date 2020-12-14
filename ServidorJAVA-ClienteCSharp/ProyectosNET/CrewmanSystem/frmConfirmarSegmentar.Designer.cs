@@ -59,7 +59,7 @@
             this.label1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.label1.Size = new System.Drawing.Size(325, 41);
             this.label1.TabIndex = 37;
-            this.label1.Text = "¿Está seguro que desea iniciar la segmentación?";
+            this.label1.Text = "¿Está seguro que desea iniciar una nueva temporada de ventas?";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3

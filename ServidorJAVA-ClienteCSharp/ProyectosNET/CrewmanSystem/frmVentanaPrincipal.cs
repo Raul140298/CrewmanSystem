@@ -864,7 +864,7 @@ namespace CrewmanSystem
 
 		private void btnSegmentacion_Click(object sender, EventArgs e)
         {
-			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmSegmentarClientes(), false, false, false, false, false);
+			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmIniciarTemporada(), false, false, false, false, false);
 		}
 
 		private void btnPerfil_Click(object sender, EventArgs e)

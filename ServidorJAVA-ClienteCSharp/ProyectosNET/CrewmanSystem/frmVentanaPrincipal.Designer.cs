@@ -36,7 +36,6 @@
             this.pnlLateralIzquierdo = new System.Windows.Forms.Panel();
             this.pnlEmpleado = new System.Windows.Forms.Panel();
             this.btnEmpPerfil = new FontAwesome.Sharp.IconButton();
-            this.btnSegmentacion = new FontAwesome.Sharp.IconButton();
             this.btnRecursos = new FontAwesome.Sharp.IconButton();
             this.btnVisitas = new FontAwesome.Sharp.IconButton();
             this.btnPromociones = new FontAwesome.Sharp.IconButton();
@@ -52,7 +51,6 @@
             this.btnEmpProducto = new FontAwesome.Sharp.IconButton();
             this.btnEmpGestionProductos = new FontAwesome.Sharp.IconButton();
             this.pnlJefeDeVentas = new System.Windows.Forms.Panel();
-            this.btnPerfil = new FontAwesome.Sharp.IconButton();
             this.pnlGestionClientes = new System.Windows.Forms.Panel();
             this.btnReporteClientes = new FontAwesome.Sharp.IconButton();
             this.btnClientes = new FontAwesome.Sharp.IconButton();
@@ -99,6 +97,8 @@
             this.btnMinimizar = new FontAwesome.Sharp.IconButton();
             this.btnMaximizar = new FontAwesome.Sharp.IconButton();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.btnSegmentacion = new FontAwesome.Sharp.IconButton();
+            this.btnPerfil = new FontAwesome.Sharp.IconButton();
             this.pnlContenedor.SuspendLayout();
             this.pnlChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -169,7 +169,6 @@
             // 
             this.pnlEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.pnlEmpleado.Controls.Add(this.btnEmpPerfil);
-            this.pnlEmpleado.Controls.Add(this.btnSegmentacion);
             this.pnlEmpleado.Controls.Add(this.btnRecursos);
             this.pnlEmpleado.Controls.Add(this.btnVisitas);
             this.pnlEmpleado.Controls.Add(this.btnPromociones);
@@ -178,7 +177,7 @@
             this.pnlEmpleado.Controls.Add(this.pnlEmpGestionProductos);
             this.pnlEmpleado.Controls.Add(this.btnEmpGestionProductos);
             this.pnlEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEmpleado.Location = new System.Drawing.Point(0, 1186);
+            this.pnlEmpleado.Location = new System.Drawing.Point(0, 1256);
             this.pnlEmpleado.Name = "pnlEmpleado";
             this.pnlEmpleado.Size = new System.Drawing.Size(264, 838);
             this.pnlEmpleado.TabIndex = 1;
@@ -197,7 +196,7 @@
             this.btnEmpPerfil.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEmpPerfil.IconSize = 20;
             this.btnEmpPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpPerfil.Location = new System.Drawing.Point(0, 623);
+            this.btnEmpPerfil.Location = new System.Drawing.Point(0, 578);
             this.btnEmpPerfil.Name = "btnEmpPerfil";
             this.btnEmpPerfil.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnEmpPerfil.Rotation = 0D;
@@ -209,32 +208,6 @@
             this.btnEmpPerfil.UseCompatibleTextRendering = true;
             this.btnEmpPerfil.UseVisualStyleBackColor = false;
             this.btnEmpPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
-            // 
-            // btnSegmentacion
-            // 
-            this.btnSegmentacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnSegmentacion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSegmentacion.FlatAppearance.BorderSize = 0;
-            this.btnSegmentacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSegmentacion.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnSegmentacion.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSegmentacion.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
-            this.btnSegmentacion.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnSegmentacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSegmentacion.IconSize = 20;
-            this.btnSegmentacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSegmentacion.Location = new System.Drawing.Point(0, 578);
-            this.btnSegmentacion.Name = "btnSegmentacion";
-            this.btnSegmentacion.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btnSegmentacion.Rotation = 0D;
-            this.btnSegmentacion.Size = new System.Drawing.Size(264, 45);
-            this.btnSegmentacion.TabIndex = 33;
-            this.btnSegmentacion.Text = "  Segmentación de Clientes";
-            this.btnSegmentacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSegmentacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSegmentacion.UseCompatibleTextRendering = true;
-            this.btnSegmentacion.UseVisualStyleBackColor = false;
-            this.btnSegmentacion.Click += new System.EventHandler(this.btnSegmentacion_Click);
             // 
             // btnRecursos
             // 
@@ -553,6 +526,7 @@
             // pnlJefeDeVentas
             // 
             this.pnlJefeDeVentas.Controls.Add(this.btnPerfil);
+            this.pnlJefeDeVentas.Controls.Add(this.btnSegmentacion);
             this.pnlJefeDeVentas.Controls.Add(this.pnlGestionClientes);
             this.pnlJefeDeVentas.Controls.Add(this.btnGestionClientes);
             this.pnlJefeDeVentas.Controls.Add(this.btnCumplimientoDeMetas);
@@ -567,35 +541,9 @@
             this.pnlJefeDeVentas.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlJefeDeVentas.Location = new System.Drawing.Point(0, 0);
             this.pnlJefeDeVentas.Name = "pnlJefeDeVentas";
-            this.pnlJefeDeVentas.Size = new System.Drawing.Size(264, 1186);
+            this.pnlJefeDeVentas.Size = new System.Drawing.Size(264, 1256);
             this.pnlJefeDeVentas.TabIndex = 0;
             this.pnlJefeDeVentas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlJefeDeVentas_MouseDown);
-            // 
-            // btnPerfil
-            // 
-            this.btnPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.btnPerfil.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPerfil.FlatAppearance.BorderSize = 0;
-            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPerfil.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnPerfil.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPerfil.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
-            this.btnPerfil.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnPerfil.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPerfil.IconSize = 20;
-            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPerfil.Location = new System.Drawing.Point(0, 1136);
-            this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btnPerfil.Rotation = 0D;
-            this.btnPerfil.Size = new System.Drawing.Size(264, 45);
-            this.btnPerfil.TabIndex = 32;
-            this.btnPerfil.Text = "  Mi Perfil";
-            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPerfil.UseCompatibleTextRendering = true;
-            this.btnPerfil.UseVisualStyleBackColor = false;
-            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click_1);
             // 
             // pnlGestionClientes
             // 
@@ -1577,6 +1525,58 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnSegmentacion
+            // 
+            this.btnSegmentacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnSegmentacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSegmentacion.FlatAppearance.BorderSize = 0;
+            this.btnSegmentacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSegmentacion.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnSegmentacion.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSegmentacion.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
+            this.btnSegmentacion.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnSegmentacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSegmentacion.IconSize = 20;
+            this.btnSegmentacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSegmentacion.Location = new System.Drawing.Point(0, 1136);
+            this.btnSegmentacion.Name = "btnSegmentacion";
+            this.btnSegmentacion.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnSegmentacion.Rotation = 0D;
+            this.btnSegmentacion.Size = new System.Drawing.Size(264, 45);
+            this.btnSegmentacion.TabIndex = 34;
+            this.btnSegmentacion.Text = "  Inicio de temporada";
+            this.btnSegmentacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSegmentacion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSegmentacion.UseCompatibleTextRendering = true;
+            this.btnSegmentacion.UseVisualStyleBackColor = false;
+            this.btnSegmentacion.Click += new System.EventHandler(this.btnSegmentacion_Click);
+            // 
+            // btnPerfil
+            // 
+            this.btnPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.btnPerfil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPerfil.FlatAppearance.BorderSize = 0;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnPerfil.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPerfil.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
+            this.btnPerfil.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnPerfil.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPerfil.IconSize = 20;
+            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfil.Location = new System.Drawing.Point(0, 1181);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnPerfil.Rotation = 0D;
+            this.btnPerfil.Size = new System.Drawing.Size(264, 47);
+            this.btnPerfil.TabIndex = 35;
+            this.btnPerfil.Text = "  Mi Perfil";
+            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPerfil.UseCompatibleTextRendering = true;
+            this.btnPerfil.UseVisualStyleBackColor = false;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click_1);
+            // 
             // frmVentanaPrincipal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1669,7 +1669,6 @@
         private FontAwesome.Sharp.IconButton btnCumplimientoDeMetas;
         private System.Windows.Forms.Panel pnlGestionPedidos;
         private FontAwesome.Sharp.IconButton btnPedido;
-        private FontAwesome.Sharp.IconButton btnPerfil;
         private FontAwesome.Sharp.IconButton btnQuejaJefe;
         private FontAwesome.Sharp.IconButton btnGuiaDeRemision;
         private FontAwesome.Sharp.IconButton btnFactura;
@@ -1685,6 +1684,7 @@
 		private FontAwesome.Sharp.IconButton btnRecarga;
         private FontAwesome.Sharp.IconButton btnRecursos;
         private FontAwesome.Sharp.IconButton btnEmpPerfil;
+        private FontAwesome.Sharp.IconButton btnPerfil;
         private FontAwesome.Sharp.IconButton btnSegmentacion;
     }
 }
