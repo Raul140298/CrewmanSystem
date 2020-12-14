@@ -109,7 +109,7 @@ public class ReporteWS {
             hm.put("FECHA", new java.sql.Date(new Date().getTime()));
             hm.put("ID_PEDIDO", idPedido);
             hm.put("RUTA_SUBREPORTE",rutaSubreporte1);
-            hm.put("RUTA_SUBREPORTE2", rutaSubreporte2);
+            hm.put("FRUTA_SUBREPORTE2", rutaSubreporte2);
             
             JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
             
