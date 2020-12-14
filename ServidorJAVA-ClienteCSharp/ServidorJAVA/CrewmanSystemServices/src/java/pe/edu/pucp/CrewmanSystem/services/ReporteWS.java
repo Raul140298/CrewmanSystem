@@ -75,6 +75,55 @@ public class ReporteWS {
         return arreglo;
     }
     
+    @WebMethod(operationName = "generarReportePedidoFinal")
+    public byte[] generarReportePedidoFinal(@WebParam(name = "nombre") String nombre, @WebParam(name = "idPedido") int idPedido) {
+        byte[] arreglo = null;
+        
+        try{
+            String rutaReporte = ReportePedidosXCliente.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/InformePedido.jasper").getPath();
+            rutaReporte = rutaReporte.replaceAll("%20", " ");
+            JasperReport reporte = (JasperReport)JRLoader.loadObjectFromFile(rutaReporte);
+
+            //Obtener la ruta del subreporte1
+            String rutaSubreporte1 = ReportePedidosXCliente.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/Subreporte_LineasPedido.jasper").getPath();
+            rutaSubreporte1 = rutaSubreporte1.replaceAll("%20", " ");
+            
+            //Obtener la ruta del subreporte2
+            String rutaSubreporte2 = ReportePedidosXCliente.class.getResource("/pe/edu/pucp/CrewmanSystem/reportes/Subreporte_LineasPedidoPromocion.jasper").getPath();
+            rutaSubreporte2 = rutaSubreporte2.replaceAll("%20", " ");
+
+            //Obtener logo
+            String rutaLogo = ReportePedidosXCliente.class.getResource("/pe/edu/pucp/CrewmanSystem/images/icono.jpg").getPath();
+            rutaLogo = rutaLogo.replaceAll("%20", " ");
+            ImageIcon icono = new ImageIcon(rutaLogo);
+            Image imagen = icono.getImage();
+            
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection(DBManager.urlMySQL, DBManager.user, DBManager.pass);
+            
+            TimeZone.setDefault(TimeZone.getTimeZone("GMT-5"));
+            
+            HashMap hm = new HashMap();
+            hm.put("LOGO", imagen);
+            hm.put("NOMBRE", nombre);
+            hm.put("FECHA", new java.sql.Date(new Date().getTime()));
+            hm.put("ID_PEDIDO", idPedido);
+            hm.put("RUTA_SUBREPORTE",rutaSubreporte1);
+            hm.put("RUTA_SUBREPORTE2", rutaSubreporte2);
+            
+            JasperPrint jp = JasperFillManager.fillReport(reporte, hm, con);
+            
+            con.close();
+            
+            arreglo = JasperExportManager.exportReportToPdf(jp);
+                    
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        
+        return arreglo;
+    }
+    
     @WebMethod(operationName = "generarReportePedidosXCliente")
     public byte[] generarReportePedidosXCliente(@WebParam(name = "tipoCliente") String tipoCliente,
             @WebParam(name = "estadoPedido") String estadoPedido, 
