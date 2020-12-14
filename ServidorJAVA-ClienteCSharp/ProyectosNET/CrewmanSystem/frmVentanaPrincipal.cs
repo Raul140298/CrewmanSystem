@@ -28,7 +28,7 @@ namespace CrewmanSystem
 		public static IconButton elim;
 		public static int nBtn;
 		public static int antBtn;
-		
+		public static bool busquedaActiva;
 		public CrewPantalla home;
 		public bool ishome;
 
@@ -864,7 +864,7 @@ namespace CrewmanSystem
 
 		private void btnSegmentacion_Click(object sender, EventArgs e)
         {
-			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmSegmentarClientes(), false, false, false, false, false);
+			ClickBoton((IconButton)sender, null, null, Program.color0, BTNtipo.btnSinPanel, new frmIniciarTemporada(), false, false, false, false, false);
 		}
 
 		private void btnPerfil_Click(object sender, EventArgs e)
@@ -931,6 +931,8 @@ namespace CrewmanSystem
 
 		private void btnEliminar_Click(object sender, EventArgs e)
 		{
+			if (estado == BTNestado.buscar) busquedaActiva = true;
+			else busquedaActiva = false;
 			estado = BTNestado.eliminar;
 			estadoBotones();
 			frmConfirmarEliminar confirma = new frmConfirmarEliminar();
@@ -940,6 +942,15 @@ namespace CrewmanSystem
 				llamarMetodosDAO((IconButton)sender, 2);
 				MessageBox.Show("Se eliminó correctamente", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				llamarMetodosDAO(null, 4);
+			}
+			else
+			{
+				//Se canceló.
+			}
+			if (busquedaActiva == true)
+			{
+				estado = BTNestado.buscar;
+				estadoBotones();
 			}
 		}
 
@@ -966,7 +977,7 @@ namespace CrewmanSystem
 			modificaPagina();
 		}
 
-		private void btnRecarga_Click(object sender, EventArgs e)
+		public void btnRecarga_Click(object sender, EventArgs e)
 		{
 			if (ishome == true)
 			{
@@ -1021,6 +1032,6 @@ namespace CrewmanSystem
 		}
 
 
-        #endregion
-    }
+		#endregion
+	}
 }

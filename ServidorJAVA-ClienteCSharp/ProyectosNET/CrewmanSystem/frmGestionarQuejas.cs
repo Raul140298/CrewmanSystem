@@ -34,6 +34,13 @@ namespace CrewmanSystem
 			
 			dgvQuejas.AutoGenerateColumns = false;
 
+			if (Program.empleado.cargo.nombre == "VENDEDOR")
+			{
+				dgvQuejas.Columns["NOMBRE"].Visible = false;
+				dgvQuejas.Columns["APELLIDO_PATERNO"].Visible = false;
+				dgvQuejas.Columns["APELLIDO_MATERNO"].Visible = false;
+			}
+
 			recargarDGV();
 
 			#region colores de seleccion
@@ -64,8 +71,7 @@ namespace CrewmanSystem
 				}
 			}
 		}
-
-		private void dgvQuejas_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        private void dgvQuejas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
 		{
 			try
 			{
@@ -83,79 +89,38 @@ namespace CrewmanSystem
 			}
 			catch (Exception) { }
 		}
-
 		public static void eliminar()
 		{
 			quejaSeleccionada = (QuejaWS.queja)dgv.CurrentRow.DataBoundItem;
 			daoQueja.eliminarQueja(quejaSeleccionada.idQueja);
 		}
-
-		private void dgvQuejas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		private void dgvQuejas_SelectionChanged(object sender, EventArgs e)
 		{
-			frmVentanaPrincipal.act.Enabled = false;
-			frmVentanaPrincipal.elim.Enabled = false;
-		}
-
-		private void dgvQuejas_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-		{
-			//Preguntar al profe
-			if (e.StateChanged != DataGridViewElementStates.Selected)
+			if (dgvQuejas.SelectedCells.Count != 1 && dgvQuejas.SelectedCells.Count != 0)
 			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
 				return;
 			}
 			else
 			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
 			}
 		}
 
-		public void recargarDGV()
+        public void recargarDGV()
 		{
 			misQuejas = daoQueja.listarQuejas(Program.empleado.idEmpleado);
 			if (misQuejas != null)
+			{
 				dgvQuejas.DataSource = new BindingList<QuejaWS.queja>(misQuejas.ToArray());
-			else
-				dgvQuejas.DataSource = new BindingList<QuejaWS.queja>();
-
-			if (Program.empleado.cargo.nombre == "VENDEDOR")
-			{
-				dgvQuejas.Columns["NOMBRE"].Visible = false;
-				dgvQuejas.Columns["APELLIDO_PATERNO"].Visible = false;
-				dgvQuejas.Columns["APELLIDO_MATERNO"].Visible = false;
+				lblNotFound.Visible = false;
 			}
-		}
-		public void revisarDGV(object source, ElapsedEventArgs e)
-		{
-
-			if (dgvQuejas.InvokeRequired)
+			else
 			{
-				dgvQuejas.Invoke(new Action(() =>
-				{
-					if (dgvQuejas.Rows.Count > 0)
-					{
-						int i = ((QuejaWS.queja)dgvQuejas.CurrentRow.DataBoundItem).idQueja;
-						int j = dgvQuejas.CurrentCell.ColumnIndex;
-
-						recargarDGV();
-
-						int k = 0;
-						foreach (QuejaWS.queja q in misQuejas)
-						{
-							if (q.idQueja == i)
-							{
-								i = k;
-								break;
-							}
-							k++;
-						}
-
-						if (k != misQuejas.Length)
-							dgv.CurrentCell = dgv[j, i];
-					}
-				}));
+				dgvQuejas.DataSource = new BindingList<QuejaWS.queja>();
+				lblNotFound.Visible = true;
 			}
 		}
 	}

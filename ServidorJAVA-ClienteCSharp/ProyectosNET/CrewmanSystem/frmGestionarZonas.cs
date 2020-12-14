@@ -24,44 +24,36 @@ namespace CrewmanSystem
 
 			daoZona = new ZonaWS.ZonaWSClient();
 			InitializeComponent();
-			dgv = dataGridView1;
-			dataGridView1.AutoGenerateColumns = false;
+			dgv = dgvZonas;
+			dgvZonas.AutoGenerateColumns = false;
 			recargarDGV();
 			#region colores de seleccion
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvZonas.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvZonas.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvZonas.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvZonas.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvZonas.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvZonas.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
-
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		private void dgvZonas_SelectionChanged(object sender, EventArgs e)
 		{
-			frmVentanaPrincipal.act.Enabled = false;
-			frmVentanaPrincipal.elim.Enabled = false;
-		}
-
-		private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-		{
-			//Preguntar al profe
-			if (e.StateChanged != DataGridViewElementStates.Selected)
+			if (dgvZonas.SelectedCells.Count != 1 && dgvZonas.SelectedCells.Count != 0)
 			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
 				return;
 			}
 			else
 			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
 			}
 		}
 
-		public static void eliminar()
+        public static void eliminar()
 		{
 			zonaSeleccionada = (ZonaWS.zona)dgv.CurrentRow.DataBoundItem;
 			daoZona.eliminarZona(zonaSeleccionada.idZona);
@@ -71,47 +63,14 @@ namespace CrewmanSystem
 			misZonas = daoZona.listarZonas();
 			if (misZonas != null)
 			{
-				dataGridView1.DataSource = new BindingList<ZonaWS.zona>(misZonas.ToArray());
+				dgvZonas.DataSource = new BindingList<ZonaWS.zona>(misZonas.ToArray());
+				lblNotFound.Visible = false;
 			}
 			else
 			{
-				dataGridView1.DataSource = new BindingList<ZonaWS.zona>();
-
+				dgvZonas.DataSource = new BindingList<ZonaWS.zona>();
+				lblNotFound.Visible = true;
 			}
 		}
-		
-		public void revisarDGV(object source, ElapsedEventArgs e)
-		{
-
-			if (dataGridView1.InvokeRequired)
-			{
-				dataGridView1.Invoke(new Action(() =>
-				{
-					if (dataGridView1.Rows.Count > 0)
-					{
-						int i = ((ZonaWS.zona)dataGridView1.CurrentRow.DataBoundItem).idZona;
-						int j = dataGridView1.CurrentCell.ColumnIndex;
-
-						recargarDGV();
-
-						int k = 0;
-						foreach (ZonaWS.zona z in misZonas)
-						{
-							if (z.idZona == i)
-							{
-								i = k;
-								break;
-							}
-							k++;
-						}
-
-						if (k != misZonas.Length)
-							dataGridView1.CurrentCell = dataGridView1[j, i];
-					}
-				}));
-            }
-        }
-
-
 	}
 }

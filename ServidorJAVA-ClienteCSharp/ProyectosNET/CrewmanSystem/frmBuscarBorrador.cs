@@ -31,7 +31,7 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dtpRangoIni.Value = DateTime.Today.AddMonths(-3);
 			dtpRangoFin.Value = DateTime.Today.AddMonths(3);
-			dgv = dgvPedidos;
+			dgv = dgvBorradores;
 			clienteSeleccionado = new ClienteWS.cliente();
 			clienteSeleccionado.idCliente = 0;
 			txtRuc.Text = "";
@@ -61,14 +61,14 @@ namespace CrewmanSystem
 
 			completarTabla();
 			#region colores de seleccion
-			dgvPedidos.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dgvPedidos.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvBorradores.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvBorradores.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dgvPedidos.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dgvPedidos.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvBorradores.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvBorradores.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dgvPedidos.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dgvPedidos.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvBorradores.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvBorradores.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
 
@@ -86,27 +86,27 @@ namespace CrewmanSystem
 				daoPedido.listarPedidos(Program.empleado.idEmpleado, txtRuc.Text, txtGrupo.Text, dtpRangoIni.Value, dtpRangoFin.Value, miTipo, miEstado);
 			}
 
-			dgvPedidos.AutoGenerateColumns = false;
+			dgvBorradores.AutoGenerateColumns = false;
 			if (misPedidos != null)
 			{
-				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
+				dgvBorradores.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
 				lblNotFound.Visible = false;
 			}
 			else
 			{
-				dgvPedidos.DataSource = new BindingList<PedidoWS.pedido>();
+				dgvBorradores.DataSource = new BindingList<PedidoWS.pedido>();
 				lblNotFound.Visible = true;
 			}
 			if (Program.empleado.cargo.nombre == "VENDEDOR")
 			{
-				dgvPedidos.Columns["NOMBRE"].Visible = false;
-				dgvPedidos.Columns["APELLIDO_PATERNO"].Visible = false;
-				dgvPedidos.Columns["APELLIDO_MATERNO"].Visible = false;
+				dgvBorradores.Columns["NOMBRE"].Visible = false;
+				dgvBorradores.Columns["APELLIDO_PATERNO"].Visible = false;
+				dgvBorradores.Columns["APELLIDO_MATERNO"].Visible = false;
 			}
 		}
-		private void dgvPedidos_SelectionChanged(object sender, EventArgs e)
+		private void dgvBorradores_SelectionChanged(object sender, EventArgs e)
 		{
-			if (dgvPedidos.SelectedCells.Count != 1 && dgvPedidos.SelectedCells.Count != 0)
+			if (((PedidoWS.pedido)dgvBorradores.CurrentRow.DataBoundItem).estadoPedido == PedidoWS.estadoPedido.ESPERANDO && dgvBorradores.SelectedCells.Count != 1 && dgvBorradores.SelectedCells.Count != 0)
 			{
 				frmVentanaPrincipal.act.Enabled = true;
 				frmVentanaPrincipal.elim.Enabled = true;
@@ -118,26 +118,26 @@ namespace CrewmanSystem
 				frmVentanaPrincipal.elim.Enabled = false;
 			}
 		}
-		private void dgvPedidos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void dgvBorradores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
 		{
 			//castear objetos y mostrar valor determinado
 			try
 			{
-				PedidoWS.pedido pedido = dgvPedidos.Rows[e.RowIndex].DataBoundItem
+				PedidoWS.pedido pedido = dgvBorradores.Rows[e.RowIndex].DataBoundItem
 				as PedidoWS.pedido;
-				dgvPedidos.Rows[e.RowIndex].Cells["RUC"].Value = pedido.cliente.ruc;
-				dgvPedidos.Rows[e.RowIndex].Cells["RAZON_SOCIAL"].Value = pedido.cliente.razonSocial;
-				dgvPedidos.Rows[e.RowIndex].Cells["GRUPO"].Value = pedido.cliente.grupo;
-				dgvPedidos.Rows[e.RowIndex].Cells["TIPO_CLIENTE"].Value = pedido.cliente.tipoEmpresa;
-				dgvPedidos.Rows[e.RowIndex].Cells["NOMBRE"].Value = pedido.empleado.nombre;
-				dgvPedidos.Rows[e.RowIndex].Cells["APELLIDO_PATERNO"].Value = pedido.empleado.apellidoPaterno;
-				dgvPedidos.Rows[e.RowIndex].Cells["APELLIDO_MATERNO"].Value = pedido.empleado.apellidoMaterno;
-				dgvPedidos.Rows[e.RowIndex].Cells["FECHA_REGISTRO"].Value = pedido.fechaRegistro.ToString("dd/MM/yyyy");
+				dgvBorradores.Rows[e.RowIndex].Cells["RUC"].Value = pedido.cliente.ruc;
+				dgvBorradores.Rows[e.RowIndex].Cells["RAZON_SOCIAL"].Value = pedido.cliente.razonSocial;
+				dgvBorradores.Rows[e.RowIndex].Cells["GRUPO"].Value = pedido.cliente.grupo;
+				dgvBorradores.Rows[e.RowIndex].Cells["TIPO_CLIENTE"].Value = pedido.cliente.tipoEmpresa;
+				dgvBorradores.Rows[e.RowIndex].Cells["NOMBRE"].Value = pedido.empleado.nombre;
+				dgvBorradores.Rows[e.RowIndex].Cells["APELLIDO_PATERNO"].Value = pedido.empleado.apellidoPaterno;
+				dgvBorradores.Rows[e.RowIndex].Cells["APELLIDO_MATERNO"].Value = pedido.empleado.apellidoMaterno;
+				dgvBorradores.Rows[e.RowIndex].Cells["FECHA_REGISTRO"].Value = pedido.fechaRegistro.ToString("dd/MM/yyyy");
 			}
 			catch (Exception) { }
 		}
 
-        public static void eliminar()
+		public static void eliminar()
 		{
 			pedidoSeleccionado = (PedidoWS.pedido)dgv.CurrentRow.DataBoundItem;
 			daoPedido.eliminarPedido(pedidoSeleccionado.idPedido);
@@ -150,7 +150,7 @@ namespace CrewmanSystem
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-			if(dgvPedidos.DataSource !=null && dgvPedidos.CurrentRow.Index >= 0)
+			if(dgvBorradores.DataSource !=null && dgvBorradores.CurrentRow.Index >= 0)
             {
 				pedidoSeleccionado = (PedidoWS.pedido)dgv.CurrentRow.DataBoundItem;
 				this.DialogResult = DialogResult.OK;

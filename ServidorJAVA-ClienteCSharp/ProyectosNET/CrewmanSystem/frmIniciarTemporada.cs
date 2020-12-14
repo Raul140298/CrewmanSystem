@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace CrewmanSystem
 {
-    public partial class frmSegmentarClientes : Form
+    public partial class frmIniciarTemporada : Form
     {
         ClienteWS.ClienteWSClient daoCliente = new ClienteWS.ClienteWSClient();
-        public frmSegmentarClientes()
+        public frmIniciarTemporada()
         {
             InitializeComponent();
             DateTime fecha = daoCliente.obtenerInfoSeg();
@@ -27,10 +27,10 @@ namespace CrewmanSystem
             {
                 if (daoCliente.segmentarClientes() != 0)
                 {
-                    MessageBox.Show("Clientes segmentados exitosamente", "Mensaje de resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Nueva temporada iniciada exitosamente", "Mensaje de resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtFecha.Text = DateTime.Now.ToString("d");
                 }
-                else MessageBox.Show("Error en la segmentación de clientes", "Mensaje de resultado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else MessageBox.Show("Error en el inicio de una nueva temporada", "Mensaje de resultado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

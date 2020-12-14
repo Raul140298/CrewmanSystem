@@ -23,6 +23,13 @@ namespace CrewmanSystem
 			InitializeComponent();
 			dgv = dgvFacturas;
 			dgvFacturas.AutoGenerateColumns = false;
+
+			if (Program.empleado.cargo.nombre == "VENDEDOR")
+			{
+				dgvFacturas.Columns["NOMBRE"].Visible = false;
+				dgvFacturas.Columns["APELLIDO_PATERNO"].Visible = false;
+				dgvFacturas.Columns["APELLIDO_MATERNO"].Visible = false;
+			}
 			recargarDGV();
 
 			#region colores de seleccion
@@ -36,29 +43,22 @@ namespace CrewmanSystem
 			dgvFacturas.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
-
-		private void dgvFacturas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		private void dgvFacturas_SelectionChanged(object sender, EventArgs e)
 		{
-			frmVentanaPrincipal.act.Enabled = false;
-		}
-
-		private void dgvFacturas_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-		{
-			//Preguntar al profe
-			if (e.StateChanged != DataGridViewElementStates.Selected)
+			if (dgvFacturas.SelectedCells.Count != 1 && dgvFacturas.SelectedCells.Count != 0)
 			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
 				return;
 			}
 			else
 			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
 			}
 		}
 
-		public static void eliminar()
+        public static void eliminar()
 		{
 			facturaSeleccionada = (FacturaWS.factura)dgv.CurrentRow.DataBoundItem;
 			daoFactura.eliminarFactura(facturaSeleccionada);
@@ -100,48 +100,16 @@ namespace CrewmanSystem
 																		DateTime.MinValue, DateTime.MaxValue,
 																		DateTime.MinValue, DateTime.MaxValue, 2, 2);
 			if (misFacturas != null)
+			{
 				dgvFacturas.DataSource = new BindingList<FacturaWS.factura>(misFacturas.ToArray());
+				lblNotFound.Visible = false;
+			}
 			else
+			{
 				dgvFacturas.DataSource = new BindingList<FacturaWS.factura>();
-
-			if (Program.empleado.cargo.nombre == "VENDEDOR")
-			{
-				dgvFacturas.Columns["NOMBRE"].Visible = false;
-				dgvFacturas.Columns["APELLIDO_PATERNO"].Visible = false;
-				dgvFacturas.Columns["APELLIDO_MATERNO"].Visible = false;
+				lblNotFound.Visible = true;
 			}
-		}
-		public void revisarDGV(object source, ElapsedEventArgs e)
-		{
 
-			if (dgvFacturas.InvokeRequired)
-			{
-				dgvFacturas.Invoke(new Action(() =>
-				{
-					
-					if (dgvFacturas.Rows.Count > 0 )
-					{
-						int i = ((FacturaWS.factura)dgvFacturas.CurrentRow.DataBoundItem).idFactura;
-						int j = dgvFacturas.CurrentCell.ColumnIndex;
-
-						recargarDGV();
-
-						int k = 0;
-						foreach (FacturaWS.factura f in misFacturas)
-						{
-							if (f.idFactura == i)
-							{
-								i = k;
-								break;
-							}
-							k++;
-						}
-
-						if (k != misFacturas.Length)
-							dgvFacturas.CurrentCell = dgvFacturas[j, i];
-					}
-				}));
-			}
 		}
 	}
 }

@@ -22,66 +22,55 @@ namespace CrewmanSystem
 		{
 			daoPromocion = new PromocionWS.PromocionWSClient();
 			InitializeComponent();
-			dgv = dataGridView1;
-			dataGridView1.AutoGenerateColumns = false;
+			dgv = dgvPromociones;
+			dgvPromociones.AutoGenerateColumns = false;
 			recargarDGV();
 
 			#region colores de seleccion
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvPromociones.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvPromociones.ColumnHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvPromociones.RowHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvPromociones.RowHeadersDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 
-			dataGridView1.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
-			dataGridView1.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
+			dgvPromociones.RowsDefaultCellStyle.SelectionBackColor = Program.colorR;
+			dgvPromociones.RowsDefaultCellStyle.SelectionForeColor = ThemeColor.ChangeColorBrightness(Program.colorR, -0.7);
 			#endregion
 		}
-
-        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-			PromocionWS.promocion promocion = dataGridView1.Rows[e.RowIndex].DataBoundItem
+        private void dgvPromociones_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+		{
+			PromocionWS.promocion promocion = dgvPromociones.Rows[e.RowIndex].DataBoundItem
 			as PromocionWS.promocion;
 
-			dataGridView1.Rows[e.RowIndex].Cells["ZONA"].Value = promocion.zona.nombre;
+			dgvPromociones.Rows[e.RowIndex].Cells["ZONA"].Value = promocion.zona.nombre;
 		}
-
-		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		private void dgvPromociones_SelectionChanged(object sender, EventArgs e)
 		{
-			frmVentanaPrincipal.act.Enabled = false;
-			frmVentanaPrincipal.elim.Enabled = false;
-		}
-
-		private void dataGridView1_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-		{
-			//Preguntar al profe
-			if (e.StateChanged != DataGridViewElementStates.Selected)
+			if (dgvPromociones.SelectedCells.Count != 1 && dgvPromociones.SelectedCells.Count != 0)
 			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
 				return;
 			}
 			else
 			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
 			}
 		}
-
-		public static void eliminar()
+        public static void eliminar()
 		{
 			promocionSeleccionada = (PromocionWS.promocion)dgv.CurrentRow.DataBoundItem;
 			daoPromocion.eliminarPromocion(promocionSeleccionada.idPromocion);
 		}
-
-        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
+        private void dgvPromociones_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+		{
 			promocionSeleccionada = (PromocionWS.promocion)dgv.CurrentRow.DataBoundItem;
 			frmMostrarPromocion formMostrarPromocion = new frmMostrarPromocion(promocionSeleccionada);
-			if(formMostrarPromocion.ShowDialog() == DialogResult.OK)
-            {
-            }
-        }
+			if (formMostrarPromocion.ShowDialog() == DialogResult.OK)
+			{
+			}
+		}
 
 		public void recargarDGV()
 		{
@@ -91,42 +80,13 @@ namespace CrewmanSystem
 				misPromocions = daoPromocion.listarPromocions("", DateTime.MinValue, DateTime.MaxValue);
 			if (misPromocions != null)
 			{
-				dataGridView1.DataSource = new BindingList<PromocionWS.promocion>(misPromocions.ToArray());
+				dgvPromociones.DataSource = new BindingList<PromocionWS.promocion>(misPromocions.ToArray());
+				lblNotFound.Visible = false;
 			}
 			else
 			{
-				dataGridView1.DataSource = new BindingList<PromocionWS.promocion>();
-			}
-		}
-		public void revisarDGV(object source, ElapsedEventArgs e)
-		{
-
-			if (dataGridView1.InvokeRequired)
-			{
-				dataGridView1.Invoke(new Action(() =>
-				{
-					if (dataGridView1.Rows.Count > 0)
-					{
-						int i = ((PromocionWS.promocion)dataGridView1.CurrentRow.DataBoundItem).idPromocion;
-						int j = dataGridView1.CurrentCell.ColumnIndex;
-
-						recargarDGV();
-
-						int k = 0;
-						foreach (PromocionWS.promocion p in misPromocions)
-						{
-							if (p.idPromocion == i)
-							{
-								i = k;
-								break;
-							}
-							k++;
-						}
-
-						if (k != misPromocions.Length)
-							dataGridView1.CurrentCell = dgv[j, i];
-					}
-				}));
+				dgvPromociones.DataSource = new BindingList<PromocionWS.promocion>();
+				lblNotFound.Visible = true;
 			}
 		}
 	}

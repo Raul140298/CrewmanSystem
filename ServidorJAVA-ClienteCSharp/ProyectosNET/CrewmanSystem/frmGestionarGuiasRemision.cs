@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,32 +56,35 @@ namespace CrewmanSystem
 			}
             catch (Exception){ }
 		}
-
-        private void dgvGuiasDeRemision_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-        {
-			//Preguntar al profe
-			if (e.StateChanged != DataGridViewElementStates.Selected)
+		private void dgvGuiasDeRemision_SelectionChanged(object sender, EventArgs e)
+		{
+			if (dgvGuiasDeRemision.SelectedCells.Count != 1 && dgvGuiasDeRemision.SelectedCells.Count != 0)
 			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
 				return;
 			}
 			else
 			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
 			}
-			
 		}
-		public void recargarDGV()
+        public void recargarDGV()
 		{
 			misGuias =
 				daoGuiaRemision.listarGuiaRemisions(Program.empleado.idEmpleado, "", "", DateTime.Today.AddMonths(-3),
 				DateTime.Today.AddMonths(3), DateTime.Today.AddMonths(-3), DateTime.Today.AddMonths(3));
 			if (misGuias == null)
+			{
 				dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>();
+				lblNotFound.Visible = true;
+			}
 			else
+			{
 				dgvGuiasDeRemision.DataSource = new BindingList<GuiaRemisionWS.guiaRemision>(misGuias.ToList());
+				lblNotFound.Visible = false;
+			}
 
 			if (Program.empleado.cargo.nombre == "VENDEDOR")
 			{
@@ -89,37 +93,26 @@ namespace CrewmanSystem
 				dgvGuiasDeRemision.Columns["APELLIDO_MATERNO"].Visible = false;
 			}
 		}
-		public void revisarDGV(object source, ElapsedEventArgs e)
-		{
 
-			if (dgvGuiasDeRemision.InvokeRequired)
+        private void dgvGuiasDeRemision_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+			if (e.ColumnIndex == 0)
 			{
-				dgvGuiasDeRemision.Invoke(new Action(() =>
+				if (sfdGuia.ShowDialog() == DialogResult.OK)
 				{
-					if (dgvGuiasDeRemision.Rows.Count > 0)
+					try
 					{
-						int i = ((GuiaRemisionWS.guiaRemision)dgvGuiasDeRemision.CurrentRow.DataBoundItem).idGuiaRemision;
-						int j = dgvGuiasDeRemision.CurrentCell.ColumnIndex;
-
-						recargarDGV();
-
-						int k = 0;
-						foreach (GuiaRemisionWS.guiaRemision g in misGuias)
-						{
-							if (g.idGuiaRemision == i)
-							{
-								i = k;
-								break;
-							}
-							k++;
-						}
-
-						if (k != misGuias.Length)
-							dgvGuiasDeRemision.CurrentCell = dgvGuiasDeRemision[j, i];
-
+						//byte[] arreglo = daoReporte.generarGuiaDeRemision(((GuiaRemisionWS.guiaRemision)dgvGuiasDeRemision.CurrentRow.DataBoundItem).pedido.idPedido);
+						//File.WriteAllBytes(sfdGuia.FileName, arreglo);
+						MessageBox.Show("El reporte fue generado con exito", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 					}
-				}));
+					catch (Exception)
+					{
+						MessageBox.Show("No se pudo generar el reporte", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					}
+				}
+
 			}
 		}
-	}
+    }
 }

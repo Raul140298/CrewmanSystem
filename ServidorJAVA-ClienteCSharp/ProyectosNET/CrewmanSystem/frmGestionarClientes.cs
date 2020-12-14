@@ -47,29 +47,7 @@ namespace CrewmanSystem
 			dgvClientes.Rows[e.RowIndex].Cells["ZONA"].Value = cliente.zona.nombre;
 		}
 
-		private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
-			frmVentanaPrincipal.act.Enabled = false;
-			frmVentanaPrincipal.elim.Enabled = false;
-		}
-
-        private void dgvClientes_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
-		{
-			//Preguntar al profe
-			if (e.StateChanged != DataGridViewElementStates.Selected)
-			{
-				//frmVentanaPrincipal.act.Enabled = false;
-				//frmVentanaPrincipal.elim.Enabled = false;
-				return;
-			}
-			else
-			{
-				frmVentanaPrincipal.act.Enabled = true;
-				frmVentanaPrincipal.elim.Enabled = true;
-			}
-		}
-
-		public static void eliminar()
+        public static void eliminar()
 		{
 			clienteSeleccionado = (ClienteWS.cliente)dgv.CurrentRow.DataBoundItem;
 			daoCliente.eliminarCliente(clienteSeleccionado.idCliente);
@@ -101,40 +79,28 @@ namespace CrewmanSystem
 		{
 			misClientes = daoCliente.listarClientes("", "", 0);
 			if (misClientes != null)
-				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
-			else
-				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>();
-		}
-
-		public void revisarDGV(object source, ElapsedEventArgs e)
-		{
-
-			if (dgvClientes.InvokeRequired)
 			{
-				dgvClientes.Invoke(new Action(() =>
-				{
-					if (dgvClientes.Rows.Count > 0)
-					{
-						int i = ((ClienteWS.cliente)dgvClientes.CurrentRow.DataBoundItem).idCliente;
-						int j = dgvClientes.CurrentCell.ColumnIndex;
-
-						recargarDGV();
-
-						int k = 0;
-						foreach (ClienteWS.cliente c in misClientes)
-						{
-							if (c.idCliente== i)
-							{
-								i = k;
-								break;
-							}
-							k++;
-						}
-
-						if (k != misClientes.Length)
-							dgvClientes.CurrentCell = dgvClientes[j, i];
-					}
-				}));
+				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>(misClientes.ToArray());
+				lblNotFound.Visible = false;
+			}
+			else
+			{
+				dgvClientes.DataSource = new BindingList<ClienteWS.cliente>();
+				lblNotFound.Visible = true;
+			}
+		}
+		private void dgvClientes_SelectionChanged(object sender, EventArgs e)
+		{
+			if (dgvClientes.SelectedCells.Count != 1 && dgvClientes.SelectedCells.Count != 0)
+			{
+				frmVentanaPrincipal.act.Enabled = true;
+				frmVentanaPrincipal.elim.Enabled = true;
+				return;
+			}
+			else
+			{
+				frmVentanaPrincipal.act.Enabled = false;
+				frmVentanaPrincipal.elim.Enabled = false;
 			}
 		}
 	}
