@@ -329,13 +329,15 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="anular">
+  <xs:complexType name="entregarPedido">
     <xs:sequence>
-      <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
+      <xs:element name="idPedido" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="anularResponse">
-    <xs:sequence />
+  <xs:complexType name="entregarPedidoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="generarReporte">
     <xs:sequence>
@@ -347,15 +349,13 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pedido" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="entregarPedido">
+  <xs:complexType name="anular">
     <xs:sequence>
-      <xs:element name="idPedido" type="xs:int" />
+      <xs:element minOccurs="0" name="pedido" type="tns:pedido" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="entregarPedidoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
+  <xs:complexType name="anularResponse">
+    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="insertarTotal">
     <xs:sequence>
