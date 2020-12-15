@@ -79,6 +79,8 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txtStock = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             this.gboPedido.SuspendLayout();
             this.gboCliente.SuspendLayout();
@@ -305,6 +307,8 @@
             // gboLineaPedido
             // 
             this.gboLineaPedido.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.gboLineaPedido.Controls.Add(this.txtStock);
+            this.gboLineaPedido.Controls.Add(this.label13);
             this.gboLineaPedido.Controls.Add(this.btnBuscarProductoXZona);
             this.gboLineaPedido.Controls.Add(this.btnAdd);
             this.gboLineaPedido.Controls.Add(this.btnRemove);
@@ -662,6 +666,27 @@
             this.panel4.Size = new System.Drawing.Size(20, 231);
             this.panel4.TabIndex = 99;
             // 
+            // txtStock
+            // 
+            this.txtStock.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtStock.Enabled = false;
+            this.txtStock.Location = new System.Drawing.Point(466, 111);
+            this.txtStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(73, 19);
+            this.txtStock.TabIndex = 85;
+            // 
+            // label13
+            // 
+            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label13.Location = new System.Drawing.Point(305, 108);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(155, 22);
+            this.label13.TabIndex = 84;
+            this.label13.Text = "Stock Disponible :";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmNuevoBorrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -734,5 +759,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.Label label13;
     }
 }

@@ -132,11 +132,17 @@ namespace CrewmanSystem
                 txtIdProducto.Text = productoXZonaSeleccionado.idProductoXZona.ToString();
                 txtNombreProducto.Text = productoXZonaSeleccionado.producto.nombre;
                 txtPrecioUnitario.Text = productoXZonaSeleccionado.precioReal.ToString("N2");
+                txtStock.Text = (productoXZonaSeleccionado.producto.stock - productoXZonaSeleccionado.producto.stockReservado).ToString();
             }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (txtIdProducto.Text == "")
+            {
+                MessageBox.Show("Debe escoger un producto", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             try
             {
                 Int32.Parse(txtCantidad.Text);
@@ -149,6 +155,11 @@ namespace CrewmanSystem
             if (Convert.ToInt32(txtCantidad.Text)<=0)
             {
                 MessageBox.Show("La cantidad de productos deben ser mayores a 0", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if(Convert.ToInt32(txtCantidad.Text)> Convert.ToInt32(txtStock.Text))
+            {
+                MessageBox.Show("La cantidad de productos no puede exceder el stock disponible", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             foreach (LineaPedidoWS.lineaPedido lp in lineas)
