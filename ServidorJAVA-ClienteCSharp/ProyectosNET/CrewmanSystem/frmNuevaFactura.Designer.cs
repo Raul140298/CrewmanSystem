@@ -237,6 +237,7 @@
             // cboEstadoPagar
             // 
             this.cboEstadoPagar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEstadoPagar.Enabled = false;
             this.cboEstadoPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboEstadoPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cboEstadoPagar.FormattingEnabled = true;
@@ -244,6 +245,7 @@
             this.cboEstadoPagar.Name = "cboEstadoPagar";
             this.cboEstadoPagar.Size = new System.Drawing.Size(174, 28);
             this.cboEstadoPagar.TabIndex = 104;
+            this.cboEstadoPagar.Visible = false;
             // 
             // label8
             // 
@@ -255,6 +257,7 @@
             this.label8.TabIndex = 105;
             this.label8.Text = "Estado de pago :";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label8.Visible = false;
             // 
             // label9
             // 
