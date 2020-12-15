@@ -1002,7 +1002,7 @@ namespace CrewmanSystem
 				{
 					if (c is DataGridView)
 					{
-						MessageBox.Show(c.Name);
+						//MessageBox.Show(c.Name);
 						llamarMetodosDAO(null, 4);
 					}
 					if (c is Panel)
@@ -1012,17 +1012,17 @@ namespace CrewmanSystem
 						{
 							if (c2 is DataGridView)
 							{
-								MessageBox.Show(c2.Name);
+								//MessageBox.Show(c2.Name);
 								llamarMetodosDAO(null, 4);
 							}
 							if (c2 is Panel)
 							{
-								MessageBox.Show(c2.Name);
+								//MessageBox.Show(c2.Name);
 								foreach (Control c3 in c2.Controls)
 								{
 									if (c3 is DataGridView)
 									{
-										MessageBox.Show(c3.Name);
+										//MessageBox.Show(c3.Name);
 										llamarMetodosDAO(null, 4);
 									}
 								}
