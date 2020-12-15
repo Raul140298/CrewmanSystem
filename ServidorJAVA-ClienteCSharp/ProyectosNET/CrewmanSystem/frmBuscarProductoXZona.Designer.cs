@@ -49,16 +49,16 @@
             this.lblID = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvProductoXZona = new System.Windows.Forms.DataGridView();
+            this.lblNotFound = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRECIO_REAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CANT_UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRECIO_REAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SUBFAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblNotFound = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductoXZona)).BeginInit();
             this.SuspendLayout();
@@ -223,9 +223,9 @@
             this.ID,
             this.PRODUCTO,
             this.ZONA,
-            this.PRECIO_REAL,
             this.CANT_UNIDADES,
             this.UNIDADES,
+            this.PRECIO_REAL,
             this.MARCA,
             this.SUBFAMILIA,
             this.FAMILIA});
@@ -256,6 +256,19 @@
             this.dgvProductoXZona.TabIndex = 47;
             this.dgvProductoXZona.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProductoXZona_CellFormatting);
             // 
+            // lblNotFound
+            // 
+            this.lblNotFound.AutoSize = true;
+            this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotFound.Location = new System.Drawing.Point(363, 230);
+            this.lblNotFound.Name = "lblNotFound";
+            this.lblNotFound.Size = new System.Drawing.Size(230, 20);
+            this.lblNotFound.TabIndex = 54;
+            this.lblNotFound.Text = "No se encontraron resultados";
+            this.lblNotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNotFound.Visible = false;
+            // 
             // ID
             // 
             this.ID.DataPropertyName = "idProductoXZona";
@@ -283,24 +296,12 @@
             this.ZONA.ReadOnly = true;
             this.ZONA.Width = 73;
             // 
-            // PRECIO_REAL
-            // 
-            this.PRECIO_REAL.DataPropertyName = "precioReal";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.PRECIO_REAL.DefaultCellStyle = dataGridViewCellStyle3;
-            this.PRECIO_REAL.HeaderText = "Precio";
-            this.PRECIO_REAL.MinimumWidth = 6;
-            this.PRECIO_REAL.Name = "PRECIO_REAL";
-            this.PRECIO_REAL.ReadOnly = true;
-            this.PRECIO_REAL.Width = 85;
-            // 
             // CANT_UNIDADES
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.CANT_UNIDADES.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.CANT_UNIDADES.DefaultCellStyle = dataGridViewCellStyle3;
             this.CANT_UNIDADES.HeaderText = "Contenido Neto";
             this.CANT_UNIDADES.MinimumWidth = 6;
             this.CANT_UNIDADES.Name = "CANT_UNIDADES";
@@ -309,13 +310,25 @@
             // 
             // UNIDADES
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.UNIDADES.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.UNIDADES.DefaultCellStyle = dataGridViewCellStyle4;
             this.UNIDADES.HeaderText = "Unidades";
             this.UNIDADES.MinimumWidth = 6;
             this.UNIDADES.Name = "UNIDADES";
             this.UNIDADES.ReadOnly = true;
             this.UNIDADES.Width = 107;
+            // 
+            // PRECIO_REAL
+            // 
+            this.PRECIO_REAL.DataPropertyName = "precioReal";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N2";
+            this.PRECIO_REAL.DefaultCellStyle = dataGridViewCellStyle5;
+            this.PRECIO_REAL.HeaderText = "Precio";
+            this.PRECIO_REAL.MinimumWidth = 6;
+            this.PRECIO_REAL.Name = "PRECIO_REAL";
+            this.PRECIO_REAL.ReadOnly = true;
+            this.PRECIO_REAL.Width = 85;
             // 
             // MARCA
             // 
@@ -340,19 +353,6 @@
             this.FAMILIA.Name = "FAMILIA";
             this.FAMILIA.ReadOnly = true;
             this.FAMILIA.Width = 91;
-            // 
-            // lblNotFound
-            // 
-            this.lblNotFound.AutoSize = true;
-            this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotFound.Location = new System.Drawing.Point(363, 230);
-            this.lblNotFound.Name = "lblNotFound";
-            this.lblNotFound.Size = new System.Drawing.Size(230, 20);
-            this.lblNotFound.TabIndex = 54;
-            this.lblNotFound.Text = "No se encontraron resultados";
-            this.lblNotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblNotFound.Visible = false;
             // 
             // frmBuscarProductoXZona
             // 
@@ -388,15 +388,15 @@
         private System.Windows.Forms.TextBox txtFamilia;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label lblNotFound;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO_REAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn CANT_UNIDADES;
         private System.Windows.Forms.DataGridViewTextBoxColumn UNIDADES;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO_REAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn MARCA;
         private System.Windows.Forms.DataGridViewTextBoxColumn SUBFAMILIA;
         private System.Windows.Forms.DataGridViewTextBoxColumn FAMILIA;
-        private System.Windows.Forms.Label lblNotFound;
     }
 }

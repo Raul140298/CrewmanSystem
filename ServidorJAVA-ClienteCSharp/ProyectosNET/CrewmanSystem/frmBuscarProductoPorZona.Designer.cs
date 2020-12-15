@@ -29,14 +29,13 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarProductoPorZona));
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -56,7 +55,6 @@
             this.CANT_UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRECIO_REAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRECIO_SUGERIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.STOCK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MARCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SUBFAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,7 +88,6 @@
             this.CANT_UNIDADES,
             this.UNIDADES,
             this.PRECIO_REAL,
-            this.PRECIO_SUGERIDO,
             this.STOCK,
             this.MARCA,
             this.SUBFAMILIA,
@@ -103,20 +100,20 @@
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvProductos.RowHeadersWidth = 51;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvProductos.RowHeadersWidth = 51;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvProductos.RowTemplate.Height = 24;
             this.dgvProductos.Size = new System.Drawing.Size(998, 322);
             this.dgvProductos.TabIndex = 48;
@@ -277,11 +274,11 @@
             // 
             // NOMBRE
             // 
-            this.NOMBRE.HeaderText = "Nombre";
+            this.NOMBRE.HeaderText = "Producto";
             this.NOMBRE.MinimumWidth = 6;
             this.NOMBRE.Name = "NOMBRE";
             this.NOMBRE.ReadOnly = true;
-            this.NOMBRE.Width = 96;
+            this.NOMBRE.Width = 104;
             // 
             // CANT_UNIDADES
             // 
@@ -311,27 +308,16 @@
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle5.Format = "N2";
             this.PRECIO_REAL.DefaultCellStyle = dataGridViewCellStyle5;
-            this.PRECIO_REAL.HeaderText = "Precio Real";
+            this.PRECIO_REAL.HeaderText = "Precio";
             this.PRECIO_REAL.MinimumWidth = 6;
             this.PRECIO_REAL.Name = "PRECIO_REAL";
             this.PRECIO_REAL.ReadOnly = true;
-            this.PRECIO_REAL.Width = 124;
-            // 
-            // PRECIO_SUGERIDO
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Format = "N2";
-            this.PRECIO_SUGERIDO.DefaultCellStyle = dataGridViewCellStyle6;
-            this.PRECIO_SUGERIDO.HeaderText = "Precio Sugerido";
-            this.PRECIO_SUGERIDO.MinimumWidth = 6;
-            this.PRECIO_SUGERIDO.Name = "PRECIO_SUGERIDO";
-            this.PRECIO_SUGERIDO.ReadOnly = true;
-            this.PRECIO_SUGERIDO.Width = 156;
+            this.PRECIO_REAL.Width = 85;
             // 
             // STOCK
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.STOCK.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.STOCK.DefaultCellStyle = dataGridViewCellStyle6;
             this.STOCK.HeaderText = "Stock";
             this.STOCK.MinimumWidth = 6;
             this.STOCK.Name = "STOCK";
@@ -401,7 +387,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CANT_UNIDADES;
         private System.Windows.Forms.DataGridViewTextBoxColumn UNIDADES;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO_REAL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO_SUGERIDO;
         private System.Windows.Forms.DataGridViewTextBoxColumn STOCK;
         private System.Windows.Forms.DataGridViewTextBoxColumn MARCA;
         private System.Windows.Forms.DataGridViewTextBoxColumn SUBFAMILIA;

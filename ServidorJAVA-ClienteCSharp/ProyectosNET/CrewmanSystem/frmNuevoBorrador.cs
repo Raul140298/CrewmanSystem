@@ -131,7 +131,7 @@ namespace CrewmanSystem
                 productoXZonaSeleccionado = frmBuscarProductoPorZona.productoXZonaSeleccionado;
                 txtIdProducto.Text = productoXZonaSeleccionado.idProductoXZona.ToString();
                 txtNombreProducto.Text = productoXZonaSeleccionado.producto.nombre;
-                txtPrecioUnitario.Text = productoXZonaSeleccionado.precioReal.ToString("n2");
+                txtPrecioUnitario.Text = productoXZonaSeleccionado.precioReal.ToString("N2");
             }
         }
 

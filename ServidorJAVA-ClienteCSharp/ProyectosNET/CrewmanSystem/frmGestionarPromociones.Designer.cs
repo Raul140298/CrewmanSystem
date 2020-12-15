@@ -169,6 +169,8 @@
             // 
             this.FECHA_INICIO.DataPropertyName = "fechaInicio";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
             this.FECHA_INICIO.DefaultCellStyle = dataGridViewCellStyle3;
             this.FECHA_INICIO.HeaderText = "Fecha Inicio";
             this.FECHA_INICIO.MinimumWidth = 6;

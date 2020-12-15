@@ -90,7 +90,6 @@ namespace CrewmanSystem
             dgvProductos.Rows[e.RowIndex].Cells["SUBFAMILIA"].Value = productoXZona.producto.subFamilia.descripcionSubFamilia;
             dgvProductos.Rows[e.RowIndex].Cells["FAMILIA"].Value = productoXZona.producto.subFamilia.familia.descripcion;
             dgvProductos.Rows[e.RowIndex].Cells["MARCA"].Value = productoXZona.producto.marca.nombre;
-            dgvProductos.Rows[e.RowIndex].Cells["PRECIO_SUGERIDO"].Value = productoXZona.producto.precioSugerido;
             dgvProductos.Rows[e.RowIndex].Cells["CANT_UNIDADES"].Value = productoXZona.producto.cantUnidad;
             dgvProductos.Rows[e.RowIndex].Cells["UNIDADES"].Value = productoXZona.producto.unidades;
             dgvProductos.Rows[e.RowIndex].Cells["STOCK"].Value = productoXZona.producto.stock;

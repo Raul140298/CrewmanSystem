@@ -27,10 +27,10 @@ namespace CrewmanSystem
 				Program.empleado.apellidoMaterno;
 
 			lblZona.Text = Program.empleado.zona.nombre;
-			actualizarMapa();
+			cargarValores();
 		}
 
-		public void actualizarMapa()
+		public void cargarValores()
         {
 			chartVentas.Series.Clear();
 			BindingList<EmpleadoWS.empleado> misEmpleados;
