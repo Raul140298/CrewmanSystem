@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="479RCxuFKjqCyRkX/Y5ejICmfXFD9HGwMK7IjBsvPbk=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="6sDutN0Cttv/A+vgM70ilcoicabIU5LI+GxVWSUutGE=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="basicHttpBinding" name="PedidoWSPortBinding">
+    <bindingConfiguration bindingType="basicHttpBinding" name="PedidoWSPortBinding1">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>PedidoWSPortBinding</serializedValue>
+          <serializedValue>PedidoWSPortBinding1</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="PedidoWSPort" contract="PedidoWS.PedidoWS" bindingType="basicHttpBinding" address="http://54.80.91.225:8080/CrewmanSystemServices/PedidoWS" bindingConfiguration="PedidoWSPortBinding">
+    <endpoint name="PedidoWSPort1" contract="PedidoWS.PedidoWS" bindingType="basicHttpBinding" address="http://54.80.91.225:8080/CrewmanSystemServices/PedidoWS" bindingConfiguration="PedidoWSPortBinding1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://54.80.91.225:8080/CrewmanSystemServices/PedidoWS</serializedValue>
@@ -124,7 +124,7 @@
           <serializedValue>basicHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>PedidoWSPortBinding</serializedValue>
+          <serializedValue>PedidoWSPortBinding1</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>PedidoWS.PedidoWS</serializedValue>
@@ -187,7 +187,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>PedidoWSPort</serializedValue>
+          <serializedValue>PedidoWSPort1</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
