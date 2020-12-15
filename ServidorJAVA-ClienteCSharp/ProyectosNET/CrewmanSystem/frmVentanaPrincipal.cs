@@ -997,7 +997,7 @@ namespace CrewmanSystem
 			}
 			else
 			{
-				if (Program.pantallas.Last().Formulario != null) MessageBox.Show(Program.pantallas.Last().Formulario.Name);
+				//if (Program.pantallas.Last().Formulario != null) MessageBox.Show(Program.pantallas.Last().Formulario.Name);
 				foreach (Control c in Program.pantallas.Last().Formulario.Controls)
 				{
 					if (c is DataGridView)
@@ -1007,7 +1007,7 @@ namespace CrewmanSystem
 					}
 					if (c is Panel)
 					{
-						MessageBox.Show(c.Name);
+						//MessageBox.Show(c.Name);
 						foreach (Control c2 in c.Controls)
 						{
 							if (c2 is DataGridView)
