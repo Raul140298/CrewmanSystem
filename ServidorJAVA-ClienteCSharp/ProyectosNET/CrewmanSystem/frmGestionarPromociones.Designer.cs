@@ -36,13 +36,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlGestion = new System.Windows.Forms.Panel();
             this.pnlGridView = new System.Windows.Forms.Panel();
+            this.lblNotFound = new System.Windows.Forms.Label();
             this.dgvPromociones = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_INICIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_FIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblNotFound = new System.Windows.Forms.Label();
             this.pnlGestion.SuspendLayout();
             this.pnlGridView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPromociones)).BeginInit();
@@ -68,6 +68,19 @@
             this.pnlGridView.Name = "pnlGridView";
             this.pnlGridView.Size = new System.Drawing.Size(681, 506);
             this.pnlGridView.TabIndex = 11;
+            // 
+            // lblNotFound
+            // 
+            this.lblNotFound.AutoSize = true;
+            this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotFound.Location = new System.Drawing.Point(137, 78);
+            this.lblNotFound.Name = "lblNotFound";
+            this.lblNotFound.Size = new System.Drawing.Size(230, 20);
+            this.lblNotFound.TabIndex = 13;
+            this.lblNotFound.Text = "No se encontraron resultados";
+            this.lblNotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNotFound.Visible = false;
             // 
             // dgvPromociones
             // 
@@ -155,7 +168,7 @@
             // FECHA_INICIO
             // 
             this.FECHA_INICIO.DataPropertyName = "fechaInicio";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.FECHA_INICIO.DefaultCellStyle = dataGridViewCellStyle3;
             this.FECHA_INICIO.HeaderText = "Fecha Inicio";
             this.FECHA_INICIO.MinimumWidth = 6;
@@ -166,26 +179,13 @@
             // FECHA_FIN
             // 
             this.FECHA_FIN.DataPropertyName = "fechaFin";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.FECHA_FIN.DefaultCellStyle = dataGridViewCellStyle4;
             this.FECHA_FIN.HeaderText = "Fecha Fin";
             this.FECHA_FIN.MinimumWidth = 6;
             this.FECHA_FIN.Name = "FECHA_FIN";
             this.FECHA_FIN.ReadOnly = true;
             this.FECHA_FIN.Width = 111;
-            // 
-            // lblNotFound
-            // 
-            this.lblNotFound.AutoSize = true;
-            this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotFound.Location = new System.Drawing.Point(137, 78);
-            this.lblNotFound.Name = "lblNotFound";
-            this.lblNotFound.Size = new System.Drawing.Size(230, 20);
-            this.lblNotFound.TabIndex = 13;
-            this.lblNotFound.Text = "No se encontraron resultados";
-            this.lblNotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblNotFound.Visible = false;
             // 
             // frmGestionarPromociones
             // 
@@ -209,11 +209,11 @@
 		private System.Windows.Forms.Panel pnlGestion;
 		private System.Windows.Forms.Panel pnlGridView;
 		private System.Windows.Forms.DataGridView dgvPromociones;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-		private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
-		private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_INICIO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_FIN;
         private System.Windows.Forms.Label lblNotFound;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_INICIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_FIN;
     }
 }

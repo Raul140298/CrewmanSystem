@@ -313,7 +313,7 @@
             // FECHA_REGISTRO
             // 
             this.FECHA_REGISTRO.DataPropertyName = "fechaRegistro";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.FECHA_REGISTRO.DefaultCellStyle = dataGridViewCellStyle4;
             this.FECHA_REGISTRO.HeaderText = "Fecha Registro";
             this.FECHA_REGISTRO.MinimumWidth = 6;
@@ -324,7 +324,7 @@
             // FECHA_ULTIMA_COMPRA
             // 
             this.FECHA_ULTIMA_COMPRA.DataPropertyName = "fechaUltimaCompra";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.FECHA_ULTIMA_COMPRA.DefaultCellStyle = dataGridViewCellStyle5;
             this.FECHA_ULTIMA_COMPRA.HeaderText = "Fecha Ult. Compra";
             this.FECHA_ULTIMA_COMPRA.MinimumWidth = 6;

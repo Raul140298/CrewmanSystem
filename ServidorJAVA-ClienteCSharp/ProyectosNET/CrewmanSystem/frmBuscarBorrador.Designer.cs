@@ -29,13 +29,11 @@
 		private void InitializeComponent()
 		{
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarBorrador));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSeleccionar = new System.Windows.Forms.Button();
@@ -53,20 +51,20 @@
             this.dtpRangoIni = new System.Windows.Forms.DateTimePicker();
             this.txtRuc = new System.Windows.Forms.TextBox();
             this.dgvBorradores = new System.Windows.Forms.DataGridView();
+            this.lblNotFound = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TIPO_PEDIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MONTO_TOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FECHA_REGISTRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIPO_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MONTO_TOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIPO_PEDIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ESTADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FECHA_REGISTRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.APELLIDO_PATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.APELLIDO_MATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblNotFound = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBorradores)).BeginInit();
             this.SuspendLayout();
@@ -267,15 +265,15 @@
             this.dgvBorradores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvBorradores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.TIPO_PEDIDO,
-            this.ESTADO,
-            this.MONTO_TOTAL,
-            this.DIRECCION,
-            this.FECHA_REGISTRO,
             this.RUC,
             this.RAZON_SOCIAL,
             this.GRUPO,
             this.TIPO_CLIENTE,
+            this.MONTO_TOTAL,
+            this.TIPO_PEDIDO,
+            this.ESTADO,
+            this.DIRECCION,
+            this.FECHA_REGISTRO,
             this.NOMBRE,
             this.APELLIDO_PATERNO,
             this.APELLIDO_MATERNO});
@@ -287,25 +285,38 @@
             this.dgvBorradores.Name = "dgvBorradores";
             this.dgvBorradores.ReadOnly = true;
             this.dgvBorradores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBorradores.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBorradores.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvBorradores.RowHeadersWidth = 51;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvBorradores.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvBorradores.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvBorradores.RowTemplate.Height = 24;
             this.dgvBorradores.Size = new System.Drawing.Size(1364, 364);
             this.dgvBorradores.TabIndex = 49;
             this.dgvBorradores.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvBorradores_CellFormatting);
             this.dgvBorradores.SelectionChanged += new System.EventHandler(this.dgvBorradores_SelectionChanged);
+            // 
+            // lblNotFound
+            // 
+            this.lblNotFound.AutoSize = true;
+            this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotFound.Location = new System.Drawing.Point(567, 390);
+            this.lblNotFound.Name = "lblNotFound";
+            this.lblNotFound.Size = new System.Drawing.Size(230, 20);
+            this.lblNotFound.TabIndex = 54;
+            this.lblNotFound.Text = "No se encontraron resultados";
+            this.lblNotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNotFound.Visible = false;
             // 
             // ID
             // 
@@ -318,59 +329,10 @@
             this.ID.ReadOnly = true;
             this.ID.Width = 50;
             // 
-            // TIPO_PEDIDO
-            // 
-            this.TIPO_PEDIDO.DataPropertyName = "tipoPedido";
-            this.TIPO_PEDIDO.HeaderText = "Tipo ";
-            this.TIPO_PEDIDO.MinimumWidth = 6;
-            this.TIPO_PEDIDO.Name = "TIPO_PEDIDO";
-            this.TIPO_PEDIDO.ReadOnly = true;
-            this.TIPO_PEDIDO.Width = 69;
-            // 
-            // ESTADO
-            // 
-            this.ESTADO.DataPropertyName = "estadoPedido";
-            this.ESTADO.HeaderText = "Estado";
-            this.ESTADO.MinimumWidth = 6;
-            this.ESTADO.Name = "ESTADO";
-            this.ESTADO.ReadOnly = true;
-            this.ESTADO.Width = 89;
-            // 
-            // MONTO_TOTAL
-            // 
-            this.MONTO_TOTAL.DataPropertyName = "montoTotal";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.MONTO_TOTAL.DefaultCellStyle = dataGridViewCellStyle3;
-            this.MONTO_TOTAL.HeaderText = "Monto Total";
-            this.MONTO_TOTAL.MinimumWidth = 6;
-            this.MONTO_TOTAL.Name = "MONTO_TOTAL";
-            this.MONTO_TOTAL.ReadOnly = true;
-            this.MONTO_TOTAL.Width = 125;
-            // 
-            // DIRECCION
-            // 
-            this.DIRECCION.DataPropertyName = "direccionEntrega";
-            this.DIRECCION.HeaderText = "Dir. de Entrega";
-            this.DIRECCION.MinimumWidth = 6;
-            this.DIRECCION.Name = "DIRECCION";
-            this.DIRECCION.ReadOnly = true;
-            this.DIRECCION.Width = 150;
-            // 
-            // FECHA_REGISTRO
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FECHA_REGISTRO.DefaultCellStyle = dataGridViewCellStyle4;
-            this.FECHA_REGISTRO.HeaderText = "Fecha Registro";
-            this.FECHA_REGISTRO.MinimumWidth = 6;
-            this.FECHA_REGISTRO.Name = "FECHA_REGISTRO";
-            this.FECHA_REGISTRO.ReadOnly = true;
-            this.FECHA_REGISTRO.Width = 151;
-            // 
             // RUC
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.RUC.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.RUC.DefaultCellStyle = dataGridViewCellStyle3;
             this.RUC.HeaderText = "RUC";
             this.RUC.MinimumWidth = 6;
             this.RUC.Name = "RUC";
@@ -395,13 +357,58 @@
             // 
             // TIPO_CLIENTE
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.TIPO_CLIENTE.DefaultCellStyle = dataGridViewCellStyle6;
             this.TIPO_CLIENTE.HeaderText = "Tipo Cliente";
             this.TIPO_CLIENTE.MinimumWidth = 6;
             this.TIPO_CLIENTE.Name = "TIPO_CLIENTE";
             this.TIPO_CLIENTE.ReadOnly = true;
             this.TIPO_CLIENTE.Width = 126;
+            // 
+            // MONTO_TOTAL
+            // 
+            this.MONTO_TOTAL.DataPropertyName = "montoTotal";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "N2";
+            this.MONTO_TOTAL.DefaultCellStyle = dataGridViewCellStyle4;
+            this.MONTO_TOTAL.HeaderText = "Monto Total";
+            this.MONTO_TOTAL.MinimumWidth = 6;
+            this.MONTO_TOTAL.Name = "MONTO_TOTAL";
+            this.MONTO_TOTAL.ReadOnly = true;
+            this.MONTO_TOTAL.Width = 125;
+            // 
+            // TIPO_PEDIDO
+            // 
+            this.TIPO_PEDIDO.DataPropertyName = "tipoPedido";
+            this.TIPO_PEDIDO.HeaderText = "Tipo ";
+            this.TIPO_PEDIDO.MinimumWidth = 6;
+            this.TIPO_PEDIDO.Name = "TIPO_PEDIDO";
+            this.TIPO_PEDIDO.ReadOnly = true;
+            this.TIPO_PEDIDO.Width = 69;
+            // 
+            // ESTADO
+            // 
+            this.ESTADO.DataPropertyName = "estadoPedido";
+            this.ESTADO.HeaderText = "Estado";
+            this.ESTADO.MinimumWidth = 6;
+            this.ESTADO.Name = "ESTADO";
+            this.ESTADO.ReadOnly = true;
+            this.ESTADO.Width = 89;
+            // 
+            // DIRECCION
+            // 
+            this.DIRECCION.DataPropertyName = "direccionEntrega";
+            this.DIRECCION.HeaderText = "Dir. de Entrega";
+            this.DIRECCION.MinimumWidth = 6;
+            this.DIRECCION.Name = "DIRECCION";
+            this.DIRECCION.ReadOnly = true;
+            this.DIRECCION.Width = 150;
+            // 
+            // FECHA_REGISTRO
+            // 
+            this.FECHA_REGISTRO.HeaderText = "Fecha Registro";
+            this.FECHA_REGISTRO.MinimumWidth = 6;
+            this.FECHA_REGISTRO.Name = "FECHA_REGISTRO";
+            this.FECHA_REGISTRO.ReadOnly = true;
+            this.FECHA_REGISTRO.Width = 151;
             // 
             // NOMBRE
             // 
@@ -426,19 +433,6 @@
             this.APELLIDO_MATERNO.Name = "APELLIDO_MATERNO";
             this.APELLIDO_MATERNO.ReadOnly = true;
             this.APELLIDO_MATERNO.Width = 162;
-            // 
-            // lblNotFound
-            // 
-            this.lblNotFound.AutoSize = true;
-            this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotFound.Location = new System.Drawing.Point(567, 390);
-            this.lblNotFound.Name = "lblNotFound";
-            this.lblNotFound.Size = new System.Drawing.Size(230, 20);
-            this.lblNotFound.TabIndex = 54;
-            this.lblNotFound.Text = "No se encontraron resultados";
-            this.lblNotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblNotFound.Visible = false;
             // 
             // frmBuscarBorrador
             // 
@@ -479,15 +473,15 @@
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Label lblNotFound;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_PEDIDO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MONTO_TOTAL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
         private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
         private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_CLIENTE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MONTO_TOTAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_PEDIDO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
         private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_PATERNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_MATERNO;

@@ -54,21 +54,21 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblNotFound = new System.Windows.Forms.Label();
             this.dgvGuiasDeRemision = new System.Windows.Forms.DataGridView();
+            this.sfdGuia = new System.Windows.Forms.SaveFileDialog();
             this.downloadReport = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_PEDIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FECHA_EMISION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MOTIVO_TRASLADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FECHA_REGISTRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FECHA_TRASLADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MOTIVO_TRASLADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FECHA_EMISION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIPO_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FECHA_REGISTRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FECHA_TRASLADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.APELLIDO_PATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.APELLIDO_MATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sfdGuia = new System.Windows.Forms.SaveFileDialog();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGuiasDeRemision)).BeginInit();
@@ -282,14 +282,14 @@
             this.downloadReport,
             this.ID,
             this.ID_PEDIDO,
-            this.FECHA_EMISION,
-            this.MOTIVO_TRASLADO,
-            this.FECHA_REGISTRO,
-            this.FECHA_TRASLADO,
             this.RUC,
             this.RAZON_SOCIAL,
             this.GRUPO,
+            this.MOTIVO_TRASLADO,
+            this.FECHA_EMISION,
             this.TIPO_CLIENTE,
+            this.FECHA_REGISTRO,
+            this.FECHA_TRASLADO,
             this.NOMBRE,
             this.APELLIDO_PATERNO,
             this.APELLIDO_MATERNO});
@@ -323,6 +323,12 @@
             this.dgvGuiasDeRemision.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvGuiasDeRemision_CellFormatting);
             this.dgvGuiasDeRemision.SelectionChanged += new System.EventHandler(this.dgvGuiasDeRemision_SelectionChanged);
             // 
+            // sfdGuia
+            // 
+            this.sfdGuia.DefaultExt = "pdf";
+            this.sfdGuia.FileName = "GuiaDeRemision.pdf";
+            this.sfdGuia.Filter = "PDF (*.pdf)|*.pdf";
+            // 
             // downloadReport
             // 
             this.downloadReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -353,52 +359,10 @@
             this.ID_PEDIDO.ReadOnly = true;
             this.ID_PEDIDO.Width = 106;
             // 
-            // FECHA_EMISION
-            // 
-            this.FECHA_EMISION.DataPropertyName = "fechaRegistro";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FECHA_EMISION.DefaultCellStyle = dataGridViewCellStyle4;
-            this.FECHA_EMISION.HeaderText = "Fecha Emisión";
-            this.FECHA_EMISION.MinimumWidth = 6;
-            this.FECHA_EMISION.Name = "FECHA_EMISION";
-            this.FECHA_EMISION.ReadOnly = true;
-            this.FECHA_EMISION.Width = 148;
-            // 
-            // MOTIVO_TRASLADO
-            // 
-            this.MOTIVO_TRASLADO.DataPropertyName = "motivoTraslado";
-            this.MOTIVO_TRASLADO.HeaderText = "Motivo Traslado";
-            this.MOTIVO_TRASLADO.MinimumWidth = 6;
-            this.MOTIVO_TRASLADO.Name = "MOTIVO_TRASLADO";
-            this.MOTIVO_TRASLADO.ReadOnly = true;
-            this.MOTIVO_TRASLADO.Width = 156;
-            // 
-            // FECHA_REGISTRO
-            // 
-            this.FECHA_REGISTRO.DataPropertyName = "fechaRegistro";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FECHA_REGISTRO.DefaultCellStyle = dataGridViewCellStyle5;
-            this.FECHA_REGISTRO.HeaderText = "Fecha Registro";
-            this.FECHA_REGISTRO.MinimumWidth = 6;
-            this.FECHA_REGISTRO.Name = "FECHA_REGISTRO";
-            this.FECHA_REGISTRO.ReadOnly = true;
-            this.FECHA_REGISTRO.Width = 151;
-            // 
-            // FECHA_TRASLADO
-            // 
-            this.FECHA_TRASLADO.DataPropertyName = "fechaTraslado";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FECHA_TRASLADO.DefaultCellStyle = dataGridViewCellStyle6;
-            this.FECHA_TRASLADO.HeaderText = "Fecha Traslado";
-            this.FECHA_TRASLADO.MinimumWidth = 6;
-            this.FECHA_TRASLADO.Name = "FECHA_TRASLADO";
-            this.FECHA_TRASLADO.ReadOnly = true;
-            this.FECHA_TRASLADO.Width = 153;
-            // 
             // RUC
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.RUC.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.RUC.DefaultCellStyle = dataGridViewCellStyle4;
             this.RUC.HeaderText = "RUC";
             this.RUC.MinimumWidth = 6;
             this.RUC.Name = "RUC";
@@ -421,6 +385,26 @@
             this.GRUPO.ReadOnly = true;
             this.GRUPO.Width = 83;
             // 
+            // MOTIVO_TRASLADO
+            // 
+            this.MOTIVO_TRASLADO.DataPropertyName = "motivoTraslado";
+            this.MOTIVO_TRASLADO.HeaderText = "Motivo Traslado";
+            this.MOTIVO_TRASLADO.MinimumWidth = 6;
+            this.MOTIVO_TRASLADO.Name = "MOTIVO_TRASLADO";
+            this.MOTIVO_TRASLADO.ReadOnly = true;
+            this.MOTIVO_TRASLADO.Width = 156;
+            // 
+            // FECHA_EMISION
+            // 
+            this.FECHA_EMISION.DataPropertyName = "fechaRegistro";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_EMISION.DefaultCellStyle = dataGridViewCellStyle5;
+            this.FECHA_EMISION.HeaderText = "Fecha Emisión";
+            this.FECHA_EMISION.MinimumWidth = 6;
+            this.FECHA_EMISION.Name = "FECHA_EMISION";
+            this.FECHA_EMISION.ReadOnly = true;
+            this.FECHA_EMISION.Width = 148;
+            // 
             // TIPO_CLIENTE
             // 
             this.TIPO_CLIENTE.HeaderText = "Tipo Cliente";
@@ -428,6 +412,28 @@
             this.TIPO_CLIENTE.Name = "TIPO_CLIENTE";
             this.TIPO_CLIENTE.ReadOnly = true;
             this.TIPO_CLIENTE.Width = 126;
+            // 
+            // FECHA_REGISTRO
+            // 
+            this.FECHA_REGISTRO.DataPropertyName = "fechaRegistro";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_REGISTRO.DefaultCellStyle = dataGridViewCellStyle6;
+            this.FECHA_REGISTRO.HeaderText = "Fecha Registro";
+            this.FECHA_REGISTRO.MinimumWidth = 6;
+            this.FECHA_REGISTRO.Name = "FECHA_REGISTRO";
+            this.FECHA_REGISTRO.ReadOnly = true;
+            this.FECHA_REGISTRO.Width = 151;
+            // 
+            // FECHA_TRASLADO
+            // 
+            this.FECHA_TRASLADO.DataPropertyName = "fechaTraslado";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_TRASLADO.DefaultCellStyle = dataGridViewCellStyle7;
+            this.FECHA_TRASLADO.HeaderText = "Fecha Traslado";
+            this.FECHA_TRASLADO.MinimumWidth = 6;
+            this.FECHA_TRASLADO.Name = "FECHA_TRASLADO";
+            this.FECHA_TRASLADO.ReadOnly = true;
+            this.FECHA_TRASLADO.Width = 153;
             // 
             // NOMBRE
             // 
@@ -452,12 +458,6 @@
             this.APELLIDO_MATERNO.Name = "APELLIDO_MATERNO";
             this.APELLIDO_MATERNO.ReadOnly = true;
             this.APELLIDO_MATERNO.Width = 162;
-            // 
-            // sfdGuia
-            // 
-            this.sfdGuia.DefaultExt = "pdf";
-            this.sfdGuia.FileName = "GuiaDeRemision.pdf";
-            this.sfdGuia.Filter = "PDF (*.pdf)|*.pdf";
             // 
             // frmBuscarGuiaRemision
             // 
@@ -497,20 +497,20 @@
         private System.Windows.Forms.TextBox txtGrupo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblNotFound;
+        private System.Windows.Forms.SaveFileDialog sfdGuia;
         private System.Windows.Forms.DataGridViewButtonColumn downloadReport;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_PEDIDO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_EMISION;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MOTIVO_TRASLADO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_TRASLADO;
         private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
         private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MOTIVO_TRASLADO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_EMISION;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_CLIENTE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_TRASLADO;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
         private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_PATERNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_MATERNO;
-        private System.Windows.Forms.SaveFileDialog sfdGuia;
     }
 }

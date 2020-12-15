@@ -28,30 +28,30 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblNotFound = new System.Windows.Forms.Label();
             this.dgvQuejas = new System.Windows.Forms.DataGridView();
+            this.sfdReporte = new System.Windows.Forms.SaveFileDialog();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_PEDIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FECHA_CREACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DESCRIPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIPO_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.APELLIDO_PATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.APELLIDO_MATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sfdReporte = new System.Windows.Forms.SaveFileDialog();
+            this.FECHA_CREACION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuejas)).BeginInit();
@@ -128,28 +128,28 @@
             this.dgvQuejas.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvQuejas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvQuejas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQuejas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQuejas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvQuejas.ColumnHeadersHeight = 30;
             this.dgvQuejas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvQuejas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.ID_PEDIDO,
-            this.DESCRIPCION,
-            this.FECHA_CREACION,
             this.RUC,
             this.RAZON_SOCIAL,
             this.GRUPO,
+            this.DESCRIPCION,
             this.TIPO_CLIENTE,
             this.NOMBRE,
             this.APELLIDO_PATERNO,
-            this.APELLIDO_MATERNO});
+            this.APELLIDO_MATERNO,
+            this.FECHA_CREACION});
             this.dgvQuejas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvQuejas.EnableHeadersVisualStyles = false;
             this.dgvQuejas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
@@ -158,31 +158,37 @@
             this.dgvQuejas.Name = "dgvQuejas";
             this.dgvQuejas.ReadOnly = true;
             this.dgvQuejas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQuejas.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQuejas.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvQuejas.RowHeadersWidth = 51;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvQuejas.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(198)))), ((int)(((byte)(57)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvQuejas.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvQuejas.RowTemplate.Height = 24;
             this.dgvQuejas.Size = new System.Drawing.Size(935, 350);
             this.dgvQuejas.TabIndex = 2;
             this.dgvQuejas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvQuejas_CellFormatting);
             this.dgvQuejas.SelectionChanged += new System.EventHandler(this.dgvQuejas_SelectionChanged);
             // 
+            // sfdReporte
+            // 
+            this.sfdReporte.DefaultExt = "pdf";
+            this.sfdReporte.FileName = "ReporteDeQuejas.pdf";
+            this.sfdReporte.Filter = "PDF (*.pdf)|*.pdf";
+            // 
             // ID
             // 
             this.ID.DataPropertyName = "idQueja";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ID.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ID.DefaultCellStyle = dataGridViewCellStyle2;
             this.ID.HeaderText = "Id";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
@@ -191,33 +197,13 @@
             // 
             // ID_PEDIDO
             // 
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ID_PEDIDO.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ID_PEDIDO.DefaultCellStyle = dataGridViewCellStyle3;
             this.ID_PEDIDO.HeaderText = "Id Pedido";
             this.ID_PEDIDO.MinimumWidth = 6;
             this.ID_PEDIDO.Name = "ID_PEDIDO";
             this.ID_PEDIDO.ReadOnly = true;
             this.ID_PEDIDO.Width = 106;
-            // 
-            // DESCRIPCION
-            // 
-            this.DESCRIPCION.DataPropertyName = "descripcion";
-            this.DESCRIPCION.HeaderText = "Descripcion";
-            this.DESCRIPCION.MinimumWidth = 6;
-            this.DESCRIPCION.Name = "DESCRIPCION";
-            this.DESCRIPCION.ReadOnly = true;
-            this.DESCRIPCION.Width = 127;
-            // 
-            // FECHA_CREACION
-            // 
-            this.FECHA_CREACION.DataPropertyName = "fechaCreacion";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FECHA_CREACION.DefaultCellStyle = dataGridViewCellStyle22;
-            this.FECHA_CREACION.HeaderText = "Fecha Creación";
-            this.FECHA_CREACION.MinimumWidth = 6;
-            this.FECHA_CREACION.Name = "FECHA_CREACION";
-            this.FECHA_CREACION.ReadOnly = true;
-            this.FECHA_CREACION.Width = 155;
             // 
             // RUC
             // 
@@ -242,6 +228,15 @@
             this.GRUPO.Name = "GRUPO";
             this.GRUPO.ReadOnly = true;
             this.GRUPO.Width = 83;
+            // 
+            // DESCRIPCION
+            // 
+            this.DESCRIPCION.DataPropertyName = "descripcion";
+            this.DESCRIPCION.HeaderText = "Descripcion";
+            this.DESCRIPCION.MinimumWidth = 6;
+            this.DESCRIPCION.Name = "DESCRIPCION";
+            this.DESCRIPCION.ReadOnly = true;
+            this.DESCRIPCION.Width = 127;
             // 
             // TIPO_CLIENTE
             // 
@@ -275,11 +270,16 @@
             this.APELLIDO_MATERNO.ReadOnly = true;
             this.APELLIDO_MATERNO.Width = 162;
             // 
-            // sfdReporte
+            // FECHA_CREACION
             // 
-            this.sfdReporte.DefaultExt = "pdf";
-            this.sfdReporte.FileName = "ReporteDeQuejas.pdf";
-            this.sfdReporte.Filter = "PDF (*.pdf)|*.pdf";
+            this.FECHA_CREACION.DataPropertyName = "fechaCreacion";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_CREACION.DefaultCellStyle = dataGridViewCellStyle4;
+            this.FECHA_CREACION.HeaderText = "Fecha Creación";
+            this.FECHA_CREACION.MinimumWidth = 6;
+            this.FECHA_CREACION.Name = "FECHA_CREACION";
+            this.FECHA_CREACION.ReadOnly = true;
+            this.FECHA_CREACION.Width = 155;
             // 
             // frmGestionarQuejas
             // 
@@ -306,17 +306,17 @@
 		private System.Windows.Forms.Button btnGenerar;
 		private System.Windows.Forms.SaveFileDialog sfdReporte;
 		private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblNotFound;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_PEDIDO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPCION;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_CREACION;
         private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
         private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DESCRIPCION;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_CLIENTE;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
         private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_PATERNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_MATERNO;
-        private System.Windows.Forms.Label lblNotFound;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_CREACION;
     }
 }
