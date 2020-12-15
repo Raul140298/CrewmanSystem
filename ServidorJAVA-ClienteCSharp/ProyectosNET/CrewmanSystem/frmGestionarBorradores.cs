@@ -90,9 +90,15 @@ namespace CrewmanSystem
 			misPedidos = daoPedido.listarPedidos(Program.empleado.idEmpleado, "", "", DateTime.MinValue, DateTime.MaxValue, "BORRADOR", "AMBOS");
 
 			if (misPedidos != null)
+			{
 				dgvBorradores.DataSource = new BindingList<PedidoWS.pedido>(misPedidos.ToArray());
+				lblNotFound.Visible = false;
+			}
 			else
+			{
 				dgvBorradores.DataSource = new BindingList<PedidoWS.pedido>();
+				lblNotFound.Visible = true;
+			}
 		}
 	}
 }

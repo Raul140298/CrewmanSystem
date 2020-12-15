@@ -249,7 +249,11 @@ namespace CrewmanSystem
                                 pedido.fechaEstimSpecified = true;
                                 int resultado= 0;
                                 resultado = daoPedido.aprobarBorrador(pedido);
-                                if(resultado != 0)MessageBox.Show("Aprobado con exito", "Mensaje de resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                if (resultado != 0)
+                                {
+                                    ((frmGestionarBorradores)Program.pantallas[Program.pantallas.Count - 2].Formulario).recargarDGV();
+                                    MessageBox.Show("Aprobado con exito", "Mensaje de resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
                                 else MessageBox.Show("Error en la aprobación del pedido", "Mensaje de resultado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 break;
                         }
