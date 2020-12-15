@@ -19,6 +19,7 @@ namespace CrewmanSystem
         public frmNuevaFactura()
         {
             InitializeComponent();
+            dtpEmision.Value = DateTime.Now;
             cboEstadoPagar.DataSource = estado;
             pedidoSeleccionado = new PedidoWS.pedido();
             daoFactura = new FacturaWS.FacturaWSClient();
