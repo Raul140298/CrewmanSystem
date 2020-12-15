@@ -751,7 +751,7 @@ namespace CrewmanSystem
 		}
 		private void btnFactura_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarFacturas(), false, true, true, true, true);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarFacturas(), false, false, true, true, true);
 		}
 		private void btnGuiaDeRemision_Click(object sender, EventArgs e)
 		{
@@ -832,7 +832,7 @@ namespace CrewmanSystem
 
 		private void btnEmpGestionFacturas_Click(object sender, EventArgs e)
 		{
-			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarFacturas(), true, true, true, true, true);
+			ClickBoton((IconButton)sender, padre, null, Program.color0, BTNtipo.btnDePanel, new frmGestionarFacturas(), true, false, true, true, true);
 		}
 
 		private void btnEmpGestionGuiasRemision_Click(object sender, EventArgs e)
