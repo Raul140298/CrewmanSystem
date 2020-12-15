@@ -102,7 +102,7 @@
             this.dtpEmision.Name = "dtpEmision";
             this.dtpEmision.Size = new System.Drawing.Size(330, 26);
             this.dtpEmision.TabIndex = 90;
-            this.dtpEmision.Value = new System.DateTime(2020, 11, 24, 0, 0, 0, 0);
+            this.dtpEmision.Value = new System.DateTime(2020, 12, 14, 19, 36, 30, 0);
             // 
             // txtMonto
             // 

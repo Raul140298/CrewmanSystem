@@ -19,6 +19,7 @@ namespace CrewmanSystem
         public frmNuevaFactura()
         {
             InitializeComponent();
+            dtpEmision.Value = DateTime.Now;
             cboEstadoPagar.DataSource = estado;
             pedidoSeleccionado = new PedidoWS.pedido();
             daoFactura = new FacturaWS.FacturaWSClient();
@@ -47,6 +48,12 @@ namespace CrewmanSystem
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+
+            if (txtIdPedido.Text == "")
+            {
+                MessageBox.Show("Debe indicar un pedido", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             foreach (Control c in this.Controls)
             {
                 if (c is TextBox)
@@ -98,12 +105,6 @@ namespace CrewmanSystem
                 return;
             }
 
-            if (txtIdPedido.Text == "")
-            {
-                MessageBox.Show("Debe indicar un pedido", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
             if (formInsertar.ShowDialog() == DialogResult.OK)
             {
@@ -131,7 +132,7 @@ namespace CrewmanSystem
                         ((frmGestionarFacturas)Program.pantallas[Program.pantallas.Count - 2].Formulario).recargarDGV();
                         MessageBox.Show("Se insertó correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtIdFactura.Text = resultado.ToString();
-                        txtMontoPendiente.Text = (Convert.ToDouble(txtMontoPendiente.Text) - Convert.ToDouble(txtMonto.Text)).ToString();
+                        txtMontoPendiente.Text = (Convert.ToDouble(txtMontoPendiente.Text) - Convert.ToDouble(txtMonto.Text)).ToString("n2");
                     }
                 }
                 else if (frmVentanaPrincipal.nBtn == 1)
