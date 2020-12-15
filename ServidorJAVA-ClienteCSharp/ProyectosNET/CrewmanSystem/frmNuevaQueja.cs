@@ -22,7 +22,7 @@ namespace CrewmanSystem
 
         private void btnBuscarPedido_Click(object sender, EventArgs e)
         {
-            frmBuscarBorrador formBusquedaPedidoAPagar = new frmBuscarBorrador(1);
+            frmBuscarBorrador formBusquedaPedidoAPagar = new frmBuscarBorrador(3);
             if (formBusquedaPedidoAPagar.ShowDialog() == DialogResult.OK)
             {
                 pedidoSeleccionado = frmBuscarBorrador.pedidoSeleccionado;

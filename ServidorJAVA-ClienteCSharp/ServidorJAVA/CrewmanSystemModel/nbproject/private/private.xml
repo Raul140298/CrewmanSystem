@@ -2,6 +2,11 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Repositorios/CrewmanSystem/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemModel/src/pe/edu/pucp/CrewmanSystem/model/Visita.java</file>
+            <file>file:/C:/Repositorios/CrewmanSystem/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemModel/src/pe/edu/pucp/CrewmanSystem/model/Cliente.java</file>
+            <file>file:/C:/Repositorios/CrewmanSystem/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemModel/src/pe/edu/pucp/CrewmanSystem/model/Cartera.java</file>
+            <file>file:/C:/Repositorios/CrewmanSystem/ServidorJAVA-ClienteCSharp/ServidorJAVA/CrewmanSystemModel/src/pe/edu/pucp/CrewmanSystem/model/Empleado.java</file>
+        </group>
     </open-files>
 </project-private>
