@@ -48,6 +48,12 @@ namespace CrewmanSystem
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+
+            if (txtIdPedido.Text == "")
+            {
+                MessageBox.Show("Debe indicar un pedido", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             foreach (Control c in this.Controls)
             {
                 if (c is TextBox)
@@ -96,12 +102,6 @@ namespace CrewmanSystem
             if (Convert.ToDouble(txtMonto.Text) > Convert.ToDouble(txtMontoPendiente.Text))
             {
                 MessageBox.Show("Monto de pago excede el monto pendiente", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (txtIdPedido.Text == "")
-            {
-                MessageBox.Show("Debe indicar un pedido", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
