@@ -219,7 +219,7 @@ namespace CrewmanSystem
                 pedido.empleado.idEmpleado = Program.empleado.idEmpleado;
                 pedido.direccionEntrega = txtDireccion.Text;
                 pedido.montoTotal = montoTotal;
-                //agregar lineas
+                
                 int numLineas = lineas.Count;
                 pedido.lineasPedidos = new PedidoWS.lineaPedido[numLineas];
                 int cont = 0;
@@ -259,7 +259,15 @@ namespace CrewmanSystem
                         }
                         return;
                     }
-                    daoPedido.actualizarPedido(pedido);
+                    int resultado2 = daoPedido.actualizarPedido(pedido);
+                    if (resultado2 == 0)
+                    {
+                        MessageBox.Show("No se actualizó correctamente", "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se actualizó correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else
                 {

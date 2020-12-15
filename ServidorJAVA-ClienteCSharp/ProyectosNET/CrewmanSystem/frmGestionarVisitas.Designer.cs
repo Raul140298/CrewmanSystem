@@ -44,10 +44,10 @@
             this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FECHA_VISITA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CHECK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.FECHA_ULTIMA_COMPRA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIPO_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FECHA_ULTIMA_COMPRA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisitas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,10 +77,10 @@
             this.GRUPO,
             this.FECHA_VISITA,
             this.CHECK,
-            this.FECHA_ULTIMA_COMPRA,
             this.TIPO_CLIENTE,
             this.ZONA,
-            this.DIRECCION});
+            this.DIRECCION,
+            this.FECHA_ULTIMA_COMPRA});
             this.dgvVisitas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvVisitas.EnableHeadersVisualStyles = false;
             this.dgvVisitas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
@@ -180,16 +180,6 @@
             this.CHECK.ReadOnly = true;
             this.CHECK.Width = 24;
             // 
-            // FECHA_ULTIMA_COMPRA
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.FECHA_ULTIMA_COMPRA.DefaultCellStyle = dataGridViewCellStyle6;
-            this.FECHA_ULTIMA_COMPRA.HeaderText = "Fecha Ult. Compra";
-            this.FECHA_ULTIMA_COMPRA.MinimumWidth = 6;
-            this.FECHA_ULTIMA_COMPRA.Name = "FECHA_ULTIMA_COMPRA";
-            this.FECHA_ULTIMA_COMPRA.ReadOnly = true;
-            this.FECHA_ULTIMA_COMPRA.Width = 177;
-            // 
             // TIPO_CLIENTE
             // 
             this.TIPO_CLIENTE.HeaderText = "Tipo Cliente";
@@ -213,6 +203,16 @@
             this.DIRECCION.Name = "DIRECCION";
             this.DIRECCION.ReadOnly = true;
             this.DIRECCION.Width = 109;
+            // 
+            // FECHA_ULTIMA_COMPRA
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.FECHA_ULTIMA_COMPRA.DefaultCellStyle = dataGridViewCellStyle6;
+            this.FECHA_ULTIMA_COMPRA.HeaderText = "Fecha Ult. Compra";
+            this.FECHA_ULTIMA_COMPRA.MinimumWidth = 6;
+            this.FECHA_ULTIMA_COMPRA.Name = "FECHA_ULTIMA_COMPRA";
+            this.FECHA_ULTIMA_COMPRA.ReadOnly = true;
+            this.FECHA_ULTIMA_COMPRA.Width = 177;
             // 
             // frmGestionarVisitas
             // 
@@ -239,9 +239,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_VISITA;
         private System.Windows.Forms.DataGridViewCheckBoxColumn CHECK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ULTIMA_COMPRA;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_CLIENTE;
         private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
         private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ULTIMA_COMPRA;
     }
 }
