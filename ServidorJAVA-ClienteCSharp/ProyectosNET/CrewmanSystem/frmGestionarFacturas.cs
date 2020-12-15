@@ -45,7 +45,7 @@ namespace CrewmanSystem
 		}
 		private void dgvFacturas_SelectionChanged(object sender, EventArgs e)
 		{
-			if (dgvFacturas.SelectedCells.Count != 1 && dgvFacturas.SelectedCells.Count != 0)
+			if (((FacturaWS.factura)dgvFacturas.CurrentRow.DataBoundItem).pedido.estadoPedido == FacturaWS.estadoPedido.EN_PROCESO && dgvFacturas.SelectedCells.Count != 1 && dgvFacturas.SelectedCells.Count != 0)
 			{
 				frmVentanaPrincipal.act.Enabled = true;
 				frmVentanaPrincipal.elim.Enabled = true;
