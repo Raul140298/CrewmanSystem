@@ -45,8 +45,12 @@ namespace CrewmanSystem
                     }
                 }
             }
-
-            //Insertar queja
+            if (txtIdPedido.Text == "")
+            {
+                MessageBox.Show("Debe indicar un pedido","Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
             frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
             if (formInsertar.ShowDialog() == DialogResult.OK)
             {
