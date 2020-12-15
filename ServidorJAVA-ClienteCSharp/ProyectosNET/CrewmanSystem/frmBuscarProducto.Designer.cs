@@ -312,11 +312,11 @@
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle5.Format = "N2";
             this.PRECIOSUGERIDO.DefaultCellStyle = dataGridViewCellStyle5;
-            this.PRECIOSUGERIDO.HeaderText = "Precio Sugerido";
+            this.PRECIOSUGERIDO.HeaderText = "Precio\\nSugerido";
             this.PRECIOSUGERIDO.MinimumWidth = 6;
             this.PRECIOSUGERIDO.Name = "PRECIOSUGERIDO";
             this.PRECIOSUGERIDO.ReadOnly = true;
-            this.PRECIOSUGERIDO.Width = 156;
+            this.PRECIOSUGERIDO.Width = 165;
             // 
             // STOCK
             // 
