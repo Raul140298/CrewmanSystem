@@ -904,13 +904,15 @@ namespace CrewmanSystem
 				}
 				Program.pantallas.RemoveAt(count - 1);
 				//Activo el último botón ( el formulario que quedó después de sacar uno)
-				ActivaBoton(Program.pantallas.Last());
 				ActivaBoton(Program.pantallas.Last().Padre);
+				ActivaBoton(Program.pantallas.Last());
 				ocultaBotonesCabecera(Program.pantallas.Last().N,
 									  Program.pantallas.Last().A,
 									  Program.pantallas.Last().E,
 									  Program.pantallas.Last().B,
 									  Program.pantallas.Last().F);
+				if (Program.pantallas.Count == 1) btnRecarga.Visible = true;
+				if (Program.pantallas.Last().Tipo == BTNtipo.btnConPanel) btnRecarga.Visible = true;
 			}
 			btnRight.Visible = btnLeft.Visible = false;
 		}
@@ -990,36 +992,37 @@ namespace CrewmanSystem
 				}
 				else if (cargo == 2)
 				{
-					((frmHomeJefe)Program.pantallas.First().Formulario).actualizarMapa();
+					((frmHomeJefe)Program.pantallas.First().Formulario).cargarValores();
 				}
 			}
 			else
 			{
+				if (Program.pantallas.Last().Formulario != null) MessageBox.Show(Program.pantallas.Last().Formulario.Name);
 				foreach (Control c in Program.pantallas.Last().Formulario.Controls)
 				{
 					if (c is DataGridView)
 					{
-						//MessageBox.Show(c.Name);
+						MessageBox.Show(c.Name);
 						llamarMetodosDAO(null, 4);
 					}
 					if (c is Panel)
 					{
-						//MessageBox.Show(c.Name);
+						MessageBox.Show(c.Name);
 						foreach (Control c2 in c.Controls)
 						{
 							if (c2 is DataGridView)
 							{
-								//MessageBox.Show(c2.Name);
+								MessageBox.Show(c2.Name);
 								llamarMetodosDAO(null, 4);
 							}
 							if (c2 is Panel)
 							{
-								//MessageBox.Show(c2.Name);
+								MessageBox.Show(c2.Name);
 								foreach (Control c3 in c2.Controls)
 								{
 									if (c3 is DataGridView)
 									{
-										//MessageBox.Show(c3.Name);
+										MessageBox.Show(c3.Name);
 										llamarMetodosDAO(null, 4);
 									}
 								}
