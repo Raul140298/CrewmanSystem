@@ -68,22 +68,22 @@
             this.dtpFechaEmisionIni = new System.Windows.Forms.DateTimePicker();
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.dgvFacturas = new System.Windows.Forms.DataGridView();
+            this.lblNotFound = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID_PEDIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MONTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FECHA_VENCIMIENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FECHA_EMISION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IMPUESTOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ANULADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ESTADO_PAGAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MONTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IMPUESTOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ANULADO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ESTADO_PAGAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FECHA_EMISION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FECHA_VENCIMIENTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIPO_CLIENTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.APELLIDO_PATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.APELLIDO_MATERNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblNotFound = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -402,15 +402,15 @@
             this.dgvFacturas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.ID_PEDIDO,
-            this.MONTO,
-            this.FECHA_VENCIMIENTO,
-            this.FECHA_EMISION,
-            this.IMPUESTOS,
-            this.ANULADO,
-            this.ESTADO_PAGAR,
             this.RUC,
             this.RAZON_SOCIAL,
             this.GRUPO,
+            this.MONTO,
+            this.IMPUESTOS,
+            this.ANULADO,
+            this.ESTADO_PAGAR,
+            this.FECHA_EMISION,
+            this.FECHA_VENCIMIENTO,
             this.TIPO_CLIENTE,
             this.NOMBRE,
             this.APELLIDO_PATERNO,
@@ -442,6 +442,19 @@
             this.dgvFacturas.TabIndex = 94;
             this.dgvFacturas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFacturas_CellFormatting);
             // 
+            // lblNotFound
+            // 
+            this.lblNotFound.AutoSize = true;
+            this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotFound.Location = new System.Drawing.Point(634, 428);
+            this.lblNotFound.Name = "lblNotFound";
+            this.lblNotFound.Size = new System.Drawing.Size(230, 20);
+            this.lblNotFound.TabIndex = 95;
+            this.lblNotFound.Text = "No se encontraron resultados";
+            this.lblNotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNotFound.Visible = false;
+            // 
             // ID
             // 
             this.ID.DataPropertyName = "idFactura";
@@ -463,76 +476,10 @@
             this.ID_PEDIDO.ReadOnly = true;
             this.ID_PEDIDO.Width = 106;
             // 
-            // MONTO
-            // 
-            this.MONTO.DataPropertyName = "monto";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Format = "N2";
-            this.MONTO.DefaultCellStyle = dataGridViewCellStyle4;
-            this.MONTO.HeaderText = "Monto";
-            this.MONTO.MinimumWidth = 6;
-            this.MONTO.Name = "MONTO";
-            this.MONTO.ReadOnly = true;
-            this.MONTO.Width = 83;
-            // 
-            // FECHA_VENCIMIENTO
-            // 
-            this.FECHA_VENCIMIENTO.DataPropertyName = "fechaVencimiento";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FECHA_VENCIMIENTO.DefaultCellStyle = dataGridViewCellStyle5;
-            this.FECHA_VENCIMIENTO.HeaderText = "Fecha Vencimiento";
-            this.FECHA_VENCIMIENTO.MinimumWidth = 6;
-            this.FECHA_VENCIMIENTO.Name = "FECHA_VENCIMIENTO";
-            this.FECHA_VENCIMIENTO.ReadOnly = true;
-            this.FECHA_VENCIMIENTO.Width = 180;
-            // 
-            // FECHA_EMISION
-            // 
-            this.FECHA_EMISION.DataPropertyName = "fechaEmision";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FECHA_EMISION.DefaultCellStyle = dataGridViewCellStyle6;
-            this.FECHA_EMISION.HeaderText = "Fecha Emisión";
-            this.FECHA_EMISION.MinimumWidth = 6;
-            this.FECHA_EMISION.Name = "FECHA_EMISION";
-            this.FECHA_EMISION.ReadOnly = true;
-            this.FECHA_EMISION.Width = 148;
-            // 
-            // IMPUESTOS
-            // 
-            this.IMPUESTOS.DataPropertyName = "impuestos";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "N2";
-            this.IMPUESTOS.DefaultCellStyle = dataGridViewCellStyle7;
-            this.IMPUESTOS.HeaderText = "Impuestos";
-            this.IMPUESTOS.MinimumWidth = 6;
-            this.IMPUESTOS.Name = "IMPUESTOS";
-            this.IMPUESTOS.ReadOnly = true;
-            this.IMPUESTOS.Width = 114;
-            // 
-            // ANULADO
-            // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ANULADO.DefaultCellStyle = dataGridViewCellStyle8;
-            this.ANULADO.HeaderText = "Anulado";
-            this.ANULADO.MinimumWidth = 6;
-            this.ANULADO.Name = "ANULADO";
-            this.ANULADO.ReadOnly = true;
-            this.ANULADO.Width = 97;
-            // 
-            // ESTADO_PAGAR
-            // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ESTADO_PAGAR.DefaultCellStyle = dataGridViewCellStyle9;
-            this.ESTADO_PAGAR.HeaderText = "Pagado";
-            this.ESTADO_PAGAR.MinimumWidth = 6;
-            this.ESTADO_PAGAR.Name = "ESTADO_PAGAR";
-            this.ESTADO_PAGAR.ReadOnly = true;
-            this.ESTADO_PAGAR.Width = 93;
-            // 
             // RUC
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.RUC.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.RUC.DefaultCellStyle = dataGridViewCellStyle4;
             this.RUC.HeaderText = "RUC";
             this.RUC.MinimumWidth = 6;
             this.RUC.Name = "RUC";
@@ -554,6 +501,72 @@
             this.GRUPO.Name = "GRUPO";
             this.GRUPO.ReadOnly = true;
             this.GRUPO.Width = 83;
+            // 
+            // MONTO
+            // 
+            this.MONTO.DataPropertyName = "monto";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "N2";
+            this.MONTO.DefaultCellStyle = dataGridViewCellStyle5;
+            this.MONTO.HeaderText = "Monto";
+            this.MONTO.MinimumWidth = 6;
+            this.MONTO.Name = "MONTO";
+            this.MONTO.ReadOnly = true;
+            this.MONTO.Width = 83;
+            // 
+            // IMPUESTOS
+            // 
+            this.IMPUESTOS.DataPropertyName = "impuestos";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "N2";
+            this.IMPUESTOS.DefaultCellStyle = dataGridViewCellStyle6;
+            this.IMPUESTOS.HeaderText = "Impuestos";
+            this.IMPUESTOS.MinimumWidth = 6;
+            this.IMPUESTOS.Name = "IMPUESTOS";
+            this.IMPUESTOS.ReadOnly = true;
+            this.IMPUESTOS.Width = 114;
+            // 
+            // ANULADO
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ANULADO.DefaultCellStyle = dataGridViewCellStyle7;
+            this.ANULADO.HeaderText = "Anulado";
+            this.ANULADO.MinimumWidth = 6;
+            this.ANULADO.Name = "ANULADO";
+            this.ANULADO.ReadOnly = true;
+            this.ANULADO.Width = 97;
+            // 
+            // ESTADO_PAGAR
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ESTADO_PAGAR.DefaultCellStyle = dataGridViewCellStyle8;
+            this.ESTADO_PAGAR.HeaderText = "Pagado";
+            this.ESTADO_PAGAR.MinimumWidth = 6;
+            this.ESTADO_PAGAR.Name = "ESTADO_PAGAR";
+            this.ESTADO_PAGAR.ReadOnly = true;
+            this.ESTADO_PAGAR.Width = 93;
+            // 
+            // FECHA_EMISION
+            // 
+            this.FECHA_EMISION.DataPropertyName = "fechaEmision";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_EMISION.DefaultCellStyle = dataGridViewCellStyle9;
+            this.FECHA_EMISION.HeaderText = "Fecha Emisión";
+            this.FECHA_EMISION.MinimumWidth = 6;
+            this.FECHA_EMISION.Name = "FECHA_EMISION";
+            this.FECHA_EMISION.ReadOnly = true;
+            this.FECHA_EMISION.Width = 148;
+            // 
+            // FECHA_VENCIMIENTO
+            // 
+            this.FECHA_VENCIMIENTO.DataPropertyName = "fechaVencimiento";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_VENCIMIENTO.DefaultCellStyle = dataGridViewCellStyle10;
+            this.FECHA_VENCIMIENTO.HeaderText = "Fecha Vencimiento";
+            this.FECHA_VENCIMIENTO.MinimumWidth = 6;
+            this.FECHA_VENCIMIENTO.Name = "FECHA_VENCIMIENTO";
+            this.FECHA_VENCIMIENTO.ReadOnly = true;
+            this.FECHA_VENCIMIENTO.Width = 180;
             // 
             // TIPO_CLIENTE
             // 
@@ -588,19 +601,6 @@
             this.APELLIDO_MATERNO.Name = "APELLIDO_MATERNO";
             this.APELLIDO_MATERNO.ReadOnly = true;
             this.APELLIDO_MATERNO.Width = 162;
-            // 
-            // lblNotFound
-            // 
-            this.lblNotFound.AutoSize = true;
-            this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotFound.Location = new System.Drawing.Point(634, 428);
-            this.lblNotFound.Name = "lblNotFound";
-            this.lblNotFound.Size = new System.Drawing.Size(230, 20);
-            this.lblNotFound.TabIndex = 95;
-            this.lblNotFound.Text = "No se encontraron resultados";
-            this.lblNotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblNotFound.Visible = false;
             // 
             // frmBuscarFactura
             // 
@@ -653,21 +653,21 @@
         private System.Windows.Forms.TextBox txtRazonSocial;
         private System.Windows.Forms.RadioButton rbPagadoAmbos;
         private System.Windows.Forms.RadioButton rbEmisionAmbos;
+        private System.Windows.Forms.Label lblNotFound;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_PEDIDO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MONTO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_VENCIMIENTO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_EMISION;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IMPUESTOS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ANULADO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO_PAGAR;
         private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
         private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MONTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IMPUESTOS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ANULADO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ESTADO_PAGAR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_EMISION;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_VENCIMIENTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_CLIENTE;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOMBRE;
         private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_PATERNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn APELLIDO_MATERNO;
-        private System.Windows.Forms.Label lblNotFound;
     }
 }

@@ -97,11 +97,13 @@ namespace CrewmanSystem
                 MessageBox.Show("Monto de pago excede el monto pendiente", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (pedidoSeleccionado.idPedido == 0)
+
+            if (txtIdPedido.Text == "")
             {
-                MessageBox.Show("Necesita seleccionar un pedido", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe indicar un pedido", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             frmConfirmarInsertar formInsertar = new frmConfirmarInsertar();
             if (formInsertar.ShowDialog() == DialogResult.OK)
             {

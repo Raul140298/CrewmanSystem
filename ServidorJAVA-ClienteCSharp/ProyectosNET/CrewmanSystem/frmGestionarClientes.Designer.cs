@@ -36,16 +36,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.lblNotFound = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RUC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RAZON_SOCIAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GRUPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FECHA_REGISTRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FECHA_ULTIMA_COMPRA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ZONA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DIRECCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblNotFound = new System.Windows.Forms.Label();
+            this.FECHA_ULTIMA_COMPRA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FECHA_REGISTRO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,11 +73,11 @@
             this.RUC,
             this.RAZON_SOCIAL,
             this.GRUPO,
-            this.FECHA_REGISTRO,
-            this.FECHA_ULTIMA_COMPRA,
             this.TIPO,
             this.ZONA,
-            this.DIRECCION});
+            this.DIRECCION,
+            this.FECHA_ULTIMA_COMPRA,
+            this.FECHA_REGISTRO});
             this.dgvClientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvClientes.EnableHeadersVisualStyles = false;
             this.dgvClientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
@@ -106,6 +106,19 @@
             this.dgvClientes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentDoubleClick);
             this.dgvClientes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvClientes_CellFormatting);
             this.dgvClientes.SelectionChanged += new System.EventHandler(this.dgvClientes_SelectionChanged);
+            // 
+            // lblNotFound
+            // 
+            this.lblNotFound.AutoSize = true;
+            this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotFound.Location = new System.Drawing.Point(307, 66);
+            this.lblNotFound.Name = "lblNotFound";
+            this.lblNotFound.Size = new System.Drawing.Size(230, 20);
+            this.lblNotFound.TabIndex = 6;
+            this.lblNotFound.Text = "No se encontraron resultados";
+            this.lblNotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNotFound.Visible = false;
             // 
             // ID
             // 
@@ -147,28 +160,6 @@
             this.GRUPO.ReadOnly = true;
             this.GRUPO.Width = 83;
             // 
-            // FECHA_REGISTRO
-            // 
-            this.FECHA_REGISTRO.DataPropertyName = "fechaRegistro";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FECHA_REGISTRO.DefaultCellStyle = dataGridViewCellStyle4;
-            this.FECHA_REGISTRO.HeaderText = "Fecha Registro";
-            this.FECHA_REGISTRO.MinimumWidth = 6;
-            this.FECHA_REGISTRO.Name = "FECHA_REGISTRO";
-            this.FECHA_REGISTRO.ReadOnly = true;
-            this.FECHA_REGISTRO.Width = 151;
-            // 
-            // FECHA_ULTIMA_COMPRA
-            // 
-            this.FECHA_ULTIMA_COMPRA.DataPropertyName = "fechaUltimaCompra";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FECHA_ULTIMA_COMPRA.DefaultCellStyle = dataGridViewCellStyle5;
-            this.FECHA_ULTIMA_COMPRA.HeaderText = "Fecha Ult. Compra";
-            this.FECHA_ULTIMA_COMPRA.MinimumWidth = 6;
-            this.FECHA_ULTIMA_COMPRA.Name = "FECHA_ULTIMA_COMPRA";
-            this.FECHA_ULTIMA_COMPRA.ReadOnly = true;
-            this.FECHA_ULTIMA_COMPRA.Width = 177;
-            // 
             // TIPO
             // 
             this.TIPO.DataPropertyName = "tipoEmpresa";
@@ -195,18 +186,27 @@
             this.DIRECCION.ReadOnly = true;
             this.DIRECCION.Width = 109;
             // 
-            // lblNotFound
+            // FECHA_ULTIMA_COMPRA
             // 
-            this.lblNotFound.AutoSize = true;
-            this.lblNotFound.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lblNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotFound.Location = new System.Drawing.Point(307, 66);
-            this.lblNotFound.Name = "lblNotFound";
-            this.lblNotFound.Size = new System.Drawing.Size(230, 20);
-            this.lblNotFound.TabIndex = 6;
-            this.lblNotFound.Text = "No se encontraron resultados";
-            this.lblNotFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblNotFound.Visible = false;
+            this.FECHA_ULTIMA_COMPRA.DataPropertyName = "fechaUltimaCompra";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_ULTIMA_COMPRA.DefaultCellStyle = dataGridViewCellStyle4;
+            this.FECHA_ULTIMA_COMPRA.HeaderText = "Fecha Ult. Compra";
+            this.FECHA_ULTIMA_COMPRA.MinimumWidth = 6;
+            this.FECHA_ULTIMA_COMPRA.Name = "FECHA_ULTIMA_COMPRA";
+            this.FECHA_ULTIMA_COMPRA.ReadOnly = true;
+            this.FECHA_ULTIMA_COMPRA.Width = 177;
+            // 
+            // FECHA_REGISTRO
+            // 
+            this.FECHA_REGISTRO.DataPropertyName = "fechaRegistro";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FECHA_REGISTRO.DefaultCellStyle = dataGridViewCellStyle5;
+            this.FECHA_REGISTRO.HeaderText = "Fecha Registro";
+            this.FECHA_REGISTRO.MinimumWidth = 6;
+            this.FECHA_REGISTRO.Name = "FECHA_REGISTRO";
+            this.FECHA_REGISTRO.ReadOnly = true;
+            this.FECHA_REGISTRO.Width = 151;
             // 
             // frmGestionarClientes
             // 
@@ -225,15 +225,15 @@
 
 		#endregion
 		private System.Windows.Forms.DataGridView dgvClientes;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-		private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
-		private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
-		private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ULTIMA_COMPRA;
-		private System.Windows.Forms.DataGridViewTextBoxColumn TIPO;
-		private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
-		private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
         private System.Windows.Forms.Label lblNotFound;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RUC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RAZON_SOCIAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GRUPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ZONA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DIRECCION;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_ULTIMA_COMPRA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_REGISTRO;
     }
 }

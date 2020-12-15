@@ -68,6 +68,11 @@ namespace CrewmanSystem
                 MessageBox.Show("Fecha de traslado inválida", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (txtIdPedido.Text == "")
+            {
+                MessageBox.Show("Debe indicar un pedido", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             GuiaRemisionWS.guiaRemision guiaRemision = new GuiaRemisionWS.guiaRemision();
             int resultado;

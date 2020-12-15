@@ -103,7 +103,7 @@ namespace CrewmanSystem
 					try
 					{
 						ReporteWS.ReporteWSClient daoReporte = new ReporteWS.ReporteWSClient();
-						string nombre = Program.empleado.apellidoPaterno + " " + Program.empleado.apellidoPaterno + ", " + Program.empleado.nombre;
+						string nombre = Program.empleado.apellidoPaterno + " " + Program.empleado.apellidoMaterno + ", " + Program.empleado.nombre;
 						byte[] arreglo = daoReporte.generarReportePedidoFinal(nombre, ((GuiaRemisionWS.guiaRemision)dgvGuiasDeRemision.CurrentRow.DataBoundItem).pedido.idPedido);
 						File.WriteAllBytes(sfdGuia.FileName, arreglo);
 						MessageBox.Show("El reporte fue generado con exito", "Mensaje de confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
