@@ -18,8 +18,8 @@ namespace CrewmanSystem
         public static ClienteWS.cliente clienteSeleccionado;
         public static DataGridView dgv;
         private ClienteWS.ClienteWSClient daoCliente = new ClienteWS.ClienteWSClient();
-        private string[] tipos = { "AMBOS", "BORRADOR", "PEDIDO" };
-        private string[] estados = { "AMBOS", "EN_PROCESO", "ESPERANDO", "FINALIZADO" };
+        private string[] tipos = { "PEDIDO" };
+        private string[] estados = { "AMBOS", "EN_PROCESO", "FINALIZADO", "CANCELADO" };
         public frmBuscarPedido()
         {
             InitializeComponent();
@@ -32,10 +32,8 @@ namespace CrewmanSystem
             txtGrupo.Text = "";
             cboTipo.DataSource = tipos;
             cboEstado.DataSource = estados;
-            cboTipo.SelectedIndex = 2;
+            cboTipo.SelectedIndex = 0;
             cboEstado.SelectedIndex = 0;
-            cboEstado.Enabled = false;
-            cboTipo.Enabled = false;
             completarTabla();
             #region colores de seleccion
             dgvPedidos.ColumnHeadersDefaultCellStyle.SelectionBackColor = Program.colorR;
