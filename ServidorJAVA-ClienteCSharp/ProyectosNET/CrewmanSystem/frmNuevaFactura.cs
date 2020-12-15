@@ -132,7 +132,7 @@ namespace CrewmanSystem
                         ((frmGestionarFacturas)Program.pantallas[Program.pantallas.Count - 2].Formulario).recargarDGV();
                         MessageBox.Show("Se insertó correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtIdFactura.Text = resultado.ToString();
-                        txtMontoPendiente.Text = (Convert.ToDouble(txtMontoPendiente.Text) - Convert.ToDouble(txtMonto.Text)).ToString();
+                        txtMontoPendiente.Text = (Convert.ToDouble(txtMontoPendiente.Text) - Convert.ToDouble(txtMonto.Text)).ToString("n2");
                     }
                 }
                 else if (frmVentanaPrincipal.nBtn == 1)
